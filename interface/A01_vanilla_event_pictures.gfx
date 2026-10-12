@@ -1,0 +1,10 @@
+spriteTypes = {
+ spriteType = {
+  name = "GFX_A01_indonesian_refusal"
+  texturefile = "gfx/event_pictures/report_event_pla_in_beijing.dds"
+ }
+ spriteType = {
+  name = "GFX_A01_japanese_preparations"
+  texturefile = "gfx/event_pictures/report_event_JAP_the_azad_hind.dds"
+ }
+}

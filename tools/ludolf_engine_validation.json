@@ -1,0 +1,10 @@
+{
+  "test": "HOI4 debug load",
+  "enabled_mods": ["1896", "Modifier Icons"],
+  "scenario_loaded": "1877.1.1.12",
+  "targeted_error_matches": 0,
+  "targeted_patterns": ["A01", "A03", "A11", "A12", "A13", "ludolf", "period_", "story_"],
+  "log": "tools/engine_final_load_errors.log",
+  "repaired": ["native decision category declarations", "country-history conditional syntax", "Council registration and promotion", "BOP setup", "dynamic law cost variables", "congress tension trigger", "32bpp sultanate flags"],
+  "limitations": ["Full campaign and treaty execution not simulated", "No separate run without Man the Guns", "Unrelated errors elsewhere in the mod remain"]
+}

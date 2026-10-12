@@ -1,0 +1,116 @@
+add_namespace = A01_crown
+country_event = {
+ id = A01_crown.1
+ title = A01_crown.1.t
+ desc = A01_crown.1.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  tag = A01
+  has_country_flag = A01_royal_path_revealed
+  NOT = {
+   has_country_flag = A01_admiralty_defeated
+  }
+ }
+ option = {
+  name = A01_crown.1.a
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = -0.25
+  }
+  add_stability = 0.05
+  add_political_power = 75
+ }
+ option = {
+  name = A01_crown.1.b
+  set_power_balance = {
+   id = A01_crown_council_balance
+   set_value = 0
+  }
+  add_political_power = -75
+  add_stability = 0.10
+ }
+ option = {
+  name = A01_crown.1.c
+  trigger = {
+   has_country_flag = A01_royal_guard_established
+  }
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = 0.30
+  }
+  add_stability = -0.05
+  army_experience = 20
+ }
+}
+country_event = {
+ id = A01_crown.2
+ title = A01_crown.2.t
+ desc = A01_crown.2.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  tag = A01
+  has_country_flag = A01_crown_balance_initialized
+  NOT = {
+   has_country_flag = A01_constitutional_monarchy_path
+  }
+  NOT = {
+   has_country_flag = A01_royal_dictatorship_path
+  }
+  NOT = {
+   has_country_flag = A01_admiralty_defeated
+  }
+ }
+ option = {
+  name = A01_crown.2.a
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = -0.10
+  }
+  add_political_power = 35
+ }
+ option = {
+  name = A01_crown.2.b
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = 0.10
+  }
+  add_political_power = -25
+  add_stability = 0.02
+ }
+}
+country_event = {
+ id = A01_crown.3
+ title = A01_crown.3.t
+ desc = A01_crown.3.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  tag = A01
+  has_country_flag = A01_crown_balance_initialized
+  NOT = {
+   has_country_flag = A01_royal_dictatorship_path
+  }
+  NOT = {
+   has_country_flag = A01_admiralty_defeated
+  }
+ }
+ option = {
+  name = A01_crown.3.a
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = -0.30
+  }
+  add_stability = 0.05
+ }
+ option = {
+  name = A01_crown.3.b
+  trigger = {
+   has_country_flag = A01_royal_guard_established
+  }
+  add_stability = -0.10
+  add_political_power = -100
+  set_country_flag = A01_conspirators_arrested
+ }
+}

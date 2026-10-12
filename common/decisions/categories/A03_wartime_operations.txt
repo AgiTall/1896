@@ -1,0 +1,10 @@
+A03_wartime_operations = {
+ icon = generic_naval
+ allowed = { original_tag = A03 }
+ visible = { has_war_with = A01 has_active_mission = A03_japanese_expansion }
+}
+A01_peace_request_category = {
+ icon = generic_political_discourse
+ allowed = { original_tag = A01 }
+ visible = { has_war_with = A03 has_active_mission = A01_japanese_expansion }
+}

@@ -1,0 +1,63 @@
+A01_oil_dependency = {
+	enable = { always = yes }
+	icon = GFX_idea_A01_oil_dependency
+
+	production_speed_buildings_factor = A01_oil_construction_factor
+	democratic_drift = A01_oil_democratic_drift
+	custom_modifier_tooltip = A01_oil_dependency_research_tt
+}
+
+# Один изменяемый дух для всех стадий расового раскола.
+A01_racial_divide = {
+	enable = { always = yes }
+	icon = GFX_idea_A01_racial_divide
+
+	production_factory_efficiency_gain_factor = A01_racial_factory_efficiency_gain
+	political_power_gain = A01_racial_political_power_gain
+	recruitable_population_factor = A01_racial_recruitable_population
+	stability_factor = A01_racial_stability
+	resistance_growth_on_our_occupied_states = A01_racial_resistance_growth
+}
+
+# Совет сохраняет один дух: поправки лишь временно меняют его значения.
+A01_admirals_council = {
+	enable = { always = yes }
+	icon = GFX_idea_A01_admirals_council
+
+	custom_modifier_tooltip = A01_admirals_council_laws_status_tt
+	mobilization_laws_cost_factor = A01_admirals_mobilization_law_cost
+		economy_cost_factor = A01_admirals_economy_law_cost
+		trade_laws_cost_factor = A01_admirals_trade_law_cost
+}
+
+# Адмиральский режим усиливается последующими фокусами без замены духа.
+A01_government_course = {
+	enable = { always = yes }
+	icon = GFX_idea_A01_admirals_council
+
+	research_speed_factor = A01_government_research_speed
+	stability_factor = A01_government_stability
+	production_speed_dockyard_factor = A01_government_dockyard_speed
+	war_support_factor = A01_government_war_support
+	mobilization_speed = A01_government_mobilization_speed
+	resistance_growth_on_our_occupied_states = A01_government_resistance_growth
+}
+
+# Влияние ВТП можно усиливать и ослаблять последующими событиями.
+A01_wtc_presence = {
+	enable = { always = yes }
+	icon = GFX_idea_A01_oil_dependency
+
+	recruitable_population_factor = A01_wtc_recruitable_population
+	political_power_gain = A01_wtc_political_power_gain
+	stability_factor = A01_wtc_stability
+}
+
+# Полицейские и иные меры безопасности накапливаются в одном духе.
+A01_colonial_security_policy = {
+	enable = { always = yes }
+	icon = GFX_idea_A01_admirals_council
+
+	army_defence_factor = A01_security_army_defence
+	industrial_capacity_factory = A01_security_factory_output
+}

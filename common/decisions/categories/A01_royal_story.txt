@@ -1,0 +1,2 @@
+A01_royal_institutions = { icon = generic_political_actions allowed = { original_tag = A01 } visible = { has_country_flag = A01_royal_path_revealed } }
+A01_royal_ballot = { icon = generic_political_actions allowed = { original_tag = A01 } visible = { has_completed_focus = A01_first_royal_election } }

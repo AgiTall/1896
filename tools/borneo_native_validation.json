@@ -1,0 +1,15 @@
+{
+  "status": "native scenario parsing checked",
+  "scenario_date": "1877.1.1.12",
+  "variant_and_oob_test_process": 33812,
+  "tested": [
+    "Pacific Ironclad equipment variant with three legal heavy-battery slots",
+    "MTG reinforcement fleet used as temporary startup naval OOB",
+    "Six marine divisions used as temporary startup army OOB",
+    "Three militia divisions used as temporary A01 startup army OOB"
+  ],
+  "temporary_history_restored": true,
+  "campaign_combat_simulated": false,
+  "legacy_branch": "statically checked only",
+  "notes": "Observed the test process reach 1877 with no matching errors in new files. A later separate game launch replaced the shared logs; the current user process was left running."
+}

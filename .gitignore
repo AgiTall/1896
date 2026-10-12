@@ -1,0 +1,16 @@
+# Local credentials and editor settings
+atlas-editor-key.txt
+.env
+.env.*
+!.env.example
+.vscode/
+
+# Local backups, caches and game diagnostics
+tools/backups/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store

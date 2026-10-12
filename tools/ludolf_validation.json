@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "Balanced syntax in all new gameplay scripts",
+    "Story event references and second-focus A01/A04 recipients",
+    "Native decision categories are separately declared",
+    "RU/EN event and BOP labels, contiguous BOP ranges",
+    "Japanese Sabah/Brunei/Limbang/Sarawak, Dutch interior and seven-state oil/rubber rights",
+    "Three real subject countries, resource concessions and all flag sizes",
+    "All sprite textures, 16 DDS dimensions and alpha",
+    "Named Japanese leader and three recruited A01 admirals"
+  ],
+  "story_events": 12,
+  "bop_ranges": 7,
+  "errors": [],
+  "campaign_simulation": "Not yet run; this is static validation."
+}

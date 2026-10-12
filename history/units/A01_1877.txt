@@ -1,0 +1,111 @@
+# Large formations: 16+3 marines (41w), 16+4 KNIL (44w), 12+2 reserve (30w).
+division_template = {
+ name = "Batavische Mariniers"
+ regiments = {
+  marine = { x = 0 y = 0 }
+  marine = { x = 0 y = 1 }
+  marine = { x = 0 y = 2 }
+  marine = { x = 0 y = 3 }
+  marine = { x = 1 y = 0 }
+  marine = { x = 1 y = 1 }
+  marine = { x = 1 y = 2 }
+  marine = { x = 1 y = 3 }
+  marine = { x = 2 y = 0 }
+  marine = { x = 2 y = 1 }
+  marine = { x = 2 y = 2 }
+  marine = { x = 2 y = 3 }
+  marine = { x = 3 y = 0 }
+  marine = { x = 3 y = 1 }
+  marine = { x = 3 y = 2 }
+  marine = { x = 3 y = 3 }
+  artillery_brigade = { x = 4 y = 0 }
+  artillery_brigade = { x = 4 y = 1 }
+  artillery_brigade = { x = 4 y = 2 }
+ }
+ priority = 2
+}
+division_template = {
+ name = "KNIL-Infanterie"
+ regiments = {
+  infantry = { x = 0 y = 0 }
+  infantry = { x = 0 y = 1 }
+  infantry = { x = 0 y = 2 }
+  infantry = { x = 0 y = 3 }
+  infantry = { x = 1 y = 0 }
+  infantry = { x = 1 y = 1 }
+  infantry = { x = 1 y = 2 }
+  infantry = { x = 1 y = 3 }
+  infantry = { x = 2 y = 0 }
+  infantry = { x = 2 y = 1 }
+  infantry = { x = 2 y = 2 }
+  infantry = { x = 2 y = 3 }
+  infantry = { x = 3 y = 0 }
+  infantry = { x = 3 y = 1 }
+  infantry = { x = 3 y = 2 }
+  infantry = { x = 3 y = 3 }
+  artillery_brigade = { x = 4 y = 0 }
+  artillery_brigade = { x = 4 y = 1 }
+  artillery_brigade = { x = 4 y = 2 }
+  artillery_brigade = { x = 4 y = 3 }
+ }
+ priority = 1
+}
+division_template = {
+ name = "Koloniale Landstorm"
+ regiments = {
+  infantry = { x = 0 y = 0 }
+  infantry = { x = 0 y = 1 }
+  infantry = { x = 0 y = 2 }
+  infantry = { x = 0 y = 3 }
+  infantry = { x = 1 y = 0 }
+  infantry = { x = 1 y = 1 }
+  infantry = { x = 1 y = 2 }
+  infantry = { x = 1 y = 3 }
+  infantry = { x = 2 y = 0 }
+  infantry = { x = 2 y = 1 }
+  infantry = { x = 2 y = 2 }
+  infantry = { x = 2 y = 3 }
+  artillery_brigade = { x = 4 y = 0 }
+  artillery_brigade = { x = 4 y = 1 }
+ }
+ priority = 0
+}
+
+units = {
+
+	division = {
+		name = "1e Mariniersdivisie"
+		location = 7381
+		division_template = "Batavische Mariniers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "2e Mariniersdivisie"
+		location = 7381
+		division_template = "Batavische Mariniers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "3e Mariniersdivisie"
+		location = 7381
+		division_template = "Batavische Mariniers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1.00
+	}
+
+ division = { name = "1e KNIL-Infanteriedivisie" location = 7381 division_template = "KNIL-Infanterie" start_equipment_factor = 0.75 start_experience_factor = 0.10 }
+ division = { name = "2e KNIL-Infanteriedivisie" location = 13405 division_template = "KNIL-Infanterie" start_equipment_factor = 0.75 start_experience_factor = 0.10 }
+ division = { name = "3e KNIL-Infanteriedivisie" location = 4652 division_template = "KNIL-Infanterie" start_equipment_factor = 0.75 start_experience_factor = 0.10 }
+ division = { name = "4e KNIL-Infanteriedivisie" location = 10153 division_template = "KNIL-Infanterie" start_equipment_factor = 0.75 start_experience_factor = 0.10 }
+ division = { name = "1e Javaanse Landstormdivisie" location = 7381 division_template = "Koloniale Landstorm" start_equipment_factor = 0.50 start_experience_factor = 0.02 }
+ division = { name = "2e Javaanse Landstormdivisie" location = 13405 division_template = "Koloniale Landstorm" start_equipment_factor = 0.50 start_experience_factor = 0.02 }
+ division = { name = "1e Sumatraanse Landstormdivisie" location = 10322 division_template = "Koloniale Landstorm" start_equipment_factor = 0.50 start_experience_factor = 0.02 }
+ division = { name = "2e Sumatraanse Landstormdivisie" location = 4652 division_template = "Koloniale Landstorm" start_equipment_factor = 0.50 start_experience_factor = 0.02 }
+ division = { name = "1e Celebese Landstormdivisie" location = 10153 division_template = "Koloniale Landstorm" start_equipment_factor = 0.50 start_experience_factor = 0.02 }
+ division = { name = "1e Molukse Landstormdivisie" location = 7413 division_template = "Koloniale Landstorm" start_equipment_factor = 0.50 start_experience_factor = 0.02 }
+
+}

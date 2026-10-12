@@ -1,0 +1,6 @@
+Tool: built-in image_gen, transparent_background=true.
+The three generated attempts contained artifacts and were rejected.
+Final asset: user explicitly authorized programmatic extraction from their original red/white source.
+Extraction: preserve white sun geometry; green channel supplies foreground alpha; red background and red facial details become transparent. Crop to emblem bounds and add 12px margins. Pack two identical 100x100 frames in DDS.
+Final prompt:
+A pristine flat vector-style WHITE Filipino sun emblem with a simple face, eight long pointed rays alternating with paired slender rays, modeled on the historical Katipunan sun. Square centered icon on fully transparent background. Solid opaque pure white sun disk and rays. Facial eyes eyebrows nose and mouth are clearly cut out as negative transparent space. Geometrically clean smooth silhouettes. Absolutely no texture, no grunge, no speckles, no watercolor, no shading, no pale nearly-white background. Flat solid white logo on transparent canvas, ready for game UI at 100 pixels.

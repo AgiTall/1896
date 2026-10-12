@@ -1,0 +1,48 @@
+A01_initialize_balance_effect = {
+ if = {
+  limit = { NOT = { has_country_flag = A01_balance_initialized } }
+  set_country_flag = A01_balance_initialized
+  set_variable = { A01_admirals_respect = 30 }
+  set_power_balance = { id = A01_ludolf_admirals_balance left_side = A01_admirals_side right_side = A01_ludolf_side set_value = 0.15 }
+  country_event = { id = ludolf.10 days = 1 }
+ }
+}
+A01_borneo_resource_rights_effect = {
+1059 = { owner = { if = { limit = { NOT = { tag = A03 } } give_resource_rights = { receiver = A03 state = 1059 resources = { oil rubber } } } } }
+333 = { owner = { if = { limit = { NOT = { tag = A03 } } give_resource_rights = { receiver = A03 state = 333 resources = { oil rubber } } } } }
+334 = { owner = { if = { limit = { NOT = { tag = A03 } } give_resource_rights = { receiver = A03 state = 334 resources = { oil rubber } } } } }
+1022 = { owner = { if = { limit = { NOT = { tag = A03 } } give_resource_rights = { receiver = A03 state = 1022 resources = { oil rubber } } } } }
+1023 = { owner = { if = { limit = { NOT = { tag = A03 } } give_resource_rights = { receiver = A03 state = 1023 resources = { oil rubber } } } } }
+1024 = { owner = { if = { limit = { NOT = { tag = A03 } } give_resource_rights = { receiver = A03 state = 1024 resources = { oil rubber } } } } }
+1055 = { owner = { if = { limit = { NOT = { tag = A03 } } give_resource_rights = { receiver = A03 state = 1055 resources = { oil rubber } } } } }
+}
+A01_borneo_treaty_effect = {
+ if = {
+  limit = { NOT = { has_country_flag = A01_borneo_treaty } country_exists = A03 }
+  set_country_flag = A01_expansion_resolved
+  A01_cleanup_expansion_effect = yes
+  A03 = { white_peace = { tag = A01 } }
+  A03 = { transfer_state = 1024 transfer_state = 1023 transfer_state = 1059 transfer_state = 333 }
+  transfer_state = 1022
+  set_country_flag = A01_borneo_treaty
+  A01_initialize_postwar_accounts_effect = yes
+  country_event = { id = A01_future.2 days = 7 }
+  set_country_flag = A01_japanese_invasion_begun
+  clr_country_flag = A01_refused_japanese_ultimatum
+  A01_disband_war_militia_effect = yes
+  remove_ideas = A01_war_production
+  add_ideas = A01_borneo_humiliation
+  add_ideas = A01_revanchism_simmering
+  add_stability = -0.10
+  A01_initialize_balance_effect = yes
+  add_power_balance_value = { id = A01_ludolf_admirals_balance value = -0.35 }
+  add_to_variable = { A01_admirals_respect = -15 }
+  clamp_variable = { var = A01_admirals_respect min = 0 max = 100 }
+  A01_borneo_resource_rights_effect = yes
+  A03 = { set_country_flag = A03_borneo_victory diplomatic_relation = { country = A01 relation = non_aggression_pact } country_event = { id = ludolf.21 days = 1 } }
+  country_event = { id = ludolf.30 days = 14 }
+  # Monthly pressure checks only run while the balance favours the admirals.
+ }
+}
+# All postwar transfers of power go through the explicit political contest.
+A01_admirals_remove_ludolf_effect = { A01_establish_military_rule_effect = yes }

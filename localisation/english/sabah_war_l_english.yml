@@ -1,0 +1,24 @@
+﻿l_english:
+ sabah_war.1.t:0 "Japanese Fleet Sighted off Sabah"
+ sabah_war.1.d:0 "Lookouts at Tawau report smoke on the horizon: Japanese cruisers and destroyers have passed north of Jesselton. The port garrison demands reinforced coastal batteries before the guns speak."
+ sabah_war.1.a:0 "Reinforce the Jesselton coastal defences."
+ sabah_war.1.b:0 "Announce an emergency local conscription."
+
+ sabah_war.2.t:0 "Skirmish off Jesselton"
+ sabah_war.2.d:0 "A Japanese light squadron pushes past the Dutch submarine screen and takes position to cover the landing fleet. The naval staff reports that the approach to Sabah is now largely clear."
+ sabah_war.2.a:0 "The squadron is through — prepare the landings."
+ sabah_war.2.b:0 "Dutch submarines forced a withdrawal. Recalculate the approach route."
+
+ sabah_war.3.t:0 "Nankai Marines Land on Sabah!"
+ sabah_war.3.d:0 "Transports covered by heavy cruisers enter Sandakan Bay. The first Nankai Tokubetsu Rikusentai units are ashore. Jesselton and Sandakan are the primary objectives. Sabah must be ours."
+ sabah_war.3.a:0 "Pour in reinforcements — we cannot waste a moment."
+ sabah_war.3.b:0 "Secure the beachhead before advancing inland."
+
+ sabah_war.4.t:0 "Sabah Has Fallen!"
+ sabah_war.4.d:0 "Japanese marines have taken Jesselton and Sandakan. The Dutch garrison held for several days without relief before being overwhelmed. North Borneo flies the Japanese flag. Batavia is in mourning."
+ sabah_war.4.a:0 "Mobilise reserves — we must retake Sabah!"
+ sabah_war.4.b:0 "Accept the loss and hold Brunei at all costs."
+
+ sabah_war.6.t:0 "The Sulu Sea Is Ours"
+ sabah_war.6.d:0 "The Imperial fleet has established dominance over the Sulu Sea. With Sabah and Brunei in our hands and Dutch shipping driven off, the southern strategy bears fruit. Borneo is becoming a Japanese sphere of influence."
+ sabah_war.6.a:0 "Consolidate the victory and push south."

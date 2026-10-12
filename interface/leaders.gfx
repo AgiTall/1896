@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_A01_Ludolf_Sloot_van_de_Beele"
+        texturefile = "gfx/leaders/A01/Portrait_Ludolf_Sloot_van_de_Beele.dds"
+    }
+}

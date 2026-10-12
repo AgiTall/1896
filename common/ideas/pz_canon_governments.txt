@@ -1,0 +1,6 @@
+ideas = { country = {
+ PZ_british_admiralty = { removal_cost = -1 modifier = { } }
+ PZ_russian_dual_power = { removal_cost = -1 modifier = { } }
+ PZ_aztec_prophecy = { removal_cost = -1 modifier = { } }
+ PZ_philippine_confederation = { removal_cost = -1 modifier = { } }
+} }

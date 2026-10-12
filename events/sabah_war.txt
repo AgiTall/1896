@@ -1,0 +1,176 @@
+add_namespace = sabah_war
+
+# -------------------------------------------------------------------------
+# sabah_war.1  --  Японский флот обнаружен у берегов Сабаха
+#  Fires for A01 (Netherlands) shortly after war begins if A03 is at war.
+#  Adds tension, war-support swing and optional defensive decisions.
+# -------------------------------------------------------------------------
+country_event = {
+ id = sabah_war.1
+ title = sabah_war.1.t
+ desc = sabah_war.1.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A01 has_war_with = A03 NOT = { has_country_flag = A01_sabah_fleet_spotted } }
+
+ immediate = { set_country_flag = A01_sabah_fleet_spotted }
+
+ option = {
+  name = sabah_war.1.a
+  add_war_support = 0.05
+  add_stability = -0.03
+  # Defenders dig in at Sabah's main ports
+  1024 = { add_building_construction = { type = coastal_bunker level = 1 instant_build = yes province = 10212 } }
+ }
+ option = {
+  name = sabah_war.1.b
+  add_war_support = 0.08
+  add_stability = -0.05
+  add_manpower = 500
+ }
+}
+
+# -------------------------------------------------------------------------
+# sabah_war.2  --  Первая морская стычка у Джессельтона
+#  Fires for A03 soon after the war starts. Outcomes depend on navy strength.
+# -------------------------------------------------------------------------
+country_event = {
+ id = sabah_war.2
+ title = sabah_war.2.t
+ desc = sabah_war.2.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A03 has_war_with = A01 NOT = { has_country_flag = A03_jesselton_skirmish_done } }
+
+ immediate = { set_country_flag = A03_jesselton_skirmish_done }
+
+ option = {
+  # Japanese light squadron pushes through -- invasion route opens
+  name = sabah_war.2.a
+  ai_chance = { factor = 60 }
+  add_war_support = 0.06
+  navy_experience = 10
+  add_fuel = 5000
+ }
+ option = {
+  # Dutch submarines force a delay -- need to recalculate approach
+  name = sabah_war.2.b
+  ai_chance = { factor = 40 }
+  add_war_support = 0.03
+  add_stability = -0.02
+ }
+}
+
+# -------------------------------------------------------------------------
+# sabah_war.3  --  Десант на Сабах начат! (A03 perspective)
+#  Fires for A03 when Japan owns or is invading state 1024.
+# -------------------------------------------------------------------------
+country_event = {
+ id = sabah_war.3
+ title = sabah_war.3.t
+ desc = sabah_war.3.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A03 has_war_with = A01 NOT = { has_country_flag = A03_sabah_landing_announced } }
+
+ immediate = { set_country_flag = A03_sabah_landing_announced }
+
+ option = {
+  # Full commitment -- pour reinforcements in
+  name = sabah_war.3.a
+  ai_chance = { factor = 70 }
+  add_war_support = 0.08
+  army_experience = 15
+  navy_experience = 15
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A03 }
+ }
+ option = {
+  # Cautious approach -- secure the beachhead first
+  name = sabah_war.3.b
+  ai_chance = { factor = 30 }
+  add_war_support = 0.05
+  add_fuel = 8000
+ }
+}
+
+# -------------------------------------------------------------------------
+# sabah_war.4  --  Сандакан в огне (A01 perspective)
+#  Fires for A01 when Japan owns state 1024.
+# -------------------------------------------------------------------------
+country_event = {
+ id = sabah_war.4
+ title = sabah_war.4.t
+ desc = sabah_war.4.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A01 has_war_with = A03 A03 = { has_full_control_of_state = 1024 } NOT = { has_country_flag = A01_sabah_fallen_news } }
+
+ immediate = { set_country_flag = A01_sabah_fallen_news }
+
+ option = {
+  # Counterattack! Mobilise reserves
+  name = sabah_war.4.a
+  ai_chance = { factor = 40 }
+  add_war_support = 0.05
+  add_stability = -0.05
+  add_manpower = 1000
+ }
+ option = {
+  # Accept the loss and hold Brunei
+  name = sabah_war.4.b
+  ai_chance = { factor = 60 }
+  add_war_support = -0.03
+  add_stability = -0.08
+ }
+}
+
+# -------------------------------------------------------------------------
+# sabah_war.5  --  Боевой дух японских солдат (A03 -- periodic pulse)
+#  Fires every 30 days while Japan is at war with A01 and holding 1024,
+#  to reinforce the AI's determination. Hidden event.
+# -------------------------------------------------------------------------
+country_event = {
+ id = sabah_war.5
+ hidden = yes
+ is_triggered_only = yes
+ trigger = { tag = A03 has_war_with = A01 has_full_control_of_state = 1024 NOT = { has_country_flag = A03_borneo_victory } }
+
+ immediate = {
+  add_war_support = 0.02
+  # Re-broadcast the strategic priority signal to the engine
+  country_event = { id = sabah_war.5 days = 30 }
+ }
+}
+
+# -------------------------------------------------------------------------
+# sabah_war.6  --  Японский флот господствует в море Сулу (A03)
+#  Fires when Japan holds both 1024 and 1023.
+# -------------------------------------------------------------------------
+country_event = {
+ id = sabah_war.6
+ title = sabah_war.6.t
+ desc = sabah_war.6.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = {
+  tag = A03
+  has_war_with = A01
+  has_full_control_of_state = 1024
+  has_full_control_of_state = 1023
+  NOT = { has_country_flag = A03_sulu_sea_dominance }
+ }
+
+ immediate = { set_country_flag = A03_sulu_sea_dominance }
+
+ option = {
+  name = sabah_war.6.a
+  add_war_support = 0.07
+  navy_experience = 20
+  add_fuel = 10000
+ }
+}
+
+# -------------------------------------------------------------------------
+# Trigger events from on_actions -- use the borneo_story on_action hook.
+# We trigger sabah_war.1 and sabah_war.2 early in the war.
+# -------------------------------------------------------------------------

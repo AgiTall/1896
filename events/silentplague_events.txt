@@ -1,0 +1,25 @@
+add_namespace = silentplague_events
+
+country_event = {
+	id = silentplague_events.1
+	hidden = yes
+	is_triggered_only = no
+
+	trigger = {
+		exists = yes
+		NOT = { has_government = silentplague }
+		silentplague > 0.79
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = silentplague
+			}
+		}
+	}
+}

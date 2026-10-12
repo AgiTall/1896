@@ -1,0 +1,362 @@
+add_namespace = A01_royal_story
+country_event = {
+ id = A01_royal_story.1
+ title = A01_royal_story.1.t
+ desc = A01_royal_story.1.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.1.a
+  add_to_variable = {
+   A01_sultan_confidence = 3
+  }
+  add_political_power = -50
+  add_stability = 0.03
+ }
+ option = {
+  name = A01_royal_story.1.b
+  add_to_variable = {
+   A01_sultan_confidence = 1
+  }
+  add_political_power = 25
+  add_stability = -0.02
+ }
+}
+country_event = {
+ id = A01_royal_story.2
+ title = A01_royal_story.2.t
+ desc = A01_royal_story.2.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.2.a
+  set_country_flag = A01_civic_delegates_recognised
+  add_to_variable = {
+   A01_civic_support = 2
+  }
+  add_stability = 0.02
+  add_political_power = -35
+ }
+ option = {
+  name = A01_royal_story.2.b
+  add_to_variable = {
+   A01_sultan_confidence = 1
+  }
+  add_ideas = A01_island_discontent
+  add_political_power = 20
+ }
+}
+country_event = {
+ id = A01_royal_story.3
+ title = A01_royal_story.3.t
+ desc = A01_royal_story.3.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.3.a
+  A01_charter_crown_sultanates = yes
+  set_country_flag = A01_island_settlement
+  set_country_flag = A01_crown_autonomous_compact
+  add_stability = 0.04
+ }
+ option = {
+  name = A01_royal_story.3.b
+  set_country_flag = A01_island_settlement
+  set_country_flag = A01_crown_unified_compact
+  add_political_power = 50
+  add_stability = -0.03
+ }
+}
+country_event = {
+ id = A01_royal_story.4
+ title = A01_royal_story.4.t
+ desc = A01_royal_story.4.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.4.a
+  add_to_variable = {
+   A01_admiralty_evidence = 1
+  }
+  add_stability = -0.02
+  add_political_power = 25
+ }
+ option = {
+  name = A01_royal_story.4.b
+  add_to_variable = {
+   A01_admiralty_evidence = 1
+  }
+  add_political_power = -25
+  add_to_variable = {
+   A01_fleet_loyalty = 1
+  }
+ }
+}
+country_event = {
+ id = A01_royal_story.5
+ title = A01_royal_story.5.t
+ desc = A01_royal_story.5.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.5.a
+  navy_experience = 15
+  add_stability = 0.03
+ }
+ option = {
+  name = A01_royal_story.5.b
+  add_timed_idea = {
+   idea = A01_purged_fleet
+   days = 180
+  }
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = 0.15
+  }
+ }
+}
+country_event = {
+ id = A01_royal_story.6
+ title = A01_royal_story.6.t
+ desc = A01_royal_story.6.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.6.a
+  add_stability = 0.03
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = -0.10
+  }
+ }
+ option = {
+  name = A01_royal_story.6.b
+  add_stability = -0.03
+  add_power_balance_value = {
+   id = A01_crown_council_balance
+   value = 0.15
+  }
+ }
+}
+country_event = {
+ id = A01_royal_story.7
+ title = A01_royal_story.7.t
+ desc = A01_royal_story.7.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.7.a
+  set_power_balance = {
+   id = A01_crown_council_balance
+   set_value = 0
+  }
+  add_stability = 0.03
+ }
+ option = {
+  name = A01_royal_story.7.b
+  set_power_balance = {
+   id = A01_crown_council_balance
+   set_value = 0.65
+  }
+  add_war_support = 0.03
+ }
+}
+country_event = {
+ id = A01_royal_story.8
+ title = A01_royal_story.8.t
+ desc = A01_royal_story.8.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ immediate = {
+  1058 = {
+   add_extra_state_shared_building_slots = 1
+   add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+   }
+  }
+ }
+ option = {
+  name = A01_royal_story.8.a
+  set_province_name = {
+   id = 7381
+   name = A01_NEW_AMSTERDAM
+  }
+  1058 = {
+   set_state_name = A01_NEW_AMSTERDAM
+  }
+  set_country_flag = A01_new_amsterdam
+  add_political_power = 25
+ }
+ option = {
+  name = A01_royal_story.8.b
+  add_stability = 0.04
+ }
+ option = {
+  name = A01_royal_story.8.c
+  set_province_name = {
+   id = 7381
+   name = A01_DUAL_CAPITAL
+  }
+  1058 = {
+   set_state_name = A01_DUAL_CAPITAL
+  }
+  add_stability = 0.02
+ }
+}
+country_event = {
+ id = A01_royal_story.9
+ title = A01_royal_story.9.t
+ desc = A01_royal_story.9.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.9.a
+  set_country_flag = A01_territorial_electoral_law
+  add_stability = 0.03
+ }
+ option = {
+  name = A01_royal_story.9.b
+  set_country_flag = A01_civic_electoral_law
+  add_political_power = -35
+  add_stability = 0.01
+ }
+}
+country_event = {
+ id = A01_royal_story.10
+ title = A01_royal_story.10.t
+ desc = A01_royal_story.10.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.10.a
+ }
+}
+country_event = {
+ id = A01_royal_story.11
+ title = A01_royal_story.11.t
+ desc = A01_royal_story.11.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.11.a
+  add_political_power = 50
+ }
+}
+country_event = {
+ id = A01_royal_story.12
+ title = A01_royal_story.12.t
+ desc = A01_royal_story.12.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.12.a
+ }
+}
+country_event = {
+ id = A01_royal_story.13
+ title = A01_royal_story.13.t
+ desc = A01_royal_story.13.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.13.a
+ }
+}
+country_event = {
+ id = A01_royal_story.14
+ title = A01_royal_story.14.t
+ desc = A01_royal_story.14.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+ }
+ option = {
+  name = A01_royal_story.14.a
+ }
+}
+country_event = {
+ id = A01_royal_story.15
+ title = A01_royal_story.15.t
+ desc = A01_royal_story.15.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  original_tag = A01
+  has_country_flag = A01_royal_path_revealed
+  NOT = {
+   has_country_flag = A01_admiralty_defeated
+  }
+ }
+ option = {
+  name = A01_royal_story.15.a
+  add_political_power = -75
+  add_to_variable = {
+   A01_fleet_loyalty = -1
+  }
+  activate_mission = A01_admiralty_deadline
+ }
+ option = {
+  name = A01_royal_story.15.b
+  add_stability = -0.05
+  add_to_variable = {
+   A01_admiralty_evidence = 1
+  }
+  activate_mission = A01_admiralty_deadline
+ }
+}

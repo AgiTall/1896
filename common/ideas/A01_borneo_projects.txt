@@ -1,0 +1,15 @@
+ideas = { country = {
+ A01_borneo_debt_service = { picture = pacific_industry allowed = { original_tag = A01 } removal_cost = -1 modifier = { consumer_goods_expected_value = 0.05 political_power_gain = -0.10 } }
+ A01_borneo_state_loan = { picture = pacific_industry allowed = { original_tag = A01 } removal_cost = -1 modifier = { political_power_factor = -0.10 } }
+ A01_borneo_self_build = {
+  picture = pacific_army allowed = { original_tag = A01 } removal_cost = -1
+  modifier = { consumer_goods_expected_value = 0.05 political_power_gain = -0.10 }
+  targeted_modifier = { tag = A03 defense_bonus_against = 0.20 }
+ }
+ A01_borneo_british_commitments = { picture = pacific_industry allowed = { original_tag = A01 } removal_cost = -1 modifier = { political_power_factor = -0.10 } }
+ A01_borneo_british_defence = { picture = pacific_army allowed = { original_tag = A01 } removal_cost = -1 targeted_modifier = { tag = A03 defense_bonus_against = 0.15 } }
+ A01_borneo_australian_commitments = { picture = pacific_industry allowed = { original_tag = A01 } removal_cost = -1 modifier = { } }
+ A01_borneo_australian_defence = { picture = pacific_army allowed = { original_tag = A01 } removal_cost = -1 targeted_modifier = { tag = A03 defense_bonus_against = 0.10 } }
+ A01_borneo_local_commitments = { picture = pacific_army allowed = { original_tag = A01 } removal_cost = -1 modifier = { recruitable_population_factor = 0.15 } }
+ A01_borneo_local_defence = { picture = pacific_army allowed = { original_tag = A01 } removal_cost = -1 targeted_modifier = { tag = A03 defense_bonus_against = 0.05 } }
+} }

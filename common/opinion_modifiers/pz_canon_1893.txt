@@ -1,0 +1,15 @@
+opinion_modifiers = {
+ pz_commercial_partner = { value = 25 }
+ pz_exile_solidarity = { value = 35 }
+ pz_common_heritage = { value = 40 }
+ pz_debt_dependence = { value = -15 }
+ pz_oil_rivalry = { value = -60 }
+ pz_japanese_schism = { value = -40 }
+ pz_occupation = { value = -80 }
+ pz_resistance = { value = 35 }
+ pz_federal_dispute = { value = -15 }
+ pz_mutual_suspicion = { value = -20 }
+ pz_pacific_rivalry = { value = -35 }
+ pz_papua_dispute = { value = -25 }
+ pz_caribbean_conflict = { value = -80 }
+}

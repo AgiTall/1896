@@ -1,0 +1,11 @@
+bitmapfonts = {
+	# Loaded after vanilla core.gfx so tahoma_60 already exists.
+	# Country names on the Russian map are forced to the Preciosa atlas.
+	bitmapfont_override = {
+		name = "tahoma_60"
+		fontfiles = {
+			"gfx/fonts/hoi_mapfont4"
+		}
+		languages = { "l_russian" }
+	}
+}

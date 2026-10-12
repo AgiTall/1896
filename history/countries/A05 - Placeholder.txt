@@ -1,0 +1,14 @@
+# Canon 1893. Generic portrait; historical likeness not supplied.
+capital = 315
+recruit_character = A05_canon_leader
+set_politics = { ruling_party = neutrality elections_allowed = no }
+set_popularities = { neutrality = 100 }
+set_research_slots = 2
+set_stability = 0.50
+set_war_support = 0.30
+set_convoys = 10
+set_technology = { infantry_weapons = 1 }
+add_ideas = volunteer_only
+add_ideas = civilian_economy
+add_ideas = limited_exports
+oob = "A05_1893"

@@ -1,0 +1,29 @@
+on_actions = {
+ on_daily = { effect = { A03 = {
+  if = {
+   limit = {
+    has_war_with = A10
+    A10 = { OR = { A10_full_archipelago_liberated = yes A10_manila_only_liberated = yes } }
+    NOT = { has_country_flag = A10_luzon_crisis_started }
+   }
+   set_country_flag = A10_luzon_crisis_started
+   country_event = { id = A10_settlement.6 days = 1 }
+   set_country_flag = { flag = A10_luzon_grace_period days = 90 }
+  }
+  if = { limit = {
+   has_war_with = A10
+   has_country_flag = A10_luzon_crisis_started
+   NOT = { has_country_flag = A10_luzon_grace_period }
+   NOT = { has_country_flag = A10_luzon_collapse_fired }
+   A10 = { OR = { A10_full_archipelago_liberated = yes A10_manila_only_liberated = yes } }
+  }
+   set_country_flag = A10_luzon_collapse_fired
+   country_event = { id = A10_settlement.7 days = 1 }
+  }
+  if = { limit = { NOT = { has_war_with = A10 } }
+   clr_country_flag = A10_luzon_crisis_started
+   clr_country_flag = A10_luzon_grace_period
+   clr_country_flag = A10_luzon_collapse_fired
+  }
+ } } }
+}

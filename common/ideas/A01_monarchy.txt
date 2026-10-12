@@ -1,0 +1,127 @@
+ideas = {
+ country = {
+
+ }
+ hidden_ideas = {
+  A01_royal_guard_loyalty = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_royal_naval_loyalty = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_royal_absolutism = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_direct_royal_rule = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_crown_secret_police = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_royal_militarism = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_crown_parliament_idea = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_crown_commonwealth_idea = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_emmas_caution = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_young_queens_resolve = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_crown_dialogue = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_crown_resolve = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+ }
+}

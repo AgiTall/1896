@@ -1,0 +1,26 @@
+add_namespace = A01_monarchy
+country_event = { id = A01_monarchy.0 title = A01_monarchy.0.t desc = A01_monarchy.0.d picture = GFX_1896_event_council is_triggered_only = yes trigger = { tag = A01 has_completed_focus = A01_pacific_settlement NOT = { has_country_flag = A01_ludolf_crisis_resolved } }
+option = { name = A01_monarchy.0.a  }
+option = { name = A01_monarchy.0.b A01_establish_regency_effect = yes }
+}
+country_event = { id = A01_monarchy.1 title = A01_monarchy.1.t desc = A01_monarchy.1.d picture = GFX_1896_event_council is_triggered_only = yes trigger = { tag = A01 has_country_flag = A01_emma_regency NOT = { has_country_flag = A01_wilhelmina_reigns } }
+option = { name = A01_monarchy.1.a add_stability = 0.10 add_timed_idea = { idea = A01_emmas_caution days = 180 } }
+option = { name = A01_monarchy.1.b add_stability = -0.10 add_timed_idea = { idea = A01_young_queens_resolve days = 180 } set_country_flag = A01_early_royal_accession }
+}
+country_event = { id = A01_monarchy.3 title = A01_monarchy.3.t desc = A01_monarchy.3.d picture = GFX_1896_event_council is_triggered_only = yes trigger = { tag = A01 has_country_flag = A01_royal_path_revealed }
+option = { name = A01_monarchy.3.a add_stability = 0.05 add_timed_idea = { idea = A01_crown_dialogue days = 180 } }
+option = { name = A01_monarchy.3.b add_stability = -0.05 add_timed_idea = { idea = A01_crown_resolve days = 180 } }
+}
+country_event = { id = A01_monarchy.4 title = A01_monarchy.4.t desc = A01_monarchy.4.d picture = GFX_1896_event_council is_triggered_only = yes trigger = { tag = A01 has_country_flag = A01_royal_path_revealed }
+option = { name = A01_monarchy.4.a  }
+}
+country_event = { id = A01_monarchy.5 title = A01_monarchy.5.t desc = A01_monarchy.5.d picture = GFX_1896_event_council is_triggered_only = yes trigger = { tag = A01 has_country_flag = A01_royal_path_revealed }
+option = { name = A01_monarchy.5.a add_stability = 0.10 add_timed_idea = { idea = A01_crown_dialogue days = 180 } }
+option = { name = A01_monarchy.5.b add_stability = -0.05 every_other_country = { limit = { has_government = democratic } add_opinion_modifier = { target = ROOT modifier = A01_royal_reassurances } } }
+}
+country_event = { id = A01_monarchy.6 title = A01_monarchy.6.t desc = A01_monarchy.6.d picture = GFX_1896_event_council is_triggered_only = yes trigger = { tag = A01 has_country_flag = A01_royal_path_revealed }
+option = { name = A01_monarchy.6.a  }
+}
+country_event = { id = A01_monarchy.7 title = A01_monarchy.7.t desc = A01_monarchy.7.d picture = GFX_1896_event_council is_triggered_only = yes trigger = { tag = A01 has_country_flag = A01_royal_path_revealed }
+option = { name = A01_monarchy.7.a  }
+}

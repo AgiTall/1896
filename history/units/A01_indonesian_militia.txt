@@ -1,0 +1,15 @@
+division_template = { name = "Indische Vrijwilligers" is_locked = yes regiments = { militia = { x = 0 y = 0 } militia = { x = 0 y = 1 } militia = { x = 1 y = 0 } } }
+units = {
+ division = { name = "1e Javaanse Vrijwilligersdivisie" location = 7381 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "2e Javaanse Vrijwilligersdivisie" location = 13405 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "3e Javaanse Vrijwilligersdivisie" location = 13406 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "4e Javaanse Vrijwilligersdivisie" location = 13403 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "5e Javaanse Vrijwilligersdivisie" location = 7381 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "6e Javaanse Vrijwilligersdivisie" location = 13405 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "7e Javaanse Vrijwilligersdivisie" location = 13406 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "8e Javaanse Vrijwilligersdivisie" location = 13403 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "9e Javaanse Vrijwilligersdivisie" location = 7381 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "10e Javaanse Vrijwilligersdivisie" location = 13405 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "11e Javaanse Vrijwilligersdivisie" location = 13406 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+ division = { name = "12e Javaanse Vrijwilligersdivisie" location = 13403 division_template = "Indische Vrijwilligers" start_equipment_factor = 1.0 start_experience_factor = 0.05 }
+}

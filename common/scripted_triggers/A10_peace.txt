@@ -1,0 +1,24 @@
+A10_controls_manila = {
+ 327 = { OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } }
+}
+A10_controls_north_luzon = {
+ 623 = { OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } }
+}
+A10_controls_bataan = {
+ 1027 = { OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } }
+}
+A10_full_archipelago_liberated = {
+ A10_controls_manila = yes
+ A10_controls_north_luzon = yes
+ A10_controls_bataan = yes
+ NOT = { A03 = { any_controlled_state = { OR = {
+  state = 327 state = 623 state = 624 state = 625 state = 626 state = 627
+  state = 628 state = 1025 state = 1026 state = 1027 state = 1084 state = 1085
+ } } } }
+ 626 = { OR = { NOT = { is_owned_by = A03 } is_controlled_by = A10 controller = { is_subject_of = A10 } } }
+}
+A10_manila_only_liberated = {
+ A10_controls_manila = yes
+ 623 = { is_owned_by = A03 is_controlled_by = A03 }
+ 1027 = { is_owned_by = A03 is_controlled_by = A03 }
+}

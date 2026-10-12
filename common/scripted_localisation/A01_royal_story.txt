@@ -1,0 +1,6 @@
+defined_text = { name = GetA01RoyalPremier
+text = { trigger = { has_country_flag = A01_pm_constitutional_winner } localization_key = A01_premier_van_rijn }
+text = { trigger = { has_country_flag = A01_pm_order_winner } localization_key = A01_premier_van_der_velde }
+text = { trigger = { has_country_flag = A01_pm_indonesian_winner } localization_key = A01_premier_raden_surya }
+text = { localization_key = A01_premier_pending }
+}

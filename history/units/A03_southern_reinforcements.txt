@@ -1,0 +1,22 @@
+units = { fleet = { name = "Southern Expedition Fleet" naval_base = 4357 task_force = { name = "Borneo Assault Squadron" location = 4357
+ship = { name = "Nankai Ironclad 1" definition = battleship start_experience_factor = 0.30 equipment = { ship_hull_heavy_1 = { amount = 1 owner = A03 version_name = "Pacific Ironclad" } } }
+ship = { name = "Nankai Ironclad 2" definition = battleship start_experience_factor = 0.30 equipment = { ship_hull_heavy_1 = { amount = 1 owner = A03 version_name = "Pacific Ironclad" } } }
+ship = { name = "Nankai Ironclad 3" definition = battleship start_experience_factor = 0.30 equipment = { ship_hull_heavy_1 = { amount = 1 owner = A03 version_name = "Pacific Ironclad" } } }
+ship = { name = "Nankai Ironclad 4" definition = battleship start_experience_factor = 0.30 equipment = { ship_hull_heavy_1 = { amount = 1 owner = A03 version_name = "Pacific Ironclad" } } }
+ship = { name = "Nankai Cruiser 1" definition = light_cruiser start_experience_factor = 0.30 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A03 version_name = "Pacific Cruiser" } } }
+ship = { name = "Nankai Cruiser 2" definition = light_cruiser start_experience_factor = 0.30 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A03 version_name = "Pacific Cruiser" } } }
+ship = { name = "Nankai Cruiser 3" definition = light_cruiser start_experience_factor = 0.30 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A03 version_name = "Pacific Cruiser" } } }
+ship = { name = "Nankai Cruiser 4" definition = light_cruiser start_experience_factor = 0.30 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A03 version_name = "Pacific Cruiser" } } }
+ship = { name = "Nankai Cruiser 5" definition = light_cruiser start_experience_factor = 0.30 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A03 version_name = "Pacific Cruiser" } } }
+ship = { name = "Nankai Cruiser 6" definition = light_cruiser start_experience_factor = 0.30 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A03 version_name = "Pacific Cruiser" } } }
+ship = { name = "Nankai Escort 1" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 2" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 3" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 4" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 5" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 6" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 7" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 8" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 9" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+ship = { name = "Nankai Escort 10" definition = destroyer start_experience_factor = 0.30 equipment = { ship_hull_light_1 = { amount = 1 owner = A03 version_name = "Pacific Escort" } } }
+} } }

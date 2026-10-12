@@ -1,0 +1,30 @@
+add_namespace = borneo_project
+country_event = {
+ id = borneo_project.1 title = borneo_project.1.t desc = borneo_project.1.d
+ picture = GFX_1896_event_building is_triggered_only = yes
+ trigger = { tag = A01 NOT = { has_country_flag = A01_borneo_project_selected } NOT = { has_country_flag = A01_borneo_treaty } }
+ option = {
+  name = borneo_project.1.a trigger = { country_exists = A02 } ai_chance = { factor = 50 }
+  set_country_flag = A01_borneo_project_selected set_country_flag = A01_borneo_british_project
+  add_to_variable = { A01_british_influence = 15 } add_to_variable = { A01_sovereignty_loss = 10 }
+  add_ideas = A01_borneo_british_commitments
+  custom_effect_tooltip = A01_british_project_tt
+ }
+ option = {
+  name = borneo_project.1.b trigger = { country_exists = A07 } ai_chance = { factor = 25 }
+  set_country_flag = A01_borneo_project_selected set_country_flag = A01_borneo_australian_project set_country_flag = A01_new_guinea_guarantees
+  add_ideas = A01_borneo_australian_commitments
+  A07 = { add_opinion_modifier = { target = A01 modifier = A01_borneo_australian_cooperation } }
+  custom_effect_tooltip = A01_australian_project_tt
+ }
+ option = {
+  name = borneo_project.1.c ai_chance = { factor = 25 }
+  set_country_flag = A01_borneo_project_selected set_country_flag = A01_borneo_local_project
+  add_ideas = A01_borneo_local_commitments
+  add_to_variable = { A01_racial_stability = 0.10 }
+  add_to_variable = { A01_admirals_respect = -5 }
+  clamp_variable = { var = A01_admirals_respect min = 0 max = 100 }
+  force_update_dynamic_modifier = yes
+  custom_effect_tooltip = A01_local_project_tt
+ }
+}

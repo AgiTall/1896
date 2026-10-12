@@ -1,0 +1,5 @@
+A01_crown_struggle = {
+ icon = generic_political_actions
+ allowed = { original_tag = A01 }
+ visible = { has_country_flag = A01_crown_balance_initialized }
+}

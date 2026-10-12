@@ -1,0 +1,7 @@
+spriteTypes = {
+ spriteType = {
+  name = "GFX_A10_confederation_sun"
+  texturefile = "gfx/interface/factions/A10_confederation_sun.dds"
+  noOfFrames = 2
+ }
+}

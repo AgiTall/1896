@@ -1,0 +1,31 @@
+state = {
+ id = 992
+ name = "STATE_992"
+ state_category = rural
+ manpower = 80516
+ history = {
+  add_core_of = A02
+  victory_points = {
+   5074
+   2
+  }
+  buildings = {
+   infrastructure = 2
+   air_base = 1
+   5074 = {
+    naval_base = 1
+   }
+  }
+  1939.1.1 = {
+
+  }
+  owner = ZZZ
+  add_core_of = ZZZ
+ }
+ provinces = {
+  5074
+  13374
+ }
+ buildings_max_level_factor = 1.000
+ local_supplies = 0.000
+}

@@ -1,0 +1,14 @@
+characters = {
+ A01_emma_waldeck_pyrmont = {
+  portraits = { civilian = { large = "gfx/leaders/A01/A01_emma_waldeck_pyrmont_placeholder.dds" } }
+  name = A01_emma_name
+  gender = female
+  country_leader = { ideology = despotism expire = "1965.1.1.1" traits = { popular_figurehead } }
+ }
+ A01_wilhelmina_monarch = {
+  portraits = { civilian = { large = "gfx/leaders/A01/A01_wilhelmina_monarch_placeholder.dds" } }
+  name = A01_wilhelmina_name
+  gender = female
+  country_leader = { ideology = despotism expire = "1965.1.1.1" traits = { popular_figurehead } }
+ }
+}

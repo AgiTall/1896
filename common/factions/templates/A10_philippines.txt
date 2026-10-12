@@ -1,0 +1,6 @@
+A10_confederation_template = {
+ name = A10_confederation_faction
+ icon = GFX_A10_confederation_sun
+ manifest = faction_manifest_strength_in_unity
+ default_rules = { change_leader_rule_manpower }
+}

@@ -1,0 +1,16 @@
+A10_japanese_settlement = {
+ A10_offer_archipelago_peace = {
+  icon = generic_political_discourse cost = 25 days_re_enable = 60
+  visible = { A10_full_archipelago_liberated = yes }
+  available = { has_war_with = A03 NOT = { has_country_flag = A10_peace_offer_pending } NOT = { has_country_flag = A10_peace_offer_cooldown } }
+  complete_effect = { set_country_flag = A10_peace_offer_pending set_country_flag = { flag = A10_peace_offer_cooldown days = 60 } A03 = { country_event = { id = A10_settlement.1 days = 1 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10_offer_manila_peace = {
+  icon = generic_political_discourse cost = 25 days_re_enable = 60
+  visible = { A10_manila_only_liberated = yes }
+  available = { has_war_with = A03 NOT = { has_country_flag = A10_peace_offer_pending } NOT = { has_country_flag = A10_peace_offer_cooldown } }
+  complete_effect = { set_country_flag = A10_peace_offer_pending set_country_flag = { flag = A10_peace_offer_cooldown days = 60 } A03 = { country_event = { id = A10_settlement.2 days = 1 } } }
+  ai_will_do = { factor = 2 }
+ }
+}

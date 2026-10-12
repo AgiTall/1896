@@ -1,0 +1,11 @@
+{
+  "tool": "built-in image_gen",
+  "initial": {
+    "bop_ludolf": "Single isolated Hearts of Iron IV balance-of-power emblem. Sculpted bust of the man in the reference portrait: older European man, short side-parted hair, neat moustache, stern expression, ornate nineteenth-century high-collar civilian governor uniform. Head and shoulders on a small pedestal, facing slightly left. Entire object ONLY black, white and neutral grey polished steel, engraved relief, dark recesses, bright silver edges, no gold or colored enamel. No frame, no text, no scenery. Strong silhouette readable as a tiny game UI symbol. Transparent background. Reference portrait establishes identity; reinterpret as a sculpted STEEL BUST.",
+    "bop_admirals": "Single isolated Hearts of Iron IV balance-of-power emblem: a heavy nineteenth-century naval anchor with a clearly recognizable THREE-CORNERED TRICORN HAT resting across its top ring, the hat has three pointed corners, NOT a two-point bicorne. Entire object ONLY black, white and neutral grey steel sculpture, machined silver edges, engraved metal, dark recesses. Anchor flukes fully visible below the hat, symmetrical compact silhouette. No surrounding shield, no text, no color, no scenery. Matches a steel governor bust in a political power struggle. Transparent background, readable tiny game UI emblem."
+  },
+  "finalEdit": {
+    "bop_ludolf": "Edit this exact isolated emblem. Preserve every shape, object, face and composition, preserve transparent background. Remove ALL color including warm brown, yellow and blue undertones. Make it strictly neutral grayscale BLACK AND WHITE sculpted polished STEEL. Silver highlights, charcoal recesses, grey midtones. No sepia, no color fringe, absolutely achromatic. Do not add any object or text. Same emblem, only neutral steel grayscale material.",
+    "bop_admirals": "Edit this exact isolated emblem. Preserve every shape, object, face and composition, preserve transparent background. Remove ALL color including warm brown, yellow and blue undertones. Make it strictly neutral grayscale BLACK AND WHITE sculpted polished STEEL. Silver highlights, charcoal recesses, grey midtones. No sepia, no color fringe, absolutely achromatic. Do not add any object or text. Same emblem, only neutral steel grayscale material."
+  }
+}

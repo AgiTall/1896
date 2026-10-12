@@ -1,0 +1,32 @@
+{
+  "new_focuses": 12,
+  "peace_transfer_to_A03": [
+    1024,
+    1023
+  ],
+  "peace_transfer_to_A01": [
+    333,
+    1022
+  ],
+  "japanese_resource_right_states": [
+    333,
+    334,
+    1022,
+    1023,
+    1024,
+    1055
+  ],
+  "resources": [
+    "oil",
+    "rubber"
+  ],
+  "sultanates": [
+    "A11",
+    "A12",
+    "A13"
+  ],
+  "respect_range": [
+    0,
+    100
+  ]
+}

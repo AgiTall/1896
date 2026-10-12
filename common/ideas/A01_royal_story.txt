@@ -1,0 +1,23 @@
+ideas = { country = {
+A01_admiralty_obstruction = { picture = royal_tribunal allowed = { always = yes } removal_cost = -1 modifier = { political_power_gain = -0.15 navy_org_factor = -0.05 } }
+A01_purged_fleet = { picture = royal_navy allowed = { always = yes } removal_cost = -1 modifier = { navy_org_factor = -0.12 naval_coordination = -0.10 } }
+A01_admiralty_pensions = { picture = royal_tribunal allowed = { always = yes } removal_cost = -1 modifier = { consumer_goods_expected_value = 0.03 political_power_gain = -0.05 } }
+A01_civilian_justice = { picture = royal_tribunal allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = 0.04 political_power_gain = 0.05 } }
+A01_civilian_navy_ministry = { picture = royal_navy allowed = { always = yes } removal_cost = -1 modifier = { navy_org_factor = 0.04 production_speed_dockyard_factor = 0.05 } }
+A01_equal_citizenship_royal = { picture = royal_citizenship allowed = { always = yes } removal_cost = -1 modifier = { recruitable_population_factor = 0.05 stability_factor = 0.03 } }
+A01_princely_compact = { picture = royal_sultanates allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = 0.04 political_power_gain = -0.05 } }
+A01_island_discontent = { picture = royal_citizenship allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = -0.05 political_power_gain = -0.05 } }
+A01_guard_academy_idea = { picture = royal_guard allowed = { always = yes } removal_cost = -1 modifier = { army_org_factor = 0.03 training_time_army_factor = -0.05 } }
+A01_royal_academies_idea = { picture = royal_academy allowed = { always = yes } removal_cost = -1 modifier = { research_speed_factor = 0.03 } }
+A01_island_commissions = { picture = royal_guard allowed = { always = yes } removal_cost = -1 modifier = { army_org_factor = 0.03 army_defence_factor = 0.03 } }
+A01_development_bank = { picture = royal_academy allowed = { always = yes } removal_cost = -1 modifier = { production_speed_buildings_factor = 0.06 consumer_goods_expected_value = 0.02 } }
+A01_responsible_cabinet_idea = { picture = royal_parliament allowed = { always = yes } removal_cost = -1 modifier = { political_power_gain = 0.08 stability_factor = 0.03 } }
+A01_open_procurement = { picture = royal_tribunal allowed = { always = yes } removal_cost = -1 modifier = { production_speed_dockyard_factor = 0.05 consumer_goods_expected_value = -0.02 } }
+A01_provincial_diets = { picture = royal_citizenship allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = 0.04 political_power_gain = 0.03 } }
+A01_open_seas_idea = { picture = royal_capital allowed = { always = yes } removal_cost = -1 modifier = { production_speed_industrial_complex_factor = 0.10 consumer_goods_expected_value = -0.03 war_support_factor = -0.05 } }
+A01_exile_mission = { picture = royal_navy allowed = { always = yes } removal_cost = -1 modifier = { production_speed_dockyard_factor = 0.10 war_support_factor = 0.08 consumer_goods_expected_value = 0.03 } }
+A01_archipelago_power = { picture = royal_guard allowed = { always = yes } removal_cost = -1 modifier = { army_defence_factor = 0.05 navy_org_factor = 0.05 consumer_goods_expected_value = 0.04 } }
+A01_pm_constitutional = { picture = royal_parliament allowed = { always = yes } removal_cost = -1 modifier = { political_power_gain = 0.08 research_speed_factor = 0.02 } }
+A01_pm_order = { picture = royal_sultanates allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = 0.04 production_speed_dockyard_factor = 0.05 } }
+A01_pm_indonesian = { picture = royal_citizenship allowed = { always = yes } removal_cost = -1 modifier = { recruitable_population_factor = 0.03 production_speed_buildings_factor = 0.05 } }
+} }

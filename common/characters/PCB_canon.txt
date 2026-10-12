@@ -1,0 +1,1 @@
+characters = { PCB_canon_leader = { name = PCB_canon_leader_name portraits = { civilian = { large = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds" } } country_leader = { ideology = oligarchism expire = "1965.1.1.1" traits = { } } } }

@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Single HOI4 focus emblem, hand-painted antique metal and enamel, unique subject silhouette, readable 95x85, transparent background, no words.",
+  "subjects": {
+    "constitution": "parchment, red seal, bronze quill",
+    "trade": "oil barrels, raw rubber, merchant scales",
+    "wolf": "lone silver wolf and maritime compass",
+    "ludolf": "civilian signet, pen, orange sash",
+    "admirals": "bicorne hats, anchor, baton",
+    "sultans": "Malay royal headdress, crescent, treaty scrolls",
+    "defeat": "cracked anchor, lowered Dutch ribbon, armistice document",
+    "revanchism": "gloved sabre, orange ribbon, broken chain"
+  }
+}

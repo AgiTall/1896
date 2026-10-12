@@ -1,0 +1,18 @@
+characters = {
+
+    ZZZ_Blackness = {
+        name = ZZZ_black_name
+
+        portraits = {
+            civilian = {
+                large = "GFX_ZZZ_Blackness"
+            }
+        }
+
+        country_leader = {
+            ideology = silentplague_1
+            expire = "1950.1.1.1"
+            traits = { }
+        }
+    }
+}

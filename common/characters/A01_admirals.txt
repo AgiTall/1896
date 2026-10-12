@@ -1,0 +1,18 @@
+characters = {
+A01_fabius = {
+ name = A01_gerhardus_fabius_name
+ portraits = { army = { large = GFX_portrait_period_fabius small = GFX_portrait_period_fabius_small } }
+ navy_leader = { skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 2 coordination_skill = 4 legacy_id = -1 traits = { old_guard navy_career_officer } }
+}
+A01_casembroot = {
+ name = A01_francois_de_casembroot_name
+ portraits = { army = { large = GFX_portrait_period_casembroot small = GFX_portrait_period_casembroot_small } }
+ navy_leader = { skill = 3 attack_skill = 4 defense_skill = 2 maneuvering_skill = 3 coordination_skill = 3 legacy_id = -1 traits = { bold superior_tactician } }
+}
+
+ # Fictional officer of this alternate-history colonial navy.
+ A01_surya_wirata = { name = A01_surya_wirata_name
+  portraits = { army = { large = GFX_portrait_se_asia_generic_navy_1 small = GFX_portrait_se_asia_generic_navy_1_small } }
+  navy_leader = { skill = 3 attack_skill = 2 defense_skill = 3 maneuvering_skill = 4 coordination_skill = 3 legacy_id = -1 traits = { navy_career_officer } }
+ }
+}

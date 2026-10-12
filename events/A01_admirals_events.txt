@@ -1,0 +1,36 @@
+add_namespace = A01_admirals
+
+country_event = {
+	id = A01_admirals.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = A01
+		has_dynamic_modifier = { modifier = A01_admirals_council }
+	}
+
+	immediate = {
+		set_country_flag = A01_batavian_congress_active
+	}
+}
+
+country_event = {
+	id = A01_admirals.2
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = A01
+		has_country_flag = A01_constitutional_amendments_active
+		has_dynamic_modifier = { modifier = A01_admirals_council }
+	}
+
+	immediate = {
+		set_variable = { A01_admirals_mobilization_law_cost = 0 }
+		set_variable = { A01_admirals_economy_law_cost = 0 }
+		set_variable = { A01_admirals_trade_law_cost = 0 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = A01_constitutional_amendments_active
+	}
+}

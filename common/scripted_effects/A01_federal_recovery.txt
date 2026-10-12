@@ -1,0 +1,31 @@
+A01_initialize_postwar_accounts_effect = {
+ if = { limit = { NOT = { has_country_flag = A01_postwar_accounts_initialized } }
+  set_country_flag = A01_postwar_accounts_initialized
+  set_variable = { A01_reconstruction_costs = 40 } set_variable = { A01_family_compensation_costs = 20 }
+  add_ideas = A01_postwar_destruction add_ideas = A01_unpaid_families add_ideas = A01_postwar_budget_burden
+ }
+}
+A01_clear_wtc_debt_effect = {
+ set_variable = { A01_wtc_debt = 0 }
+ remove_ideas = A01_borneo_state_loan remove_ideas = A01_borneo_self_build remove_ideas = A01_borneo_debt_service
+ clr_country_flag = A01_borneo_self_contract
+ set_country_flag = A01_wtc_debt_repaid
+}
+A01_settle_postwar_accounts_effect = {
+ A01_clear_wtc_debt_effect = yes
+ set_variable = { A01_reconstruction_costs = 0 } set_variable = { A01_family_compensation_costs = 0 }
+ remove_ideas = A01_postwar_destruction remove_ideas = A01_unpaid_families remove_ideas = A01_postwar_budget_burden
+ add_ideas = A01_restored_port_network
+ set_country_flag = A01_families_compensated set_country_flag = A01_wtc_recovery_financed
+}
+A01_create_democratic_federation_effect = {
+ set_country_flag = A01_democratic_federation_established
+ set_cosmetic_tag = A01_FEDERAL
+ set_politics = { ruling_party = democratic elections_allowed = no }
+ set_popularities = { democratic = 70 neutrality = 25 communism = 5 fascism = 0 }
+ add_country_leader_role = { character = A01_ludolf_sloot_van_de_beele promote_leader = yes country_leader = { ideology = liberalism expire = "1965.1.1.1" traits = { } } }
+ remove_ideas = A01_federal_transition remove_ideas = A01_island_charter remove_ideas = A01_island_representation_idea
+ add_ideas = A01_democratic_federation_idea
+ every_subject_country = { limit = { OR = { tag = A11 tag = A12 tag = A13 tag = A14 } } A01 = { annex_country = { target = PREV transfer_troops = yes } } }
+ A01_borneo_resource_rights_effect = yes
+}

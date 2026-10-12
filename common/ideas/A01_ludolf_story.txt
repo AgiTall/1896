@@ -1,0 +1,85 @@
+ideas = {
+ country = {
+
+ }
+ hidden_ideas = {
+  A01_borneo_humiliation = {
+   picture = story_defeat
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_revanchism_simmering = {
+   picture = story_revanchism
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_revanchism_organised = {
+   picture = story_revanchism
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_reconstruction_cabinet = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_sultanate_federation = {
+   picture = story_sultans
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_civilian_naval_compact = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+ }
+}

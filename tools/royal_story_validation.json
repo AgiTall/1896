@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "new_focuses": 28,
+  "royal_focuses": 46,
+  "new_events": 15,
+  "visible_spirits": 21,
+  "checks": [
+    "All three Council resolutions; proof/loyalty gates; purge removes a commander; pension reform; both constitutional outcomes",
+    "Deadline failure offers a recoverable political setback",
+    "Council defeat permanently unlocks its law veto after temporary amendments expire",
+    "Autonomous charters release only held land and preserve existing independent countries and Japanese holdings",
+    "Both princely negotiation options reach settlement with civic rights; no dead end",
+    "All three named premiers can win; repeat elections replace cabinet bonuses; deterministic ties; monarch remains",
+    "All prerequisites, cycles, layout, symmetric exclusions, complete RU/EN localisation and installed-engine modifier names",
+    "Local focus/shine/idea DDS sprites and transparent national spirit textures"
+  ],
+  "in_game_campaign": "Not run; script simulation and asset validation only."
+}

@@ -1,0 +1,1 @@
+A01_monarchy_category = { icon = generic_political_actions allowed = { original_tag = A01 } visible = { has_completed_focus = A01_pacific_settlement NOT = { has_country_flag = A01_ludolf_crisis_resolved } date > 1894.12.31 } }

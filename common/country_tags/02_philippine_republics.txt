@@ -1,0 +1,7 @@
+PVI = "countries/PVI.txt"
+PSM = "countries/PSM.txt"
+PMD = "countries/PMD.txt"
+PNM = "countries/PNM.txt"
+PNL = "countries/PNL.txt"
+PML = "countries/PML.txt"
+PBT = "countries/PBT.txt"

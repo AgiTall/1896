@@ -1,0 +1,52 @@
+ideas = {
+	country = {
+		A01_wilhelmina = {
+			picture = A01_wilhelmina
+
+			allowed = {
+				original_tag = A01
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			traits = {
+				popular_figurehead
+			}
+		}
+
+		A01_sultans_council_stability = {
+			picture = pacific_batavia
+			allowed = { original_tag = A01 }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+			}
+		}
+
+	}
+
+	hidden_ideas = {
+		A01_oil_dependency_hidden_research = {
+			name = A01_oil_dependency
+			picture = A01_oil_dependency
+			removal_cost = -1
+
+			allowed = {
+				original_tag = A01
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			research_bonus = {
+				synth_resources = 0.20
+			}
+		}
+	}
+}

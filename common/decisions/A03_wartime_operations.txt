@@ -1,0 +1,146 @@
+A03_wartime_operations = {
+
+ # ---------------------------------------------------------------
+ # Продление кампании: переброска резервов
+ # A03 может продлить собственный таймер A03_japanese_expansion
+ # ---------------------------------------------------------------
+ A03_rush_second_wave = {
+  icon = generic_army_support
+  cost = 50
+  fire_only_once = yes
+
+  visible = {
+   tag = A03
+   has_war_with = A01
+   has_active_mission = A03_japanese_expansion
+  }
+  available = {
+   has_war_with = A01
+   has_active_mission = A03_japanese_expansion
+   NOT = { has_country_flag = A03_second_wave_sent }
+  }
+
+  complete_effect = {
+   set_country_flag = A03_second_wave_sent
+   # 45 дней дополнительного времени для кампании
+   add_days_mission_timeout = { mission = A03_japanese_expansion days = 45 }
+   A01 = { add_days_mission_timeout = { mission = A01_japanese_expansion days = 45 } }
+   # Немедленное подкрепление к берегам Борнео
+   add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1000 producer = A03 }
+   add_manpower = 5000
+   add_war_support = 0.04
+   A01 = { country_event = { id = sabah_war.1 days = 1 } }
+  }
+  ai_will_do = {
+   base = 15
+   modifier = {
+    factor = 3
+    has_war_with = A01
+    NOT = { A03_controls_borneo_province = yes }
+   }
+  }
+ }
+
+ A03_mobilize_reserves = {
+  icon = generic_army_support
+  cost = 75
+  fire_only_once = yes
+
+  visible = {
+   tag = A03
+   has_war_with = A01
+   has_active_mission = A03_japanese_expansion
+  }
+  available = {
+   has_war_with = A01
+   has_active_mission = A03_japanese_expansion
+   NOT = { has_country_flag = A03_reserves_mobilized }
+  }
+
+  complete_effect = {
+   set_country_flag = A03_reserves_mobilized
+   # 30 дней к таймеру кампании
+   add_days_mission_timeout = { mission = A03_japanese_expansion days = 30 }
+   A01 = { add_days_mission_timeout = { mission = A01_japanese_expansion days = 30 } }
+   add_manpower = 15000
+   add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2000 producer = A03 }
+   add_fuel = 20000
+   add_war_support = 0.05
+  }
+  ai_will_do = {
+   base = 12
+   modifier = {
+    factor = 2
+    has_war_with = A01
+    NOT = { A03_controls_borneo_province = yes }
+   }
+  }
+ }
+
+ A03_imperial_press_campaign = {
+  icon = generic_political_discourse
+  cost = 35
+  fire_only_once = yes
+
+  visible = {
+   tag = A03
+   has_war_with = A01
+   has_active_mission = A03_japanese_expansion
+  }
+  available = {
+   has_war_with = A01
+   has_active_mission = A03_japanese_expansion
+   NOT = { has_country_flag = A03_press_campaign_done }
+  }
+
+  complete_effect = {
+   set_country_flag = A03_press_campaign_done
+   # 20 дней к таймеру за счёт пропаганды
+   add_days_mission_timeout = { mission = A03_japanese_expansion days = 20 }
+   A01 = { add_days_mission_timeout = { mission = A01_japanese_expansion days = 20 } }
+   add_war_support = 0.07
+   add_stability = 0.03
+   add_political_power = 25
+  }
+  ai_will_do = { base = 10 }
+ }
+
+}
+
+# ---------------------------------------------------------------
+# Нидерланды могут попросить мир на условиях Японии
+# (передать Сабах без ожидания конца таймера)
+# ---------------------------------------------------------------
+A01_peace_request_category = {
+
+ A01_request_japanese_terms = {
+  icon = generic_political_discourse
+  cost = 100
+  fire_only_once = yes
+
+  visible = {
+   tag = A01
+   has_war_with = A03
+   has_active_mission = A01_japanese_expansion
+  }
+  available = {
+   has_war_with = A03
+   has_active_mission = A01_japanese_expansion
+   # Control includes a surviving lease, as specified by the author.
+   A03 = { A03_controls_borneo_province = yes }
+   NOT = { has_country_flag = A01_peace_terms_requested }
+  }
+
+  complete_effect = {
+   set_country_flag = A01_peace_terms_requested
+   # Немедленно запускает процедуру Борнейской конвенции через событие
+   country_event = { id = a01_peace_request.1 days = 1 }
+  }
+
+  ai_will_do = {
+   base = 0
+   # ИИ не будет сдаваться сам (только игрок)
+  }
+ }
+
+}

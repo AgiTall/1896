@@ -1,0 +1,12 @@
+on_actions = {
+ on_startup = { effect = { A01 = { A01_initialize_colonial_constraints_effect = yes } } }
+ on_daily = {
+  effect = {
+   A01 = {
+    A01_initialize_colonial_constraints_effect = yes
+    # Handles both fresh captures and occupied states in an existing save.
+    A01_japanese_occupation_pressure_effect = yes
+   }
+  }
+ }
+}

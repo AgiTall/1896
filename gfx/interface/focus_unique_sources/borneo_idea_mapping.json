@@ -1,0 +1,18 @@
+{
+  "A03_southern_blitz": [
+    "borneo_blitz",
+    "A03_southern_campaign"
+  ],
+  "A01_coerced_service": [
+    "borneo_coerced_service",
+    "A01_admirals_council_coup"
+  ],
+  "A01_service_compromise": [
+    "borneo_service_compromise",
+    "A01_equal_service"
+  ],
+  "A01_indonesian_volunteers": [
+    "borneo_volunteers",
+    "A01_island_garrisons"
+  ]
+}

@@ -1,0 +1,7 @@
+capital = 1022
+set_research_slots = 2
+set_politics = { ruling_party = neutrality elections_allowed = no }
+set_popularities = { neutrality = 100 }
+set_convoys = 10
+recruit_character = A13_sultans_council
+set_technology = { infantry_weapons = 1 }

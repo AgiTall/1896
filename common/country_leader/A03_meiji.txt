@@ -1,0 +1,1 @@
+leader_traits = { A03_imperial_authority = { random = no stability_factor = 0.05 } }

@@ -1,0 +1,37 @@
+PZ_initialize_canon_relations_effect = {
+ if = {
+  limit = { NOT = { has_global_flag = PZ_canon_relations_initialized } }
+  set_global_flag = PZ_canon_relations_initialized
+  if = { limit = { country_exists = A02 country_exists = A04 } A02 = { add_opinion_modifier = { target = A04 modifier = pz_commercial_partner } } A04 = { add_opinion_modifier = { target = A02 modifier = pz_commercial_partner } } }
+  if = { limit = { country_exists = A02 country_exists = A06 } A02 = { add_opinion_modifier = { target = A06 modifier = pz_exile_solidarity } } A06 = { add_opinion_modifier = { target = A02 modifier = pz_exile_solidarity } } }
+  if = { limit = { country_exists = A02 country_exists = A07 } A02 = { add_opinion_modifier = { target = A07 modifier = pz_common_heritage } } A07 = { add_opinion_modifier = { target = A02 modifier = pz_common_heritage } } }
+  if = { limit = { country_exists = A01 country_exists = A02 } A01 = { add_opinion_modifier = { target = A02 modifier = pz_commercial_partner } } A02 = { add_opinion_modifier = { target = A01 modifier = pz_commercial_partner } } }
+  if = { limit = { country_exists = A01 country_exists = A04 } A01 = { add_opinion_modifier = { target = A04 modifier = pz_debt_dependence } } A04 = { add_opinion_modifier = { target = A01 modifier = pz_debt_dependence } } }
+  if = { limit = { country_exists = A03 country_exists = A04 } A03 = { add_opinion_modifier = { target = A04 modifier = pz_commercial_partner } } A04 = { add_opinion_modifier = { target = A03 modifier = pz_commercial_partner } } }
+  if = { limit = { country_exists = A03 country_exists = A01 } A03 = { add_opinion_modifier = { target = A01 modifier = pz_oil_rivalry } } A01 = { add_opinion_modifier = { target = A03 modifier = pz_oil_rivalry } } }
+  if = { limit = { country_exists = A03 country_exists = A08 } A03 = { add_opinion_modifier = { target = A08 modifier = pz_japanese_schism } } A08 = { add_opinion_modifier = { target = A03 modifier = pz_japanese_schism } } }
+  if = { limit = { country_exists = A03 country_exists = A09 } A03 = { add_opinion_modifier = { target = A09 modifier = pz_japanese_schism } } A09 = { add_opinion_modifier = { target = A03 modifier = pz_japanese_schism } } }
+  if = { limit = { country_exists = A08 country_exists = A09 } A08 = { add_opinion_modifier = { target = A09 modifier = pz_japanese_schism } } A09 = { add_opinion_modifier = { target = A08 modifier = pz_japanese_schism } } }
+  if = { limit = { country_exists = A03 country_exists = A10 } A03 = { add_opinion_modifier = { target = A10 modifier = pz_occupation } } A10 = { add_opinion_modifier = { target = A03 modifier = pz_occupation } } }
+  if = { limit = { country_exists = A03 country_exists = PLS } A03 = { add_opinion_modifier = { target = PLS modifier = pz_occupation } } PLS = { add_opinion_modifier = { target = A03 modifier = pz_occupation } } }
+  if = { limit = { country_exists = A03 country_exists = PSL } A03 = { add_opinion_modifier = { target = PSL modifier = pz_occupation } } PSL = { add_opinion_modifier = { target = A03 modifier = pz_occupation } } }
+  if = { limit = { country_exists = A10 country_exists = PLS } A10 = { add_opinion_modifier = { target = PLS modifier = pz_resistance } } PLS = { add_opinion_modifier = { target = A10 modifier = pz_resistance } } }
+  if = { limit = { country_exists = A10 country_exists = PCB } A10 = { add_opinion_modifier = { target = PCB modifier = pz_federal_dispute } } PCB = { add_opinion_modifier = { target = A10 modifier = pz_federal_dispute } } }
+  if = { limit = { country_exists = A10 country_exists = PPN } A10 = { add_opinion_modifier = { target = PPN modifier = pz_federal_dispute } } PPN = { add_opinion_modifier = { target = A10 modifier = pz_federal_dispute } } }
+  if = { limit = { country_exists = A10 country_exists = PSL } A10 = { add_opinion_modifier = { target = PSL modifier = pz_mutual_suspicion } } PSL = { add_opinion_modifier = { target = A10 modifier = pz_mutual_suspicion } } }
+  if = { limit = { country_exists = A03 country_exists = A07 } A03 = { add_opinion_modifier = { target = A07 modifier = pz_pacific_rivalry } } A07 = { add_opinion_modifier = { target = A03 modifier = pz_pacific_rivalry } } }
+  if = { limit = { country_exists = A01 country_exists = A07 } A01 = { add_opinion_modifier = { target = A07 modifier = pz_papua_dispute } } A07 = { add_opinion_modifier = { target = A01 modifier = pz_papua_dispute } } }
+  if = { limit = { country_exists = A05 country_exists = PCF } A05 = { add_opinion_modifier = { target = PCF modifier = pz_caribbean_conflict } } PCF = { add_opinion_modifier = { target = A05 modifier = pz_caribbean_conflict } } }
+  if = { limit = { country_exists = A05 country_exists = PAZ } A05 = { add_opinion_modifier = { target = PAZ modifier = pz_caribbean_conflict } } PAZ = { add_opinion_modifier = { target = A05 modifier = pz_caribbean_conflict } } }
+  if = { limit = { country_exists = PCF country_exists = PAZ } PCF = { add_opinion_modifier = { target = PAZ modifier = pz_caribbean_conflict } } PAZ = { add_opinion_modifier = { target = PCF modifier = pz_caribbean_conflict } } }
+  if = { limit = { country_exists = PHR country_exists = PAZ } PHR = { add_opinion_modifier = { target = PAZ modifier = pz_caribbean_conflict } } PAZ = { add_opinion_modifier = { target = PHR modifier = pz_caribbean_conflict } } }
+  if = { limit = { country_exists = A05 country_exists = PCF A05 = { NOT = { has_war_with = PCF } } } A05 = { declare_war_on = { target = PCF type = annex_everything } } }
+  if = { limit = { country_exists = A05 country_exists = PAZ A05 = { NOT = { has_war_with = PAZ } } } A05 = { declare_war_on = { target = PAZ type = annex_everything } } }
+  if = { limit = { country_exists = PCF country_exists = PAZ PCF = { NOT = { has_war_with = PAZ } } } PCF = { declare_war_on = { target = PAZ type = annex_everything } } }
+  if = { limit = { country_exists = PHR country_exists = PAZ PHR = { NOT = { has_war_with = PAZ } } } PHR = { declare_war_on = { target = PAZ type = annex_everything } } }
+  if = { limit = { country_exists = PHR country_exists = A05 PHR = { NOT = { has_war_with = A05 } } } PHR = { declare_war_on = { target = A05 type = annex_everything } } }
+  if = { limit = { country_exists = PHR country_exists = PCF PHR = { NOT = { has_war_with = PCF } } } PHR = { declare_war_on = { target = PCF type = annex_everything } } }
+  if = { limit = { country_exists = PHR country_exists = A05 } PHR = { add_opinion_modifier = { target = A05 modifier = pz_caribbean_conflict } } A05 = { add_opinion_modifier = { target = PHR modifier = pz_caribbean_conflict } } }
+  if = { limit = { country_exists = PHR country_exists = PCF } PHR = { add_opinion_modifier = { target = PCF modifier = pz_caribbean_conflict } } PCF = { add_opinion_modifier = { target = PHR modifier = pz_caribbean_conflict } } }
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "Three naval roles, valid portrait slots and history-only recruitment",
+    "Speech choices expose no event or policy effect tooltip",
+    "Agrarian modifiers exist in installed game documentation",
+    "Stacked manpower penalties remain below 100 percent under volunteer law",
+    "Obsolete preparation decisions removed",
+    "Occupation penalty for ordinary states, Sabah and Batavia",
+    "No daily or repeated-capture penalty farming",
+    "No penalty for lease, peace, resolved war or Admirals government",
+    "RU/EN labels and balanced changed scripts"
+  ],
+  "engine_campaign_test": "Not run; these are static checks and execution in a script model."
+}

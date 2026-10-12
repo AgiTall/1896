@@ -1,0 +1,158 @@
+add_namespace = A01_future
+country_event = {
+ id = A01_future.1
+ title = A01_future.1.t
+ desc = A01_future.1.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A01 has_active_mission = A01_japanese_invasion_countdown }
+ option = { name = A01_future.1.a   }
+}
+country_event = {
+ id = A01_future.2
+ title = A01_future.2.t
+ desc = A01_future.2.d
+ picture = GFX_1896_event_protest
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_borneo_treaty NOT = { has_country_flag = A01_ludolf_crisis_resolved } }
+ immediate = { add_ideas = A01_demands_for_freedom }
+ option = { name = A01_future.2.a   }
+}
+country_event = {
+ id = A01_future.3
+ title = A01_future.3.t
+ desc = A01_future.3.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_dismissal_debate_active }
+ option = { name = A01_future.3.a   }
+}
+country_event = {
+ id = A01_future.4
+ title = A01_future.4.t
+ desc = A01_future.4.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_dismissal_debate_active }
+ option = { name = A01_future.4.a   }
+}
+country_event = {
+ id = A01_future.5
+ title = A01_future.5.t
+ desc = A01_future.5.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_dismissal_debate_active NOT = { has_country_flag = A01_ludolf_crisis_resolved } }
+ option = { name = A01_future.5.a trigger = { has_country_flag = A01_sultanates_back_ludolf } ai_chance = { factor = 55 } A01_establish_federal_mandate_effect = yes }
+ option = { name = A01_future.5.b ai_chance = { factor = 45 } A01_establish_military_rule_effect = yes }
+}
+country_event = {
+ id = A01_future.6
+ title = A01_future.6.t
+ desc = A01_future.6.d
+ picture = GFX_1896_event_treaty
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_federal_mandate }
+ option = { name = A01_future.6.a   }
+}
+country_event = {
+ id = A01_future.7
+ title = A01_future.7.t
+ desc = A01_future.7.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_federal_mandate }
+ option = { name = A01_future.7.a   }
+}
+country_event = {
+ id = A01_future.8
+ title = A01_future.8.t
+ desc = A01_future.8.d
+ picture = GFX_1896_event_treaty
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_federal_mandate }
+ option = { name = A01_future.8.a   }
+}
+country_event = {
+ id = A01_future.9
+ title = A01_future.9.t
+ desc = A01_future.9.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_admirals_seized_power }
+ option = { name = A01_future.9.a   }
+}
+country_event = {
+ id = A01_future.10
+ title = A01_future.10.t
+ desc = A01_future.10.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_admirals_seized_power }
+ option = { name = A01_future.10.a   }
+}
+country_event = {
+ id = A01_future.11
+ title = A01_future.11.t
+ desc = A01_future.11.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_royal_path_revealed }
+ option = { name = A01_future.11.a   }
+}
+country_event = {
+ id = A01_future.12
+ title = A01_future.12.t
+ desc = A01_future.12.d
+ picture = GFX_1896_event_treaty
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_royal_path_revealed }
+ option = { name = A01_future.12.a   }
+}
+country_event = {
+ id = A01_future.13
+ title = A01_future.13.t
+ desc = A01_future.13.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_wilhelmina_reigns }
+ option = { name = A01_future.13.a   }
+}
+country_event = {
+ id = A01_future.14
+ title = A01_future.14.t
+ desc = A01_future.14.d
+ picture = GFX_1896_event_treaty
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_wilhelmina_reigns }
+ option = { name = A01_future.14.a   }
+}
+country_event = {
+ id = A01_future.15
+ title = A01_future.15.t
+ desc = A01_future.15.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_admirals_seized_power }
+ option = { name = A01_future.15.a   }
+}
+country_event = {
+ id = A01_future.16
+ title = A01_future.16.t
+ desc = A01_future.16.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A01 NOT = { has_country_flag = A01_political_path_chosen } has_country_flag = A01_dismissal_debate_active NOT = { has_country_flag = A01_ludolf_crisis_resolved } NOT = { power_balance_value = { id = A01_ludolf_admirals_balance value < -0.1 } } NOT = { power_balance_value = { id = A01_ludolf_admirals_balance value > 0.1 } } }
+ option = { name = A01_future.16.a ai_chance = { factor = 20 } set_country_flag = A01_royal_path_revealed mark_focus_tree_layout_dirty = yes }
+ option = { name = A01_future.16.b ai_chance = { factor = 80 } add_stability = -0.01 }
+}
+
+country_event = {
+ id = A01_future.17
+ title = A01_future.17.t
+ desc = A01_future.17.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_ludolf_reform_path NOT = { has_country_flag = A01_ludolf_crisis_resolved } }
+ option = { name = A01_future.17.a }
+}

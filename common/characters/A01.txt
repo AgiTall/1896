@@ -1,0 +1,28 @@
+characters = {
+    A01_ludolf_sloot_van_de_beele = {
+        name = A01_ludolf_sloot_van_de_beele_name
+
+        portraits = {
+            civilian = {
+                large = "GFX_A01_Ludolf_Sloot_van_de_Beele"
+            }
+        }
+
+        country_leader = {
+            ideology = oligarchism
+            expire = "1965.1.1.1"
+            traits = { }
+        }
+    }
+
+    A01_council_of_admirals = {
+  portraits = { civilian = { large = "gfx/leaders/A01/A01_council_of_admirals_placeholder.dds" } }
+        name = A01_council_of_admirals_name
+
+        country_leader = {
+            ideology = despotism
+            expire = "1965.1.1.1"
+            traits = { }
+        }
+    }
+}

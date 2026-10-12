@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_JAP_land_cruiser_armor_medium"
+		texturefile = "gfx/interface/technologies/generic_land_cruiser_armor.dds"
+	}
+}

@@ -1,0 +1,30 @@
+A01_crown_struggle = {
+ A01_crown_audiences = {
+  icon = generic_political_discourse cost = 50 days_re_enable = 60
+  available = { NOT = { has_country_flag = A01_constitutional_monarchy_path } NOT = { has_country_flag = A01_royal_dictatorship_path } }
+  complete_effect = { add_power_balance_value = { id = A01_crown_council_balance value = 0.15 } add_stability = 0.02 }
+  ai_will_do = { factor = 1 }
+ }
+ A01_council_concessions = {
+  icon = generic_political_discourse cost = 35 days_re_enable = 60
+  available = { NOT = { has_country_flag = A01_royal_dictatorship_path } }
+  complete_effect = { add_power_balance_value = { id = A01_crown_council_balance value = -0.15 } add_political_power = 15 }
+  ai_will_do = { factor = 1 }
+ }
+ A01_guard_oaths = {
+  icon = generic_army_support cost = 75 days_re_enable = 90
+  available = { has_country_flag = A01_royal_guard_established NOT = { has_country_flag = A01_constitutional_monarchy_path } NOT = { has_country_flag = A01_royal_dictatorship_path } }
+  complete_effect = { add_power_balance_value = { id = A01_crown_council_balance value = 0.20 } army_experience = 10 add_stability = -0.02 }
+  ai_will_do = { factor = 1 }
+ }
+ A01_crown_compromise = {
+  icon = generic_political_discourse cost = 60 days_re_enable = 60
+  available = { NOT = { has_country_flag = A01_royal_dictatorship_path } }
+  complete_effect = {
+   if = { limit = { power_balance_value = { id = A01_crown_council_balance value > 0 } } add_power_balance_value = { id = A01_crown_council_balance value = -0.20 } }
+   else = { add_power_balance_value = { id = A01_crown_council_balance value = 0.20 } }
+   add_stability = 0.03
+  }
+  ai_will_do = { factor = 2 }
+ }
+}

@@ -1,0 +1,5 @@
+characters = {
+ A02_fisher = { name = A02_fisher_name navy_leader = { skill = 4 attack_skill = 4 defense_skill = 3 maneuvering_skill = 3 coordination_skill = 4 traits = { } } }
+ A06_pobedonostsev = { name = A06_pobedonostsev_name advisor = { slot = political_advisor idea_token = A06_pobedonostsev_advisor allowed = { original_tag = A06 } traits = { } cost = 150 } }
+ PAZ_prophet = { name = PAZ_prophet_name advisor = { slot = political_advisor idea_token = PAZ_prophet_advisor allowed = { original_tag = PAZ } traits = { } cost = 150 } }
+}

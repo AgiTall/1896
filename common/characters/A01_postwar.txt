@@ -1,0 +1,10 @@
+characters = {
+ A01_postwar_conservative = { name = A01_postwar_conservative_name
+  portraits = { civilian = { large = "gfx/leaders/A01/postwar_conservative.dds" } }
+  country_leader = { ideology = conservatism expire = "1965.1.1.1" traits = { } }
+ }
+ A01_postwar_indonesian = { name = A01_postwar_indonesian_name
+  portraits = { civilian = { large = "gfx/leaders/A01/postwar_indonesian.dds" } }
+  country_leader = { ideology = socialism expire = "1965.1.1.1" traits = { } }
+ }
+}

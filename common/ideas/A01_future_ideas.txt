@@ -1,0 +1,114 @@
+ideas = {
+ country = {
+  A01_federal_transition = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+    political_power_gain = -0.05
+    stability_factor = 0.03
+   }
+  }
+  A01_democratic_federation_idea = {
+   picture = story_sultans
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+    stability_factor = 0.03
+    political_power_gain = 0.05
+    recruitable_population_factor = 0.05
+   }
+  }
+  A01_military_directorate = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+    political_power_gain = 0.15
+    war_support_factor = 0.10
+   }
+  }
+  A01_purged_administration = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+    production_speed_buildings_factor = -0.10
+    stability_factor = -0.03
+   }
+  }
+  A01_purged_officers = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+    army_org_factor = -0.10
+    navy_org_factor = -0.10
+   }
+  }
+  A01_total_military_state = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+    industrial_capacity_factory = 0.10
+    political_power_gain = 0.15
+    stability_factor = -0.05
+   }
+  }
+ }
+ hidden_ideas = {
+  A01_demands_for_freedom = {
+   picture = story_sultans
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_royal_arbitration = {
+   picture = A01_wilhelmina
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_island_charter = {
+   picture = story_sultans
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_constitutional_crown = {
+   picture = A01_wilhelmina
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+ }
+}

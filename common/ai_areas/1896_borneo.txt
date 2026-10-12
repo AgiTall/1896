@@ -1,0 +1,5 @@
+areas = {
+ A03_borneo = {
+  strategic_regions = { 159 }
+ }
+}

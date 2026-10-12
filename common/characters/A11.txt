@@ -1,0 +1,1 @@
+characters = { A11_sultans_council = { name = A11_council_name country_leader = { ideology = despotism expire = "1965.1.1.1" traits = { } } } }

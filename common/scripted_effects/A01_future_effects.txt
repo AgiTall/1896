@@ -1,0 +1,252 @@
+A01_begin_dismissal_debate_effect = {
+ if = {
+  limit = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_country_flag = A01_ludolf_crisis_resolved
+   }
+   NOT = {
+    has_country_flag = A01_dismissal_debate_started
+   }
+  }
+  set_country_flag = A01_dismissal_debate_started
+  set_country_flag = A01_dismissal_debate_active
+  activate_mission = A01_motion_to_dismiss_ludolf
+  country_event = {
+   id = A01_future.3
+   days = 1
+  }
+ }
+}
+A01_end_dismissal_debate_effect = {
+ set_country_flag = A01_political_path_chosen
+ set_country_flag = A01_ludolf_crisis_resolved
+ clr_country_flag = A01_dismissal_debate_active
+ remove_mission = A01_motion_to_dismiss_ludolf
+ remove_ideas = A01_demands_for_freedom
+ remove_ideas = A01_reconstruction_cabinet
+}
+A01_establish_federal_mandate_effect = {
+ if = {
+  limit = {
+   NOT = {
+    has_country_flag = A01_ludolf_crisis_resolved
+   }
+  }
+  A01_end_dismissal_debate_effect = yes
+  set_country_flag = A01_ludolf_survived
+  set_country_flag = A01_federal_mandate
+  set_country_flag = A01_ludolf_reform_path
+  set_power_balance = {
+   id = A01_ludolf_admirals_balance
+   set_value = 0.35
+  }
+  remove_ideas = A01_borneo_humiliation
+  add_ideas = A01_federal_transition
+  country_event = {
+   id = ludolf.36
+   days = 1
+  }
+ }
+}
+A01_establish_military_rule_effect = {
+ if = {
+  limit = {
+   has_country_flag = A01_borneo_treaty
+   has_country_flag = A01_dismissal_debate_started
+   NOT = {
+    has_country_flag = A01_ludolf_crisis_resolved
+   }
+  }
+  A01_end_dismissal_debate_effect = yes
+  set_country_flag = A01_admirals_seized_power
+  set_country_flag = A01_ludolf_imprisoned
+  set_politics = {
+   ruling_party = neutrality
+   elections_allowed = no
+  }
+  set_popularities = {
+   neutrality = 85
+   democratic = 10
+   communism = 5
+   fascism = 0
+  }
+  promote_character = {
+   character = A01_council_of_admirals
+   ideology = despotism
+  }
+  retire_character = A01_ludolf_sloot_van_de_beele
+  set_power_balance = {
+   id = A01_ludolf_admirals_balance
+   set_value = -0.85
+  }
+  add_ideas = A01_military_directorate
+  remove_ideas = A01_wilhelmina
+  country_event = {
+   id = ludolf.35
+   days = 1
+  }
+ }
+}
+A01_establish_regency_effect = {
+ if = {
+  limit = {
+   NOT = {
+    has_country_flag = A01_ludolf_crisis_resolved
+   }
+  }
+  A01_end_dismissal_debate_effect = yes
+  set_country_flag = A01_royal_path_revealed
+  set_country_flag = A01_emma_regency
+  set_cosmetic_tag = A01_CROWN
+  
+  promote_character = {
+   character = A01_emma_waldeck_pyrmont
+   ideology = despotism
+  }
+  retire_character = A01_ludolf_sloot_van_de_beele
+  set_politics = {
+   ruling_party = neutrality
+   elections_allowed = no
+  }
+  set_power_balance = {
+   id = A01_ludolf_admirals_balance
+   set_value = 0
+  }
+  add_ideas = A01_royal_arbitration
+  mark_focus_tree_layout_dirty = yes
+  country_event = {
+   id = A01_future.11
+   days = 1
+  }
+  A01_initialize_crown_struggle = yes
+ }
+}
+A01_create_autonomous_sultanates_effect = {
+ if = {
+  limit = {
+   owns_state = 1055
+   NOT = {
+    country_exists = A11
+   }
+  }
+  1055 = {
+   add_core_of = A11
+  }
+  A11 = {
+   transfer_state = 1055
+   set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+   }
+   set_popularities = {
+    neutrality = 100
+   }
+  }
+  set_autonomy = {
+   target = A11
+   autonomy_state = autonomy_puppet
+   freedom_level = 0.25
+  }
+ }
+ if = {
+  limit = {
+   owns_state = 334
+   NOT = {
+    country_exists = A12
+   }
+  }
+  334 = {
+   add_core_of = A12
+  }
+  A12 = {
+   transfer_state = 334
+   set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+   }
+   set_popularities = {
+    neutrality = 100
+   }
+  }
+  set_autonomy = {
+   target = A12
+   autonomy_state = autonomy_puppet
+   freedom_level = 0.25
+  }
+ }
+ if = {
+  limit = {
+   owns_state = 1022
+   NOT = {
+    country_exists = A13
+   }
+  }
+  1022 = {
+   add_core_of = A13
+  }
+  A13 = {
+   transfer_state = 1022
+   set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+   }
+   set_popularities = {
+    neutrality = 100
+   }
+  }
+  set_autonomy = {
+   target = A13
+   autonomy_state = autonomy_puppet
+   freedom_level = 0.25
+  }
+ }
+ A01_borneo_resource_rights_effect = yes
+ if = {
+  limit = {
+   OR = {
+    A11 = {
+     is_subject_of = A01
+    }
+    A12 = {
+     is_subject_of = A01
+    }
+    A13 = {
+     is_subject_of = A01
+    }
+   }
+  }
+  set_country_flag = A01_sultanates_back_ludolf
+  add_power_balance_value = {
+   id = A01_ludolf_admirals_balance
+   value = 0.15
+  }
+ }
+ if = {
+  limit = {
+   owns_state = 1050
+   NOT = {
+    country_exists = A14
+   }
+  }
+  1050 = {
+   add_core_of = A14
+  }
+  A14 = {
+   transfer_state = 1050
+   set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+   }
+   set_popularities = {
+    neutrality = 100
+   }
+  }
+  set_autonomy = {
+   target = A14
+   autonomy_state = autonomy_puppet
+   freedom_level = 0.25
+  }
+ }
+ set_country_flag = A01_sultanates_chartered
+}

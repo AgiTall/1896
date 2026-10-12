@@ -1,0 +1,19 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_report_event_krz_julian"
+		texturefile = "gfx/event_pictures/report_event_krz_julian.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_A01_japan_rejects_dutch_offer"
+		texturefile = "gfx/event_pictures/A01_japan_rejects_dutch_offer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_A01_constitution"
+		texturefile = "gfx/event_pictures/report_event_A01_constitution.dds"
+	}
+}
+
+

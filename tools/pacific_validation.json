@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "focus IDs, references, cycles, coordinates, RU/EN localisation, sprite definitions",
+    "unit location ownership and naval ports",
+    "starting technologies against installed game",
+    "script braces and DDS alpha"
+  ],
+  "counts": {
+    "A01_focuses": 123,
+    "A03_focuses": 32
+  },
+  "errors": [],
+  "runtime_test": "Not run; static validation does not replace an in-game campaign."
+}

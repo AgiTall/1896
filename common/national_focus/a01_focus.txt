@@ -1,0 +1,4974 @@
+focus_tree = {
+ id = A01_focus
+ country = {
+  factor = 0
+  modifier = {
+   add = 10
+   tag = A01
+  }
+ }
+ default = no
+ focus = {
+  id = A01_constitution
+  icon = GFX_goal_unique_A01_constitution
+  cost = 2
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   hidden_effect = {
+    set_variable = {
+     A01_admirals_mobilization_law_cost = -1
+    }
+    set_variable = {
+     A01_admirals_economy_law_cost = -1
+    }
+    set_variable = {
+     A01_admirals_trade_law_cost = -1
+    }
+    force_update_dynamic_modifier = yes
+    set_country_flag = A01_constitutional_amendments_active
+    country_event = {
+     id = A01_admirals.2
+     days = 14
+    }
+   }
+   country_event = {
+    id = A01_constitution.1
+   }
+   custom_effect_tooltip = A01_constitutional_amendments_window_tt
+   log = "[GetDateText]: [Root.GetName]: Focus A01_constitution completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 16
+  y = 0
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_wtc_oil_and_rubber_offer
+  icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
+  cost = 5
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   country_event = {
+    id = ludolf.1
+    days = 1
+   }
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ludolf.2
+      days = 1
+     }
+    }
+   }
+   set_country_flag = A01_wtc_contact_established
+   custom_effect_tooltip = A01_wtc_postwar_unlock_tt
+   capital_scope = {
+    add_building_construction = {
+     type = industrial_complex
+     level = 1
+     instant_build = yes
+    }
+   }
+   set_variable = {
+    A01_oil_construction_factor = -0.05
+   }
+   set_variable = {
+    A01_oil_democratic_drift = 0.01
+   }
+   force_update_dynamic_modifier = yes
+   log = "[GetDateText]: [Root.GetName]: Focus A01_wtc_oil_and_rubber_offer completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_java_steam_power
+  }
+  x = 6
+  y = 14
+ }
+ focus = {
+  id = A01_lone_wolf_path
+  icon = GFX_goal_unique_A01_lone_wolf_path
+  cost = 2
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   A01_initialize_balance_effect = yes
+   if = {
+    limit = {
+     is_in_faction = yes
+    }
+    leave_faction = yes
+   }
+   set_rule = {
+    can_join_factions = no
+    can_create_factions = no
+   }
+   set_country_flag = A01_lone_wolf_path
+   log = "[GetDateText]: [Root.GetName]: Focus A01_lone_wolf_path completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 16
+  y = 2
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  prerequisite = {
+   focus = A01_constitution
+  }
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_strengthen_ludolfs_power
+  icon = GFX_goal_unique_A01_strengthen_ludolfs_power
+  cost = 5
+  prerequisite = {
+   focus = A01_lone_wolf_path
+  }
+  mutually_exclusive = {
+   focus = A01_admirals_council_coup
+  }
+  ai_will_do = {
+   factor = 10
+  }
+  completion_reward = {
+   add_power_balance_value = {
+    id = A01_ludolf_admirals_balance
+    value = 0.1
+   }
+   A01_ludolf_sloot_van_de_beele = {
+    add_country_leader_trait = {
+     ideology = oligarchism
+     trait = A01_ludolfs_civilian_control
+    }
+   }
+   set_country_flag = A01_ludolf_retains_control
+   log = "[GetDateText]: [Root.GetName]: Focus A01_strengthen_ludolfs_power completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 9
+  y = 3
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_last_chance_to_negotiate
+  icon = GFX_goal_unique_A01_last_chance_to_negotiate
+  cost = 2
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   set_country_flag = A01_japanese_offer_sent
+   if = {
+    limit = {
+     country_exists = A03
+     NOT = {
+      has_war_with = A03
+     }
+    }
+    A03 = {
+     country_event = {
+      id = pacific.1
+      days = 2
+     }
+    }
+   }
+   log = "[GetDateText]: [Root.GetName]: Focus A01_last_chance_to_negotiate completed"
+   A01_initialize_balance_effect = yes
+   add_stability = 0.05
+   add_power_balance_value = {
+    id = A01_ludolf_admirals_balance
+    value = -0.10
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 15
+  y = 4
+  prerequisite = {
+   focus = A01_strengthen_ludolfs_power
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  mutually_exclusive = {
+   focus = A01_direct_rivalry
+  }
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_admirals_council_coup
+  icon = GFX_goal_unique_A01_admirals_council_coup
+  cost = 10
+  prerequisite = {
+   focus = A01_lone_wolf_path
+  }
+  mutually_exclusive = {
+   focus = A01_strengthen_ludolfs_power
+  }
+  ai_will_do = {
+   factor = 0.1
+  }
+  completion_reward = {
+   set_country_flag = A01_ludolf_crisis_resolved
+   set_power_balance = {
+    id = A01_ludolf_admirals_balance
+    set_value = -0.85
+   }
+   promote_character = {
+    character = A01_council_of_admirals
+    ideology = despotism
+   }
+   retire_character = A01_ludolf_sloot_van_de_beele
+   set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+   }
+   set_variable = {
+    A01_government_research_speed = 0
+   }
+   set_variable = {
+    A01_government_stability = 0
+   }
+   set_variable = {
+    A01_government_dockyard_speed = 0.15
+   }
+   set_variable = {
+    A01_government_war_support = 0.10
+   }
+   set_variable = {
+    A01_government_mobilization_speed = 0
+   }
+   set_variable = {
+    A01_government_resistance_growth = 0
+   }
+   add_dynamic_modifier = {
+    modifier = A01_government_course
+   }
+   force_update_dynamic_modifier = yes
+   set_country_flag = A01_admirals_seized_power
+   log = "[GetDateText]: [Root.GetName]: Focus A01_admirals_council_coup completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 23
+  y = 3
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_direct_naval_rule
+  icon = GFX_goal_unique_A01_direct_naval_rule
+  cost = 10
+  prerequisite = {
+   focus = A01_admirals_council_coup
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   set_variable = {
+    A01_government_mobilization_speed = 0.20
+   }
+   set_variable = {
+    A01_government_resistance_growth = -0.10
+   }
+   force_update_dynamic_modifier = yes
+   set_country_flag = A01_civilian_parliament_dissolved
+   custom_effect_tooltip = A01_direct_naval_rule_suppression_tt
+   log = "[GetDateText]: [Root.GetName]: Focus A01_direct_naval_rule completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 23
+  y = 5
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  prerequisite = {
+   focus = A01_direct_rivalry
+  }
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_build_bornean_fortifications
+  icon = GFX_goal_unique_A01_build_bornean_fortifications
+  cost = 5
+  prerequisite = {
+   focus = A01_last_chance_to_negotiate
+   focus = A01_direct_rivalry
+  }
+  available = {
+   owns_state = 1024
+   controls_state = 1024
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  y = 6
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  prerequisite = {
+   focus = A01_strengthen_ludolfs_power
+  }
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  completion_reward = {
+   add_stability = 0.05
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 15
+ }
+ focus = {
+  id = A01_improve_bornean_fortifications
+  icon = GFX_goal_unique_A01_improve_bornean_fortifications
+  cost = 10
+  available = {
+   owns_state = 1024
+   controls_state = 1024
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 1024
+     controls_province = 10212
+    }
+    1024 = {
+     set_building_level = {
+      type = coastal_bunker
+      level = 2
+      province = {
+       id = 10212
+       level < 2
+      }
+     }
+    }
+   }
+   if = {
+    limit = {
+     owns_state = 1024
+     controls_province = 10212
+    }
+    1024 = {
+     set_building_level = {
+      type = bunker
+      level = 1
+      province = {
+       id = 10212
+       level < 1
+      }
+     }
+    }
+   }
+   if = {
+    limit = {
+     owns_state = 1024
+     controls_province = 10199
+    }
+    1024 = {
+     set_building_level = {
+      type = coastal_bunker
+      level = 2
+      province = {
+       id = 10199
+       level < 2
+      }
+     }
+    }
+   }
+   if = {
+    limit = {
+     owns_state = 1024
+     controls_province = 10199
+    }
+    1024 = {
+     set_building_level = {
+      type = bunker
+      level = 1
+      province = {
+       id = 10199
+       level < 1
+      }
+     }
+    }
+   }
+   if = {
+    limit = {
+     owns_state = 1024
+     controls_province = 12228
+    }
+    1024 = {
+     set_building_level = {
+      type = coastal_bunker
+      level = 2
+      province = {
+       id = 12228
+       level < 2
+      }
+     }
+    }
+   }
+   if = {
+    limit = {
+     owns_state = 1024
+     controls_province = 12228
+    }
+    1024 = {
+     set_building_level = {
+      type = bunker
+      level = 1
+      province = {
+       id = 12228
+       level < 1
+      }
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 15
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  prerequisite = {
+   focus = A01_own_fortifications
+   focus = A01_implement_fortification_project
+  }
+  y = 9
+ }
+ focus = {
+  id = A01_open_papuan_road
+  icon = GFX_goal_unique_A01_open_papuan_road
+  cost = 5
+  prerequisite = {
+   focus = A01_improve_bornean_fortifications
+  }
+  mutually_exclusive = {
+   focus = A01_fortify_australian_frontier
+  }
+  available = {
+   controls_state = 669
+   controls_state = 1057
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   1057 = {
+    add_building_construction = {
+     type = infrastructure
+     level = 1
+     instant_build = yes
+    }
+   }
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 750
+    producer = AST
+   }
+   set_country_flag = A01_papuan_road_opened
+   log = "[GetDateText]: [Root.GetName]: Focus A01_open_papuan_road completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 13
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  y = 10
+ }
+ focus = {
+  id = A01_fortify_australian_frontier
+  icon = GFX_goal_unique_A01_fortify_australian_frontier
+  cost = 5
+  prerequisite = {
+   focus = A01_improve_bornean_fortifications
+  }
+  mutually_exclusive = {
+   focus = A01_open_papuan_road
+  }
+  available = {
+   controls_state = 979
+   controls_state = 1057
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+   custom_trigger_tooltip = {
+    tooltip = A01_no_australian_guarantees_tt
+    NOT = {
+     has_country_flag = A01_new_guinea_guarantees
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   979 = {
+    add_building_construction = {
+     type = bunker
+     province = 12237
+     level = 1
+     instant_build = yes
+    }
+   }
+   1057 = {
+    add_building_construction = {
+     type = bunker
+     province = 10505
+     level = 2
+     instant_build = yes
+    }
+   }
+   set_country_flag = A01_australian_frontier_fortified
+   log = "[GetDateText]: [Root.GetName]: Focus A01_fortify_australian_frontier completed"
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 17
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  y = 10
+ }
+ focus = {
+  id = A01_java_development
+  icon = GFX_goal_unique_A01_java_development
+  cost = 5
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 1058
+    }
+    1058 = {
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 3
+  y = 8
+  prerequisite = {
+   focus = A01_factory_resettlement
+  }
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_sumatran_railways
+  icon = GFX_goal_unique_A01_sumatran_railways
+  cost = 5
+  prerequisite = {
+   focus = A01_java_development
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 672
+    }
+    672 = {
+     add_building_construction = {
+      type = infrastructure
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   if = {
+    limit = {
+     owns_state = 1049
+    }
+    1049 = {
+     add_building_construction = {
+      type = infrastructure
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 5
+  y = 9
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_surabaya_arsenal
+  icon = GFX_goal_unique_A01_surabaya_arsenal
+  cost = 5
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 1051
+    }
+    1051 = {
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = arms_factory
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 7
+  y = 8
+  prerequisite = {
+   focus = A01_jungle_supply
+  }
+  available = {
+   has_completed_focus = A01_factory_resettlement
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_batavia_docks
+  icon = GFX_goal_unique_A01_batavia_docks
+  cost = 10
+  prerequisite = {
+   focus = A01_java_development
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 1058
+    }
+    1058 = {
+     add_extra_state_shared_building_slots = 2
+     add_building_construction = {
+      type = dockyard
+      level = 2
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 1
+  y = 9
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_rubber_processing
+  icon = GFX_goal_unique_A01_rubber_processing
+  cost = 5
+  prerequisite = {
+   focus = A01_sumatran_railways
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 672
+    }
+    672 = {
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 5
+  y = 10
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_local_rifles
+  icon = GFX_goal_unique_A01_local_rifles
+  cost = 5
+  ai_will_do = {
+   factor = 1
+  }
+  x = 7
+  y = 9
+  prerequisite = {
+   focus = A01_surabaya_arsenal
+  }
+  completion_reward = {
+   add_ideas = A01_local_armaments
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 1000
+    producer = A01
+   }
+   army_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_technical_college
+  icon = GFX_goal_unique_A01_technical_college
+  cost = 10
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_research_slot = 1
+   custom_effect_tooltip = A01_industrial_advisor_unlocked_tt
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 3
+  y = 11
+  prerequisite = {
+   focus = A01_batavia_docks
+  }
+  prerequisite = {
+   focus = A01_rubber_processing
+  }
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_knil_reform
+  icon = GFX_goal_unique_A01_knil_reform
+  cost = 5
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   army_experience = 20
+   add_ideas = A01_knil_training
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 9
+  y = 5
+  search_filters = {
+   FOCUS_FILTER_ARMY_XP
+  }
+  prerequisite = {
+   focus = A01_last_chance_to_negotiate
+   focus = A01_direct_rivalry
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  prerequisite = {
+   focus = A01_strengthen_ludolfs_power
+  }
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_island_garrisons
+  icon = GFX_goal_unique_A01_island_garrisons
+  cost = 5
+  prerequisite = {
+   focus = A01_knil_reform
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  x = 7
+  y = 6
+  completion_reward = {
+   swap_ideas = {
+    remove_idea = A01_knil_training
+    add_idea = A01_knil_field_training
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_ARMY_XP
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_marine_brigades
+  icon = GFX_goal_unique_A01_marine_brigades
+  cost = 5
+  prerequisite = {
+   focus = A01_knil_reform
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  x = 11
+  y = 6
+  completion_reward = {
+   add_ideas = A01_marine_training
+   army_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_ARMY_XP
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_jungle_supply
+  icon = GFX_goal_unique_A01_jungle_supply
+  cost = 5
+  prerequisite = {
+   focus = A01_island_garrisons
+  }
+  prerequisite = {
+   focus = A01_marine_brigades
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  x = 9
+  y = 7
+  completion_reward = {
+   swap_ideas = {
+    remove_idea = A01_knil_field_training
+    add_idea = A01_knil_reformed
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_ARMY_XP
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_coastal_watch
+  icon = GFX_goal_unique_A01_coastal_watch
+  cost = 5
+  prerequisite = {
+   focus = A01_jungle_supply
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  x = 11
+  y = 8
+  completion_reward = {
+   add_ideas = A01_island_defence
+   navy_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_admiralty_shipyards
+  icon = GFX_goal_unique_A01_admiralty_shipyards
+  cost = 10
+  prerequisite = {
+   focus = A01_direct_naval_rule
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 1051
+    }
+    1051 = {
+     add_extra_state_shared_building_slots = 2
+     add_building_construction = {
+      type = dockyard
+      level = 2
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 21
+  y = 6
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_naval_general_staff
+  icon = GFX_goal_unique_A01_naval_general_staff
+  cost = 5
+  prerequisite = {
+   focus = A01_admiralty_shipyards
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   navy_experience = 35
+   add_ideas = A01_naval_staff
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 21
+  y = 7
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_military_industry
+  icon = GFX_goal_unique_A01_military_industry
+  cost = 10
+  prerequisite = {
+   focus = A01_direct_naval_rule
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 335
+    }
+    335 = {
+     add_extra_state_shared_building_slots = 2
+     add_building_construction = {
+      type = arms_factory
+      level = 2
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 25
+  y = 6
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_defence_in_depth
+  icon = GFX_goal_unique_A01_defence_in_depth
+  cost = 5
+  prerequisite = {
+   focus = A01_military_industry
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A01_island_defence
+   army_experience = 20
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 25
+  y = 7
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_archipelago_command
+  icon = GFX_goal_unique_A01_archipelago_command
+  cost = 10
+  prerequisite = {
+   focus = A01_naval_general_staff
+  }
+  prerequisite = {
+   focus = A01_defence_in_depth
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_stability = 0.05
+   add_war_support = 0.10
+   add_command_power = 25
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 23
+  y = 8
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_wartime_industry
+  icon = GFX_goal_unique_A01_wartime_industry
+  cost = 5
+  prerequisite = {
+   focus = A01_improve_bornean_fortifications
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 1058
+    }
+    1058 = {
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = arms_factory
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   add_ideas = A01_war_production
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 15
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  y = 11
+ }
+ focus = {
+  id = A01_secure_sea_lanes
+  icon = GFX_goal_unique_A01_secure_sea_lanes
+  cost = 5
+  prerequisite = {
+   focus = A01_coastal_watch
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  x = 11
+  y = 9
+  completion_reward = {
+   add_ideas = A01_escort_coordination
+   add_equipment_to_stockpile = {
+    type = convoy_1
+    amount = 20
+    producer = A01
+   }
+   navy_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_pacific_settlement
+  icon = GFX_goal_unique_A01_pacific_settlement
+  cost = 5
+  available = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   set_country_flag = A01_postwar_cabinet_mandate
+   set_country_flag = A01_dismissal_debate_started
+   country_event = {
+    id = A01_postwar.1
+    days = 1
+   }
+   add_political_power = 50
+   add_ideas = A01_reconstruction_cabinet
+   A01_initialize_postwar_accounts_effect = yes
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 15
+  prerequisite = {
+   focus = A01_last_chance_to_negotiate
+   focus = A01_direct_rivalry
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_strengthen_ludolfs_power
+  }
+  y = 13
+ }
+ focus = {
+  id = A01_admiralty_diplomacy
+  icon = GFX_goal_unique_A01_admiralty_diplomacy
+  cost = 5
+  prerequisite = {
+   focus = A01_archipelago_command
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     country_exists = A03
+     NOT = {
+      has_war_with = A03
+     }
+    }
+    A03 = {
+     country_event = {
+      id = pacific.1
+      days = 2
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 23
+  y = 9
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  id = A01_reconstruction_commission
+  icon = GFX_goal_unique_A01_constitution
+  x = 7
+  y = 15
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_ludolf_survives
+  }
+  completion_reward = {
+   set_country_flag = A01_postwar_accounts_audited
+   add_political_power = 25
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_autonomous_sultanates
+  icon = GFX_goal_unique_A01_reconstruction_commission
+  x = 14
+  y = 15
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_ludolf_survives
+  }
+  completion_reward = {
+   A01_create_autonomous_sultanates_effect = yes
+   add_ideas = A01_island_charter
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_northern_memory
+  icon = GFX_goal_unique_A01_northern_memory
+  x = 16
+  y = 18
+  prerequisite = {
+   focus = A01_military_state
+  }
+  cost = 3
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   country_event = {
+    id = ludolf.32
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_fleet_of_recovery
+  icon = GFX_goal_unique_A01_fleet_of_recovery
+  x = 18
+  y = 20
+  prerequisite = {
+   focus = A01_northern_memory
+  }
+  prerequisite = {
+   focus = A01_postwar_admiralty_shipyards
+  }
+  cost = 3
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     owns_state = 1058
+    }
+    1058 = {
+     add_extra_state_shared_building_slots = 2
+     add_building_construction = {
+      type = dockyard
+      level = 2
+      instant_build = yes
+     }
+    }
+   }
+   navy_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_ludolf_survives
+  icon = GFX_goal_unique_A01_ludolf_survives
+  prerequisite = {
+   focus = A01_pacific_settlement
+  }
+  mutually_exclusive = {
+   focus = A01_negotiated_resignation
+  }
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  x = 12
+  y = 14
+  cost = 5
+  completion_reward = {
+   add_political_power = 35
+   add_ideas = A01_civilian_reform_mandate
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_negotiated_resignation
+  icon = GFX_goal_unique_A01_negotiated_resignation
+  x = 18
+  y = 14
+  cost = 3
+  prerequisite = {
+   focus = A01_pacific_settlement
+  }
+  mutually_exclusive = {
+   focus = A01_ludolf_survives
+  }
+  available = {
+   has_country_flag = A01_admirals_seized_power
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_political_power = 35
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_review_borneo_convention
+  icon = GFX_goal_unique_A01_review_borneo_convention
+  x = 18
+  y = 23
+  cost = 3
+  prerequisite = {
+   focus = A01_democratic_federation
+   focus = A01_fleet_of_recovery
+   focus = A01_royal_constitution
+  }
+  available = {
+   has_country_flag = A01_ludolf_crisis_resolved
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_war_support = 0.05
+   add_political_power = 100
+   set_country_flag = A01_borneo_revisionism
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_dutch_literacy
+  icon = GFX_goal_unique_A01_technical_college
+  ai_will_do = {
+   factor = 2
+  }
+  x = 3
+  y = 5
+  cost = 5
+  completion_reward = {
+   add_ideas = A01_dutch_primary_schooling
+   swap_ideas = {
+    remove_idea = A01_agrarian_society
+    add_idea = A01_agrarian_schooling
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+  prerequisite = {
+   focus = A01_last_chance_to_negotiate
+   focus = A01_direct_rivalry
+  }
+  prerequisite = {
+   focus = A01_strengthen_ludolfs_power
+  }
+ }
+ focus = {
+  id = A01_rural_labour_duty
+  icon = GFX_goal_unique_A01_local_rifles
+  ai_will_do = {
+   factor = 2
+  }
+  x = 3
+  y = 6
+  prerequisite = {
+   focus = A01_dutch_literacy
+  }
+  cost = 5
+  completion_reward = {
+   swap_ideas = {
+    remove_idea = A01_agrarian_schooling
+    add_idea = A01_agrarian_labour_transition
+   }
+   add_stability = -0.05
+   set_country_flag = A01_rural_labour_duty_active
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_factory_resettlement
+  icon = GFX_goal_unique_A01_rubber_processing
+  ai_will_do = {
+   factor = 2
+  }
+  x = 3
+  y = 7
+  prerequisite = {
+   focus = A01_rural_labour_duty
+  }
+  cost = 10
+  completion_reward = {
+   remove_ideas = A01_agrarian_labour_transition
+   add_ideas = A01_factory_workforce
+   add_stability = -0.05
+   set_country_flag = A01_factory_resettlement_started
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_production_standardisation
+  icon = GFX_goal_unique_A01_rubber_processing
+  x = 3
+  y = 12
+  cost = 5
+  ai_will_do = {
+   factor = 2
+  }
+  prerequisite = {
+   focus = A01_technical_college
+  }
+  completion_reward = {
+   swap_ideas = {
+    remove_idea = A01_factory_workforce
+    add_idea = A01_standardised_industry
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_java_steam_power
+  icon = GFX_goal_unique_A01_java_development
+  x = 3
+  y = 13
+  cost = 10
+  ai_will_do = {
+   factor = 2
+  }
+  prerequisite = {
+   focus = A01_production_standardisation
+  }
+  completion_reward = {
+   add_ideas = A01_industrial_power_grid
+   if = {
+    limit = {
+     owns_state = 1058
+    }
+    1058 = {
+     add_building_construction = {
+      type = infrastructure
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   if = {
+    limit = {
+     owns_state = 1051
+    }
+    1051 = {
+     add_building_construction = {
+      type = infrastructure
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_INDUSTRY
+  }
+ }
+ focus = {
+  id = A01_local_nco_schools
+  icon = GFX_goal_unique_A01_knil_reform
+  x = 9
+  y = 10
+  cost = 10
+  ai_will_do = {
+   factor = 2
+  }
+  prerequisite = {
+   focus = A01_local_rifles
+  }
+  prerequisite = {
+   focus = A01_secure_sea_lanes
+  }
+  completion_reward = {
+   swap_ideas = {
+    remove_idea = A01_knil_reformed
+    add_idea = A01_knil_professional
+   }
+   custom_effect_tooltip = A01_army_advisor_unlocked_tt
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  search_filters = {
+   FOCUS_FILTER_ARMY_XP
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ continuous_focus_position = {
+  x = 0
+  y = 3500
+ }
+ focus = {
+  icon = GFX_goal_unique_A01_last_chance_to_negotiate
+  cost = 2
+  ai_will_do = {
+   factor = 1
+  }
+  y = 4
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  available = {
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  id = A01_direct_rivalry
+  x = 17
+  mutually_exclusive = {
+   focus = A01_last_chance_to_negotiate
+  }
+  prerequisite = {
+   focus = A01_strengthen_ludolfs_power
+   focus = A01_admirals_council_coup
+  }
+  completion_reward = {
+   A01_initialize_balance_effect = yes
+   add_stability = -0.05
+   add_power_balance_value = {
+    id = A01_ludolf_admirals_balance
+    value = 0.10
+   }
+   set_country_flag = A01_direct_rivalry_declared
+   A03 = {
+    country_event = {
+     id = pacific.5
+     days = 2
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+ }
+ focus = {
+  available = {
+   owns_state = 1024
+   controls_state = 1024
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  id = A01_state_loan
+  icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
+  x = 13
+  y = 7
+  cost = 5
+  completion_reward = {
+   add_to_variable = {
+    A01_wtc_debt = 20
+   }
+   add_ideas = A01_borneo_state_loan
+   custom_effect_tooltip = A01_wtc_debt_20_tt
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  prerequisite = {
+   focus = A01_build_bornean_fortifications
+  }
+  mutually_exclusive = {
+   focus = A01_request_fortification_project
+  }
+ }
+ focus = {
+  available = {
+   owns_state = 1024
+   controls_state = 1024
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  id = A01_request_fortification_project
+  icon = GFX_goal_unique_A01_last_chance_to_negotiate
+  x = 17
+  y = 7
+  cost = 5
+  completion_reward = {
+   country_event = {
+    id = borneo_project.1
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  prerequisite = {
+   focus = A01_build_bornean_fortifications
+  }
+  mutually_exclusive = {
+   focus = A01_state_loan
+  }
+ }
+ focus = {
+  available = {
+   owns_state = 1024
+   controls_state = 1024
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  id = A01_own_fortifications
+  icon = GFX_goal_unique_A01_build_bornean_fortifications
+  x = 13
+  y = 8
+  cost = 10
+  completion_reward = {
+   add_ideas = A01_borneo_self_build
+   set_country_flag = A01_borneo_self_contract
+   if = {
+    limit = {
+     country_exists = A02
+    }
+    A02 = {
+     add_opinion_modifier = {
+      target = A01
+      modifier = A01_borneo_british_exclusion
+     }
+    }
+   }
+   custom_effect_tooltip = A01_own_fortifications_tt
+   build_railway = {
+    level = 1
+    build_only_on_allied = yes
+    path = {
+     10212
+     12186
+     10143
+     10199
+     10240
+     12228
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  prerequisite = {
+   focus = A01_state_loan
+  }
+ }
+ focus = {
+  available = {
+   owns_state = 1024
+   controls_state = 1024
+   custom_trigger_tooltip = {
+    tooltip = A01_before_japanese_war_tt
+    NOT = {
+     has_war_with = A03
+     has_country_flag = A01_borneo_war_started
+    }
+   }
+   custom_trigger_tooltip = {
+    tooltip = A01_project_selected_tt
+    OR = {
+     has_country_flag = A01_borneo_british_project
+     has_country_flag = A01_borneo_australian_project
+     has_country_flag = A01_borneo_local_project
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  bypass = {
+   has_country_flag = A01_borneo_treaty
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  id = A01_implement_fortification_project
+  icon = GFX_goal_unique_A01_prepare_bornean_logistics
+  x = 17
+  y = 8
+  cost = 10
+  completion_reward = {
+   if = {
+    limit = {
+     has_country_flag = A01_borneo_british_project
+    }
+    add_ideas = A01_borneo_british_defence
+   }
+   if = {
+    limit = {
+     has_country_flag = A01_borneo_australian_project
+    }
+    add_ideas = A01_borneo_australian_defence
+   }
+   if = {
+    limit = {
+     has_country_flag = A01_borneo_local_project
+    }
+    add_ideas = A01_borneo_local_defence
+   }
+   custom_effect_tooltip = A01_project_implementation_tt
+   build_railway = {
+    level = 1
+    build_only_on_allied = yes
+    path = {
+     10212
+     12186
+     10143
+     10199
+     10240
+     12228
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  prerequisite = {
+   focus = A01_request_fortification_project
+  }
+ }
+ focus = {
+  id = A01_equal_citizenship
+  icon = GFX_goal_unique_A01_technical_college
+  x = 14
+  y = 17
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_island_representation
+  }
+  completion_reward = {
+   remove_dynamic_modifier = {
+    modifier = A01_racial_divide
+   }
+   set_country_flag = A01_equal_citizenship_established
+   add_stability = 0.03
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_elected_civil_service
+  icon = GFX_goal_unique_A01_strengthen_ludolfs_power
+  x = 12
+  y = 20
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_federal_constitution
+  }
+  completion_reward = {
+   set_country_flag = A01_presidency_established
+   remove_ideas = A01_civilian_reform_mandate
+   add_ideas = A01_accountable_civil_service
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_democratic_federation
+  icon = GFX_goal_unique_A01_reconstruction_commission
+  x = 14
+  y = 21
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_elected_civil_service
+  }
+  completion_reward = {
+   A01_create_democratic_federation_effect = yes
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_purge_civil_service
+  icon = GFX_goal_generic_political_pressure
+  x = 16
+  y = 15
+  cost = 3
+  prerequisite = {
+   focus = A01_negotiated_resignation
+  }
+  available = {
+   has_country_flag = A01_admirals_seized_power
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   retire_character = A01_industrial_advisory_council
+   add_ideas = A01_purged_administration
+   add_stability = -0.04
+   add_political_power = 75
+   country_event = {
+    id = A01_future.9
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_purge_officer_corps
+  icon = GFX_goal_generic_political_pressure
+  x = 20
+  y = 15
+  prerequisite = {
+   focus = A01_negotiated_resignation
+  }
+  cost = 3
+  available = {
+   has_country_flag = A01_admirals_seized_power
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   retire_character = A01_surya_wirata
+   retire_character = A01_knil_inspectorate
+   add_ideas = A01_purged_officers
+   army_experience = -20
+   navy_experience = -20
+   add_stability = -0.03
+   country_event = {
+    id = A01_future.10
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_military_state
+  icon = GFX_goal_generic_political_pressure
+  x = 18
+  y = 17
+  prerequisite = {
+   focus = A01_purge_civil_service
+  }
+  prerequisite = {
+   focus = A01_purge_officer_corps
+  }
+  cost = 5
+  available = {
+   has_country_flag = A01_admirals_seized_power
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   remove_ideas = A01_purged_administration
+   remove_ideas = A01_purged_officers
+   add_ideas = A01_total_military_state
+   set_cosmetic_tag = A01_DIRECTORATE
+   country_event = {
+    id = A01_future.15
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_crown_above_factions
+  cost = 3
+  prerequisite = {
+   focus = A01_pacific_settlement
+  }
+  available = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  completion_reward = {
+   add_political_power = 100
+   add_stability = 0.05
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 34
+  y = 14
+  icon = GFX_A01_crown_above_factions
+ }
+ focus = {
+  id = A01_royal_island_charter
+  cost = 3
+  prerequisite = {
+   focus = A01_crown_above_factions
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_stability = 0.04
+   add_ideas = A01_island_charter
+   country_event = {
+    id = A01_future.12
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  x = 34
+  y = 15
+  icon = GFX_A01_royal_island_charter
+ }
+ focus = {
+  id = A01_wilhelmina_comes_of_age
+  cost = 3
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   promote_character = {
+    character = A01_wilhelmina_monarch
+    ideology = despotism
+   }
+   retire_character = A01_emma_waldeck_pyrmont
+   clr_country_flag = A01_emma_regency
+   set_country_flag = A01_wilhelmina_reigns
+   country_event = {
+    id = A01_future.13
+    days = 1
+   }
+   A01_initialize_crown_struggle = yes
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_emma_and_daughter
+  }
+  available = {
+   has_country_flag = A01_emma_regency
+   OR = {
+    date > 1898.8.30
+    has_country_flag = A01_early_royal_accession
+   }
+  }
+  x = 34
+  y = 19
+  icon = GFX_A01_wilhelmina_comes_of_age
+ }
+ focus = {
+  id = A01_royal_constitution
+  prerequisite = {
+   focus = A01_wilhelmina_comes_of_age
+  }
+  prerequisite = {
+   focus = A01_crown_island_council
+  }
+  prerequisite = {
+   focus = A01_crown_legal_guarantees
+  }
+  cost = 5
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   remove_ideas = A01_royal_arbitration
+   add_ideas = A01_constitutional_crown
+   set_cosmetic_tag = A01_CROWN
+   remove_dynamic_modifier = {
+    modifier = A01_admirals_council
+   }
+   country_event = {
+    id = A01_future.14
+    days = 1
+   }
+   set_country_flag = A01_constitutional_monarchy_path
+   add_political_power = 150
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+   set_country_flag = A01_admirals_council_abolished
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  mutually_exclusive = {
+   focus = A01_royal_dictatorship
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+   has_country_flag = A01_crown_crisis_settled
+   NOT = {
+    power_balance_value = {
+     id = A01_crown_council_balance
+     value < -0.40
+    }
+   }
+   NOT = {
+    power_balance_value = {
+     id = A01_crown_council_balance
+     value > 0.40
+    }
+   }
+  }
+  prerequisite = {
+   focus = A01_settle_crown_crisis
+  }
+  x = 30
+  y = 25
+  icon = GFX_A01_royal_constitution
+ }
+ focus = {
+  id = A01_island_representation
+  icon = GFX_goal_unique_A01_reconstruction_commission
+  x = 14
+  y = 16
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_autonomous_sultanates
+  }
+  completion_reward = {
+   add_political_power = 25
+   add_ideas = A01_island_representation_idea
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_public_recovery_fund
+  icon = GFX_goal_unique_A01_java_development
+  x = 6
+  y = 17
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_repair_ports
+  }
+  prerequisite = {
+   focus = A01_families_compensation
+  }
+  completion_reward = {
+   remove_ideas = A01_postwar_budget_burden
+   set_country_flag = A01_public_recovery_financed
+   add_political_power = -50
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  bypass = {
+   has_country_flag = A01_wtc_recovery_financed
+  }
+ }
+ focus = {
+  id = A01_wtc_recovery_agreement
+  icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
+  x = 8
+  y = 17
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+   custom_trigger_tooltip = {
+    tooltip = A01_wtc_offer_required_tt
+    has_completed_focus = A01_wtc_oil_and_rubber_offer
+    country_exists = A04
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_reconstruction_commission
+  }
+  completion_reward = {
+   set_country_flag = A01_wtc_recovery_signed
+   add_timed_idea = {
+    idea = A01_wtc_recovery_guarantees
+    days = 365
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  prerequisite = {
+   focus = A01_wtc_oil_and_rubber_offer
+  }
+ }
+ focus = {
+  id = A01_electoral_commission
+  icon = GFX_goal_unique_A01_constitution
+  x = 12
+  y = 22
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_democratic_federation
+  }
+  completion_reward = {
+   set_country_flag = A01_electoral_rolls_ready
+   add_stability = 0.02
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_postwar_admiralty_shipyards
+  icon = GFX_goal_unique_A01_fleet_of_recovery
+  x = 20
+  y = 18
+  cost = 3
+  prerequisite = {
+   focus = A01_military_state
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   navy_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_crown_island_council
+  cost = 3
+  prerequisite = {
+   focus = A01_royal_island_charter
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  completion_reward = {
+   add_political_power = 75
+   add_stability = 0.05
+   add_power_balance_value = {
+    id = A01_crown_council_balance
+    value = -0.15
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 26
+  y = 16
+  icon = GFX_A01_crown_island_council
+ }
+ focus = {
+  id = A01_crown_legal_guarantees
+  cost = 3
+  prerequisite = {
+   focus = A01_royal_island_charter
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  completion_reward = {
+   add_stability = 0.05
+   add_power_balance_value = {
+    id = A01_crown_council_balance
+    value = -0.10
+   }
+   add_tech_bonus = {
+    name = A01_crown_legal_guarantees
+    bonus = 0.5
+    uses = 1
+    category = industry
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 34
+  y = 16
+  icon = GFX_A01_crown_legal_guarantees
+ }
+ focus = {
+  id = A01_repair_ports
+  icon = GFX_goal_unique_A01_batavia_docks
+  x = 6
+  y = 16
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_reconstruction_commission
+  }
+  completion_reward = {
+   remove_ideas = A01_postwar_destruction
+   set_variable = {
+    A01_reconstruction_costs = 0
+   }
+   add_ideas = A01_restored_port_network
+   add_political_power = -40
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  bypass = {
+   has_country_flag = A01_wtc_recovery_financed
+  }
+ }
+ focus = {
+  id = A01_families_compensation
+  icon = GFX_goal_unique_A01_reconstruction_commission
+  x = 8
+  y = 16
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_reconstruction_commission
+  }
+  completion_reward = {
+   remove_ideas = A01_unpaid_families
+   set_variable = {
+    A01_family_compensation_costs = 0
+   }
+   set_country_flag = A01_families_compensated
+   add_stability = 0.03
+   add_political_power = -35
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  bypass = {
+   has_country_flag = A01_wtc_recovery_financed
+  }
+ }
+ focus = {
+  id = A01_wtc_settlement
+  icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
+  x = 8
+  y = 18
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_wtc_recovery_agreement
+  }
+  completion_reward = {
+   A01_settle_postwar_accounts_effect = yes
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_domestic_debt_redemption
+  icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
+  x = 6
+  y = 18
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_public_recovery_fund
+  }
+  completion_reward = {
+   A01_clear_wtc_debt_effect = yes
+   add_political_power = -75
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  bypass = {
+   has_country_flag = A01_wtc_debt_repaid
+  }
+ }
+ focus = {
+  id = A01_recovery_investment
+  icon = GFX_goal_unique_A01_java_development
+  x = 7
+  y = 19
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_wtc_settlement
+   focus = A01_domestic_debt_redemption
+  }
+  completion_reward = {
+   add_ideas = A01_recovery_investment_idea
+   if = {
+    limit = {
+     owns_state = 1058
+    }
+    1058 = {
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_demobilise_colonial_army
+  icon = GFX_goal_unique_A01_knil_reform
+  x = 10
+  y = 15
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_ludolf_survives
+  }
+  completion_reward = {
+   remove_ideas = A01_coerced_service
+   remove_ideas = A01_indonesian_refusal
+   add_ideas = A01_army_transition
+   add_war_support = -0.03
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_joint_officer_schools
+  icon = GFX_goal_unique_A01_knil_reform
+  x = 10
+  y = 16
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_demobilise_colonial_army
+  }
+  completion_reward = {
+   remove_ideas = A01_army_transition
+   add_ideas = A01_joint_officer_corps
+   army_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_civilian_defence_ministry
+  icon = GFX_goal_unique_A01_strengthen_ludolfs_power
+  x = 12
+  y = 16
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_demobilise_colonial_army
+  }
+  completion_reward = {
+   set_country_flag = A01_civilian_defence_ministry
+   add_political_power = 25
+   add_to_variable = {
+    A01_admirals_respect = -5
+   }
+   clamp_variable = {
+    var = A01_admirals_respect
+    min = 0
+    max = 100
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_federal_defence_command
+  icon = GFX_goal_unique_A01_archipelago_command
+  x = 10
+  y = 17
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_joint_officer_schools
+  }
+  prerequisite = {
+   focus = A01_civilian_defence_ministry
+  }
+  completion_reward = {
+   add_ideas = A01_federal_defence_command_idea
+   set_country_flag = A01_federal_army_reformed
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_abolish_admirals_council
+  icon = GFX_goal_unique_A01_constitution
+  x = 12
+  y = 18
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_federal_defence_command
+  }
+  prerequisite = {
+   focus = A01_equal_citizenship
+  }
+  completion_reward = {
+   remove_dynamic_modifier = {
+    modifier = A01_admirals_council
+   }
+   set_country_flag = A01_admirals_council_abolished
+   set_country_flag = A01_ludolf_crisis_resolved
+   add_stability = 0.03
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_federal_constitution
+  icon = GFX_goal_unique_A01_constitution
+  x = 14
+  y = 19
+  cost = 10
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_equal_citizenship
+  }
+  prerequisite = {
+   focus = A01_abolish_admirals_council
+  }
+  completion_reward = {
+   set_country_flag = A01_federal_constitution_adopted
+   add_ideas = A01_federal_constitution_idea
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_legalise_federal_parties
+  icon = GFX_goal_unique_A01_lone_wolf_path
+  x = 14
+  y = 22
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_democratic_federation
+  }
+  completion_reward = {
+   set_country_flag = A01_federal_parties_legalised
+   add_political_power = 25
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_first_federal_election
+  icon = GFX_goal_unique_A01_constitution
+  x = 12
+  y = 23
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+   NOT = {
+    has_country_flag = A01_first_election_held
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_electoral_commission
+  }
+  prerequisite = {
+   focus = A01_legalise_federal_parties
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_postwar.3
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_liberal_victory
+  icon = GFX_goal_unique_A01_constitution
+  x = 8
+  y = 24
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+   has_country_flag = A01_first_election_held
+   has_country_flag = A01_liberal_election_winner
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_first_federal_election
+  }
+  completion_reward = {
+   add_political_power = 25
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  mutually_exclusive = {
+   focus = A01_conservative_victory
+   focus = A01_peoples_party_victory
+  }
+ }
+ focus = {
+  id = A01_conservative_victory
+  icon = GFX_goal_unique_A01_lone_wolf_path
+  x = 12
+  y = 24
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+   has_country_flag = A01_first_election_held
+   has_country_flag = A01_conservative_election_winner
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_first_federal_election
+  }
+  completion_reward = {
+   add_political_power = 25
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  mutually_exclusive = {
+   focus = A01_liberal_victory
+   focus = A01_peoples_party_victory
+  }
+ }
+ focus = {
+  id = A01_peoples_party_victory
+  icon = GFX_goal_unique_A01_reconstruction_commission
+  x = 16
+  y = 24
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+   has_country_flag = A01_first_election_held
+   has_country_flag = A01_peoples_election_winner
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_first_federal_election
+  }
+  completion_reward = {
+   add_political_power = 25
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  mutually_exclusive = {
+   focus = A01_liberal_victory
+   focus = A01_conservative_victory
+  }
+ }
+ focus = {
+  id = A01_emma_and_daughter
+  cost = 3
+  prerequisite = {
+   focus = A01_royal_island_charter
+  }
+  available = {
+   has_country_flag = A01_emma_regency
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_monarchy.1
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  x = 34
+  y = 17
+  icon = GFX_A01_emma_and_daughter
+ }
+ focus = {
+  id = A01_royal_guard_corps
+  cost = 5
+  prerequisite = {
+   focus = A01_royal_island_charter
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   army_experience = 15
+   add_ideas = A01_royal_guard_loyalty
+   add_to_variable = {
+    A01_admirals_respect = -5
+   }
+   clamp_variable = {
+    var = A01_admirals_respect
+    min = 0
+    max = 100
+   }
+   set_country_flag = A01_royal_guard_established
+   add_manpower = 10000
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 3000
+    producer = A01
+   }
+   add_power_balance_value = {
+    id = A01_crown_council_balance
+    value = 0.15
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+   A01_raise_royal_guard = yes
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  x = 42
+  y = 16
+  icon = GFX_A01_royal_guard_corps
+ }
+ focus = {
+  id = A01_royal_naval_advisors
+  cost = 5
+  prerequisite = {
+   focus = A01_royal_guard_corps
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   navy_experience = 15
+   add_ideas = A01_royal_naval_loyalty
+   set_country_flag = A01_navy_supports_crown
+   add_power_balance_value = {
+    id = A01_crown_council_balance
+    value = 0.15
+   }
+   add_tech_bonus = {
+    name = A01_royal_naval_advisors
+    bonus = 0.75
+    uses = 2
+    category = naval_equipment
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  x = 42
+  y = 18
+  icon = GFX_A01_royal_naval_advisors
+ }
+ focus = {
+  id = A01_island_delegation
+  cost = 5
+  prerequisite = {
+   focus = A01_crown_island_council
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_political_power = 25
+   add_ideas = A01_island_representation_idea
+   set_country_flag = A01_island_delegation_established
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  x = 26
+  y = 17
+  icon = GFX_A01_island_delegation
+ }
+ focus = {
+  id = A01_royal_dictatorship
+  cost = 10
+  prerequisite = {
+   focus = A01_wilhelmina_comes_of_age
+  }
+  mutually_exclusive = {
+   focus = A01_royal_constitution
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+   has_country_flag = A01_crown_crisis_settled
+   power_balance_value = {
+    id = A01_crown_council_balance
+    value > 0.59
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 0.5
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   set_country_flag = A01_royal_dictatorship_path
+   add_ideas = A01_royal_absolutism
+   add_stability = -0.05
+   add_war_support = 0.05
+   country_event = {
+    id = A01_monarchy.5
+    days = 1
+   }
+   remove_ideas = A01_royal_arbitration
+   remove_ideas = A01_constitutional_crown
+   remove_dynamic_modifier = {
+    modifier = A01_admirals_council
+   }
+   set_country_flag = A01_admirals_council_abolished
+   add_political_power = 150
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_naval_advisors
+  }
+  prerequisite = {
+   focus = A01_settle_crown_crisis
+  }
+  x = 38
+  y = 25
+  icon = GFX_A01_royal_dictatorship
+ }
+ focus = {
+  id = A01_crown_absolute_rule
+  cost = 5
+  prerequisite = {
+   focus = A01_royal_dictatorship
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   retire_character = A01_council_of_admirals
+   set_politics = {
+    ruling_party = neutrality
+    elections_allowed = no
+   }
+   add_ideas = A01_direct_royal_rule
+   add_political_power = 50
+   country_event = {
+    id = A01_monarchy.6
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+  }
+  x = 38
+  y = 26
+  icon = GFX_A01_crown_absolute_rule
+ }
+ focus = {
+  id = A01_royal_secret_police
+  cost = 5
+  prerequisite = {
+   focus = A01_royal_dictatorship
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_crown_secret_police
+   set_country_flag = A01_crown_surveillance_active
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+  }
+  x = 42
+  y = 26
+  icon = GFX_A01_royal_secret_police
+ }
+ focus = {
+  id = A01_crown_militarism
+  cost = 10
+  prerequisite = {
+   focus = A01_crown_absolute_rule
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   set_cosmetic_tag = A01_ROYAL_EMPIRE
+   add_ideas = A01_royal_militarism
+   add_war_support = 0.10
+   country_event = {
+    id = A01_monarchy.7
+    days = 1
+   }
+   capital_scope = {
+    add_extra_state_shared_building_slots = 3
+    add_building_construction = {
+     type = arms_factory
+     level = 2
+     instant_build = yes
+    }
+    add_building_construction = {
+     type = dockyard
+     level = 1
+     instant_build = yes
+    }
+   }
+   add_tech_bonus = {
+    name = A01_crown_militarism
+    bonus = 1
+    uses = 2
+    category = artillery
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+  }
+  x = 38
+  y = 31
+  icon = GFX_A01_crown_militarism
+ }
+ focus = {
+  id = A01_crown_parliament
+  cost = 5
+  prerequisite = {
+   focus = A01_royal_constitution
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_crown_parliament_idea
+   add_political_power = 25
+   set_country_flag = A01_crown_parliament_established
+   country_event = {
+    id = A01_monarchy.3
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+  }
+  prerequisite = {
+   focus = A01_island_delegation
+  }
+  x = 30
+  y = 26
+  icon = GFX_A01_crown_parliament
+ }
+ focus = {
+  id = A01_crown_commonwealth
+  cost = 10
+  prerequisite = {
+   focus = A01_crown_parliament
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   set_cosmetic_tag = A01_COMMONWEALTH
+   add_ideas = A01_crown_commonwealth_idea
+   remove_dynamic_modifier = {
+    modifier = A01_racial_divide
+   }
+   add_stability = 0.05
+   add_political_power = 50
+   country_event = {
+    id = A01_monarchy.4
+    days = 1
+   }
+   set_country_flag = A01_equal_citizenship_established
+   set_country_flag = A01_crown_commonwealth_established
+   capital_scope = {
+    add_extra_state_shared_building_slots = 2
+    add_building_construction = {
+     type = industrial_complex
+     level = 2
+     instant_build = yes
+    }
+   }
+   add_research_slot = 1
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  x = 30
+  y = 31
+  icon = GFX_A01_crown_commonwealth
+  prerequisite = {
+   focus = A01_responsible_cabinet
+  }
+  prerequisite = {
+   focus = A01_equal_subjects
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+   has_country_flag = A01_equal_citizenship_established
+   has_country_flag = A01_prime_minister_elected
+  }
+ }
+ focus = {
+  id = A01_summon_grand_council
+  cost = 5
+  prerequisite = {
+   focus = A01_wilhelmina_comes_of_age
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_crown.1
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+   set_country_flag = A01_admiralty_battle_open
+   add_ideas = A01_admiralty_obstruction
+   activate_mission = A01_admiralty_deadline
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  x = 34
+  y = 20
+  icon = GFX_A01_summon_grand_council
+ }
+ focus = {
+  id = A01_settle_crown_crisis
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  completion_reward = {
+   set_country_flag = A01_crown_crisis_settled
+   add_stability = 0.10
+   add_political_power = 100
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+   remove_ideas = A01_admiralty_obstruction
+   remove_mission = A01_admiralty_deadline
+   set_country_flag = A01_admirals_council_abolished
+   retire_character = A01_council_of_admirals
+   country_event = {
+    id = A01_royal_story.7
+    days = 1
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  x = 34
+  y = 24
+  icon = GFX_A01_settle_crown_crisis
+  available = {
+   has_country_flag = A01_wilhelmina_reigns
+   has_country_flag = A01_admiralty_defeated
+   has_country_flag = A01_island_settlement
+  }
+  prerequisite = {
+   focus = A01_civilian_admiralty
+  }
+  prerequisite = {
+   focus = A01_island_compact
+  }
+ }
+ focus = {
+  id = A01_sultans_at_the_palace
+  icon = GFX_A01_sultans_at_the_palace
+  x = 26
+  y = 18
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_island_delegation
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_royal_story.1
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_indonesian_petition
+  icon = GFX_A01_indonesian_petition
+  x = 26
+  y = 19
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_sultans_at_the_palace
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_royal_story.2
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_equal_subjects
+  icon = GFX_A01_equal_subjects
+  x = 24
+  y = 21
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_indonesian_petition
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   set_country_flag = A01_equal_citizenship_established
+   remove_dynamic_modifier = {
+    modifier = A01_racial_divide
+   }
+   remove_ideas = A01_island_discontent
+   add_ideas = A01_equal_citizenship_royal
+   add_political_power = -75
+   add_stability = -0.03
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_princely_guarantees
+  icon = GFX_A01_princely_guarantees
+  x = 28
+  y = 21
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_indonesian_petition
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_to_variable = {
+    A01_sultan_confidence = 2
+   }
+   add_ideas = A01_princely_compact
+   set_country_flag = A01_princes_guaranteed
+   add_political_power = -50
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_island_compact
+  icon = GFX_A01_island_compact
+  x = 26
+  y = 23
+  cost = 7
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_equal_subjects
+  }
+  prerequisite = {
+   focus = A01_princely_guarantees
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_royal_story.3
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  available = {
+   check_variable = {
+    A01_sultan_confidence > 2
+   }
+  }
+ }
+ focus = {
+  id = A01_royal_commission
+  icon = GFX_A01_royal_commission
+  x = 34
+  y = 21
+  cost = 3
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_summon_grand_council
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_to_variable = {
+    A01_admiralty_evidence = 1
+   }
+   set_country_flag = A01_royal_inquiry_open
+   country_event = {
+    id = A01_royal_story.4
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_win_the_captains
+  icon = GFX_A01_win_the_captains
+  x = 42
+  y = 21
+  cost = 3
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_naval_advisors
+  }
+  prerequisite = {
+   focus = A01_summon_grand_council
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_to_variable = {
+    A01_fleet_loyalty = 2
+   }
+   add_political_power = -50
+   navy_experience = 10
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_admirals_on_trial
+  icon = GFX_A01_admirals_on_trial
+  x = 32
+  y = 22
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_commission
+  }
+  prerequisite = {
+   focus = A01_win_the_captains
+  }
+  mutually_exclusive = {
+   focus = A01_purge_the_admiralty
+   focus = A01_admirals_retirement
+  }
+  available = {
+   check_variable = {
+    A01_admiralty_evidence > 2
+   }
+   check_variable = {
+    A01_fleet_loyalty > 1
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   A01_defeat_admiralty = yes
+   add_ideas = A01_civilian_justice
+   add_stability = 0.04
+   country_event = {
+    id = A01_royal_story.5
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_purge_the_admiralty
+  icon = GFX_A01_purge_the_admiralty
+  x = 36
+  y = 22
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_commission
+  }
+  prerequisite = {
+   focus = A01_win_the_captains
+  }
+  mutually_exclusive = {
+   focus = A01_admirals_on_trial
+   focus = A01_admirals_retirement
+  }
+  available = {
+   has_country_flag = A01_royal_guard_established
+   check_variable = {
+    A01_fleet_loyalty > 1
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   A01_defeat_admiralty = yes
+   set_country_flag = A01_admiralty_purged
+   add_timed_idea = {
+    idea = A01_purged_fleet
+    days = 365
+   }
+   add_stability = -0.08
+   navy_experience = -30
+   add_power_balance_value = {
+    id = A01_crown_council_balance
+    value = 0.25
+   }
+   country_event = {
+    id = A01_royal_story.6
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+   retire_character = A01_casembroot
+  }
+ }
+ focus = {
+  id = A01_admirals_retirement
+  icon = GFX_A01_admirals_retirement
+  x = 40
+  y = 22
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_commission
+  }
+  prerequisite = {
+   focus = A01_win_the_captains
+  }
+  mutually_exclusive = {
+   focus = A01_admirals_on_trial
+   focus = A01_purge_the_admiralty
+  }
+  available = {
+   has_political_power > 124
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   A01_defeat_admiralty = yes
+   add_political_power = -125
+   add_ideas = A01_admiralty_pensions
+   set_country_flag = A01_admiralty_bargain
+   add_stability = 0.06
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_civilian_admiralty
+  icon = GFX_A01_civilian_admiralty
+  x = 34
+  y = 23
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  available = {
+   has_country_flag = A01_admiralty_defeated
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_civilian_navy_ministry
+   navy_experience = 15
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  prerequisite = {
+   focus = A01_admirals_on_trial
+   focus = A01_purge_the_admiralty
+   focus = A01_admirals_retirement
+  }
+ }
+ focus = {
+  id = A01_guard_academy
+  icon = GFX_A01_guard_academy
+  x = 46
+  y = 17
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_guard_corps
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   army_experience = 20
+   add_ideas = A01_guard_academy_idea
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_royal_academies
+  icon = GFX_A01_royal_academies
+  x = 46
+  y = 18
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_guard_academy
+  }
+  prerequisite = {
+   focus = A01_crown_legal_guarantees
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_royal_academies_idea
+   add_tech_bonus = {
+    name = A01_royal_academies
+    bonus = 0.5
+    uses = 2
+    category = industry
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_capital_of_two_worlds
+  icon = GFX_A01_capital_of_two_worlds
+  x = 46
+  y = 19
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_academies
+  }
+  available = {
+   owns_state = 1058
+   controls_state = 1058
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_royal_story.8
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_electoral_act
+  icon = GFX_A01_electoral_act
+  x = 30
+  y = 27
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_crown_parliament
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_royal_story.9
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_first_royal_election
+  icon = GFX_A01_first_royal_election
+  x = 30
+  y = 28
+  cost = 3
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_electoral_act
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   A01_start_royal_election = yes
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_responsible_cabinet
+  icon = GFX_A01_responsible_cabinet
+  x = 30
+  y = 29
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_first_royal_election
+  }
+  available = {
+   has_country_flag = A01_prime_minister_elected
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_responsible_cabinet_idea
+   add_political_power = 75
+   set_country_flag = A01_responsible_royal_cabinet
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_reform_procurement
+  icon = GFX_A01_reform_procurement
+  x = 34
+  y = 29
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_responsible_cabinet
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   remove_ideas = A01_admiralty_pensions
+   add_ideas = A01_open_procurement
+   add_political_power = -75
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_island_officer_commissions
+  icon = GFX_A01_island_officer_commissions
+  x = 22
+  y = 25
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_island_compact
+  }
+  prerequisite = {
+   focus = A01_guard_academy
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_island_commissions
+   army_experience = 25
+   every_subject_country = {
+    limit = {
+     OR = {
+      tag = A11
+      tag = A12
+      tag = A13
+      tag = A14
+     }
+    }
+    add_ideas = A01_island_commissions
+    army_experience = 10
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_royal_development_bank
+  icon = GFX_A01_royal_development_bank
+  x = 22
+  y = 27
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_island_officer_commissions
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_development_bank
+   add_political_power = -75
+   every_subject_country = {
+    limit = {
+     OR = {
+      tag = A11
+      tag = A12
+      tag = A13
+      tag = A14
+     }
+    }
+    add_ideas = A01_development_bank
+    capital_scope = {
+     add_building_construction = {
+      type = infrastructure
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   capital_scope = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+     type = industrial_complex
+     level = 1
+     instant_build = yes
+    }
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_crown_provincial_diets
+  icon = GFX_A01_crown_provincial_diets
+  x = 36
+  y = 27
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_crown_absolute_rule
+  }
+  prerequisite = {
+   focus = A01_island_compact
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_provincial_diets
+   remove_ideas = A01_island_discontent
+   add_political_power = -50
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_renew_the_fleet
+  icon = GFX_A01_renew_the_fleet
+  x = 42
+  y = 28
+  cost = 5
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_civilian_admiralty
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   remove_ideas = A01_purged_fleet
+   navy_experience = 30
+   add_tech_bonus = {
+    name = A01_renew_the_fleet
+    bonus = 0.5
+    uses = 1
+    category = naval_equipment
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_open_seas_kingdom
+  icon = GFX_A01_open_seas_kingdom
+  x = 24
+  y = 33
+  cost = 7
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_development_bank
+  }
+  mutually_exclusive = {
+   focus = A01_homeland_in_exile
+   focus = A01_archipelago_great_power
+  }
+  available = {
+   has_country_flag = A01_crown_crisis_settled
+   OR = {
+    has_country_flag = A01_responsible_royal_cabinet
+    has_completed_focus = A01_crown_provincial_diets
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_open_seas_idea
+   add_stability = 0.05
+   country_event = {
+    id = A01_royal_story.12
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_homeland_in_exile
+  icon = GFX_A01_homeland_in_exile
+  x = 30
+  y = 33
+  cost = 7
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_development_bank
+  }
+  mutually_exclusive = {
+   focus = A01_open_seas_kingdom
+   focus = A01_archipelago_great_power
+  }
+  available = {
+   has_country_flag = A01_crown_crisis_settled
+   OR = {
+    has_country_flag = A01_responsible_royal_cabinet
+    has_completed_focus = A01_crown_provincial_diets
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_exile_mission
+   add_manpower = 12000
+   add_war_support = 0.05
+   country_event = {
+    id = A01_royal_story.13
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_archipelago_great_power
+  icon = GFX_A01_archipelago_great_power
+  x = 36
+  y = 33
+  cost = 7
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  prerequisite = {
+   focus = A01_royal_development_bank
+  }
+  mutually_exclusive = {
+   focus = A01_open_seas_kingdom
+   focus = A01_homeland_in_exile
+  }
+  available = {
+   has_country_flag = A01_crown_crisis_settled
+   OR = {
+    has_country_flag = A01_responsible_royal_cabinet
+    has_completed_focus = A01_crown_provincial_diets
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   add_ideas = A01_archipelago_power
+   add_war_support = 0.05
+   country_event = {
+    id = A01_royal_story.14
+    days = 1
+   }
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+ }
+ focus = {
+  id = A01_cabinet_open_budget
+  icon = GFX_A01_cabinet_open_budget
+  x = 26
+  y = 30
+  cost = 5
+  prerequisite = {
+   focus = A01_responsible_cabinet
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  mutually_exclusive = {
+   focus = A01_cabinet_princely_budget
+   focus = A01_cabinet_island_schools
+  }
+  available = {
+   has_country_flag = A01_pm_constitutional_winner
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_political_power = 50
+   add_tech_bonus = {
+    name = A01_cabinet_open_budget
+    bonus = 0.5
+    uses = 1
+    category = industry
+   }
+  }
+ }
+ focus = {
+  id = A01_cabinet_princely_budget
+  icon = GFX_A01_cabinet_princely_budget
+  x = 30
+  y = 30
+  cost = 5
+  prerequisite = {
+   focus = A01_responsible_cabinet
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  mutually_exclusive = {
+   focus = A01_cabinet_open_budget
+   focus = A01_cabinet_island_schools
+  }
+  available = {
+   has_country_flag = A01_pm_order_winner
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   navy_experience = 25
+   add_tech_bonus = {
+    name = A01_cabinet_princely_budget
+    bonus = 0.5
+    uses = 1
+    category = naval_equipment
+   }
+  }
+ }
+ focus = {
+  id = A01_cabinet_island_schools
+  icon = GFX_A01_cabinet_island_schools
+  x = 34
+  y = 30
+  cost = 5
+  prerequisite = {
+   focus = A01_responsible_cabinet
+  }
+  allow_branch = {
+   has_country_flag = A01_royal_path_revealed
+  }
+  mutually_exclusive = {
+   focus = A01_cabinet_open_budget
+   focus = A01_cabinet_princely_budget
+  }
+  available = {
+   has_country_flag = A01_pm_indonesian_winner
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   army_experience = 15
+   add_stability = 0.03
+   add_tech_bonus = {
+    name = A01_cabinet_island_schools
+    bonus = 0.5
+    uses = 1
+    category = industry
+   }
+  }
+ }
+}

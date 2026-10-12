@@ -1,0 +1,126 @@
+add_namespace = a01_peace_request
+
+# ---------------------------------------------------------------
+# a01_peace_request.1
+#  Нидерланды инициируют мирные переговоры на условиях Японии.
+#  Событие идёт A03 — Япония решает, принимать ли условия.
+# ---------------------------------------------------------------
+country_event = {
+ id = a01_peace_request.1
+ title = a01_peace_request.1.t
+ desc = a01_peace_request.1.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A01 has_war_with = A03 has_country_flag = A01_peace_terms_requested NOT = { has_country_flag = A01_expansion_resolved } }
+
+ # Передать запрос в Токио
+ immediate = {
+  A03 = { country_event = { id = a01_peace_request.2 days = 2 } }
+ }
+
+ option = {
+  name = a01_peace_request.1.a
+  # Батавия ждёт ответа Токио
+ }
+}
+
+# ---------------------------------------------------------------
+# a01_peace_request.2
+#  Япония рассматривает нидерландский запрос о мире.
+#  Идёт A03 — два варианта: принять или отклонить.
+# ---------------------------------------------------------------
+country_event = {
+ id = a01_peace_request.2
+ title = a01_peace_request.2.t
+ desc = a01_peace_request.2.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A03 has_war_with = A01 NOT = { has_country_flag = A03_borneo_victory } }
+
+ option = {
+  # Принять — заключить Борнейскую конвенцию немедленно
+  name = a01_peace_request.2.accept
+  ai_chance = {
+   factor = 60
+   modifier = {
+    factor = 2
+    # Более склонны принять, если уже держат Сабах
+    A03_controls_borneo_province = yes
+   }
+   modifier = {
+    factor = 0.3
+    # Менее склонны принять, если Сабах не взят
+    NOT = { A03_controls_borneo_province = yes }
+   }
+  }
+  add_war_support = 0.05
+  add_stability = 0.03
+  # Запускаем стандартную процедуру конвенции через A01
+  A01 = {
+   country_event = { id = a01_peace_request.3 hours = 6 }
+  }
+ }
+
+ option = {
+  # Отклонить — продолжать войну
+  name = a01_peace_request.2.reject
+  ai_chance = {
+   factor = 40
+   modifier = {
+    factor = 3
+    NOT = { A03_controls_borneo_province = yes }
+   }
+  }
+  add_war_support = 0.04
+  add_political_power = 25
+  A01 = {
+   country_event = { id = a01_peace_request.4 hours = 6 }
+  }
+ }
+}
+
+# ---------------------------------------------------------------
+# a01_peace_request.3
+#  Япония приняла условия — мирный договор заключается.
+#  Идёт A01 — вызывает стандартный borneo_treaty_effect.
+# ---------------------------------------------------------------
+country_event = {
+ id = a01_peace_request.3
+ title = a01_peace_request.3.t
+ desc = a01_peace_request.3.d
+ picture = GFX_1896_event_treaty
+ is_triggered_only = yes
+ trigger = { tag = A01 has_war_with = A03 NOT = { has_country_flag = A01_expansion_resolved } }
+
+ immediate = {
+  # Запускаем ту же процедуру, что и при военном поражении
+  A01_borneo_treaty_effect = yes
+ }
+
+ option = {
+  name = a01_peace_request.3.a
+  # Эффект применён в immediate
+ }
+}
+
+# ---------------------------------------------------------------
+# a01_peace_request.4
+#  Япония отклонила мирный запрос — война продолжается.
+#  Идёт A01.
+# ---------------------------------------------------------------
+country_event = {
+ id = a01_peace_request.4
+ title = a01_peace_request.4.t
+ desc = a01_peace_request.4.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A01 has_war_with = A03 }
+
+ option = {
+  name = a01_peace_request.4.a
+  # Нидерланды уяснили позицию Токио — готовиться к дальнейшей войне
+  add_war_support = 0.03
+  add_stability = -0.03
+  clr_country_flag = A01_peace_terms_requested
+ }
+}

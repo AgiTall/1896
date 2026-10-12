@@ -1,0 +1,67 @@
+focus_tree = {
+ id = A10_philippines
+ country = { factor = 0 modifier = { add = 100 tag = A10 } }
+ default = no
+ continuous_focus_position = { x = 1200 y = 1100 }
+ focus = { id = A10_island_congress icon = GFX_goal_generic_political_reform x = 5 y = 0 cost = 5 ai_will_do = { factor = 1 } 
+ completion_reward = { add_political_power = 100 }
+ }
+ focus = { id = A10_confederation icon = GFX_goal_generic_political_reform x = 2 y = 1 cost = 5 ai_will_do = { factor = 1 } mutually_exclusive = { focus = A10_federation }
+ prerequisite = { focus = A10_island_congress }
+ completion_reward = { set_country_flag = A10_confederal_path remove_ideas = A10_separatism A10_release_PVI = yes A10_release_PSM = yes }
+ }
+ focus = { id = A10_visayan_compact icon = GFX_goal_generic_political_reform x = 2 y = 2 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_confederation }
+ completion_reward = { A10_release_PCB = yes A10_release_PPN = yes add_stability = 0.05 }
+ }
+ focus = { id = A10_mindanao_compact icon = GFX_goal_generic_political_reform x = 2 y = 3 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_visayan_compact }
+ completion_reward = { A10_release_PMD = yes A10_release_PNM = yes add_political_power = 50 }
+ }
+ focus = { id = A10_united_command icon = GFX_goal_generic_political_reform x = 2 y = 4 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_mindanao_compact }
+ completion_reward = { add_ideas = A10_common_army add_war_support = 0.10 }
+ }
+ focus = { id = A10_federation icon = GFX_goal_generic_political_reform x = 8 y = 1 cost = 5 ai_will_do = { factor = 1 } mutually_exclusive = { focus = A10_confederation }
+ prerequisite = { focus = A10_island_congress }
+ completion_reward = { set_country_flag = A10_federal_path set_cosmetic_tag = A10_FED remove_ideas = A10_separatism add_ideas = A10_federal_administration }
+ }
+ focus = { id = A10_gendarmerie icon = GFX_goal_generic_political_reform x = 8 y = 2 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_federation }
+ completion_reward = { A10_federal_progress = yes add_manpower = 5000 }
+ }
+ focus = { id = A10_local_administration icon = GFX_goal_generic_political_reform x = 8 y = 3 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_gendarmerie }
+ completion_reward = { A10_federal_progress = yes add_stability = 0.05 }
+ }
+ focus = { id = A10_equal_citizenship icon = GFX_goal_generic_political_reform x = 8 y = 4 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_local_administration }
+ completion_reward = { A10_federal_progress = yes add_political_power = 75 }
+ }
+ focus = { id = A10_coastal_arsenals icon = GFX_goal_generic_construct_mil_factory x = 5 y = 2 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_island_congress }
+ completion_reward = { 1084 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 1 instant_build = yes } } add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1500 producer = A10 } }
+ }
+ focus = { id = A10_landing_plans icon = GFX_goal_generic_prepare_for_war x = 5 y = 3 cost = 5 ai_will_do = { factor = 1 } 
+ prerequisite = { focus = A10_coastal_arsenals }
+ completion_reward = { add_command_power = 25 add_war_support = 0.10 }
+ }
+ focus = { id = A10_strike_japan icon = GFX_goal_generic_major_war x = 5 y = 5 cost = 5 ai_will_do = { factor = 1 } available = { A03 = { has_war_with = A01 } NOT = { has_war_with = A03 } OR = { has_completed_focus = A10_united_command has_completed_focus = A10_equal_citizenship } } bypass = { has_war_with = A03 }
+ prerequisite = { focus = A10_landing_plans }
+ completion_reward = { declare_war_on = { target = A03 type = annex_everything } }
+ }
+ focus = { id = A10_luzon_charter icon = GFX_goal_generic_political_reform x = 2 y = 6 cost = 5 ai_will_do = { factor = 1 } available = { owns_state = 623 controls_state = 623 }
+ prerequisite = { focus = A10_strike_japan }
+ prerequisite = { focus = A10_united_command }
+ completion_reward = { A10_release_PNL = yes }
+ }
+ focus = { id = A10_capital_charters icon = GFX_goal_generic_political_reform x = 2 y = 7 cost = 5 ai_will_do = { factor = 1 } available = { owns_state = 327 controls_state = 327 owns_state = 1027 controls_state = 1027 }
+ prerequisite = { focus = A10_luzon_charter }
+ completion_reward = { A10_release_PML = yes A10_release_PBT = yes add_stability = 0.05 }
+ }
+ focus = { id = A10_federal_reconstruction icon = GFX_goal_generic_political_reform x = 8 y = 6 cost = 5 ai_will_do = { factor = 1 } available = { owns_state = 327 controls_state = 327 }
+ prerequisite = { focus = A10_strike_japan }
+ prerequisite = { focus = A10_equal_citizenship }
+ completion_reward = { A10_federal_progress = yes 1084 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+ }
+}

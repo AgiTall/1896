@@ -1,0 +1,34 @@
+A01_initialize_crown_struggle = {
+ if = {
+  limit = {
+   NOT = {
+    has_country_flag = A01_crown_balance_initialized
+   }
+  }
+  set_country_flag = A01_crown_balance_initialized
+  remove_power_balance = {
+   id = A01_ludolf_admirals_balance
+  }
+  set_power_balance = {
+   id = A01_crown_council_balance
+   left_side = A01_grand_council_side
+   right_side = A01_queen_side
+   set_value = 0
+  }
+  remove_dynamic_modifier = {
+   modifier = A01_admirals_council
+  }
+  set_variable = {
+   A01_admiralty_evidence = 0
+  }
+  set_variable = {
+   A01_fleet_loyalty = 0
+  }
+  set_variable = {
+   A01_sultan_confidence = 0
+  }
+  set_variable = {
+   A01_civic_support = 0
+  }
+ }
+}

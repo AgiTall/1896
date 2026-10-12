@@ -1,0 +1,92 @@
+A01_batavian_congress_category = {
+A01_congress_tighten_laws = {
+		icon = generic_prepare_civil_war
+		cost = 0
+		days_remove = 1
+
+		visible = {
+			has_country_flag = A01_batavian_congress_active
+		}
+
+		available = {
+			OR = {
+				threat > 0.25
+				any_owned_state = {
+					resistance > 15
+				}
+			}
+		}
+
+		complete_effect = {
+			add_ideas = limited_conscription
+			add_ideas = partial_economic_mobilisation
+			add_ideas = limited_exports
+			clr_country_flag = A01_batavian_congress_active
+			country_event = { id = A01_admirals.1 days = 730 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				threat > 0.50
+			}
+		}
+	}
+A01_congress_maintain_laws = {
+		icon = generic_political_discourse
+		cost = 0
+		days_remove = 1
+
+		visible = {
+			has_country_flag = A01_batavian_congress_active
+		}
+
+		complete_effect = {
+			clr_country_flag = A01_batavian_congress_active
+			country_event = { id = A01_admirals.1 days = 730 }
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+A01_congress_loosen_laws = {
+		icon = generic_democracy
+		cost = 0
+		days_remove = 1
+
+		visible = {
+			has_country_flag = A01_batavian_congress_active
+		}
+
+		available = {
+			NOT = {
+				threat > 0.25
+			}
+			NOT = {
+				any_owned_state = {
+					resistance > 15
+				}
+			}
+		}
+
+		complete_effect = {
+			add_ideas = volunteer_only
+			add_ideas = civilian_economy
+			add_ideas = free_trade
+			clr_country_flag = A01_batavian_congress_active
+			country_event = { id = A01_admirals.1 days = 730 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				NOT = {
+					threat > 0.10
+				}
+			}
+		}
+	}
+}

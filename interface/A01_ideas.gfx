@@ -1,0 +1,21 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_A01_wilhelmina"
+		texturefile = "gfx/interface/ideas/idea_hol_wilhelmina.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_A01_racial_divide"
+		texturefile = "gfx/interface/ideas/idea_pacific_army.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_A01_oil_dependency"
+		texturefile = "gfx/interface/ideas/idea_story_trade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_A01_admirals_council"
+		texturefile = "gfx/interface/ideas/idea_story_admirals.dds"
+	}
+}

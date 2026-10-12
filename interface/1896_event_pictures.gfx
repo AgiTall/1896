@@ -1,0 +1,12 @@
+spriteTypes = {
+ spriteType = { name = "GFX_1896_event_protest" texturefile = "gfx/event_pictures/report_event_worker_protests.dds" }
+ spriteType = { name = "GFX_1896_event_talks" texturefile = "gfx/event_pictures/report_event_FIN_armistice_of_moscow_negotiations.dds" }
+ spriteType = { name = "GFX_1896_event_council" texturefile = "gfx/event_pictures/report_event_generic_parliament.dds" }
+ spriteType = { name = "GFX_1896_event_treaty" texturefile = "gfx/event_pictures/report_event_generic_sign_treaty1.dds" }
+ spriteType = { name = "GFX_1896_event_navy" texturefile = "gfx/event_pictures/report_event_ast_navy.dds" }
+ spriteType = { name = "GFX_1896_event_trade" texturefile = "gfx/event_pictures/report_event_merchant_ship_01.dds" }
+ spriteType = { name = "GFX_1896_event_building" texturefile = "gfx/event_pictures/report_event_generic_construction_site.dds" }
+ spriteType = { name = "GFX_1896_event_industry" texturefile = "gfx/event_pictures/report_event_generic_factory.dds" }
+ spriteType = { name = "GFX_1896_event_recruit" texturefile = "gfx/event_pictures/report_event_SWI_enlisting_recruitment.dds" }
+ spriteType = { name = "GFX_1896_event_unrest" texturefile = "gfx/event_pictures/report_event_india_protests.dds" }
+}

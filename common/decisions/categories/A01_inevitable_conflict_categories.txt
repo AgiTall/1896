@@ -1,0 +1,19 @@
+A01_inevitable_conflict_category = {
+ icon = generic_political_actions
+ allowed = {
+  original_tag = A01
+ }
+ visible = {
+  NOT = {
+   has_country_flag = A01_expansion_resolved
+  }
+  NOT = {
+   has_country_flag = pacific_trade_accord
+  }
+  country_exists = A03
+  OR = {
+   has_country_flag = A01_refused_japanese_ultimatum
+   has_country_flag = A01_island_defence_started
+  }
+ }
+}

@@ -1,0 +1,9 @@
+A01_monarchy_category = {
+ A01_wilhelminas_diary = {
+ icon = generic_political_discourse cost = 0 fire_only_once = yes
+ visible = { NOT = { has_country_flag = A01_ludolf_crisis_resolved } date > 1894.12.31 }
+ available = { has_completed_focus = A01_pacific_settlement has_stability > 0.40 NOT = { has_country_flag = A01_ludolf_crisis_resolved } }
+ complete_effect = { country_event = { id = A01_monarchy.0 days = 1 } }
+ ai_will_do = { factor = 0 }
+ }
+}

@@ -1,0 +1,5 @@
+A10_japanese_settlement = {
+ icon = generic_political_actions
+ allowed = { tag = A10 }
+ visible = { has_war_with = A03 }
+}

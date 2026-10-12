@@ -1,0 +1,27 @@
+state = {
+ id = 1083
+ name = "STATE_1083"
+ manpower = 1400000
+ state_category = rural
+ history = {
+  owner = PAZ
+  add_core_of = PAZ
+  buildings = {
+   infrastructure = 2
+   7590 = {
+    naval_base = 1
+   }
+  }
+  victory_points = {
+   7590
+   3
+  }
+ }
+ provinces = {
+  7546
+  1550
+  7590
+  12347
+ }
+ local_supplies = 0.0
+}

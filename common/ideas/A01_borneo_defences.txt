@@ -1,0 +1,11 @@
+ideas = { country = {
+ A01_borneo_fortification_directorate = {
+  picture = pacific_army
+  allowed = { original_tag = A01 }
+  removal_cost = -1
+  modifier = {
+   production_speed_bunker_factor = 0.15
+   production_speed_coastal_bunker_factor = 0.15
+  }
+ }
+} }

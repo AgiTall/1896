@@ -1,0 +1,20 @@
+on_actions = {
+ on_daily = {
+  effect = {
+   A01 = {
+    if = { limit = { has_war_with = A03 } set_country_flag = A01_borneo_war_started }
+    if = {
+     limit = {
+      has_country_flag = A01_war_militia_raised
+      OR = {
+       has_country_flag = A01_borneo_treaty
+       has_country_flag = pacific_trade_accord
+       AND = { has_country_flag = A01_borneo_war_started NOT = { has_war_with = A03 } }
+      }
+     }
+     A01_disband_war_militia_effect = yes
+    }
+   }
+  }
+ }
+}

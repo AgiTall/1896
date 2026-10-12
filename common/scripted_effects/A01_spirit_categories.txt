@@ -1,0 +1,213 @@
+A01_update_spirit_categories = {
+ set_variable = { A01_defeat_legacy_consumer_goods_expected_value = 0 }
+ set_variable = { A01_defeat_legacy_industrial_capacity_factory = 0 }
+ set_variable = { A01_defeat_legacy_political_power_gain = 0 }
+ set_variable = { A01_defeat_legacy_production_speed_buildings_factor = 0 }
+ set_variable = { A01_defeat_legacy_production_speed_dockyard_factor = 0 }
+ set_variable = { A01_defeat_legacy_stability_factor = 0 }
+ set_variable = { A01_defeat_legacy_war_support_factor = 0 }
+ if = { limit = { has_idea = A01_borneo_humiliation }
+ add_to_variable = { A01_defeat_legacy_stability_factor = -0.05 }
+ add_to_variable = { A01_defeat_legacy_political_power_gain = -0.1 }
+ }
+ if = { limit = { has_idea = A01_revanchism_simmering }
+ add_to_variable = { A01_defeat_legacy_war_support_factor = 0.05 }
+ add_to_variable = { A01_defeat_legacy_stability_factor = -0.03 }
+ }
+ if = { limit = { has_idea = A01_revanchism_organised }
+ add_to_variable = { A01_defeat_legacy_war_support_factor = 0.1 }
+ add_to_variable = { A01_defeat_legacy_production_speed_dockyard_factor = 0.1 }
+ }
+ if = { limit = { has_idea = A01_demands_for_freedom }
+ add_to_variable = { A01_defeat_legacy_stability_factor = -0.05 }
+ add_to_variable = { A01_defeat_legacy_political_power_gain = -0.05 }
+ }
+ if = { limit = { has_idea = A01_postwar_destruction }
+ add_to_variable = { A01_defeat_legacy_production_speed_buildings_factor = -0.1 }
+ add_to_variable = { A01_defeat_legacy_industrial_capacity_factory = -0.1 }
+ }
+ if = { limit = { has_idea = A01_unpaid_families }
+ add_to_variable = { A01_defeat_legacy_stability_factor = -0.05 }
+ add_to_variable = { A01_defeat_legacy_political_power_gain = -0.05 }
+ }
+ if = { limit = { has_idea = A01_postwar_budget_burden }
+ add_to_variable = { A01_defeat_legacy_consumer_goods_expected_value = 0.05 }
+ add_to_variable = { A01_defeat_legacy_political_power_gain = -0.1 }
+ }
+ if = { limit = { has_idea = A01_reconstruction_cabinet }
+ add_to_variable = { A01_defeat_legacy_political_power_gain = 0.1 }
+ add_to_variable = { A01_defeat_legacy_stability_factor = 0.03 }
+ }
+ if = { limit = { OR = { has_idea = A01_borneo_humiliation has_idea = A01_revanchism_simmering has_idea = A01_revanchism_organised has_idea = A01_demands_for_freedom has_idea = A01_postwar_destruction has_idea = A01_unpaid_families has_idea = A01_postwar_budget_burden has_idea = A01_reconstruction_cabinet } }
+  if = { limit = { NOT = { has_dynamic_modifier = A01_defeat_legacy } } add_dynamic_modifier = { modifier = A01_defeat_legacy } }
+ force_update_dynamic_modifier = yes
+ }
+ else = { remove_dynamic_modifier = { modifier = A01_defeat_legacy } }
+ set_variable = { A01_army_development_army_defence_factor = 0 }
+ set_variable = { A01_army_development_army_org_factor = 0 }
+ set_variable = { A01_army_development_navy_org_factor = 0 }
+ set_variable = { A01_army_development_production_speed_dockyard_factor = 0 }
+ set_variable = { A01_army_development_supply_consumption_factor = 0 }
+ set_variable = { A01_army_development_training_time_army_factor = 0 }
+ if = { limit = { has_idea = A01_knil_training }
+ add_to_variable = { A01_army_development_army_org_factor = 0.05 }
+ add_to_variable = { A01_army_development_training_time_army_factor = -0.1 }
+ }
+ if = { limit = { has_idea = A01_island_defence }
+ add_to_variable = { A01_army_development_army_defence_factor = 0.05 }
+ }
+ if = { limit = { has_idea = A01_jungle_supply }
+ add_to_variable = { A01_army_development_supply_consumption_factor = -0.1 }
+ }
+ if = { limit = { has_idea = A01_naval_staff }
+ add_to_variable = { A01_army_development_navy_org_factor = 0.05 }
+ add_to_variable = { A01_army_development_production_speed_dockyard_factor = 0.1 }
+ }
+ if = { limit = { has_idea = A01_army_transition }
+ add_to_variable = { A01_army_development_army_org_factor = -0.05 }
+ }
+ if = { limit = { has_idea = A01_joint_officer_corps }
+ add_to_variable = { A01_army_development_army_org_factor = 0.05 }
+ add_to_variable = { A01_army_development_training_time_army_factor = -0.05 }
+ }
+ if = { limit = { has_idea = A01_federal_defence_command_idea }
+ add_to_variable = { A01_army_development_supply_consumption_factor = -0.05 }
+ add_to_variable = { A01_army_development_navy_org_factor = 0.05 }
+ }
+ if = { limit = { has_idea = A01_restored_port_network }
+ add_to_variable = { A01_army_development_supply_consumption_factor = -0.05 }
+ }
+ if = { limit = { OR = { has_idea = A01_knil_training has_idea = A01_island_defence has_idea = A01_jungle_supply has_idea = A01_naval_staff has_idea = A01_army_transition has_idea = A01_joint_officer_corps has_idea = A01_federal_defence_command_idea has_idea = A01_restored_port_network } }
+  if = { limit = { NOT = { has_dynamic_modifier = A01_army_development } } add_dynamic_modifier = { modifier = A01_army_development } }
+ force_update_dynamic_modifier = yes
+ }
+ else = { remove_dynamic_modifier = { modifier = A01_army_development } }
+ set_variable = { A01_civic_development_army_advisor_cost_factor = 0 }
+ set_variable = { A01_civic_development_navy_org_factor = 0 }
+ set_variable = { A01_civic_development_political_power_factor = 0 }
+ set_variable = { A01_civic_development_political_power_gain = 0 }
+ set_variable = { A01_civic_development_production_speed_buildings_factor = 0 }
+ set_variable = { A01_civic_development_recruitable_population_factor = 0 }
+ set_variable = { A01_civic_development_stability_factor = 0 }
+ if = { limit = { has_idea = A01_colonial_administration }
+ add_to_variable = { A01_civic_development_political_power_gain = 0.15 }
+ }
+ if = { limit = { has_idea = A01_sultanate_federation }
+ add_to_variable = { A01_civic_development_stability_factor = 0.05 }
+ add_to_variable = { A01_civic_development_recruitable_population_factor = 0.05 }
+ }
+ if = { limit = { has_idea = A01_civilian_naval_compact }
+ add_to_variable = { A01_civic_development_navy_org_factor = 0.05 }
+ add_to_variable = { A01_civic_development_political_power_gain = 0.05 }
+ }
+ if = { limit = { has_idea = A01_civilian_reform_mandate }
+ add_to_variable = { A01_civic_development_political_power_gain = 0.05 }
+ }
+ if = { limit = { has_idea = A01_island_representation_idea }
+ add_to_variable = { A01_civic_development_stability_factor = 0.03 }
+ }
+ if = { limit = { has_idea = A01_federal_constitution_idea }
+ add_to_variable = { A01_civic_development_stability_factor = 0.05 }
+ add_to_variable = { A01_civic_development_political_power_gain = 0.05 }
+ }
+ if = { limit = { has_idea = A01_accountable_civil_service }
+ add_to_variable = { A01_civic_development_political_power_factor = 0.05 }
+ add_to_variable = { A01_civic_development_army_advisor_cost_factor = -0.05 }
+ }
+ if = { limit = { has_idea = A01_recovery_investment_idea }
+ add_to_variable = { A01_civic_development_production_speed_buildings_factor = 0.05 }
+ }
+ if = { limit = { OR = { has_idea = A01_colonial_administration has_idea = A01_sultanate_federation has_idea = A01_civilian_naval_compact has_idea = A01_civilian_reform_mandate has_idea = A01_island_representation_idea has_idea = A01_federal_constitution_idea has_idea = A01_accountable_civil_service has_idea = A01_recovery_investment_idea } }
+  if = { limit = { NOT = { has_dynamic_modifier = A01_civic_development } } add_dynamic_modifier = { modifier = A01_civic_development } }
+ force_update_dynamic_modifier = yes
+ }
+ else = { remove_dynamic_modifier = { modifier = A01_civic_development } }
+ set_variable = { A01_crown_order_army_attack_factor = 0 }
+ set_variable = { A01_crown_order_army_defence_factor = 0 }
+ set_variable = { A01_crown_order_army_org_factor = 0 }
+ set_variable = { A01_crown_order_consumer_goods_expected_value = 0 }
+ set_variable = { A01_crown_order_industrial_capacity_factory = 0 }
+ set_variable = { A01_crown_order_mobilization_speed = 0 }
+ set_variable = { A01_crown_order_navy_org_factor = 0 }
+ set_variable = { A01_crown_order_political_power_factor = 0 }
+ set_variable = { A01_crown_order_political_power_gain = 0 }
+ set_variable = { A01_crown_order_production_factory_max_efficiency_factor = 0 }
+ set_variable = { A01_crown_order_production_speed_buildings_factor = 0 }
+ set_variable = { A01_crown_order_production_speed_dockyard_factor = 0 }
+ set_variable = { A01_crown_order_recruitable_population_factor = 0 }
+ set_variable = { A01_crown_order_research_speed_factor = 0 }
+ set_variable = { A01_crown_order_resistance_growth_on_our_occupied_states = 0 }
+ set_variable = { A01_crown_order_resistance_target = 0 }
+ set_variable = { A01_crown_order_stability_factor = 0 }
+ set_variable = { A01_crown_order_training_time_army_factor = 0 }
+ set_variable = { A01_crown_order_war_support_factor = 0 }
+ if = { limit = { has_idea = A01_royal_arbitration }
+ add_to_variable = { A01_crown_order_stability_factor = 0.07 }
+ add_to_variable = { A01_crown_order_political_power_gain = 0.05 }
+ }
+ if = { limit = { has_idea = A01_constitutional_crown }
+ add_to_variable = { A01_crown_order_stability_factor = 0.1 }
+ add_to_variable = { A01_crown_order_political_power_gain = 0.1 }
+ }
+ if = { limit = { has_idea = A01_island_charter }
+ add_to_variable = { A01_crown_order_stability_factor = 0.03 }
+ add_to_variable = { A01_crown_order_recruitable_population_factor = 0.05 }
+ }
+ if = { limit = { has_idea = A01_royal_guard_loyalty }
+ add_to_variable = { A01_crown_order_army_org_factor = 0.1 }
+ add_to_variable = { A01_crown_order_army_defence_factor = 0.05 }
+ add_to_variable = { A01_crown_order_training_time_army_factor = -0.1 }
+ }
+ if = { limit = { has_idea = A01_royal_naval_loyalty }
+ add_to_variable = { A01_crown_order_navy_org_factor = 0.1 }
+ add_to_variable = { A01_crown_order_production_speed_dockyard_factor = 0.15 }
+ }
+ if = { limit = { has_idea = A01_royal_absolutism }
+ add_to_variable = { A01_crown_order_political_power_gain = 0.25 }
+ add_to_variable = { A01_crown_order_war_support_factor = 0.15 }
+ add_to_variable = { A01_crown_order_mobilization_speed = 0.2 }
+ add_to_variable = { A01_crown_order_stability_factor = -0.05 }
+ }
+ if = { limit = { has_idea = A01_direct_royal_rule }
+ add_to_variable = { A01_crown_order_production_speed_buildings_factor = 0.15 }
+ add_to_variable = { A01_crown_order_industrial_capacity_factory = 0.1 }
+ }
+ if = { limit = { has_idea = A01_crown_secret_police }
+ add_to_variable = { A01_crown_order_resistance_target = -0.15 }
+ add_to_variable = { A01_crown_order_resistance_growth_on_our_occupied_states = -0.2 }
+ add_to_variable = { A01_crown_order_stability_factor = 0.05 }
+ }
+ if = { limit = { has_idea = A01_royal_militarism }
+ add_to_variable = { A01_crown_order_army_attack_factor = 0.1 }
+ add_to_variable = { A01_crown_order_production_speed_dockyard_factor = 0.15 }
+ add_to_variable = { A01_crown_order_industrial_capacity_factory = 0.1 }
+ add_to_variable = { A01_crown_order_consumer_goods_expected_value = 0.05 }
+ }
+ if = { limit = { has_idea = A01_crown_parliament_idea }
+ add_to_variable = { A01_crown_order_political_power_gain = 0.2 }
+ add_to_variable = { A01_crown_order_research_speed_factor = 0.1 }
+ add_to_variable = { A01_crown_order_stability_factor = 0.05 }
+ }
+ if = { limit = { has_idea = A01_crown_commonwealth_idea }
+ add_to_variable = { A01_crown_order_recruitable_population_factor = 0.15 }
+ add_to_variable = { A01_crown_order_production_factory_max_efficiency_factor = 0.15 }
+ add_to_variable = { A01_crown_order_consumer_goods_expected_value = -0.1 }
+ }
+ if = { limit = { has_idea = A01_emmas_caution }
+ add_to_variable = { A01_crown_order_political_power_factor = -0.1 }
+ }
+ if = { limit = { has_idea = A01_young_queens_resolve }
+ add_to_variable = { A01_crown_order_political_power_factor = 0.15 }
+ }
+ if = { limit = { has_idea = A01_crown_dialogue }
+ add_to_variable = { A01_crown_order_political_power_factor = 0.05 }
+ }
+ if = { limit = { has_idea = A01_crown_resolve }
+ add_to_variable = { A01_crown_order_political_power_factor = 0.1 }
+ }
+ if = { limit = { OR = { has_idea = A01_royal_arbitration has_idea = A01_constitutional_crown has_idea = A01_island_charter has_idea = A01_royal_guard_loyalty has_idea = A01_royal_naval_loyalty has_idea = A01_royal_absolutism has_idea = A01_direct_royal_rule has_idea = A01_crown_secret_police has_idea = A01_royal_militarism has_idea = A01_crown_parliament_idea has_idea = A01_crown_commonwealth_idea has_idea = A01_emmas_caution has_idea = A01_young_queens_resolve has_idea = A01_crown_dialogue has_idea = A01_crown_resolve } }
+  if = { limit = { NOT = { has_dynamic_modifier = A01_crown_order } } add_dynamic_modifier = { modifier = A01_crown_order } }
+ force_update_dynamic_modifier = yes
+ }
+ else = { remove_dynamic_modifier = { modifier = A01_crown_order } }
+}

@@ -1,0 +1,14 @@
+A01_war_response_category = {
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = A01
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = A01_colonial_police_decision_unlocked
+			has_country_flag = A01_council_of_sultans_decision_unlocked
+		}
+	}
+}

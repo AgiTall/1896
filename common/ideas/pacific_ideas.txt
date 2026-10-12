@@ -1,0 +1,241 @@
+ideas = {
+ country = {
+  A01_war_production = {
+   cancel = {
+    has_country_flag = A01_borneo_war_started
+    NOT = {
+     has_war_with = A03
+    }
+   }
+   picture = pacific_industry
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    industrial_capacity_factory = 0.10
+    consumer_goods_factor = 0.05
+   }
+  }
+  A03_civil_government = {
+   picture = story_constitution
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    political_power_gain = 0.15
+    stability_factor = 0.05
+   }
+  }
+  A03_naval_government = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    production_speed_dockyard_factor = 0.10
+    war_support_factor = 0.05
+   }
+  }
+  A03_commercial_network = {
+   picture = story_trade
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    production_speed_industrial_complex_factor = 0.10
+   }
+  }
+  A03_resource_commission = {
+   picture = story_trade
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    production_factory_efficiency_gain_factor = 0.05
+   }
+  }
+  A03_industrial_contracts = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    production_speed_buildings_factor = 0.05
+   }
+  }
+  A03_naval_academy = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    navy_org_factor = 0.05
+   }
+  }
+  A03_island_supply = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    supply_consumption_factor = -0.05
+   }
+  }
+  A03_army_reform = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    army_org_factor = 0.05
+    training_time_army_factor = -0.10
+   }
+  }
+  A03_landing_force = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    special_forces_cap = 0.05
+   }
+  }
+  A03_expeditionary_staff = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A03
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    supply_consumption_factor = -0.05
+   }
+  }
+  pacific_trade_accord_idea = {
+   picture = story_trade
+   allowed = {
+    OR = {
+     original_tag = A01
+     original_tag = A03
+    }
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+    production_speed_industrial_complex_factor = 0.05
+    stability_factor = 0.05
+   }
+  }
+ }
+ hidden_ideas = {
+  A01_knil_training = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_island_defence = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_jungle_supply = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_colonial_administration = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_naval_staff = {
+   picture = story_admirals
+   allowed = {
+    original_tag = A01
+   }
+   allowed_civil_war = {
+    always = yes
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+ }
+}

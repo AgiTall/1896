@@ -1,0 +1,14 @@
+add_namespace = A01_constitution
+
+country_event = {
+    id = A01_constitution.1
+    title = A01_constitution.t
+    desc = A01_constitution.d
+    picture = GFX_1896_event_council
+    is_triggered_only = yes
+
+    option = {
+        name = A01_constitution.a
+        
+    }
+}

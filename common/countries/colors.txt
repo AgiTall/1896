@@ -1,0 +1,31 @@
+ZZZ = { color = rgb { 65 72 82 } color_ui = rgb { 90 98 110 } }
+A01 = { color = rgb { 155 35 45 } color_ui = rgb { 202 46 59 } }
+A03 = { color = rgb { 255 191 191 } color_ui = rgb { 255 191 191 } }
+A02 = { color = rgb { 38 65 120 } color_ui = rgb { 38 65 120 } }
+A04 = { color = rgb { 174 135 45 } color_ui = rgb { 174 135 45 } }
+A05 = { color = rgb { 47 72 105 } color_ui = rgb { 47 72 105 } }
+A06 = { color = rgb { 110 72 145 } color_ui = rgb { 110 72 145 } }
+A07 = { color = rgb { 40 108 111 } color_ui = rgb { 40 108 111 } }
+A08 = { color = rgb { 93 104 53 } color_ui = rgb { 93 104 53 } }
+A09 = { color = rgb { 179 133 47 } color_ui = rgb { 179 133 47 } }
+A10 = { color = rgb { 54 116 139 } color_ui = rgb { 54 116 139 } }
+PCF = { color = rgb { 147 76 70 } color_ui = rgb { 147 76 70 } }
+PAZ = { color = rgb { 96 125 64 } color_ui = rgb { 96 125 64 } }
+PHR = { color = rgb { 117 67 132 } color_ui = rgb { 117 67 132 } }
+PLS = { color = rgb { 177 160 92 } color_ui = rgb { 177 160 92 } }
+PSL = { color = rgb { 39 122 92 } color_ui = rgb { 39 122 92 } }
+PHW = { color = rgb { 155 64 79 } color_ui = rgb { 155 64 79 } }
+PSY = { color = rgb { 90 145 130 } color_ui = rgb { 90 145 130 } }
+PCB = { color = rgb { 57 145 170 } color_ui = rgb { 57 145 170 } }
+PPN = { color = rgb { 143 115 66 } color_ui = rgb { 143 115 66 } }
+PTG = { color = rgb { 167 51 59 } color_ui = rgb { 167 51 59 } }
+PKR = { color = rgb { 68 113 143 } color_ui = rgb { 68 113 143 } }
+PPM = { color = rgb { 69 133 147 } color_ui = rgb { 69 133 147 } }
+PZN = { color = rgb { 133 119 68 } color_ui = rgb { 133 119 68 } }
+PPE = { color = rgb { 62 68 72 } color_ui = rgb { 62 68 72 } }
+A11 = { color = rgb { 170 49 59 } color_ui = rgb { 170 49 59 } }
+A12 = { color = rgb { 178 57 67 } color_ui = rgb { 178 57 67 } }
+A13 = { color = rgb { 186 65 75 } color_ui = rgb { 186 65 75 } }
+
+
+

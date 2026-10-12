@@ -1,0 +1,3 @@
+A11 = "countries/A11.txt"
+A12 = "countries/A12.txt"
+A13 = "countries/A13.txt"

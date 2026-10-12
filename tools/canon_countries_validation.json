@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "active_countries_added_or_completed": 17,
+  "registered_dormant_countries": 5,
+  "checks": [
+    "Unique states and province membership",
+    "Capital ownership, leaders, portrait paths and RU/EN labels",
+    "All three flag sizes",
+    "Conserved split provinces and population",
+    "Starter armies and existing Japanese deployment ownership",
+    "Diplomatic participants, modifiers and repeat protection",
+    "Japanese and Philippine political geography"
+  ],
+  "errors": [],
+  "engine_test": "Not run; static validation does not establish campaign balance."
+}

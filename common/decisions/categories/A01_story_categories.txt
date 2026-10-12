@@ -1,0 +1,30 @@
+A01_council_relations = {
+ icon = generic_political_actions
+ allowed = {
+  original_tag = A01
+ }
+ visible = {
+  has_country_flag = A01_balance_initialized
+  NOT = {
+   has_country_flag = A01_ludolf_crisis_resolved
+  }
+ }
+}
+A01_postwar_reconstruction = {
+ icon = generic_political_actions
+ allowed = {
+  original_tag = A01
+ }
+ visible = {
+  has_country_flag = A01_borneo_treaty
+ }
+}
+A01_batavian_congress_category = {
+ icon = generic_political_actions
+ allowed = {
+  original_tag = A01
+ }
+ visible = {
+  has_country_flag = A01_batavian_congress_active
+ }
+}

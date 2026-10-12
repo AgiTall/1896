@@ -1,0 +1,50 @@
+A01_war_response_category = {
+	A01_mobilize_colonial_police = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		days_remove = 7
+
+		visible = {
+			has_country_flag = A01_colonial_police_decision_unlocked
+		}
+
+		complete_effect = {
+			set_variable = { A01_security_army_defence = 0.10 }
+			set_variable = { A01_security_factory_output = -0.05 }
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = A01_colonial_security_policy } } }
+				add_dynamic_modifier = { modifier = A01_colonial_security_policy }
+			}
+			force_update_dynamic_modifier = yes
+			clr_country_flag = A01_colonial_police_decision_unlocked
+			set_country_flag = A01_colonial_police_mobilized
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	A01_convene_council_of_sultans = {
+		icon = generic_political_discourse
+		cost = 50
+		days_remove = 7
+
+		visible = {
+			has_country_flag = A01_council_of_sultans_decision_unlocked
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = A01_sultans_council_stability
+				days = 180
+			}
+			clr_country_flag = A01_council_of_sultans_decision_unlocked
+			set_country_flag = A01_council_of_sultans_convened
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

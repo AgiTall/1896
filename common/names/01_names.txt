@@ -1,0 +1,127 @@
+ZAN = { # Replace ZAN with your actual tag for the Zanzibar Sultanate
+	male = {
+		names = {
+			"Ali" "Hassan" "Omar" "Said" "Majid" "Barghash" "Khalid"
+		}
+	}
+	female = {
+		names = {
+			"Amina" "Fatima" "Zahra" "Aysha"
+		}
+	}
+	surnames = {
+		"Al-Busaidi" "bin Said" "bin Sultan" "Swahili"
+	}
+}
+
+PEM = { # Replace PEM with your actual tag for Pemba
+	male = {
+		names = {
+			"Khamis" "Juma" "Bakari"
+		}
+	}
+	female = {
+		names = {
+			"Mariam" "Asha" "Salma"
+		}
+	}
+	surnames = {
+		"Pemba" "Kassim" "Musa"
+	}
+}
+
+OVT = { # Changed from BAT to match your actual tag
+	male = {
+		names = {
+			"Budi" "Agus" "Ahmad"
+		}
+	}
+	female = {
+		names = {
+			"Siti" "Sri" "Dewi"
+		}
+	}
+	surnames = {
+		"Widodo" "Setiawan" "Hidayat"
+	}
+}
+
+KRZ = { # Changed from BAT to match your actual tag
+	male = {
+		names = {
+			"Budi" "Agus" "Ahmad"
+		}
+	}
+	female = {
+		names = {
+			"Siti" "Sri" "Dewi"
+		}
+	}
+	surnames = {
+		"Widodo" "Setiawan" "Hidayat"
+	}
+}
+
+MVT = {
+	male = {
+		names = {
+			"Arif" "Hasan" "Rahman" "Dimas"
+		}
+	}
+	female = {
+		names = {
+			"Ayu" "Sari" "Lestari" "Putri"
+		}
+	}
+	surnames = {
+		"Widodo" "Setiawan" "Hidayat" "Pranata"
+	}
+}
+
+SFT = {
+	male = {
+		names = {
+			"Ahmed" "Hassan" "Mahmoud" "Yusuf"
+		}
+	}
+	female = {
+		names = {
+			"Amina" "Layla" "Nadia" "Salma"
+		}
+	}
+	surnames = {
+		"al-Misri" "Hassan" "Khalil" "Faruq"
+	}
+}
+
+PLV = {
+	male = {
+		names = {
+			"Ramon" "Tomas" "Diego" "Sergio"
+		}
+	}
+	female = {
+		names = {
+			"Maria" "Luz" "Teresa" "Rosa"
+		}
+	}
+	surnames = {
+		"Santos" "Reyes" "Navarro" "Negrov"
+	}
+}
+
+ZZZ = {
+	male = {
+		names = {
+			"Void" "Shade" "Ash" "Umbra"
+		}
+	}
+	female = {
+		names = {
+			"Nyx" "Mist" "Veil" "Shade"
+		}
+	}
+	surnames = {
+		"Black" "Null" "Night" "Abyss"
+	}
+}

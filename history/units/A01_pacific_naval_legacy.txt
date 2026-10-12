@@ -1,0 +1,10 @@
+units = { fleet = { name = "A01 Pacific Fleet" naval_base = 7381 task_force = { name = "A01 Main Squadron" location = 7381
+ship = { name = "A01 Cruiser 1" definition = light_cruiser start_experience_factor = 0.20 equipment = { light_cruiser_1 = { amount = 1 owner = A01  } } }
+ship = { name = "A01 Cruiser 2" definition = light_cruiser start_experience_factor = 0.20 equipment = { light_cruiser_1 = { amount = 1 owner = A01  } } }
+ship = { name = "A01 Escort 1" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A01  } } }
+ship = { name = "A01 Escort 2" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A01  } } }
+ship = { name = "A01 Escort 3" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A01  } } }
+ship = { name = "A01 Escort 4" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A01  } } }
+ship = { name = "A01 Escort 5" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A01  } } }
+ship = { name = "A01 Escort 6" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A01  } } }
+} } }

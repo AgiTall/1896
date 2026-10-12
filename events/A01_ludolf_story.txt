@@ -1,0 +1,109 @@
+add_namespace = ludolf
+country_event = {
+ id = ludolf.1
+ title = ludolf.1.t
+ desc = ludolf.1.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 }
+ option = { name = ludolf.1.a ai_chance = { factor = 100 } add_political_power = 25 set_country_flag = A01_wtc_offer_announced }
+}
+country_event = {
+ id = ludolf.2
+ title = ludolf.2.t
+ desc = ludolf.2.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A04 }
+ option = { name = ludolf.2.a ai_chance = { factor = 100 } add_political_power = 25 set_country_flag = A04_batavia_trade_contacts }
+}
+country_event = {
+ id = ludolf.10
+ title = ludolf.10.t
+ desc = ludolf.10.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 }
+ option = { name = ludolf.10.a ai_chance = { factor = 100 }  }
+}
+country_event = {
+ id = ludolf.20
+ title = ludolf.20.t
+ desc = ludolf.20.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ # Deprecated: old saves may still have this offer queued. Only the shared
+ # expansion deadline now decides the outcome, so do not display it.
+ trigger = { always = no }
+ option = { name = ludolf.20.a ai_chance = { factor = 100 } A01_borneo_treaty_effect = yes }
+ option = { name = ludolf.20.b ai_chance = { factor = 0 } trigger = { has_capitulated = no } add_power_balance_value = { id = A01_ludolf_admirals_balance value = -0.15 }add_to_variable = { A01_admirals_respect = -10 } clamp_variable = { var = A01_admirals_respect min = 0 max = 100 }add_stability = -0.05 set_country_flag = A01_rejected_borneo_peace }
+}
+country_event = {
+ id = ludolf.21
+ title = ludolf.21.t
+ desc = ludolf.21.d
+ picture = GFX_1896_event_treaty
+ is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = ludolf.21.a ai_chance = { factor = 100 } add_war_support = 0.05 add_political_power = 75 }
+}
+country_event = {
+ id = ludolf.30
+ title = ludolf.30.t
+ desc = ludolf.30.d
+ picture = GFX_1896_event_building
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_borneo_treaty }
+ option = { name = ludolf.30.a ai_chance = { factor = 80 } add_to_variable = { A01_admirals_respect = 10 } clamp_variable = { var = A01_admirals_respect min = 0 max = 100 }add_political_power = -50 set_country_flag = A01_reconstruction_started }
+ option = { name = ludolf.30.b ai_chance = { factor = 20 } add_power_balance_value = { id = A01_ludolf_admirals_balance value = 0.1 }add_to_variable = { A01_admirals_respect = -15 } clamp_variable = { var = A01_admirals_respect min = 0 max = 100 }add_stability = -0.05 set_country_flag = A01_reconstruction_started }
+}
+
+country_event = {
+ id = ludolf.31 title = ludolf.31.t desc = ludolf.31.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_borneo_treaty has_country_flag = A01_ludolf_reform_path has_country_flag = A01_sultanates_back_ludolf NOT = { has_country_flag = A01_ludolf_crisis_resolved } }
+ option = { name = ludolf.31.a A01_establish_federal_mandate_effect = yes add_ideas = A01_sultanate_federation }
+}
+
+country_event = {
+ id = ludolf.32
+ title = ludolf.32.t
+ desc = ludolf.32.d
+ picture = GFX_1896_event_recruit
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_borneo_treaty }
+ option = { name = ludolf.32.a ai_chance = { factor = 80 } remove_ideas = A01_revanchism_simmering add_ideas = A01_revanchism_organised add_war_support = 0.05 }
+ option = { name = ludolf.32.b ai_chance = { factor = 20 } add_war_support = 0.15 add_stability = -0.10 add_to_variable = { A01_admirals_respect = -5 } clamp_variable = { var = A01_admirals_respect min = 0 max = 100 } }
+}
+
+country_event = {
+ id = ludolf.33 title = ludolf.33.t desc = ludolf.33.d picture = GFX_1896_event_council is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_dismissal_debate_active NOT = { has_country_flag = A01_ludolf_crisis_resolved } power_balance_value = { id = A01_ludolf_admirals_balance value < -0.1 } }
+ option = { name = ludolf.33.a add_power_balance_value = { id = A01_ludolf_admirals_balance value = -0.05 } add_political_power = 25 }
+ option = { name = ludolf.33.b add_power_balance_value = { id = A01_ludolf_admirals_balance value = 0.05 } add_political_power = -25 }
+}
+
+country_event = {
+ id = ludolf.34 title = ludolf.34.t desc = ludolf.34.d picture = GFX_1896_event_council is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_dismissal_debate_active NOT = { has_country_flag = A01_ludolf_crisis_resolved } }
+ option = { name = ludolf.34.a add_power_balance_value = { id = A01_ludolf_admirals_balance value = -0.05 } add_political_power = 25 }
+ option = { name = ludolf.34.b add_power_balance_value = { id = A01_ludolf_admirals_balance value = 0.05 } add_political_power = -25 }
+}
+
+country_event = {
+ id = ludolf.35
+ title = ludolf.35.t
+ desc = ludolf.35.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_admirals_seized_power }
+ option = { name = ludolf.35.a ai_chance = { factor = 100 }  }
+}
+country_event = {
+ id = ludolf.36
+ title = ludolf.36.t
+ desc = ludolf.36.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_ludolf_survived }
+ option = { name = ludolf.36.a ai_chance = { factor = 100 } add_stability = 0.05 }
+}

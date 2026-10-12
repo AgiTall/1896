@@ -1,0 +1,13 @@
+leader_traits = {
+	A01_ludolfs_civilian_control = {
+		random = no
+		sprite = 13
+
+		research_speed_factor = 0.05
+		stability_factor = 0.10
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

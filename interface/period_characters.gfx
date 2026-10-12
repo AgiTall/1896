@@ -1,0 +1,8 @@
+spriteTypes = {
+spriteType = { name = "GFX_portrait_period_meiji" texturefile = "gfx/leaders/A03/Portrait_meiji.dds" }
+spriteType = { name = "GFX_portrait_period_meiji_small" texturefile = "gfx/interface/ideas/Portrait_meiji_small.dds" }
+spriteType = { name = "GFX_portrait_period_casembroot" texturefile = "gfx/leaders/A01/Portrait_casembroot.dds" }
+spriteType = { name = "GFX_portrait_period_casembroot_small" texturefile = "gfx/interface/ideas/Portrait_casembroot_small.dds" }
+spriteType = { name = "GFX_portrait_period_fabius" texturefile = "gfx/leaders/A01/Portrait_fabius.dds" }
+spriteType = { name = "GFX_portrait_period_fabius_small" texturefile = "gfx/interface/ideas/Portrait_fabius_small.dds" }
+}

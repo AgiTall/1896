@@ -1,0 +1,6 @@
+division_template = { name = "Island Garrison" regiments = { infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 } } }
+units = {
+ division = { name = "A06 1" location = 12674 division_template = "Island Garrison" start_experience_factor = 0.1 start_equipment_factor = 0.7 }
+ division = { name = "A06 2" location = 12674 division_template = "Island Garrison" start_experience_factor = 0.1 start_equipment_factor = 0.7 }
+ division = { name = "A06 3" location = 12674 division_template = "Island Garrison" start_experience_factor = 0.1 start_equipment_factor = 0.7 }
+}

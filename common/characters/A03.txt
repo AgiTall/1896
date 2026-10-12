@@ -1,0 +1,9 @@
+characters = {
+ A03_emperor_meiji = {
+ name = A03_emperor_meiji_name
+ portraits = { civilian = { large = GFX_portrait_period_meiji small = GFX_portrait_period_meiji_small } }
+ country_leader = { ideology = despotism expire = "1912.7.30.1" traits = { A03_imperial_authority } }
+ }
+ A03_naval_commander = { name = A03_naval_commander_name navy_leader = { skill = 3 attack_skill = 3 defense_skill = 3 maneuvering_skill = 3 coordination_skill = 3 traits = { } } }
+ A03_army_commander = { name = A03_army_commander_name corps_commander = { skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 traits = { } } }
+}

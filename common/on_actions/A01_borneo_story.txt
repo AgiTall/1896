@@ -1,0 +1,48 @@
+on_actions = {
+ on_war_relation_added = {
+  effect = {
+   if = {
+    limit = { OR = { AND = { ROOT = { tag = A03 } FROM = { tag = A01 } } AND = { ROOT = { tag = A01 } FROM = { tag = A03 } } } }
+    A01 = { A01_start_expansion_campaign_effect = yes }
+    # Trigger Sabah-war atmosphere events shortly after war declaration
+    A01 = { country_event = { id = sabah_war.1 days = 7 random_days = 7 } }
+    A03 = { country_event = { id = sabah_war.2 days = 10 random_days = 10 } }
+    A03 = { country_event = { id = sabah_war.3 days = 25 random_days = 15 } }
+    # Start the Japanese war-spirit pulse
+    A03 = { country_event = { id = sabah_war.5 days = 30 } }
+   }
+  }
+ }
+ on_capitulation_immediate = {
+  effect = {
+   if = { limit = { ROOT = { tag = A01 has_war_with = A03 NOT = { has_country_flag = A01_expansion_resolved } } FROM = { tag = A03 } } A01 = { A01_borneo_treaty_effect = yes } }
+   if = { limit = { ROOT = { tag = A03 has_war_with = A01 } FROM = { tag = A01 } A01 = { NOT = { has_country_flag = A01_expansion_resolved } } } A01 = { A01_expansion_victory_effect = yes } }
+  }
+ }
+ on_daily = {
+  effect = {
+   # Also initialise a war already running in a save from the previous revision.
+   A01 = {
+    if = { limit = { has_war_with = A03 } A01_start_expansion_campaign_effect = yes }
+    if = { limit = { has_country_flag = A01_expansion_campaign_started NOT = { has_war_with = A03 } NOT = { has_country_flag = A01_expansion_resolved } } set_country_flag = A01_expansion_resolved A01_cleanup_expansion_effect = yes }
+    # Notify A01 when Sabah (1024) falls to Japan
+    if = { limit = { has_war_with = A03 A03 = { has_full_control_of_state = 1024 } NOT = { has_country_flag = A01_sabah_fallen_news } } country_event = { id = sabah_war.4 days = 2 } }
+   }
+   A03 = {
+    # Sulu Sea dominance: A03 holds both Sabah and Brunei
+    if = { limit = { has_war_with = A01 has_full_control_of_state = 1024 has_full_control_of_state = 1023 NOT = { has_country_flag = A03_sulu_sea_dominance } } country_event = { id = sabah_war.6 days = 3 } }
+   }
+  }
+ }
+ on_monthly = {
+  effect = {
+   A01 = {
+    if = {
+     limit = { has_country_flag = A01_dismissal_debate_active NOT = { has_country_flag = A01_ludolf_crisis_resolved } NOT = { has_country_flag = A01_admiral_pressure_cooldown } power_balance_value = { id = A01_ludolf_admirals_balance value < -0.1 } }
+     set_country_flag = { flag = A01_admiral_pressure_cooldown days = 90 }
+     country_event = { id = ludolf.33 days = 1 }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1 @@
+characters = { PAZ_canon_leader = { name = PAZ_canon_leader_name portraits = { civilian = { large = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds" } } country_leader = { ideology = despotism expire = "1965.1.1.1" traits = { } } } }

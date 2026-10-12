@@ -1,0 +1,12 @@
+ideas = { country = {
+ A03_southern_blitz = { picture = borneo_blitz allowed = { original_tag = A03 } removal_cost = -1
+  # 1.19 uses separate per-plan division and simultaneous-plan caps.
+  # Keep capacity as well: the legacy transport branch still uses it.
+  modifier = { shore_bombardment_bonus = 0.50 army_attack_factor = 0.15 naval_damage_factor = 0.15 naval_invasion_prep_speed = 0.75 amphibious_invasion = 0.30 naval_invasion_capacity = 12 naval_invasion_division_cap = 6 naval_invasion_plan_cap = 2 }
+  equipment_bonus = { screen_ship = { naval_range = 1.00 } capital_ship = { naval_range = 1.00 } }
+ }
+ A01_indonesian_refusal = { picture = story_defeat removal_cost = -1 modifier = { recruitable_population_factor = -0.30 army_org_factor = -0.10 stability_factor = -0.05 } }
+ A01_coerced_service = { picture = borneo_coerced_service removal_cost = -1 modifier = { recruitable_population_factor = -0.15 army_org_factor = -0.05 stability_factor = -0.10 war_support_factor = 0.05 } }
+ A01_service_compromise = { picture = borneo_service_compromise removal_cost = -1 modifier = { recruitable_population_factor = -0.10 stability_factor = 0.03 } }
+ A01_indonesian_volunteers = { picture = borneo_volunteers removal_cost = -1 modifier = { recruitable_population_factor = -0.05 stability_factor = 0.05 } }
+} }

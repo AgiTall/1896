@@ -1,0 +1,35 @@
+A01_ludolf_canonical_plan = {
+ name = "Ludolf and the Borneo Convention"
+ desc = "Civilian rule, defeat in the Borneo war, reconstruction and autonomous sultanates."
+ allowed = { original_tag = A01 }
+ enable = { is_historical_focus_on = yes }
+ abort = { has_country_flag = A01_admirals_seized_power }
+ ai_national_focuses = {
+  A01_constitution A01_lone_wolf_path
+  A01_strengthen_ludolfs_power A01_last_chance_to_negotiate A01_dutch_literacy A01_knil_reform
+  A01_island_garrisons A01_marine_brigades A01_jungle_supply
+  A01_build_bornean_fortifications A01_state_loan A01_own_fortifications
+  A01_improve_bornean_fortifications
+  A01_rural_labour_duty
+  A01_factory_resettlement A01_java_development A01_sumatran_railways
+  A01_batavia_docks A01_rubber_processing A01_technical_college A01_production_standardisation A01_java_steam_power A01_wtc_oil_and_rubber_offer A01_pacific_settlement
+  A01_ludolf_survives A01_reconstruction_commission A01_wtc_recovery_agreement A01_wtc_settlement
+  A01_demobilise_colonial_army A01_joint_officer_schools A01_civilian_defence_ministry A01_federal_defence_command
+  A01_autonomous_sultanates A01_island_representation A01_equal_citizenship A01_abolish_admirals_council
+  A01_federal_constitution A01_elected_civil_service A01_democratic_federation
+  A01_electoral_commission A01_legalise_federal_parties A01_first_federal_election
+  A01_liberal_victory A01_conservative_victory A01_peoples_party_victory A01_recovery_investment A01_review_borneo_convention
+ }
+}
+A03_southern_canonical_plan = {
+ name = "Japan Southern Strategy"
+ desc = "The naval cabinet pursues the Borneo resource settlement."
+ allowed = { original_tag = A03 }
+ enable = { always = yes }
+ ai_national_focuses = {
+  A03_imperial_council A03_naval_government A03_southern_strategy
+  A03_resource_commission A03_naval_programme A03_kure_yards
+  A03_southern_bases A03_southern_campaign
+  A03_osaka_industry A03_kansai_railways A03_hiroshima_arsenal
+ }
+}

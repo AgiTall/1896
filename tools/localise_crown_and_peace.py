@@ -1,0 +1,46 @@
+from pathlib import Path
+R=Path(__file__).resolve().parents[1]
+labels={
+'A01_crown.1.t':('Последний ультиматум Большого совета','The Grand Council’s Last Ultimatum'),
+'A01_crown.1.d':('За закрытыми дверями адмиралы и островные вельможи требуют права блокировать указы и назначать министров. Гвардия ждёт приказа Королевы. От сегодняшнего решения зависит, станет ли монархия договором с Советом или властью нового двора.','Behind closed doors, admirals and island dignitaries demand a veto over decrees and ministerial appointments. The Guard awaits the Queen’s command. Will the monarchy rest on an agreement or the authority of a new court?'),
+'A01_crown.1.a':('Признать право Совета на назначения','Recognise the Council’s appointments'),
+'A01_crown.1.b':('Заключить соглашение о разделении власти','Negotiate a division of powers'),
+'A01_crown.1.c':('Гвардия напомнит им, кому они присягали','The Guard will remind them of their oath'),
+'A01_crown.2.t':('Петиции Большого совета','Petitions of the Grand Council'),
+'A01_crown.2.d':('Совет задерживает новые назначения и требует уступок по бюджету. Двор предлагает обойти его прямым обращением к населению. Пока основной закон не принят, спор о власти будет возвращаться.','The Council delays appointments and demands budget concessions. The court proposes a direct appeal to the public. Until the fundamental law is settled, the struggle will continue.'),
+'A01_crown.2.a':('Дать Совету место за столом','Give the Council a seat at the table'),
+'A01_crown.2.b':('Обратиться к подданным напрямую','Appeal directly to our subjects'),
+'A01_crown.3.t':('Заговор в коридорах дворца','A Plot in the Palace Corridors'),
+'A01_crown.3.d':('Влияние двора стало почти безграничным. Несколько членов Совета тайно обсуждают отстранение королевских министров. Можно отступить ради соглашения или поручить гвардии арестовать заговорщиков, заплатив за это политическим кризисом.','Court influence is nearly absolute. Several councillors secretly discuss removing the royal ministers. The Queen can retreat toward a settlement or order the Guard to arrest the plotters at the cost of a political crisis.'),
+'A01_crown.3.a':('Вернуть Совету часть полномочий','Restore some Council powers'),
+'A01_crown.3.b':('Арестовать заговорщиков','Arrest the conspirators'),
+'A01_crown_struggle_desc':('Уравновесьте двор и Совет для Конституции (−40%…+40%) либо добейтесь 60% влияния Королевы для полной власти. Сильный Совет блокирует управление; чрезмерная власть двора грозит заговором.','Balance court and Council for a Constitution (−40%…+40%), or reach 60% royal influence for full authority. A strong Council obstructs government; excessive court power risks a plot.'),
+'A01_crown_audiences_desc':('Публичные аудиенции: +15 пунктов влияния Королевы, +2% стабильности. Повтор через 60 дней.','Public audiences: +15 royal influence, +2% stability. Repeat after 60 days.'),
+'A01_council_concessions_desc':('Согласование бюджета: −15 пунктов влияния Королевы. Часть политических расходов вернётся.','Budget negotiations: −15 royal influence. Part of the political cost is refunded.'),
+'A01_guard_oaths_desc':('Присяга гвардии: +20 пунктов влияния Королевы и 10 опыта армии, но −2% стабильности.','Guard oaths: +20 royal influence and 10 army experience, but −2% stability.'),
+'A01_crown_compromise_desc':('Комиссия сдвинет баланс на 20 пунктов к центру и даст +3% стабильности.','The commission moves the balance 20 points toward the centre and grants +3% stability.'),
+'A10_japanese_settlement':('Мир с Японией','Peace with Japan'),
+'A10_offer_archipelago_peace':('Предложить мир: свободный архипелаг','Offer Peace: A Free Archipelago'),
+'A10_offer_archipelago_peace_desc':('Япония вытеснена с архипелага. Предложить признание освобождения её владений, включая Манилу, Батаан, северный Лусон и Палаван. Контроль наших участников Конфедерации учитывается. Япония может отказать.','Japan has been expelled from the archipelago. Request recognition of the liberation of its possessions, including Manila, Bataan, northern Luzon and Palawan. Confederate subjects’ control counts. Japan can refuse.'),
+'A10_offer_manila_peace':('Предложить мир: Манильский компромисс','Offer Peace: The Manila Compromise'),
+'A10_offer_manila_peace_desc':('Мы удерживаем Манилу, а северный Лусон и Батаан остаются под японским контролем. Предложить мир с передачей Манилы; северный Лусон, Батаан и остальные японские владения останутся Японии.','We hold Manila while northern Luzon and Bataan remain under Japanese control. Request Manila in a peace settlement; northern Luzon, Bataan and Japan’s other possessions remain Japanese.'),
+'A10_settlement.1.t':('Филиппинское мирное предложение','The Philippine Peace Offer'),
+'A10_settlement.1.d':('Наши гарнизоны вытеснены с Филиппинского архипелага. Правительство островов предлагает прекратить войну и признать передачу освобождённых японских владений тем, кто их удерживает. Это предложение касается только филиппинского фронта.','Our garrisons have been expelled from the Philippine archipelago. The island government offers peace in exchange for recognition of liberated Japanese possessions. The offer concerns the Philippine front.'),
+'A10_settlement.2.t':('Предложение Манильского компромисса','The Manila Compromise Offer'),
+'A10_settlement.2.d':('Филиппинцы удерживают Манилу и предлагают мир в обмен на признание её освобождения. Северный Лусон, Батаан и прочие владения останутся за Японией.','The Filipinos hold Manila and offer peace in exchange for recognition of its liberation. Northern Luzon, Bataan and our other possessions would remain Japanese.'),
+'A10_settlement.accept':('Принять условия','Accept the terms'),
+'A10_settlement.reject':('Продолжить войну','Continue the war'),
+'A10_settlement.3.t':('Архипелаг свободен','The Archipelago Is Free'),
+'A10_settlement.3.d':('Япония признала освобождение своих филиппинских владений. Мир подписан, а участники Конфедерации сохраняют освобождённые ими области.','Japan has recognised the liberation of its Philippine possessions. Peace is signed, and confederate members retain the states they liberated.'),
+'A10_settlement.3.a':('Острова отстояли свободу','The islands have secured their freedom'),
+'A10_settlement.4.t':('Манильский компромисс','The Manila Compromise'),
+'A10_settlement.4.d':('Манила признана свободной, и война окончена. Северный Лусон и Батаан остаются за Японией — тяжёлая цена за сегодняшний мир.','Manila is recognised as free, and the war has ended. Northern Luzon and Bataan remain Japanese: a bitter price for peace.'),
+'A10_settlement.4.a':('Сохранить достигнутое','Preserve what we have gained'),
+'A10_settlement.5.t':('Япония отклонила условия','Japan Rejects the Terms'),
+'A10_settlement.5.d':('Токио отказалось подписать договор. Война продолжается. Новое предложение можно направить после окончания дипломатической паузы.','Tokyo has refused to sign. The war continues. Another offer can be sent after the diplomatic cooldown.'),
+'A10_settlement.5.a':('Продолжить борьбу','Continue the struggle'),
+}
+for lang,index in [('russian',0),('english',1)]:
+ p=R/f'localisation/{lang}/zzzzzzzzz_crown_peace_events_l_{lang}.yml'
+ p.write_text(f'l_{lang}:\n'+''.join(f' {k}:0 "{v[index]}"\n' for k,v in labels.items()),encoding='utf-8-sig')
+print('Wrote Russian and English crown and peace event localisation.')

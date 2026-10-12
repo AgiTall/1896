@@ -1,0 +1,22 @@
+spriteTypes = {
+spriteType = { name = "GFX_goal_pacific_batavia" texturefile = "gfx/interface/goals/focus_pacific_batavia.dds" }
+spriteType = { name = "GFX_goal_pacific_batavia_shine" texturefile = "gfx/interface/goals/focus_pacific_batavia.dds" effectFile = "gfx/FX/buttonstate.lua"
+ animation = { animationmaskfile = "gfx/interface/goals/focus_pacific_batavia.dds" animationtexturefile = "gfx/interface/goals/shine_overlay.dds" animationrotation = -90 animationlooping = no animationtime = 0.75 animationdelay = 0 animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0 y = 0 } animationtexturescale = { x = 1 y = 1 } }
+ legacy_lazy_load = no }
+spriteType = { name = "GFX_idea_pacific_batavia" texturefile = "gfx/interface/ideas/idea_pacific_batavia.dds" }
+spriteType = { name = "GFX_goal_pacific_japan" texturefile = "gfx/interface/goals/focus_pacific_japan.dds" }
+spriteType = { name = "GFX_goal_pacific_japan_shine" texturefile = "gfx/interface/goals/focus_pacific_japan.dds" effectFile = "gfx/FX/buttonstate.lua"
+ animation = { animationmaskfile = "gfx/interface/goals/focus_pacific_japan.dds" animationtexturefile = "gfx/interface/goals/shine_overlay.dds" animationrotation = -90 animationlooping = no animationtime = 0.75 animationdelay = 0 animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0 y = 0 } animationtexturescale = { x = 1 y = 1 } }
+ legacy_lazy_load = no }
+spriteType = { name = "GFX_idea_pacific_japan" texturefile = "gfx/interface/ideas/idea_pacific_japan.dds" }
+spriteType = { name = "GFX_goal_pacific_industry" texturefile = "gfx/interface/goals/focus_pacific_industry.dds" }
+spriteType = { name = "GFX_goal_pacific_industry_shine" texturefile = "gfx/interface/goals/focus_pacific_industry.dds" effectFile = "gfx/FX/buttonstate.lua"
+ animation = { animationmaskfile = "gfx/interface/goals/focus_pacific_industry.dds" animationtexturefile = "gfx/interface/goals/shine_overlay.dds" animationrotation = -90 animationlooping = no animationtime = 0.75 animationdelay = 0 animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0 y = 0 } animationtexturescale = { x = 1 y = 1 } }
+ legacy_lazy_load = no }
+spriteType = { name = "GFX_idea_pacific_industry" texturefile = "gfx/interface/ideas/idea_pacific_industry.dds" }
+spriteType = { name = "GFX_goal_pacific_army" texturefile = "gfx/interface/goals/focus_pacific_army.dds" }
+spriteType = { name = "GFX_goal_pacific_army_shine" texturefile = "gfx/interface/goals/focus_pacific_army.dds" effectFile = "gfx/FX/buttonstate.lua"
+ animation = { animationmaskfile = "gfx/interface/goals/focus_pacific_army.dds" animationtexturefile = "gfx/interface/goals/shine_overlay.dds" animationrotation = -90 animationlooping = no animationtime = 0.75 animationdelay = 0 animationblendmode = "add" animationtype = "scrolling" animationrotationoffset = { x = 0 y = 0 } animationtexturescale = { x = 1 y = 1 } }
+ legacy_lazy_load = no }
+spriteType = { name = "GFX_idea_pacific_army" texturefile = "gfx/interface/ideas/idea_pacific_army.dds" }
+}

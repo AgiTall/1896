@@ -1,0 +1,1 @@
+on_actions = { on_startup = { effect = { PZ_initialize_canon_relations_effect = yes } } }

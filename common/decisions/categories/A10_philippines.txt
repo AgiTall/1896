@@ -1,0 +1,1 @@
+A10_integration = { icon = generic_political_discourse allowed = { tag = A10 } visible = { has_country_flag = A10_federal_path } }

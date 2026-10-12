@@ -1,0 +1,88 @@
+A10_ensure_confederation_faction = {
+ if = { limit = { NOT = { is_in_faction = yes } }
+  create_faction_from_template = A10_confederation_template
+ }
+}
+A10_release_PVI = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 624 controls_state = 624 NOT = { country_exists = PVI } }
+  PVI = { transfer_state = 624 }
+  set_autonomy = { target = PVI autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PVI }
+ }
+}
+A10_release_PSM = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 625 controls_state = 625 NOT = { country_exists = PSM } }
+  PSM = { transfer_state = 625 }
+  set_autonomy = { target = PSM autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PSM }
+ }
+}
+A10_release_PMD = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 627 controls_state = 627 NOT = { country_exists = PMD } }
+  PMD = { transfer_state = 627 }
+  set_autonomy = { target = PMD autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PMD }
+ }
+}
+A10_release_PNM = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 1026 controls_state = 1026 NOT = { country_exists = PNM } }
+  PNM = { transfer_state = 1026 }
+  set_autonomy = { target = PNM autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PNM }
+ }
+}
+A10_release_PCB = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 628 controls_state = 628 NOT = { country_exists = PCB } }
+  PCB = { transfer_state = 628 }
+  set_autonomy = { target = PCB autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PCB }
+ }
+}
+A10_release_PPN = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 1085 controls_state = 1085 NOT = { country_exists = PPN } }
+  PPN = { transfer_state = 1085 }
+  set_autonomy = { target = PPN autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PPN }
+ }
+}
+A10_release_PNL = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 623 controls_state = 623 NOT = { country_exists = PNL } }
+  PNL = { transfer_state = 623 }
+  set_autonomy = { target = PNL autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PNL }
+ }
+}
+A10_release_PML = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 327 controls_state = 327 NOT = { country_exists = PML } }
+  PML = { transfer_state = 327 }
+  set_autonomy = { target = PML autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PML }
+ }
+}
+A10_release_PBT = {
+ A10_ensure_confederation_faction = yes
+ if = { limit = { owns_state = 1027 controls_state = 1027 NOT = { country_exists = PBT } }
+  PBT = { transfer_state = 1027 }
+  set_autonomy = { target = PBT autonomy_state = A10_confederate_member freedom_level = 0.5 }
+  if = { limit = { is_faction_leader = yes } add_to_faction = PBT }
+ }
+}
+A10_federal_progress = {
+ 624 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 625 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 627 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 1026 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 628 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 1085 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 623 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 327 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+ 1027 = { if = { limit = { is_owned_by = A10 is_controlled_by = A10 NOT = { is_core_of = A10 } } add_compliance = 10 add_resistance = -10 } }
+}

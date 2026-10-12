@@ -1,0 +1,333 @@
+A01_royal_institutions = {
+ A01_audit_naval_contracts = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 30
+  visible = {
+   has_country_flag = A01_royal_inquiry_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  available = {
+   has_country_flag = A01_royal_inquiry_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  complete_effect = {
+   add_to_variable = {
+    A01_admiralty_evidence = 1
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+ }
+ A01_secure_witnesses = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 30
+  visible = {
+   has_country_flag = A01_royal_inquiry_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  available = {
+   has_country_flag = A01_royal_inquiry_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  complete_effect = {
+   add_to_variable = {
+    A01_fleet_loyalty = 1
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+ }
+ A01_pay_the_captains = {
+  icon = generic_navy
+  cost = 65
+  days_re_enable = 60
+  visible = {
+   has_country_flag = A01_royal_inquiry_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  available = {
+   has_country_flag = A01_royal_inquiry_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  complete_effect = {
+   add_to_variable = {
+    A01_fleet_loyalty = 2
+   }
+   navy_experience = 5
+  }
+  ai_will_do = {
+   factor = 2
+  }
+ }
+ A01_meet_princely_envoys = {
+  icon = generic_political_discourse
+  cost = 30
+  days_re_enable = 45
+  visible = {
+   has_completed_focus = A01_sultans_at_the_palace
+   NOT = {
+    has_country_flag = A01_island_settlement
+   }
+  }
+  available = {
+   has_completed_focus = A01_sultans_at_the_palace
+   NOT = {
+    has_country_flag = A01_island_settlement
+   }
+  }
+  complete_effect = {
+   add_to_variable = {
+    A01_sultan_confidence = 1
+   }
+   add_stability = 0.01
+  }
+  ai_will_do = {
+   factor = 2
+  }
+ }
+ A01_admiralty_deadline = {
+  icon = generic_political_discourse
+  is_good = no
+  days_mission_timeout = 180
+  activation = {
+   has_country_flag = A01_admiralty_battle_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  visible = {
+   has_country_flag = A01_admiralty_battle_open
+   NOT = {
+    has_country_flag = A01_admiralty_defeated
+   }
+  }
+  cancel_trigger = {
+   has_country_flag = A01_admiralty_defeated
+  }
+  timeout_effect = {
+   country_event = {
+    id = A01_royal_story.15
+    days = 1
+   }
+  }
+ }
+ A01_open_seas_convention = {
+  icon = generic_political_discourse
+  cost = 75
+  fire_only_once = yes
+  visible = {
+   has_completed_focus = A01_open_seas_kingdom
+  }
+  available = {
+   has_completed_focus = A01_open_seas_kingdom
+  }
+  complete_effect = {
+   capital_scope = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+     type = industrial_complex
+     level = 1
+     instant_build = yes
+    }
+   }
+   every_subject_country = {
+    limit = {
+     OR = {
+      tag = A11
+      tag = A12
+      tag = A13
+      tag = A14
+     }
+    }
+    add_stability = 0.03
+    add_political_power = 25
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+ }
+ A01_exile_volunteer_register = {
+  icon = generic_political_discourse
+  cost = 60
+  fire_only_once = yes
+  visible = {
+   has_completed_focus = A01_homeland_in_exile
+  }
+  available = {
+   has_completed_focus = A01_homeland_in_exile
+  }
+  complete_effect = {
+   add_manpower = 6000
+   army_experience = 20
+  }
+  ai_will_do = {
+   factor = 1
+  }
+ }
+ A01_archipelago_naval_exercises = {
+  icon = generic_political_discourse
+  cost = 50
+  fire_only_once = yes
+  visible = {
+   has_completed_focus = A01_archipelago_great_power
+  }
+  available = {
+   has_completed_focus = A01_archipelago_great_power
+  }
+  complete_effect = {
+   navy_experience = 20
+   every_subject_country = {
+    limit = {
+     OR = {
+      tag = A11
+      tag = A12
+      tag = A13
+      tag = A14
+     }
+    }
+    navy_experience = 10
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+ }
+ A01_review_charter_courts = {
+  icon = generic_political_discourse
+  cost = 45
+  fire_only_once = yes
+  visible = {
+   has_country_flag = A01_island_settlement
+  }
+  available = {
+   has_country_flag = A01_island_settlement
+  }
+  complete_effect = {
+   add_stability = 0.02
+   every_subject_country = {
+    limit = {
+     OR = {
+      tag = A11
+      tag = A12
+      tag = A13
+      tag = A14
+     }
+    }
+    add_stability = 0.03
+   }
+  }
+  ai_will_do = {
+   factor = 1
+  }
+ }
+}
+A01_royal_ballot = {
+ A01_campaign_constitutional = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 30
+  visible = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  available = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  complete_effect = {
+   add_to_variable = {
+    A01_vote_constitutional = 2
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+ }
+ A01_campaign_order = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 30
+  visible = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  available = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  complete_effect = {
+   add_to_variable = {
+    A01_vote_order = 2
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+ }
+ A01_campaign_indonesian = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 30
+  visible = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  available = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  complete_effect = {
+   add_to_variable = {
+    A01_vote_indonesian = 2
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+ }
+ A01_royal_election_campaign = {
+  icon = generic_political_discourse
+  is_good = yes
+  days_mission_timeout = 90
+  visible = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  activation = {
+   has_country_flag = A01_royal_campaign_active
+  }
+  timeout_effect = {
+   A01_finish_royal_election = yes
+  }
+ }
+ A01_royal_election_term = {
+  icon = generic_political_discourse
+  is_good = yes
+  days_mission_timeout = 720
+  visible = {
+   has_country_flag = A01_prime_minister_elected
+   NOT = {
+    has_country_flag = A01_royal_campaign_active
+   }
+  }
+  activation = {
+   has_country_flag = A01_prime_minister_elected
+   NOT = {
+    has_country_flag = A01_royal_campaign_active
+   }
+  }
+  timeout_effect = {
+   A01_start_royal_election = yes
+  }
+ }
+}

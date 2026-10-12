@@ -1,0 +1,171 @@
+A01_begin_expansion_preparations_effect = {
+ if = {
+  limit = {
+   country_exists = A03
+   NOT = {
+    has_country_flag = A01_island_defence_started
+   }
+   NOT = {
+    has_country_flag = A01_expansion_resolved
+   }
+   NOT = {
+    has_war_with = A03
+   }
+   NOT = {
+    has_country_flag = pacific_trade_accord
+   }
+  }
+  set_country_flag = A01_island_defence_started
+  set_country_flag = A01_refused_japanese_ultimatum
+  country_event = { id = A01_future.1 days = 1 }
+  country_event = { id = A01_japan.2 days = 14 random_days = 16 }
+  activate_mission = A01_japanese_invasion_countdown
+  A03 = {
+   A03_prepare_southern_war_effect = yes
+   activate_mission = A03_japanese_invasion_countdown
+  }
+ }
+}
+A01_delay_expansion_180_effect = {
+ add_days_mission_timeout = {
+  mission = A01_japanese_invasion_countdown
+  days = 180
+ }
+ A03 = {
+  add_days_mission_timeout = {
+   mission = A03_japanese_invasion_countdown
+   days = 180
+  }
+ }
+}
+A01_start_expansion_campaign_effect = {
+ if = {
+  limit = {
+   has_war_with = A03
+   NOT = {
+    has_country_flag = A01_expansion_campaign_started
+   }
+   NOT = {
+    has_country_flag = A01_expansion_resolved
+   }
+   NOT = {
+    has_country_flag = A01_borneo_treaty
+   }
+  }
+  set_country_flag = A01_island_defence_started
+  set_country_flag = A01_expansion_campaign_started
+  set_country_flag = A01_borneo_war_started
+  set_country_flag = A01_japanese_invasion_begun
+  remove_mission = A01_japanese_invasion_countdown
+  A03 = {
+   remove_mission = A03_japanese_invasion_countdown
+  }
+  activate_mission = A01_japanese_expansion
+  A03 = {
+   activate_mission = A03_japanese_expansion
+  }
+ }
+}
+A01_cleanup_expansion_effect = {
+ remove_mission = A01_japanese_invasion_countdown
+ remove_mission = A01_japanese_expansion
+ remove_ideas = A01_war_production
+ A01_disband_war_militia_effect = yes
+ A03 = {
+  remove_mission = A03_japanese_invasion_countdown
+  remove_mission = A03_japanese_expansion
+  remove_ideas = A03_southern_blitz
+ }
+ remove_ideas = A01_borneo_self_build
+ remove_ideas = A01_borneo_british_defence
+ remove_ideas = A01_borneo_australian_defence
+ remove_ideas = A01_borneo_local_defence
+ if = {
+  limit = {
+   has_country_flag = A01_borneo_self_contract
+  }
+  add_ideas = A01_borneo_debt_service
+ }
+}
+A01_resolve_expansion_effect = {
+ if = {
+  limit = {
+   has_country_flag = A01_expansion_campaign_started
+   NOT = {
+    has_country_flag = A01_expansion_resolved
+   }
+   has_war_with = A03
+  }
+  if = {
+   limit = {
+    A03 = {
+     A03_controls_borneo_province = yes
+    }
+   }
+   A01_borneo_treaty_effect = yes
+   country_event = {
+    id = expansion.3
+    hours = 1
+   }
+  }
+  else = {
+   A01_expansion_victory_effect = yes
+  }
+ }
+}
+A01_expansion_victory_effect = {
+ if = {
+  limit = {
+   NOT = {
+    has_country_flag = A01_expansion_resolved
+   }
+  }
+  set_country_flag = A01_expansion_resolved
+  set_country_flag = A01_defended_sabah
+  A03 = {
+   set_country_flag = A03_borneo_defeat
+   white_peace = {
+    tag = A01
+   }
+   add_stability = -0.05
+   add_war_support = -0.10
+   diplomatic_relation = {
+    country = A01
+    relation = non_aggression_pact
+   }
+   country_event = {
+    id = expansion.2
+    hours = 1
+   }
+  }
+  A01_cleanup_expansion_effect = yes
+  A01_initialize_balance_effect = yes
+  add_power_balance_value = {
+   id = A01_ludolf_admirals_balance
+   value = 0.20
+  }
+  add_to_variable = {
+   A01_admirals_respect = 15
+  }
+  clamp_variable = {
+   var = A01_admirals_respect
+   min = 0
+   max = 100
+  }
+  add_stability = 0.05
+  add_war_support = 0.05
+  add_political_power = 75
+  country_event = {
+   id = expansion.1
+   hours = 1
+  }
+ }
+}
+A01_cancel_preparations_for_agreement_effect = {
+ A01 = {
+  remove_mission = A01_japanese_invasion_countdown
+ }
+ A03 = {
+  remove_mission = A03_japanese_invasion_countdown
+ }
+}

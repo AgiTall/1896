@@ -1,0 +1,4 @@
+ideas = { country = {
+ A01_wtc_credit = { picture = generic_industry allowed = { original_tag = A01 } modifier = { production_speed_industrial_complex_factor = 0.10 consumer_goods_factor = -0.03 } }
+ A01_wtc_concessions = { picture = generic_industry allowed = { original_tag = A01 } modifier = { consumer_goods_factor = 0.05 political_power_gain = -0.15 } }
+} }

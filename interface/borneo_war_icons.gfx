@@ -1,0 +1,6 @@
+spriteTypes = {
+spriteType = { name = "GFX_idea_borneo_blitz" texturefile = "gfx/interface/ideas/idea_borneo_blitz.dds" legacy_lazy_load = no }
+spriteType = { name = "GFX_idea_borneo_coerced_service" texturefile = "gfx/interface/ideas/idea_borneo_coerced_service.dds" legacy_lazy_load = no }
+spriteType = { name = "GFX_idea_borneo_service_compromise" texturefile = "gfx/interface/ideas/idea_borneo_service_compromise.dds" legacy_lazy_load = no }
+spriteType = { name = "GFX_idea_borneo_volunteers" texturefile = "gfx/interface/ideas/idea_borneo_volunteers.dds" legacy_lazy_load = no }
+}

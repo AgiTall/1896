@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "reinforcement_ships": 20,
+  "heavy_ships": 4,
+  "militia_divisions": 12,
+  "blitz_days": 180,
+  "decision_reductions": [
+    15,
+    15,
+    15
+  ],
+  "campaign_focus_reduction": 15,
+  "localisation_keys_per_language": 63,
+  "checks": [
+    "Balanced scripts and event references",
+    "One guarded war preparation path and real mission reductions",
+    "DLC and legacy fleets",
+    "Twelve locked militia divisions and peace cleanup",
+    "Vanilla Japanese RGB in both colour definitions",
+    "Russian and English chain texts",
+    "Borneo AI area, target ports and province membership",
+    "Palau staging buffer and southern strike-force home areas",
+    "Current invasion cap modifiers present in installed game documentation"
+  ],
+  "campaign_combat_test": "Not simulated; AI planning must be assessed during a running campaign."
+}

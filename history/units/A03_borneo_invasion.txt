@@ -1,0 +1,99 @@
+division_template = {
+	name = "Nankai Tokubetsu Rikusentai"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	priority = 2
+}
+
+units = {
+	division = {
+		name = "1. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "2. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "3. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.30
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "4. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.30
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "5. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.30
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "6. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.30
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "7. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "8. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.00
+	}
+
+	division = {
+		name = "9. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.90
+	}
+
+	division = {
+		name = "10. Nankai Rikusentai"
+		location = 4357
+		division_template = "Nankai Tokubetsu Rikusentai"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.90
+	}
+}

@@ -1,0 +1,5 @@
+A03_southern_preparations = {
+ icon = generic_naval
+ allowed = { original_tag = A03 }
+ visible = { country_exists = A01 A01 = { has_country_flag = A01_island_defence_started NOT = { has_country_flag = A01_expansion_resolved } } NOT = { has_country_flag = pacific_trade_accord } }
+}

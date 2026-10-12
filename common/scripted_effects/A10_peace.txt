@@ -1,0 +1,34 @@
+A10_conclude_archipelago_peace = {
+ 327 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_327 } } }
+ 623 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_623 } } }
+ 624 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_624 } } }
+ 625 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_625 } } }
+ 626 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_626 } } }
+ 627 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_627 } } }
+ 628 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_628 } } }
+ 1025 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_1025 } } }
+ 1026 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_1026 } } }
+ 1027 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_1027 } } }
+ 1084 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_1084 } } }
+ 1085 = { if = { limit = { is_owned_by = A03 OR = { is_controlled_by = A10 controller = { is_subject_of = A10 } } } set_state_flag = A10_peace_transfer controller = { save_event_target_as = A10_recipient_1085 } } }
+ A10 = { white_peace = { tag = A03 } every_subject_country = { if = { limit = { has_war_with = A03 } white_peace = { tag = A03 } } } }
+ 327 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_327 = { transfer_state = 327 } clr_state_flag = A10_peace_transfer } }
+ 623 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_623 = { transfer_state = 623 } clr_state_flag = A10_peace_transfer } }
+ 624 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_624 = { transfer_state = 624 } clr_state_flag = A10_peace_transfer } }
+ 625 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_625 = { transfer_state = 625 } clr_state_flag = A10_peace_transfer } }
+ 626 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_626 = { transfer_state = 626 } clr_state_flag = A10_peace_transfer } }
+ 627 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_627 = { transfer_state = 627 } clr_state_flag = A10_peace_transfer } }
+ 628 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_628 = { transfer_state = 628 } clr_state_flag = A10_peace_transfer } }
+ 1025 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_1025 = { transfer_state = 1025 } clr_state_flag = A10_peace_transfer } }
+ 1026 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_1026 = { transfer_state = 1026 } clr_state_flag = A10_peace_transfer } }
+ 1027 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_1027 = { transfer_state = 1027 } clr_state_flag = A10_peace_transfer } }
+ 1084 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_1084 = { transfer_state = 1084 } clr_state_flag = A10_peace_transfer } }
+ 1085 = { if = { limit = { has_state_flag = A10_peace_transfer } event_target:A10_recipient_1085 = { transfer_state = 1085 } clr_state_flag = A10_peace_transfer } }
+ A10 = { clr_country_flag = A10_peace_offer_pending set_country_flag = A10_archipelago_peace_signed add_stability = 0.10 country_event = { id = A10_settlement.3 days = 1 } }
+}
+A10_conclude_manila_peace = {
+ 327 = { controller = { save_event_target_as = A10_manila_recipient } }
+ A10 = { white_peace = { tag = A03 } every_subject_country = { if = { limit = { has_war_with = A03 } white_peace = { tag = A03 } } } }
+ event_target:A10_manila_recipient = { transfer_state = 327 }
+ A10 = { clr_country_flag = A10_peace_offer_pending set_country_flag = A10_manila_peace_signed add_stability = 0.05 country_event = { id = A10_settlement.4 days = 1 } }
+}

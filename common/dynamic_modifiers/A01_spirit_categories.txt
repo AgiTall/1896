@@ -1,0 +1,47 @@
+A01_defeat_legacy = { enable = { always = yes } icon = GFX_idea_story_defeat
+ consumer_goods_expected_value = A01_defeat_legacy_consumer_goods_expected_value
+ industrial_capacity_factory = A01_defeat_legacy_industrial_capacity_factory
+ political_power_gain = A01_defeat_legacy_political_power_gain
+ production_speed_buildings_factor = A01_defeat_legacy_production_speed_buildings_factor
+ production_speed_dockyard_factor = A01_defeat_legacy_production_speed_dockyard_factor
+ stability_factor = A01_defeat_legacy_stability_factor
+ war_support_factor = A01_defeat_legacy_war_support_factor
+}
+A01_army_development = { enable = { always = yes } icon = GFX_idea_pacific_army
+ army_defence_factor = A01_army_development_army_defence_factor
+ army_org_factor = A01_army_development_army_org_factor
+ navy_org_factor = A01_army_development_navy_org_factor
+ production_speed_dockyard_factor = A01_army_development_production_speed_dockyard_factor
+ supply_consumption_factor = A01_army_development_supply_consumption_factor
+ training_time_army_factor = A01_army_development_training_time_army_factor
+}
+A01_civic_development = { enable = { always = yes } icon = GFX_idea_pacific_industry
+ army_advisor_cost_factor = A01_civic_development_army_advisor_cost_factor
+ navy_org_factor = A01_civic_development_navy_org_factor
+ political_power_factor = A01_civic_development_political_power_factor
+ political_power_gain = A01_civic_development_political_power_gain
+ production_speed_buildings_factor = A01_civic_development_production_speed_buildings_factor
+ recruitable_population_factor = A01_civic_development_recruitable_population_factor
+ stability_factor = A01_civic_development_stability_factor
+}
+A01_crown_order = { enable = { always = yes } icon = GFX_idea_royal_parliament
+ army_attack_factor = A01_crown_order_army_attack_factor
+ army_defence_factor = A01_crown_order_army_defence_factor
+ army_org_factor = A01_crown_order_army_org_factor
+ consumer_goods_expected_value = A01_crown_order_consumer_goods_expected_value
+ industrial_capacity_factory = A01_crown_order_industrial_capacity_factory
+ mobilization_speed = A01_crown_order_mobilization_speed
+ navy_org_factor = A01_crown_order_navy_org_factor
+ political_power_factor = A01_crown_order_political_power_factor
+ political_power_gain = A01_crown_order_political_power_gain
+ production_factory_max_efficiency_factor = A01_crown_order_production_factory_max_efficiency_factor
+ production_speed_buildings_factor = A01_crown_order_production_speed_buildings_factor
+ production_speed_dockyard_factor = A01_crown_order_production_speed_dockyard_factor
+ recruitable_population_factor = A01_crown_order_recruitable_population_factor
+ research_speed_factor = A01_crown_order_research_speed_factor
+ resistance_growth_on_our_occupied_states = A01_crown_order_resistance_growth_on_our_occupied_states
+ resistance_target = A01_crown_order_resistance_target
+ stability_factor = A01_crown_order_stability_factor
+ training_time_army_factor = A01_crown_order_training_time_army_factor
+ war_support_factor = A01_crown_order_war_support_factor
+}

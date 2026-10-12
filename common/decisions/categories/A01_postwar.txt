@@ -1,0 +1,5 @@
+A01_new_republic = {
+ icon = generic_political_discourse
+ allowed = { original_tag = A01 }
+ visible = { has_country_flag = A01_ludolf_reform_path }
+}

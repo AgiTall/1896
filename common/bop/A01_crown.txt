@@ -1,0 +1,17 @@
+A01_crown_council_balance = {
+ initial_value = 0
+ left_side = A01_grand_council_side
+ right_side = A01_queen_side
+ decision_category = A01_crown_struggle
+ range = { id = A01_crown_equilibrium min = -0.4 max = 0.4 modifier = { stability_factor = 0.05 } }
+ side = {
+  id = A01_grand_council_side icon = GFX_bop_admirals_steel
+  range = { id = A01_council_veto min = -0.7 max = -0.4 modifier = { political_power_gain = -0.10 } }
+  range = { id = A01_council_obstruction min = -1 max = -0.7 modifier = { political_power_gain = -0.20 production_speed_buildings_factor = -0.10 } }
+ }
+ side = {
+  id = A01_queen_side icon = GFX_idea_A01_wilhelmina
+  range = { id = A01_queen_influence min = 0.4 max = 0.6 modifier = { political_power_gain = 0.10 } }
+  range = { id = A01_queen_supremacy min = 0.6 max = 1 modifier = { political_power_gain = 0.20 war_support_factor = 0.10 } }
+ }
+}

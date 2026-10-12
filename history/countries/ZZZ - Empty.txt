@@ -1,0 +1,20 @@
+capital = 1
+OOB = "ZZZ_1936"
+
+set_technology = {
+}
+
+set_politics = {
+	ruling_party = silentplague
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	silentplague = 100
+}
+
+recruit_character = ZZZ_Blackness
+
+set_convoys = 0

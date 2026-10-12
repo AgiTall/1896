@@ -1,0 +1,29 @@
+A01_initialize_colonial_constraints_effect = {
+ # Admirals are recruited once by country history, not at runtime.
+ if = {
+  limit = { NOT = { has_country_flag = A01_colonial_constraints_initialized } }
+  set_country_flag = A01_colonial_constraints_initialized
+  add_ideas = A01_agrarian_society
+ }
+}
+A01_japanese_occupation_pressure_effect = {
+ if = {
+  limit = { has_war_with = A03 NOT = { has_country_flag = A01_expansion_resolved } NOT = { has_country_flag = A01_admirals_seized_power } }
+  A01_initialize_balance_effect = yes
+  # Ownership remains Dutch under occupation. A peaceful Japanese lease
+  # therefore cannot match this iterator and never harms Ludolf's rating.
+  every_owned_state = {
+   limit = { is_controlled_by = A03 NOT = { has_state_flag = A01_japanese_occupation_pressure_applied } }
+   set_state_flag = A01_japanese_occupation_pressure_applied
+   A01 = { add_power_balance_value = { id = A01_ludolf_admirals_balance value = -0.10 } }
+   if = {
+    limit = { state = 1024 }
+    A01 = { add_power_balance_value = { id = A01_ludolf_admirals_balance value = -0.10 } }
+   }
+   if = {
+    limit = { state = 1058 }
+    A01 = { add_power_balance_value = { id = A01_ludolf_admirals_balance value = -0.15 } }
+   }
+  }
+ }
+}

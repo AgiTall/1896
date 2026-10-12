@@ -1,0 +1,154 @@
+{
+  "A01_postwar_destruction": {
+    "production_speed_buildings_factor": -0.1,
+    "industrial_capacity_factory": -0.1
+  },
+  "A01_unpaid_families": {
+    "stability_factor": -0.05,
+    "political_power_gain": -0.05
+  },
+  "A01_postwar_budget_burden": {
+    "consumer_goods_expected_value": 0.05,
+    "political_power_gain": -0.1
+  },
+  "A01_civilian_reform_mandate": {
+    "political_power_gain": 0.05
+  },
+  "A01_restored_port_network": {
+    "supply_consumption_factor": -0.05
+  },
+  "A01_recovery_investment_idea": {
+    "production_speed_buildings_factor": 0.05
+  },
+  "A01_army_transition": {
+    "army_org_factor": -0.05
+  },
+  "A01_joint_officer_corps": {
+    "army_org_factor": 0.05,
+    "training_time_army_factor": -0.05
+  },
+  "A01_federal_defence_command_idea": {
+    "supply_consumption_factor": -0.05,
+    "navy_org_factor": 0.05
+  },
+  "A01_island_representation_idea": {
+    "stability_factor": 0.03
+  },
+  "A01_federal_constitution_idea": {
+    "stability_factor": 0.05,
+    "political_power_gain": 0.05
+  },
+  "A01_accountable_civil_service": {
+    "political_power_factor": 0.05,
+    "army_advisor_cost_factor": -0.05
+  },
+  "A01_demands_for_freedom": {
+    "stability_factor": -0.05,
+    "political_power_gain": -0.05
+  },
+  "A01_royal_arbitration": {
+    "stability_factor": 0.07,
+    "political_power_gain": 0.05
+  },
+  "A01_island_charter": {
+    "stability_factor": 0.03,
+    "recruitable_population_factor": 0.05
+  },
+  "A01_constitutional_crown": {
+    "stability_factor": 0.1,
+    "political_power_gain": 0.1
+  },
+  "A01_borneo_humiliation": {
+    "stability_factor": -0.05,
+    "political_power_gain": -0.1
+  },
+  "A01_revanchism_simmering": {
+    "war_support_factor": 0.05,
+    "stability_factor": -0.03
+  },
+  "A01_revanchism_organised": {
+    "war_support_factor": 0.1,
+    "production_speed_dockyard_factor": 0.1
+  },
+  "A01_reconstruction_cabinet": {
+    "political_power_gain": 0.1,
+    "stability_factor": 0.03
+  },
+  "A01_sultanate_federation": {
+    "stability_factor": 0.05,
+    "recruitable_population_factor": 0.05
+  },
+  "A01_civilian_naval_compact": {
+    "navy_org_factor": 0.05,
+    "political_power_gain": 0.05
+  },
+  "A01_royal_guard_loyalty": {
+    "army_org_factor": 0.1,
+    "army_defence_factor": 0.05,
+    "training_time_army_factor": -0.1
+  },
+  "A01_royal_naval_loyalty": {
+    "navy_org_factor": 0.1,
+    "production_speed_dockyard_factor": 0.15
+  },
+  "A01_royal_absolutism": {
+    "political_power_gain": 0.25,
+    "war_support_factor": 0.15,
+    "mobilization_speed": 0.2,
+    "stability_factor": -0.05
+  },
+  "A01_direct_royal_rule": {
+    "production_speed_buildings_factor": 0.15,
+    "industrial_capacity_factory": 0.1
+  },
+  "A01_crown_secret_police": {
+    "resistance_target": -0.15,
+    "resistance_growth_on_our_occupied_states": -0.2,
+    "stability_factor": 0.05
+  },
+  "A01_royal_militarism": {
+    "army_attack_factor": 0.1,
+    "production_speed_dockyard_factor": 0.15,
+    "industrial_capacity_factory": 0.1,
+    "consumer_goods_expected_value": 0.05
+  },
+  "A01_crown_parliament_idea": {
+    "political_power_gain": 0.2,
+    "research_speed_factor": 0.1,
+    "stability_factor": 0.05
+  },
+  "A01_crown_commonwealth_idea": {
+    "recruitable_population_factor": 0.15,
+    "production_factory_max_efficiency_factor": 0.15,
+    "consumer_goods_expected_value": -0.1
+  },
+  "A01_emmas_caution": {
+    "political_power_factor": -0.1
+  },
+  "A01_young_queens_resolve": {
+    "political_power_factor": 0.15
+  },
+  "A01_crown_dialogue": {
+    "political_power_factor": 0.05
+  },
+  "A01_crown_resolve": {
+    "political_power_factor": 0.1
+  },
+  "A01_knil_training": {
+    "army_org_factor": 0.05,
+    "training_time_army_factor": -0.1
+  },
+  "A01_island_defence": {
+    "army_defence_factor": 0.05
+  },
+  "A01_jungle_supply": {
+    "supply_consumption_factor": -0.1
+  },
+  "A01_colonial_administration": {
+    "political_power_gain": 0.15
+  },
+  "A01_naval_staff": {
+    "navy_org_factor": 0.05,
+    "production_speed_dockyard_factor": 0.1
+  }
+}

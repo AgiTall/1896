@@ -1,0 +1,6 @@
+A01_can_change_locked_laws = {
+ OR = {
+  has_country_flag = A01_constitutional_amendments_active
+  has_country_flag = A01_admirals_council_abolished
+ }
+}

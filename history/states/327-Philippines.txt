@@ -1,0 +1,35 @@
+state = {
+ id = 327
+ name = "STATE_327"
+ resources = {
+  coal = 1
+ }
+ state_category = large_town
+ history = {
+  buildings = {
+   infrastructure = 3
+   industrial_complex = 3
+   dockyard = 1
+   air_base = 6
+   10265 = {
+    naval_base = 5
+   }
+  }
+  victory_points = {
+   10265
+   15
+  }
+  owner = A03
+  add_core_of = PML
+ }
+ provinces = {
+  1288
+  1388
+  4233
+  7323
+  10236
+  10265
+ }
+ local_supplies = 0.0
+ manpower = 1577042
+}

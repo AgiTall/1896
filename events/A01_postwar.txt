@@ -1,0 +1,208 @@
+add_namespace = A01_postwar
+country_event = {
+ id = A01_postwar.1
+ title = A01_postwar.1.t
+ desc = A01_postwar.1.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  tag = A01
+  NOT = {
+   has_country_flag = A01_ludolf_crisis_resolved
+  }
+ }
+ option = {
+  name = A01_postwar.1.a
+  ai_chance = {
+   factor = 60
+  }
+  A01_establish_federal_mandate_effect = yes
+ }
+ option = {
+  name = A01_postwar.1.b
+  ai_chance = {
+   factor = 30
+  }
+  A01_establish_military_rule_effect = yes
+ }
+ option = {
+  name = A01_postwar.1.c
+  ai_chance = {
+   factor = 10
+  }
+  trigger = {
+   NOT = {
+    power_balance_value = {
+     id = A01_ludolf_admirals_balance
+     value < -0.1
+    }
+   }
+   NOT = {
+    power_balance_value = {
+     id = A01_ludolf_admirals_balance
+     value > 0.1
+    }
+   }
+  }
+  A01_establish_regency_effect = yes
+ }
+}
+country_event = {
+ id = A01_postwar.2
+ title = A01_postwar.2.t
+ desc = A01_postwar.2.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ option = {
+  name = A01_postwar.2.a
+  add_political_power = 25
+ }
+}
+country_event = {
+ id = A01_postwar.3
+ title = A01_postwar.3.t
+ desc = A01_postwar.3.d
+ picture = GFX_1896_event_treaty
+ is_triggered_only = yes
+ option = {
+  name = A01_postwar.3.a
+  ai_chance = {
+   factor = 45
+  }
+  add_country_leader_role = {
+   character = A01_ludolf_sloot_van_de_beele
+   promote_leader = yes
+   country_leader = {
+    ideology = liberalism
+    expire = "1965.1.1.1"
+    traits = {
+
+    }
+   }
+  }
+  set_party_name = {
+   ideology = democratic
+   long_name = A01_liberals
+   name = A01_liberals
+  }
+  set_country_flag = A01_liberal_election_winner
+ }
+ option = {
+  name = A01_postwar.3.b
+  ai_chance = {
+   factor = 30
+  }
+  
+  promote_character = {
+   character = A01_postwar_conservative
+   ideology = conservatism
+  }
+  set_party_name = {
+   ideology = democratic
+   long_name = A01_conservatives
+   name = A01_conservatives
+  }
+  set_country_flag = A01_conservative_election_winner
+ }
+ option = {
+  name = A01_postwar.3.c
+  ai_chance = {
+   factor = 25
+  }
+  
+  promote_character = {
+   character = A01_postwar_indonesian
+   ideology = socialism
+  }
+  set_party_name = {
+   ideology = democratic
+   long_name = A01_indonesian_party
+   name = A01_indonesian_party
+  }
+  set_country_flag = A01_peoples_election_winner
+ }
+ trigger = {
+  tag = A01
+  has_country_flag = A01_democratic_federation_established
+  NOT = {
+   has_country_flag = A01_first_election_held
+  }
+ }
+ immediate = {
+  set_country_flag = A01_first_election_held
+  set_politics = {
+   ruling_party = democratic
+   elections_allowed = yes
+   election_frequency = 48
+  }
+  set_popularities = {
+   democratic = 80
+   neutrality = 15
+   communism = 5
+   fascism = 0
+  }
+ }
+}
+country_event = {
+ id = A01_postwar.4
+ title = A01_postwar.4.t
+ desc = {
+  trigger = {
+   has_country_flag = A01_liberal_outburst
+  }
+  text = A01_postwar.4.liberal_d
+ }
+ desc = {
+  trigger = {
+   has_country_flag = A01_conservative_outburst
+  }
+  text = A01_postwar.4.conservative_d
+ }
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = {
+  tag = A01
+  has_country_flag = A01_first_election_held
+ }
+ immediate = {
+  random_list = {
+   50 = {
+    set_country_flag = A01_liberal_outburst
+   }
+   50 = {
+    set_country_flag = A01_conservative_outburst
+   }
+  }
+ }
+ option = {
+  name = A01_postwar.4.a
+  ai_chance = {
+   factor = 60
+  }
+  add_political_power = -40
+  add_stability = 0.04
+  set_country_flag = A01_equal_cabinet
+ }
+ option = {
+  name = A01_postwar.4.b
+  ai_chance = {
+   factor = 30
+  }
+  add_political_power = 25
+  add_stability = -0.02
+  set_country_flag = A01_cabinet_compromise
+ }
+ option = {
+  name = A01_postwar.4.c
+  ai_chance = {
+   factor = 10
+  }
+  add_political_power = 75
+  add_stability = -0.08
+  set_country_flag = A01_exclusion_scandal
+ }
+ after = {
+  clr_country_flag = A01_liberal_outburst
+  clr_country_flag = A01_conservative_outburst
+ }
+}

@@ -1,0 +1,143 @@
+add_namespace = A01_japan
+country_event = {
+ id = A01_japan.1
+ trigger = {
+  country_exists = A03
+  NOT = {
+   has_war_with = A03
+  }
+  NOT = {
+   has_country_flag = pacific_trade_accord
+  }
+  NOT = {
+   has_country_flag = A01_refused_japanese_ultimatum
+  }
+  NOT = {
+   has_country_flag = A01_expansion_resolved
+  }
+ }
+ title = A01_japan.1.t
+ desc = A01_japan.1.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = A01_japan.1.a
+  set_country_flag = A01_japan_rejected_rubber_offer
+  set_country_flag = A01_refused_japanese_ultimatum
+  country_event = {
+   id = A01_japan.2
+   days = 14
+   random_days = 16
+  }
+ }
+}
+country_event = {
+ id = A01_japan.2
+ title = A01_japan.2.t
+ desc = A01_japan.2.d
+ picture = GFX_1896_event_protest
+ is_triggered_only = yes
+ trigger = {
+  tag = A01
+  has_country_flag = A01_refused_japanese_ultimatum
+  NOT = {
+   has_country_flag = A01_admiral_speech_chosen
+  }
+ }
+ immediate = {
+  hidden_effect = {
+   add_ideas = A01_indonesian_refusal
+  }
+ }
+ option = {
+  name = A01_japan.2.hard
+  add_war_support = -0.02
+  ai_chance = {
+   factor = 25
+  }
+  hidden_effect = {
+   set_country_flag = A01_admiral_speech_chosen
+   country_event = {
+    id = A01_japan.10
+    days = 5
+   }
+  }
+ }
+ option = {
+  name = A01_japan.2.balance
+  add_stability = 0.01
+  ai_chance = {
+   factor = 50
+  }
+  hidden_effect = {
+   set_country_flag = A01_admiral_speech_chosen
+   country_event = {
+    id = A01_japan.11
+    days = 5
+   }
+  }
+ }
+ option = {
+  name = A01_japan.2.support
+  add_war_support = 0.02
+  ai_chance = {
+   factor = 25
+  }
+  hidden_effect = {
+   set_country_flag = A01_admiral_speech_chosen
+   country_event = {
+    id = A01_japan.12
+    days = 5
+   }
+  }
+ }
+}
+country_event = {
+ id = A01_japan.3
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  random_list = {
+   60 = {
+
+   }
+   40 = {
+    country_event = {
+     id = A01_japan.4
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = A01_japan.4
+ title = A01_japan.4.t
+ desc = A01_japan.4.d picture = GFX_1896_event_unrest
+ is_triggered_only = yes
+ immediate = {
+  random_owned_state = {
+   limit = {
+    OR = {
+     state = 334
+     state = 1024
+     state = 1055
+    }
+   }
+   add_resistance = 15
+  }
+  set_country_flag = A01_indonesian_partisan_movement_active
+ }
+ option = {
+  name = A01_japan.4.a
+ }
+}
+country_event = {
+ id = A01_japan.5
+ title = A01_japan.5.t
+ desc = A01_japan.5.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ option = {
+  name = A01_japan.5.a
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": [
+    "Balanced changed scripts and mission references",
+    "Diplomatic refusal does not start or reset independent preparation",
+    "Both preparation clocks start once and stay synchronised across all concessions and naval decisions",
+    "Lease return and temporary resource-rights expiry",
+    "Both wartime missions start together",
+    "Deadline outcomes and duplicate callback protection",
+    "Queued pressure suppressed at neutral or strong Ludolf balance",
+    "Old unconditional peace offer disabled",
+    "Russian and English mission, decision and event labels"
+  ],
+  "outcomes": [
+    "Dutch victory (no Borneo foothold)",
+    "Japanese victory"
+  ],
+  "engine_campaign_test": "Not run; script model is not the HOI4 engine."
+}

@@ -1,0 +1,1 @@
+characters = { A02_canon_leader = { name = A02_canon_leader_name portraits = { civilian = { large = "gfx/leaders/leader_unknown_female.dds" } } country_leader = { ideology = despotism expire = "1965.1.1.1" traits = { } } } }

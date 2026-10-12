@@ -1,0 +1,72 @@
+add_namespace = expansion
+country_event = {
+ id = expansion.1
+ title = expansion.1.t
+ desc = expansion.1.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_defended_sabah }
+ option = { name = expansion.1.a }
+}
+country_event = {
+ id = expansion.2
+ title = expansion.2.t
+ desc = expansion.2.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = A03_borneo_defeat }
+ option = { name = expansion.2.a }
+}
+country_event = {
+ id = expansion.3
+ title = expansion.3.t
+ desc = expansion.3.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_borneo_treaty }
+ option = { name = expansion.3.a }
+}
+country_event = {
+ id = expansion.10
+ title = expansion.10.t
+ desc = expansion.10.d picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A01 owns_state = 1023 }
+ option = { name = expansion.10.a }
+}
+country_event = {
+ id = expansion.13
+ hidden = yes
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_brunei_lease_active }
+ immediate = {
+  if = {
+   limit = { has_war_with = A03 }
+   # A wartime occupation cannot be returned as a peaceful lease.
+   country_event = { id = expansion.13 days = 30 }
+  }
+  else = {
+   if = { limit = { A03 = { owns_state = 1023 } NOT = { has_country_flag = A01_borneo_treaty } } transfer_state = 1023 country_event = { id = expansion.10 hours = 1 } }
+   clr_country_flag = A01_brunei_lease_active
+  }
+ }
+}
+country_event = {
+ id = expansion.11
+ title = expansion.11.t
+ desc = expansion.11.d picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = expansion.11.a }
+}
+country_event = {
+ id = expansion.12
+ hidden = yes
+ is_triggered_only = yes
+ trigger = { tag = A01 has_country_flag = A01_temporary_rubber_concession }
+ immediate = {
+  # Do not revoke a subsequent permanent Borneo Convention concession.
+  if = { limit = { NOT = { has_country_flag = A01_borneo_treaty } } A03 = { remove_resource_rights = 1055 } }
+  clr_country_flag = A01_temporary_rubber_concession
+ }
+}

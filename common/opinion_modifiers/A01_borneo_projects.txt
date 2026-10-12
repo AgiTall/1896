@@ -1,0 +1,4 @@
+opinion_modifiers = {
+ A01_borneo_british_exclusion = { value = -10 }
+ A01_borneo_australian_cooperation = { value = 10 }
+}

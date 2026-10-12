@@ -1,0 +1,13 @@
+division_template = { name = "Imperial Infantry" regiments = { infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 } infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 } infantry = { x = 2 y = 0 } infantry = { x = 2 y = 1 } } support = { artillery = { x = 0 y = 0 } } }
+units = {
+division = { name = "1. Imperial Infantry" location = 9998 division_template = "Imperial Infantry" start_experience_factor = 0.20 start_equipment_factor = 0.85 }
+division = { name = "2. Imperial Infantry" location = 9998 division_template = "Imperial Infantry" start_experience_factor = 0.20 start_equipment_factor = 0.85 }
+division = { name = "3. Imperial Infantry" location = 9998 division_template = "Imperial Infantry" start_experience_factor = 0.20 start_equipment_factor = 0.85 }
+division = { name = "4. Imperial Infantry" location = 4094 division_template = "Imperial Infantry" start_experience_factor = 0.20 start_equipment_factor = 0.85 }
+division = { name = "5. Imperial Infantry" location = 7212 division_template = "Imperial Infantry" start_experience_factor = 0.20 start_equipment_factor = 0.85 }
+division = { name = "6. Imperial Infantry" location = 10055 division_template = "Imperial Infantry" start_experience_factor = 0.20 start_equipment_factor = 0.85 }
+division = { name = "7. Imperial Infantry" location = 9998 division_template = "Imperial Infantry" start_experience_factor = 0.15 start_equipment_factor = 0.80 }
+division = { name = "8. Imperial Infantry" location = 9998 division_template = "Imperial Infantry" start_experience_factor = 0.15 start_equipment_factor = 0.80 }
+division = { name = "9. Imperial Infantry" location = 9998 division_template = "Imperial Infantry" start_experience_factor = 0.15 start_equipment_factor = 0.75 }
+division = { name = "10. Imperial Infantry" location = 4094 division_template = "Imperial Infantry" start_experience_factor = 0.15 start_equipment_factor = 0.75 }
+}

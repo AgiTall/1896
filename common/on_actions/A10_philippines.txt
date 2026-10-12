@@ -1,0 +1,21 @@
+on_actions = {
+ on_startup = { effect = { A10 = {
+  A10_ensure_confederation_faction = yes
+  if = { limit = { NOT = { has_country_flag = A10_initialized } }
+   set_country_flag = A10_initialized
+   every_owned_state = { limit = { NOT = { is_core_of = A10 } } set_compliance = 10 set_resistance = 30 }
+  }
+ } } }
+ on_war_relation_added = { effect = {
+  if = {
+   limit = { OR = {
+    AND = { ROOT = { tag = A03 } FROM = { tag = A01 } }
+    AND = { ROOT = { tag = A01 } FROM = { tag = A03 } }
+   } }
+   A10 = { if = { limit = { NOT = { has_country_flag = A10_borneo_event_scheduled } }
+    set_country_flag = A10_borneo_event_scheduled
+    country_event = { id = A10_philippines.1 days = 7 }
+   } }
+  }
+ } }
+}

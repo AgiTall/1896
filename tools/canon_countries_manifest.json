@@ -1,0 +1,341 @@
+{
+  "countries": [
+    {
+      "tag": "A02",
+      "name": "Британский Левиафан",
+      "leader": "Королева Виктория",
+      "capital": 116,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "A04",
+      "name": "Всемирная торговая палата",
+      "leader": "Директор Ламберт",
+      "capital": 697,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "A05",
+      "name": "Железный Союз",
+      "leader": "Адмирал Грейвс",
+      "capital": 315,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "A06",
+      "name": "Российская империя в изгнании",
+      "leader": "Александр III",
+      "capital": 100,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "A07",
+      "name": "Австралийский Доминион",
+      "leader": "Сэр Генри Паркс",
+      "capital": 285,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "A08",
+      "name": "Северная Армия Чистой Земли",
+      "leader": "Сайго Такамори",
+      "capital": 536,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "A09",
+      "name": "Партия Золотой Середины",
+      "leader": "Ивасаки Яносукэ",
+      "capital": 531,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "A10",
+      "name": "Конфедерация Филиппинских Островов",
+      "leader": "Правительство в изгнании",
+      "capital": 1084,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PCF",
+      "name": "Рыцари Конфедерации",
+      "leader": "Сенатор Борегар",
+      "capital": 1082,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PAZ",
+      "name": "Ацтекское Возрождение",
+      "leader": "Генералиссимус Эрнандес",
+      "capital": 1083,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PHR",
+      "name": "Дети Урагана",
+      "leader": "Маман Бриджит",
+      "capital": 318,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PLS",
+      "name": "Католическая Республика Лусон",
+      "leader": "Эмилио Агинальдо",
+      "capital": 623,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PSL",
+      "name": "Султанат Сулу",
+      "leader": "Джамалул Кирам II",
+      "capital": 1025,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PHW",
+      "name": "Королевство Гавайи",
+      "leader": "Дэвид Калакауа",
+      "capital": 629,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PSY",
+      "name": "Султанат Сейшелы",
+      "leader": "Наследник Баргаша",
+      "capital": 709,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PCB",
+      "name": "Республика Себу",
+      "leader": "Совет торговых домов",
+      "capital": 628,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PPN",
+      "name": "Конфедерация Панай",
+      "leader": "Совет касиков",
+      "capital": 1085,
+      "active": true,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PTG",
+      "name": "Королевство Тонга",
+      "leader": "Джордж Тупоу II",
+      "capital": null,
+      "active": false,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PKR",
+      "name": "Курильский рубеж",
+      "leader": "Адмирал Старик",
+      "capital": null,
+      "active": false,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PPM",
+      "name": "Поморская вольница",
+      "leader": "Совет капитанов",
+      "capital": null,
+      "active": false,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PZN",
+      "name": "Занзибарские Молчаливые",
+      "leader": "Старейшины жестового языка",
+      "capital": null,
+      "active": false,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    },
+    {
+      "tag": "PPE",
+      "name": "Пираты Пембы",
+      "leader": "Капитан Чёрный Ахмед",
+      "capital": null,
+      "active": false,
+      "flag": "provisional geometric design",
+      "portrait": "generic, not historical"
+    }
+  ],
+  "changed_states": [
+    100,
+    101,
+    116,
+    118,
+    282,
+    284,
+    285,
+    299,
+    315,
+    318,
+    319,
+    326,
+    327,
+    333,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    526,
+    531,
+    536,
+    623,
+    624,
+    625,
+    627,
+    628,
+    629,
+    633,
+    634,
+    636,
+    639,
+    645,
+    674,
+    685,
+    689,
+    690,
+    691,
+    692,
+    693,
+    695,
+    696,
+    697,
+    703,
+    704,
+    707,
+    709,
+    710,
+    870,
+    871,
+    872,
+    873,
+    906,
+    992,
+    1021,
+    1025,
+    1026,
+    1027,
+    1074,
+    1075,
+    1079,
+    1080,
+    1081,
+    1082,
+    1083,
+    1084,
+    1085
+  ],
+  "state_splits": [
+    {
+      "source": 315,
+      "new_state": 1082,
+      "provinces": [
+        7451,
+        10374,
+        4476
+      ]
+    },
+    {
+      "source": 315,
+      "new_state": 1083,
+      "provinces": [
+        7546,
+        1550,
+        7590,
+        12347
+      ]
+    },
+    {
+      "source": 327,
+      "new_state": 1084,
+      "provinces": [
+        1221,
+        4288,
+        10272,
+        12236
+      ]
+    },
+    {
+      "source": 628,
+      "new_state": 1085,
+      "provinces": [
+        1368,
+        7423,
+        10302
+      ]
+    }
+  ],
+  "starter_divisions": {
+    "A02": 3,
+    "A04": 1,
+    "A05": 3,
+    "A06": 3,
+    "A07": 3,
+    "A08": 3,
+    "A09": 1,
+    "A10": 1,
+    "PCF": 3,
+    "PAZ": 3,
+    "PHR": 1,
+    "PLS": 1,
+    "PSL": 1,
+    "PHW": 1,
+    "PSY": 1,
+    "PCB": 1,
+    "PPN": 1
+  },
+  "limits": [
+    "Generic portraits, provisional flags and starter garrison balance",
+    "Tonga, Kurils, Svalbard, Zanzibar and Pemba are registered but inactive until map representation is supplied",
+    "Russian Maltese court and nomadic fleets are not given invented territory",
+    "Western Hispaniola assigned to Hurricane per detailed geographic register; older east-Hispaniola entry conflicts",
+    "Cavite/Batangas uses existing province-scale geography",
+    "VTP retains Madeira as technical host for existing A04 events; organisational migration is pending",
+    "No engine campaign test"
+  ]
+}

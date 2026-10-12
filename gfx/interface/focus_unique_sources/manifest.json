@@ -1,0 +1,842 @@
+[
+  {
+    "id": "A01_constitution",
+    "title": "Поправки к Конституции 1854 года",
+    "description": "Принятие поправок временно ограничит вмешательство Совета Адмиралов. В течение двух недель правительство сможет бесплатно менять законы о призыве, экономике и торговле.",
+    "subject": "An open constitutional parchment with red wax seal and bronze quill",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: An open constitutional parchment with red wax seal and bronze quill. Focus meaning: Поправки к Конституции 1854 года. Принятие поправок временно ограничит вмешательство Совета Адмиралов. В течение двух недель правительство сможет бесплатно менять законы о призыве, экономике и торговле.",
+    "reuse": "story_constitution",
+    "texture": "gfx/interface/goals/focus_unique_A01_constitution.dds",
+    "sprite": "GFX_goal_unique_A01_constitution"
+  },
+  {
+    "id": "A01_wtc_oil_and_rubber_offer",
+    "title": "Предложение ВТП: нефть и каучук",
+    "description": "Всемирная Торговая Палата заинтересована в поставках нефти и каучука из наших владений. Запуск официального контакта с Палатой привлечёт первых покупателей, даст средства на новую фабрику и немного усилит демократическое влияние.",
+    "subject": "Merchant balance scales weighing an oil barrel against raw rubber bales",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: Merchant balance scales weighing an oil barrel against raw rubber bales. Focus meaning: Предложение ВТП: нефть и каучук. Всемирная Торговая Палата заинтересована в поставках нефти и каучука из наших владений. Запуск официального контакта с Палатой привлечёт первых покупателей, даст средства на новую фабрику и немного усилит демократическое влияние.",
+    "reuse": "story_trade",
+    "texture": "gfx/interface/goals/focus_unique_A01_wtc_oil_and_rubber_offer.dds",
+    "sprite": "GFX_goal_unique_A01_wtc_oil_and_rubber_offer"
+  },
+  {
+    "id": "A01_lone_wolf_path",
+    "title": "Путь Одинокого Волка",
+    "description": "Батавия не станет разменивать суверенитет на обещания чужой защиты. Мы откажемся от союзов и будем самостоятельно определять свою судьбу.",
+    "subject": "A lone silver wolf head over a maritime compass",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: A lone silver wolf head over a maritime compass. Focus meaning: Путь Одинокого Волка. Батавия не станет разменивать суверенитет на обещания чужой защиты. Мы откажемся от союзов и будем самостоятельно определять свою судьбу.",
+    "reuse": "story_wolf",
+    "texture": "gfx/interface/goals/focus_unique_A01_lone_wolf_path.dds",
+    "sprite": "GFX_goal_unique_A01_lone_wolf_path"
+  },
+  {
+    "id": "A01_strengthen_ludolfs_power",
+    "title": "Укрепить власть Людольфа",
+    "description": "Людольф Слут ван де Беле сохранит гражданский контроль над государством, опираясь на инженеров, промышленников и прагматичную часть администрации.",
+    "subject": "Governor's engraved signet ring, fountain pen and orange ceremonial sash",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: Governor's engraved signet ring, fountain pen and orange ceremonial sash. Focus meaning: Укрепить власть Людольфа. Людольф Слут ван де Беле сохранит гражданский контроль над государством, опираясь на инженеров, промышленников и прагматичную часть администрации.",
+    "reuse": "story_ludolf",
+    "texture": "gfx/interface/goals/focus_unique_A01_strengthen_ludolfs_power.dds",
+    "sprite": "GFX_goal_unique_A01_strengthen_ludolfs_power"
+  },
+  {
+    "id": "A01_invest_in_mass_consumer_goods",
+    "title": "Инвестиции в средства массового использования",
+    "description": "Каучук пригоден не только для военного производства. Из него можно создавать множество вещей повседневного быта, доступных широким слоям населения. Инвестиции в массовое производство таких товаров потребуют расширения гражданской промышленности.",
+    "subject": "Nineteenth century rubber boots and rubber household goods beside a small workshop cog",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Nineteenth century rubber boots and rubber household goods beside a small workshop cog. Meaning: Инвестиции в средства массового использования. Каучук пригоден не только для военного производства. Из него можно создавать множество вещей повседневного быта, доступных широким слоям населения. Инвестиции в массовое производство таких товаров потребуют расширения гражданской промышленности.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_invest_in_mass_consumer_goods.dds",
+    "sprite": "GFX_goal_unique_A01_invest_in_mass_consumer_goods"
+  },
+  {
+    "id": "A01_last_chance_to_negotiate",
+    "title": "Последний шанс договориться",
+    "description": "Война с Японией кажется неизбежной. Наш контроль над нефтью и каучуком всё сильнее тревожит японское правительство. Мы предложим заключить пакт о ненападении, предоставив взамен право на разработку части наших каучуковых лесов. Возможно, дипломатия ещё способна предотвратить катастрофу.",
+    "subject": "Two diplomatic hands clasped above a sealed nonaggression pact, tiny rubber branch",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Two diplomatic hands clasped above a sealed nonaggression pact, tiny rubber branch. Meaning: Последний шанс договориться. Война с Японией кажется неизбежной. Наш контроль над нефтью и каучуком всё сильнее тревожит японское правительство. Мы предложим заключить пакт о ненападении, предоставив взамен право на разработку части наших каучуковых лесов. Возможно, дипломатия ещё способна предотвратить катастрофу.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_last_chance_to_negotiate.dds",
+    "sprite": "GFX_goal_unique_A01_last_chance_to_negotiate"
+  },
+  {
+    "id": "A01_admirals_council_coup",
+    "title": "Переворот Совета Адмиралов",
+    "description": "Совет Адмиралов больше не намерен терпеть слабость гражданского правительства. Людольф будет отстранён, а Батавия станет морской стратократией.",
+    "subject": "Naval officer's gauntlet seizing a governor's broken ceremonial staff, anchor behind",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Naval officer's gauntlet seizing a governor's broken ceremonial staff, anchor behind. Meaning: Переворот Совета Адмиралов. Совет Адмиралов больше не намерен терпеть слабость гражданского правительства. Людольф будет отстранён, а Батавия станет морской стратократией.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_admirals_council_coup.dds",
+    "sprite": "GFX_goal_unique_A01_admirals_council_coup"
+  },
+  {
+    "id": "A01_direct_naval_rule",
+    "title": "Прямое управление флота",
+    "description": "Гражданский парламент будет распущен, а государственный аппарат перейдёт под прямой контроль флота. Мобилизация ускорится, и колониальная администрация получит больше возможностей для жёсткого подавления сопротивления.",
+    "subject": "Admiral's bicorne above a naval anchor and a closed parliamentary ledger",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Admiral's bicorne above a naval anchor and a closed parliamentary ledger. Meaning: Прямое управление флота. Гражданский парламент будет распущен, а государственный аппарат перейдёт под прямой контроль флота. Мобилизация ускорится, и колониальная администрация получит больше возможностей для жёсткого подавления сопротивления.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_direct_naval_rule.dds",
+    "sprite": "GFX_goal_unique_A01_direct_naval_rule"
+  },
+  {
+    "id": "A01_build_bornean_fortifications",
+    "title": "Построить Борнейские укрепления",
+    "description": "Порт Джесселтона в Сабахе должен быть готов к отражению внезапной высадки. Инженерные части возведут первый уровень долговременных укреплений непосредственно у порта.",
+    "subject": "A low nineteenth century stone coastal battery with a single cannon and palm frond",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A low nineteenth century stone coastal battery with a single cannon and palm frond. Meaning: Построить Борнейские укрепления. Порт Джесселтона в Сабахе должен быть готов к отражению внезапной высадки. Инженерные части возведут первый уровень долговременных укреплений непосредственно у порта.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_build_bornean_fortifications.dds",
+    "sprite": "GFX_goal_unique_A01_build_bornean_fortifications"
+  },
+  {
+    "id": "A01_prepare_bornean_logistics",
+    "title": "Подготовить логистику",
+    "description": "Новая железная дорога свяжет Джесселтон с Сандаканом и Тавау и позволит быстрее перебрасывать снабжение и подкрепления через Сабах.",
+    "subject": "Steam locomotive pulling supply crates over a tropical railway bridge",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Steam locomotive pulling supply crates over a tropical railway bridge. Meaning: Подготовить логистику. Новая железная дорога свяжет Джесселтон с Сандаканом и Тавау и позволит быстрее перебрасывать снабжение и подкрепления через Сабах.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_prepare_bornean_logistics.dds",
+    "sprite": "GFX_goal_unique_A01_prepare_bornean_logistics"
+  },
+  {
+    "id": "A01_improve_bornean_fortifications",
+    "title": "Улучшить укрепления",
+    "description": "Портовый укреплённый пункт будет усилен ещё одним уровнем, а соседние прибрежные провинции получат собственные оборонительные позиции.",
+    "subject": "Three tiered coastal stone gun batteries with reinforced earthworks",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three tiered coastal stone gun batteries with reinforced earthworks. Meaning: Улучшить укрепления. Портовый укреплённый пункт будет усилен ещё одним уровнем, а соседние прибрежные провинции получат собственные оборонительные позиции.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_improve_bornean_fortifications.dds",
+    "sprite": "GFX_goal_unique_A01_improve_bornean_fortifications"
+  },
+  {
+    "id": "A01_open_papuan_road",
+    "title": "Открыть Папуасскую дорогу",
+    "description": "Австралийские власти готовы передать нам партию винтовок, но морской путь может быть перерезан японским флотом. Расчистив старые тропы и проложив дорогу к Мерауке, мы создадим сухопутный коридор снабжения через Папуа.",
+    "subject": "Surveyor's machete and wooden road sign above a jungle trail carrying rifle crates",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Surveyor's machete and wooden road sign above a jungle trail carrying rifle crates. Meaning: Открыть Папуасскую дорогу. Австралийские власти готовы передать нам партию винтовок, но морской путь может быть перерезан японским флотом. Расчистив старые тропы и проложив дорогу к Мерауке, мы создадим сухопутный коридор снабжения через Папуа.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_open_papuan_road.dds",
+    "sprite": "GFX_goal_unique_A01_open_papuan_road"
+  },
+  {
+    "id": "A01_fortify_australian_frontier",
+    "title": "Укрепить австралийский рубеж",
+    "description": "Вместо рискованного сухопутного коридора мы превратим границу с австралийскими владениями в самостоятельный оборонительный пояс. Укреплённые пункты в Мерауке и Лаэ прикроют южный фланг колоний и не позволят японскому десанту закрепиться на подступах к Новой Гвинее.",
+    "subject": "A frontier palisade and two guard towers above a parchment outline of New Guinea",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A frontier palisade and two guard towers above a parchment outline of New Guinea. Meaning: Укрепить австралийский рубеж. Вместо рискованного сухопутного коридора мы превратим границу с австралийскими владениями в самостоятельный оборонительный пояс. Укреплённые пункты в Мерауке и Лаэ прикроют южный фланг колоний и не позволят японскому десанту закрепиться на подступах к Новой Гвинее.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_fortify_australian_frontier.dds",
+    "sprite": "GFX_goal_unique_A01_fortify_australian_frontier"
+  },
+  {
+    "id": "A01_java_development",
+    "title": "План развития Явы",
+    "description": "Государственные заказы свяжут мастерские Батавии и предприятия Явы. Новые фабрики обеспечат архипелаг собственными промышленными товарами.",
+    "subject": "A Javanese brick textile mill with tall chimney and woven cloth spool",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Javanese brick textile mill with tall chimney and woven cloth spool. Meaning: План развития Явы. Государственные заказы свяжут мастерские Батавии и предприятия Явы. Новые фабрики обеспечат архипелаг собственными промышленными товарами.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_java_development.dds",
+    "sprite": "GFX_goal_unique_A01_java_development"
+  },
+  {
+    "id": "A01_archipelago_shipping",
+    "title": "Каботажные линии",
+    "description": "Островное государство живёт морем. Регулярные каботажные рейсы соединят удалённые порты и создадут резерв судов на случай войны.",
+    "subject": "A small coastal sailing steamer linking three island silhouettes with dotted sea routes",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A small coastal sailing steamer linking three island silhouettes with dotted sea routes. Meaning: Каботажные линии. Островное государство живёт морем. Регулярные каботажные рейсы соединят удалённые порты и создадут резерв судов на случай войны.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_archipelago_shipping.dds",
+    "sprite": "GFX_goal_unique_A01_archipelago_shipping"
+  },
+  {
+    "id": "A01_sumatran_railways",
+    "title": "Суматранские железные дороги",
+    "description": "Плантации и порты Суматры разделяют сотни километров труднопроходимой местности. Железнодорожное строительство сократит путь от склада до причала.",
+    "subject": "A brass steam locomotive wheel with railway tracks and a Sumatran palm leaf",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished Paradox-style strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A brass steam locomotive wheel with railway tracks and a Sumatran palm leaf. Meaning: Суматранские железные дороги. Плантации и порты Суматры разделяют сотни километров труднопроходимой местности. Железнодорожное строительство сократит путь от склада до причала.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_sumatran_railways.dds",
+    "sprite": "GFX_goal_unique_A01_sumatran_railways"
+  },
+  {
+    "id": "A01_surabaya_arsenal",
+    "title": "Арсенал Сурабаи",
+    "description": "Сурабая станет центром ремонта оружия и выпуска боеприпасов. Армия не должна зависеть от каждого транспорта, прибывающего из Европы.",
+    "subject": "An arsenal workbench with brass ammunition cartridges, gun barrel and hammer",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An arsenal workbench with brass ammunition cartridges, gun barrel and hammer. Meaning: Арсенал Сурабаи. Сурабая станет центром ремонта оружия и выпуска боеприпасов. Армия не должна зависеть от каждого транспорта, прибывающего из Европы.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_surabaya_arsenal.dds",
+    "sprite": "GFX_goal_unique_A01_surabaya_arsenal"
+  },
+  {
+    "id": "A01_batavia_docks",
+    "title": "Доковый комплекс Батавии",
+    "description": "Углубление гаваней и новые сухие доки позволят обслуживать эскадру в Батавии. Повреждённым кораблям больше не придётся искать ремонт за пределами наших вод.",
+    "subject": "A steam warship sitting in a stone dry dock with dock gates visibly open",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A steam warship sitting in a stone dry dock with dock gates visibly open. Meaning: Доковый комплекс Батавии. Углубление гаваней и новые сухие доки позволят обслуживать эскадру в Батавии. Повреждённым кораблям больше не придётся искать ремонт за пределами наших вод.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_batavia_docks.dds",
+    "sprite": "GFX_goal_unique_A01_batavia_docks"
+  },
+  {
+    "id": "A01_rubber_processing",
+    "title": "Переработка каучука",
+    "description": "Вывозить сырой каучук проще, чем развивать переработку, но прибыль остаётся за морем. Построим предприятия рядом с суматранскими плантациями.",
+    "subject": "Rubber tapping cup on a tree trunk beside a mechanical roller press and rubber sheet",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Rubber tapping cup on a tree trunk beside a mechanical roller press and rubber sheet. Meaning: Переработка каучука. Вывозить сырой каучук проще, чем развивать переработку, но прибыль остаётся за морем. Построим предприятия рядом с суматранскими плантациями.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_rubber_processing.dds",
+    "sprite": "GFX_goal_unique_A01_rubber_processing"
+  },
+  {
+    "id": "A01_local_rifles",
+    "title": "Местное производство винтовок",
+    "description": "Единые чертежи и взаимозаменяемые детали позволят собирать винтовки в местных мастерских. Первые партии поступят в гарнизоны архипелага.",
+    "subject": "Two nineteenth century bolt action rifles and a machinist's caliper over wooden gunstock",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Two nineteenth century bolt action rifles and a machinist's caliper over wooden gunstock. Meaning: Местное производство винтовок. Единые чертежи и взаимозаменяемые детали позволят собирать винтовки в местных мастерских. Первые партии поступят в гарнизоны архипелага.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_local_rifles.dds",
+    "sprite": "GFX_goal_unique_A01_local_rifles"
+  },
+  {
+    "id": "A01_technical_college",
+    "title": "Батавский технический институт",
+    "description": "Колонии нужны инженеры, способные строить мосты, ремонтировать машины и проектировать корабли. Технический институт подготовит собственные научные кадры.",
+    "subject": "An engineer's open drafting book with brass dividers, small bridge drawing and gear",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An engineer's open drafting book with brass dividers, small bridge drawing and gear. Meaning: Батавский технический институт. Колонии нужны инженеры, способные строить мосты, ремонтировать машины и проектировать корабли. Технический институт подготовит собственные научные кадры.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_technical_college.dds",
+    "sprite": "GFX_goal_unique_A01_technical_college"
+  },
+  {
+    "id": "A01_knil_reform",
+    "title": "Реформа колониальной армии",
+    "description": "Гарнизонная служба не готовит войска к современной войне. Единые учебные программы и постоянные полевые сборы превратят разрозненные части в боеспособную армию.",
+    "subject": "A colonial infantry kepi above crossed period rifles and a drill manual",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A colonial infantry kepi above crossed period rifles and a drill manual. Meaning: Реформа колониальной армии. Гарнизонная служба не готовит войска к современной войне. Единые учебные программы и постоянные полевые сборы превратят разрозненные части в боеспособную армию.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_knil_reform.dds",
+    "sprite": "GFX_goal_unique_A01_knil_reform"
+  },
+  {
+    "id": "A01_island_garrisons",
+    "title": "Гарнизоны островов",
+    "description": "Крупные гарнизоны на Яве не успеют отразить каждую высадку. Подготовим местные резервы и заранее распределим оружие между островами.",
+    "subject": "Three island forts linked by a central stack of reserve rifles",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three island forts linked by a central stack of reserve rifles. Meaning: Гарнизоны островов. Крупные гарнизоны на Яве не успеют отразить каждую высадку. Подготовим местные резервы и заранее распределим оружие между островами.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_island_garrisons.dds",
+    "sprite": "GFX_goal_unique_A01_island_garrisons"
+  },
+  {
+    "id": "A01_marine_brigades",
+    "title": "Морские бригады",
+    "description": "Для возвращения потерянных портов нужны части, способные высадиться с моря. Морские бригады будут обучаться вместе с корабельными командами.",
+    "subject": "A naval infantry cap with crossed rifle and boarding cutlass, short blue ribbon",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A naval infantry cap with crossed rifle and boarding cutlass, short blue ribbon. Meaning: Морские бригады. Для возвращения потерянных портов нужны части, способные высадиться с моря. Морские бригады будут обучаться вместе с корабельными командами.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_marine_brigades.dds",
+    "sprite": "GFX_goal_unique_A01_marine_brigades"
+  },
+  {
+    "id": "A01_jungle_supply",
+    "title": "Островная служба снабжения",
+    "description": "Без продовольствия и боеприпасов оборона джунглей быстро рассыпается. Складские команды и местные проводники наладят доставку за пределами дорог.",
+    "subject": "A woven supply basket with ammunition crates and tropical trail guide's staff",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A woven supply basket with ammunition crates and tropical trail guide's staff. Meaning: Островная служба снабжения. Без продовольствия и боеприпасов оборона джунглей быстро рассыпается. Складские команды и местные проводники наладят доставку за пределами дорог.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_jungle_supply.dds",
+    "sprite": "GFX_goal_unique_A01_jungle_supply"
+  },
+  {
+    "id": "A01_coastal_watch",
+    "title": "Береговая наблюдательная служба",
+    "description": "Наблюдательные посты у проливов предупредят флот о приближении противника. Портовые мастерские обеспечат патрульным судам постоянное обслуживание.",
+    "subject": "Brass spyglass above a coastal signal mast and small lighthouse",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Brass spyglass above a coastal signal mast and small lighthouse. Meaning: Береговая наблюдательная служба. Наблюдательные посты у проливов предупредят флот о приближении противника. Портовые мастерские обеспечат патрульным судам постоянное обслуживание.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_coastal_watch.dds",
+    "sprite": "GFX_goal_unique_A01_coastal_watch"
+  },
+  {
+    "id": "A01_equal_service",
+    "title": "Равные условия службы",
+    "description": "Добровольцы из местного населения должны получать одинаковое жалованье и возможность продвижения. Такие уступки расширят кадровый резерв и ослабят недоверие к Батавии.",
+    "subject": "Two uniform sleeves, one European hand and one Indonesian hand, holding identical pay coins",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Two uniform sleeves, one European hand and one Indonesian hand, holding identical pay coins. Meaning: Равные условия службы. Добровольцы из местного населения должны получать одинаковое жалованье и возможность продвижения. Такие уступки расширят кадровый резерв и ослабят недоверие к Батавии.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_equal_service.dds",
+    "sprite": "GFX_goal_unique_A01_equal_service"
+  },
+  {
+    "id": "A01_colonial_hierarchy",
+    "title": "Сохранить колониальную иерархию",
+    "description": "Часть чиновников считает уступки угрозой порядку. Сохраним их поддержку, приняв политическую цену дальнейшего отчуждения местного населения.",
+    "subject": "A tall governor's administrative seal on top of three descending ledgers",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A tall governor's administrative seal on top of three descending ledgers. Meaning: Сохранить колониальную иерархию. Часть чиновников считает уступки угрозой порядку. Сохраним их поддержку, приняв политическую цену дальнейшего отчуждения местного населения.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_colonial_hierarchy.dds",
+    "sprite": "GFX_goal_unique_A01_colonial_hierarchy"
+  },
+  {
+    "id": "A01_sultans_compact",
+    "title": "Соглашение с султанами",
+    "description": "Местные правители готовы обсуждать совместную оборону при условии уважения их полномочий. Постоянный совет даст переговорам официальный характер.",
+    "subject": "A Malay royal headdress with crescent and rolled diplomatic treaty",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: A Malay royal headdress with crescent and rolled diplomatic treaty. Focus meaning: Соглашение с султанами. Местные правители готовы обсуждать совместную оборону при условии уважения их полномочий. Постоянный совет даст переговорам официальный характер.",
+    "reuse": "story_sultans",
+    "texture": "gfx/interface/goals/focus_unique_A01_sultans_compact.dds",
+    "sprite": "GFX_goal_unique_A01_sultans_compact"
+  },
+  {
+    "id": "A01_colonial_charter",
+    "title": "Батавская хартия",
+    "description": "Представительство островов, общая казна и равенство перед законом станут основой нового договора. Хартия завершит преобразование колониальной администрации в государство архипелага.",
+    "subject": "An unfolded island charter with three colored wax seals beneath a balanced justice scale",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An unfolded island charter with three colored wax seals beneath a balanced justice scale. Meaning: Батавская хартия. Представительство островов, общая казна и равенство перед законом станут основой нового договора. Хартия завершит преобразование колониальной администрации в государство архипелага.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_colonial_charter.dds",
+    "sprite": "GFX_goal_unique_A01_colonial_charter"
+  },
+  {
+    "id": "A01_admiralty_shipyards",
+    "title": "Верфи Адмиралтейства",
+    "description": "Адмиральский режим направит казённые средства на расширение верфей Сурабаи. Контроль над морем потребует постоянного пополнения флота.",
+    "subject": "A wooden ship hull under construction on a slipway, shipwright hammer and ribs visible",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A wooden ship hull under construction on a slipway, shipwright hammer and ribs visible. Meaning: Верфи Адмиралтейства. Адмиральский режим направит казённые средства на расширение верфей Сурабаи. Контроль над морем потребует постоянного пополнения флота.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_admiralty_shipyards.dds",
+    "sprite": "GFX_goal_unique_A01_admiralty_shipyards"
+  },
+  {
+    "id": "A01_naval_general_staff",
+    "title": "Морской генеральный штаб",
+    "description": "Разрозненные эскадры нуждаются в едином плане. Морской генеральный штаб согласует разведку, ремонт и боевое развёртывание.",
+    "subject": "An admiral's plotting table with brass compass and two miniature squadron markers",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An admiral's plotting table with brass compass and two miniature squadron markers. Meaning: Морской генеральный штаб. Разрозненные эскадры нуждаются в едином плане. Морской генеральный штаб согласует разведку, ремонт и боевое развёртывание.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_naval_general_staff.dds",
+    "sprite": "GFX_goal_unique_A01_naval_general_staff"
+  },
+  {
+    "id": "A01_military_industry",
+    "title": "Военные предприятия",
+    "description": "Прямые заказы администрации позволят расширить яванские оружейные мастерские. Военные предприятия получат приоритет при распределении материалов.",
+    "subject": "A weapons factory chimney with crossed machining tools and a shell casing",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A weapons factory chimney with crossed machining tools and a shell casing. Meaning: Военные предприятия. Прямые заказы администрации позволят расширить яванские оружейные мастерские. Военные предприятия получат приоритет при распределении материалов.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_military_industry.dds",
+    "sprite": "GFX_goal_unique_A01_military_industry"
+  },
+  {
+    "id": "A01_defence_in_depth",
+    "title": "Оборона в глубину",
+    "description": "Удержать каждую бухту невозможно. Подготовленные рубежи и резервы позволят сдержать противника после высадки и выиграть время для контрудара.",
+    "subject": "Three staggered earthwork lines with a reserve infantry helmet behind them",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three staggered earthwork lines with a reserve infantry helmet behind them. Meaning: Оборона в глубину. Удержать каждую бухту невозможно. Подготовленные рубежи и резервы позволят сдержать противника после высадки и выиграть время для контрудара.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_defence_in_depth.dds",
+    "sprite": "GFX_goal_unique_A01_defence_in_depth"
+  },
+  {
+    "id": "A01_archipelago_command",
+    "title": "Единое командование архипелага",
+    "description": "Армия и флот должны защищать один архипелаг, а не собственные ведомственные интересы. Единое командование объединит планы обороны.",
+    "subject": "A land officer's baton and naval telescope crossed above connected island shields",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A land officer's baton and naval telescope crossed above connected island shields. Meaning: Единое командование архипелага. Армия и флот должны защищать один архипелаг, а не собственные ведомственные интересы. Единое командование объединит планы обороны.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_archipelago_command.dds",
+    "sprite": "GFX_goal_unique_A01_archipelago_command"
+  },
+  {
+    "id": "A01_wartime_industry",
+    "title": "Мобилизация промышленности",
+    "description": "Мирные контракты уступят место срочным оборонным заказам. Дополнительный выпуск оружия потребует отвлечь рабочих и материалы от гражданских нужд.",
+    "subject": "A steel factory gear surrounding stacked ammunition shells and a shift clock",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A steel factory gear surrounding stacked ammunition shells and a shift clock. Meaning: Мобилизация промышленности. Мирные контракты уступят место срочным оборонным заказам. Дополнительный выпуск оружия потребует отвлечь рабочих и материалы от гражданских нужд.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_wartime_industry.dds",
+    "sprite": "GFX_goal_unique_A01_wartime_industry"
+  },
+  {
+    "id": "A01_secure_sea_lanes",
+    "title": "Защита морских коммуникаций",
+    "description": "Потеря транспортов может оказаться опаснее потери отдельного острова. Пополним торговый тоннаж и отработаем проводку конвоев через проливы.",
+    "subject": "A convoy of merchant steamers guarded by one escort beneath a protective shield",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A convoy of merchant steamers guarded by one escort beneath a protective shield. Meaning: Защита морских коммуникаций. Потеря транспортов может оказаться опаснее потери отдельного острова. Пополним торговый тоннаж и отработаем проводку конвоев через проливы.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_secure_sea_lanes.dds",
+    "sprite": "GFX_goal_unique_A01_secure_sea_lanes"
+  },
+  {
+    "id": "A01_pacific_settlement",
+    "title": "Кабинет после поражения",
+    "description": "Людольф получит мандат на перестройку правительства. Последующие реформы определят, сохранится ли его власть или перейдёт к адмиралам.",
+    "subject": "A cracked naval anchor, lowered Dutch ribbon and armistice document",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: A cracked naval anchor, lowered Dutch ribbon and armistice document. Focus meaning: Кабинет после поражения. Людольф получит мандат на перестройку правительства. Последующие реформы определят, сохранится ли его власть или перейдёт к адмиралам.",
+    "reuse": "story_defeat",
+    "texture": "gfx/interface/goals/focus_unique_A01_pacific_settlement.dds",
+    "sprite": "GFX_goal_unique_A01_pacific_settlement"
+  },
+  {
+    "id": "A01_admiralty_diplomacy",
+    "title": "Дипломатия канонерок",
+    "description": "Адмиралы уверены, что усиленный флот заставит Японию считаться с Батавией. Предложим торговые гарантии с позиции силы, сохранив готовность защищать Борнео.",
+    "subject": "A nineteenth century gunboat's forward cannon overlooking a diplomatic scroll",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A nineteenth century gunboat's forward cannon overlooking a diplomatic scroll. Meaning: Дипломатия канонерок. Адмиралы уверены, что усиленный флот заставит Японию считаться с Батавией. Предложим торговые гарантии с позиции силы, сохранив готовность защищать Борнео.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_admiralty_diplomacy.dds",
+    "sprite": "GFX_goal_unique_A01_admiralty_diplomacy"
+  },
+  {
+    "id": "A01_governors_secretariat",
+    "title": "Секретариат губернатора",
+    "description": "Постоянный секретариат сведёт воедино бюджет, назначения и обязательства перед флотом. Людольф получит собственный инструмент контроля за исполнением решений.",
+    "subject": "A secretary's ornate writing desk with stacked official files and governor's ink stamp",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A secretary's ornate writing desk with stacked official files and governor's ink stamp. Meaning: Секретариат губернатора. Постоянный секретариат сведёт воедино бюджет, назначения и обязательства перед флотом. Людольф получит собственный инструмент контроля за исполнением решений.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_governors_secretariat.dds",
+    "sprite": "GFX_goal_unique_A01_governors_secretariat"
+  },
+  {
+    "id": "A01_officers_audience",
+    "title": "Аудиенция командиров эскадр",
+    "description": "Регулярные доклады командиров дадут губернатору достоверную картину состояния флота. Уважение офицеров нужно заслужить вниманием к их действительным нуждам.",
+    "subject": "Two naval epaulettes and a report folder facing a small governor's ceremonial chair",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Two naval epaulettes and a report folder facing a small governor's ceremonial chair. Meaning: Аудиенция командиров эскадр. Регулярные доклады командиров дадут губернатору достоверную картину состояния флота. Уважение офицеров нужно заслужить вниманием к их действительным нуждам.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_officers_audience.dds",
+    "sprite": "GFX_goal_unique_A01_officers_audience"
+  },
+  {
+    "id": "A01_civilian_procurement",
+    "title": "Гражданский контроль над заказами",
+    "description": "Сметы станут открытыми, а сроки поставок — обязательными. Совет потеряет часть влияния на подрядчиков, но получит предсказуемое снабжение.",
+    "subject": "An open procurement ledger with a magnifying glass, verified invoice and civilian pen",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An open procurement ledger with a magnifying glass, verified invoice and civilian pen. Meaning: Гражданский контроль над заказами. Сметы станут открытыми, а сроки поставок — обязательными. Совет потеряет часть влияния на подрядчиков, но получит предсказуемое снабжение.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_civilian_procurement.dds",
+    "sprite": "GFX_goal_unique_A01_civilian_procurement"
+  },
+  {
+    "id": "A01_naval_budget_compromise",
+    "title": "Компромисс по морскому бюджету",
+    "description": "Губернатор закрепит согласованные расходы на ремонт и обучение флота. В обмен адмиралы признают его право утверждать общий бюджет.",
+    "subject": "A balance scale with a miniature anchor on one pan and treasury coins on the other",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A balance scale with a miniature anchor on one pan and treasury coins on the other. Meaning: Компромисс по морскому бюджету. Губернатор закрепит согласованные расходы на ремонт и обучение флота. В обмен адмиралы признают его право утверждать общий бюджет.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_naval_budget_compromise.dds",
+    "sprite": "GFX_goal_unique_A01_naval_budget_compromise"
+  },
+  {
+    "id": "A01_reconstruction_commission",
+    "title": "Комиссия по восстановлению",
+    "description": "Поражение требует нового кабинета и проверки прежних решений. Комиссия объединит гражданских специалистов, офицеров и представителей островных правителей.",
+    "subject": "A round committee table with engineer's ruler, civilian papers and naval officer cap",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A round committee table with engineer's ruler, civilian papers and naval officer cap. Meaning: Комиссия по восстановлению. Поражение требует нового кабинета и проверки прежних решений. Комиссия объединит гражданских специалистов, офицеров и представителей островных правителей.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_reconstruction_commission.dds",
+    "sprite": "GFX_goal_unique_A01_reconstruction_commission"
+  },
+  {
+    "id": "A01_autonomous_sultanates",
+    "title": "Автономные султанаты",
+    "description": "Кутай, Понтианак и Банджар получат хартии автономии. Их правительства останутся зависимыми от Батавии, а японские ресурсные права будут подтверждены.",
+    "subject": "Three different Malay sultan crowns resting above three autonomy charters",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three different Malay sultan crowns resting above three autonomy charters. Meaning: Автономные султанаты. Кутай, Понтианак и Банджар получат хартии автономии. Их правительства останутся зависимыми от Батавии, а японские ресурсные права будут подтверждены.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_autonomous_sultanates.dds",
+    "sprite": "GFX_goal_unique_A01_autonomous_sultanates"
+  },
+  {
+    "id": "A01_northern_memory",
+    "title": "Память о северном Борнео",
+    "description": "Публичные церемонии дадут горечи поражения общий язык. Правительство должно направить реваншизм на восстановление, прежде чем он станет угрозой самой Батавии.",
+    "subject": "A stone memorial obelisk with a laurel wreath, lowered Dutch pennant and Borneo outline",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A stone memorial obelisk with a laurel wreath, lowered Dutch pennant and Borneo outline. Meaning: Память о северном Борнео. Публичные церемонии дадут горечи поражения общий язык. Правительство должно направить реваншизм на восстановление, прежде чем он станет угрозой самой Батавии.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_northern_memory.dds",
+    "sprite": "GFX_goal_unique_A01_northern_memory"
+  },
+  {
+    "id": "A01_federal_defence_compact",
+    "title": "Общая оборона султанатов",
+    "description": "Отдельные правительства сохранят общие морские коммуникации и согласованный план обороны. Хартии станут основой единого оборонного договора.",
+    "subject": "Three crescent shields joined around a central coastal cannon and anchor",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three crescent shields joined around a central coastal cannon and anchor. Meaning: Общая оборона султанатов. Отдельные правительства сохранят общие морские коммуникации и согласованный план обороны. Хартии станут основой единого оборонного договора.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_federal_defence_compact.dds",
+    "sprite": "GFX_goal_unique_A01_federal_defence_compact"
+  },
+  {
+    "id": "A01_fleet_of_recovery",
+    "title": "Флот восстановления",
+    "description": "Новые доки и ремонтные мастерские позволят восстановить корабельный состав. Реванш требует подготовленных экипажей и исправных судов.",
+    "subject": "A repaired nineteenth century steam frigate rising above shipwright tools and a broken chain",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A repaired nineteenth century steam frigate rising above shipwright tools and a broken chain. Meaning: Флот восстановления. Новые доки и ремонтные мастерские позволят восстановить корабельный состав. Реванш требует подготовленных экипажей и исправных судов.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_fleet_of_recovery.dds",
+    "sprite": "GFX_goal_unique_A01_fleet_of_recovery"
+  },
+  {
+    "id": "A01_ludolf_survives",
+    "title": "Сохранить власть Людольфа",
+    "description": "Людольф предъявит Совету результаты восстановления и добьётся признания гражданского кабинета. Для компромисса необходимы уважение офицеров и достаточный политический вес.",
+    "subject": "A governor's ceremonial chair standing firmly above a civil seal and an intact orange ribbon",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A governor's ceremonial chair standing firmly above a civil seal and an intact orange ribbon. Meaning: Сохранить власть Людольфа. Людольф предъявит Совету результаты восстановления и добьётся признания гражданского кабинета. Для компромисса необходимы уважение офицеров и достаточный политический вес.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_ludolf_survives.dds",
+    "sprite": "GFX_goal_unique_A01_ludolf_survives"
+  },
+  {
+    "id": "A01_negotiated_resignation",
+    "title": "Уйти ради единства",
+    "description": "Если сохранить гражданский кабинет невозможно, Людольф согласится на передачу полномочий Совету. Автономные хартии и план восстановления продолжат действовать.",
+    "subject": "A hand laying down a ceremonial governor's key beside a sealed transfer of office",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A hand laying down a ceremonial governor's key beside a sealed transfer of office. Meaning: Уйти ради единства. Если сохранить гражданский кабинет невозможно, Людольф согласится на передачу полномочий Совету. Автономные хартии и план восстановления продолжат действовать.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A01_negotiated_resignation.dds",
+    "sprite": "GFX_goal_unique_A01_negotiated_resignation"
+  },
+  {
+    "id": "A01_review_borneo_convention",
+    "title": "Пересмотр Борнейской конвенции",
+    "description": "Восстановив управление и флот, Батавия сможет сформулировать требования о пересмотре унизительного договора. Утрата земель останется центром внешней политики.",
+    "subject": "A gloved hand with a sabre cutting a broken chain over a parchment Borneo treaty",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: A gloved hand with a sabre cutting a broken chain over a parchment Borneo treaty. Focus meaning: Пересмотр Борнейской конвенции. Восстановив управление и флот, Батавия сможет сформулировать требования о пересмотре унизительного договора. Утрата земель останется центром внешней политики.",
+    "reuse": "story_revanchism",
+    "texture": "gfx/interface/goals/focus_unique_A01_review_borneo_convention.dds",
+    "sprite": "GFX_goal_unique_A01_review_borneo_convention"
+  },
+  {
+    "id": "A03_imperial_council",
+    "title": "Императорский совет",
+    "description": "Двор в Киото должен определить место империи в раздробленном Тихоокеанском мире. Совет согласует требования промышленников, армии и флота, прежде чем выбрать новый курс.",
+    "subject": "A gold Japanese chrysanthemum crest over a red enamel roundel with a gear and anchor",
+    "prompt": "Use case: stylized-concept. Single isolated national focus icon for Hearts of Iron IV, nineteenth century alternate history. Authentic hand-painted strategy-game emblem, sculpted antique bronze and gunmetal with restrained enamel accents, dramatic readable light and dark planes, crisp dominant silhouette, few large details, professionally finished. Centered compact composition, occupies 85 percent of canvas, readable at 95x85 pixels. Transparent background. No words, letters, numbers, modern weapons, tank, aircraft, rectangular backdrop or UI frame. One emblem only, no contact sheet. Subject: A gold Japanese chrysanthemum crest over a red enamel roundel with a gear and anchor. Focus meaning: Императорский совет. Двор в Киото должен определить место империи в раздробленном Тихоокеанском мире. Совет согласует требования промышленников, армии и флота, прежде чем выбрать новый курс.",
+    "reuse": "pacific_japan",
+    "texture": "gfx/interface/goals/focus_unique_A03_imperial_council.dds",
+    "sprite": "GFX_goal_unique_A03_imperial_council"
+  },
+  {
+    "id": "A03_civil_government",
+    "title": "Гражданский кабинет",
+    "description": "Гражданские министры предлагают укрепить империю через устойчивые финансы и торговлю. Военные сохранят влияние, но не будут определять каждый государственный заказ.",
+    "subject": "A Japanese civilian minister's formal top hat and cabinet portfolio with small chrysanthemum seal",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese civilian minister's formal top hat and cabinet portfolio with small chrysanthemum seal. Meaning: Гражданский кабинет. Гражданские министры предлагают укрепить империю через устойчивые финансы и торговлю. Военные сохранят влияние, но не будут определять каждый государственный заказ.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_civil_government.dds",
+    "sprite": "GFX_goal_unique_A03_civil_government"
+  },
+  {
+    "id": "A03_naval_government",
+    "title": "Морской кабинет",
+    "description": "Морское ведомство берёт на себя руководство кабинетом. Безопасность проливов и снабжение заморских баз станут главными государственными задачами.",
+    "subject": "A Japanese nineteenth century naval peaked cap over an anchor and ministerial portfolio",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese nineteenth century naval peaked cap over an anchor and ministerial portfolio. Meaning: Морской кабинет. Морское ведомство берёт на себя руководство кабинетом. Безопасность проливов и снабжение заморских баз станут главными государственными задачами.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_naval_government.dds",
+    "sprite": "GFX_goal_unique_A03_naval_government"
+  },
+  {
+    "id": "A03_prefectural_reform",
+    "title": "Префектурная реформа",
+    "description": "Общие правила налогообложения и отчётности укрепят связь столицы с префектурами. Правительство получит средства для последовательной программы реформ.",
+    "subject": "Three Japanese prefectural administrative seals connected to a central tax ledger",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three Japanese prefectural administrative seals connected to a central tax ledger. Meaning: Префектурная реформа. Общие правила налогообложения и отчётности укрепят связь столицы с префектурами. Правительство получит средства для последовательной программы реформ.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_prefectural_reform.dds",
+    "sprite": "GFX_goal_unique_A03_prefectural_reform"
+  },
+  {
+    "id": "A03_commercial_diplomacy",
+    "title": "Торговая дипломатия",
+    "description": "Торговые дома способны открыть двери, закрытые для военных делегаций. Поддержим постоянные представительства в главных портах Тихого океана.",
+    "subject": "A Japanese merchant fan, brass globe and pair of diplomatic trade scrolls",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese merchant fan, brass globe and pair of diplomatic trade scrolls. Meaning: Торговая дипломатия. Торговые дома способны открыть двери, закрытые для военных делегаций. Поддержим постоянные представительства в главных портах Тихого океана.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_commercial_diplomacy.dds",
+    "sprite": "GFX_goal_unique_A03_commercial_diplomacy"
+  },
+  {
+    "id": "A03_batavia_convention",
+    "title": "Батавская конвенция",
+    "description": "Морские перевозчики заинтересованы в каучуке и нефти Ост-Индии. Предложим Батавии взаимные гарантии и торговый договор: безопасность поставок может стоить больше, чем завоевание.",
+    "subject": "A treaty scroll tied with Japanese red-white and Dutch orange ribbons, a small rubber leaf",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A treaty scroll tied with Japanese red-white and Dutch orange ribbons, a small rubber leaf. Meaning: Батавская конвенция. Морские перевозчики заинтересованы в каучуке и нефти Ост-Индии. Предложим Батавии взаимные гарантии и торговый договор: безопасность поставок может стоить больше, чем завоевание.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_batavia_convention.dds",
+    "sprite": "GFX_goal_unique_A03_batavia_convention"
+  },
+  {
+    "id": "A03_pacific_prosperity",
+    "title": "Тихоокеанское процветание",
+    "description": "Договор с Батавией обеспечил поставки сырья. Теперь промышленники Кансая смогут вкладывать средства в новые фабрики, рассчитывая на устойчивую торговлю.",
+    "subject": "A merchant steamer, rising factory chimneys and spilling gold coins within a laurel half wreath",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A merchant steamer, rising factory chimneys and spilling gold coins within a laurel half wreath. Meaning: Тихоокеанское процветание. Договор с Батавией обеспечил поставки сырья. Теперь промышленники Кансая смогут вкладывать средства в новые фабрики, рассчитывая на устойчивую торговлю.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_pacific_prosperity.dds",
+    "sprite": "GFX_goal_unique_A03_pacific_prosperity"
+  },
+  {
+    "id": "A03_southern_strategy",
+    "title": "Южная стратегия",
+    "description": "Южные морские пути ведут к сырью и опорным пунктам империи. Штаб флота подготовит общий план действий на случай провала дипломатии.",
+    "subject": "A brass naval compass over a sea chart with an arrow pointing south to tropical islands",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A brass naval compass over a sea chart with an arrow pointing south to tropical islands. Meaning: Южная стратегия. Южные морские пути ведут к сырью и опорным пунктам империи. Штаб флота подготовит общий план действий на случай провала дипломатии.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_southern_strategy.dds",
+    "sprite": "GFX_goal_unique_A03_southern_strategy"
+  },
+  {
+    "id": "A03_resource_commission",
+    "title": "Императорская ресурсная комиссия",
+    "description": "Промышленности нужен точный учёт запасов и поставок. Ресурсная комиссия согласует потребности заводов с возможностями торгового флота.",
+    "subject": "An oil barrel, rubber bale and brass abacus arranged on an imperial inventory ledger",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An oil barrel, rubber bale and brass abacus arranged on an imperial inventory ledger. Meaning: Императорская ресурсная комиссия. Промышленности нужен точный учёт запасов и поставок. Ресурсная комиссия согласует потребности заводов с возможностями торгового флота.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_resource_commission.dds",
+    "sprite": "GFX_goal_unique_A03_resource_commission"
+  },
+  {
+    "id": "A03_batavia_ultimatum",
+    "title": "Ультиматум Батавии",
+    "description": "Военные требуют гарантированного доступа к нефтяным месторождениям Борнео. Батавия получит выбор между ограниченной экономической уступкой и подготовкой к войне.",
+    "subject": "A sealed Japanese ultimatum pierced by a diplomatic dagger above an oil barrel",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A sealed Japanese ultimatum pierced by a diplomatic dagger above an oil barrel. Meaning: Ультиматум Батавии. Военные требуют гарантированного доступа к нефтяным месторождениям Борнео. Батавия получит выбор между ограниченной экономической уступкой и подготовкой к войне.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_batavia_ultimatum.dds",
+    "sprite": "GFX_goal_unique_A03_batavia_ultimatum"
+  },
+  {
+    "id": "A03_southern_bases",
+    "title": "Южные опорные пункты",
+    "description": "Палау станет промежуточной базой между метрополией и южными морями. Новые мастерские и транспортные суда поддержат длительную кампанию.",
+    "subject": "A tropical naval coaling station with stacked coal, mooring bollard and palm tree",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A tropical naval coaling station with stacked coal, mooring bollard and palm tree. Meaning: Южные опорные пункты. Палау станет промежуточной базой между метрополией и южными морями. Новые мастерские и транспортные суда поддержат длительную кампанию.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_southern_bases.dds",
+    "sprite": "GFX_goal_unique_A03_southern_bases"
+  },
+  {
+    "id": "A03_southern_campaign",
+    "title": "Южная кампания",
+    "description": "Батавия отвергла требования империи. Флоту предстоит прикрыть десантную операцию, целью которой станут нефтяные районы Борнео.",
+    "subject": "A nineteenth century Japanese steam warship and rowing landing boat approaching a palm shore",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A nineteenth century Japanese steam warship and rowing landing boat approaching a palm shore. Meaning: Южная кампания. Батавия отвергла требования империи. Флоту предстоит прикрыть десантную операцию, целью которой станут нефтяные районы Борнео.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_southern_campaign.dds",
+    "sprite": "GFX_goal_unique_A03_southern_campaign"
+  },
+  {
+    "id": "A03_southern_reconstruction",
+    "title": "Восстановление южных владений",
+    "description": "Захваченные нефтяные районы должны вернуться к работе. Восстановим мастерские, порты и гражданское производство Восточного Калимантана.",
+    "subject": "An oil derrick being repaired with a crane, carpenter tools and tropical foliage",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An oil derrick being repaired with a crane, carpenter tools and tropical foliage. Meaning: Восстановление южных владений. Захваченные нефтяные районы должны вернуться к работе. Восстановим мастерские, порты и гражданское производство Восточного Калимантана.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_southern_reconstruction.dds",
+    "sprite": "GFX_goal_unique_A03_southern_reconstruction"
+  },
+  {
+    "id": "A03_osaka_industry",
+    "title": "Осакский промышленный район",
+    "description": "Осакские торговые дома и мастерские способны стать основой современной промышленности. Государство поддержит строительство крупных фабрик.",
+    "subject": "A Japanese brick industrial mill with smokestacks, merchant warehouse roof and machine flywheel",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese brick industrial mill with smokestacks, merchant warehouse roof and machine flywheel. Meaning: Осакский промышленный район. Осакские торговые дома и мастерские способны стать основой современной промышленности. Государство поддержит строительство крупных фабрик.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_osaka_industry.dds",
+    "sprite": "GFX_goal_unique_A03_osaka_industry"
+  },
+  {
+    "id": "A03_kansai_railways",
+    "title": "Железные дороги Кансая",
+    "description": "Железные дороги соединят заводы Осаки с промышленными районами Нагои. Регулярные перевозки сократят расходы и ускорят развёртывание войск.",
+    "subject": "A Japanese nineteenth century steam locomotive emerging between two railway station roofs",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese nineteenth century steam locomotive emerging between two railway station roofs. Meaning: Железные дороги Кансая. Железные дороги соединят заводы Осаки с промышленными районами Нагои. Регулярные перевозки сократят расходы и ускорят развёртывание войск.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_kansai_railways.dds",
+    "sprite": "GFX_goal_unique_A03_kansai_railways"
+  },
+  {
+    "id": "A03_hiroshima_arsenal",
+    "title": "Хиросимский арсенал",
+    "description": "Хиросимские мастерские получат оборудование для серийного выпуска оружия. Расширение арсенала сократит зависимость армии от иностранных поставщиков.",
+    "subject": "A crossed rifle barrel and ammunition mould above a Japanese arsenal gate",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A crossed rifle barrel and ammunition mould above a Japanese arsenal gate. Meaning: Хиросимский арсенал. Хиросимские мастерские получат оборудование для серийного выпуска оружия. Расширение арсенала сократит зависимость армии от иностранных поставщиков.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_hiroshima_arsenal.dds",
+    "sprite": "GFX_goal_unique_A03_hiroshima_arsenal"
+  },
+  {
+    "id": "A03_steel_contracts",
+    "title": "Контракты на сталь",
+    "description": "Долгосрочные контракты дадут металлургам уверенность в будущих заказах. Стабильные поставки металла ускорят строительство предприятий.",
+    "subject": "Three steel ingots on a signed commercial contract with a bronze handshake seal",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three steel ingots on a signed commercial contract with a bronze handshake seal. Meaning: Контракты на сталь. Долгосрочные контракты дадут металлургам уверенность в будущих заказах. Стабильные поставки металла ускорят строительство предприятий.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_steel_contracts.dds",
+    "sprite": "GFX_goal_unique_A03_steel_contracts"
+  },
+  {
+    "id": "A03_standard_rifles",
+    "title": "Единый образец винтовки",
+    "description": "Разнородные винтовки затрудняют снабжение полков. Единый образец оружия и общие требования к деталям упростят производство и ремонт.",
+    "subject": "One nineteenth century bolt action rifle above identical cartridge rows and engineering blueprint",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: One nineteenth century bolt action rifle above identical cartridge rows and engineering blueprint. Meaning: Единый образец винтовки. Разнородные винтовки затрудняют снабжение полков. Единый образец оружия и общие требования к деталям упростят производство и ремонт.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_standard_rifles.dds",
+    "sprite": "GFX_goal_unique_A03_standard_rifles"
+  },
+  {
+    "id": "A03_imperial_university",
+    "title": "Императорский технический университет",
+    "description": "Инженерные кафедры должны работать вместе с арсеналами и верфями. Новый университет обеспечит промышленность собственными специалистами.",
+    "subject": "A Japanese university gate with an open engineering textbook and brass drafting triangle",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese university gate with an open engineering textbook and brass drafting triangle. Meaning: Императорский технический университет. Инженерные кафедры должны работать вместе с арсеналами и верфями. Новый университет обеспечит промышленность собственными специалистами.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_imperial_university.dds",
+    "sprite": "GFX_goal_unique_A03_imperial_university"
+  },
+  {
+    "id": "A03_electrical_workshops",
+    "title": "Электротехнические мастерские",
+    "description": "Телеграфы, генераторы и измерительные приборы требуют новых производственных навыков. Создадим предприятия для растущей электротехнической отрасли.",
+    "subject": "A nineteenth century electrical dynamo with copper coils and a telegraph key",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A nineteenth century electrical dynamo with copper coils and a telegraph key. Meaning: Электротехнические мастерские. Телеграфы, генераторы и измерительные приборы требуют новых производственных навыков. Создадим предприятия для растущей электротехнической отрасли.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_electrical_workshops.dds",
+    "sprite": "GFX_goal_unique_A03_electrical_workshops"
+  },
+  {
+    "id": "A03_industrial_power",
+    "title": "Промышленная держава",
+    "description": "Сеть арсеналов должна выпускать оружие в масштабах всей империи. Расширение предприятий Хиросимы завершит первую промышленную программу.",
+    "subject": "A large steel factory gear framing three tall smoking industrial chimneys and a small chrysanthemum",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A large steel factory gear framing three tall smoking industrial chimneys and a small chrysanthemum. Meaning: Промышленная держава. Сеть арсеналов должна выпускать оружие в масштабах всей империи. Расширение предприятий Хиросимы завершит первую промышленную программу.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_industrial_power.dds",
+    "sprite": "GFX_goal_unique_A03_industrial_power"
+  },
+  {
+    "id": "A03_naval_programme",
+    "title": "Императорская кораблестроительная программа",
+    "description": "Разовые закупки не создают сильного флота. Программа строительства в Нагасаки обеспечит регулярную закладку и ремонт кораблей.",
+    "subject": "A steam ironclad ship blueprint beneath a Japanese imperial chrysanthemum and shipwright dividers",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A steam ironclad ship blueprint beneath a Japanese imperial chrysanthemum and shipwright dividers. Meaning: Императорская кораблестроительная программа. Разовые закупки не создают сильного флота. Программа строительства в Нагасаки обеспечит регулярную закладку и ремонт кораблей.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_naval_programme.dds",
+    "sprite": "GFX_goal_unique_A03_naval_programme"
+  },
+  {
+    "id": "A03_kure_yards",
+    "title": "Верфи Куре",
+    "description": "Гавани Куре подходят для создания крупного судостроительного центра. Расширенные доки позволят обслуживать растущую эскадру.",
+    "subject": "A Japanese steam warship in a large dry dock framed by two dockside cranes",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese steam warship in a large dry dock framed by two dockside cranes. Meaning: Верфи Куре. Гавани Куре подходят для создания крупного судостроительного центра. Расширенные доки позволят обслуживать растущую эскадру.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_kure_yards.dds",
+    "sprite": "GFX_goal_unique_A03_kure_yards"
+  },
+  {
+    "id": "A03_merchant_marine",
+    "title": "Торговый флот",
+    "description": "Без торговых судов заморские базы останутся без снабжения. Государственные заказы пополнят тоннаж и подготовят новые экипажи.",
+    "subject": "A nineteenth century cargo steamer with stacked timber crates and Japanese merchant flag pennant",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A nineteenth century cargo steamer with stacked timber crates and Japanese merchant flag pennant. Meaning: Торговый флот. Без торговых судов заморские базы останутся без снабжения. Государственные заказы пополнят тоннаж и подготовят новые экипажи.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_merchant_marine.dds",
+    "sprite": "GFX_goal_unique_A03_merchant_marine"
+  },
+  {
+    "id": "A03_naval_academy",
+    "title": "Морская академия",
+    "description": "Офицерам необходимы общие знания навигации, артиллерии и управления соединениями. Академия введёт единые стандарты подготовки флота.",
+    "subject": "A naval cadet's cap above an open navigation textbook, sextant and brass anchor",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A naval cadet's cap above an open navigation textbook, sextant and brass anchor. Meaning: Морская академия. Офицерам необходимы общие знания навигации, артиллерии и управления соединениями. Академия введёт единые стандарты подготовки флота.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_naval_academy.dds",
+    "sprite": "GFX_goal_unique_A03_naval_academy"
+  },
+  {
+    "id": "A03_island_supply",
+    "title": "Островные конвои",
+    "description": "Снабжение дальних гарнизонов требует точного расписания рейсов и запасных складов. Организуем постоянную службу островных конвоев.",
+    "subject": "Two merchant steamships beside a barrel and crate, a dotted route connecting island silhouettes",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Two merchant steamships beside a barrel and crate, a dotted route connecting island silhouettes. Meaning: Островные конвои. Снабжение дальних гарнизонов требует точного расписания рейсов и запасных складов. Организуем постоянную службу островных конвоев.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_island_supply.dds",
+    "sprite": "GFX_goal_unique_A03_island_supply"
+  },
+  {
+    "id": "A03_fleet_exercises",
+    "title": "Манёвры Объединённого флота",
+    "description": "Корабли должны учиться действовать вместе до начала войны. Большие манёвры проверят связь, разведку и взаимодействие эскадр.",
+    "subject": "Three nineteenth century steam warship silhouettes maneuvering around brass tactical arrows",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: Three nineteenth century steam warship silhouettes maneuvering around brass tactical arrows. Meaning: Манёвры Объединённого флота. Корабли должны учиться действовать вместе до начала войны. Большие манёвры проверят связь, разведку и взаимодействие эскадр.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_fleet_exercises.dds",
+    "sprite": "GFX_goal_unique_A03_fleet_exercises"
+  },
+  {
+    "id": "A03_army_reorganisation",
+    "title": "Реорганизация императорской армии",
+    "description": "Единые штаты и постоянные полевые сборы укрепят армию западных префектур. Опыт частей станет основой общих наставлений.",
+    "subject": "A Japanese infantry officer kepi and crossed swords above orderly regimental roster cards",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A Japanese infantry officer kepi and crossed swords above orderly regimental roster cards. Meaning: Реорганизация императорской армии. Единые штаты и постоянные полевые сборы укрепят армию западных префектур. Опыт частей станет основой общих наставлений.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_army_reorganisation.dds",
+    "sprite": "GFX_goal_unique_A03_army_reorganisation"
+  },
+  {
+    "id": "A03_conscription_register",
+    "title": "Воинский учёт",
+    "description": "Полные списки военнообязанных позволят заранее подготовить пополнение. Резервисты пройдут обучение, прежде чем получат боевые назначения.",
+    "subject": "An open military registration ledger with orderly rows of stamps and a recruit's period cap",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: An open military registration ledger with orderly rows of stamps and a recruit's period cap. Meaning: Воинский учёт. Полные списки военнообязанных позволят заранее подготовить пополнение. Резервисты пройдут обучение, прежде чем получат боевые назначения.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_conscription_register.dds",
+    "sprite": "GFX_goal_unique_A03_conscription_register"
+  },
+  {
+    "id": "A03_landing_forces",
+    "title": "Десантные отряды",
+    "description": "Борьба за острова требует особой подготовки. Десантные отряды освоят высадку, захват причалов и удержание плацдармов.",
+    "subject": "A wooden landing boat carrying period rifles beneath a Japanese naval infantry cap",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A wooden landing boat carrying period rifles beneath a Japanese naval infantry cap. Meaning: Десантные отряды. Борьба за острова требует особой подготовки. Десантные отряды освоят высадку, захват причалов и удержание плацдармов.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_landing_forces.dds",
+    "sprite": "GFX_goal_unique_A03_landing_forces"
+  },
+  {
+    "id": "A03_field_artillery",
+    "title": "Полевая артиллерия",
+    "description": "Пехота нуждается в надёжной огневой поддержке. Расширение оружейных предприятий Сикоку обеспечит основу артиллерийского снабжения.",
+    "subject": "A nineteenth century field cannon with wooden spoked wheels and three brass shells",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A nineteenth century field cannon with wooden spoked wheels and three brass shells. Meaning: Полевая артиллерия. Пехота нуждается в надёжной огневой поддержке. Расширение оружейных предприятий Сикоку обеспечит основу артиллерийского снабжения.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_field_artillery.dds",
+    "sprite": "GFX_goal_unique_A03_field_artillery"
+  },
+  {
+    "id": "A03_expeditionary_staff",
+    "title": "Экспедиционный штаб",
+    "description": "Заморская операция начинается с расчёта грузов и маршрутов. Экспедиционный штаб согласует перевозки, высадку и снабжение войск.",
+    "subject": "A rolled expedition map with officer's binoculars, campaign compass and red route pins",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A rolled expedition map with officer's binoculars, campaign compass and red route pins. Meaning: Экспедиционный штаб. Заморская операция начинается с расчёта грузов и маршрутов. Экспедиционный штаб согласует перевозки, высадку и снабжение войск.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_expeditionary_staff.dds",
+    "sprite": "GFX_goal_unique_A03_expeditionary_staff"
+  },
+  {
+    "id": "A03_combined_operations",
+    "title": "Совместные операции",
+    "description": "Армейские и морские штабы проведут общие учения. Только согласованные действия позволят развить успех после захвата побережья.",
+    "subject": "A crossed army sword and naval anchor above interlocking land and sea tactical arrows",
+    "prompt": "Single isolated HOI4 national focus emblem, nineteenth century. Hand-painted antique bronze and gunmetal, restrained enamel accents, crisp bold silhouette and dramatic highlights, professionally finished strategy game UI. Compact centered design filling canvas, readable at 95x85. Transparent background. No text, numbers, rectangular backdrop, tanks, planes or modern equipment. Subject: A crossed army sword and naval anchor above interlocking land and sea tactical arrows. Meaning: Совместные операции. Армейские и морские штабы проведут общие учения. Только согласованные действия позволят развить успех после захвата побережья.",
+    "reuse": null,
+    "texture": "gfx/interface/goals/focus_unique_A03_combined_operations.dds",
+    "sprite": "GFX_goal_unique_A03_combined_operations"
+  }
+]

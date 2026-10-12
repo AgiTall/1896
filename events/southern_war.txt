@@ -1,0 +1,3 @@
+add_namespace = southern_war
+country_event = { id = southern_war.1 hidden = yes is_triggered_only = yes trigger = { tag = A03 has_war_with = A01 has_idea = A03_southern_blitz } immediate = { add_fuel = 15000 country_event = { id = southern_war.1 days = 30 } } }
+country_event = { id = southern_war.2 title = southern_war.2.t desc = southern_war.2.d picture = GFX_1896_event_navy is_triggered_only = yes trigger = { tag = A01 NOT = { has_war_with = A03 } } option = { name = southern_war.2.a custom_effect_tooltip = A01_japanese_preparations_reduction_tt } }

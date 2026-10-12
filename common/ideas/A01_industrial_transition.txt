@@ -1,0 +1,70 @@
+ideas = { country = {
+ A01_agrarian_schooling = { picture = pacific_industry allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  production_speed_buildings_factor = -0.35
+  production_speed_industrial_complex_factor = -0.1
+  production_speed_arms_factory_factor = -0.1
+  production_speed_dockyard_factor = -0.1
+  industrial_capacity_factory = -0.15
+  production_factory_efficiency_gain_factor = -0.2
+  consumer_goods_expected_value = 0.1
+  recruitable_population = -0.01
+  recruitable_population_factor = -0.35
+  mobilization_speed = -0.5
+  training_time_army_factor = 0.25
+ } }
+ A01_agrarian_labour_transition = { picture = pacific_industry allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  production_speed_buildings_factor = -0.2
+  production_speed_industrial_complex_factor = -0.1
+  production_speed_arms_factory_factor = -0.1
+  production_speed_dockyard_factor = -0.1
+  industrial_capacity_factory = -0.1
+  production_factory_efficiency_gain_factor = -0.1
+  consumer_goods_expected_value = 0.05
+  recruitable_population = -0.01
+  recruitable_population_factor = -0.25
+  mobilization_speed = -0.3
+  training_time_army_factor = 0.15
+ } }
+ A01_dutch_primary_schooling = { picture = pacific_industry allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  production_factory_efficiency_gain_factor = 0.05
+ } }
+ A01_factory_workforce = { picture = pacific_industry allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  industrial_capacity_factory = 0.05
+  production_factory_efficiency_gain_factor = 0.05
+ } }
+ A01_standardised_industry = { picture = pacific_industry allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  industrial_capacity_factory = 0.1
+  production_factory_efficiency_gain_factor = 0.1
+  production_factory_max_efficiency_factor = 0.05
+ } }
+ A01_industrial_power_grid = { picture = pacific_industry allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  production_speed_buildings_factor = 0.1
+ } }
+ A01_knil_field_training = { picture = pacific_army allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  army_org_factor = 0.05
+  training_time_army_factor = -0.1
+  army_defence_factor = 0.05
+ } }
+ A01_knil_reformed = { picture = pacific_army allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  army_org_factor = 0.1
+  training_time_army_factor = -0.15
+  army_defence_factor = 0.05
+  supply_consumption_factor = -0.1
+ } }
+ A01_knil_professional = { picture = pacific_army allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  army_org_factor = 0.15
+  training_time_army_factor = -0.15
+  army_defence_factor = 0.05
+  supply_consumption_factor = -0.1
+ } }
+ A01_marine_training = { picture = pacific_army allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  special_forces_cap = 0.05
+ } }
+ A01_local_armaments = { picture = pacific_army allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  production_speed_arms_factory_factor = 0.1
+  production_factory_max_efficiency_factor = 0.05
+ } }
+ A01_escort_coordination = { picture = pacific_industry allowed = { original_tag = A01 } allowed_civil_war = { always = yes } removal_cost = -1 modifier = {
+  navy_org_factor = 0.05
+ } }
+} }

@@ -1,0 +1,1 @@
+characters = { PPM_canon_leader = { name = PPM_canon_leader_name portraits = { civilian = { large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds" } } country_leader = { ideology = despotism expire = "1965.1.1.1" traits = { } } } }

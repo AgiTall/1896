@@ -1,0 +1,81 @@
+A01_raise_royal_guard = {
+ if = { limit = { NOT = { has_country_flag = A01_guard_units_raised } }
+  set_country_flag = A01_guard_units_raised
+  load_oob = A01_royal_guard
+ }
+}
+A01_defeat_admiralty = {
+ set_country_flag = A01_admiralty_defeated
+ remove_mission = A01_admiralty_deadline
+ remove_ideas = A01_admiralty_obstruction
+ retire_character = A01_council_of_admirals
+ set_country_flag = A01_admirals_council_abolished
+ remove_dynamic_modifier = { modifier = A01_admirals_council }
+}
+A01_start_royal_election = {
+ if = { limit = { NOT = { has_country_flag = A01_royal_campaign_active } }
+  remove_mission = A01_royal_election_term
+  set_country_flag = A01_royal_campaign_active
+  set_variable = { A01_vote_constitutional = 3 }
+  set_variable = { A01_vote_order = 3 }
+  set_variable = { A01_vote_indonesian = 3 }
+  add_to_variable = { var = A01_vote_indonesian value = A01_civic_support }
+  if = { limit = { has_country_flag = A01_princes_guaranteed } add_to_variable = { A01_vote_order = 2 } }
+  if = { limit = { has_country_flag = A01_equal_citizenship_established } add_to_variable = { A01_vote_indonesian = 2 } }
+  if = { limit = { has_country_flag = A01_civic_electoral_law } add_to_variable = { A01_vote_constitutional = 1 } add_to_variable = { A01_vote_indonesian = 1 } }
+  if = { limit = { has_country_flag = A01_territorial_electoral_law } add_to_variable = { A01_vote_order = 2 } }
+  activate_mission = A01_royal_election_campaign
+  country_event = { id = A01_royal_story.10 days = 1 }
+ }
+}
+A01_finish_royal_election = {
+ clr_country_flag = A01_royal_campaign_active
+ remove_mission = A01_royal_election_campaign
+ remove_ideas = A01_pm_constitutional
+ remove_ideas = A01_pm_order
+ remove_ideas = A01_pm_indonesian
+ clr_country_flag = A01_pm_constitutional_winner
+ clr_country_flag = A01_pm_order_winner
+ clr_country_flag = A01_pm_indonesian_winner
+ if = { limit = {
+   check_variable = { var = A01_vote_indonesian value = A01_vote_order compare = greater_than_or_equals }
+   check_variable = { var = A01_vote_indonesian value = A01_vote_constitutional compare = greater_than_or_equals }
+  } add_ideas = A01_pm_indonesian set_country_flag = A01_pm_indonesian_winner
+ }
+ else_if = { limit = { check_variable = { var = A01_vote_order value = A01_vote_constitutional compare = greater_than_or_equals } }
+  add_ideas = A01_pm_order set_country_flag = A01_pm_order_winner
+ }
+ else = { add_ideas = A01_pm_constitutional set_country_flag = A01_pm_constitutional_winner }
+ set_country_flag = A01_prime_minister_elected
+ add_stability = 0.03
+ activate_mission = A01_royal_election_term
+ country_event = { id = A01_royal_story.11 days = 1 }
+}
+A01_charter_crown_sultanates = {
+if = { limit = { owns_state = 1055 NOT = { country_exists = A11 } }
+ 1055 = { add_core_of = A11 }
+ A11 = { transfer_state = 1055 set_politics = { ruling_party = neutrality elections_allowed = no } }
+ set_autonomy = { target = A11 autonomy_state = autonomy_puppet freedom_level = 0.35 }
+}
+if = { limit = { A11 = { is_subject_of = A01 } } A11 = { add_ideas = A01_princely_compact } }
+if = { limit = { owns_state = 334 NOT = { country_exists = A12 } }
+ 334 = { add_core_of = A12 }
+ A12 = { transfer_state = 334 set_politics = { ruling_party = neutrality elections_allowed = no } }
+ set_autonomy = { target = A12 autonomy_state = autonomy_puppet freedom_level = 0.35 }
+}
+if = { limit = { A12 = { is_subject_of = A01 } } A12 = { add_ideas = A01_princely_compact } }
+if = { limit = { owns_state = 1022 NOT = { country_exists = A13 } }
+ 1022 = { add_core_of = A13 }
+ A13 = { transfer_state = 1022 set_politics = { ruling_party = neutrality elections_allowed = no } }
+ set_autonomy = { target = A13 autonomy_state = autonomy_puppet freedom_level = 0.35 }
+}
+if = { limit = { A13 = { is_subject_of = A01 } } A13 = { add_ideas = A01_princely_compact } }
+if = { limit = { owns_state = 1050 NOT = { country_exists = A14 } }
+ 1050 = { add_core_of = A14 }
+ A14 = { transfer_state = 1050 set_politics = { ruling_party = neutrality elections_allowed = no } }
+ set_autonomy = { target = A14 autonomy_state = autonomy_puppet freedom_level = 0.35 }
+}
+if = { limit = { A14 = { is_subject_of = A01 } } A14 = { add_ideas = A01_princely_compact } }
+if = { limit = { has_country_flag = A01_borneo_treaty } A01_borneo_resource_rights_effect = yes }
+set_country_flag = A01_sultanates_chartered
+}

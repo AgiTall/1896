@@ -1,0 +1,8 @@
+characters = {
+ A01_industrial_advisory_council = { name = A01_industrial_advisory_council_name
+  advisor = { slot = political_advisor idea_token = A01_industrial_advisory_council allowed = { original_tag = A01 } available = { has_completed_focus = A01_technical_college } traits = { captain_of_industry } cost = 150 }
+ }
+ A01_knil_inspectorate = { name = A01_knil_inspectorate_name
+  advisor = { slot = army_chief idea_token = A01_knil_inspectorate allowed = { original_tag = A01 } available = { has_completed_focus = A01_local_nco_schools } traits = { army_chief_defensive_1 } cost = 100 }
+ }
+}

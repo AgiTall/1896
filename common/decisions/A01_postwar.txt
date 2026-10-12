@@ -1,0 +1,65 @@
+A01_new_republic = {
+ A01_wtc_reconstruction_credit = {
+  icon = generic_political_discourse cost = 75 days_re_enable = 90
+  available = { has_completed_focus = A01_wtc_oil_and_rubber_offer country_exists = A04 }
+  complete_effect = { add_ideas = A01_wtc_credit add_to_variable = { A01_wtc_influence = 20 } clamp_variable = { var = A01_wtc_influence min = 0 max = 100 } add_political_power = 100
+   if = { limit = { check_variable = { A01_wtc_influence > 49 } } add_ideas = A01_wtc_concessions }
+   else = { remove_ideas = A01_wtc_concessions }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ A01_wtc_port_concession = {
+  icon = generic_political_discourse cost = 40 days_re_enable = 120
+  available = { has_idea = A01_wtc_credit country_exists = A04 }
+  complete_effect = { add_to_variable = { A01_wtc_influence = 30 } clamp_variable = { var = A01_wtc_influence min = 0 max = 100 } capital_scope = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+   if = { limit = { check_variable = { A01_wtc_influence > 49 } } add_ideas = A01_wtc_concessions }
+   else = { remove_ideas = A01_wtc_concessions }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ A01_audit_wtc_contracts = {
+  icon = generic_political_discourse cost = 100 days_re_enable = 90
+  available = { check_variable = { A01_wtc_influence > 0 } }
+  complete_effect = { subtract_from_variable = { A01_wtc_influence = 15 } clamp_variable = { var = A01_wtc_influence min = 0 max = 100 } add_stability = 0.01
+   if = { limit = { check_variable = { A01_wtc_influence > 49 } } add_ideas = A01_wtc_concessions }
+   else = { remove_ideas = A01_wtc_concessions }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ A01_veterans_register = {
+  icon = generic_political_discourse cost = 50 days_re_enable = 90
+  available = { has_country_flag = A01_families_compensated }
+  complete_effect = { add_stability = 0.02 add_war_support = 0.02
+   if = { limit = { check_variable = { A01_wtc_influence > 49 } } add_ideas = A01_wtc_concessions }
+   else = { remove_ideas = A01_wtc_concessions }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ A01_bilingual_ballots = {
+  icon = generic_political_discourse cost = 50 days_re_enable = 90
+  available = { has_country_flag = A01_presidency_established }
+  complete_effect = { add_stability = 0.02 add_political_power = 15
+   if = { limit = { check_variable = { A01_wtc_influence > 49 } } add_ideas = A01_wtc_concessions }
+   else = { remove_ideas = A01_wtc_concessions }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ A01_coalition_roundtable = {
+  icon = generic_political_discourse cost = 60 days_re_enable = 90
+  available = { has_country_flag = A01_first_election_held }
+  complete_effect = { add_stability = 0.03 clr_country_flag = A01_exclusion_scandal set_country_flag = A01_equal_cabinet
+   if = { limit = { check_variable = { A01_wtc_influence > 49 } } add_ideas = A01_wtc_concessions }
+   else = { remove_ideas = A01_wtc_concessions }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ A01_sultanate_conference = {
+  icon = generic_political_discourse cost = 45 days_re_enable = 120
+  available = { has_country_flag = A01_sultanates_chartered }
+  complete_effect = { add_stability = 0.02 add_political_power = 15
+   if = { limit = { check_variable = { A01_wtc_influence > 49 } } add_ideas = A01_wtc_concessions }
+   else = { remove_ideas = A01_wtc_concessions }
+  }
+  ai_will_do = { factor = 1 }
+ }
+}

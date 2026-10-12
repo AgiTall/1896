@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "focus_counts": {
+    "A01": 123,
+    "A03": 32
+  },
+  "preserved_unique_textures": 84,
+  "royal_focus_sprites": 46,
+  "royal_art_subjects": 8,
+  "checks": [
+    "All 84 earlier generated textures retain DDS alpha and shine sprites",
+    "Every current focus sprite resolves",
+    "Non-royal focus gameplay and layout preserved against task backup",
+    "Royal emblems have transparent native-size DDS and shine effects",
+    "Original grayscale balance emblems preserved"
+  ],
+  "runtime": "In-game focus rendering not inspected."
+}

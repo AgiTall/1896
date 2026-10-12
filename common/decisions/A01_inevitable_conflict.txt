@@ -1,0 +1,197 @@
+A01_inevitable_conflict_category = {
+ A01_japanese_invasion_countdown = {
+  priority = 100
+  icon = generic_prepare_civil_war
+  days_mission_timeout = 288
+  fire_only_once = yes
+  selectable_mission = no
+  is_good = no
+  available = {
+   hidden_trigger = {
+    always = no
+   }
+  }
+  activation = {
+   always = no
+  }
+  visible = {
+   has_country_flag = A01_island_defence_started
+   NOT = {
+    has_country_flag = A01_japanese_invasion_begun
+   }
+   NOT = {
+    has_country_flag = A01_expansion_resolved
+   }
+  }
+  cancel_trigger = {
+   OR = {
+    has_war_with = A03
+    has_country_flag = pacific_trade_accord
+    has_country_flag = A01_expansion_resolved
+    NOT = {
+     country_exists = A03
+    }
+   }
+  }
+  cancel_if_not_visible = yes
+  timeout_effect = {
+   A03 = {
+    A03_start_southern_war_effect = yes
+   }
+  }
+ }
+ A01_japanese_expansion = {
+  priority = 110
+  icon = generic_prepare_civil_war
+  days_mission_timeout = 180
+  fire_only_once = yes
+  selectable_mission = no
+  is_good = no
+  available = {
+   hidden_trigger = {
+    always = no
+   }
+  }
+  activation = {
+   always = no
+  }
+  visible = {
+   has_war_with = A03
+   NOT = {
+    has_country_flag = A01_expansion_resolved
+   }
+  }
+  cancel_trigger = {
+   OR = {
+    NOT = {
+     has_war_with = A03
+    }
+    has_country_flag = A01_expansion_resolved
+   }
+  }
+  cancel_if_not_visible = yes
+  timeout_effect = {
+   A01_resolve_expansion_effect = yes
+  }
+ }
+ A01_lease_brunei = {
+  icon = generic_political_discourse
+  cost = 50
+  fire_only_once = yes
+  visible = {
+   has_active_mission = A01_japanese_invasion_countdown
+  }
+  available = {
+   owns_state = 1023
+   has_full_control_of_state = 1023
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  complete_effect = {
+   set_country_flag = A01_brunei_lease_active
+   A03 = {
+    transfer_state = 1023
+    add_political_power = 25
+   }
+   A01_delay_expansion_180_effect = yes
+   country_event = {
+    id = expansion.13
+    days = 180
+   }
+   A03 = {
+    country_event = {
+     id = expansion.11
+     hours = 1
+    }
+   }
+  }
+  ai_will_do = {
+   base = 1
+  }
+ }
+ A01_rubber_concession = {
+  icon = generic_political_discourse
+  cost = 35
+  fire_only_once = yes
+  visible = {
+   has_active_mission = A01_japanese_invasion_countdown
+  }
+  available = {
+   owns_state = 1055
+   has_full_control_of_state = 1055
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  complete_effect = {
+   give_resource_rights = {
+    receiver = A03
+    state = 1055
+    resources = {
+     rubber
+    }
+   }
+   set_country_flag = A01_temporary_rubber_concession
+   add_days_mission_timeout = {
+    mission = A01_japanese_invasion_countdown
+    days = 60
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_invasion_countdown
+     days = 60
+    }
+   }
+   country_event = {
+    id = expansion.12
+    days = 180
+   }
+  }
+  ai_will_do = {
+   base = 1
+  }
+ }
+ A01_supply_concession = {
+  icon = generic_political_discourse
+  cost = 25
+  fire_only_once = yes
+  visible = {
+   has_active_mission = A01_japanese_invasion_countdown
+  }
+  available = {
+   has_equipment = {
+    infantry_equipment > 999
+   }
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  complete_effect = {
+   add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -1000
+   }
+   A03 = {
+    add_equipment_to_stockpile = {
+     type = infantry_equipment_0
+     amount = 1000
+     producer = A01
+    }
+   }
+   add_days_mission_timeout = {
+    mission = A01_japanese_invasion_countdown
+    days = 30
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_invasion_countdown
+     days = 30
+    }
+   }
+  }
+  ai_will_do = {
+   base = 1
+  }
+ }
+}

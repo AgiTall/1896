@@ -1,0 +1,13 @@
+{
+  "archipelago_shipping": "focus_INS_economic_integration",
+  "batavia_docks": "focus_INS_naval_program",
+  "rubber_processing": "focus_generic_rubber_plantations",
+  "knil_reform": "focus_INS_reform_knil",
+  "island_garrisons": "focus_INS_infantry_training_borneo",
+  "marine_brigades": "focus_INS_elevate_elite_infantry",
+  "jungle_supply": "focus_INS_knil_engineers",
+  "coastal_watch": "focus_INS_request_naval_control",
+  "admiralty_shipyards": "focus_INS_naval_program",
+  "military_industry": "focus_INS_artillerie_inrichtingen",
+  "secure_sea_lanes": "focus_INS_request_naval_control"
+}

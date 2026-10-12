@@ -1,0 +1,51 @@
+bookmarks = {
+	bookmark = {
+		name = "SONG_EARTH_1893_NAME"
+		desc = "SONG_EARTH_1893_DESC"
+		date = 1893.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "A01"
+		default = yes
+		sort_unplayed_first = no
+		scrollable_country_list = yes
+
+		"A01" = {
+ history = "A01_PACIFIC_START_DESC"
+ ideology = neutrality
+ ideas = { A01_wilhelmina }
+ focuses = { A01_constitution A01_java_development A01_knil_reform }
+}
+"A03" = {
+ history = "A03_PACIFIC_START_DESC"
+ ideology = neutrality
+ ideas = { }
+ focuses = { A03_imperial_council A03_osaka_industry A03_naval_programme }
+}
+
+ "A02" = { history = "A02_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+
+ "A06" = { history = "A06_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+
+ "A07" = { history = "A07_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+
+ "A04" = { history = "A04_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+
+ "---" = { history = "PZ_OTHER_COUNTRIES_DESC" }
+ "A08" = { minor = yes history = "A08_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "A09" = { minor = yes history = "A09_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "A05" = { minor = yes history = "A05_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PCF" = { minor = yes history = "PCF_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PAZ" = { minor = yes history = "PAZ_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PHR" = { minor = yes history = "PHR_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "A10" = { minor = yes history = "A10_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PSL" = { minor = yes history = "PSL_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PHW" = { minor = yes history = "PHW_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PSY" = { minor = yes history = "PSY_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PCB" = { minor = yes history = "PCB_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+ "PPN" = { minor = yes history = "PPN_CANON_START_DESC" ideology = neutrality ideas = { } focuses = { } }
+
+		effect = {
+			randomize_weather = 22345
+		}
+	}
+}

@@ -1,0 +1,1 @@
+opinion_modifiers = { A01_royal_reassurances = { value = 5 } }

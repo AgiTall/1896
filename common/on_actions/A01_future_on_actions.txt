@@ -1,0 +1,16 @@
+on_actions = {
+ on_daily = { effect = { A01 = {
+  if = { limit = {
+   has_country_flag = A01_dismissal_debate_active
+   has_country_flag = A01_future_debate_open
+   NOT = { has_country_flag = A01_political_path_chosen }
+   NOT = { has_country_flag = A01_ludolf_crisis_resolved }
+   NOT = { has_country_flag = A01_royal_offer_sent }
+   NOT = { power_balance_value = { id = A01_ludolf_admirals_balance value < -0.1 } }
+   NOT = { power_balance_value = { id = A01_ludolf_admirals_balance value > 0.1 } }
+  }
+   set_country_flag = A01_royal_offer_sent
+   country_event = { id = A01_future.16 days = 7 }
+  }
+ } } }
+}

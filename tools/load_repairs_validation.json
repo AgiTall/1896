@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "Registered wartime and peace-request categories",
+    "No effects in decision conditions",
+    "45/30/20-day extensions keep both clocks synchronised",
+    "Peace-request conditions and repeat guard",
+    "RU/EN decision and peace-event labels",
+    "Sabah localisation BOM",
+    "History-only admiral recruitment",
+    "Removed invalid Croatian resistance"
+  ],
+  "engine_reload": "Not performed; the access violation is not proven fixed."
+}

@@ -1,0 +1,224 @@
+add_namespace = pacific
+country_event = {
+ id = pacific.1
+ trigger = {
+  country_exists = A01
+  NOT = {
+   has_war_with = A01
+  }
+  NOT = {
+   has_country_flag = pacific_trade_accord
+  }
+ }
+ title = pacific.1.t
+ desc = pacific.1.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ option = {
+  name = pacific.1.a
+  ai_chance = {
+   factor = 0
+  }
+  set_country_flag = pacific_trade_accord
+  add_ideas = pacific_trade_accord_idea
+  diplomatic_relation = {
+   country = A01
+   relation = non_aggression_pact
+  }
+  A01 = {
+   set_country_flag = pacific_trade_accord
+   add_ideas = pacific_trade_accord_idea
+   country_event = {
+    id = pacific.2
+    days = 1
+   }
+   A01_cancel_preparations_for_agreement_effect = yes
+  }
+  A01_cancel_preparations_for_agreement_effect = yes
+ }
+ option = {
+  name = pacific.1.b
+  ai_chance = {
+   factor = 100
+  }
+  A01 = {
+   country_event = {
+    id = A01_japan.1
+    days = 1
+   }
+  }
+  A01 = {
+
+  }
+ }
+}
+country_event = {
+ id = pacific.2
+ title = pacific.2.t
+ desc = pacific.2.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ option = {
+  name = pacific.2.a
+  ai_chance = {
+   factor = 100
+  }
+  add_stability = 0.05
+ }
+}
+country_event = {
+ id = pacific.3
+ trigger = {
+  country_exists = A03
+  NOT = {
+   has_war_with = A03
+  }
+  NOT = {
+   has_country_flag = pacific_trade_accord
+  }
+ }
+ title = pacific.3.t
+ desc = pacific.3.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = pacific.3.a
+  ai_chance = {
+   factor = 65
+  }
+  set_country_flag = pacific_trade_accord
+  add_ideas = pacific_trade_accord_idea
+  A03 = {
+   set_country_flag = pacific_trade_accord
+   add_ideas = pacific_trade_accord_idea
+   A01_cancel_preparations_for_agreement_effect = yes
+  }
+  diplomatic_relation = {
+   country = A03
+   relation = non_aggression_pact
+  }
+  A01_cancel_preparations_for_agreement_effect = yes
+ }
+ option = {
+  name = pacific.3.b
+  ai_chance = {
+   factor = 35
+  }
+  A03 = {
+   add_political_power = 50
+  }
+ }
+}
+country_event = {
+ id = pacific.4
+ trigger = {
+  always = no # Retired focus event; the shared opening clock owns escalation.
+  country_exists = A03
+  NOT = {
+   has_war_with = A03
+  }
+  NOT = {
+   has_country_flag = pacific_trade_accord
+  }
+ }
+ title = pacific.4.t
+ desc = pacific.4.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = pacific.4.a
+  ai_chance = {
+   factor = 30
+  }
+  set_country_flag = pacific_trade_accord
+  add_ideas = pacific_trade_accord_idea
+  A03 = {
+   set_country_flag = pacific_trade_accord
+   add_ideas = pacific_trade_accord_idea
+   A01_cancel_preparations_for_agreement_effect = yes
+  }
+  diplomatic_relation = {
+   country = A03
+   relation = non_aggression_pact
+  }
+  add_political_power = -75
+  A01_cancel_preparations_for_agreement_effect = yes
+ }
+ option = {
+  name = pacific.4.b
+  ai_chance = {
+   factor = 70
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_country_flag = A01_expansion_resolved
+    }
+   }
+   set_country_flag = A01_refused_japanese_ultimatum
+   set_country_flag = A01_island_defence_started
+   A03 = {
+    A03_prepare_southern_war_effect = yes
+   }
+  }
+ }
+}
+country_event = {
+ id = pacific.5
+ title = pacific.5.t
+ desc = pacific.5.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ trigger = {
+  tag = A03
+  country_exists = A01
+  NOT = {
+   has_war_with = A01
+  }
+  NOT = {
+   has_country_flag = pacific_trade_accord
+  }
+  A01 = {
+   NOT = {
+    has_country_flag = A01_expansion_resolved
+   }
+  }
+ }
+ option = {
+  name = pacific.5.a
+  ai_chance = {
+   factor = 100
+  }
+  A01 = {
+   country_event = {
+    id = pacific.6
+    days = 1
+   }
+  }
+ }
+}
+country_event = {
+ id = pacific.6
+ title = pacific.6.t
+ desc = pacific.6.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = {
+  tag = A01
+  NOT = {
+   has_war_with = A03
+  }
+  NOT = {
+   has_country_flag = A01_expansion_resolved
+  }
+ }
+ option = {
+  name = A01_japan.1.a
+  set_country_flag = A01_refused_japanese_ultimatum
+  country_event = {
+   id = A01_japan.2
+   days = 14
+   random_days = 16
+  }
+ }
+}

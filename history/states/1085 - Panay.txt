@@ -1,0 +1,26 @@
+state = {
+ id = 1085
+ name = "STATE_1085"
+ manpower = 550000
+ state_category = rural
+ history = {
+  owner = A10
+  add_core_of = PPN
+  buildings = {
+   infrastructure = 2
+   7423 = {
+    naval_base = 1
+   }
+  }
+  victory_points = {
+   7423
+   3
+  }
+ }
+ provinces = {
+  1368
+  7423
+  10302
+ }
+ local_supplies = 0.0
+}

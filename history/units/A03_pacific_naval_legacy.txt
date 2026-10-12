@@ -1,0 +1,16 @@
+units = { fleet = { name = "A03 Pacific Fleet" naval_base = 9998 task_force = { name = "A03 Main Squadron" location = 9998
+ship = { name = "A03 Cruiser 1" definition = light_cruiser start_experience_factor = 0.20 equipment = { light_cruiser_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Cruiser 2" definition = light_cruiser start_experience_factor = 0.20 equipment = { light_cruiser_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Cruiser 3" definition = light_cruiser start_experience_factor = 0.20 equipment = { light_cruiser_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Cruiser 4" definition = light_cruiser start_experience_factor = 0.20 equipment = { light_cruiser_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 1" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 2" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 3" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 4" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 5" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 6" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 7" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 8" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 9" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+ship = { name = "A03 Escort 10" definition = destroyer start_experience_factor = 0.20 equipment = { destroyer_1 = { amount = 1 owner = A03  } } }
+} } }

@@ -1,0 +1,136 @@
+ideas = {
+ country = {
+  A01_wtc_recovery_guarantees = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+    production_factory_max_efficiency_factor = -0.05
+   }
+  }
+ }
+ hidden_ideas = {
+  A01_postwar_destruction = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_unpaid_families = {
+   picture = story_sultans
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_postwar_budget_burden = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_civilian_reform_mandate = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_restored_port_network = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_recovery_investment_idea = {
+   picture = pacific_industry
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_army_transition = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_joint_officer_corps = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_federal_defence_command_idea = {
+   picture = pacific_army
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_island_representation_idea = {
+   picture = story_sultans
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_federal_constitution_idea = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+  A01_accountable_civil_service = {
+   picture = story_ludolf
+   allowed = {
+    original_tag = A01
+   }
+   removal_cost = -1
+   modifier = {
+
+   }
+  }
+ }
+}

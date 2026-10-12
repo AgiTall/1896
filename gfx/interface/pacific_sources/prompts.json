@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "style": "Single standalone HOI4 national focus / national spirit emblem, hand-painted worn bronze and steel relief, readable small silhouette, transparent background, no text.",
+  "subjects": {
+    "batavia": "Dutch East Indies bronze anchor, teal shield and rubber leaves",
+    "japan": "gold chrysanthemum, steel cog, crimson enamel and anchors",
+    "industry": "steel cog, bronze steam locomotive wheel and laurel",
+    "army": "coastal fortress, crossed period rifles and bronze shield"
+  }
+}

@@ -1,0 +1,371 @@
+focus_tree = {
+ id = A03_focus
+ country = { factor = 0 modifier = { add = 100 tag = A03 } }
+ default = no
+ continuous_focus_position = { x = 1400 y = 1100 }
+
+ focus = {
+  id = A03_imperial_council
+  icon = GFX_goal_unique_A03_imperial_council
+  x = 12
+  y = 0
+  cost = 5
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_political_power = 100 }
+ }
+
+ focus = {
+  id = A03_civil_government
+  icon = GFX_goal_unique_A03_civil_government
+  x = 10
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_imperial_council }
+  mutually_exclusive = { focus = A03_naval_government }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_stability = 0.05 add_ideas = A03_civil_government }
+ }
+
+ focus = {
+  id = A03_naval_government
+  icon = GFX_goal_unique_A03_naval_government
+  x = 14
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_imperial_council }
+  mutually_exclusive = { focus = A03_civil_government }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_war_support = 0.10 add_ideas = A03_naval_government }
+ }
+
+ focus = {
+  id = A03_prefectural_reform
+  icon = GFX_goal_unique_A03_prefectural_reform
+  x = 10
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_civil_government }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_political_power = 100 add_stability = 0.05 }
+ }
+
+ focus = {
+  id = A03_commercial_diplomacy
+  icon = GFX_goal_unique_A03_commercial_diplomacy
+  x = 10
+  y = 3
+  cost = 5
+  prerequisite = { focus = A03_prefectural_reform }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_ideas = A03_commercial_network }
+ }
+
+ focus = {
+  id = A03_batavia_convention
+  icon = GFX_goal_unique_A03_batavia_convention
+  x = 10
+  y = 4
+  cost = 5
+  prerequisite = { focus = A03_commercial_diplomacy }
+  available = { country_exists = A01 NOT = { has_war_with = A01 } }
+  cancel_if_invalid = yes
+  ai_will_do = { factor = 1 }
+  completion_reward = { A01 = { country_event = { id = pacific.3 days = 2 } } }
+ }
+
+ focus = {
+  id = A03_pacific_prosperity
+  icon = GFX_goal_unique_A03_pacific_prosperity
+  x = 10
+  y = 5
+  cost = 10
+  prerequisite = { focus = A03_batavia_convention }
+  available = { has_country_flag = pacific_trade_accord }
+  cancel_if_invalid = yes
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 531 } 531 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 2 instant_build = yes } } }add_stability = 0.05 }
+ }
+
+ focus = {
+  id = A03_southern_strategy
+  icon = GFX_goal_unique_A03_southern_strategy
+  x = 14
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_naval_government }
+  ai_will_do = { factor = 1 }
+  completion_reward = { navy_experience = 20 set_country_flag = A03_southern_strategy }
+ }
+
+ focus = {
+  id = A03_resource_commission
+  icon = GFX_goal_unique_A03_resource_commission
+  x = 14
+  y = 3
+  cost = 5
+  prerequisite = { focus = A03_southern_strategy }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_ideas = A03_resource_commission }
+ }
+
+
+
+
+ focus = {
+  id = A03_southern_bases
+  icon = GFX_goal_unique_A03_southern_bases
+  x = 16
+  y = 4
+  cost = 5
+  prerequisite = { focus = A03_resource_commission }
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 647 } 647 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } } }add_equipment_to_stockpile = { type = convoy_1 amount = 25 producer = A03 } }
+ }
+
+ focus = {
+  id = A03_southern_campaign
+  icon = GFX_goal_unique_A03_southern_campaign
+  x = 14
+  y = 5
+  cost = 10
+  prerequisite = { focus = A03_resource_commission }
+  available = { country_exists = A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = pacific_trade_accord } A01 = { has_country_flag = A01_refused_japanese_ultimatum } }
+  cancel_if_invalid = yes
+  ai_will_do = { factor = 1 }
+  completion_reward = { A01 = { if = { limit = { has_active_mission = A01_japanese_invasion_countdown } add_days_mission_timeout = { mission = A01_japanese_invasion_countdown days = -15 } A03 = { add_days_mission_timeout = { mission = A03_japanese_invasion_countdown days = -15 } } } } }
+ }
+
+ focus = {
+  id = A03_southern_reconstruction
+  icon = GFX_goal_unique_A03_southern_reconstruction
+  x = 14
+  y = 6
+  cost = 10
+  prerequisite = { focus = A03_southern_campaign }
+  available = { has_country_flag = A03_borneo_victory NOT = { has_war_with = A01 } }
+  cancel_if_invalid = yes
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 1024 } 1024 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }add_stability = 0.05 }
+ }
+
+ focus = {
+  id = A03_osaka_industry
+  icon = GFX_goal_unique_A03_osaka_industry
+  x = 2
+  y = 0
+  cost = 5
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 531 } 531 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_kansai_railways
+  icon = GFX_goal_unique_A03_kansai_railways
+  x = 0
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_osaka_industry }
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 531 } 531 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } }if = { limit = { owns_state = 532 } 532 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_hiroshima_arsenal
+  icon = GFX_goal_unique_A03_hiroshima_arsenal
+  x = 4
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_osaka_industry }
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 529 } 529 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_steel_contracts
+  icon = GFX_goal_unique_A03_steel_contracts
+  x = 0
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_kansai_railways }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_ideas = A03_industrial_contracts }
+ }
+
+ focus = {
+  id = A03_standard_rifles
+  icon = GFX_goal_unique_A03_standard_rifles
+  x = 4
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_hiroshima_arsenal }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2000 producer = A03 } army_experience = 10 }
+ }
+
+ focus = {
+  id = A03_imperial_university
+  icon = GFX_goal_unique_A03_imperial_university
+  x = 2
+  y = 3
+  cost = 10
+  prerequisite = { focus = A03_steel_contracts }
+  prerequisite = { focus = A03_standard_rifles }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_research_slot = 1 }
+ }
+
+ focus = {
+  id = A03_electrical_workshops
+  icon = GFX_goal_unique_A03_electrical_workshops
+  x = 2
+  y = 4
+  cost = 5
+  prerequisite = { focus = A03_imperial_university }
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 532 } 532 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_industrial_power
+  icon = GFX_goal_unique_A03_industrial_power
+  x = 2
+  y = 5
+  cost = 10
+  prerequisite = { focus = A03_electrical_workshops }
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 529 } 529 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 2 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_naval_programme
+  icon = GFX_goal_unique_A03_naval_programme
+  x = 22
+  y = 0
+  cost = 5
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 528 } 528 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_kure_yards
+  icon = GFX_goal_unique_A03_kure_yards
+  x = 20
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_naval_programme }
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 529 } 529 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = dockyard level = 2 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_merchant_marine
+  icon = GFX_goal_unique_A03_merchant_marine
+  x = 24
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_naval_programme }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_equipment_to_stockpile = { type = convoy_1 amount = 50 producer = A03 } }
+ }
+
+ focus = {
+  id = A03_naval_academy
+  icon = GFX_goal_unique_A03_naval_academy
+  x = 20
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_kure_yards }
+  ai_will_do = { factor = 1 }
+  completion_reward = { navy_experience = 35 add_ideas = A03_naval_academy }
+ }
+
+ focus = {
+  id = A03_island_supply
+  icon = GFX_goal_unique_A03_island_supply
+  x = 24
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_merchant_marine }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_ideas = A03_island_supply }
+ }
+
+ focus = {
+  id = A03_fleet_exercises
+  icon = GFX_goal_unique_A03_fleet_exercises
+  x = 22
+  y = 3
+  cost = 5
+  prerequisite = { focus = A03_naval_academy }
+  prerequisite = { focus = A03_island_supply }
+  ai_will_do = { factor = 1 }
+  completion_reward = { navy_experience = 40 add_war_support = 0.05 }
+ }
+
+ focus = {
+  id = A03_army_reorganisation
+  icon = GFX_goal_unique_A03_army_reorganisation
+  x = 30
+  y = 0
+  cost = 5
+  ai_will_do = { factor = 1 }
+  completion_reward = { army_experience = 25 add_ideas = A03_army_reform }
+ }
+
+ focus = {
+  id = A03_conscription_register
+  icon = GFX_goal_unique_A03_conscription_register
+  x = 28
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_army_reorganisation }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_manpower = 20000 add_war_support = 0.05 }
+ }
+
+ focus = {
+  id = A03_landing_forces
+  icon = GFX_goal_unique_A03_landing_forces
+  x = 32
+  y = 1
+  cost = 5
+  prerequisite = { focus = A03_army_reorganisation }
+  ai_will_do = { factor = 1 }
+  completion_reward = { army_experience = 25 add_ideas = A03_landing_force }
+ }
+
+ focus = {
+  id = A03_field_artillery
+  icon = GFX_goal_unique_A03_field_artillery
+  x = 28
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_conscription_register }
+  ai_will_do = { factor = 1 }
+  completion_reward = { if = { limit = { owns_state = 530 } 530 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } } } }
+ }
+
+ focus = {
+  id = A03_expeditionary_staff
+  icon = GFX_goal_unique_A03_expeditionary_staff
+  x = 32
+  y = 2
+  cost = 5
+  prerequisite = { focus = A03_landing_forces }
+  ai_will_do = { factor = 1 }
+  completion_reward = { add_command_power = 25 add_ideas = A03_expeditionary_staff }
+ }
+
+ focus = {
+  id = A03_combined_operations
+  icon = GFX_goal_unique_A03_combined_operations
+  x = 30
+  y = 3
+  cost = 10
+  prerequisite = { focus = A03_field_artillery }
+  prerequisite = { focus = A03_expeditionary_staff }
+  ai_will_do = { factor = 1 }
+  completion_reward = { army_experience = 25 navy_experience = 25 add_war_support = 0.05 }
+ }
+}
+

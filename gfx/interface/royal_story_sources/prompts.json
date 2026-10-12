@@ -1,0 +1,16 @@
+{
+  "mode": "built-in image_gen",
+  "style": "HOI4 sculptural bronze and silver late nineteenth century focus emblem; isolated on real transparent background; no text; legible at 95x85; generous margins",
+  "subjects": {
+    "guard": "crowned Dutch silver lion, crossed rifles, guard sash",
+    "tribunal": "justice scales, broken admiral anchor and sealed evidence dossiers",
+    "sultanates": "Javanese royal umbrella, treaty and handshake",
+    "citizenship": "Dutch and Indonesian hands holding one civic charter",
+    "parliament": "parliamentary lectern, ballot box and constitutional book",
+    "capital": "Batavia civic building, canal, compass and ship",
+    "navy": "royal anchor, steamship and crossed sabres",
+    "academy": "book, gearwheel, quill and crown"
+  },
+  "final_colour_instruction": "Every national ribbon and tiny flag has ORANGE (#FF9900) top, WHITE middle and BLUE bottom. Preserve metallic shading and transparency. This is the Prince’s Flag specified by the user.",
+  "packaging": "PNG masters copied into the mod; resized into 95x85 focus DDS and 64x64 spirit DDS; no recolouring by code."
+}

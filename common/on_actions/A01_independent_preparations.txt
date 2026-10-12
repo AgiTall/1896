@@ -1,0 +1,21 @@
+# Hidden opening phase: 77 calendar days from the 1893 bookmark.
+# Daily evaluation preserves the deadline across saves and ignores focus progress.
+on_actions = {
+ on_daily = {
+  effect = {
+   A01 = {
+    if = {
+     limit = {
+      date > 1893.3.18
+      NOT = { has_country_flag = A01_island_defence_started }
+      NOT = { has_country_flag = pacific_trade_accord }
+      NOT = { has_country_flag = A01_expansion_resolved }
+      NOT = { has_war_with = A03 }
+      country_exists = A03
+     }
+     A01_begin_expansion_preparations_effect = yes
+    }
+   }
+  }
+ }
+}

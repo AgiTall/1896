@@ -1,0 +1,26 @@
+state = {
+ id = 1082
+ name = "STATE_1082"
+ manpower = 1200000
+ state_category = rural
+ history = {
+  owner = PCF
+  add_core_of = PCF
+  buildings = {
+   infrastructure = 2
+   10374 = {
+    naval_base = 1
+   }
+  }
+  victory_points = {
+   10374
+   3
+  }
+ }
+ provinces = {
+  7451
+  10374
+  4476
+ }
+ local_supplies = 0.0
+}

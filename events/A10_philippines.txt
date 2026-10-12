@@ -1,0 +1,28 @@
+add_namespace = A10_philippines
+
+country_event = {
+ id = A10_philippines.1
+ title = A10_philippines.1.t
+ desc = A10_philippines.1.d
+ picture = GFX_report_event_JAP_army_occupation
+ is_triggered_only = yes
+ trigger = {
+  tag = A10
+  A03 = { has_war_with = A01 }
+  NOT = { has_war_with = A03 }
+  NOT = { has_capitulated = yes }
+ }
+ option = {
+  name = A10_philippines.1.a
+  ai_chance = { factor = 65 }
+  set_country_flag = A10_borneo_opportunity_taken
+  add_war_support = 0.10
+  declare_war_on = { target = A03 type = annex_everything }
+ }
+ option = {
+  name = A10_philippines.1.b
+  ai_chance = { factor = 35 }
+  set_country_flag = A10_borneo_opportunity_refused
+  add_stability = 0.05
+ }
+}

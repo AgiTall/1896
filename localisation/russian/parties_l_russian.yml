@@ -1,0 +1,16 @@
+﻿l_russian:
+ democratic: "Торговизм"
+ democratic_noun: "Торговизм"
+ democratic_desc: "Торговый режим"
+
+ communism: "Марксизм"
+ communism_noun: "Марксизм"
+ communism_desc: "Тоталитарный режим"
+
+ neutrality: "Авторитаризм"
+ neutrality_noun: "Авторитаризм"
+ neutrality_desc: "Авторитарный режим"
+
+ fascism: "Стратократия"
+ fascism_noun: "Стратократия"
+ fascism_desc: "Военная диктатура"

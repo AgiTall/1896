@@ -1,0 +1,14 @@
+defined_text = {
+	name = GetA01AdmiralsLawsStatus
+
+	text = {
+		trigger = {
+			has_country_flag = A01_constitutional_amendments_active
+		}
+		localization_key = A01_admirals_council_laws_allowed_status
+	}
+
+	text = {
+		localization_key = A01_admirals_council_laws_locked_status
+	}
+}

@@ -1,0 +1,65 @@
+add_namespace = A10_settlement
+country_event = {
+ id = A10_settlement.6 title = A10_settlement.6.t desc = A10_settlement.6.d
+ picture = GFX_1896_event_talks is_triggered_only = yes
+ trigger = { tag = A03 has_war_with = A10 A10 = { OR = { A10_full_archipelago_liberated = yes A10_manila_only_liberated = yes } } }
+ option = { name = A10_settlement.propose ai_chance = { factor = 70 }
+  A10 = { country_event = { id = A10_settlement.8 days = 1 } }
+ }
+ option = { name = A10_settlement.delay ai_chance = { factor = 30 } }
+}
+country_event = {
+ id = A10_settlement.7 title = A10_settlement.7.t desc = A10_settlement.7.d
+ picture = GFX_1896_event_talks is_triggered_only = yes
+ trigger = { tag = A03 has_war_with = A10 A10 = { OR = { A10_full_archipelago_liberated = yes A10_manila_only_liberated = yes } } }
+ option = { name = A10_settlement.7.a ai_chance = { factor = 85 }
+  if = { limit = { A10 = { A10_full_archipelago_liberated = yes } } A10_conclude_archipelago_peace = yes }
+  else = { A10_conclude_manila_peace = yes }
+ }
+ option = { name = A10_settlement.7.b ai_chance = { factor = 15 }
+  add_stability = -0.25
+  add_war_support = -0.30
+ }
+}
+country_event = {
+ id = A10_settlement.8 title = A10_settlement.8.t desc = A10_settlement.8.d
+ picture = GFX_1896_event_treaty is_triggered_only = yes
+ trigger = { tag = A10 has_war_with = A03 OR = { A10_full_archipelago_liberated = yes A10_manila_only_liberated = yes } }
+ option = { name = A10_settlement.accept ai_chance = { factor = 90 }
+  if = { limit = { A10_full_archipelago_liberated = yes } A03 = { A10_conclude_archipelago_peace = yes } }
+  else = { A03 = { A10_conclude_manila_peace = yes } }
+ }
+ option = { name = A10_settlement.reject ai_chance = { factor = 10 } }
+}
+country_event = {
+ id = A10_settlement.1 title = A10_settlement.1.t desc = A10_settlement.1.d
+ picture = GFX_1896_event_treaty is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = A10_settlement.accept ai_chance = { factor = 85 }
+  trigger = { has_war_with = A10 A10 = { A10_full_archipelago_liberated = yes } }
+  A10_conclude_archipelago_peace = yes
+ }
+ option = { name = A10_settlement.reject ai_chance = { factor = 15 } A10 = { clr_country_flag = A10_peace_offer_pending country_event = { id = A10_settlement.5 days = 1 } } }
+}
+country_event = {
+ id = A10_settlement.2 title = A10_settlement.2.t desc = A10_settlement.2.d
+ picture = GFX_1896_event_treaty is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = A10_settlement.accept ai_chance = { factor = 65 }
+  trigger = { has_war_with = A10 A10 = { A10_manila_only_liberated = yes } }
+  A10_conclude_manila_peace = yes
+ }
+ option = { name = A10_settlement.reject ai_chance = { factor = 35 } A10 = { clr_country_flag = A10_peace_offer_pending country_event = { id = A10_settlement.5 days = 1 } } }
+}
+country_event = {
+ id = A10_settlement.3 title = A10_settlement.3.t desc = A10_settlement.3.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ option = { name = A10_settlement.3.a }
+}
+country_event = {
+ id = A10_settlement.4 title = A10_settlement.4.t desc = A10_settlement.4.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ option = { name = A10_settlement.4.a }
+}
+country_event = {
+ id = A10_settlement.5 title = A10_settlement.5.t desc = A10_settlement.5.d picture = GFX_1896_event_talks is_triggered_only = yes
+ option = { name = A10_settlement.5.a }
+}
