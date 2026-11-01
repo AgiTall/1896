@@ -1,0 +1,5 @@
+A10W_charter_book = {
+ icon = generic_political_actions
+ allowed = { original_tag = A10 }
+ visible = { has_country_flag = A10W_path }
+}

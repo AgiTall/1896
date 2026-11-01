@@ -1,0 +1,33 @@
+{
+  "russian": {
+    "keys": 8390,
+    "files": {
+      "1896_state_names_l_russian.yml": 6,
+      "1896_countries_l_russian.yml": 5411,
+      "1896_misc_l_russian.yml": 1136,
+      "1896_decisions_l_russian.yml": 270,
+      "1896_characters_l_russian.yml": 83,
+      "1896_ideas_l_russian.yml": 424,
+      "1896_events_l_russian.yml": 630,
+      "1896_parties_l_russian.yml": 122,
+      "1896_focus_l_russian.yml": 306,
+      "1896_traits_l_russian.yml": 2
+    },
+    "values_preserved": true
+  },
+  "english": {
+    "keys": 2445,
+    "files": {
+      "1896_state_names_l_english.yml": 5,
+      "1896_countries_l_english.yml": 197,
+      "1896_misc_l_english.yml": 518,
+      "1896_decisions_l_english.yml": 256,
+      "1896_characters_l_english.yml": 80,
+      "1896_ideas_l_english.yml": 424,
+      "1896_events_l_english.yml": 616,
+      "1896_parties_l_english.yml": 43,
+      "1896_focus_l_english.yml": 306
+    },
+    "values_preserved": true
+  }
+}

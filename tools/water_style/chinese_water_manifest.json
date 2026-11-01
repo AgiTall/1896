@@ -1,0 +1,24 @@
+{
+  "generated_source": "C:\\Users\\AgiTall\\.codex\\generated_images\\01a154c8-2f76-7fa1-85e5-e5d60da9f5cb\\exec-bdb583c8-133a-4c7a-b20d-c68bf2b1f116.png",
+  "asset": "gfx/map/chinese_paper_water/generated_waves.png",
+  "texture": "map/terrain/ice_diffuse.dds",
+  "sampler": "IceDiffuse, index 6, alpha only",
+  "shader": "gfx/FX/pdxwater.shader",
+  "mip_levels": 10,
+  "tile_period_world_units": 704,
+  "ink_strength": 0.28,
+  "backup": "C:\\Users\\AgiTall\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\1896\\tools\\backups\\water_before_chinese_paper",
+  "engine_tested": false,
+  "screen_space_refraction": false,
+  "fog_colour": "luminance only; parchment hue retained",
+  "paper_shader_rgb_linear": [
+    0.36,
+    0.33,
+    0.25
+  ],
+  "paper_rgb_preview": [
+    179,
+    172,
+    148
+  ]
+}

@@ -1,0 +1,640 @@
+focus_tree = {
+ id = WTN_focus
+ country = {
+  factor = 0
+  modifier = {
+   add = 100
+   tag = A04
+  }
+ }
+ default = no
+ continuous_focus_position = {
+  x = 100
+  y = 1900
+ }
+ focus = {
+  id = WTN_annual_report
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTN_initialize_effect = yes
+   WTN_update_ledger_effect = yes
+   add_political_power = 50
+  }
+  x = 18
+  y = 0
+ }
+ focus = {
+  id = WTN_common_registry
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = WTN_annual_report
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTN_update_ledger_effect = yes
+   add_to_variable = {
+    WTN_reputation = 5
+   }
+   WTN_clamp_treasury_effect = yes
+   WTN_local_workshops_effect = yes
+  }
+  x = 18
+  y = 1
+ }
+ focus = {
+  id = WTN_credit_committee
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   custom_effect_tooltip = WTN_credit_committee_tt
+  }
+  prerequisite = {
+   focus = WTN_focus_mandate_public
+   focus = WTN_focus_mandate_delegated
+  }
+  x = 2
+  y = 3
+ }
+ focus = {
+  id = WTN_gold_reserves
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = WTN_credit_committee
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTN_liquidity = 15
+   }
+   WTN_clamp_treasury_effect = yes
+  }
+  x = 0
+  y = 4
+ }
+ focus = {
+  id = WTN_arbitration
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   custom_effect_tooltip = WTN_arbitration_tt
+  }
+  prerequisite = {
+   focus = WTN_credit_committee
+  }
+  x = 4
+  y = 4
+ }
+ focus = {
+  id = WTN_reserve_audit
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTN_reputation = 8
+   }
+   WTN_clamp_treasury_effect = yes
+  }
+  prerequisite = {
+   focus = WTN_gold_reserves
+  }
+  prerequisite = {
+   focus = WTN_arbitration
+  }
+  x = 2
+  y = 5
+ }
+ focus = {
+  id = WTN_mutual_settlement
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = WTN_reserve_audit
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTN_liquidity = 10
+   }
+   WTN_clamp_treasury_effect = yes
+  }
+  x = 2
+  y = 6
+ }
+ focus = {
+  id = WTN_solvent_chamber
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = WTN_mutual_settlement
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = WTN_solvent_accounts
+   WTN_local_workshops_effect = yes
+  }
+  x = 2
+  y = 7
+ }
+ focus = {
+  id = WTN_guard_charter
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  mutually_exclusive = {
+   focus = WTN_tech_charter
+  }
+  mutually_exclusive = {
+   focus = WTN_secret_charter
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_global_flag = WTC_guard_priority
+   clr_global_flag = WTC_tech_priority
+   clr_global_flag = WTC_secret_priority
+   add_to_variable = {
+    WTC_old_guard = 10
+   }
+   WTN_clamp_directorate_effect = yes
+  }
+  prerequisite = {
+   focus = WTN_focus_mandate_public
+   focus = WTN_focus_mandate_delegated
+  }
+  x = 10
+  y = 3
+ }
+ focus = {
+  id = WTN_silver_convoy
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = WTN_guard_charter
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_insurance_office
+    days = 360
+   }
+  }
+  x = 8
+  y = 4
+ }
+ focus = {
+  id = WTN_insured_ports
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTN_reputation = 5
+   }
+   WTN_clamp_treasury_effect = yes
+  }
+  prerequisite = {
+   focus = WTN_guard_charter
+  }
+  x = 12
+  y = 4
+ }
+ focus = {
+  id = WTN_market_rules
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_political_power = 60
+  }
+  prerequisite = {
+   focus = WTN_silver_convoy
+  }
+  prerequisite = {
+   focus = WTN_insured_ports
+  }
+  x = 10
+  y = 5
+ }
+ focus = {
+  id = WTN_guard_settlement_charter
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = WTN_market_rules
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = WTN_guard_settlement
+  }
+  x = 10
+  y = 6
+ }
+ focus = {
+  id = WTN_tech_charter
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  mutually_exclusive = {
+   focus = WTN_guard_charter
+  }
+  mutually_exclusive = {
+   focus = WTN_secret_charter
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_global_flag = WTC_tech_priority
+   clr_global_flag = WTC_guard_priority
+   clr_global_flag = WTC_secret_priority
+   add_to_variable = {
+    WTC_technocrats = 10
+   }
+   WTN_clamp_directorate_effect = yes
+  }
+  prerequisite = {
+   focus = WTN_focus_mandate_public
+   focus = WTN_focus_mandate_delegated
+  }
+  x = 18
+  y = 3
+ }
+ focus = {
+  id = WTN_cable_survey
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = WTN_tech_charter
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_cable_office
+    days = 360
+   }
+  }
+  x = 16
+  y = 4
+ }
+ focus = {
+  id = WTN_malta_correspondence
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = WTN_relations_open
+   custom_effect_tooltip = WTN_open_relations_tt
+  }
+  prerequisite = {
+   focus = WTN_tech_charter
+  }
+  x = 20
+  y = 4
+ }
+ focus = {
+  id = WTN_measurement_fund
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_research_contract
+    days = 360
+   }
+  }
+  prerequisite = {
+   focus = WTN_cable_survey
+  }
+  prerequisite = {
+   focus = WTN_malta_correspondence
+  }
+  x = 18
+  y = 5
+ }
+ focus = {
+  id = WTN_open_patents
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = WTN_measurement_fund
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = WTN_technical_directorate
+  }
+  x = 18
+  y = 6
+ }
+ focus = {
+  id = WTN_secret_charter
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  mutually_exclusive = {
+   focus = WTN_guard_charter
+  }
+  mutually_exclusive = {
+   focus = WTN_tech_charter
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_global_flag = WTC_secret_priority
+   clr_global_flag = WTC_guard_priority
+   clr_global_flag = WTC_tech_priority
+   add_to_variable = {
+    WTC_secret_department = 10
+   }
+   WTN_clamp_directorate_effect = yes
+  }
+  prerequisite = {
+   focus = WTN_focus_mandate_public
+   focus = WTN_focus_mandate_delegated
+  }
+  x = 26
+  y = 3
+ }
+ focus = {
+  id = WTN_cable_watch
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = WTN_secret_charter
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_cable_office
+    days = 360
+   }
+  }
+  x = 24
+  y = 4
+ }
+ focus = {
+  id = WTN_strait_wardens
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_warden_contract
+    days = 360
+   }
+  }
+  prerequisite = {
+   focus = WTN_secret_charter
+  }
+  x = 28
+  y = 4
+ }
+ focus = {
+  id = WTN_pirate_contacts
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTN_reputation = -8
+   }
+   WTN_clamp_treasury_effect = yes
+   add_timed_idea = {
+    idea = WTC_pirate_channels
+    days = 360
+   }
+  }
+  prerequisite = {
+   focus = WTN_cable_watch
+  }
+  prerequisite = {
+   focus = WTN_strait_wardens
+  }
+  x = 26
+  y = 5
+ }
+ focus = {
+  id = WTN_secret_accounts_control
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = WTN_pirate_contacts
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = WTN_secret_accounts
+  }
+  x = 26
+  y = 6
+ }
+ focus = {
+  id = WTN_foreign_offices
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = WTN_relations_open
+   custom_effect_tooltip = WTN_open_relations_tt
+  }
+  prerequisite = {
+   focus = WTN_focus_mandate_public
+   focus = WTN_focus_mandate_delegated
+  }
+  x = 34
+  y = 3
+ }
+ focus = {
+  id = WTN_british_understanding
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = WTN_foreign_offices
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_political_power = 50
+  }
+  x = 34
+  y = 4
+ }
+ focus = {
+  id = WTN_pacific_accounts
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = WTN_british_understanding
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTN_liquidity = 8
+   }
+   WTN_clamp_treasury_effect = yes
+  }
+  x = 34
+  y = 5
+ }
+ focus = {
+  id = WTN_colonial_desks
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = WTN_pacific_accounts
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTN_reputation = 5
+   }
+   WTN_clamp_treasury_effect = yes
+  }
+  x = 34
+  y = 6
+ }
+ focus = {
+  id = WTN_caribbean_routes
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = WTN_colonial_desks
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_caribbean_contract
+    days = 360
+   }
+  }
+  x = 34
+  y = 7
+ }
+ focus = {
+  id = WTN_northern_observers
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = WTN_caribbean_routes
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_research_contract
+    days = 180
+   }
+  }
+  x = 34
+  y = 8
+ }
+ focus = {
+  id = WTN_island_congress_protocol
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = WTN_northern_observers
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = WTN_island_congress
+  }
+  x = 34
+  y = 9
+ }
+ focus = {
+  id = WTN_focus_mandate_public
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_political_power = 20
+  }
+  prerequisite = {
+   focus = WTN_common_registry
+  }
+  mutually_exclusive = {
+   focus = WTN_focus_mandate_delegated
+  }
+  x = 16
+  y = 2
+ }
+ focus = {
+  id = WTN_focus_mandate_delegated
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 40
+  }
+  prerequisite = {
+   focus = WTN_common_registry
+  }
+  mutually_exclusive = {
+   focus = WTN_focus_mandate_public
+  }
+  x = 20
+  y = 2
+ }
+}

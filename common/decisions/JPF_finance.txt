@@ -1,0 +1,72 @@
+JPF_finance = {
+ JPF_service_bonds = {
+  icon = generic_political_discourse cost = 55 days_re_enable = 120
+  visible = { has_country_flag = JPF_bond_register }
+  available = { check_variable = { var = JPF_debt_pressure value = 20 compare = greater_than } check_variable = { var = JPF_budget_confidence value = 35 compare = greater_than_or_equals } }
+  complete_effect = { add_to_variable = { JPF_debt_pressure = -10 } add_to_variable = { JPF_budget_confidence = 3 } JPF_refresh_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 6 check_variable = { var = JPF_debt_pressure value = 70 compare = greater_than_or_equals } } }
+ }
+ JPF_voluntary_subscription = {
+  icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { has_country_flag = JPF_subscription_open }
+  available = { check_variable = { var = JPF_budget_confidence value = 45 compare = greater_than_or_equals } check_variable = { var = JPF_debt_pressure value = 80 compare = less_than } }
+  complete_effect = { add_to_variable = { JPF_debt_pressure = 8 } add_to_variable = { JPF_budget_confidence = 5 } add_equipment_to_stockpile = { type = convoy_1 amount = 25 producer = A03 } JPF_refresh_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 0 check_variable = { var = JPF_debt_pressure value = 70 compare = greater_than_or_equals } } }
+ }
+ JPF_levy_excise = {
+  icon = generic_political_discourse cost = 50 days_re_enable = 180
+  visible = { has_country_flag = JPF_excise_open }
+  available = { NOT = { has_idea = JPF_excise_collection } check_variable = { var = JPF_debt_pressure value = 20 compare = greater_than } check_variable = { var = JPF_budget_confidence value = 25 compare = greater_than_or_equals } }
+  complete_effect = { add_to_variable = { JPF_debt_pressure = -12 } add_to_variable = { JPF_budget_confidence = -7 } add_timed_idea = { idea = JPF_excise_collection days = 180 } JPF_refresh_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 4 check_variable = { var = JPF_debt_pressure value = 80 compare = greater_than_or_equals } } }
+ }
+ JPF_defer_yard_orders = {
+  icon = generic_naval cost = 25 days_re_enable = 180
+  visible = { has_war_with = A01 }
+  available = { has_war_with = A01 NOT = { has_idea = JPF_yard_retrenchment } check_variable = { var = JPF_debt_pressure value = 40 compare = greater_than } }
+  complete_effect = { add_to_variable = { JPF_debt_pressure = -10 } add_to_variable = { JPF_budget_confidence = -4 } add_timed_idea = { idea = JPF_yard_retrenchment days = 180 } set_country_flag = JPF_admiralty_denied add_war_support = -0.02 JPF_refresh_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 5 check_variable = { var = JPF_debt_pressure value = 85 compare = greater_than_or_equals } } }
+ }
+ JPF_osaka_advance = {
+  icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { has_country_flag = JPC_guarantees_signed country_exists = A09 }
+  available = { NOT = { has_war_with = A09 } check_variable = { var = JPF_debt_pressure value = 80 compare = less_than } check_variable = { var = JPF_budget_confidence value = 25 compare = greater_than_or_equals } }
+  complete_effect = { add_to_variable = { JPF_debt_pressure = 12 } add_to_variable = { JPF_budget_confidence = -5 } set_country_flag = JPF_osaka_privileged add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A03 } add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = A03 } if = { limit = { country_exists = A09 } A09 = { add_political_power = 25 } } JPF_refresh_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 0 check_variable = { var = JPF_debt_pressure value = 65 compare = greater_than_or_equals } } }
+ }
+ JPF_publish_accounts = {
+  icon = generic_political_discourse cost = 45 days_re_enable = 120
+  visible = { has_country_flag = JPF_accounts_reformed }
+  available = { check_variable = { var = JPF_debt_pressure value = 10 compare = greater_than } check_variable = { var = JPF_budget_confidence value = 90 compare = less_than } }
+  complete_effect = { add_to_variable = { JPF_debt_pressure = -4 } add_to_variable = { JPF_budget_confidence = 8 } set_country_flag = JPF_osaka_accountable JPF_refresh_effect = yes }
+  ai_will_do = { base = 2 modifier = { factor = 4 check_variable = { var = JPF_budget_confidence value = 40 compare = less_than } } }
+ }
+ JPF_bridge_credit = {
+  icon = generic_political_discourse cost = 40 fire_only_once = yes
+  visible = { has_country_flag = JPF_credit_table_open country_exists = A04 NOT = { has_country_flag = JPF_credit_queued } }
+  available = { NOT = { has_war_with = A04 } check_variable = { var = JPF_budget_confidence value = 40 compare = greater_than_or_equals } check_variable = { var = JPF_debt_pressure value = 85 compare = less_than } }
+  complete_effect = { JPF_credit_table_effect = yes }
+  ai_will_do = { base = 1 }
+ }
+ JPF_pay_dockworkers = {
+  icon = generic_naval cost = 50 days_re_enable = 90
+  visible = { has_idea = JPF_delivery_arrears }
+  available = { has_idea = JPF_delivery_arrears check_variable = { var = JPF_budget_confidence value = 20 compare = greater_than_or_equals } }
+  complete_effect = { remove_ideas = JPF_delivery_arrears add_to_variable = { JPF_debt_pressure = 5 } add_to_variable = { JPF_budget_confidence = 7 } JPF_refresh_effect = yes }
+  ai_will_do = { base = 5 }
+ }
+ JPF_redeem_small_savers = {
+  icon = generic_political_discourse cost = 75 fire_only_once = yes
+  visible = { has_country_flag = JPF_small_savers }
+  available = { NOT = { has_war_with = A01 } check_variable = { var = JPF_debt_pressure value = 65 compare = less_than } }
+  complete_effect = { add_to_variable = { JPF_debt_pressure = -12 } add_to_variable = { JPF_budget_confidence = 8 } add_timed_idea = { idea = JPF_civilian_retrenchment days = 120 } add_stability = 0.01 JPF_refresh_effect = yes }
+  ai_will_do = { base = 3 }
+ }
+ JPF_close_ledger = {
+  icon = generic_political_discourse cost = 120 fire_only_once = yes
+  visible = { has_country_flag = JPF_civil_budget }
+  available = { has_war = no OR = { AND = { OR = { AND = { has_country_flag = JPF_guarantee_settled has_idea = JPC_monopoly } has_country_flag = JPF_defeat_restructured } } has_country_flag = JPF_defeat_restructured } NOT = { has_idea = JPC_credit } check_variable = { var = JPF_debt_pressure value = 20 compare = less_than } check_variable = { var = JPF_budget_confidence value = 65 compare = greater_than_or_equals } }
+  complete_effect = { JPF_close_ledger_effect = yes }
+  ai_will_do = { base = 4 }
+ }
+}

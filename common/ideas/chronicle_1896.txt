@@ -1,0 +1,15 @@
+ideas = { country = {
+ CH96_escorts = { picture = jpc_credit modifier = { convoy_escort_efficiency = 0.10 } }
+ CH96_legion_raids = { picture = jpc_credit modifier = { supply_consumption_factor = 0.10 } }
+ CH96_naval_empire = { picture = jpc_credit modifier = { navy_org_factor = 0.05 } }
+ CH96_airship_scouts = { picture = jpc_credit modifier = { naval_detection = 0.05 } }
+ CH96_airship_bombers = { picture = jpc_credit modifier = { air_mission_efficiency = 0.03 } }
+ CH96_reconstruction = { picture = jpc_credit modifier = { production_speed_industrial_complex_factor = 0.05 } }
+ CH96_quarantine = { picture = jpc_credit modifier = { industrial_capacity_factory = -0.05 convoy_escort_efficiency = 0.05 } }
+ CH96_citizenship = { picture = jpc_credit modifier = { stability_factor = 0.04 recruitable_population_factor = 0.05 } }
+ CH96_racial_divide = { picture = jpc_credit modifier = { stability_factor = -0.05 } }
+ CH96_expedition = { picture = jpc_credit modifier = { research_speed_factor = 0.02 supply_consumption_factor = 0.03 } }
+ CH96_arctic_fleet = { picture = jpc_credit modifier = { navy_org_factor = 0.04 } }
+ CH96_submarine_program = { picture = jpc_credit modifier = { naval_coordination = 0.04 } }
+ CH96_crowns = { picture = jpc_credit modifier = { political_power_gain = 0.10 stability_factor = -0.02 } }
+} }

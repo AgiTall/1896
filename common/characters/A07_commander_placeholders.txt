@@ -1,0 +1,75 @@
+# Editable placeholders: names are in major_commanders_l_*.yml.
+characters = {
+ A07_placeholder_marshal_01 = {
+  name = A07_placeholder_marshal_01_name
+  portraits = { army = { large = "gfx/leaders/A07/placeholders/marshal_01.dds" } }
+  field_marshal = {
+   skill = 1
+   attack_skill = 1
+   defense_skill = 1
+   planning_skill = 1
+   logistics_skill = 1
+   traits = { }
+  }
+ }
+ A07_placeholder_general_01 = {
+  name = A07_placeholder_general_01_name
+  portraits = { army = { large = "gfx/leaders/A07/placeholders/general_01.dds" } }
+  corps_commander = {
+   skill = 1
+   attack_skill = 1
+   defense_skill = 1
+   planning_skill = 1
+   logistics_skill = 1
+   traits = { }
+  }
+ }
+ A07_placeholder_general_02 = {
+  name = A07_placeholder_general_02_name
+  portraits = { army = { large = "gfx/leaders/A07/placeholders/general_02.dds" } }
+  corps_commander = {
+   skill = 1
+   attack_skill = 1
+   defense_skill = 1
+   planning_skill = 1
+   logistics_skill = 1
+   traits = { }
+  }
+ }
+ A07_placeholder_general_03 = {
+  name = A07_placeholder_general_03_name
+  portraits = { army = { large = "gfx/leaders/A07/placeholders/general_03.dds" } }
+  corps_commander = {
+   skill = 1
+   attack_skill = 1
+   defense_skill = 1
+   planning_skill = 1
+   logistics_skill = 1
+   traits = { }
+  }
+ }
+ A07_placeholder_general_04 = {
+  name = A07_placeholder_general_04_name
+  portraits = { army = { large = "gfx/leaders/A07/placeholders/general_04.dds" } }
+  corps_commander = {
+   skill = 1
+   attack_skill = 1
+   defense_skill = 1
+   planning_skill = 1
+   logistics_skill = 1
+   traits = { }
+  }
+ }
+ A07_placeholder_general_05 = {
+  name = A07_placeholder_general_05_name
+  portraits = { army = { large = "gfx/leaders/A07/placeholders/general_05.dds" } }
+  corps_commander = {
+   skill = 1
+   attack_skill = 1
+   defense_skill = 1
+   planning_skill = 1
+   logistics_skill = 1
+   traits = { }
+  }
+ }
+}

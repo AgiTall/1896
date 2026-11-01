@@ -1,0 +1,1 @@
+is_russian_tag = { original_tag = RUS }

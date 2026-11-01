@@ -2,15 +2,15 @@ state = {
  id = 1074
  name = "STATE_1074"
  state_category = wasteland
- manpower = 10000
+ manpower = 8880
  impassable = yes
  force_link_ownership_to = 870
  history = {
   buildings = {
    infrastructure = 0
   }
-  owner = A07
-  add_core_of = A07
+  owner = AWA
+  add_core_of = AWA
  }
  provinces = {
   2133

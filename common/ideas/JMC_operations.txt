@@ -1,0 +1,14 @@
+ideas = { country = {
+ JMC_pilot_service = {
+  picture = jpc_fleet
+  allowed = { original_tag = A03 }
+  removal_cost = -1
+  modifier = { convoy_escort_efficiency = 0.04 naval_coordination = 0.02 }
+ }
+ JMC_transport_service = {
+  picture = jpc_fleet
+  allowed = { original_tag = A03 }
+  removal_cost = -1
+  modifier = { navy_max_range_factor = 0.03 naval_invasion_prep_speed = 0.05 }
+ }
+} }

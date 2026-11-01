@@ -1,0 +1,98 @@
+# Current country owns its ledger. Mitsubishi liabilities remain independent.
+WTC_initialize_effect = {
+ if = { limit = { exists = yes NOT = { tag = A04 } NOT = { tag = ZZZ } NOT = { has_country_flag = WTC_ledger_open } }
+  set_country_flag = WTC_ledger_open set_variable = { WTC_debt = 10 }
+  if = { limit = { tag = A01 } set_variable = { WTC_debt = 35 } }
+  if = { limit = { tag = A02 } set_variable = { WTC_debt = 55 } }
+  if = { limit = { tag = A03 } set_variable = { WTC_debt = 30 } }
+  if = { limit = { tag = A07 } set_variable = { WTC_debt = 15 } }
+  if = { limit = { tag = A09 } set_variable = { WTC_debt = 65 } }
+  if = { limit = { tag = A10 } set_variable = { WTC_debt = 20 } }
+ }
+}
+WTC_refresh_effect = {
+ clamp_variable = { var = WTC_debt min = 0 max = 100 }
+ if = { limit = { NOT = { check_variable = { WTC_debt > 0 } } } clr_country_flag = WTC_active_loan }
+ if = { limit = { check_variable = { WTC_debt < 100 } } clr_country_flag = WTC_default_pending }
+ if = { limit = { country_exists = A04 NOT = { has_war_with = A04 } }
+  if = { limit = { check_variable = { WTC_debt > 90 } }
+   add_ideas = WTC_cable_blackout
+   if = { limit = { has_global_flag = WTC_british_cover } add_ideas = WTC_blacklist }
+   else = { remove_ideas = WTC_blacklist }
+   if = { limit = { NOT = { has_country_flag = WTC_sanctions_notice } }
+    set_country_flag = { flag = WTC_sanctions_notice days = 180 } set_country_flag = { flag = WTN_sanctions_pending days = 30 } country_event = { id = wtc_credit.2 days = 1 }
+   }
+  }
+  else = { remove_ideas = WTC_blacklist remove_ideas = WTC_cable_blackout }
+  if = { limit = { check_variable = { WTC_debt > 70 } check_variable = { WTC_debt < 100 } NOT = { has_country_flag = WTC_concession_cooldown } }
+   set_country_flag = { flag = WTC_concession_cooldown days = 180 } set_country_flag = { flag = WTN_concession_pending days = 30 } country_event = { id = wtc_credit.1 days = 3 }
+  }
+  if = { limit = { NOT = { check_variable = { WTC_debt < 100 } } NOT = { has_country_flag = WTC_default_pending } }
+   set_country_flag = WTC_default_pending country_event = { id = wtc_credit.3 days = 7 }
+  }
+ }
+ else = { remove_ideas = WTC_blacklist remove_ideas = WTC_cable_blackout clr_country_flag = WTC_default_pending }
+}
+WTC_borrow_effect = {
+ WTC_initialize_effect = yes
+ if = { limit = { WTN_can_take_standard_credit = yes }
+  add_to_variable = { WTC_debt = 20 }
+  set_country_flag = { flag = WTC_active_loan days = 180 }
+  add_equipment_to_stockpile = { type = convoy_1 amount = 25 producer = A04 }
+  A04 = { add_to_variable = { WTN_liquidity = -10 } add_political_power = 15 WTN_update_ledger_effect = yes }
+  WTC_refresh_effect = yes
+ }
+}
+WTC_repay_effect = {
+ if = { limit = { WTN_is_customer = yes check_variable = { WTC_debt > 0 } }
+  add_to_variable = { WTC_debt = -12 }
+  A04 = { add_to_variable = { WTN_liquidity = 3 } WTN_clamp_treasury_effect = yes }
+  WTC_refresh_effect = yes
+ }
+}
+WTC_concession_effect = {
+ clr_country_flag = WTN_concession_pending
+ add_to_variable = { WTC_debt = -15 }
+ add_timed_idea = { idea = WTC_port_concession days = 240 }
+ A04 = { add_political_power = 20 } WTC_refresh_effect = yes
+}
+WTC_financial_coup_effect = {
+ # The Chamber installs a local administrator; it cannot annex or rule provinces.
+ create_country_leader = { name = WTC_receiver_name desc = WTC_receiver_desc ideology = despotism expire = "1970.1.1" }
+ set_politics = { ruling_party = neutrality elections_allowed = no }
+ add_popularity = { ideology = neutrality popularity = 0.30 }
+ add_stability = -0.15 add_war_support = -0.05
+ set_country_flag = WTC_receivership set_variable = { WTC_debt = 70 }
+ add_ideas = WTC_local_receivership clr_country_flag = WTC_default_pending
+ WTC_refresh_effect = yes
+}
+WTC_monthly_effect = {
+ WTC_initialize_effect = yes
+ if = { limit = { country_exists = A04 NOT = { has_war_with = A04 } NOT = { tag = A04 } }
+  if = { limit = { check_variable = { WTC_debt > 0 } } add_political_power = -2 }
+  if = { limit = { has_country_flag = WTC_active_loan } add_to_variable = { WTC_debt = 1 } }
+  if = { limit = { has_war = yes check_variable = { WTC_debt > 29 } } add_to_variable = { WTC_debt = 1 } }
+  if = { limit = { has_idea = WTC_port_concession } add_to_variable = { WTC_debt = -1 } }
+  WTC_refresh_effect = yes
+ }
+}
+WTC_board_initialize_effect = {
+ if = { limit = { NOT = { has_country_flag = WTC_board_initialized } }
+  set_country_flag = WTC_board_initialized set_variable = { WTC_old_guard = 45 } set_variable = { WTC_technocrats = 30 } set_variable = { WTC_secret_department = 25 }
+  add_ideas = WTC_british_dependence WTN_initialize_effect = yes country_event = { id = wtc_credit.10 days = 3 }
+ }
+}
+WTC_check_cover_effect = {
+ if = { limit = { country_exists = A02 A02 = { NOT = { has_war_with = A04 } has_capitulated = no NOT = { has_country_flag = WTN_cover_revoked } } }
+  if = { limit = { NOT = { has_global_flag = WTC_british_cover } }
+   set_global_flag = WTC_british_cover WTN_refresh_enforcement_effect = yes
+  }
+  remove_ideas = WTC_unprotected_routes
+ }
+ else = {
+  if = { limit = { has_global_flag = WTC_british_cover }
+   clr_global_flag = WTC_british_cover WTN_refresh_enforcement_effect = yes
+  }
+  add_ideas = WTC_unprotected_routes
+ }
+}

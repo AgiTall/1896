@@ -1,0 +1,1 @@
+WTN_island_relations = { icon = generic_foreign_policy allowed = { NOT = { original_tag = ZZZ } } visible = { OR = { has_country_flag = WTN_relations_open tag = A01 tag = A03 tag = A10 } } }

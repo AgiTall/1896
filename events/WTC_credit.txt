@@ -1,0 +1,347 @@
+ add_namespace = wtc_credit
+ country_event = {
+  id = wtc_credit.1
+  title = wtc_credit.1.t
+  desc = wtc_credit.1.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   WTN_can_answer_concession = yes
+  }
+  option = {
+   name = wtc_credit.1.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 65
+   }
+   if = {
+    limit = {
+     WTN_can_answer_concession = yes
+    }
+    clr_country_flag = WTN_concession_pending
+    WTC_concession_effect = yes
+   }
+  }
+  option = {
+   name = wtc_credit.1.b
+   trigger = {
+    has_political_power > 99
+   }
+   ai_chance = {
+    factor = 30
+   }
+   if = {
+    limit = {
+     WTN_can_answer_concession = yes
+     has_political_power > 99
+    }
+    clr_country_flag = WTN_concession_pending
+    add_political_power = -100
+    add_to_variable = {
+     WTC_debt = -15
+    }
+    WTC_refresh_effect = yes
+   }
+  }
+  option = {
+   name = wtc_credit.1.c
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 5
+   }
+   if = {
+    limit = {
+     WTN_can_answer_concession = yes
+    }
+    clr_country_flag = WTN_concession_pending
+    add_to_variable = {
+     WTC_debt = 3
+    }
+    add_stability = -0.02
+    WTC_refresh_effect = yes
+   }
+  }
+  timeout_days = 20
+ }
+ country_event = {
+  id = wtc_credit.2
+  title = wtc_credit.2.t
+  desc = wtc_credit.2.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   WTN_can_answer_sanctions = yes
+  }
+  option = {
+   name = wtc_credit.2.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 100
+   }
+   if = {
+    limit = {
+     WTN_can_answer_sanctions = yes
+    }
+    clr_country_flag = WTN_sanctions_pending
+    add_war_support = -0.02
+   }
+  }
+  timeout_days = 20
+ }
+ country_event = {
+  id = wtc_credit.3
+  title = wtc_credit.3.t
+  desc = wtc_credit.3.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   WTN_can_answer_default = yes
+  }
+  option = {
+   name = wtc_credit.3.a
+   trigger = {
+    has_global_flag = WTC_british_cover
+   }
+   ai_chance = {
+    factor = 90
+   }
+   if = {
+    limit = {
+     WTN_can_answer_default = yes
+     has_global_flag = WTC_british_cover
+    }
+    clr_country_flag = WTC_default_pending
+    WTC_financial_coup_effect = yes
+   }
+  }
+  option = {
+   name = wtc_credit.3.b
+   trigger = {
+    has_global_flag = WTC_british_cover
+    has_political_power > 199
+   }
+   ai_chance = {
+    factor = 10
+   }
+   if = {
+    limit = {
+     WTN_can_answer_default = yes
+     has_global_flag = WTC_british_cover
+     has_political_power > 199
+    }
+    clr_country_flag = WTC_default_pending
+    add_political_power = -200
+    add_stability = -0.08
+    add_to_variable = {
+     WTC_debt = -40
+    }
+    clr_country_flag = WTC_default_pending
+    WTC_refresh_effect = yes
+   }
+  }
+  option = {
+   name = wtc_credit.3.c
+   trigger = {
+    NOT = {
+     has_global_flag = WTC_british_cover
+    }
+   }
+   ai_chance = {
+    factor = 100
+   }
+   if = {
+    limit = {
+     WTN_can_answer_default = yes
+     NOT = {
+      has_global_flag = WTC_british_cover
+     }
+    }
+    clr_country_flag = WTC_default_pending
+    set_variable = {
+     WTC_debt = 90
+    }
+    clr_country_flag = WTC_default_pending
+    WTC_refresh_effect = yes
+   }
+  }
+  timeout_days = 20
+ }
+ country_event = {
+  id = wtc_credit.10
+  title = wtc_credit.10.t
+  desc = wtc_credit.10.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   tag = A04
+  }
+  option = {
+   name = wtc_credit.10.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 100
+   }
+   add_political_power = 25
+   set_global_flag = WTC_guard_priority
+  }
+ }
+ country_event = {
+  id = wtc_credit.11
+  title = wtc_credit.11.t
+  desc = wtc_credit.11.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   tag = A04
+  }
+  option = {
+   name = wtc_credit.11.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 100
+   }
+   add_timed_idea = {
+    idea = WTC_technocratic_credit
+    days = 180
+   }
+  }
+ }
+ country_event = {
+  id = wtc_credit.12
+  title = wtc_credit.12.t
+  desc = wtc_credit.12.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   tag = A04
+  }
+  option = {
+   name = wtc_credit.12.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 100
+   }
+   add_timed_idea = {
+    idea = WTC_pirate_channels
+    days = 180
+   }
+  }
+ }
+ country_event = {
+  id = wtc_credit.20
+  title = wtc_credit.20.t
+  desc = wtc_credit.20.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   tag = A01
+  }
+  option = {
+   name = wtc_credit.20.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 100
+   }
+   if = {
+    limit = {
+     country_exists = A02
+     NOT = {
+      has_war_with = A02
+     }
+    }
+    A02 = {
+     country_event = {
+      id = wtc_credit.21
+      days = 7
+     }
+    }
+   }
+  }
+ }
+ country_event = {
+  id = wtc_credit.21
+  title = wtc_credit.21.t
+  desc = wtc_credit.21.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   tag = A02
+   country_exists = A01
+   NOT = {
+    has_war_with = A01
+   }
+  }
+  option = {
+   name = wtc_credit.21.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 75
+   }
+   A01 = {
+    set_country_flag = A01_british_dialogue_accepted
+    add_stability = 0.02
+   }
+   add_political_power = 15
+  }
+  option = {
+   name = wtc_credit.21.b
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 25
+   }
+   A01 = {
+    set_country_flag = A01_british_dialogue_reserved
+    add_political_power = 15
+   }
+  }
+ }
+ country_event = {
+  id = wtc_credit.22
+  title = wtc_credit.22.t
+  desc = wtc_credit.22.d
+  picture = GFX_1896_event_trade
+  is_triggered_only = yes
+  trigger = {
+   tag = A01
+  }
+  option = {
+   name = wtc_credit.22.a
+   trigger = {
+
+   }
+   ai_chance = {
+    factor = 100
+   }
+   WTC_initialize_effect = yes
+   add_to_variable = {
+    WTC_debt = 10
+   }
+   add_timed_idea = {
+    idea = WTC_cable_contract
+    days = 180
+   }
+   add_timed_idea = {
+    idea = WTC_silver_convoy
+    days = 180
+   }
+   WTC_refresh_effect = yes
+  }
+ }

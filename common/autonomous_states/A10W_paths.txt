@@ -1,0 +1,40 @@
+autonomy_state = {
+ id = A10W_chartered_colony
+ is_puppet = yes
+ use_overlord_color = yes
+ min_freedom_level = 0.35
+ rule = {
+  desc = A10W_chartered_colony_desc
+  can_not_declare_war = yes
+  can_decline_call_to_war = yes
+  units_deployed_to_overlord = no
+  can_create_collaboration_government = no
+ }
+ modifier = { autonomy_manpower_share = 0.0 can_master_build_for_us = 1 }
+ allowed = { tag = A10 has_country_flag = A10W_colonial_selected OVERLORD = { tag = A04 } }
+ can_take_level = { always = no }
+ can_lose_level = { always = no }
+ ai_subject_wants_higher = { factor = 0 }
+ ai_overlord_wants_lower = { factor = 0 }
+ ai_overlord_wants_garrison = { always = no }
+}
+autonomy_state = {
+ id = A10W_atlantic_office
+ is_puppet = yes
+ use_overlord_color = no
+ min_freedom_level = 0.70
+ rule = {
+  desc = A10W_atlantic_office_desc
+  can_not_declare_war = yes
+  can_decline_call_to_war = yes
+  units_deployed_to_overlord = no
+  can_create_collaboration_government = no
+ }
+ modifier = { autonomy_manpower_share = 0.0 can_master_build_for_us = 1 }
+ allowed = { tag = A04 has_country_flag = A10W_voluntary_office OVERLORD = { tag = A10 has_country_flag = A10W_metropolitan_selected } }
+ can_take_level = { always = no }
+ can_lose_level = { always = no }
+ ai_subject_wants_higher = { factor = 0 }
+ ai_overlord_wants_lower = { factor = 0 }
+ ai_overlord_wants_garrison = { always = no }
+}

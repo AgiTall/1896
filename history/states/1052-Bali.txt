@@ -23,7 +23,7 @@ state={
 	provinces={
 		4273 13386 13385
 	}
-	manpower = 1029335
+	manpower = 666436
 	state_category = small_island
 
 	local_supplies=0.0 

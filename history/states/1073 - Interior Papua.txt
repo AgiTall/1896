@@ -2,7 +2,7 @@ state = {
 	id = 1073
 	name = "STATE_1073"
 
-	manpower = 325000 #PreTAOG 38000 
+	manpower = 210419 #PreTAOG 38000 
 	state_category = enclave
 
 	impassable = yes 

@@ -1,0 +1,38 @@
+{
+  "A07": {
+    "file": "Flag of New South Wales.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_New_South_Wales.svg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_New_South_Wales.svg",
+    "license": "Public domain; see source page"
+  },
+  "AVC": {
+    "file": "Flag of Victoria (1877–1901).svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Victoria_%281877%E2%80%931901%29.svg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Flag_of_Victoria_%281877%E2%80%931901%29.svg",
+    "license": "Public domain; see source page"
+  },
+  "AQL": {
+    "file": "Flag of Queensland (1876–1901).svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Queensland_%281876%E2%80%931901%29.svg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Flag_of_Queensland_%281876%E2%80%931901%29.svg",
+    "license": "Public domain; see source page"
+  },
+  "ASA": {
+    "file": "Flag of South Australia (1876–1904).svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Australia_%281876%E2%80%931904%29.svg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_South_Australia_%281876%E2%80%931904%29.svg",
+    "license": "Public domain; see source page"
+  },
+  "AWA": {
+    "file": "Flag of Western Australia (1870–1953).svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Western_Australia_%281870%E2%80%931953%29.svg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Flag_of_Western_Australia_%281870%E2%80%931953%29.svg",
+    "license": "Public domain; see source page"
+  },
+  "ATA": {
+    "file": "Flag of Tasmania.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Tasmania.svg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/46/Flag_of_Tasmania.svg",
+    "license": "Public domain; see source page"
+  }
+}

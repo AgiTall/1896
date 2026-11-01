@@ -1,0 +1,80 @@
+add_namespace = auc_campaign
+
+country_event = { id = auc_campaign.10 title = auc_campaign.10.t desc = auc_campaign.10.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = AVC AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } NOT = { has_country_flag = AUC_join_authorized } }
+ option = { name = auc_campaign.10.a ai_chance = { factor = 35 modifier = { factor = 4 A07 = { has_country_flag = AUC_terms_AVC } } modifier = { factor = 2 has_country_flag = AUC_federal_campaign } modifier = { factor = 0 has_country_flag = AUC_separate_cabinet } } if = { limit = { AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } }
+         set_country_flag = AUC_join_authorized clr_country_flag = AUC_join_refused
+         A07 = { set_country_flag = AUC_vote_AVC country_event = { id = auc_campaign.40 days = 1 } }
+        } }
+ option = { name = auc_campaign.10.b ai_chance = { factor = 25 } clr_country_flag = AUC_join_authorized set_country_flag = AUC_join_refused A07 = { clr_country_flag = AUC_vote_AVC } add_stability = 0.02 }
+}
+
+country_event = { id = auc_campaign.11 title = auc_campaign.11.t desc = auc_campaign.11.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = AQL AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } NOT = { has_country_flag = AUC_join_authorized } }
+ option = { name = auc_campaign.11.a ai_chance = { factor = 35 modifier = { factor = 4 A07 = { has_country_flag = AUC_terms_AQL } } modifier = { factor = 2 has_country_flag = AUC_federal_campaign } modifier = { factor = 0 has_country_flag = AUC_separate_cabinet } } if = { limit = { AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } }
+         set_country_flag = AUC_join_authorized clr_country_flag = AUC_join_refused
+         A07 = { set_country_flag = AUC_vote_AQL country_event = { id = auc_campaign.40 days = 1 } }
+        } }
+ option = { name = auc_campaign.11.b ai_chance = { factor = 25 } clr_country_flag = AUC_join_authorized set_country_flag = AUC_join_refused A07 = { clr_country_flag = AUC_vote_AQL } add_stability = 0.02 }
+}
+
+country_event = { id = auc_campaign.12 title = auc_campaign.12.t desc = auc_campaign.12.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = ASA AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } NOT = { has_country_flag = AUC_join_authorized } }
+ option = { name = auc_campaign.12.a ai_chance = { factor = 35 modifier = { factor = 4 A07 = { has_country_flag = AUC_terms_ASA } } modifier = { factor = 2 has_country_flag = AUC_federal_campaign } modifier = { factor = 0 has_country_flag = AUC_separate_cabinet } } if = { limit = { AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } }
+         set_country_flag = AUC_join_authorized clr_country_flag = AUC_join_refused
+         A07 = { set_country_flag = AUC_vote_ASA country_event = { id = auc_campaign.40 days = 1 } }
+        } }
+ option = { name = auc_campaign.12.b ai_chance = { factor = 25 } clr_country_flag = AUC_join_authorized set_country_flag = AUC_join_refused A07 = { clr_country_flag = AUC_vote_ASA } add_stability = 0.02 }
+}
+
+country_event = { id = auc_campaign.13 title = auc_campaign.13.t desc = auc_campaign.13.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = AWA AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } NOT = { has_country_flag = AUC_join_authorized } }
+ option = { name = auc_campaign.13.a ai_chance = { factor = 35 modifier = { factor = 4 A07 = { has_country_flag = AUC_terms_AWA } } modifier = { factor = 2 has_country_flag = AUC_federal_campaign } modifier = { factor = 0 has_country_flag = AUC_separate_cabinet } } if = { limit = { AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } }
+         set_country_flag = AUC_join_authorized clr_country_flag = AUC_join_refused
+         A07 = { set_country_flag = AUC_vote_AWA country_event = { id = auc_campaign.40 days = 1 } }
+        } }
+ option = { name = auc_campaign.13.b ai_chance = { factor = 25 } clr_country_flag = AUC_join_authorized set_country_flag = AUC_join_refused A07 = { clr_country_flag = AUC_vote_AWA } add_stability = 0.02 }
+}
+
+country_event = { id = auc_campaign.14 title = auc_campaign.14.t desc = auc_campaign.14.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = ATA AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } NOT = { has_country_flag = AUC_join_authorized } }
+ option = { name = auc_campaign.14.a ai_chance = { factor = 35 modifier = { factor = 4 A07 = { has_country_flag = AUC_terms_ATA } } modifier = { factor = 2 has_country_flag = AUC_federal_campaign } modifier = { factor = 0 has_country_flag = AUC_separate_cabinet } } if = { limit = { AUC_can_negotiate = yes A07 = { has_country_flag = AUC_referendums_open } }
+         set_country_flag = AUC_join_authorized clr_country_flag = AUC_join_refused
+         A07 = { set_country_flag = AUC_vote_ATA country_event = { id = auc_campaign.40 days = 1 } }
+        } }
+ option = { name = auc_campaign.14.b ai_chance = { factor = 25 } clr_country_flag = AUC_join_authorized set_country_flag = AUC_join_refused A07 = { clr_country_flag = AUC_vote_ATA } add_stability = 0.02 }
+}
+
+country_event = { id = auc_campaign.1 title = auc_campaign.1.t desc = auc_campaign.1.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = A02 country_exists = A07 A07 = { OR = { is_subject_of = A02 is_subject = no } NOT = { has_war_with = A02 } has_country_flag = AUC_charter_pending } }
+ option = { name = auc_campaign.1.a ai_chance = { factor = 90 modifier = { factor = 0 has_country_flag = BLV_hard_empire } modifier = { factor = 2 has_country_flag = BLV_dominion_policy } } A07 = { clr_country_flag = AUC_charter_pending set_country_flag = AUC_british_charter country_event = { id = auc_campaign.2 days = 1 } } }
+ option = { name = auc_campaign.1.b ai_chance = { factor = 10 modifier = { factor = 5 has_country_flag = BLV_hard_empire } modifier = { factor = 0 has_country_flag = BLV_dominion_policy } } A07 = { clr_country_flag = AUC_charter_pending set_country_flag = AUC_charter_refused country_event = { id = auc_campaign.2 days = 1 } } }
+}
+
+country_event = { id = auc_campaign.2 title = auc_campaign.2.t desc = auc_campaign.2.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+ option = { name = auc_campaign.2.a ai_chance = { factor = 100 } add_political_power = 10 }
+}
+
+country_event = { id = auc_campaign.3 title = auc_campaign.3.t desc = auc_campaign.3.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = A02 country_exists = A07 A07 = { is_subject_of = A02 has_country_flag = AUC_sovereignty_pending } }
+ option = { name = auc_campaign.3.a ai_chance = { factor = 40 modifier = { factor = 0.2 has_country_flag = BLV_hard_empire } modifier = { factor = 3 has_country_flag = BLV_dominion_policy } } AUC_release_federation = yes A07 = { clr_country_flag = AUC_sovereignty_pending set_country_flag = AUC_sovereignty_recognized country_event = { id = auc_campaign.4 days = 1 } } }
+ option = { name = auc_campaign.3.b ai_chance = { factor = 60 modifier = { factor = 2 has_country_flag = BLV_hard_empire } modifier = { factor = 0.3 has_country_flag = BLV_dominion_policy } } A07 = { clr_country_flag = AUC_sovereignty_pending set_country_flag = AUC_sovereignty_refused add_war_support = 0.10 country_event = { id = auc_campaign.4 days = 1 } } }
+}
+
+country_event = { id = auc_campaign.4 title = auc_campaign.4.t desc = auc_campaign.4.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+ option = { name = auc_campaign.4.a ai_chance = { factor = 100 } add_political_power = 15 }
+}
+
+country_event = { id = auc_campaign.40 title = auc_campaign.40.t desc = auc_campaign.40.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+ option = { name = auc_campaign.40.a ai_chance = { factor = 100 } add_political_power = 5 }
+}
+
+country_event = { id = auc_campaign.5 title = auc_campaign.5.t desc = auc_campaign.5.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+trigger = { tag = A02 country_exists = A07 A07 = { has_war_with = A02 has_country_flag = AUC_independence_war_started NOT = { has_country_flag = AUC_independence_opening } AUC_holds_owned_states = yes } }
+ option = { name = auc_campaign.5.a ai_chance = { factor = 60 modifier = { factor = 0.3 has_country_flag = BLV_hard_empire } modifier = { factor = 2 has_country_flag = BLV_dominion_policy } } if = { limit = { A07 = { has_war_with = A02 AUC_holds_owned_states = yes } } white_peace = { tag = A07 } A07 = { set_country_flag = AUC_british_charter set_country_flag = AUC_sovereignty_recognized country_event = { id = auc_campaign.6 days = 1 } } } }
+ option = { name = auc_campaign.5.b ai_chance = { factor = 40 } A07 = { add_war_support = 0.03 } }
+}
+
+country_event = { id = auc_campaign.6 title = auc_campaign.6.t desc = auc_campaign.6.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 15
+ option = { name = auc_campaign.6.a ai_chance = { factor = 100 } add_stability = 0.05 }
+}

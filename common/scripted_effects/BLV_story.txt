@@ -1,0 +1,593 @@
+BLV_apply_serum_contract = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1893.6.27
+  }
+  clr_country_flag = BLV_ethical_research
+  set_country_flag = BLV_serum_contract
+  remove_ideas = BLV_medical_commission_spirit
+  if = {
+   limit = {
+    BLV_is_britain = yes
+    NOT = {
+     has_country_flag = BLV_serum_policy_paid
+    }
+   }
+   set_country_flag = BLV_serum_policy_paid
+   add_to_variable = {
+    BLV_cohesion = -8
+   }
+   add_to_variable = {
+    SEN_science = 10
+   }
+   BLV_refresh = yes
+  }
+ }
+}
+BLV_apply_ethical_research = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1893.6.27
+  }
+  clr_country_flag = BLV_serum_contract
+  set_country_flag = BLV_ethical_research
+  remove_ideas = BLV_serum_spirit
+  add_ideas = BLV_medical_commission_spirit
+  if = {
+   limit = {
+    BLV_is_britain = yes
+    NOT = {
+     has_country_flag = BLV_ethical_policy_paid
+    }
+   }
+   set_country_flag = BLV_ethical_policy_paid
+   add_to_variable = {
+    BLV_cohesion = 8
+   }
+   BLV_refresh = yes
+  }
+ }
+}
+BLV_review_ungudja = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1893.4.11
+   NOT = {
+    has_country_flag = BLV_ungudja_file
+   }
+   NOT = {
+    has_country_flag = BLV_ungudja_pending
+   }
+  }
+  set_country_flag = BLV_ungudja_pending
+  country_event = {
+   id = blv_campaign.10
+   days = 1
+  }
+  BLV_refresh = yes
+ }
+}
+BLV_receive_ungudja_file = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1893.4.11
+   NOT = {
+    has_country_flag = BLV_ungudja_file
+   }
+  }
+  set_country_flag = BLV_ungudja_file
+  clr_country_flag = BLV_ungudja_pending
+  add_to_variable = {
+   SEN_science = 5
+  }
+  BLV_refresh = yes
+ }
+}
+BLV_apply_calibration = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1894.7.19
+   has_country_flag = SEN_laboratory_done
+   BLV_tesla_access = yes
+   NOT = {
+    has_country_flag = BLV_calibrated
+   }
+  }
+  set_country_flag = BLV_calibrated
+  set_country_flag = CH94_tesla_prototype
+  clr_country_flag = CH94_tesla_accident
+  add_to_variable = {
+   SEN_science = 15
+  }
+  add_tech_bonus = {
+   name = CH94_research
+   bonus = 0.5
+   uses = 1
+   category = industry
+  }
+  add_timed_idea = {
+   idea = CH94_tesla
+   days = 180
+  }
+  BLV_refresh = yes
+ }
+}
+BLV_apply_passage_open = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1893.11.27
+   NOT = {
+    has_country_flag = BLV_passage_decided
+   }
+  }
+  set_country_flag = BLV_passage_decided
+  set_country_flag = BLV_open_passage
+  add_to_variable = {
+   BLV_reserve = 5
+  }
+  add_political_power = 25
+  BLV_refresh = yes
+ }
+}
+BLV_apply_passage_blockade = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1893.11.27
+   NOT = {
+    has_country_flag = BLV_passage_decided
+   }
+  }
+  set_country_flag = BLV_passage_decided
+  set_country_flag = BLV_passage_blockade
+  add_fuel = -5000
+  if = {
+   limit = {
+    country_exists = A03
+   }
+   A03 = {
+    add_timed_idea = {
+     idea = CH93_blockade
+     days = 90
+    }
+   }
+  }
+  BLV_refresh = yes
+ }
+}
+BLV_apply_patents_private = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1894.10.24
+   has_country_flag = BLV_calibrated
+   BLV_tesla_access = yes
+   NOT = {
+    has_country_flag = BLV_patents_decided
+   }
+  }
+  set_country_flag = BLV_patents_decided
+  set_country_flag = BLV_patents_private
+  BLV_refresh = yes
+ }
+}
+BLV_apply_patents_offer = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1894.10.24
+   has_country_flag = BLV_calibrated
+   BLV_tesla_access = yes
+   country_exists = A04
+   NOT = {
+    has_war_with = A04
+   }
+   NOT = {
+    has_country_flag = BLV_patents_decided
+   }
+  }
+  set_country_flag = BLV_patents_decided
+  set_country_flag = BLV_patents_offered
+  set_country_flag = {
+   flag = BLV_patent_offer_pending
+   days = 45
+  }
+  A04 = {
+   country_event = {
+    id = blv_story.3
+    days = 1
+   }
+  }
+  BLV_refresh = yes
+ }
+}
+BLV_apply_mobile_installation = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1895.5.19
+   has_country_flag = BLV_calibrated
+   BLV_tesla_access = yes
+   NOT = {
+    has_country_flag = BLV_installation_decided
+   }
+  }
+  set_country_flag = BLV_installation_decided
+  set_country_flag = CH95_tesla_mobile
+  clr_country_flag = CH95_tesla_stationary
+  remove_ideas = CH95_tesla_tower
+  add_ideas = CH95_tesla_mobile
+  add_political_power = -40
+  BLV_refresh = yes
+ }
+}
+BLV_apply_tower_installation = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1895.5.19
+   has_country_flag = BLV_calibrated
+   BLV_tesla_access = yes
+   NOT = {
+    has_country_flag = BLV_installation_decided
+   }
+  }
+  set_country_flag = BLV_installation_decided
+  set_country_flag = CH95_tesla_stationary
+  clr_country_flag = CH95_tesla_mobile
+  remove_ideas = CH95_tesla_mobile
+  add_ideas = CH95_tesla_tower
+  add_political_power = -35
+  BLV_refresh = yes
+ }
+}
+BLV_apply_airship_scouts = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.5.19
+   NOT = {
+    has_country_flag = BLV_airships_decided
+   }
+  }
+  set_country_flag = BLV_airships_decided
+  set_country_flag = BLV_airship_scouts
+  add_political_power = -35
+  add_timed_idea = {
+   idea = CH96_airship_scouts
+   days = 365
+  }
+  air_experience = 15
+  BLV_refresh = yes
+ }
+}
+BLV_apply_airship_strike = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.5.19
+   NOT = {
+    has_country_flag = BLV_airships_decided
+   }
+  }
+  set_country_flag = BLV_airships_decided
+  set_country_flag = BLV_airship_strike
+  add_political_power = -50
+  add_timed_idea = {
+   idea = CH96_airship_bombers
+   days = 365
+  }
+  air_experience = 25
+  BLV_refresh = yes
+ }
+}
+BLV_apply_polar_private = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.8.4
+   101 = {
+    is_owned_by = A02
+    is_controlled_by = A02
+   }
+   NOT = {
+    has_country_flag = BLV_polar_decided
+   }
+  }
+  set_country_flag = BLV_polar_decided
+  set_country_flag = BLV_arctic_open
+  set_country_flag = CH96_secret_greenland
+  add_to_variable = {
+   SEN_readiness = 15
+  }
+  add_political_power = -40
+  add_fuel = -4000
+  add_timed_idea = {
+   idea = CH96_expedition
+   days = 180
+  }
+  BLV_refresh = yes
+ }
+}
+BLV_apply_polar_joint = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.8.4
+   101 = {
+    is_owned_by = A02
+    is_controlled_by = A02
+   }
+   NOT = {
+    has_country_flag = BLV_polar_decided
+   }
+  }
+  set_country_flag = BLV_polar_decided
+  set_country_flag = BLV_arctic_open
+  set_country_flag = BLV_joint_polar_offer
+  add_to_variable = {
+   SEN_readiness = 15
+  }
+  add_political_power = -20
+  add_timed_idea = {
+   idea = CH96_expedition
+   days = 180
+  }
+  BLV_invite_polar_partners = yes
+  BLV_refresh = yes
+ }
+}
+BLV_apply_crowns_legal = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.12.9
+   NOT = {
+    has_country_flag = BLV_crowns_decided
+   }
+  }
+  set_country_flag = BLV_crowns_decided
+  set_country_flag = BLV_crowns_association
+  set_global_flag = CH96_united_crowns
+  add_ideas = CH96_crowns
+  BLV_invite_crowns = yes
+  BLV_refresh = yes
+ }
+}
+BLV_apply_crowns_separate = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.12.9
+   NOT = {
+    has_country_flag = BLV_crowns_decided
+   }
+  }
+  set_country_flag = BLV_crowns_decided
+  set_country_flag = BLV_separate_courts
+  add_political_power = 20
+  BLV_refresh = yes
+ }
+}
+BLV_request_passage_policy = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1893.11.27
+   NOT = {
+    has_country_flag = BLV_passage_decided
+   }
+   NOT = {
+    has_country_flag = BLV_passage_question_pending
+   }
+  }
+  set_country_flag = {
+   flag = BLV_passage_question_pending
+   days = 45
+  }
+  country_event = {
+   id = blv_story.1
+   days = 1
+  }
+ }
+}
+BLV_request_patent_policy = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1894.10.24
+   has_country_flag = BLV_calibrated
+   BLV_tesla_access = yes
+   NOT = {
+    has_country_flag = BLV_patents_decided
+   }
+   NOT = {
+    has_country_flag = BLV_patent_question_pending
+   }
+  }
+  set_country_flag = {
+   flag = BLV_patent_question_pending
+   days = 45
+  }
+  country_event = {
+   id = blv_story.2
+   days = 1
+  }
+ }
+}
+BLV_request_installation_policy = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1895.5.19
+   has_country_flag = BLV_calibrated
+   BLV_tesla_access = yes
+   NOT = {
+    has_country_flag = BLV_installation_decided
+   }
+   NOT = {
+    has_country_flag = BLV_installation_question_pending
+   }
+  }
+  set_country_flag = {
+   flag = BLV_installation_question_pending
+   days = 45
+  }
+  country_event = {
+   id = blv_story.4
+   days = 1
+  }
+ }
+}
+BLV_request_airship_policy = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.5.19
+   NOT = {
+    has_country_flag = BLV_airships_decided
+   }
+   NOT = {
+    has_country_flag = BLV_airship_question_pending
+   }
+  }
+  set_country_flag = {
+   flag = BLV_airship_question_pending
+   days = 45
+  }
+  country_event = {
+   id = blv_story.5
+   days = 1
+  }
+ }
+}
+BLV_request_polar_policy = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.8.4
+   101 = {
+    is_owned_by = A02
+    is_controlled_by = A02
+   }
+   NOT = {
+    has_country_flag = BLV_polar_decided
+   }
+   NOT = {
+    has_country_flag = BLV_polar_question_pending
+   }
+  }
+  set_country_flag = {
+   flag = BLV_polar_question_pending
+   days = 45
+  }
+  country_event = {
+   id = blv_story.6
+   days = 1
+  }
+ }
+}
+BLV_request_crowns_policy = {
+ if = {
+  limit = {
+   BLV_is_britain = yes
+   date > 1896.12.9
+   NOT = {
+    has_country_flag = BLV_crowns_decided
+   }
+   NOT = {
+    has_country_flag = BLV_crowns_question_pending
+   }
+  }
+  set_country_flag = {
+   flag = BLV_crowns_question_pending
+   days = 45
+  }
+  country_event = {
+   id = blv_story.8
+   days = 1
+  }
+ }
+}
+BLV_invite_polar_partners = {
+ if = {
+  limit = {
+   country_exists = A03
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  A03 = {
+   set_country_flag = {
+    flag = BLV_polar_invited
+    days = 45
+   }
+   country_event = {
+    id = blv_story.7
+    days = 1
+   }
+  }
+ }
+ if = {
+  limit = {
+   country_exists = A04
+   NOT = {
+    has_war_with = A04
+   }
+  }
+  A04 = {
+   set_country_flag = {
+    flag = BLV_polar_invited
+    days = 45
+   }
+   country_event = {
+    id = blv_story.7
+    days = 1
+   }
+  }
+ }
+}
+BLV_invite_crowns = {
+ if = {
+  limit = {
+   country_exists = A06
+   NOT = {
+    has_war_with = A06
+   }
+  }
+  A06 = {
+   set_country_flag = {
+    flag = BLV_crowns_invited
+    days = 45
+   }
+   country_event = {
+    id = blv_story.9
+    days = 1
+   }
+  }
+ }
+ if = {
+  limit = {
+   country_exists = MLT
+   NOT = {
+    has_war_with = MLT
+   }
+  }
+  MLT = {
+   set_country_flag = {
+    flag = BLV_crowns_invited
+    days = 45
+   }
+   country_event = {
+    id = blv_story.9
+    days = 1
+   }
+  }
+ }
+}

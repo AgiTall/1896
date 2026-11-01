@@ -1,0 +1,2 @@
+units = { fleet = { name = "A12 Coastal Service" naval_base = 4279 task_force = { name = "A12 Local Escort Division" location = 4279 ship = { name = "A12 Coastal Escort 1" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = A12 version_name = "Local Escort A12" } } }
+ship = { name = "A12 Coastal Escort 2" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = A12 version_name = "Local Escort A12" } } } } } }

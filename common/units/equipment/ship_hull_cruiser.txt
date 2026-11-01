@@ -1,0 +1,418 @@
+equipments = {
+
+	ship_hull_cruiser = {
+		year = 1880
+
+		
+
+		is_archetype = yes
+		is_buildable = no
+		type = screen_ship
+		interface_category = interface_category_screen_ships
+		alias = light_cruiser
+		priority = 1900
+
+		module_slots = {
+			fixed_ship_battery_slot = {
+				required = yes
+				allowed_module_categories = { ship_light_battery ship_light_medium_battery ship_medium_battery }
+			}
+			fixed_ship_engine_slot = {
+				required = yes
+				allowed_module_categories = { cruiser_ship_engine }
+			}
+			fixed_ship_secondaries_slot = {
+				required = no
+				allowed_module_categories = { ship_secondaries }
+			}
+			fixed_ship_armor_slot = {
+				required = no
+				allowed_module_categories = { ship_light_cruiser_armor ship_protected_cruiser_armor ship_armored_cruiser_armor }
+			}
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo
+					ship_anti_air
+					ship_secondaries
+					ship_airplane_launcher
+					ship_mine_layer
+				}
+			}
+		}
+		default_modules = {
+			fixed_ship_battery_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_0
+			fixed_ship_secondaries_slot = empty
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = empty
+		}
+		
+		lg_armor_piercing = 0
+		lg_attack = 0
+		
+		hg_armor_piercing = 0
+		hg_attack = 0
+		
+		torpedo_attack = 0
+		sub_attack = 0
+		
+		anti_air_attack = 0
+		
+		armor_value = 0
+
+		
+		surface_detection = 20
+		sub_detection = 1
+		surface_visibility = 20
+		naval_speed = 13
+		reliability = 0.5
+		
+		naval_range = 1000
+		
+		max_strength = 60		
+		
+
+		fuel_consumption = 0
+		
+		build_cost_ic = 850
+		resources = {
+			steel = 1
+		}
+		
+		manpower = 450
+
+		naval_dominance_factor = 45
+		naval_weather_penalty_factor = 1
+	}
+
+	# 1880 Cruiser Hull
+	ship_hull_cruiser_0 = {
+		year = 1880
+		visual_level = 0
+		archetype = ship_hull_cruiser
+		priority = 1900
+
+		module_slots = inherit
+		naval_dominance_factor = 45
+	}
+
+	# 1890 Cruiser Hull
+	ship_hull_cruiser_1 = {
+		year = 1890
+		visual_level = 0
+		archetype = ship_hull_cruiser
+		priority = 1900
+		parent = ship_hull_cruiser_0
+
+		naval_range = 1400
+		surface_detection = 20
+		naval_speed = 16
+		manpower = 600
+		build_cost_ic = 900
+
+		module_slots = {
+			fixed_ship_battery_slot = {
+				required = yes
+				allowed_module_categories = { ship_light_battery ship_light_medium_battery ship_medium_battery ship_heavy_battery_cds }
+			}
+			fixed_ship_fire_control_system_slot = {
+				required = no
+				allowed_module_categories = { ship_fire_control_system }
+			}
+			fixed_ship_engine_slot = inherit
+			fixed_ship_secondaries_slot = inherit
+			fixed_ship_armor_slot = {
+				required = no
+				allowed_module_categories = { ship_light_cruiser_armor ship_protected_cruiser_armor ship_armored_cruiser_armor ship_coastal_defense_ship_armor }
+			}
+			mid_1_custom_slot = inherit
+			mid_2_custom_slot = mid_1_custom_slot
+			rear_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo
+					ship_anti_air
+					ship_light_battery
+					ship_light_medium_battery
+					ship_medium_battery
+					ship_airplane_launcher
+					ship_mine_layer
+					ship_depth_charge
+				}
+			}
+		}
+
+		default_modules = {
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+		}
+		naval_dominance_factor = 90
+	}
+
+	# 1904 Cruiser Hull
+	ship_hull_cruiser_2 = {
+		year = 1893
+		visual_level = 0
+		archetype = ship_hull_cruiser
+		priority = 1900
+		parent = ship_hull_cruiser_1
+
+		manpower = 800
+		naval_speed = 20
+		reliability = 0.85
+		build_cost_ic = 1000
+		naval_range = 1800
+		max_strength = 110
+		resources = {
+			steel = 2
+		}
+		module_slots = {
+			fixed_ship_battery_slot = inherit
+			fixed_ship_fire_control_system_slot = inherit
+			fixed_ship_engine_slot = inherit
+			fixed_ship_secondaries_slot = inherit
+			fixed_ship_armor_slot = inherit
+			front_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_light_battery
+					ship_light_medium_battery
+					ship_medium_battery
+					ship_anti_air
+				}
+			}
+			mid_1_custom_slot = inherit
+			mid_2_custom_slot = mid_1_custom_slot
+			rear_1_custom_slot = inherit
+		}
+
+		default_modules = {
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+		}
+		naval_dominance_factor = 115
+	}
+
+	# 1910 Cruiser Hull
+	ship_hull_cruiser_3 = {
+		year = 1896
+		visual_level = 1
+		archetype = ship_hull_cruiser
+		priority = 1900
+		parent = ship_hull_cruiser_2
+		naval_speed = 22
+		build_cost_ic = 1100
+		reliability = 0.90
+		max_strength = 120
+		naval_range = 2400
+		manpower = 900
+		resources = {
+			steel = 2
+		}
+		module_slots = {
+			fixed_ship_battery_slot = inherit
+			fixed_ship_anti_air_slot = {
+				required = no
+				allowed_module_categories = { ship_anti_air }
+			}
+			fixed_ship_fire_control_system_slot = inherit
+			fixed_ship_engine_slot = inherit
+			fixed_ship_secondaries_slot = inherit
+			fixed_ship_armor_slot = inherit
+			front_1_custom_slot = inherit
+			mid_1_custom_slot = inherit
+			mid_2_custom_slot = mid_1_custom_slot
+			rear_1_custom_slot = inherit
+			rear_2_custom_slot = rear_1_custom_slot
+		}
+		naval_dominance_factor = 135
+	}
+
+	# 1916 Cruiser Hull
+	ship_hull_cruiser_4 = {
+		year = 1902
+		visual_level = 1
+		archetype = ship_hull_cruiser
+		priority = 1900
+		parent = ship_hull_cruiser_3
+
+		naval_speed = 24
+		reliability = 0.95
+		manpower = 1100
+		build_cost_ic = 1200
+		naval_range = 2700
+		max_strength = 135
+		resources = {
+			steel = 3
+		}
+
+		module_slots = inherit
+		naval_dominance_factor = 160
+	}
+
+	# 1922 Cruiser Hull
+	ship_hull_cruiser_5 = {
+		year = 1908
+		visual_level = 1
+		archetype = ship_hull_cruiser
+		priority = 1900
+		parent = ship_hull_cruiser_3
+		naval_speed = 26
+		reliability = 0.95
+		manpower = 1400
+		build_cost_ic = 1400
+		naval_range = 3400
+		max_strength = 150
+		resources = {
+			steel = 3
+			chromium = 1
+		}
+		module_slots = {
+			fixed_ship_battery_slot = inherit
+			fixed_ship_anti_air_slot = inherit
+			fixed_ship_fire_control_system_slot = inherit
+			fixed_ship_engine_slot = inherit
+			fixed_ship_secondaries_slot = inherit
+			fixed_ship_armor_slot = inherit
+			front_1_custom_slot = inherit
+			mid_1_custom_slot = inherit
+			mid_2_custom_slot = mid_1_custom_slot
+			mid_3_custom_slot = mid_1_custom_slot
+			rear_1_custom_slot = inherit
+			rear_2_custom_slot = rear_1_custom_slot
+		}
+
+		default_modules = {
+			mid_3_custom_slot = empty
+		}
+		naval_dominance_factor = 200
+	}
+
+	###special snowflake hulls
+#	ship_hull_cruiser_coastal_defense_ship = {
+#		year = 1890
+#		visual_level = 0
+#		archetype = ship_hull_cruiser
+#		priority = 1400
+#		
+#		manpower = 2500
+#		build_cost_ic = 1000
+#		fuel_consumption = 0 #20
+#		resources = {
+#			steel = 3
+#		}
+#
+#		hg_attack = 0
+#		naval_speed = 15
+#		reliability = 0.50
+#		surface_visibility = 20
+#		naval_range = 1500
+#		module_slots = {
+#			fixed_ship_battery_slot = {
+#				required = yes
+#				allowed_module_categories = { ship_heavy_battery ship_medium_battery }
+#			}
+#			fixed_ship_anti_air_slot = inherit
+#			fixed_ship_fire_control_system_slot = inherit
+#			fixed_ship_engine_slot = inherit
+#			fixed_ship_secondaries_slot = inherit
+#			fixed_ship_armor_slot = inherit
+#			front_1_custom_slot = {
+#				required = no
+#				allowed_module_categories = {
+#					ship_anti_air
+#				}
+#			}
+#			
+#			mid_1_custom_slot = {
+#				required = no
+#				allowed_module_categories = {
+#					ship_anti_air
+#					ship_secondaries
+#					ship_airplane_launcher
+#				}
+#			}
+#			mid_2_custom_slot = mid_1_custom_slot
+#			rear_1_custom_slot = {
+#				required = no
+#				allowed_module_categories = {
+#					ship_anti_air
+#					ship_airplane_launcher
+#					ship_torpedo
+#					ship_medium_battery
+#				}
+#			}
+#		}
+#
+#		default_modules = {
+#			front_1_custom_slot = empty
+#			rear_1_custom_slot = empty
+#			fixed_ship_battery_slot = empty
+#			fixed_ship_secondaries_slot = empty
+#		}
+#	}
+
+	ship_hull_cruiser_panzerschiff = {
+		year = 1915
+		visual_level = 0
+		archetype = ship_hull_cruiser
+		priority = 1850
+		manpower = 1800
+		build_cost_ic = 1750
+		naval_speed = 20
+		surface_visibility = 22
+		naval_range = 7500
+		resources = {
+			steel = 3
+		}
+		module_slots = {
+			fixed_ship_battery_slot = {
+				required = yes
+				allowed_module_categories = { ship_heavy_battery }
+			}
+			fixed_ship_anti_air_slot = {
+				required = no
+				allowed_module_categories = { ship_anti_air }
+			}
+			fixed_ship_fire_control_system_slot = {
+				required = no
+				allowed_module_categories = { ship_fire_control_system }
+			}
+			fixed_ship_engine_slot = inherit
+			fixed_ship_secondaries_slot = inherit
+			fixed_ship_armor_slot = inherit
+			front_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_anti_air
+				}
+			}
+			
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_anti_air
+					ship_secondaries
+					ship_airplane_launcher
+				}
+			}
+			mid_2_custom_slot = mid_1_custom_slot
+			rear_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_mine_layer
+					ship_anti_air
+					ship_airplane_launcher
+					ship_torpedo
+				}
+			}
+		}
+
+		default_modules = {
+			front_1_custom_slot = ship_anti_air_1
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_torpedo_1
+		}
+		naval_dominance_factor = 200
+	}
+}

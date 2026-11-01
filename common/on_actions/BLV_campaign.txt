@@ -1,0 +1,1 @@
+on_actions = { on_startup = { effect = { A02 = { BLV_initialize = yes BLV_custody = yes } } } on_daily = { effect = { if = { limit = { tag = A02 } BLV_custody = yes BLV_refresh = yes } } } on_monthly = { effect = { if = { limit = { tag = A02 } BLV_monthly = yes } } } }

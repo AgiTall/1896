@@ -1,0 +1,89 @@
+default = {
+	infantry_equipment = {
+		
+	}
+}
+
+#Asia
+default = {
+	infantry_equipment = {
+		
+	}
+}
+
+#Africa
+default = {
+	infantry_equipment = {
+		
+	}
+}
+
+default = {
+	infantry_equipment = {
+		
+	}
+}
+ENG = {
+	infantry_equipment = {
+		
+	}
+}
+
+FRA = {
+	infantry_equipment = {
+		
+	}
+}
+default = {
+	infantry_equipment = {
+		
+	}
+}
+
+GER = {
+	infantry_equipment = {
+		
+	}
+}
+
+default = {
+	infantry_equipment = {
+		
+	}
+}
+
+AUS = {
+	infantry_equipment = {
+		
+	}
+}
+
+ITA = {
+	infantry_equipment = {
+		
+	}
+}
+
+JAP = {
+	infantry_equipment = {
+		
+	}
+}
+
+default = {
+	infantry_equipment = {
+		
+	}
+}
+
+RUS = {
+	infantry_equipment = {
+		
+	}
+}
+
+USA = {
+	infantry_equipment = {
+		
+	}
+}

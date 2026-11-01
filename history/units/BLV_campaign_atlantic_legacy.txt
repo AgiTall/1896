@@ -1,0 +1,16 @@
+units = { fleet = { name = "Leviathan Atlantic Fleet" naval_base = 13010 task_force = { name = "Atlantic Squadron" location = 13010
+ship = { name = "HMS Royal Sovereign" definition = battleship start_experience_factor = 0.25 equipment = { battleship_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Hood" definition = battleship start_experience_factor = 0.25 equipment = { battleship_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Blake" definition = light_cruiser start_experience_factor = 0.25 equipment = { light_cruiser_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Blenheim" definition = light_cruiser start_experience_factor = 0.25 equipment = { light_cruiser_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Edgar" definition = light_cruiser start_experience_factor = 0.25 equipment = { light_cruiser_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Royal Arthur" definition = light_cruiser start_experience_factor = 0.25 equipment = { light_cruiser_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Lightning" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Decoy" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Havock" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Hornet" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Ferret" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Lynx" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Boxer" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+ship = { name = "HMS Rocket" definition = destroyer start_experience_factor = 0.25 equipment = { destroyer_1 = { amount = 1 owner = A02  } } }
+} } }

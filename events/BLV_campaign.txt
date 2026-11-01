@@ -1,0 +1,69 @@
+add_namespace = blv_campaign
+
+country_event = { id = blv_campaign.1 title = blv_campaign.1.t desc = blv_campaign.1.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A02 }
+ option = { name = blv_campaign.1.a  ai_chance = { factor = 60 } add_to_variable = { BLV_admiralty = 1 } }
+ option = { name = blv_campaign.1.b  ai_chance = { factor = 20 } add_to_variable = { BLV_crown = 1 } }
+ option = { name = blv_campaign.1.c  ai_chance = { factor = 20 } add_to_variable = { BLV_delegates = 1 } }
+}
+
+country_event = { id = blv_campaign.2 title = blv_campaign.2.t desc = blv_campaign.2.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A02 NOT = { has_country_flag = BLV_path_chosen } has_country_flag = BLV_council_open }
+ option = { name = blv_campaign.2.a  ai_chance = { factor = 100 } BLV_extend_debate = yes }
+}
+
+country_event = { id = blv_campaign.4 title = blv_campaign.4.t desc = blv_campaign.4.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A02 }
+ option = { name = blv_campaign.4.a trigger = { has_political_power > 39 } ai_chance = { factor = 80 } add_political_power = -40 add_to_variable = { BLV_reserve = 20 } BLV_refresh = yes }
+ option = { name = blv_campaign.4.b  ai_chance = { factor = 20 } add_to_variable = { BLV_reserve = 10 } add_to_variable = { BLV_cohesion = -8 } add_war_support = -0.03 BLV_refresh = yes }
+}
+
+country_event = { id = blv_campaign.5 title = blv_campaign.5.t desc = blv_campaign.5.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A01 has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_oil_pending } 334 = { is_owned_by = A01 is_controlled_by = A01 } }
+ option = { name = blv_campaign.5.a  ai_chance = { factor = 70 } if = { limit = { has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_oil_pending } 334 = { is_owned_by = A01 is_controlled_by = A01 } } add_political_power = 30 A02 = { clr_country_flag = BLV_oil_pending set_country_flag = BLV_oil_signed add_to_variable = { BLV_cohesion = 2 } BLV_refresh = yes } } }
+ option = { name = blv_campaign.5.b  ai_chance = { factor = 30 } A02 = { clr_country_flag = BLV_oil_pending set_country_flag = BLV_oil_refused } }
+}
+
+country_event = { id = blv_campaign.6 title = blv_campaign.6.t desc = blv_campaign.6.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_philippines_pending } }
+ option = { name = blv_campaign.6.a  ai_chance = { factor = 70 } if = { limit = { has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_philippines_pending } } give_military_access = A02 A02 = { give_military_access = A10 } A02 = { clr_country_flag = BLV_philippines_pending set_country_flag = BLV_philippine_accord add_to_variable = { BLV_cohesion = 2 } BLV_refresh = yes } } }
+ option = { name = blv_campaign.6.b  ai_chance = { factor = 30 } A02 = { clr_country_flag = BLV_philippines_pending set_country_flag = BLV_philippines_refused } }
+}
+
+country_event = { id = blv_campaign.7 title = blv_campaign.7.t desc = blv_campaign.7.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A03 has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_navigation_pending } }
+ option = { name = blv_campaign.7.a  ai_chance = { factor = 70 } if = { limit = { has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_navigation_pending } } add_political_power = 20 A02 = { clr_country_flag = BLV_navigation_pending set_country_flag = BLV_navigation_signed add_to_variable = { BLV_cohesion = 2 } BLV_refresh = yes } } }
+ option = { name = blv_campaign.7.b  ai_chance = { factor = 30 } A02 = { clr_country_flag = BLV_navigation_pending set_country_flag = BLV_navigation_refused } }
+}
+
+country_event = { id = blv_campaign.8 title = blv_campaign.8.t desc = blv_campaign.8.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A06 has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_russia_pending } }
+ option = { name = blv_campaign.8.a  ai_chance = { factor = 70 } if = { limit = { has_capitulated = no country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_russia_pending } } add_political_power = 20 A02 = { clr_country_flag = BLV_russia_pending set_country_flag = BLV_russian_accord add_to_variable = { BLV_cohesion = 2 } BLV_refresh = yes } } }
+ option = { name = blv_campaign.8.b  ai_chance = { factor = 30 } A02 = { clr_country_flag = BLV_russia_pending set_country_flag = BLV_russia_refused } }
+}
+
+country_event = { id = blv_campaign.9 title = blv_campaign.9.t desc = blv_campaign.9.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { has_country_flag = SEN_tesla_host has_global_flag = SEN_tesla_alive country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_country_flag = BLV_license_pending } }
+ option = { name = blv_campaign.9.a  ai_chance = { factor = 80 } if = { limit = { has_country_flag = SEN_tesla_host has_capitulated = no has_global_flag = SEN_tesla_alive NOT = { has_war_with = A02 } A02 = { has_country_flag = BLV_license_pending } } A02 = { clr_country_flag = BLV_license_pending set_country_flag = SEN_research_license add_to_variable = { SEN_science = 10 } } } }
+ option = { name = blv_campaign.9.b  ai_chance = { factor = 20 } A02 = { clr_country_flag = BLV_license_pending set_country_flag = BLV_license_refused } }
+}
+
+country_event = {
+ id = blv_campaign.10
+ title = blv_campaign.10.t
+ desc = blv_campaign.10.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ timeout_days = 20
+ option = {
+  name = blv_campaign.10.a
+  ai_chance = {
+   factor = 100
+  }
+  BLV_receive_ungudja_file = yes
+ }
+ trigger = {
+  tag = A02
+  date > 1893.4.11
+  NOT = {
+   has_country_flag = BLV_ungudja_file
+  }
+ }
+}
+
+country_event = { id = blv_campaign.11 title = blv_campaign.11.t desc = blv_campaign.11.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A02 has_country_flag = SEN_artifact_holder NOT = { has_global_flag = SEN_artifact_destroyed } }
+ option = { name = blv_campaign.11.a  ai_chance = { factor = 80 } set_country_flag = SEN_private_archive add_to_variable = { SEN_security = 10 } }
+ option = { name = blv_campaign.11.b  ai_chance = { factor = 20 } if = { limit = { has_country_flag = SEN_artifact_holder NOT = { has_global_flag = SEN_artifact_destroyed } } set_global_flag = SEN_open_spectrum every_country = { limit = { NOT = { tag = ZZZ } } set_country_flag = SEN_spectral_copy } } }
+}

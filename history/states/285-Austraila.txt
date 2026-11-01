@@ -2,7 +2,7 @@ state = {
  id = 285
  name = "STATE_285"
  state_category = large_city
- manpower = 2650000
+ manpower = 2353115
  resources = {
   coal = 12
   tungsten = 2
@@ -35,11 +35,11 @@ state = {
   }
   victory_points = {
    7859
-   30
+   5
   }
   victory_points = {
    12406
-   20
+   30
   }
   victory_points = {
    7520

@@ -1,0 +1,64 @@
+{
+  "source": "Flag Map",
+  "workshop_id": "2942984804",
+  "changes": {
+    "MUD_TILING": {
+      "before": "0.09",
+      "after": "0.07"
+    },
+    "WATER_COLOR_LIGHTNESS": {
+      "before": "0.5",
+      "after": "0.9"
+    },
+    "COLORMAP_OVERLAY_STRENGTH": {
+      "before": "0.75f",
+      "after": "0.65f"
+    },
+    "FOG_COLOR": {
+      "before": "float3( 0.12, 0.28, 0.6 )",
+      "after": "float3( 0, 0, 0 )"
+    },
+    "FOG_MAX": {
+      "before": "0.35f",
+      "after": "0.25f"
+    },
+    "GB_CAM_MIN": {
+      "before": "100.0f",
+      "after": "0.0f"
+    },
+    "GB_CAM_MAX": {
+      "before": "350.0f",
+      "after": "1.0f"
+    },
+    "GB_CAM_MAX_FILLING_CLAMP": {
+      "before": "0.8f",
+      "after": "1.0f"
+    },
+    "GB_THRESHOLD": {
+      "before": "0.05f",
+      "after": "0.01f"
+    },
+    "GB_THRESHOLD2": {
+      "before": "0.25f",
+      "after": "0.15f"
+    },
+    "BORDER_FOW_REMOVAL_FACTOR": {
+      "before": ".8f",
+      "after": "1.0f"
+    },
+    "GB_STRENGTH_CH1": {
+      "before": "1.0",
+      "after": "0.8"
+    },
+    "GB_STRENGTH_CH2": {
+      "before": "1.0",
+      "after": "0.8"
+    }
+  },
+  "texture_sha256": "76dcd8af96dcafab2fcfd1ed0e7b9bc0f58f75dc434de641faa7f665fcd9882e",
+  "preserved_new_constants": [
+    "MUD_CAM_MIN",
+    "MUD_CAM_MAX",
+    "COLORMAP_MUD_OVERLAY_STRENGTH"
+  ]
+}

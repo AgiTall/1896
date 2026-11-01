@@ -1,0 +1,2 @@
+units = { fleet = { name = "PCB Coastal Service" naval_base = 12118 task_force = { name = "PCB Local Escort Division" location = 12118 ship = { name = "PCB Coastal Escort 1" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = PCB version_name = "Local Escort PCB" } } }
+ship = { name = "PCB Coastal Escort 2" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = PCB version_name = "Local Escort PCB" } } } } } }

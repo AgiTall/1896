@@ -1,0 +1,13 @@
+add_namespace = japan_industry
+country_event = {
+ id = japan_industry.1 title = japan_industry.1.t picture = GFX_1896_event_navy is_triggered_only = yes
+ desc = { trigger = { has_completed_focus = JPI_kyushu_coal has_completed_focus = JPI_kure_yards } text = japan_industry.1.kyushu_coal_kure_yards }
+ desc = { trigger = { has_completed_focus = JPI_kyushu_coal has_completed_focus = JPI_airship_hangars } text = japan_industry.1.kyushu_coal_airship_hangars }
+ desc = { trigger = { has_completed_focus = JPI_oil_hunger has_completed_focus = JPI_kure_yards } text = japan_industry.1.oil_hunger_kure_yards }
+ desc = { trigger = { has_completed_focus = JPI_oil_hunger has_completed_focus = JPI_airship_hangars } text = japan_industry.1.oil_hunger_airship_hangars }
+ desc = { trigger = { has_completed_focus = JPI_proxy_machines has_completed_focus = JPI_kure_yards } text = japan_industry.1.proxy_machines_kure_yards }
+ desc = { trigger = { has_completed_focus = JPI_proxy_machines has_completed_focus = JPI_airship_hangars } text = japan_industry.1.proxy_machines_airship_hangars }
+ desc = { trigger = { has_completed_focus = JPI_copied_samples has_completed_focus = JPI_kure_yards } text = japan_industry.1.copied_samples_kure_yards }
+ desc = { trigger = { has_completed_focus = JPI_copied_samples has_completed_focus = JPI_airship_hangars } text = japan_industry.1.copied_samples_airship_hangars }
+ option = { name = japan_industry.1.a }
+}

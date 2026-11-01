@@ -1,0 +1,20 @@
+A10R_council = {
+ A10R_convene_delegates = {
+  icon = generic_political_discourse cost = 45 days_re_enable = 60
+  available = { check_variable = { A10R_cohesion < 90 } }
+  complete_effect = { add_to_variable = { A10R_cohesion = 10 } A10R_refresh = yes }
+  ai_will_do = { factor = 2 modifier = { factor = 4 check_variable = { A10R_cohesion < 40 } } }
+ }
+ A10R_emergency_contributions = {
+  icon = generic_political_discourse cost = 25 days_re_enable = 90
+  available = { check_variable = { A10R_cohesion > 29 } has_war = yes }
+  complete_effect = { add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 450 producer = A10 } add_to_variable = { A10R_cohesion = -8 } add_stability = -0.02 A10R_refresh = yes }
+  ai_will_do = { factor = 1 modifier = { factor = 0 check_variable = { A10R_cohesion < 50 } } }
+ }
+ A10R_publish_accounts = {
+  icon = generic_political_discourse cost = 35 days_re_enable = 90
+  available = { has_completed_focus = A10R_common_treasury }
+  complete_effect = { add_to_variable = { A10R_cohesion = 6 } add_stability = 0.02 A10R_refresh = yes }
+  ai_will_do = { factor = 2 }
+ }
+}

@@ -1,0 +1,58 @@
+JPL_luzon_cabinet = {
+ JPL_supply_manila = {
+  icon = generic_political_discourse cost = 55 days_re_enable = 90
+  visible = { has_completed_focus = JPC_manila_priority }
+  available = { has_country_flag = JPL_theater_active controls_state = 327 NOT = { has_country_flag = JPL_extra_supply } has_equipment = { infantry_equipment > 199 } }
+  complete_effect = { add_equipment_to_stockpile = { type = infantry_equipment amount = -200 } JPL_supply_allocation_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 3 check_variable = { JPL_garrison_burden > 59 } } }
+ }
+ JPL_escort_manila = {
+  icon = generic_political_discourse cost = 45 days_re_enable = 90
+  visible = { has_completed_focus = JPC_garrison_accounts }
+  available = { has_country_flag = JPL_theater_active NOT = { has_country_flag = JPL_escort_allocation } }
+  complete_effect = { JPL_escort_allocation_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 3 check_variable = { JPL_garrison_burden > 59 } } }
+ }
+ JPL_open_field_hospitals = {
+  icon = generic_political_discourse cost = 60 days_re_enable = 90
+  visible = { has_completed_focus = JPL_medical_rotation }
+  available = { has_country_flag = JPL_theater_active NOT = { has_country_flag = JPL_field_hospitals } has_equipment = { support_equipment > 24 } }
+  complete_effect = { add_equipment_to_stockpile = { type = support_equipment amount = -25 } JPL_hospital_allocation_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 4 check_variable = { JPL_garrison_fatigue > 59 } } }
+ }
+ JPL_rotate_garrison = {
+  icon = generic_political_discourse cost = 75 days_re_enable = 90
+  visible = { has_completed_focus = JPC_garrison_accounts }
+  available = { has_country_flag = JPL_theater_active has_manpower > 999 NOT = { has_country_flag = JPL_fresh_rotations } }
+  complete_effect = { JPL_rotation_allocation_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 4 check_variable = { JPL_garrison_fatigue > 59 } } }
+ }
+ JPL_verify_garrison_books = {
+  icon = generic_political_discourse cost = 50 days_re_enable = 120
+  visible = { has_completed_focus = JPC_garrison_accounts }
+  available = { has_country_flag = JPL_theater_active check_variable = { JPL_garrison_burden > 29 } }
+  complete_effect = { add_to_variable = { JPL_garrison_burden = -12 } add_to_variable = { JPL_garrison_fatigue = 4 } JPL_refresh_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 3 check_variable = { JPL_garrison_burden > 59 } } }
+ }
+ JPL_purchase_locally = {
+  icon = generic_political_discourse cost = 65 days_re_enable = 120
+  visible = { has_completed_focus = JPL_supply_board }
+  available = { has_country_flag = JPL_theater_active controls_state = 327 NOT = { has_country_flag = JPL_civic_purchases } }
+  complete_effect = { set_country_flag = { flag = JPL_civic_purchases days = 120 } add_to_variable = { JPL_garrison_burden = -6 } add_stability = 0.01 JPF_add_war_expense_effect = yes JPL_refresh_effect = yes }
+  ai_will_do = { base = 1 }
+ }
+ JPL_hold_port_perimeter = {
+  icon = generic_political_discourse cost = 40 days_re_enable = 120
+  visible = { has_completed_focus = JPD_professional_logistics }
+  available = { has_country_flag = JPL_theater_active NOT = { has_idea = JPL_perimeter_order } }
+  complete_effect = { add_to_variable = { JPL_garrison_burden = -10 } add_to_variable = { JPL_garrison_fatigue = 7 } add_timed_idea = { idea = JPL_perimeter_order days = 90 } JPL_refresh_effect = yes }
+  ai_will_do = { base = 0.5 modifier = { factor = 4 check_variable = { JPL_garrison_burden > 79 } } }
+ }
+ JPL_prosecute_false_accounts = {
+  icon = generic_political_discourse cost = 75 fire_only_once = yes
+  visible = { has_completed_focus = JPL_supply_board NOT = { has_country_flag = JPL_accounts_corrected } }
+  available = { has_country_flag = JPL_theater_active controls_state = 327 }
+  complete_effect = { JPL_correct_accounts_effect = yes add_stability = -0.01 }
+  ai_will_do = { base = 3 }
+ }
+}

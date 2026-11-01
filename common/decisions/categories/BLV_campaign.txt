@@ -1,0 +1,1 @@
+BLV_imperial_government = { icon = generic_political_discourse visible = { tag = A02 has_country_flag = BLV_initialized } }

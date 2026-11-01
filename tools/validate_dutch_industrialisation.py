@@ -17,20 +17,21 @@ assert len(names)==len(set(names))
 assert all(not re.search(r"[А-Яа-я]", n) for n in names)
 templates={value(t,"name").strip('"'):t for t in children(army,"division_template")}
 expected = {
- "Batavische Mariniers": ("marine", 16, 3, 41),
- "KNIL-Infanterie": ("infantry", 16, 4, 44),
- "Koloniale Landstorm": ("infantry", 12, 2, 30),
+ "Batavische Mariniers": ("marine", 16, 3, 38),
+ "KNIL-Infanterie": ("infantry", 16, 4, 40),
+ "Koloniale Landstorm": ("infantry", 12, 2, 28),
 }
 for name, (unit, men, guns, width) in expected.items():
  regiments = value(templates[name], "regiments")
  assert len(children(regiments, unit)) == men, name
- assert len(children(regiments, "artillery_brigade")) == guns, name
+ assert len(children(regiments, "field_gun_brigade")) == guns, name
  assert len(regiments) == men + guns, name
  positions = [(value(body, "x"), value(body, "y")) for key, op, body in regiments]
  assert len(set(positions)) == len(positions), f"Overlapping battalions: {name}"
  assert all(0 <= int(x) < 5 and 0 <= int(y) < 5 for x, y in positions), name
- assert men * 2 + guns * 3 == width, name
-assert "gw_artillery = 1" in read("history/countries/A01 - Placeholder.txt")
+ field_gun = value(value(parse(read("common/units/artillery_brigade.txt")), "sub_units"), "field_gun_brigade")
+ assert men * 2 + guns * float(value(field_gun, "combat_width")) == width, name
+assert "early_artillery = 1" in read("history/countries/A01 - Placeholder.txt")
 assert all(value(u,"division_template").strip('"') in templates for u in units)
 assert sum(value(u,"division_template").strip('"')=="Koloniale Landstorm" for u in units)==6
 militia=parse(read("history/units/A01_indonesian_militia.txt"))
@@ -84,7 +85,8 @@ positions=[(int(value(f,"x")),int(value(f,"y"))) for f in focuses]
 public=[(int(value(f,"x")),int(value(f,"y"))) for f in focuses if "A01_royal_path_revealed" not in str(children(f,"allow_branch"))]
 royal=[(int(value(f,"x")),int(value(f,"y"))) for f in focuses if "A01_royal_path_revealed" in str(children(f,"allow_branch"))]
 assert max(x for x,y in public)-min(x for x,y in public)<=24
-assert max(x for x,y in royal)-min(x for x,y in royal)<=8
+# The approved 46-focus royal expansion occupies a 24-column block.
+assert max(x for x,y in royal)-min(x for x,y in royal)<=24
 for x,y in positions:
  assert all(abs(x-x2)>=2 for x2,y2 in positions if y2==y and x2!=x)
 # Prevent one-month grants of two permanent industrial buildings, and wartime buff retention.
@@ -104,7 +106,7 @@ for ident,o,body in advisors:
  available=value(value(body,"advisor"),"available")
  assert value(available,"has_completed_focus") in by_id
 for lang in ["russian","english"]:
- raw=(R/f"localisation/{lang}/A01_industrial_transition_l_{lang}.yml").read_bytes()
+ raw=(R/f"localisation/{lang}/1896_main_l_{lang}.yml").read_bytes()
  assert raw.startswith(b"\xef\xbb\xbf")
  keys=set(re.findall(r"^\s+([^\s:]+):",raw.decode("utf-8-sig"),re.M))
  for ident in chain+["A01_production_standardisation","A01_java_steam_power","A01_local_nco_schools"]+list(ideas.keys()-{stages[0]}):

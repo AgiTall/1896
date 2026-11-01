@@ -1,0 +1,1 @@
+characters = { AUC_edmund_barton = { name = AUC_edmund_barton_name country_leader = { ideology = conservatism expire = "1965.1.1.1" traits = { } } } }

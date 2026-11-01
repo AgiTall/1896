@@ -1,0 +1,24 @@
+ideas = { country = {
+ A10M_martial_government = { picture = generic_army_war_college removal_cost = -1 modifier = { political_power_gain = -0.10 stability_factor = -0.08 army_org_factor = 0.04 } }
+ A10M_censored_society = { picture = generic_oppression removal_cost = -1 modifier = { war_support_factor = 0.06 research_speed_factor = -0.02 } }
+ A10M_requisition_bureaus = { picture = generic_army_war_college removal_cost = -1 modifier = { production_factory_max_efficiency_factor = 0.05 consumer_goods_expected_value = 0.03 } }
+ A10M_compensation_bonds = { picture = generic_oppression removal_cost = -1 modifier = { political_power_gain = -0.08 consumer_goods_expected_value = 0.02 } }
+ A10M_compulsory_labour = { picture = generic_army_war_college removal_cost = -1 modifier = { production_speed_arms_factory_factor = 0.12 production_speed_industrial_complex_factor = -0.10 stability_factor = -0.06 } }
+ A10M_cadet_estate = { picture = generic_army_war_college removal_cost = -1 modifier = { training_time_army_factor = -0.08 army_leader_cost_factor = -0.10 } }
+ A10M_military_levies = { picture = generic_army_war_college removal_cost = -1 modifier = { recruitable_population_factor = 0.15 production_factory_efficiency_gain_factor = -0.05 } }
+ A10M_field_hospitals = { picture = generic_army_war_college removal_cost = -1 modifier = { attrition = -0.04 consumer_goods_expected_value = 0.02 } }
+ A10M_supply_inspectorate = { picture = generic_army_war_college removal_cost = -1 modifier = { supply_consumption_factor = -0.06 } }
+ A10M_permanent_junta = { picture = generic_army_war_college removal_cost = -1 modifier = { army_attack_factor = 0.05 war_support_factor = 0.05 stability_factor = -0.05 } }
+ A10M_political_commissars = { picture = generic_army_war_college removal_cost = -1 modifier = { army_morale_factor = 0.07 planning_speed = -0.05 political_power_gain = -0.05 } }
+ A10M_barracks_state = { picture = generic_army_war_college removal_cost = -1 modifier = { recruitable_population_factor = 0.10 production_speed_industrial_complex_factor = -0.10 } }
+ A10M_military_directorate = { picture = generic_oppression removal_cost = -1 modifier = { army_defence_factor = 0.04 political_power_gain = -0.05 stability_factor = 0.02 } }
+ A10M_professional_service = { picture = generic_army_war_college removal_cost = -1 modifier = { army_org_factor = 0.04 training_time_army_factor = 0.05 } }
+ A10M_published_budget = { picture = generic_oppression removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.05 political_power_gain = -0.05 } }
+ A10M_veterans_obligations = { picture = generic_oppression removal_cost = -1 modifier = { consumer_goods_expected_value = 0.03 stability_factor = 0.03 } }
+ A10M_civil_recovery = { picture = generic_oppression removal_cost = -1 modifier = { production_speed_industrial_complex_factor = 0.05 political_power_gain = -0.05 } }
+ A10M_coastal_watch = { picture = generic_army_war_college removal_cost = -1 modifier = { navy_org_factor = 0.04 army_defence_factor = 0.03 } }
+ A10M_strikes = { picture = generic_oppression removal_cost = -1 modifier = { production_factory_max_efficiency_factor = -0.10 stability_factor = -0.05 } }
+ A10M_rationing = { picture = generic_oppression removal_cost = -1 modifier = { army_org_factor = -0.05 production_factory_efficiency_gain_factor = -0.10 } }
+ A10M_shattered_officer_corps = { picture = generic_army_war_college removal_cost = -1 modifier = { army_org_factor = -0.06 planning_speed = -0.10 } }
+ A10M_iron_state = { picture = generic_army_war_college removal_cost = -1 modifier = { army_defence_factor = 0.03 naval_coordination = 0.03 } }
+} }

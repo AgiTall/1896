@@ -1,0 +1,55 @@
+add_namespace = japan_dragon
+country_event = {
+ id = japan_dragon.1 title = japan_dragon.1.t desc = japan_dragon.1.d
+ picture = GFX_1896_event_trade is_triggered_only = yes
+ option = { name = japan_dragon.1.a add_stability = -0.04 }
+}
+country_event = {
+ id = japan_dragon.2 title = japan_dragon.2.t desc = japan_dragon.2.d
+ picture = GFX_1896_event_talks is_triggered_only = yes
+ immediate = {
+  set_country_flag = JPT_greenland_crisis
+  add_timed_idea = { idea = JPT_arctic_crisis days = 365 }
+  add_named_threat = { threat = 4 name = japan_dragon.2.t }
+  if = { limit = { country_exists = DEN } DEN = { country_event = { id = japan_dragon.4 days = 1 } } }
+  if = { limit = { country_exists = SOV } SOV = { country_event = { id = japan_dragon.4 days = 1 } } }
+  if = { limit = { country_exists = A02 } A02 = { country_event = { id = japan_dragon.4 days = 1 } } }
+ }
+ option = {
+  name = japan_dragon.2.a ai_chance = { factor = 80 }
+  add_political_power = -75 add_stability = -0.03
+  set_country_flag = JPT_expedition_stopped
+  remove_ideas = JPT_arctic_crisis
+  add_to_variable = { JPN_north_trust = -20 } JPN_north_refresh_effect = yes
+ }
+ option = {
+  name = japan_dragon.2.b ai_chance = { factor = 20 }
+  add_war_support = 0.05
+  set_country_flag = JPT_defied_arctic_protest
+  if = { limit = { country_exists = A02 NOT = { has_war_with = A02 } } A02 = { country_event = { id = japan_dragon.5 days = 14 } } }
+ }
+}
+country_event = {
+ id = japan_dragon.3 title = japan_dragon.3.t desc = japan_dragon.3.d
+ picture = GFX_1896_event_navy is_triggered_only = yes
+ option = { name = japan_dragon.3.a set_country_flag = JPT_expedition_stopped add_to_variable = { JPN_north_trust = -5 } JPN_north_refresh_effect = yes }
+}
+country_event = {
+ id = japan_dragon.4 title = japan_dragon.4.t desc = japan_dragon.4.d
+ picture = GFX_1896_event_talks is_triggered_only = yes
+ option = { name = japan_dragon.4.a add_war_support = 0.02 }
+}
+country_event = {
+ id = japan_dragon.5 title = japan_dragon.5.t desc = japan_dragon.5.d
+ picture = GFX_1896_event_navy is_triggered_only = yes
+ trigger = { tag = A02 country_exists = A03 NOT = { has_war_with = A03 } A03 = { has_country_flag = JPT_defied_arctic_protest } }
+ option = {
+  name = japan_dragon.5.a ai_chance = { factor = 75 }
+  add_political_power = 25
+  A03 = { add_timed_idea = { idea = JPT_arctic_crisis days = 730 } }
+ }
+ option = {
+  name = japan_dragon.5.b ai_chance = { factor = 25 }
+  declare_war_on = { target = A03 type = annex_everything }
+ }
+}

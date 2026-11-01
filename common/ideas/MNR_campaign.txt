@@ -1,0 +1,33 @@
+ideas = { country = {
+MNR_shortages = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = 0.08 production_factory_efficiency_gain_factor = -0.05 } }
+MNR_discontent = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = -0.15 stability_factor = -0.05 } }
+MNR_civic_service = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.05 production_speed_industrial_complex_factor = 0.08 } }
+MNR_command_service = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { army_defence_factor = 0.05 training_time_factor = -0.08 } }
+MNR_network_service = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = -0.03 } }
+MNR_emergency = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { army_defence_factor = 0.04 stability_factor = -0.03 } }
+MNR_repair_service = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { industry_repair_factor = 0.15 } }
+MNR_self_insurance = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.04 } }
+MNR_A05_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.08 } }
+MNR_PCF_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { consumer_goods_factor = -0.03 } }
+MNR_PAZ_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { production_speed_infrastructure_factor = 0.12 } }
+MNR_PHR_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { consumer_goods_factor = -0.03 } }
+MNR_PHW_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.08 } }
+MNR_MLT_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { research_speed_factor = 0.03 } }
+MNR_PSL_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 } }
+MNR_PSY_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.08 } }
+MNR_A08_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = -0.04 } }
+MNR_A09_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.08 } }
+MNR_A11_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 } }
+MNR_A12_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.08 } }
+MNR_A13_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = -0.04 } }
+MNR_A14_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = -0.04 } }
+MNR_PCB_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 } }
+MNR_PPN_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { consumer_goods_factor = -0.03 } }
+MNR_PVI_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.08 } }
+MNR_PSM_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { industry_repair_factor = 0.15 } }
+MNR_PMD_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { consumer_goods_factor = -0.03 } }
+MNR_PNM_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { production_speed_infrastructure_factor = 0.12 } }
+MNR_PNL_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = -0.04 } }
+MNR_PML_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { industry_repair_factor = 0.15 } }
+MNR_PBT_economy_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = -0.04 } }
+} }

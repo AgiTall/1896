@@ -1,0 +1,14 @@
+ideas = { country = {
+WTC_silver_convoy = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = 0.02 convoy_escort_efficiency = 0.05 } }
+WTC_cable_contract = { picture = jpc_credit removal_cost = -1 modifier = { political_power_gain = 0.05 naval_coordination = 0.03 } }
+WTC_port_concession = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = 0.04 production_speed_buildings_factor = -0.05 } }
+WTC_blacklist = { picture = jpc_credit removal_cost = -1 modifier = { trade_opinion_factor = -50 production_speed_buildings_factor = -0.10 } }
+WTC_cable_blackout = { picture = jpc_north removal_cost = -1 modifier = { naval_coordination = -0.05 political_power_gain = -0.10 } }
+WTC_local_receivership = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = 0.06 stability_factor = -0.05 } }
+WTC_british_dependence = { picture = jpc_fleet removal_cost = -1 modifier = { political_power_gain = -0.05 } }
+WTC_unprotected_routes = { picture = jpc_fleet removal_cost = -1 modifier = { trade_opinion_factor = -25 political_power_gain = -0.15 } }
+WTC_technocratic_credit = { picture = jpc_credit removal_cost = -1 modifier = { research_speed_factor = 0.03 } }
+WTC_pirate_channels = { picture = jpc_luzon removal_cost = -1 modifier = { convoy_escort_efficiency = 0.03 stability_factor = -0.02 } }
+A01_european_overture = { picture = jpc_credit removal_cost = -1 modifier = { democratic_drift = 0.02 } }
+A01_chamber_democrats = { picture = jpc_credit removal_cost = -1 modifier = { democratic_drift = 0.03 consumer_goods_factor = 0.01 } }
+} }

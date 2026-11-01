@@ -1,0 +1,42 @@
+JMC_maritime_programme = {
+ JMC_organise_pilot_service = {
+  icon = generic_naval
+  cost = 40
+  days_remove = 30
+  days_re_enable = 180
+  fire_only_once = no
+  visible = { has_country_flag = JMC_course_confirmed has_country_flag = JMC_merchant_course }
+  available = { JMC_can_start_pilots = yes }
+  cancel_trigger = { NOT = { JMC_pilots_requirements = yes } }
+  cancel_if_not_visible = yes
+  complete_effect = {
+   if = { limit = { JMC_can_start_pilots = yes }
+    set_country_flag = JMC_pilots_in_progress
+    add_equipment_to_stockpile = { type = support_equipment amount = -20 }
+   }
+  }
+  cancel_effect = { clr_country_flag = JMC_pilots_in_progress }
+  remove_effect = { JMC_finish_pilots_effect = yes }
+  ai_will_do = { base = 2 }
+ }
+ JMC_prepare_transport_service = {
+  icon = generic_naval
+  cost = 50
+  days_remove = 35
+  days_re_enable = 180
+  fire_only_once = no
+  visible = { has_country_flag = JMC_course_confirmed has_country_flag = JMC_expedition_course }
+  available = { JMC_can_start_transports = yes }
+  cancel_trigger = { NOT = { JMC_transports_requirements = yes } }
+  cancel_if_not_visible = yes
+  complete_effect = {
+   if = { limit = { JMC_can_start_transports = yes }
+    set_country_flag = JMC_transports_in_progress
+    add_equipment_to_stockpile = { type = support_equipment amount = -40 }
+   }
+  }
+  cancel_effect = { clr_country_flag = JMC_transports_in_progress }
+  remove_effect = { JMC_finish_transports_effect = yes }
+  ai_will_do = { base = 2 }
+ }
+}

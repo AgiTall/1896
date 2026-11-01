@@ -1,0 +1,303 @@
+{
+  "basic_machine_tools": {
+    "year": 1890,
+    "ru": "Восстановление станочного парка",
+    "en": "Restored Machine Shops",
+    "desc_ru": "Стандартизация деталей и оснащения мастерских повышает устойчивость военного производства после разрыва прежних цепочек поставок.",
+    "desc_en": "Standardized parts and better workshops restore reliable military production after the collapse of old supply chains."
+  },
+  "improved_machine_tools": {
+    "year": 1894,
+    "ru": "Взаимозаменяемые детали",
+    "en": "Interchangeable Parts",
+    "desc_ru": "Стандартизация деталей и оснащения мастерских повышает устойчивость военного производства после разрыва прежних цепочек поставок.",
+    "desc_en": "Standardized parts and better workshops restore reliable military production after the collapse of old supply chains."
+  },
+  "advanced_machine_tools": {
+    "year": 1898,
+    "ru": "Точные станки",
+    "en": "Precision Machine Tools",
+    "desc_ru": "Стандартизация деталей и оснащения мастерских повышает устойчивость военного производства после разрыва прежних цепочек поставок.",
+    "desc_en": "Standardized parts and better workshops restore reliable military production after the collapse of old supply chains."
+  },
+  "assembly_line_production": {
+    "year": 1902,
+    "ru": "Серийная сборка",
+    "en": "Serial Assembly",
+    "desc_ru": "Стандартизация деталей и оснащения мастерских повышает устойчивость военного производства после разрыва прежних цепочек поставок.",
+    "desc_en": "Standardized parts and better workshops restore reliable military production after the collapse of old supply chains."
+  },
+  "concentrated_industry": {
+    "year": 1890,
+    "ru": "Портовые мануфактуры",
+    "en": "Port Manufactories",
+    "desc_ru": "Сосредоточение мастерских у портов упрощает доставку сырья и увеличивает выпуск. Выбор исключает развитие распределённой промышленности.",
+    "desc_en": "Concentrating workshops near ports improves output and access to imported materials. This excludes the distributed industry path."
+  },
+  "concentrated_industry2": {
+    "year": 1894,
+    "ru": "Фабричные кварталы",
+    "en": "Factory Districts",
+    "desc_ru": "Сосредоточение мастерских у портов упрощает доставку сырья и увеличивает выпуск. Выбор исключает развитие распределённой промышленности.",
+    "desc_en": "Concentrating workshops near ports improves output and access to imported materials. This excludes the distributed industry path."
+  },
+  "concentrated_industry3": {
+    "year": 1898,
+    "ru": "Электрификация фабрик",
+    "en": "Factory Electrification",
+    "desc_ru": "Сосредоточение мастерских у портов упрощает доставку сырья и увеличивает выпуск. Выбор исключает развитие распределённой промышленности.",
+    "desc_en": "Concentrating workshops near ports improves output and access to imported materials. This excludes the distributed industry path."
+  },
+  "concentrated_industry4": {
+    "year": 1902,
+    "ru": "Промышленные комплексы",
+    "en": "Industrial Complexes",
+    "desc_ru": "Сосредоточение мастерских у портов упрощает доставку сырья и увеличивает выпуск. Выбор исключает развитие распределённой промышленности.",
+    "desc_en": "Concentrating workshops near ports improves output and access to imported materials. This excludes the distributed industry path."
+  },
+  "concentrated_industry5": {
+    "year": 1906,
+    "ru": "Интегрированные комбинаты",
+    "en": "Integrated Works",
+    "desc_ru": "Сосредоточение мастерских у портов упрощает доставку сырья и увеличивает выпуск. Выбор исключает развитие распределённой промышленности.",
+    "desc_en": "Concentrating workshops near ports improves output and access to imported materials. This excludes the distributed industry path."
+  },
+  "dispersed_industry": {
+    "year": 1890,
+    "ru": "Островные мастерские",
+    "en": "Island Workshops",
+    "desc_ru": "Распределённые мастерские уменьшают зависимость от одного порта и сохраняют навыки при смене заказов. Выбор исключает концентрацию промышленности.",
+    "desc_en": "Distributed workshops reduce dependence on a single port and retain skills when orders change. This excludes concentrated industry."
+  },
+  "dispersed_industry2": {
+    "year": 1894,
+    "ru": "Региональные арсеналы",
+    "en": "Regional Arsenals",
+    "desc_ru": "Распределённые мастерские уменьшают зависимость от одного порта и сохраняют навыки при смене заказов. Выбор исключает концентрацию промышленности.",
+    "desc_en": "Distributed workshops reduce dependence on a single port and retain skills when orders change. This excludes concentrated industry."
+  },
+  "dispersed_industry3": {
+    "year": 1898,
+    "ru": "Местные электростанции",
+    "en": "Local Power Stations",
+    "desc_ru": "Распределённые мастерские уменьшают зависимость от одного порта и сохраняют навыки при смене заказов. Выбор исключает концентрацию промышленности.",
+    "desc_en": "Distributed workshops reduce dependence on a single port and retain skills when orders change. This excludes concentrated industry."
+  },
+  "dispersed_industry4": {
+    "year": 1902,
+    "ru": "Сеть запасных производств",
+    "en": "Reserve Production Networks",
+    "desc_ru": "Распределённые мастерские уменьшают зависимость от одного порта и сохраняют навыки при смене заказов. Выбор исключает концентрацию промышленности.",
+    "desc_en": "Distributed workshops reduce dependence on a single port and retain skills when orders change. This excludes concentrated industry."
+  },
+  "dispersed_industry5": {
+    "year": 1906,
+    "ru": "Автономные промышленные округа",
+    "en": "Autonomous Industrial Districts",
+    "desc_ru": "Распределённые мастерские уменьшают зависимость от одного порта и сохраняют навыки при смене заказов. Выбор исключает концентрацию промышленности.",
+    "desc_en": "Distributed workshops reduce dependence on a single port and retain skills when orders change. This excludes concentrated industry."
+  },
+  "construction1": {
+    "year": 1890,
+    "ru": "Строительные артели",
+    "en": "Construction Guilds",
+    "desc_ru": "Подготовка инженеров, механизация работ и стандартные проекты ускоряют строительство и восстановление островной инфраструктуры.",
+    "desc_en": "Trained engineers, mechanical equipment and standard plans accelerate construction and repairs across the islands."
+  },
+  "construction2": {
+    "year": 1894,
+    "ru": "Паровые строительные машины",
+    "en": "Steam Construction Machinery",
+    "desc_ru": "Подготовка инженеров, механизация работ и стандартные проекты ускоряют строительство и восстановление островной инфраструктуры.",
+    "desc_en": "Trained engineers, mechanical equipment and standard plans accelerate construction and repairs across the islands."
+  },
+  "construction3": {
+    "year": 1898,
+    "ru": "Стальные конструкции",
+    "en": "Structural Steel",
+    "desc_ru": "Подготовка инженеров, механизация работ и стандартные проекты ускоряют строительство и восстановление островной инфраструктуры.",
+    "desc_en": "Trained engineers, mechanical equipment and standard plans accelerate construction and repairs across the islands."
+  },
+  "construction4": {
+    "year": 1902,
+    "ru": "Стандартизация строительства",
+    "en": "Standardized Construction",
+    "desc_ru": "Подготовка инженеров, механизация работ и стандартные проекты ускоряют строительство и восстановление островной инфраструктуры.",
+    "desc_en": "Trained engineers, mechanical equipment and standard plans accelerate construction and repairs across the islands."
+  },
+  "construction5": {
+    "year": 1906,
+    "ru": "Крупные инженерные работы",
+    "en": "Large Engineering Works",
+    "desc_ru": "Подготовка инженеров, механизация работ и стандартные проекты ускоряют строительство и восстановление островной инфраструктуры.",
+    "desc_en": "Trained engineers, mechanical equipment and standard plans accelerate construction and repairs across the islands."
+  },
+  "excavation1": {
+    "year": 1890,
+    "ru": "Геологические экспедиции",
+    "en": "Geological Expeditions",
+    "desc_ru": "Разведка месторождений, откачка воды и переработка руды увеличивают доступные запасы стратегического сырья.",
+    "desc_en": "Prospecting, drainage and ore processing increase the supply of strategic raw materials."
+  },
+  "excavation2": {
+    "year": 1894,
+    "ru": "Паровые шахтные насосы",
+    "en": "Steam Mine Pumps",
+    "desc_ru": "Разведка месторождений, откачка воды и переработка руды увеличивают доступные запасы стратегического сырья.",
+    "desc_en": "Prospecting, drainage and ore processing increase the supply of strategic raw materials."
+  },
+  "excavation3": {
+    "year": 1898,
+    "ru": "Механизация рудников",
+    "en": "Mechanized Mines",
+    "desc_ru": "Разведка месторождений, откачка воды и переработка руды увеличивают доступные запасы стратегического сырья.",
+    "desc_en": "Prospecting, drainage and ore processing increase the supply of strategic raw materials."
+  },
+  "excavation4": {
+    "year": 1902,
+    "ru": "Обогащение руды",
+    "en": "Ore Beneficiation",
+    "desc_ru": "Разведка месторождений, откачка воды и переработка руды увеличивают доступные запасы стратегического сырья.",
+    "desc_en": "Prospecting, drainage and ore processing increase the supply of strategic raw materials."
+  },
+  "excavation5": {
+    "year": 1906,
+    "ru": "Глубокие шахты",
+    "en": "Deep Mining",
+    "desc_ru": "Разведка месторождений, откачка воды и переработка руды увеличивают доступные запасы стратегического сырья.",
+    "desc_en": "Prospecting, drainage and ore processing increase the supply of strategic raw materials."
+  },
+  "fuel_refining": {
+    "year": 1890,
+    "ru": "Перегонка нефти",
+    "en": "Petroleum Distillation",
+    "desc_ru": "Улучшенная переработка нефти обеспечивает флот топливом. Она не заменяет отдельную разработку корабельных двигателей.",
+    "desc_en": "Improved petroleum processing supplies the fleet with fuel. Ship engines remain a separate research problem."
+  },
+  "fuel_refining2": {
+    "year": 1894,
+    "ru": "Очистка нефтяных фракций",
+    "en": "Petroleum Purification",
+    "desc_ru": "Улучшенная переработка нефти обеспечивает флот топливом. Она не заменяет отдельную разработку корабельных двигателей.",
+    "desc_en": "Improved petroleum processing supplies the fleet with fuel. Ship engines remain a separate research problem."
+  },
+  "fuel_refining3": {
+    "year": 1898,
+    "ru": "Промышленный мазут",
+    "en": "Industrial Fuel Oil",
+    "desc_ru": "Улучшенная переработка нефти обеспечивает флот топливом. Она не заменяет отдельную разработку корабельных двигателей.",
+    "desc_en": "Improved petroleum processing supplies the fleet with fuel. Ship engines remain a separate research problem."
+  },
+  "fuel_refining4": {
+    "year": 1902,
+    "ru": "Термическая переработка нефти",
+    "en": "Thermal Oil Processing",
+    "desc_ru": "Улучшенная переработка нефти обеспечивает флот топливом. Она не заменяет отдельную разработку корабельных двигателей.",
+    "desc_en": "Improved petroleum processing supplies the fleet with fuel. Ship engines remain a separate research problem."
+  },
+  "fuel_refining5": {
+    "year": 1906,
+    "ru": "Нефтеперерабатывающие комплексы",
+    "en": "Refining Complexes",
+    "desc_ru": "Улучшенная переработка нефти обеспечивает флот топливом. Она не заменяет отдельную разработку корабельных двигателей.",
+    "desc_en": "Improved petroleum processing supplies the fleet with fuel. Ship engines remain a separate research problem."
+  },
+  "oil_processing": {
+    "year": 1902,
+    "ru": "Опытные химические заводы",
+    "en": "Experimental Chemical Works",
+    "desc_ru": "Развитие экспериментальной химической промышленности увеличивает выход топлива из переработанного сырья.",
+    "desc_en": "Experimental chemical industry improves fuel yields from processed raw materials."
+  },
+  "improved_oil_processing": {
+    "year": 1906,
+    "ru": "Переработка угольных смол",
+    "en": "Coal Tar Processing",
+    "desc_ru": "Развитие экспериментальной химической промышленности увеличивает выход топлива из переработанного сырья.",
+    "desc_en": "Experimental chemical industry improves fuel yields from processed raw materials."
+  },
+  "advanced_oil_processing": {
+    "year": 1910,
+    "ru": "Каталитические процессы",
+    "en": "Catalytic Processes",
+    "desc_ru": "Развитие экспериментальной химической промышленности увеличивает выход топлива из переработанного сырья.",
+    "desc_en": "Experimental chemical industry improves fuel yields from processed raw materials."
+  },
+  "modern_oil_processing": {
+    "year": 1914,
+    "ru": "Комплексная нефтехимия",
+    "en": "Integrated Petrochemistry",
+    "desc_ru": "Развитие экспериментальной химической промышленности увеличивает выход топлива из переработанного сырья.",
+    "desc_en": "Experimental chemical industry improves fuel yields from processed raw materials."
+  },
+  "rubber_processing": {
+    "year": 1906,
+    "ru": "Опыты с эластомерами",
+    "en": "Elastomer Experiments",
+    "desc_ru": "Искусственные эластомеры — дорогая поздняя альтернатива природному каучуку. Плантации остаются стратегическим преимуществом архипелага.",
+    "desc_en": "Artificial elastomers are a costly late alternative to natural rubber. Plantations remain a strategic advantage of the archipelago."
+  },
+  "improved_rubber_processing": {
+    "year": 1910,
+    "ru": "Лабораторный искусственный каучук",
+    "en": "Laboratory Artificial Rubber",
+    "desc_ru": "Искусственные эластомеры — дорогая поздняя альтернатива природному каучуку. Плантации остаются стратегическим преимуществом архипелага.",
+    "desc_en": "Artificial elastomers are a costly late alternative to natural rubber. Plantations remain a strategic advantage of the archipelago."
+  },
+  "advanced_rubber_processing": {
+    "year": 1914,
+    "ru": "Промышленный искусственный каучук",
+    "en": "Industrial Artificial Rubber",
+    "desc_ru": "Искусственные эластомеры — дорогая поздняя альтернатива природному каучуку. Плантации остаются стратегическим преимуществом архипелага.",
+    "desc_en": "Artificial elastomers are a costly late alternative to natural rubber. Plantations remain a strategic advantage of the archipelago."
+  },
+  "modern_rubber_processing": {
+    "year": 1918,
+    "ru": "Специализированные эластомеры",
+    "en": "Specialized Elastomers",
+    "desc_ru": "Искусственные эластомеры — дорогая поздняя альтернатива природному каучуку. Плантации остаются стратегическим преимуществом архипелага.",
+    "desc_en": "Artificial elastomers are a costly late alternative to natural rubber. Plantations remain a strategic advantage of the archipelago."
+  },
+  "flexible_line": {
+    "year": 1906,
+    "ru": "Универсальные сборочные мастерские",
+    "en": "Flexible Assembly Workshops",
+    "desc_ru": "Инженерные методы адаптированы к ограниченным ресурсам островного мира. Эффекты исследования указаны ниже.",
+    "desc_en": "Engineering methods adapted to the limited resources of the island world. Research effects are listed below."
+  },
+  "streamlined_line": {
+    "year": 1906,
+    "ru": "Специализированные сборочные линии",
+    "en": "Specialized Assembly Lines",
+    "desc_ru": "Инженерные методы адаптированы к ограниченным ресурсам островного мира. Эффекты исследования указаны ниже.",
+    "desc_en": "Engineering methods adapted to the limited resources of the island world. Research effects are listed below."
+  },
+  "improved_equipment_conversion": {
+    "year": 1898,
+    "ru": "Арсенальная переделка вооружения",
+    "en": "Arsenal Equipment Conversion",
+    "desc_ru": "Инженерные методы адаптированы к ограниченным ресурсам островного мира. Эффекты исследования указаны ниже.",
+    "desc_en": "Engineering methods adapted to the limited resources of the island world. Research effects are listed below."
+  },
+  "advanced_equipment_conversion": {
+    "year": 1902,
+    "ru": "Стандартизированная переделка вооружения",
+    "en": "Standardized Equipment Conversion",
+    "desc_ru": "Инженерные методы адаптированы к ограниченным ресурсам островного мира. Эффекты исследования указаны ниже.",
+    "desc_en": "Engineering methods adapted to the limited resources of the island world. Research effects are listed below."
+  },
+  "fuel_silos": {
+    "year": 1890,
+    "ru": "Нефтяные резервуары",
+    "en": "Petroleum Storage Tanks",
+    "desc_ru": "Инженерные методы адаптированы к ограниченным ресурсам островного мира. Эффекты исследования указаны ниже.",
+    "desc_en": "Engineering methods adapted to the limited resources of the island world. Research effects are listed below."
+  },
+  "synth_oil_experiments": {
+    "year": 1898,
+    "ru": "Углехимические лаборатории",
+    "en": "Coal Chemistry Laboratories",
+    "desc_ru": "Инженерные методы адаптированы к ограниченным ресурсам островного мира. Эффекты исследования указаны ниже.",
+    "desc_en": "Engineering methods adapted to the limited resources of the island world. Research effects are listed below."
+  }
+}

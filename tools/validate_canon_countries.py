@@ -36,7 +36,7 @@ for p in (R/'common/country_tags').glob('*.txt'):
 
 loc={}
 for lang in ['russian','english']:
-    p=R/f'localisation/{lang}/zzzzz_canon_countries_l_{lang}.yml'
+    p=R/f'localisation/{lang}/1896_main_l_{lang}.yml'
     check(p.read_bytes().startswith(b'\xef\xbb\xbf'),f'No BOM: {p.name}')
     loc[lang]=set(re.findall(r'^\s+(\S+):',p.read_text(encoding='utf-8-sig'),re.M))
 
@@ -106,7 +106,7 @@ for split in m['state_splits']:
 for p in [R/'common/characters/pz_canon_councils.txt',R/'common/ideas/pz_canon_governments.txt',R/'common/bookmarks/the_gathering_storm.txt']:
     parse(p.read_text(encoding='utf-8-sig'))
 for lang in ['russian','english']:
-    loc_text=(R/f'localisation/{lang}/zzzzz_canon_countries_l_{lang}.yml').read_text(encoding='utf-8-sig')
+    loc_text=(R/f'localisation/{lang}/1896_main_l_{lang}.yml').read_text(encoding='utf-8-sig')
     all_labels=set(re.findall(r'^\s+(\S+):',loc_text,re.M))
     for key in ['A02_fisher_name','A06_pobedonostsev_name','PAZ_prophet_name']:
         check(key in all_labels,f'Missing secondary leader label: {lang}/{key}')

@@ -1,0 +1,56 @@
+ideas = { country = {
+ JPF_treasury_ledger = {
+  picture = jpc_credit
+  removal_cost = -1
+ }
+ JPF_debt_distress = {
+  picture = jpc_credit
+  removal_cost = -1
+  modifier = { production_factory_max_efficiency_factor = -0.05 navy_org_factor = -0.03 }
+ }
+ JPF_budget_mistrust = {
+  picture = jpc_credit
+  removal_cost = -1
+  modifier = { political_power_gain = -0.10 }
+ }
+ JPF_verified_accounts = {
+  picture = jpc_credit
+  removal_cost = -1
+  modifier = { production_factory_efficiency_gain_factor = 0.05 }
+ }
+ JPF_excise_collection = {
+  picture = jpc_credit
+  removal_cost = -1
+  modifier = { stability_factor = -0.04 production_speed_buildings_factor = -0.05 }
+ }
+ JPF_yard_retrenchment = {
+  picture = jpc_fleet
+  removal_cost = -1
+  modifier = { production_speed_dockyard_factor = -0.20 navy_org_factor = -0.05 }
+ }
+ JPF_delivery_arrears = {
+  picture = jpc_fleet
+  removal_cost = -1
+  modifier = { production_factory_efficiency_gain_factor = -0.10 naval_supply_consumption_factor = 0.08 }
+ }
+ JPF_cash_freeze = {
+  picture = jpc_credit
+  removal_cost = -1
+  modifier = { production_factory_efficiency_gain_factor = -0.15 production_speed_dockyard_factor = -0.10 }
+ }
+ JPF_families_arrears = {
+  picture = jpc_fleet
+  removal_cost = -1
+  modifier = { stability_factor = -0.05 political_power_gain = -0.10 }
+ }
+ JPF_coal_contracts = {
+  picture = jpc_fleet
+  removal_cost = -1
+  modifier = { naval_supply_consumption_factor = -0.05 }
+ }
+ JPF_civilian_retrenchment = {
+  picture = jpc_credit
+  removal_cost = -1
+  modifier = { production_speed_buildings_factor = -0.05 }
+ }
+} }

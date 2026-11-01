@@ -1,0 +1,133 @@
+{
+  "run_at_utc": "2026-10-31T21:14:51.215466+00:00",
+  "status": "passed",
+  "passed": 20,
+  "total": 20,
+  "checks": [
+    {
+      "name": "Engine script regressions",
+      "script": "validate_engine_syntax_regressions.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "1893 starting research and logistics",
+      "script": "validate_1893_start.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Research and warfare references",
+      "script": "audit_great_war_research.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Split-state building and port positions",
+      "script": "validate_canon_map_buildings.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Current Japanese focus tree",
+      "script": "validate_japan_mini.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Japanese protectorate negotiations",
+      "script": "validate_gameplay_polish.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Japanese maritime programme",
+      "script": "validate_jmc_maritime.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Japanese maritime course projects",
+      "script": "validate_jmc_operations.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Chamber debt book and island diplomacy",
+      "script": "validate_chamber_network.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Focus paths and research rewards",
+      "script": "validate_focus_polish.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Russian and English localisation",
+      "script": "validate_localisation_polish.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Dutch preparations and shared calendar",
+      "script": "validate_independent_preparations.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Borneo defence projects",
+      "script": "validate_borneo_defences.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Dutch crown and peace outcomes",
+      "script": "validate_crown_rework.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Dutch postwar finances and elections",
+      "script": "validate_federal_recovery.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Philippine campaign references and layout",
+      "script": "validate_philippines_rework.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Philippine republican agreements",
+      "script": "test_philippines_republics.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Philippine military paths",
+      "script": "test_philippines_military.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Philippine industry and supply",
+      "script": "A10D_validate_development.py",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "Philippine Chamber agreements",
+      "script": "A10W_validate.py",
+      "passed": true,
+      "exit_code": 0
+    }
+  ],
+  "limitations": [
+    "Static checks and bounded script models; HOI4 was not launched.",
+    "No full campaign, combat balance or in-game visual verification.",
+    "Archived campaign validators are not part of this current-content suite."
+  ]
+}

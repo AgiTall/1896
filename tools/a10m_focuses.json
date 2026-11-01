@@ -1,0 +1,586 @@
+[
+  {
+    "id": "A10M_coup",
+    "name_ru": "Ночь запертых дверей",
+    "desc_ru": "Караулы перекроют подходы к островному конгрессу. Полковник Матео Сандоваль объявит, что свобода республик стала прикрытием бессилия, и передаст власть чрезвычайному военному командованию. Делегатов отпустят лишь после присяги.",
+    "name_en": "The Night of Locked Doors",
+    "desc_en": "Guards will seal the approaches to the island congress. Colonel Mateo Sandoval will declare the republics' freedom a cover for impotence and place power in an emergency military command. Delegates will leave only after taking its oath.",
+    "icon": "GFX_goal_generic_military_sphere",
+    "x": 38,
+    "y": 3,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10_confederation",
+      "A10W_oath"
+    ],
+    "available": "is_subject = no",
+    "reward": "A10M_begin_coup = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10M_martial_law",
+    "name_ru": "Приказ о чрезвычайном положении",
+    "desc_ru": "Военные коменданты получат контроль над портами, телеграфом и ночным движением. За каждым обещанием порядка останется семья, которой придётся просить разрешение на обычную жизнь.",
+    "name_en": "The Emergency Proclamation",
+    "desc_en": "Military commandants will control ports, telegraphs and movement after dark. Behind every promise of order stands a family forced to request permission for ordinary life.",
+    "icon": "GFX_goal_generic_major_war",
+    "x": 38,
+    "y": 4,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_coup"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_political_power = 50 add_to_variable = { var = A10M_repression value = 10 } add_to_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_recall_charters",
+    "name_ru": "Отозвать островные хартии",
+    "desc_ru": "Коменданты заменят советы там, где власть конгресса ещё признаётся. Подчинённые нам республики вернут войска и учреждения общему командованию; за чужими границами одного приказа недостаточно.",
+    "name_en": "Revoke the Island Charters",
+    "desc_en": "Commandants will replace councils wherever the congress is still obeyed. Republics subordinate to us will return troops and institutions to the common command; an order alone cannot cross foreign frontiers.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 36,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_martial_law"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_recall_members = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_censor_cables",
+    "name_ru": "Тишина на проводах",
+    "desc_ru": "Частные кабельные сообщения будут проходить через цензора. Режим сможет скрывать передвижения гарнизонов, но вместе с опасными слухами исчезнут сведения, без которых купцы и учёные работают вслепую.",
+    "name_en": "Silence on the Wires",
+    "desc_en": "Private cable messages will pass through a censor. The regime can conceal garrison movements, but useful reports will disappear beside dangerous rumours, leaving merchants and scholars to work blind.",
+    "icon": "GFX_goal_generic_propaganda",
+    "x": 40,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_martial_law"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_censored_society add_to_variable = { var = A10M_repression value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_officer_tribunal",
+    "name_ru": "Трибунал над старым штабом",
+    "desc_ru": "Офицеры, вчера охранявшие конгресс, сегодня должны ответить за его слабость. Процесс определит, станет ли армия орудием личной верности Сандовалю или сохранит место для профессионального возражения.",
+    "name_en": "Tribunal of the Old Staff",
+    "desc_en": "Officers who guarded the congress yesterday must answer for its weakness today. Their trial will decide whether the army becomes an instrument of personal loyalty to Sandoval or retains room for professional dissent.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 38,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_recall_charters"
+      ],
+      [
+        "A10M_censor_cables"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "set_country_flag = A10R_war_ready army_experience = 15 country_event = { id = A10M.2 days = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_rice_commissions",
+    "name_ru": "Рисовые комиссии",
+    "desc_ru": "Без риса не удержать ни гарнизон, ни портовый квартал. Комиссии перепишут запасы и семейные наделы, чтобы штаб впервые увидел цену своих заявок на снабжение.",
+    "name_en": "Rice Commissions",
+    "desc_en": "Neither a garrison nor a dockside district can be held without rice. Commissions will register stocks and household plots so that headquarters can finally see the cost of its supply demands.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 34,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_recall_charters"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "subtract_from_variable = { var = A10M_strain value = 10 } add_political_power = 25 A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_requisition",
+    "name_ru": "Складские книги командования",
+    "desc_ru": "Поставки объединят в обязательные квоты. Арсеналы получат более ровный поток сырья, а сельские пристани — наряды, которым всё труднее соответствовать.",
+    "name_en": "The Command's Warehouse Ledgers",
+    "desc_en": "Deliveries will be combined into compulsory quotas. Arsenals will receive a steadier flow of material while rural landings receive demands that grow harder to fulfil.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 36,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_rice_commissions"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_requisition_bureaus custom_effect_tooltip = A10M_requisition_tt",
+    "ai": 2
+  },
+  {
+    "id": "A10M_compensation",
+    "name_ru": "Расписки вместо конфискаций",
+    "desc_ru": "Военные квитанции должны стать обязательством казны. Выплаты обременят бюджет, зато поставщики смогут снова закупать зерно и не прятать лодки при виде мундира.",
+    "name_en": "Receipts Instead of Confiscations",
+    "desc_en": "Military receipts must become obligations of the treasury. Payments will burden the budget, but suppliers will be able to buy grain again instead of hiding their boats at the sight of a uniform.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 34,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_requisition"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_labour_battalions"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_compensation_bonds subtract_from_variable = { var = A10M_opposition value = 8 } custom_effect_tooltip = A10M_compensation_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_labour_battalions",
+    "name_ru": "Трудовые батальоны",
+    "desc_ru": "Радикалы требуют поставить людей на строительство казарм и мастерских по приказу. Работы ускорятся, но семьи лишатся работников, а за проволокой возникнет новая, более непримиримая оппозиция.",
+    "name_en": "Labour Battalions",
+    "desc_en": "Radicals demand that men be ordered into barracks and workshop construction. Work will accelerate, but families will lose their workers and a more implacable opposition will form behind the wire.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 36,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_requisition"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_compensation"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_compulsory_labour add_to_variable = { var = A10M_repression value = 10 } add_to_variable = { var = A10M_opposition value = 10 } custom_effect_tooltip = A10M_labour_tt A10M_update = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10M_cadet_schools",
+    "name_ru": "Школы военного сословия",
+    "desc_ru": "Коменданты отберут способных юношей для ускоренных офицерских курсов. Образование откроет дорогу тем, кого не принимали старые семейные связи, и одновременно привяжет их будущее к режиму.",
+    "name_en": "Schools of the Military Estate",
+    "desc_en": "Commandants will select able youths for accelerated officer courses. Education will open doors once closed by family connections while binding their future to the regime.",
+    "icon": "GFX_goal_generic_special_forces",
+    "x": 42,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_censor_cables"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_cadet_estate army_experience = 10",
+    "ai": 2
+  },
+  {
+    "id": "A10M_levy_rolls",
+    "name_ru": "Единые призывные списки",
+    "desc_ru": "Разрозненные островные списки сведут воедино. Штаб получит резерв, но мастерские начнут терять опытные руки; командиры обязаны учитывать, кто ещё способен кормить призванных.",
+    "name_en": "Unified Levy Rolls",
+    "desc_en": "Scattered island registers will be brought together. Headquarters will gain a reserve, but workshops will begin losing skilled hands; commanders must account for who can still feed the conscripts.",
+    "icon": "GFX_goal_generic_small_arms",
+    "x": 42,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_cadet_schools"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_military_levies add_manpower = 3500 add_to_variable = { var = A10M_strain value = 7 } add_to_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_medical_corps",
+    "name_ru": "Санитарные команды гарнизонов",
+    "desc_ru": "Полевые лазареты должны остановить потери, которые не видны на карте боёв. На санитарные лодки и лекарства придётся выделить место в каждом снабженческом рейсе.",
+    "name_en": "Garrison Medical Teams",
+    "desc_en": "Field infirmaries must stop losses invisible on battle maps. Medical boats and supplies will need space on every supply voyage.",
+    "icon": "GFX_goal_generic_special_forces",
+    "x": 42,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_levy_rolls"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_field_hospitals subtract_from_variable = { var = A10M_strain value = 8 } custom_effect_tooltip = A10M_hospitals_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_quartermasters",
+    "name_ru": "Инспекция интендантов",
+    "desc_ru": "Складской отчёт не должен зависеть от настроения коменданта. Инспекторы проверят потери и распределение лодок, лишив местных начальников части привычного дохода.",
+    "name_en": "Quartermaster Inspectorate",
+    "desc_en": "Warehouse reports must no longer depend on a commandant's mood. Inspectors will examine losses and boat allocation, depriving local commanders of part of their customary income.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 38,
+    "y": 9,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_officer_tribunal"
+      ],
+      [
+        "A10M_requisition"
+      ],
+      [
+        "A10M_medical_corps"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_supply_inspectorate subtract_from_variable = { var = A10M_strain value = 10 } custom_effect_tooltip = A10M_inspectorate_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_junta",
+    "name_ru": "Власть вечного караула",
+    "desc_ru": "Радикальные полковники отвергают обещание временной власти. По их уставу мирная жизнь станет продолжением военной службы, а само чрезвычайное положение — основой государства.",
+    "name_en": "Rule of the Perpetual Guard",
+    "desc_en": "Radical colonels reject the promise of temporary rule. Under their charter, civilian life will become an extension of military service and the emergency itself the foundation of the state.",
+    "icon": "GFX_goal_generic_military_sphere",
+    "x": 36,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_quartermasters"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_directorate"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_junta_effect = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_directorate",
+    "name_ru": "Директорат военных служб",
+    "desc_ru": "Начальники служб предлагают управлять коллегией и письменным приказом. Конгресс они не вернут, но снабжение, флот и сухопутные части получат собственный голос за закрытой дверью.",
+    "name_en": "Directorate of the Services",
+    "desc_en": "Service chiefs propose rule by a board and written orders. They will not restore the congress, but supply, fleet and land forces will each have a voice behind the closed door.",
+    "icon": "GFX_goal_generic_neutrality_focus",
+    "x": 42,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_quartermasters"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_junta"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_directorate_effect = yes",
+    "ai": 3
+  },
+  {
+    "id": "A10M_revolutionary_command",
+    "name_ru": "Командование национального очищения",
+    "desc_ru": "Новый штаб объявит всякое несогласие продолжением прежнего распада. Офицеры получат больше свободы наступать и меньше свободы обсуждать цену приказов.",
+    "name_en": "Command of National Purification",
+    "desc_en": "The new staff will call every dissent a continuation of the old disintegration. Officers will gain greater freedom to attack and less freedom to discuss the cost of orders.",
+    "icon": "GFX_goal_generic_major_war",
+    "x": 36,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_junta"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "army_experience = 20 add_to_variable = { var = A10M_repression value = 10 } add_war_support = 0.04 A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_commissars",
+    "name_ru": "Политические надзиратели",
+    "desc_ru": "Рядом с каждым командиром появится уполномоченный хунты. Он поддержит части, утратившие решимость, и доложит обо всех, кто усомнится в её праве распоряжаться островами.",
+    "name_en": "Political Supervisors",
+    "desc_en": "An envoy of the junta will stand beside every commander. He will stiffen faltering units and report anyone who doubts its right to command the islands.",
+    "icon": "GFX_goal_generic_propaganda",
+    "x": 36,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_revolutionary_command"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_political_commissars add_to_variable = { var = A10M_repression value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_islands_barracks",
+    "name_ru": "Архипелаг казарм",
+    "desc_ru": "Учебные сборы охватят новые возрастные группы. Каждая пристань будет знать своего военного начальника, каждое хозяйство — день, когда его работник обязан явиться к строю.",
+    "name_en": "An Archipelago of Barracks",
+    "desc_en": "Training assemblies will encompass new age groups. Every landing will know its military chief and every household the day its worker must report for duty.",
+    "icon": "GFX_goal_generic_small_arms",
+    "x": 36,
+    "y": 13,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_commissars"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_barracks_state add_manpower = 2500 add_to_variable = { var = A10M_strain value = 8 } add_to_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_red_seal",
+    "name_ru": "Печать верховного коменданта",
+    "desc_ru": "Постановление утвердит личную печать Сандоваля выше всех островных хартий. Командование отпразднует окончание переворота, хотя прекращение самой чрезвычайной власти никто уже не обещает.",
+    "name_en": "Seal of the Supreme Commandant",
+    "desc_en": "A decree will place Sandoval's personal seal above every island charter. The command will celebrate the end of the coup, though no one now promises an end to emergency rule itself.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 36,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_islands_barracks"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_political_power = 50 country_event = { id = A10M.5 days = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_service_council",
+    "name_ru": "Совет родов службы",
+    "desc_ru": "Моряки, интенданты и сухопутные командиры подпишут порядок разрешения споров. Личная ссора полковников больше не должна останавливать рисовую баржу или переброску гарнизона.",
+    "name_en": "Council of the Services",
+    "desc_en": "Sailors, quartermasters and army commanders will sign rules for settling disputes. A personal quarrel between colonels must no longer delay a rice barge or a garrison transfer.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 42,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_directorate"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_command_power = 20 subtract_from_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_audited_budget",
+    "name_ru": "Бюджет под подписью",
+    "desc_ru": "Каждая служба представит расходы общему ревизору. Публиковать придётся хотя бы итоговые суммы: без доверия поставщиков власть останется с аккуратными приказами и пустыми складами.",
+    "name_en": "A Budget Under Signature",
+    "desc_en": "Each service will submit its expenses to a common auditor. At least the totals must be published: without supplier confidence, power will be left with tidy orders and empty warehouses.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 42,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_service_council"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_published_budget subtract_from_variable = { var = A10M_strain value = 8 } custom_effect_tooltip = A10M_budget_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_professional_army",
+    "name_ru": "Служба по военному уставу",
+    "desc_ru": "Профессиональные инструкторы заменят политические проверки проверкой подготовки. Обучение займёт больше времени, зато командир сможет положиться на умение солдата, а не на его подпись под лозунгом.",
+    "name_en": "Service Under Military Regulations",
+    "desc_en": "Professional instructors will replace political examinations with tests of training. Instruction will take longer, but a commander can rely on a soldier's skill rather than his signature beneath a slogan.",
+    "icon": "GFX_goal_generic_special_forces",
+    "x": 42,
+    "y": 13,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_audited_budget"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_professional_service subtract_from_variable = { var = A10M_repression value = 5 } custom_effect_tooltip = A10M_professional_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_fixed_term",
+    "name_ru": "Сроки и полномочия комендантов",
+    "desc_ru": "Военная власть сохранит исключительное положение, но полномочия получат срок, а жалобы — путь в служебный суд. Это обещание не вернёт конгресс; оно хотя бы ограничит произвол отдельного гарнизона.",
+    "name_en": "Terms and Powers of Commandants",
+    "desc_en": "Military rule will retain its exceptional position, but appointments will have terms and complaints a route to a service court. This promise will not restore the congress; it will at least limit a garrison's arbitrary rule.",
+    "icon": "GFX_goal_generic_neutrality_focus",
+    "x": 42,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_professional_army"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "subtract_from_variable = { var = A10M_repression value = 10 } subtract_from_variable = { var = A10M_opposition value = 10 } add_stability = 0.04 A10M_update = yes country_event = { id = A10M.5 days = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_coastal_observers",
+    "name_ru": "Цепь береговых наблюдателей",
+    "desc_ru": "Малые сигнальные посты свяжут гарнизоны с дозорными судами. Рыбацкие лодки получат порядок оповещения, а береговая служба — обязанность отличать угрозу от очередного мирного рейса.",
+    "name_en": "Chain of Coastal Observers",
+    "desc_en": "Small signal posts will link garrisons with patrol craft. Fishing boats will receive reporting instructions, and the coastal service a duty to distinguish threats from ordinary voyages.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 38,
+    "y": 15,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_red_seal",
+        "A10M_fixed_term"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_coastal_watch navy_experience = 15",
+    "ai": 2
+  },
+  {
+    "id": "A10M_defence_plans",
+    "name_ru": "Планы обороны проливов",
+    "desc_ru": "Штаб подготовит маршруты отхода, охрану складов и взаимодействие батарей с флотом. Приказ оборонять остров должен оставлять гарнизону путь к следующей позиции, а не только красивую последнюю телеграмму.",
+    "name_en": "Plans for Strait Defence",
+    "desc_en": "The staff will prepare withdrawal routes, depot security and cooperation between batteries and fleet. An order to defend an island must leave a garrison a route to its next position, as well as a fine final telegram.",
+    "icon": "GFX_goal_generic_defence",
+    "x": 38,
+    "y": 16,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_coastal_observers"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "army_experience = 20 add_command_power = 15 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_veteran_settlement",
+    "name_ru": "Долг перед солдатскими семьями",
+    "desc_ru": "Семьи убитых и искалеченных будут получать содержание по единому списку. Этот расход нельзя вычеркнуть красивой речью о победе: без него военная власть пожрёт собственную опору.",
+    "name_en": "The Debt to Soldiers' Families",
+    "desc_en": "Families of the dead and maimed will receive support from a common register. A fine victory speech cannot cancel this expense: without it, military rule will consume its own support.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 36,
+    "y": 17,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_defence_plans"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_settlement_effect = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_restore_markets",
+    "name_ru": "Открыть рынки после караула",
+    "desc_ru": "Пристани и мастерские должны вновь работать без ежедневного вмешательства коменданта. Трудовые батальоны будут распущены, а часть снабженческих полномочий вернётся гражданским распорядителям.",
+    "name_en": "Open the Markets After the Watch",
+    "desc_en": "Landings and workshops must function again without a commandant's daily intervention. Labour battalions will be disbanded and some supply powers returned to civilian administrators.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 40,
+    "y": 17,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_defence_plans"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_recovery_effect = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_iron_archipelago",
+    "name_ru": "Железный архипелаг",
+    "desc_ru": "Военный режим пережил первые бунты и научился считать цену собственных приказов. Он сохранит гарнизоны и закрытый конгресс, но его прочность теперь зависит от работающих складов и людей, способных дожить до следующего урожая.",
+    "name_en": "The Iron Archipelago",
+    "desc_en": "The military regime has weathered its first revolts and learned to count the cost of its orders. It will retain the garrisons and closed congress, but its strength now depends on functioning depots and people able to survive until the next harvest.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 38,
+    "y": 19,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_veteran_settlement"
+      ],
+      [
+        "A10M_restore_markets"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active A10M_crisis_contained = yes",
+    "reward": "add_ideas = A10M_iron_state add_stability = 0.04 add_political_power = 75 set_country_flag = A10M_consolidated",
+    "ai": 2
+  }
+]

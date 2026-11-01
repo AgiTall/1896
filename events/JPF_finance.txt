@@ -1,0 +1,147 @@
+add_namespace = japan_finance
+country_event = {
+ id = japan_finance.1 title = japan_finance.1.t desc = japan_finance.1.d
+ picture = GFX_jpc_council is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPF_initialized NOT = { has_country_flag = JPF_finance_closed } }
+ option = {
+  name = japan_finance.1.audit ai_chance = { factor = 75 }
+  add_political_power = -25
+  add_to_variable = { JPF_debt_pressure = -2 }
+  add_to_variable = { JPF_budget_confidence = 8 }
+  set_country_flag = JPF_osaka_accountable
+  JPF_refresh_effect = yes
+ }
+ option = {
+  name = japan_finance.1.seal ai_chance = { factor = 25 }
+  add_to_variable = { JPF_debt_pressure = 6 }
+  add_to_variable = { JPF_budget_confidence = -4 }
+  set_country_flag = JPF_osaka_privileged
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 300 producer = A03 }
+  JPF_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_finance.2 title = japan_finance.2.t desc = japan_finance.2.d
+ picture = GFX_1896_event_trade is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPC_guarantees_signed NOT = { has_country_flag = JPF_finance_closed } }
+ option = {
+  name = japan_finance.2.public ai_chance = { factor = 75 }
+  add_political_power = -30
+  add_to_variable = { JPF_debt_pressure = 4 }
+  add_to_variable = { JPF_budget_confidence = 12 }
+  set_country_flag = JPF_osaka_accountable
+  JPF_refresh_effect = yes
+ }
+ option = {
+  name = japan_finance.2.advance ai_chance = { factor = 25 }
+  add_to_variable = { JPF_debt_pressure = 10 }
+  add_to_variable = { JPF_budget_confidence = -7 }
+  set_country_flag = JPF_osaka_privileged
+  add_equipment_to_stockpile = { type = convoy_1 amount = 20 producer = A03 }
+  if = { limit = { country_exists = A09 } A09 = { add_political_power = 20 } }
+  JPF_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_finance.3 title = japan_finance.3.t desc = japan_finance.3.d
+ picture = GFX_1896_event_navy is_triggered_only = yes
+ trigger = { tag = A03 has_war_with = A01 NOT = { has_country_flag = JPF_finance_closed } }
+ option = {
+  name = japan_finance.3.pay ai_chance = { factor = 75 }
+  add_political_power = -40
+  add_to_variable = { JPF_debt_pressure = 5 }
+  add_to_variable = { JPF_budget_confidence = 8 }
+  set_country_flag = JPF_admiralty_paid
+  add_equipment_to_stockpile = { type = convoy_1 amount = 10 producer = A03 }
+  remove_ideas = JPF_delivery_arrears
+  JPF_refresh_effect = yes
+ }
+ option = {
+  name = japan_finance.3.defer ai_chance = { factor = 25 }
+  add_to_variable = { JPF_debt_pressure = -7 }
+  add_to_variable = { JPF_budget_confidence = -6 }
+  set_country_flag = JPF_admiralty_denied
+  add_timed_idea = { idea = JPF_delivery_arrears days = 180 }
+  JPF_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_finance.4 title = japan_finance.4.t desc = japan_finance.4.d
+ picture = GFX_jpc_council is_triggered_only = yes
+ trigger = { tag = A03 NOT = { has_country_flag = JPF_finance_closed } }
+ immediate = { add_timed_idea = { idea = JPF_cash_freeze days = 90 } }
+ option = {
+  name = japan_finance.4.advance ai_chance = { factor = 50 }
+  clr_country_flag = JPF_crisis_pending
+  add_political_power = -35
+  add_to_variable = { JPF_debt_pressure = 10 }
+  add_to_variable = { JPF_budget_confidence = 10 }
+  remove_ideas = JPF_cash_freeze
+  set_country_flag = JPF_osaka_privileged
+  JPF_refresh_effect = yes
+ }
+ option = {
+  name = japan_finance.4.freeze ai_chance = { factor = 35 }
+  clr_country_flag = JPF_crisis_pending
+  add_to_variable = { JPF_debt_pressure = -10 }
+  add_to_variable = { JPF_budget_confidence = -6 }
+  add_stability = -0.03
+  set_country_flag = JPF_admiralty_denied
+  JPF_refresh_effect = yes
+ }
+ option = {
+  name = japan_finance.4.fleet ai_chance = { factor = 15 }
+  clr_country_flag = JPF_crisis_pending
+  add_to_variable = { JPF_debt_pressure = 4 }
+  add_to_variable = { JPF_budget_confidence = -8 }
+  remove_ideas = JPF_cash_freeze
+  add_timed_idea = { idea = JPF_families_arrears days = 180 }
+  set_country_flag = JPF_admiralty_paid
+  JPF_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_finance.5 title = japan_finance.5.t desc = japan_finance.5.d
+ picture = GFX_1896_event_trade is_triggered_only = yes
+ trigger = { tag = A03 NOT = { has_country_flag = JPF_finance_closed } }
+ option = {
+  name = japan_finance.5.credit ai_chance = { factor = 65 }
+  trigger = { has_completed_focus = JPI_japanese_terms country_exists = A04 NOT = { has_war_with = A04 } }
+  add_to_variable = { JPF_debt_pressure = 14 }
+  add_to_variable = { JPF_budget_confidence = 6 }
+  WTC_initialize_effect = yes add_to_variable = { WTC_debt = 15 } WTC_refresh_effect = yes add_ideas = JPC_credit
+  add_equipment_to_stockpile = { type = convoy_1 amount = 35 producer = A03 }
+  A04 = { add_political_power = 20 }
+  JPF_refresh_effect = yes
+ }
+ option = {
+  name = japan_finance.5.domestic ai_chance = { factor = 35 }
+  add_to_variable = { JPF_debt_pressure = -4 }
+  add_to_variable = { JPF_budget_confidence = -4 }
+  add_timed_idea = { idea = JPF_civilian_retrenchment days = 90 }
+  JPF_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_finance.6 title = japan_finance.6.t desc = japan_finance.6.d
+ picture = GFX_1896_event_talks is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPF_guarantee_settled }
+ option = {
+  name = japan_finance.6.creditors ai_chance = { factor = 50 }
+  add_to_variable = { JPF_debt_pressure = -12 }
+  add_to_variable = { JPF_budget_confidence = -3 }
+  add_timed_idea = { idea = JPF_civilian_retrenchment days = 180 }
+  set_country_flag = JPF_osaka_privileged
+  JPF_refresh_effect = yes
+ }
+ option = {
+  name = japan_finance.6.families ai_chance = { factor = 50 }
+  add_political_power = -40
+  add_to_variable = { JPF_debt_pressure = -4 }
+  add_to_variable = { JPF_budget_confidence = 10 }
+  remove_ideas = JPF_families_arrears
+  add_stability = 0.02
+  set_country_flag = JPF_osaka_accountable
+  JPF_refresh_effect = yes
+ }
+}

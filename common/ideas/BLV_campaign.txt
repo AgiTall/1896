@@ -1,0 +1,31 @@
+ideas = { country = {
+ BLV_admiralty_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { navy_org_factor = 0.04 stability_factor = -0.02 } }
+ BLV_constitution_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 stability_factor = 0.04 } }
+ BLV_crown_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.15 war_support_factor = 0.03 } }
+ BLV_procurement_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.05 } }
+ BLV_naval_state_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { naval_coordination = 0.05 consumer_goods_factor = 0.02 } }
+ BLV_island_rights_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.04 recruitable_population_factor = 0.05 } }
+ BLV_maritime_commonwealth_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 production_speed_industrial_complex_factor = 0.05 } }
+ BLV_royal_secretariat_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 } }
+ BLV_imperial_prerogative_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { army_defence_factor = 0.04 consumer_goods_factor = 0.03 } }
+ BLV_island_industry_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { production_speed_industrial_complex_factor = 0.06 } }
+ BLV_insurance_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.05 consumer_goods_factor = 0.02 } }
+ BLV_engine_rooms_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { navy_org_factor = 0.04 } }
+ BLV_battle_line_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { navy_capital_ship_attack_factor = 0.05 } }
+ BLV_cruiser_routes_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.10 } }
+ BLV_naval_staff_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { naval_coordination = 0.05 } }
+ BLV_escorts_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.08 } }
+ BLV_fleet_logistics_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { supply_consumption_factor = -0.04 } }
+ BLV_rotation_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { army_org_regain = 0.04 } }
+ BLV_field_hospitals_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { army_org_regain = 0.03 } }
+ BLV_expedition_staff_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { max_planning_factor = 0.05 } }
+ BLV_pacific_deterrent_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { navy_org_factor = 0.03 army_defence_factor = 0.03 } }
+ BLV_medical_commission_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.03 } }
+ BLV_measurement_school_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { research_speed_factor = 0.03 } }
+ BLV_supply_crisis_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { navy_org_factor = -0.10 supply_consumption_factor = 0.05 } }
+ BLV_imperial_strain_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = -0.15 stability_factor = -0.04 } }
+ BLV_oil_contract_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { consumer_goods_factor = 0.02 } }
+ BLV_serum_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { army_org_regain = 0.03 } }
+ BLV_prototype_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { research_speed_factor = 0.02 } }
+ BLV_coastal_station_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { research_speed_factor = 0.02 consumer_goods_factor = 0.03 } }
+} }

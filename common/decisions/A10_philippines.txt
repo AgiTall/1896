@@ -9,7 +9,7 @@ A10_integration = {
  A10_integrate_624 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 624 controls_state = 624 624 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 624 controls_state = 624 624 = { NOT = { is_core_of = A10 } } 624 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PVI  owns_state = 624 controls_state = 624 624 = { NOT = { is_core_of = A10 } } 624 = { NOT = { compliance < 80 } } }
   complete_effect = { 624 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_625 = {
@@ -22,7 +22,7 @@ A10_integration = {
  A10_integrate_625 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 625 controls_state = 625 625 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 625 controls_state = 625 625 = { NOT = { is_core_of = A10 } } 625 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PSM  owns_state = 625 controls_state = 625 625 = { NOT = { is_core_of = A10 } } 625 = { NOT = { compliance < 80 } } }
   complete_effect = { 625 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_627 = {
@@ -35,7 +35,7 @@ A10_integration = {
  A10_integrate_627 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 627 controls_state = 627 627 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 627 controls_state = 627 627 = { NOT = { is_core_of = A10 } } 627 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PMD  owns_state = 627 controls_state = 627 627 = { NOT = { is_core_of = A10 } } 627 = { NOT = { compliance < 80 } } }
   complete_effect = { 627 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_1026 = {
@@ -48,7 +48,7 @@ A10_integration = {
  A10_integrate_1026 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 1026 controls_state = 1026 1026 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 1026 controls_state = 1026 1026 = { NOT = { is_core_of = A10 } } 1026 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PNM  owns_state = 1026 controls_state = 1026 1026 = { NOT = { is_core_of = A10 } } 1026 = { NOT = { compliance < 80 } } }
   complete_effect = { 1026 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_628 = {
@@ -61,7 +61,7 @@ A10_integration = {
  A10_integrate_628 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 628 controls_state = 628 628 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 628 controls_state = 628 628 = { NOT = { is_core_of = A10 } } 628 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PCB  owns_state = 628 controls_state = 628 628 = { NOT = { is_core_of = A10 } } 628 = { NOT = { compliance < 80 } } }
   complete_effect = { 628 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_1085 = {
@@ -74,7 +74,7 @@ A10_integration = {
  A10_integrate_1085 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 1085 controls_state = 1085 1085 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 1085 controls_state = 1085 1085 = { NOT = { is_core_of = A10 } } 1085 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PPN  owns_state = 1085 controls_state = 1085 1085 = { NOT = { is_core_of = A10 } } 1085 = { NOT = { compliance < 80 } } }
   complete_effect = { 1085 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_623 = {
@@ -87,7 +87,7 @@ A10_integration = {
  A10_integrate_623 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 623 controls_state = 623 623 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 623 controls_state = 623 623 = { NOT = { is_core_of = A10 } } 623 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PNL  owns_state = 623 controls_state = 623 623 = { NOT = { is_core_of = A10 } } 623 = { NOT = { compliance < 80 } } }
   complete_effect = { 623 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_327 = {
@@ -100,7 +100,7 @@ A10_integration = {
  A10_integrate_327 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 327 controls_state = 327 327 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 327 controls_state = 327 327 = { NOT = { is_core_of = A10 } } 327 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PML  owns_state = 327 controls_state = 327 327 = { NOT = { is_core_of = A10 } } 327 = { NOT = { compliance < 80 } } }
   complete_effect = { 327 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  } A10_pacify_1027 = {
@@ -113,7 +113,7 @@ A10_integration = {
  A10_integrate_1027 = {
   icon = generic_political_discourse cost = 50 fire_only_once = yes
   visible = { owns_state = 1027 controls_state = 1027 1027 = { NOT = { is_core_of = A10 } } }
-  available = { owns_state = 1027 controls_state = 1027 1027 = { NOT = { is_core_of = A10 } } 1027 = { NOT = { compliance < 80 } } }
+  available = { has_country_flag = A10R_equal_rights has_country_flag = A10R_consent_PBT  owns_state = 1027 controls_state = 1027 1027 = { NOT = { is_core_of = A10 } } 1027 = { NOT = { compliance < 80 } } }
   complete_effect = { 1027 = { add_core_of = A10 } }
   ai_will_do = { factor = 5 }
  }}

@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "focuses": {
+    "a01": 132,
+    "a03": 104
+  },
+  "new_story_focuses": 30,
+  "Japan_story_events": 43,
+  "Japan_story_spirits": 48,
+  "checks": [
+    "Country pulses charge one monthly service, not one per country in the world",
+    "Politics opens initial army reform, then advanced army and navy; 196 days fit before January 1894",
+    "Three reciprocal exclusive policy pairs with different durations and effects",
+    "Completed domestic focuses improve May outcome; skipped fleet preparation has a real penalty",
+    "Late negotiations repair imposed terms instead of staying permanently locked",
+    "WTC exact threshold 70",
+    "WTC exact threshold 71",
+    "WTC exact threshold 90",
+    "WTC exact threshold 91",
+    "WTC exact threshold 100",
+    "Local financial coup; no annexation",
+    "British cover absent: coup fails, blacklist absent",
+    "Real borrowing, repayment and concession effects",
+    "War, guarantees, audits and shipments affect Mitsubishi ledger",
+    "Starvation breaks protocol; supplies transfer from actual stock",
+    "Postwar compact preserves northern neutrality and country",
+    "Luzon reforms reduce load; peace cleans spirits without scripted victory",
+    "Hidden/revealed clocks exact and repeat safe at 1893-01-01",
+    "Hidden/revealed clocks exact and repeat safe at 1893-02-15",
+    "Hidden/revealed clocks exact and repeat safe at 1893-03-18",
+    "Hidden/revealed clocks exact and repeat safe at 1893-03-19",
+    "Hidden/revealed clocks exact and repeat safe at 1893-04-30",
+    "Hidden/revealed clocks exact and repeat safe at 1893-12-31",
+    "All three accelerations synchronised: 288 to 243 days; no reset; agreement cancels both",
+    "Early negotiation focus completion reveals the countdown immediately",
+    "Wartime settlement clocks unchanged and repeat safe at 1893-11-17",
+    "Wartime settlement clocks unchanged and repeat safe at 1894-01-02",
+    "Wartime settlement clocks unchanged and repeat safe at 1894-07-12",
+    "Wartime settlement clocks unchanged and repeat safe at 1896-01-31"
+  ],
+  "all_focus_icons_and_localisation": "references and files verified",
+  "limitations": [
+    "Bounded scripts; timed flag expiry and monthly pulses invoked explicitly",
+    "Combat, AI, runtime UI and a full campaign require the game engine"
+  ]
+}

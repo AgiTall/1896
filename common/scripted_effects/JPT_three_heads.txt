@@ -1,0 +1,55 @@
+JPT_initialize_effect = {
+ if = { limit = { NOT = { has_country_flag = JPT_initialized } }
+  set_country_flag = JPT_initialized
+  set_country_flag = { flag = JPT_loan_deadline days = 180 }
+  activate_mission = JPT_mitsubishi_deadline
+ }
+}
+JPT_north_war_effect = {
+ set_country_flag = JPT_north_rebel
+ clr_country_flag = JPC_north_signed
+ clr_country_flag = JPN_north_active
+ remove_ideas = JPC_north_neutral
+ remove_ideas = JPN_north_obligation
+ add_ideas = JPT_northern_front
+ add_stability = -0.08
+ add_war_support = 0.08
+ if = { limit = { country_exists = A08 NOT = { has_war_with = A08 } }
+  diplomatic_relation = { country = A08 relation = non_aggression_pact active = no }
+  A08 = { clr_country_flag = JPC_northern_neutrality }
+  declare_war_on = { target = A08 type = annex_everything }
+ }
+}
+JPT_daily_effect = {
+ if = { limit = { has_country_flag = JPT_initialized }
+  if = { limit = { OR = { has_country_flag = JPT_loans_guaranteed has_country_flag = JPT_loans_reformed } }
+   remove_mission = JPT_mitsubishi_deadline
+   clr_country_flag = JPT_loan_deadline
+  }
+  if = { limit = { has_country_flag = JPT_north_rebel OR = { NOT = { country_exists = A08 } A08 = { has_capitulated = yes } } }
+   remove_ideas = JPT_northern_front
+   set_country_flag = JPT_expedition_stopped
+  }
+ }
+ # The expedition belongs to Saigo and proceeds even when Tokyo delays politics.
+ if = { limit = {
+  date > 1893.12.31 country_exists = A08 A08 = { has_capitulated = no }
+  NOT = { has_country_flag = JPT_expedition_checked }
+ }
+  set_country_flag = JPT_expedition_checked
+  if = { limit = { NOT = { has_country_flag = JPT_expedition_stopped } }
+   random_list = {
+    70 = { country_event = { id = japan_dragon.2 days = 1 } }
+    30 = { country_event = { id = japan_dragon.3 days = 1 } }
+   }
+  }
+ }
+}
+JPT_monthly_effect = {
+ if = { limit = {
+  has_completed_focus = JPC_honshu_depots
+  has_country_flag = JPC_north_signed
+  NOT = { has_country_flag = JPN_north_compact_signed }
+  check_variable = { JPN_north_supply_months < 3 }
+ } JPN_north_send_rifles_effect = yes }
+}

@@ -8,6 +8,10 @@ focus_tree = {
   }
  }
  default = no
+ continuous_focus_position = {
+  x = 0
+  y = 3500
+ }
  focus = {
   id = A01_constitution
   icon = GFX_goal_unique_A01_constitution
@@ -42,8 +46,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 16
-  y = 0
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -64,6 +66,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 16
+  y = 0
  }
  focus = {
   id = A01_wtc_oil_and_rubber_offer
@@ -115,8 +119,8 @@ focus_tree = {
   prerequisite = {
    focus = A01_java_steam_power
   }
-  x = 6
-  y = 14
+  x = 3
+  y = 16
  }
  focus = {
   id = A01_lone_wolf_path
@@ -143,8 +147,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 16
-  y = 2
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -168,6 +170,12 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  mutually_exclusive = {
+   focus = A01_european_democratic_unity
+   focus = A01_wtc_strengthening_path
+  }
+  x = 16
+  y = 2
  }
  focus = {
   id = A01_strengthen_ludolfs_power
@@ -199,8 +207,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 9
-  y = 3
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -221,6 +227,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 9
+  y = 3
  }
  focus = {
   id = A01_last_chance_to_negotiate
@@ -230,6 +238,7 @@ focus_tree = {
    factor = 1
   }
   completion_reward = {
+   JPS_begin_visible_countdown_effect = yes
    set_country_flag = A01_japanese_offer_sent
    if = {
     limit = {
@@ -256,8 +265,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 15
-  y = 4
   prerequisite = {
    focus = A01_strengthen_ludolfs_power
   }
@@ -284,6 +291,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 15
+  y = 4
  }
  focus = {
   id = A01_admirals_council_coup
@@ -341,8 +350,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 23
-  y = 3
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -363,6 +370,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 23
+  y = 3
  }
  focus = {
   id = A01_direct_naval_rule
@@ -389,8 +398,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 23
-  y = 5
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -414,6 +421,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 23
+  y = 5
  }
  focus = {
   id = A01_build_bornean_fortifications
@@ -437,7 +446,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  y = 6
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -459,6 +467,7 @@ focus_tree = {
    }
   }
   x = 15
+  y = 6
  }
  focus = {
   id = A01_improve_bornean_fortifications
@@ -579,7 +588,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 15
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -595,6 +603,7 @@ focus_tree = {
    focus = A01_own_fortifications
    focus = A01_implement_fortification_project
   }
+  x = 15
   y = 9
  }
  focus = {
@@ -640,7 +649,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 13
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -652,6 +660,7 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 13
   y = 10
  }
  focus = {
@@ -707,7 +716,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 17
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -719,6 +727,7 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 17
   y = 10
  }
  focus = {
@@ -746,14 +755,14 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 3
-  y = 8
   prerequisite = {
    focus = A01_factory_resettlement
   }
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 3
+  y = 8
  }
  focus = {
   id = A01_sumatran_railways
@@ -794,11 +803,11 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 5
-  y = 9
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 5
+  y = 9
  }
  focus = {
   id = A01_surabaya_arsenal
@@ -825,8 +834,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 7
-  y = 8
   prerequisite = {
    focus = A01_jungle_supply
   }
@@ -851,6 +858,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 7
+  y = 8
  }
  focus = {
   id = A01_batavia_docks
@@ -880,11 +889,11 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 1
-  y = 9
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 1
+  y = 9
  }
  focus = {
   id = A01_rubber_processing
@@ -914,11 +923,11 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 5
-  y = 10
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 5
+  y = 10
  }
  focus = {
   id = A01_local_rifles
@@ -927,8 +936,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 7
-  y = 9
   prerequisite = {
    focus = A01_surabaya_arsenal
   }
@@ -964,6 +971,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 7
+  y = 9
  }
  focus = {
   id = A01_technical_college
@@ -979,8 +988,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 3
-  y = 11
   prerequisite = {
    focus = A01_batavia_docks
   }
@@ -990,6 +997,8 @@ focus_tree = {
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 3
+  y = 11
  }
  focus = {
   id = A01_knil_reform
@@ -1005,8 +1014,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 9
-  y = 5
   search_filters = {
    FOCUS_FILTER_ARMY_XP
   }
@@ -1034,6 +1041,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 9
+  y = 5
  }
  focus = {
   id = A01_island_garrisons
@@ -1045,8 +1054,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 7
-  y = 6
   completion_reward = {
    swap_ideas = {
     remove_idea = A01_knil_training
@@ -1076,6 +1083,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 7
+  y = 6
  }
  focus = {
   id = A01_marine_brigades
@@ -1087,8 +1096,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 11
-  y = 6
   completion_reward = {
    add_ideas = A01_marine_training
    army_experience = 15
@@ -1116,6 +1123,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 11
+  y = 6
  }
  focus = {
   id = A01_jungle_supply
@@ -1130,8 +1139,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 9
-  y = 7
   completion_reward = {
    swap_ideas = {
     remove_idea = A01_knil_field_training
@@ -1161,6 +1168,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 9
+  y = 7
  }
  focus = {
   id = A01_coastal_watch
@@ -1172,8 +1181,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 11
-  y = 8
   completion_reward = {
    add_ideas = A01_island_defence
    navy_experience = 15
@@ -1201,6 +1208,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 11
+  y = 8
  }
  focus = {
   id = A01_admiralty_shipyards
@@ -1230,8 +1239,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 21
-  y = 6
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -1252,6 +1259,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 21
+  y = 6
  }
  focus = {
   id = A01_naval_general_staff
@@ -1270,8 +1279,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 21
-  y = 7
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -1292,6 +1299,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 21
+  y = 7
  }
  focus = {
   id = A01_military_industry
@@ -1321,8 +1330,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 25
-  y = 6
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -1343,6 +1350,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 25
+  y = 6
  }
  focus = {
   id = A01_defence_in_depth
@@ -1361,8 +1370,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 25
-  y = 7
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -1383,6 +1390,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 25
+  y = 7
  }
  focus = {
   id = A01_archipelago_command
@@ -1405,8 +1414,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 23
-  y = 8
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -1427,6 +1434,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 23
+  y = 8
  }
  focus = {
   id = A01_wartime_industry
@@ -1466,7 +1475,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 15
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -1478,6 +1486,7 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 15
   y = 11
  }
  focus = {
@@ -1490,8 +1499,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 11
-  y = 9
   completion_reward = {
    add_ideas = A01_escort_coordination
    add_equipment_to_stockpile = {
@@ -1524,6 +1531,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 11
+  y = 9
  }
  focus = {
   id = A01_pacific_settlement
@@ -1553,7 +1562,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 15
   prerequisite = {
    focus = A01_last_chance_to_negotiate
    focus = A01_direct_rivalry
@@ -1564,6 +1572,7 @@ focus_tree = {
   prerequisite = {
    focus = A01_strengthen_ludolfs_power
   }
+  x = 15
   y = 13
  }
  focus = {
@@ -1595,8 +1604,6 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 23
-  y = 9
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -1617,12 +1624,12 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 23
+  y = 9
  }
  focus = {
   id = A01_reconstruction_commission
   icon = GFX_goal_unique_A01_constitution
-  x = 7
-  y = 15
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -1648,12 +1655,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 3
+  y = 17
  }
  focus = {
   id = A01_autonomous_sultanates
   icon = GFX_goal_unique_A01_reconstruction_commission
-  x = 14
-  y = 15
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -1679,12 +1686,77 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 20
+  y = 17
+ }
+ focus = {
+  id = A01_british_raj_model
+  icon = GFX_goal_generic_positive_trade_relations
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_autonomous_sultanates
+  }
+  completion_reward = {
+   add_ideas = A01_british_raj_model_idea
+   set_country_flag = A01_flexible_colonialism_adopted
+   add_stability = 0.04
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 24
+  y = 18
+ }
+ focus = {
+  id = A01_sultanates_language_guarantees
+  icon = GFX_goal_generic_forceful_treaty
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_british_raj_model
+  }
+  completion_reward = {
+   add_ideas = A01_sultanates_language_guarantees_idea
+   set_country_flag = A01_sultanates_guarantees_signed
+   add_political_power = 30
+   add_stability = 0.04
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 24
+  y = 19
  }
  focus = {
   id = A01_northern_memory
   icon = GFX_goal_unique_A01_northern_memory
-  x = 16
-  y = 18
   prerequisite = {
    focus = A01_military_state
   }
@@ -1704,12 +1776,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 30
+  y = 20
  }
  focus = {
   id = A01_fleet_of_recovery
   icon = GFX_goal_unique_A01_fleet_of_recovery
-  x = 18
-  y = 20
   prerequisite = {
    focus = A01_northern_memory
   }
@@ -1742,6 +1814,8 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 32
+  y = 22
  }
  focus = {
   id = A01_ludolf_survives
@@ -1762,8 +1836,6 @@ focus_tree = {
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
-  x = 12
-  y = 14
   cost = 5
   completion_reward = {
    add_political_power = 35
@@ -1772,12 +1844,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 13
+  y = 15
  }
  focus = {
   id = A01_negotiated_resignation
   icon = GFX_goal_unique_A01_negotiated_resignation
-  x = 18
-  y = 14
   cost = 3
   prerequisite = {
    focus = A01_pacific_settlement
@@ -1801,12 +1873,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 32
+  y = 15
  }
  focus = {
   id = A01_review_borneo_convention
   icon = GFX_goal_unique_A01_review_borneo_convention
-  x = 18
-  y = 23
   cost = 3
   prerequisite = {
    focus = A01_democratic_federation
@@ -1831,6 +1903,8 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 32
+  y = 38
  }
  focus = {
   id = A01_dutch_literacy
@@ -1838,8 +1912,6 @@ focus_tree = {
   ai_will_do = {
    factor = 2
   }
-  x = 3
-  y = 5
   cost = 5
   completion_reward = {
    add_ideas = A01_dutch_primary_schooling
@@ -1861,6 +1933,8 @@ focus_tree = {
   prerequisite = {
    focus = A01_strengthen_ludolfs_power
   }
+  x = 3
+  y = 5
  }
  focus = {
   id = A01_rural_labour_duty
@@ -1868,8 +1942,6 @@ focus_tree = {
   ai_will_do = {
    factor = 2
   }
-  x = 3
-  y = 6
   prerequisite = {
    focus = A01_dutch_literacy
   }
@@ -1888,6 +1960,8 @@ focus_tree = {
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 3
+  y = 6
  }
  focus = {
   id = A01_factory_resettlement
@@ -1895,8 +1969,6 @@ focus_tree = {
   ai_will_do = {
    factor = 2
   }
-  x = 3
-  y = 7
   prerequisite = {
    focus = A01_rural_labour_duty
   }
@@ -1913,12 +1985,12 @@ focus_tree = {
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 3
+  y = 7
  }
  focus = {
   id = A01_production_standardisation
   icon = GFX_goal_unique_A01_rubber_processing
-  x = 3
-  y = 12
   cost = 5
   ai_will_do = {
    factor = 2
@@ -1938,12 +2010,12 @@ focus_tree = {
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 3
+  y = 12
  }
  focus = {
   id = A01_java_steam_power
   icon = GFX_goal_unique_A01_java_development
-  x = 3
-  y = 13
   cost = 10
   ai_will_do = {
    factor = 2
@@ -1984,12 +2056,12 @@ focus_tree = {
   search_filters = {
    FOCUS_FILTER_INDUSTRY
   }
+  x = 3
+  y = 13
  }
  focus = {
   id = A01_local_nco_schools
   icon = GFX_goal_unique_A01_knil_reform
-  x = 9
-  y = 10
   cost = 10
   ai_will_do = {
    factor = 2
@@ -2030,10 +2102,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
- }
- continuous_focus_position = {
-  x = 0
-  y = 3500
+  x = 9
+  y = 10
  }
  focus = {
   icon = GFX_goal_unique_A01_last_chance_to_negotiate
@@ -2041,7 +2111,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  y = 4
   search_filters = {
    FOCUS_FILTER_POLITICAL
   }
@@ -2057,7 +2126,6 @@ focus_tree = {
   cancel_if_invalid = yes
   continue_if_invalid = no
   id = A01_direct_rivalry
-  x = 17
   mutually_exclusive = {
    focus = A01_last_chance_to_negotiate
   }
@@ -2089,6 +2157,8 @@ focus_tree = {
     has_war_with = A03
    }
   }
+  x = 17
+  y = 4
  }
  focus = {
   available = {
@@ -2118,8 +2188,6 @@ focus_tree = {
   }
   id = A01_state_loan
   icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
-  x = 13
-  y = 7
   cost = 5
   completion_reward = {
    add_to_variable = {
@@ -2137,6 +2205,8 @@ focus_tree = {
   mutually_exclusive = {
    focus = A01_request_fortification_project
   }
+  x = 13
+  y = 7
  }
  focus = {
   available = {
@@ -2166,8 +2236,6 @@ focus_tree = {
   }
   id = A01_request_fortification_project
   icon = GFX_goal_unique_A01_last_chance_to_negotiate
-  x = 17
-  y = 7
   cost = 5
   completion_reward = {
    country_event = {
@@ -2184,6 +2252,8 @@ focus_tree = {
   mutually_exclusive = {
    focus = A01_state_loan
   }
+  x = 17
+  y = 7
  }
  focus = {
   available = {
@@ -2213,8 +2283,6 @@ focus_tree = {
   }
   id = A01_own_fortifications
   icon = GFX_goal_unique_A01_build_bornean_fortifications
-  x = 13
-  y = 8
   cost = 10
   completion_reward = {
    add_ideas = A01_borneo_self_build
@@ -2250,6 +2318,8 @@ focus_tree = {
   prerequisite = {
    focus = A01_state_loan
   }
+  x = 13
+  y = 8
  }
  focus = {
   available = {
@@ -2287,8 +2357,6 @@ focus_tree = {
   }
   id = A01_implement_fortification_project
   icon = GFX_goal_unique_A01_prepare_bornean_logistics
-  x = 17
-  y = 8
   cost = 10
   completion_reward = {
    if = {
@@ -2329,12 +2397,12 @@ focus_tree = {
   prerequisite = {
    focus = A01_request_fortification_project
   }
+  x = 17
+  y = 8
  }
  focus = {
   id = A01_equal_citizenship
   icon = GFX_goal_unique_A01_technical_college
-  x = 14
-  y = 17
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2363,12 +2431,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 20
+  y = 19
  }
  focus = {
   id = A01_elected_civil_service
   icon = GFX_goal_unique_A01_strengthen_ludolfs_power
-  x = 12
-  y = 20
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2395,12 +2463,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 20
+  y = 27
  }
  focus = {
   id = A01_democratic_federation
   icon = GFX_goal_unique_A01_reconstruction_commission
-  x = 14
-  y = 21
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2425,12 +2493,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 20
+  y = 28
  }
  focus = {
   id = A01_purge_civil_service
   icon = GFX_goal_generic_political_pressure
-  x = 16
-  y = 15
   cost = 3
   prerequisite = {
    focus = A01_negotiated_resignation
@@ -2458,12 +2526,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 30
+  y = 16
  }
  focus = {
   id = A01_purge_officer_corps
   icon = GFX_goal_generic_political_pressure
-  x = 20
-  y = 15
   prerequisite = {
    focus = A01_negotiated_resignation
   }
@@ -2493,12 +2561,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 34
+  y = 16
  }
  focus = {
   id = A01_military_state
   icon = GFX_goal_generic_political_pressure
-  x = 18
-  y = 17
   prerequisite = {
    focus = A01_purge_civil_service
   }
@@ -2529,6 +2597,8 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 32
+  y = 19
  }
  focus = {
   id = A01_crown_above_factions
@@ -2556,9 +2626,9 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 34
-  y = 14
   icon = GFX_A01_crown_above_factions
+  x = 60
+  y = 16
  }
  focus = {
   id = A01_royal_island_charter
@@ -2586,9 +2656,9 @@ focus_tree = {
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
   }
-  x = 34
-  y = 15
   icon = GFX_A01_royal_island_charter
+  x = 60
+  y = 17
  }
  focus = {
   id = A01_wilhelmina_comes_of_age
@@ -2630,9 +2700,9 @@ focus_tree = {
     has_country_flag = A01_early_royal_accession
    }
   }
-  x = 34
-  y = 19
   icon = GFX_A01_wilhelmina_comes_of_age
+  x = 60
+  y = 21
  }
  focus = {
   id = A01_royal_constitution
@@ -2695,15 +2765,13 @@ focus_tree = {
   prerequisite = {
    focus = A01_settle_crown_crisis
   }
-  x = 30
-  y = 25
   icon = GFX_A01_royal_constitution
+  x = 56
+  y = 27
  }
  focus = {
   id = A01_island_representation
   icon = GFX_goal_unique_A01_reconstruction_commission
-  x = 14
-  y = 16
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2729,12 +2797,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 20
+  y = 18
  }
  focus = {
   id = A01_public_recovery_fund
   icon = GFX_goal_unique_A01_java_development
-  x = 6
-  y = 17
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2767,12 +2835,12 @@ focus_tree = {
   bypass = {
    has_country_flag = A01_wtc_recovery_financed
   }
+  x = 1
+  y = 19
  }
  focus = {
   id = A01_wtc_recovery_agreement
   icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
-  x = 8
-  y = 17
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2809,12 +2877,12 @@ focus_tree = {
   prerequisite = {
    focus = A01_wtc_oil_and_rubber_offer
   }
+  x = 5
+  y = 19
  }
  focus = {
   id = A01_electoral_commission
   icon = GFX_goal_unique_A01_constitution
-  x = 12
-  y = 22
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2840,12 +2908,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 18
+  y = 30
  }
  focus = {
   id = A01_postwar_admiralty_shipyards
   icon = GFX_goal_unique_A01_fleet_of_recovery
-  x = 20
-  y = 18
   cost = 3
   prerequisite = {
    focus = A01_military_state
@@ -2862,6 +2930,8 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 34
+  y = 20
  }
  focus = {
   id = A01_crown_island_council
@@ -2889,9 +2959,9 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 26
-  y = 16
   icon = GFX_A01_crown_island_council
+  x = 52
+  y = 18
  }
  focus = {
   id = A01_crown_legal_guarantees
@@ -2924,15 +2994,13 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
-  x = 34
-  y = 16
   icon = GFX_A01_crown_legal_guarantees
+  x = 60
+  y = 18
  }
  focus = {
   id = A01_repair_ports
   icon = GFX_goal_unique_A01_batavia_docks
-  x = 6
-  y = 16
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -2965,12 +3033,12 @@ focus_tree = {
   bypass = {
    has_country_flag = A01_wtc_recovery_financed
   }
+  x = 1
+  y = 18
  }
  focus = {
   id = A01_families_compensation
   icon = GFX_goal_unique_A01_reconstruction_commission
-  x = 8
-  y = 16
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3004,12 +3072,12 @@ focus_tree = {
   bypass = {
    has_country_flag = A01_wtc_recovery_financed
   }
+  x = 5
+  y = 18
  }
  focus = {
   id = A01_wtc_settlement
   icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
-  x = 8
-  y = 18
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3034,12 +3102,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 5
+  y = 21
  }
  focus = {
   id = A01_domestic_debt_redemption
   icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
-  x = 6
-  y = 18
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3068,12 +3136,12 @@ focus_tree = {
   bypass = {
    has_country_flag = A01_wtc_debt_repaid
   }
+  x = 1
+  y = 21
  }
  focus = {
   id = A01_recovery_investment
   icon = GFX_goal_unique_A01_java_development
-  x = 7
-  y = 19
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3112,12 +3180,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 3
+  y = 23
  }
  focus = {
   id = A01_demobilise_colonial_army
   icon = GFX_goal_unique_A01_knil_reform
-  x = 10
-  y = 15
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3145,12 +3213,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 10
+  y = 17
  }
  focus = {
   id = A01_joint_officer_schools
   icon = GFX_goal_unique_A01_knil_reform
-  x = 10
-  y = 16
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3177,12 +3245,45 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 8
+  y = 18
+ }
+ focus = {
+  id = A01_blame_the_military
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_ludolf_survives
+  }
+  completion_reward = {
+   add_political_power = 40
+   add_stability = 0.04
+   add_ideas = A01_military_scapegoat
+   set_country_flag = A01_military_blamed_for_defeat
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 14
+  y = 17
  }
  focus = {
   id = A01_civilian_defence_ministry
   icon = GFX_goal_unique_A01_strengthen_ludolfs_power
-  x = 12
-  y = 16
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3216,12 +3317,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 12
+  y = 18
  }
  focus = {
   id = A01_federal_defence_command
   icon = GFX_goal_unique_A01_archipelago_command
-  x = 10
-  y = 17
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3250,12 +3351,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 8
+  y = 20
  }
  focus = {
-  id = A01_abolish_admirals_council
-  icon = GFX_goal_unique_A01_constitution
-  x = 12
-  y = 18
+  id = A01_golden_bridges
+  icon = GFX_goal_generic_dangerous_deal
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3272,7 +3373,155 @@ focus_tree = {
    FOCUS_FILTER_POLITICAL
   }
   prerequisite = {
+   focus = A01_civilian_defence_ministry
+  }
+  completion_reward = {
+   add_ideas = A01_golden_bridges_idea
+   set_country_flag = A01_admiralty_split
+   navy_experience = 15
+   add_political_power = 30
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 12
+  y = 19
+ }
+ focus = {
+  id = A01_town_hall_crisis
+  icon = GFX_goal_generic_fortify_city
+  cost = 5
+  available = {
+   has_country_flag = A01_admiralty_split
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_golden_bridges
+  }
+  prerequisite = {
    focus = A01_federal_defence_command
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_town_hall.1
+    days = 1
+   }
+   remove_dynamic_modifier = {
+    modifier = A01_admirals_council
+   }
+   set_country_flag = A01_admirals_council_abolished
+   set_country_flag = A01_town_hall_stormed
+   add_stability = 0.05
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 10
+  y = 21
+ }
+ focus = {
+  id = A01_general_amnesty
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  available = {
+   has_country_flag = A01_town_hall_stormed
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_town_hall_crisis
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_town_hall.2
+    days = 1
+   }
+   add_ideas = A01_national_amnesty_idea
+   set_country_flag = A01_amnesty_proclaimed
+   add_stability = 0.08
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 8
+  y = 23
+ }
+ focus = {
+  id = A01_ludolf_retirement_navy
+  icon = GFX_goal_generic_military_sphere
+  cost = 5
+  available = {
+   has_country_flag = A01_town_hall_stormed
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_town_hall_crisis
+  }
+  completion_reward = {
+   country_event = {
+    id = A01_town_hall.3
+    days = 1
+   }
+   add_ideas = A01_ludolf_navy_command_idea
+   set_country_flag = A01_ludolf_crisis_resolved
+   set_country_flag = A01_ludolf_retired_to_navy
+   add_political_power = 50
+   hidden_effect = {
+    A01_update_spirit_categories = yes
+   }
+  }
+  x = 12
+  y = 23
+ }
+ focus = {
+  id = A01_abolish_admirals_council
+  icon = GFX_goal_unique_A01_constitution
+  cost = 5
+  available = {
+   has_country_flag = A01_ludolf_reform_path
+   NOT = {
+    has_country_flag = A01_admirals_seized_power
+   }
+  }
+  cancel_if_invalid = yes
+  continue_if_invalid = no
+  ai_will_do = {
+   factor = 1
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  prerequisite = {
+   focus = A01_town_hall_crisis
   }
   prerequisite = {
    focus = A01_equal_citizenship
@@ -3288,12 +3537,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 16
+  y = 24
  }
  focus = {
   id = A01_federal_constitution
   icon = GFX_goal_unique_A01_constitution
-  x = 14
-  y = 19
   cost = 10
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3322,12 +3571,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 20
+  y = 26
  }
  focus = {
   id = A01_legalise_federal_parties
   icon = GFX_goal_unique_A01_lone_wolf_path
-  x = 14
-  y = 22
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3353,12 +3602,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 22
+  y = 30
  }
  focus = {
   id = A01_first_federal_election
   icon = GFX_goal_unique_A01_constitution
-  x = 12
-  y = 23
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3392,12 +3641,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 20
+  y = 31
  }
  focus = {
   id = A01_liberal_victory
   icon = GFX_goal_unique_A01_constitution
-  x = 8
-  y = 24
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3428,12 +3677,12 @@ focus_tree = {
    focus = A01_conservative_victory
    focus = A01_peoples_party_victory
   }
+  x = 16
+  y = 33
  }
  focus = {
   id = A01_conservative_victory
   icon = GFX_goal_unique_A01_lone_wolf_path
-  x = 12
-  y = 24
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3464,12 +3713,12 @@ focus_tree = {
    focus = A01_liberal_victory
    focus = A01_peoples_party_victory
   }
+  x = 20
+  y = 33
  }
  focus = {
   id = A01_peoples_party_victory
   icon = GFX_goal_unique_A01_reconstruction_commission
-  x = 16
-  y = 24
   cost = 5
   available = {
    has_country_flag = A01_ludolf_reform_path
@@ -3500,6 +3749,8 @@ focus_tree = {
    focus = A01_liberal_victory
    focus = A01_conservative_victory
   }
+  x = 24
+  y = 33
  }
  focus = {
   id = A01_emma_and_daughter
@@ -3530,9 +3781,9 @@ focus_tree = {
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
   }
-  x = 34
-  y = 17
   icon = GFX_A01_emma_and_daughter
+  x = 60
+  y = 19
  }
  focus = {
   id = A01_royal_guard_corps
@@ -3576,9 +3827,9 @@ focus_tree = {
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
   }
-  x = 42
-  y = 16
   icon = GFX_A01_royal_guard_corps
+  x = 68
+  y = 18
  }
  focus = {
   id = A01_royal_naval_advisors
@@ -3613,9 +3864,9 @@ focus_tree = {
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
   }
-  x = 42
-  y = 18
   icon = GFX_A01_royal_naval_advisors
+  x = 68
+  y = 20
  }
  focus = {
   id = A01_island_delegation
@@ -3640,9 +3891,9 @@ focus_tree = {
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
   }
-  x = 26
-  y = 17
   icon = GFX_A01_island_delegation
+  x = 52
+  y = 19
  }
  focus = {
   id = A01_royal_dictatorship
@@ -3698,9 +3949,9 @@ focus_tree = {
   prerequisite = {
    focus = A01_settle_crown_crisis
   }
-  x = 38
-  y = 25
   icon = GFX_A01_royal_dictatorship
+  x = 64
+  y = 27
  }
  focus = {
   id = A01_crown_absolute_rule
@@ -3736,9 +3987,9 @@ focus_tree = {
   available = {
    has_country_flag = A01_wilhelmina_reigns
   }
-  x = 38
-  y = 26
   icon = GFX_A01_crown_absolute_rule
+  x = 64
+  y = 28
  }
  focus = {
   id = A01_royal_secret_police
@@ -3765,9 +4016,9 @@ focus_tree = {
   available = {
    has_country_flag = A01_wilhelmina_reigns
   }
-  x = 42
-  y = 26
   icon = GFX_A01_royal_secret_police
+  x = 68
+  y = 28
  }
  focus = {
   id = A01_crown_militarism
@@ -3806,7 +4057,7 @@ focus_tree = {
     name = A01_crown_militarism
     bonus = 1
     uses = 2
-    category = artillery
+    category = cat_artillery
    }
    hidden_effect = {
     A01_update_spirit_categories = yes
@@ -3818,9 +4069,9 @@ focus_tree = {
   available = {
    has_country_flag = A01_wilhelmina_reigns
   }
-  x = 38
-  y = 31
   icon = GFX_A01_crown_militarism
+  x = 64
+  y = 33
  }
  focus = {
   id = A01_crown_parliament
@@ -3855,9 +4106,9 @@ focus_tree = {
   prerequisite = {
    focus = A01_island_delegation
   }
-  x = 30
-  y = 26
   icon = GFX_A01_crown_parliament
+  x = 56
+  y = 28
  }
  focus = {
   id = A01_crown_commonwealth
@@ -3901,8 +4152,6 @@ focus_tree = {
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
   }
-  x = 30
-  y = 31
   icon = GFX_A01_crown_commonwealth
   prerequisite = {
    focus = A01_responsible_cabinet
@@ -3915,6 +4164,8 @@ focus_tree = {
    has_country_flag = A01_equal_citizenship_established
    has_country_flag = A01_prime_minister_elected
   }
+  x = 56
+  y = 33
  }
  focus = {
   id = A01_summon_grand_council
@@ -3943,9 +4194,9 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 34
-  y = 20
   icon = GFX_A01_summon_grand_council
+  x = 60
+  y = 22
  }
  focus = {
   id = A01_settle_crown_crisis
@@ -3972,8 +4223,6 @@ focus_tree = {
   ai_will_do = {
    factor = 1
   }
-  x = 34
-  y = 24
   icon = GFX_A01_settle_crown_crisis
   available = {
    has_country_flag = A01_wilhelmina_reigns
@@ -3986,12 +4235,12 @@ focus_tree = {
   prerequisite = {
    focus = A01_island_compact
   }
+  x = 60
+  y = 26
  }
  focus = {
   id = A01_sultans_at_the_palace
   icon = GFX_A01_sultans_at_the_palace
-  x = 26
-  y = 18
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4014,12 +4263,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 52
+  y = 20
  }
  focus = {
   id = A01_indonesian_petition
   icon = GFX_A01_indonesian_petition
-  x = 26
-  y = 19
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4042,12 +4291,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 52
+  y = 21
  }
  focus = {
   id = A01_equal_subjects
   icon = GFX_A01_equal_subjects
-  x = 24
-  y = 21
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4074,12 +4323,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 50
+  y = 23
  }
  focus = {
   id = A01_princely_guarantees
   icon = GFX_A01_princely_guarantees
-  x = 28
-  y = 21
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4104,12 +4353,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 54
+  y = 23
  }
  focus = {
   id = A01_island_compact
   icon = GFX_A01_island_compact
-  x = 26
-  y = 23
   cost = 7
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4140,12 +4389,12 @@ focus_tree = {
     A01_sultan_confidence > 2
    }
   }
+  x = 52
+  y = 25
  }
  focus = {
   id = A01_royal_commission
   icon = GFX_A01_royal_commission
-  x = 34
-  y = 21
   cost = 3
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4172,12 +4421,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 60
+  y = 23
  }
  focus = {
   id = A01_win_the_captains
   icon = GFX_A01_win_the_captains
-  x = 42
-  y = 21
   cost = 3
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4204,12 +4453,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 68
+  y = 23
  }
  focus = {
   id = A01_admirals_on_trial
   icon = GFX_A01_admirals_on_trial
-  x = 32
-  y = 22
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4252,12 +4501,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 58
+  y = 24
  }
  focus = {
   id = A01_purge_the_admiralty
   icon = GFX_A01_purge_the_admiralty
-  x = 36
-  y = 22
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4308,12 +4557,12 @@ focus_tree = {
    }
    retire_character = A01_casembroot
   }
+  x = 62
+  y = 24
  }
  focus = {
   id = A01_admirals_retirement
   icon = GFX_A01_admirals_retirement
-  x = 40
-  y = 22
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4349,12 +4598,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 66
+  y = 24
  }
  focus = {
   id = A01_civilian_admiralty
   icon = GFX_A01_civilian_admiralty
-  x = 34
-  y = 23
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4382,12 +4631,12 @@ focus_tree = {
    focus = A01_purge_the_admiralty
    focus = A01_admirals_retirement
   }
+  x = 60
+  y = 25
  }
  focus = {
   id = A01_guard_academy
   icon = GFX_A01_guard_academy
-  x = 46
-  y = 17
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4408,12 +4657,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 72
+  y = 19
  }
  focus = {
   id = A01_royal_academies
   icon = GFX_A01_royal_academies
-  x = 46
-  y = 18
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4442,12 +4691,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 72
+  y = 20
  }
  focus = {
   id = A01_capital_of_two_worlds
   icon = GFX_A01_capital_of_two_worlds
-  x = 46
-  y = 19
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4476,12 +4725,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 72
+  y = 21
  }
  focus = {
   id = A01_electoral_act
   icon = GFX_A01_electoral_act
-  x = 30
-  y = 27
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4504,12 +4753,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 56
+  y = 29
  }
  focus = {
   id = A01_first_royal_election
   icon = GFX_A01_first_royal_election
-  x = 30
-  y = 28
   cost = 3
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4529,12 +4778,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 56
+  y = 30
  }
  focus = {
   id = A01_responsible_cabinet
   icon = GFX_A01_responsible_cabinet
-  x = 30
-  y = 29
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4561,12 +4810,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 56
+  y = 31
  }
  focus = {
   id = A01_reform_procurement
   icon = GFX_A01_reform_procurement
-  x = 34
-  y = 29
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4588,12 +4837,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 64
+  y = 32
  }
  focus = {
   id = A01_island_officer_commissions
   icon = GFX_A01_island_officer_commissions
-  x = 22
-  y = 25
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4629,12 +4878,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 48
+  y = 27
  }
  focus = {
   id = A01_royal_development_bank
   icon = GFX_A01_royal_development_bank
-  x = 22
-  y = 27
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4681,12 +4930,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 48
+  y = 29
  }
  focus = {
   id = A01_crown_provincial_diets
   icon = GFX_A01_crown_provincial_diets
-  x = 36
-  y = 27
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4711,12 +4960,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 62
+  y = 29
  }
  focus = {
   id = A01_renew_the_fleet
   icon = GFX_A01_renew_the_fleet
-  x = 42
-  y = 28
   cost = 5
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4743,12 +4992,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 68
+  y = 30
  }
  focus = {
   id = A01_open_seas_kingdom
   icon = GFX_A01_open_seas_kingdom
-  x = 24
-  y = 33
   cost = 7
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4786,12 +5035,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 50
+  y = 35
  }
  focus = {
   id = A01_homeland_in_exile
   icon = GFX_A01_homeland_in_exile
-  x = 30
-  y = 33
   cost = 7
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4830,12 +5079,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 56
+  y = 35
  }
  focus = {
   id = A01_archipelago_great_power
   icon = GFX_A01_archipelago_great_power
-  x = 36
-  y = 33
   cost = 7
   allow_branch = {
    has_country_flag = A01_royal_path_revealed
@@ -4873,12 +5122,12 @@ focus_tree = {
     A01_update_spirit_categories = yes
    }
   }
+  x = 62
+  y = 35
  }
  focus = {
   id = A01_cabinet_open_budget
   icon = GFX_A01_cabinet_open_budget
-  x = 26
-  y = 30
   cost = 5
   prerequisite = {
    focus = A01_responsible_cabinet
@@ -4905,12 +5154,12 @@ focus_tree = {
     category = industry
    }
   }
+  x = 52
+  y = 32
  }
  focus = {
   id = A01_cabinet_princely_budget
   icon = GFX_A01_cabinet_princely_budget
-  x = 30
-  y = 30
   cost = 5
   prerequisite = {
    focus = A01_responsible_cabinet
@@ -4937,12 +5186,12 @@ focus_tree = {
     category = naval_equipment
    }
   }
+  x = 56
+  y = 32
  }
  focus = {
   id = A01_cabinet_island_schools
   icon = GFX_A01_cabinet_island_schools
-  x = 34
-  y = 30
   cost = 5
   prerequisite = {
    focus = A01_responsible_cabinet
@@ -4970,5 +5219,79 @@ focus_tree = {
     category = industry
    }
   }
+  x = 60
+  y = 32
+ }
+ focus = {
+  id = A01_european_democratic_unity
+  icon = GFX_goal_unique_A01_constitution
+  cost = 3
+  prerequisite = {
+   focus = A01_constitution
+  }
+  mutually_exclusive = {
+   focus = A01_lone_wolf_path
+   focus = A01_wtc_strengthening_path
+  }
+  available = {
+   country_exists = A02
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 0
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   set_country_flag = A01_european_democratic_path
+   add_ideas = A01_european_overture
+   add_popularity = {
+    ideology = democratic
+    popularity = 0.05
+   }
+   country_event = {
+    id = wtc_credit.20
+    days = 1
+   }
+  }
+  x = -8
+  y = 2
+ }
+ focus = {
+  id = A01_wtc_strengthening_path
+  icon = GFX_goal_unique_A01_wtc_oil_and_rubber_offer
+  cost = 3
+  prerequisite = {
+   focus = A01_constitution
+  }
+  mutually_exclusive = {
+   focus = A01_lone_wolf_path
+   focus = A01_european_democratic_unity
+  }
+  available = {
+   country_exists = A04
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 0
+  }
+  search_filters = {
+   FOCUS_FILTER_POLITICAL
+  }
+  completion_reward = {
+   set_country_flag = A01_chamber_democratic_path
+   add_ideas = A01_chamber_democrats
+   add_popularity = {
+    ideology = democratic
+    popularity = 0.05
+   }
+   country_event = {
+    id = wtc_credit.22
+    days = 1
+   }
+  }
+  x = 48
+  y = 2
  }
 }

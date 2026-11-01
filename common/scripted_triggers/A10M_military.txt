@@ -1,0 +1,9 @@
+A10M_government_active = {
+ tag = A10
+ has_country_flag = A10M_active
+ NOT = { has_capitulated = yes }
+}
+A10M_crisis_contained = {
+ check_variable = { var = A10M_opposition value = 65 compare = less_than }
+ check_variable = { var = A10M_strain value = 65 compare = less_than }
+}

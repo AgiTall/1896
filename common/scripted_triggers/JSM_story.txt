@@ -1,0 +1,9 @@
+# Scope: the country receiving a Japanese protectorate proposal.
+JSM_can_receive_protectorate_offer = {
+ exists = yes
+ NOT = { tag = A03 }
+ country_exists = A03
+ is_subject = no
+ has_war = no
+ A03 = { is_subject = no has_war = no }
+}

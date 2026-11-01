@@ -1,4 +1,4 @@
-# Canon 1893. Generic portrait; historical likeness not supplied.
+﻿# Canon 1893. Generic portrait; historical likeness not supplied.
 recruit_character = PPM_canon_leader
 set_politics = { ruling_party = neutrality elections_allowed = no }
 set_popularities = { neutrality = 100 }
@@ -10,3 +10,13 @@ set_technology = { infantry_weapons = 1 }
 add_ideas = volunteer_only
 add_ideas = civilian_economy
 add_ideas = limited_exports
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_technology = {
+	basic_railways = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = PPM }
+# END 1893 START RESEARCH AND TRAINS

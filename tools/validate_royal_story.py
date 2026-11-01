@@ -151,8 +151,10 @@ for lang in ('russian','english'):
     for d in decisions:required.update((d,d+'_desc'))
     for i in manifest['ideas']:required.update((i,i+'_desc'))
     assert required<=keys,(lang,required-keys)
-    local=(R/f'localisation/{lang}/zzzzzzzzzz_royal_story_l_{lang}.yml').read_bytes();assert local.startswith(b'\xef\xbb\xbf')
-    for line in local.decode('utf-8-sig').splitlines()[1:]:assert re.match(r'^ \S+:0 "[^"\r\n]*"$',line),line
+    local=(R/f'localisation/{lang}/1896_main_l_{lang}.yml').read_bytes();assert local.startswith(b'\xef\xbb\xbf')
+    for line in local.decode('utf-8-sig').splitlines()[1:]:
+        if not line.strip() or line.lstrip().startswith('#'): continue
+        assert re.match(r'^ \S+:\d* ".*"\s*(?:#.*)?$',line),line
 def visit(fid,stack=()):
     assert fid not in stack,('Cycle',fid)
     for k,o,n in focuses[fid]:

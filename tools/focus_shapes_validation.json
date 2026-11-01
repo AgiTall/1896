@@ -1,0 +1,11 @@
+{
+  "trees": 36,
+  "focuses": 987,
+  "new_nodes": 149,
+  "minor_route_cases": 184,
+  "minimum_horizontal_grid_gap": 4,
+  "dutch_reference_preserved": true,
+  "limitations": [
+    "Schematic rendering and script checks; no new in-game screenshot."
+  ]
+}

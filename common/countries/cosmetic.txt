@@ -1927,3 +1927,13 @@ A01_CROWN = { color = rgb { 235 135 45 } color_ui = rgb { 235 135 45 } }
 A01_COMMONWEALTH = { color = rgb { 235 135 45 } color_ui = rgb { 235 135 45 } }
 
 A01_ROYAL_EMPIRE = { color = rgb { 235 135 45 } color_ui = rgb { 235 135 45 } }
+
+A10_FED = { color = rgb { 52 126 166 } color_ui = rgb { 52 126 166 } }
+
+A10W_COLONY = { color = rgb { 154 129 72 } color_ui = rgb { 154 129 72 } }
+
+A10W_METRO = { color = rgb { 33 118 116 } color_ui = rgb { 33 118 116 } }
+
+A10W_PACIFIC = { color = rgb { 52 137 130 } color_ui = rgb { 52 137 130 } }
+
+A10M_MILITARY = { color = rgb { 114 56 53 } color_ui = rgb { 114 56 53 } }

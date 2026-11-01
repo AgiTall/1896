@@ -25,7 +25,7 @@ state={
 	provinces={
 		4593 8235 8250 1602 7627 1617 1629 10505 12457
 	}
-	manpower = 110543
+	manpower = 71570
 	state_category = rural
 
 	local_supplies=0.0 

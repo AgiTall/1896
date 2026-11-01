@@ -12,8 +12,8 @@ state = {
    12910
    15
   }
-  owner = A07
-  add_core_of = A07
+  owner = ASA
+  add_core_of = ASA
  }
  provinces = {
   1773
@@ -34,7 +34,7 @@ state = {
   13169
   13170
  }
- manpower = 550000
+ manpower = 488382
  buildings_max_level_factor = 1.000
  state_category = city
  local_supplies = 0.0

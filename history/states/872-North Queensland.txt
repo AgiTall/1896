@@ -26,10 +26,10 @@ state = {
   buildings = {
    infrastructure = 1
   }
-  owner = A07
-  add_core_of = A07
+  owner = AQL
+  add_core_of = AQL
  }
- manpower = 220000
+ manpower = 195353
  state_category = rural
  buildings_max_level_factor = 1.000
  local_supplies = 0.000

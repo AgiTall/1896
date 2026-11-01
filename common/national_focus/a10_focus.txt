@@ -1,67 +1,3020 @@
 focus_tree = {
  id = A10_philippines
- country = { factor = 0 modifier = { add = 100 tag = A10 } }
+ country = {
+  factor = 0
+  modifier = {
+   add = 100
+   tag = A10
+  }
+ }
  default = no
- continuous_focus_position = { x = 1200 y = 1100 }
- focus = { id = A10_island_congress icon = GFX_goal_generic_political_reform x = 5 y = 0 cost = 5 ai_will_do = { factor = 1 } 
- completion_reward = { add_political_power = 100 }
+ continuous_focus_position = {
+  x = 500
+  y = 2100
  }
- focus = { id = A10_confederation icon = GFX_goal_generic_political_reform x = 2 y = 1 cost = 5 ai_will_do = { factor = 1 } mutually_exclusive = { focus = A10_federation }
- prerequisite = { focus = A10_island_congress }
- completion_reward = { set_country_flag = A10_confederal_path remove_ideas = A10_separatism A10_release_PVI = yes A10_release_PSM = yes }
+ focus = {
+  id = A10_island_congress
+  icon = GFX_goal_generic_national_unity
+  cost = 1
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10R_initialize = yes
+   add_political_power = 60
+   country_event = {
+    id = A10R_congress.1
+    days = 1
+   }
+  }
+  x = 22
+  y = 0
  }
- focus = { id = A10_visayan_compact icon = GFX_goal_generic_political_reform x = 2 y = 2 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_confederation }
- completion_reward = { A10_release_PCB = yes A10_release_PPN = yes add_stability = 0.05 }
+ focus = {
+  id = A10R_provincial_rolls
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  prerequisite = {
+   focus = A10_island_congress
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_to_variable = {
+    A10R_cohesion = 8
+   }
+   add_stability = 0.03
+   A10R_refresh = yes
+  }
+  x = 20
+  y = 1
  }
- focus = { id = A10_mindanao_compact icon = GFX_goal_generic_political_reform x = 2 y = 3 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_visayan_compact }
- completion_reward = { A10_release_PMD = yes A10_release_PNM = yes add_political_power = 50 }
+ focus = {
+  id = A10R_emergency_council
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  prerequisite = {
+   focus = A10_island_congress
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_political_power = 50
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 300
+    producer = A10
+   }
+  }
+  x = 24
+  y = 1
  }
- focus = { id = A10_united_command icon = GFX_goal_generic_political_reform x = 2 y = 4 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_mindanao_compact }
- completion_reward = { add_ideas = A10_common_army add_war_support = 0.10 }
+ focus = {
+  id = A10_confederation
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  prerequisite = {
+   focus = A10_island_congress
+  }
+  mutually_exclusive = {
+   focus = A10W_oath
+   focus = A10M_coup
+  }
+  ai_will_do = {
+   factor = 20
+   modifier = {
+    factor = 100
+    is_historical_focus_on = yes
+   }
+  }
+  completion_reward = {
+   set_country_flag = A10_confederal_path
+   remove_ideas = A10_separatism
+   add_ideas = A10R_provisional_compact
+   A10_release_PVI = yes
+   A10_release_PSM = yes
+   add_to_variable = {
+    A10R_cohesion = 10
+   }
+   A10R_refresh = yes
+  }
+  x = 22
+  y = 2
  }
- focus = { id = A10_federation icon = GFX_goal_generic_political_reform x = 8 y = 1 cost = 5 ai_will_do = { factor = 1 } mutually_exclusive = { focus = A10_confederation }
- prerequisite = { focus = A10_island_congress }
- completion_reward = { set_country_flag = A10_federal_path set_cosmetic_tag = A10_FED remove_ideas = A10_separatism add_ideas = A10_federal_administration }
+ focus = {
+  id = A10_visayan_compact
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  prerequisite = {
+   focus = A10_confederation
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10_release_PCB = yes
+   A10_release_PPN = yes
+   add_to_variable = {
+    A10R_cohesion = 5
+   }
+   add_stability = 0.03
+   A10R_refresh = yes
+  }
+  x = 22
+  y = 3
  }
- focus = { id = A10_gendarmerie icon = GFX_goal_generic_political_reform x = 8 y = 2 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_federation }
- completion_reward = { A10_federal_progress = yes add_manpower = 5000 }
+ focus = {
+  id = A10_mindanao_compact
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  prerequisite = {
+   focus = A10_visayan_compact
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10_release_PMD = yes
+   A10_release_PNM = yes
+   add_political_power = 35
+   country_event = {
+    id = A10R_congress.2
+    days = 1
+   }
+  }
+  x = 22
+  y = 4
  }
- focus = { id = A10_local_administration icon = GFX_goal_generic_political_reform x = 8 y = 3 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_gendarmerie }
- completion_reward = { A10_federal_progress = yes add_stability = 0.05 }
+ focus = {
+  id = A10_united_command
+  icon = GFX_goal_generic_army_doctrines
+  cost = 3
+  prerequisite = {
+   focus = A10_mindanao_compact
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10_common_army
+   set_country_flag = A10R_war_ready
+   add_war_support = 0.07
+   add_to_variable = {
+    A10R_cohesion = 5
+   }
+   A10R_refresh = yes
+  }
+  x = 22
+  y = 5
  }
- focus = { id = A10_equal_citizenship icon = GFX_goal_generic_political_reform x = 8 y = 4 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_local_administration }
- completion_reward = { A10_federal_progress = yes add_political_power = 75 }
+ focus = {
+  id = A10R_common_treasury
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10_united_command
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10R_common_treasury_spirit
+   add_political_power = 40
+   add_to_variable = {
+    A10R_cohesion = 5
+   }
+   A10R_refresh = yes
+  }
+  x = 22
+  y = 6
  }
- focus = { id = A10_coastal_arsenals icon = GFX_goal_generic_construct_mil_factory x = 5 y = 2 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_island_congress }
- completion_reward = { 1084 = { add_extra_state_shared_building_slots = 2 add_building_construction = { type = arms_factory level = 1 instant_build = yes } } add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1500 producer = A10 } }
+ focus = {
+  id = A10R_republican_court
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_common_treasury
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10R_arbitration
+   add_to_variable = {
+    A10R_cohesion = 8
+   }
+   A10R_refresh = yes
+  }
+  x = 20
+  y = 7
  }
- focus = { id = A10_landing_plans icon = GFX_goal_generic_prepare_for_war x = 5 y = 3 cost = 5 ai_will_do = { factor = 1 } 
- prerequisite = { focus = A10_coastal_arsenals }
- completion_reward = { add_command_power = 25 add_war_support = 0.10 }
+ focus = {
+  id = A10R_language_charters
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_common_treasury
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_stability = 0.05
+   add_to_variable = {
+    A10R_cohesion = 8
+   }
+   set_country_flag = A10R_languages_guaranteed
+   A10R_refresh = yes
+  }
+  x = 26
+  y = 7
  }
- focus = { id = A10_strike_japan icon = GFX_goal_generic_major_war x = 5 y = 5 cost = 5 ai_will_do = { factor = 1 } available = { A03 = { has_war_with = A01 } NOT = { has_war_with = A03 } OR = { has_completed_focus = A10_united_command has_completed_focus = A10_equal_citizenship } } bypass = { has_war_with = A03 }
- prerequisite = { focus = A10_landing_plans }
- completion_reward = { declare_war_on = { target = A03 type = annex_everything } }
+ focus = {
+  id = A10R_tenant_guarantees
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_republican_court
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10R_tenant_rights
+   add_to_variable = {
+    A10R_cohesion = 6
+   }
+   country_event = {
+    id = A10R_congress.3
+    days = 1
+   }
+   A10R_refresh = yes
+  }
+  x = 20
+  y = 8
  }
- focus = { id = A10_luzon_charter icon = GFX_goal_generic_political_reform x = 2 y = 6 cost = 5 ai_will_do = { factor = 1 } available = { owns_state = 623 controls_state = 623 }
- prerequisite = { focus = A10_strike_japan }
- prerequisite = { focus = A10_united_command }
- completion_reward = { A10_release_PNL = yes }
+ focus = {
+  id = A10R_civilian_inspectors
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_language_charters
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_political_power = 50
+   add_to_variable = {
+    A10R_cohesion = 6
+   }
+   add_stability = 0.03
+   A10R_refresh = yes
+  }
+  x = 26
+  y = 8
  }
- focus = { id = A10_capital_charters icon = GFX_goal_generic_political_reform x = 2 y = 7 cost = 5 ai_will_do = { factor = 1 } available = { owns_state = 327 controls_state = 327 owns_state = 1027 controls_state = 1027 }
- prerequisite = { focus = A10_luzon_charter }
- completion_reward = { A10_release_PML = yes A10_release_PBT = yes add_stability = 0.05 }
+ focus = {
+  id = A10R_assembly_of_islands
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_tenant_guarantees
+  }
+  prerequisite = {
+   focus = A10R_civilian_inspectors
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_to_variable = {
+    A10R_cohesion = 10
+   }
+   add_stability = 0.05
+   set_country_flag = A10R_constitutional_debate
+   A10R_refresh = yes
+   country_event = {
+    id = A10R_congress.4
+    days = 1
+   }
+  }
+  x = 22
+  y = 9
  }
- focus = { id = A10_federal_reconstruction icon = GFX_goal_generic_political_reform x = 8 y = 6 cost = 5 ai_will_do = { factor = 1 } available = { owns_state = 327 controls_state = 327 }
- prerequisite = { focus = A10_strike_japan }
- prerequisite = { focus = A10_equal_citizenship }
- completion_reward = { A10_federal_progress = yes 1084 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } } }
+ focus = {
+  id = A10R_republics_forever
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_assembly_of_islands
+  }
+  mutually_exclusive = {
+   focus = A10R_federal_convention
+  }
+  ai_will_do = {
+   factor = 15
+  }
+  completion_reward = {
+   remove_ideas = A10R_provisional_compact
+   add_ideas = A10R_confederal_covenant
+   set_country_flag = A10R_permanent_confederation
+   A10R_confederal_government = yes
+   add_to_variable = {
+    A10R_cohesion = 10
+   }
+   A10R_refresh = yes
+  }
+  x = 20
+  y = 10
+ }
+ focus = {
+  id = A10R_rotating_presidency
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_republics_forever
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_political_power = 75
+   add_stability = 0.04
+   add_to_variable = {
+    A10R_cohesion = 5
+   }
+   A10R_refresh = yes
+  }
+  x = 16
+  y = 11
+ }
+ focus = {
+  id = A10R_customs_union
+  icon = GFX_goal_generic_trade
+  cost = 4
+  prerequisite = {
+   focus = A10R_republics_forever
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10R_customs_union_spirit
+   add_to_variable = {
+    A10R_cohesion = 5
+   }
+   A10R_refresh = yes
+  }
+  x = 20
+  y = 11
+ }
+ focus = {
+  id = A10R_republican_compact_end
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_rotating_presidency
+  }
+  prerequisite = {
+   focus = A10R_customs_union
+  }
+  available = {
+   check_variable = {
+    A10R_cohesion > 49
+   }
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10R_republican_solidarity
+   add_stability = 0.05
+   add_to_variable = {
+    A10R_cohesion = 10
+   }
+   A10R_refresh = yes
+   country_event = {
+    id = A10R_congress.8
+    days = 1
+   }
+  }
+  x = 18
+  y = 12
+ }
+ focus = {
+  id = A10R_federal_convention
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_assembly_of_islands
+  }
+  mutually_exclusive = {
+   focus = A10R_republics_forever
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   set_country_flag = A10R_federal_transition
+   add_to_variable = {
+    A10R_cohesion = -8
+   }
+   country_event = {
+    id = A10R_congress.5
+    days = 1
+   }
+   A10R_refresh = yes
+  }
+  x = 26
+  y = 10
+ }
+ focus = {
+  id = A10R_bill_of_rights
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_federal_convention
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10R_bill_of_rights_spirit
+   add_to_variable = {
+    A10R_cohesion = 8
+   }
+   set_country_flag = A10R_federal_guarantees
+   A10R_refresh = yes
+  }
+  x = 26
+  y = 11
+ }
+ focus = {
+  id = A10_federation
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_bill_of_rights
+  }
+  available = {
+   check_variable = {
+    A10R_cohesion > 39
+   }
+   OR = {
+    check_variable = {
+     A10R_federal_votes > 2
+    }
+    NOT = {
+     any_subject_country = {
+      A10R_member_trigger = yes
+      NOT = {
+       A10R_republic_has_consented = yes
+      }
+     }
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   set_country_flag = A10_federal_path
+   set_cosmetic_tag = A10_FED
+   remove_ideas = PZ_philippine_confederation
+   remove_ideas = A10R_provisional_compact
+   add_ideas = A10_federal_administration
+   add_stability = 0.05
+   country_event = {
+    id = A10R_congress.6
+    days = 1
+   }
+  }
+  x = 26
+  y = 12
+ }
+ focus = {
+  id = A10_gendarmerie
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10_federation
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10_federal_progress = yes
+   add_manpower = 3000
+   add_to_variable = {
+    A10R_cohesion = -3
+   }
+   A10R_refresh = yes
+  }
+  x = 24
+  y = 13
+ }
+ focus = {
+  id = A10_local_administration
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10_federation
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10_federal_progress = yes
+   add_stability = 0.05
+   add_to_variable = {
+    A10R_cohesion = 5
+   }
+   A10R_refresh = yes
+  }
+  x = 28
+  y = 13
+ }
+ focus = {
+  id = A10_equal_citizenship
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10_gendarmerie
+  }
+  prerequisite = {
+   focus = A10_local_administration
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10_federal_progress = yes
+   set_country_flag = A10R_equal_rights
+   add_ideas = A10R_federal_citizenship
+   add_political_power = 50
+  }
+  x = 26
+  y = 14
+ }
+ focus = {
+  id = A10R_federal_parliament
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10_equal_citizenship
+  }
+  available = {
+   has_war = no
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10R_civilian_government = yes
+   add_ideas = A10R_responsible_cabinet
+   add_stability = 0.05
+   country_event = {
+    id = A10R_congress.9
+    days = 1
+   }
+  }
+  x = 26
+  y = 15
+ }
+ focus = {
+  id = A10R_civilian_commonwealth
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 6
+  prerequisite = {
+   focus = A10R_federal_parliament
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_research_slot = 1
+   add_to_variable = {
+    A10R_cohesion = 10
+   }
+   A10R_refresh = yes
+  }
+  x = 26
+  y = 16
+ }
+ focus = {
+  id = A10_strike_japan
+  icon = GFX_goal_generic_major_war
+  cost = 3
+  prerequisite = {
+   focus = A10_landing_plans
+  }
+  available = {
+   country_exists = A03
+   is_subject = no
+   A03 = {
+    has_war_with = A01
+   }
+   has_country_flag = A10R_war_ready
+   NOT = {
+    has_war_with = A03
+   }
+   NOT = {
+    has_country_flag = A10_archipelago_peace_signed
+   }
+   NOT = {
+    has_country_flag = A10_manila_peace_signed
+   }
+  }
+  bypass = {
+   OR = {
+    has_war_with = A03
+    has_country_flag = A10_archipelago_peace_signed
+    has_country_flag = A10_manila_peace_signed
+    NOT = {
+     country_exists = A03
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   declare_war_on = {
+    target = A03
+    type = annex_everything
+   }
+  }
+  x = 78
+  y = 12
+ }
+ focus = {
+  id = A10R_luzon_relief
+  icon = GFX_goal_generic_allies_build_infantry
+  cost = 4
+  prerequisite = {
+   focus = A10_united_command
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 600
+    producer = A10
+   }
+   add_manpower = 1500
+   add_war_support = 0.03
+  }
+  x = 16
+  y = 6
+ }
+ focus = {
+  id = A10_luzon_charter
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_luzon_relief
+  }
+  available = {
+   623 = {
+    OR = {
+     AND = {
+      is_owned_by = A10
+      is_controlled_by = A10
+     }
+     AND = {
+      owner = {
+       tag = PNL
+       is_subject_of = A10
+      }
+      is_controlled_by = PNL
+     }
+    }
+   }
+  }
+  bypass = {
+   PNL = {
+    is_subject_of = A10
+   }
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     NOT = {
+      has_country_flag = A10_federal_path
+     }
+    }
+    A10_release_PNL = yes
+   }
+   else = {
+    A10_federal_progress = yes
+   }
+   add_to_variable = {
+    A10R_cohesion = 5
+   }
+   A10R_refresh = yes
+  }
+  x = 16
+  y = 7
+ }
+ focus = {
+  id = A10_capital_charters
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10_luzon_charter
+  }
+  available = {
+   327 = {
+    OR = {
+     AND = {
+      is_owned_by = A10
+      is_controlled_by = A10
+     }
+     AND = {
+      owner = {
+       tag = PML
+       is_subject_of = A10
+      }
+      is_controlled_by = PML
+     }
+    }
+   }
+   1027 = {
+    OR = {
+     AND = {
+      is_owned_by = A10
+      is_controlled_by = A10
+     }
+     AND = {
+      owner = {
+       tag = PBT
+       is_subject_of = A10
+      }
+      is_controlled_by = PBT
+     }
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     NOT = {
+      has_country_flag = A10_federal_path
+     }
+    }
+    A10_release_PML = yes
+    A10_release_PBT = yes
+   }
+   else = {
+    A10_federal_progress = yes
+   }
+   add_stability = 0.05
+  }
+  x = 16
+  y = 8
+ }
+ focus = {
+  id = A10R_war_accounts
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 4
+  prerequisite = {
+   focus = A10_island_congress
+  }
+  available = {
+   has_war = no
+   OR = {
+    has_country_flag = A10_archipelago_peace_signed
+    has_country_flag = A10_manila_peace_signed
+    has_country_flag = A10R_defensive_armistice
+    NOT = {
+     country_exists = A03
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_ideas = A10R_reconstruction
+   add_political_power = 50
+   country_event = {
+    id = A10R_congress.7
+    days = 1
+   }
+  }
+  x = 78
+  y = 3
+ }
+ focus = {
+  id = A10R_veterans_land
+  icon = GFX_goal_generic_national_unity
+  cost = 4
+  prerequisite = {
+   focus = A10R_war_accounts
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   add_stability = 0.06
+   add_war_support = -0.03
+   add_to_variable = {
+    A10R_cohesion = 6
+   }
+   A10R_refresh = yes
+  }
+  x = 76
+  y = 4
+ }
+ focus = {
+  id = A10_federal_reconstruction
+  icon = GFX_goal_generic_construct_naval_dockyard
+  cost = 4
+  prerequisite = {
+   focus = A10R_war_accounts
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10R_rebuild_harbour = yes
+   A10_federal_progress = yes
+   add_political_power = 25
+  }
+  x = 80
+  y = 4
+ }
+ focus = {
+  id = A10R_peace_generation
+  icon = GFX_goal_generic_national_unity
+  cost = 6
+  prerequisite = {
+   focus = A10R_veterans_land
+  }
+  prerequisite = {
+   focus = A10_federal_reconstruction
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   remove_ideas = A10R_reconstruction
+   add_ideas = A10R_island_recovery
+   add_stability = 0.05
+   add_to_variable = {
+    A10R_cohesion = 8
+   }
+   A10R_refresh = yes
+  }
+  x = 78
+  y = 5
+ }
+ focus = {
+  id = A10D_island_census
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10_confederation
+   focus = A10W_oath
+   focus = A10M_coup
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_political_power = 35
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+   country_event = {
+    id = A10D_development.3
+    days = 3
+   }
+  }
+  x = 52
+  y = 4
+ }
+ focus = {
+  id = A10D_municipal_roads
+  icon = GFX_goal_generic_construction
+  cost = 10
+  prerequisite = {
+   focus = A10D_island_census
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_build_roads = yes
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 48
+  y = 5
+ }
+ focus = {
+  id = A10D_mail_ferries
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 10
+  prerequisite = {
+   focus = A10D_island_census
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_equipment_to_stockpile = {
+    type = convoy_1
+    amount = 8
+    producer = A10
+   }
+   add_to_variable = {
+    A10D_supply = 10
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 56
+  y = 5
+ }
+ focus = {
+  id = A10D_abaca_cooperatives
+  icon = GFX_goal_generic_trade
+  cost = 5
+  prerequisite = {
+   focus = A10D_municipal_roads
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10D_abaca_exports
+   add_political_power = 35
+  }
+  x = 48
+  y = 6
+ }
+ focus = {
+  id = A10D_sugar_inspectors
+  icon = GFX_goal_generic_trade
+  cost = 5
+  prerequisite = {
+   focus = A10D_municipal_roads
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10D_sugar_standards
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 52
+  y = 6
+ }
+ focus = {
+  id = A10D_timber_and_slipways
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 10
+  prerequisite = {
+   focus = A10D_mail_ferries
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_build_cebu_workshops = yes
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 56
+  y = 6
+ }
+ focus = {
+  id = A10D_provincial_workshops
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 10
+  prerequisite = {
+   focus = A10D_abaca_cooperatives
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_build_visayan_factory = yes
+   remove_ideas = A10D_workshop_islands
+   add_ideas = A10D_workshop_network
+   set_technology = {
+    early_machine_tools = 1
+   }
+  }
+  x = 48
+  y = 7
+ }
+ focus = {
+  id = A10D_rice_granaries
+  icon = GFX_goal_generic_production
+  cost = 5
+  prerequisite = {
+   focus = A10D_sugar_inspectors
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10D_granary_network
+   add_to_variable = {
+    A10D_supply = 15
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 52
+  y = 7
+ }
+ focus = {
+  id = A10D_district_clinics
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 10
+  prerequisite = {
+   focus = A10D_timber_and_slipways
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10D_district_medicine
+   set_technology = {
+    tech_support = 1
+   }
+   add_equipment_to_stockpile = {
+    type = support_equipment_1
+    amount = 100
+    producer = A10
+   }
+   country_event = {
+    id = A10D_development.4
+    days = 2
+   }
+  }
+  x = 56
+  y = 7
+ }
+ focus = {
+  id = A10D_normal_schools
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = A10D_provincial_workshops
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10D_teacher_colleges
+   add_political_power = 30
+  }
+  x = 48
+  y = 8
+ }
+ focus = {
+  id = A10D_cable_cooperatives
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 10
+  prerequisite = {
+   focus = A10D_rice_granaries
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10D_island_telegraph
+   add_to_variable = {
+    A10D_supply = 10
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 52
+  y = 8
+ }
+ focus = {
+  id = A10D_sanitary_commission
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = A10D_district_clinics
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   swap_ideas = {
+    remove_idea = A10D_district_medicine
+    add_idea = A10D_public_health
+   }
+   add_stability = 0.03
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 60
+  y = 9
+}
+ focus = {
+  id = A10D_island_polytechnic
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 10
+  prerequisite = {
+   focus = A10D_normal_schools
+  }
+  prerequisite = {
+   focus = A10D_cable_cooperatives
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_research_slot = 1
+   add_ideas = A10D_polytechnic
+  }
+  x = 50
+  y = 9
+ }
+ focus = {
+  id = A10D_export_bureau
+  icon = GFX_goal_generic_trade
+  cost = 5
+  prerequisite = {
+   focus = A10D_cable_cooperatives
+  }
+  prerequisite = {
+   focus = A10D_sanitary_commission
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_political_power = 30
+   add_to_variable = {
+    A10D_supply = 8
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 56
+  y = 10
+}
+ focus = {
+  id = A10D_national_market
+  icon = GFX_goal_generic_trade
+  cost = 10
+  prerequisite = {
+   focus = A10D_island_polytechnic
+  }
+  prerequisite = {
+   focus = A10D_export_bureau
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_build_market_factory = yes
+   add_ideas = A10D_common_market
+   add_to_variable = {
+    A10D_supply = 10
+   }
+   A10D_refresh_supply = yes
+   country_event = {
+    id = A10D_development.6
+    days = 2
+   }
+  }
+  x = 52
+  y = 11
+}
+ focus = {
+  id = A10D_island_industry
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 10
+  prerequisite = {
+   focus = A10D_national_market
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_research_slot = 1
+   A10D_build_market_factory = yes
+   add_to_variable = {
+    A10D_supply = 15
+   }
+   A10D_refresh_supply = yes
+   set_country_flag = A10D_industry_complete
+   add_war_support = 0.04
+  }
+  x = 52
+  y = 12
+}
+ focus = {
+  id = A10_coastal_arsenals
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 10
+  prerequisite = {
+   focus = A10_confederation
+   focus = A10W_oath
+   focus = A10M_coup
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   A10D_build_arsenal = yes
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 1500
+    producer = A10
+   }
+  }
+  x = 64
+  y = 4
+ }
+ focus = {
+  id = A10D_rifle_inspections
+  icon = GFX_goal_generic_production
+  cost = 5
+  prerequisite = {
+   focus = A10_coastal_arsenals
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   army_experience = 10
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 500
+    producer = A10
+   }
+   add_tech_bonus = {
+    name = A10D_rifle_studies
+    bonus = 0.5
+    uses = 1
+    category = infantry_weapons
+   }
+  }
+  x = 60
+  y = 5
+ }
+ focus = {
+  id = A10D_coastal_boatyards
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 10
+  prerequisite = {
+   focus = A10_coastal_arsenals
+  }
+  prerequisite = {
+   focus = A10D_timber_and_slipways
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_build_boatyard = yes
+   add_equipment_to_stockpile = {
+    type = convoy_1
+    amount = 10
+    producer = A10
+   }
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 68
+  y = 7
+}
+ focus = {
+  id = A10D_common_calibres
+  icon = GFX_goal_generic_production
+  cost = 5
+  prerequisite = {
+   focus = A10D_rifle_inspections
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   remove_ideas = A10D_separate_quartermasters
+   add_ideas = A10D_standard_stores
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 500
+    producer = A10
+   }
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 60
+  y = 6
+ }
+ focus = {
+  id = A10D_field_batteries
+  icon = GFX_goal_generic_army_artillery
+  cost = 10
+  prerequisite = {
+   focus = A10D_rifle_inspections
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   set_technology = {
+    early_artillery = 1
+   }
+   add_equipment_to_stockpile = {
+    type = field_gun_equipment_0
+    amount = 48
+    producer = A10
+   }
+   add_equipment_to_stockpile = {
+    type = howitzer_equipment_0
+    amount = 12
+    producer = A10
+   }
+   army_experience = 10
+  }
+  x = 64
+  y = 6
+ }
+ focus = {
+  id = A10D_harbour_defences
+  icon = GFX_goal_generic_fortify_city
+  cost = 10
+  prerequisite = {
+   focus = A10D_coastal_boatyards
+  }
+  available = {
+   OR = {
+    1084 = {
+     A10D_eligible_state_trigger = yes
+    }
+    628 = {
+     A10D_eligible_state_trigger = yes
+    }
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_fortify_harbours = yes
+   add_ideas = A10D_coastal_defence
+  }
+  x = 72
+  y = 8
+}
+ focus = {
+  id = A10D_sappers_and_pack_trains
+  icon = GFX_goal_generic_army_doctrines
+  cost = 10
+  prerequisite = {
+   focus = A10D_common_calibres
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   set_technology = {
+    tech_support = 1
+    tech_engineers = 1
+   }
+   add_equipment_to_stockpile = {
+    type = support_equipment_1
+    amount = 150
+    producer = A10
+   }
+   add_ideas = A10D_pack_columns
+  }
+  x = 58
+  y = 7
+ }
+ focus = {
+  id = A10D_mountain_infantry
+  icon = GFX_goal_generic_special_forces
+  cost = 5
+  prerequisite = {
+   focus = A10D_field_batteries
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   army_experience = 10
+   add_manpower = 2000
+   add_tech_bonus = {
+    name = A10D_jungles
+    bonus = 0.5
+    uses = 1
+    category = infantry_tech
+   }
+  }
+  x = 66
+  y = 7
+ }
+ focus = {
+  id = A10D_chart_the_straits
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = A10D_coastal_boatyards
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   navy_experience = 15
+   add_ideas = A10D_pilot_stations
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 68
+  y = 8
+}
+ focus = {
+  id = A10D_staff_college
+  icon = GFX_goal_generic_army_doctrines
+  cost = 10
+  prerequisite = {
+   focus = A10D_sappers_and_pack_trains
+  }
+  prerequisite = {
+   focus = A10D_mountain_infantry
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10D_staff_school
+   army_experience = 15
+   add_command_power = 20
+  }
+  x = 60
+  y = 8
+}
+ focus = {
+  id = A10D_merchant_reserve
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 10
+  prerequisite = {
+   focus = A10D_chart_the_straits
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_equipment_to_stockpile = {
+    type = convoy_1
+    amount = 15
+    producer = A10
+   }
+   add_to_variable = {
+    A10D_supply = 10
+   }
+   A10D_refresh_supply = yes
+   country_event = {
+    id = A10D_development.5
+    days = 2
+   }
+  }
+  x = 68
+  y = 9
+}
+ focus = {
+  id = A10D_ammunition_toolrooms
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 10
+  prerequisite = {
+   focus = A10D_staff_college
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_build_toolroom = yes
+   add_ideas = A10D_ammunition_contracts
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 800
+    producer = A10
+   }
+  }
+  x = 62
+  y = 9
+}
+ focus = {
+  id = A10D_signal_corps
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  prerequisite = {
+   focus = A10D_staff_college
+  }
+  prerequisite = {
+   focus = A10D_cable_cooperatives
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_command_power = 10
+   add_to_variable = {
+    A10D_supply = 5
+   }
+   A10D_refresh_supply = yes
+  }
+  x = 64
+  y = 9
+}
+ focus = {
+  id = A10D_patrol_flotillas
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 10
+  prerequisite = {
+   focus = A10D_merchant_reserve
+  }
+  available = {
+   any_state = {
+    A10D_eligible_state_trigger = yes
+   }
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10D_build_second_boatyard = yes
+   add_ideas = A10D_escort_service
+   navy_experience = 10
+  }
+  x = 68
+  y = 10
+}
+ focus = {
+  id = A10_landing_plans
+  icon = GFX_goal_generic_amphibious_assault
+  cost = 10
+  prerequisite = {
+   focus = A10D_ammunition_toolrooms
+  }
+  prerequisite = {
+   focus = A10D_signal_corps
+  }
+  prerequisite = {
+   focus = A10D_patrol_flotillas
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     has_dlc = "Man the Guns"
+    }
+    set_technology = {
+     mtg_transport = 1
+    }
+   }
+   else = {
+    set_technology = {
+     transport = 1
+    }
+   }
+   add_ideas = A10D_landing_staff
+   add_command_power = 25
+   add_war_support = 0.08
+   navy_experience = 10
+  }
+  x = 64
+  y = 11
+}
+ focus = {
+  id = A10D_war_fleet
+  icon = GFX_goal_generic_navy_carrier
+  cost = 10
+  prerequisite = {
+   focus = A10_landing_plans
+  }
+  prerequisite = {
+   focus = A10D_island_industry
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   navy_experience = 25
+   army_experience = 15
+   add_war_support = 0.06
+   set_country_flag = A10D_fleet_complete
+   if = {
+    limit = {
+     has_dlc = "Man the Guns"
+    }
+    set_technology = {
+     mtg_transport = 1
+     early_destroyer = 1
+    }
+   }
+   else = {
+    set_technology = {
+     transport = 1
+     early_destroyer = 1
+    }
+   }
+  }
+  x = 64
+  y = 13
+}
+ focus = {
+  id = A10W_oath
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10_island_congress
+  }
+  mutually_exclusive = {
+   focus = A10_confederation
+   focus = A10M_coup
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 0.4
+  }
+  completion_reward = {
+   A10W_request_oath_effect = yes
+   add_political_power = 35
+  }
+  x = 6
+  y = 2
+ }
+ focus = {
+  id = A10W_creditors_register
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_oath
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_audited_ledger
+   add_to_variable = {
+    WTC_debt = -5
+   }
+   WTC_refresh_effect = yes
+   custom_effect_tooltip = A10W_accounts_tt
+  }
+  x = 6
+  y = 3
+ }
+ focus = {
+  id = A10W_bonded_warehouses
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_creditors_register
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_bonded_customs
+   add_to_variable = {
+    A10W_charter_tension = 5
+   }
+   A10W_refresh_effect = yes
+  }
+  x = 4
+  y = 4
+ }
+ focus = {
+  id = A10W_silver_convoy
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = A10W_creditors_register
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     A10W_chamber_reachable = yes
+     has_country_flag = A10W_oath_accepted
+    }
+    add_timed_idea = {
+     idea = WTC_silver_convoy
+     days = 240
+    }
+    add_to_variable = {
+     WTC_debt = 3
+    }
+    WTC_refresh_effect = yes
+   }
+   else = {
+    add_political_power = 35
+   }
+  }
+  x = 8
+  y = 4
+ }
+ focus = {
+  id = A10W_cable_priority
+  icon = GFX_goal_generic_defence
+  cost = 5
+  prerequisite = {
+   focus = A10W_bonded_warehouses
+  }
+  prerequisite = {
+   focus = A10W_silver_convoy
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   set_country_flag = A10R_war_ready
+   add_ideas = A10W_port_watch
+   add_command_power = 15
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 500
+    producer = A10
+   }
+   if = {
+    limit = {
+     A10W_chamber_reachable = yes
+     has_country_flag = A10W_oath_accepted
+    }
+    add_timed_idea = {
+     idea = WTC_cable_contract
+     days = 180
+    }
+    add_to_variable = {
+     WTC_debt = 3
+    }
+    WTC_refresh_effect = yes
+   }
+  }
+  x = 6
+  y = 5
+ }
+ focus = {
+  id = A10W_harbour_survey
+  icon = GFX_goal_generic_construct_infrastructure
+  cost = 5
+  prerequisite = {
+   focus = A10W_cable_priority
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTC_debt = 5
+   }
+   WTC_refresh_effect = yes
+   if = {
+    limit = {
+     capital_scope = {
+      is_owned_by = A10
+      is_controlled_by = A10
+     }
+    }
+    capital_scope = {
+     add_building_construction = {
+      type = infrastructure
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   navy_experience = 10
+  }
+  x = 4
+  y = 6
+ }
+ focus = {
+  id = A10W_local_shareholding
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_cable_priority
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_local_shareholders
+   add_to_variable = {
+    A10W_charter_tension = -10
+   }
+   A10W_refresh_effect = yes
+  }
+  x = 8
+  y = 6
+ }
+ focus = {
+  id = A10W_charter_congress
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_harbour_survey
+  }
+  prerequisite = {
+   focus = A10W_local_shareholding
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   remove_ideas = A10_separatism
+   country_event = {
+    id = A10W_path.8
+    days = 1
+   }
+  }
+  x = 6
+  y = 7
+ }
+ focus = {
+  id = A10W_colonial_charter
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_charter_congress
+  }
+  mutually_exclusive = {
+   focus = A10W_metropolitan_charter
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   set_country_flag = A10W_colonial_selected
+   add_ideas = A10W_provisional_charter
+   custom_effect_tooltip = A10W_colony_draft_tt
+  }
+  x = 2
+  y = 8
+ }
+ focus = {
+  id = A10W_resident_council
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_colonial_charter
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_resident_council_spirit
+   add_to_variable = {
+    A10W_charter_tension = 5
+   }
+   A10W_refresh_effect = yes
+  }
+  x = 0
+  y = 9
+ }
+ focus = {
+  id = A10W_revenue_covenant
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_colonial_charter
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTC_debt = -10
+   }
+   add_timed_idea = {
+    idea = WTC_port_concession
+    days = 180
+   }
+   add_to_variable = {
+    A10W_charter_tension = 5
+   }
+   WTC_refresh_effect = yes
+   A10W_refresh_effect = yes
+  }
+  x = 4
+  y = 9
+ }
+ focus = {
+  id = A10W_charter_constabulary
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  prerequisite = {
+   focus = A10W_resident_council
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   army_experience = 15
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 800
+    producer = A10
+   }
+   add_command_power = 10
+  }
+  x = 0
+  y = 10
+ }
+ focus = {
+  id = A10W_export_estates
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  prerequisite = {
+   focus = A10W_revenue_covenant
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_export_estates_spirit
+   A10W_workshop_effect = yes
+   add_to_variable = {
+    WTC_debt = 8
+   }
+   add_to_variable = {
+    A10W_charter_tension = 15
+   }
+   WTC_refresh_effect = yes
+   A10W_refresh_effect = yes
+  }
+  x = 4
+  y = 10
+ }
+ focus = {
+  id = A10W_debt_conversion
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_charter_constabulary
+  }
+  prerequisite = {
+   focus = A10W_export_estates
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_to_variable = {
+    WTC_debt = -15
+   }
+   add_to_variable = {
+    A10W_charter_tension = 5
+   }
+   add_timed_idea = {
+    idea = A10W_emergency_mediation
+    days = 180
+   }
+   WTC_refresh_effect = yes
+   A10W_refresh_effect = yes
+  }
+  x = 2
+  y = 11
+ }
+ focus = {
+  id = A10W_colony
+  icon = GFX_goal_generic_national_unity
+  cost = 7
+  prerequisite = {
+   focus = A10W_debt_conversion
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   A10W_request_colony_effect = yes
+   custom_effect_tooltip = A10W_colony_convention_tt
+  }
+  x = 2
+  y = 12
+ }
+ focus = {
+  id = A10W_port_welfare
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_colony
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_port_hospitals
+   add_to_variable = {
+    A10W_charter_tension = -15
+   }
+   A10W_refresh_effect = yes
+  }
+  x = 2
+  y = 13
+ }
+ focus = {
+  id = A10W_metropolitan_charter
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_charter_congress
+  }
+  mutually_exclusive = {
+   focus = A10W_colonial_charter
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   set_country_flag = A10W_metropolitan_selected
+   add_ideas = A10W_provisional_exchange
+   custom_effect_tooltip = A10W_metropole_draft_tt
+  }
+  x = 10
+  y = 8
+ }
+ focus = {
+  id = A10W_island_registries
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_metropolitan_charter
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_political_power = 50
+   add_to_variable = {
+    A10W_charter_tension = -5
+   }
+   A10W_refresh_effect = yes
+  }
+  x = 8
+  y = 9
+ }
+ focus = {
+  id = A10W_merchant_assembly
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_metropolitan_charter
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_merchant_assembly_spirit
+   add_to_variable = {
+    A10W_charter_tension = 5
+   }
+   A10W_refresh_effect = yes
+  }
+  x = 12
+  y = 9
+ }
+ focus = {
+  id = A10W_duplicate_cables
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = A10W_island_registries
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_duplicate_cables_spirit
+   add_to_variable = {
+    WTC_debt = 5
+   }
+   WTC_refresh_effect = yes
+  }
+  x = 8
+  y = 10
+ }
+ focus = {
+  id = A10W_secretariat_rules
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10W_merchant_assembly
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_to_variable = {
+    A10W_charter_tension = -10
+   }
+   add_stability = 0.03
+   add_political_power = -25
+   A10W_refresh_effect = yes
+  }
+  x = 12
+  y = 10
+ }
+ focus = {
+  id = A10W_escrow_exchange
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  prerequisite = {
+   focus = A10W_duplicate_cables
+  }
+  prerequisite = {
+   focus = A10W_secretariat_rules
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_escrow_courts
+   A10W_workshop_effect = yes
+   add_to_variable = {
+    WTC_debt = 8
+   }
+   add_to_variable = {
+    A10W_charter_tension = 5
+   }
+   WTC_refresh_effect = yes
+   A10W_refresh_effect = yes
+  }
+  x = 10
+  y = 11
+ }
+ focus = {
+  id = A10W_new_metropole
+  icon = GFX_goal_generic_national_unity
+  cost = 7
+  prerequisite = {
+   focus = A10W_escrow_exchange
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   A10W_request_metropole_effect = yes
+   custom_effect_tooltip = A10W_metropole_convention_tt
+  }
+  x = 10
+  y = 12
+ }
+ focus = {
+  id = A10W_oceanic_covenant
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = A10W_new_metropole
+  }
+  available = {
+   always = yes
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10W_network_covenant
+   add_to_variable = {
+    A10W_charter_tension = 5
+   }
+   A10W_refresh_effect = yes
+  }
+  x = 10
+  y = 13
+ }
+ focus = {
+  id = A10M_coup
+  icon = GFX_goal_generic_military_sphere
+  cost = 5
+  prerequisite = {
+   focus = A10_island_congress
+  }
+  mutually_exclusive = {
+   focus = A10_confederation
+   focus = A10W_oath
+  }
+  available = {
+   is_subject = no
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   A10M_begin_coup = yes
+  }
+  x = 38
+  y = 2
+ }
+ focus = {
+  id = A10M_martial_law
+  icon = GFX_goal_generic_major_war
+  cost = 5
+  prerequisite = {
+   focus = A10M_coup
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_political_power = 50
+   add_to_variable = {
+    var = A10M_repression
+    value = 10
+   }
+   add_to_variable = {
+    var = A10M_opposition
+    value = 5
+   }
+   A10M_update = yes
+  }
+  x = 38
+  y = 3
+ }
+ focus = {
+  id = A10M_recall_charters
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10M_martial_law
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10M_recall_members = yes
+  }
+  x = 36
+  y = 4
+ }
+ focus = {
+  id = A10M_censor_cables
+  icon = GFX_goal_generic_propaganda
+  cost = 5
+  prerequisite = {
+   focus = A10M_martial_law
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_censored_society
+   add_to_variable = {
+    var = A10M_repression
+    value = 5
+   }
+   A10M_update = yes
+  }
+  x = 40
+  y = 4
+ }
+ focus = {
+  id = A10M_officer_tribunal
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  prerequisite = {
+   focus = A10M_recall_charters
+  }
+  prerequisite = {
+   focus = A10M_censor_cables
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   set_country_flag = A10R_war_ready
+   army_experience = 15
+   country_event = {
+    id = A10M.2
+    days = 1
+   }
+  }
+  x = 38
+  y = 5
+ }
+ focus = {
+  id = A10M_rice_commissions
+  icon = GFX_goal_generic_construction
+  cost = 5
+  prerequisite = {
+   focus = A10M_recall_charters
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   subtract_from_variable = {
+    var = A10M_strain
+    value = 10
+   }
+   add_political_power = 25
+   A10M_update = yes
+  }
+  x = 32
+  y = 5
+ }
+ focus = {
+  id = A10M_requisition
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 5
+  prerequisite = {
+   focus = A10M_rice_commissions
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_requisition_bureaus
+   custom_effect_tooltip = A10M_requisition_tt
+  }
+  x = 36
+  y = 6
+ }
+ focus = {
+  id = A10M_compensation
+  icon = GFX_goal_generic_construction
+  cost = 5
+  prerequisite = {
+   focus = A10M_requisition
+  }
+  mutually_exclusive = {
+   focus = A10M_labour_battalions
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_compensation_bonds
+   subtract_from_variable = {
+    var = A10M_opposition
+    value = 8
+   }
+   custom_effect_tooltip = A10M_compensation_tt
+   A10M_update = yes
+  }
+  x = 32
+  y = 7
+ }
+ focus = {
+  id = A10M_labour_battalions
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 5
+  prerequisite = {
+   focus = A10M_requisition
+  }
+  mutually_exclusive = {
+   focus = A10M_compensation
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   add_ideas = A10M_compulsory_labour
+   add_to_variable = {
+    var = A10M_repression
+    value = 10
+   }
+   add_to_variable = {
+    var = A10M_opposition
+    value = 10
+   }
+   custom_effect_tooltip = A10M_labour_tt
+   A10M_update = yes
+  }
+  x = 36
+  y = 7
+ }
+ focus = {
+  id = A10M_cadet_schools
+  icon = GFX_goal_generic_special_forces
+  cost = 5
+  prerequisite = {
+   focus = A10M_censor_cables
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_cadet_estate
+   army_experience = 10
+  }
+  x = 44
+  y = 5
+ }
+ focus = {
+  id = A10M_levy_rolls
+  icon = GFX_goal_generic_small_arms
+  cost = 5
+  prerequisite = {
+   focus = A10M_cadet_schools
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_military_levies
+   add_manpower = 3500
+   add_to_variable = {
+    var = A10M_strain
+    value = 7
+   }
+   add_to_variable = {
+    var = A10M_opposition
+    value = 5
+   }
+   A10M_update = yes
+  }
+  x = 44
+  y = 6
+ }
+ focus = {
+  id = A10M_medical_corps
+  icon = GFX_goal_generic_special_forces
+  cost = 5
+  prerequisite = {
+   focus = A10M_levy_rolls
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_field_hospitals
+   subtract_from_variable = {
+    var = A10M_strain
+    value = 8
+   }
+   custom_effect_tooltip = A10M_hospitals_tt
+   A10M_update = yes
+  }
+  x = 44
+  y = 7
+ }
+ focus = {
+  id = A10M_quartermasters
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  prerequisite = {
+   focus = A10M_officer_tribunal
+  }
+  prerequisite = {
+   focus = A10M_requisition
+  }
+  prerequisite = {
+   focus = A10M_medical_corps
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_supply_inspectorate
+   subtract_from_variable = {
+    var = A10M_strain
+    value = 10
+   }
+   custom_effect_tooltip = A10M_inspectorate_tt
+   A10M_update = yes
+  }
+  x = 38
+  y = 8
+ }
+ focus = {
+  id = A10M_junta
+  icon = GFX_goal_generic_military_sphere
+  cost = 5
+  prerequisite = {
+   focus = A10M_quartermasters
+  }
+  mutually_exclusive = {
+   focus = A10M_directorate
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10M_junta_effect = yes
+  }
+  x = 36
+  y = 9
+ }
+ focus = {
+  id = A10M_directorate
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  prerequisite = {
+   focus = A10M_quartermasters
+  }
+  mutually_exclusive = {
+   focus = A10M_junta
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   A10M_directorate_effect = yes
+  }
+  x = 40
+  y = 9
+ }
+ focus = {
+  id = A10M_revolutionary_command
+  icon = GFX_goal_generic_major_war
+  cost = 5
+  prerequisite = {
+   focus = A10M_junta
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   army_experience = 20
+   add_to_variable = {
+    var = A10M_repression
+    value = 10
+   }
+   add_war_support = 0.04
+   A10M_update = yes
+  }
+  x = 36
+  y = 10
+ }
+ focus = {
+  id = A10M_commissars
+  icon = GFX_goal_generic_propaganda
+  cost = 5
+  prerequisite = {
+   focus = A10M_revolutionary_command
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_political_commissars
+   add_to_variable = {
+    var = A10M_repression
+    value = 5
+   }
+   A10M_update = yes
+  }
+  x = 36
+  y = 11
+ }
+ focus = {
+  id = A10M_islands_barracks
+  icon = GFX_goal_generic_small_arms
+  cost = 5
+  prerequisite = {
+   focus = A10M_commissars
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_barracks_state
+   add_manpower = 2500
+   add_to_variable = {
+    var = A10M_strain
+    value = 8
+   }
+   add_to_variable = {
+    var = A10M_opposition
+    value = 5
+   }
+   A10M_update = yes
+  }
+  x = 36
+  y = 12
+ }
+ focus = {
+  id = A10M_red_seal
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10M_islands_barracks
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_political_power = 50
+   country_event = {
+    id = A10M.5
+    days = 1
+   }
+  }
+  x = 36
+  y = 13
+ }
+ focus = {
+  id = A10M_service_council
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  prerequisite = {
+   focus = A10M_directorate
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_command_power = 20
+   subtract_from_variable = {
+    var = A10M_opposition
+    value = 5
+   }
+   A10M_update = yes
+  }
+  x = 40
+  y = 10
+ }
+ focus = {
+  id = A10M_audited_budget
+  icon = GFX_goal_generic_construction
+  cost = 5
+  prerequisite = {
+   focus = A10M_service_council
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_published_budget
+   subtract_from_variable = {
+    var = A10M_strain
+    value = 8
+   }
+   custom_effect_tooltip = A10M_budget_tt
+   A10M_update = yes
+  }
+  x = 40
+  y = 11
+ }
+ focus = {
+  id = A10M_professional_army
+  icon = GFX_goal_generic_special_forces
+  cost = 5
+  prerequisite = {
+   focus = A10M_audited_budget
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_professional_service
+   subtract_from_variable = {
+    var = A10M_repression
+    value = 5
+   }
+   custom_effect_tooltip = A10M_professional_tt
+   A10M_update = yes
+  }
+  x = 40
+  y = 12
+ }
+ focus = {
+  id = A10M_fixed_term
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  prerequisite = {
+   focus = A10M_professional_army
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   subtract_from_variable = {
+    var = A10M_repression
+    value = 10
+   }
+   subtract_from_variable = {
+    var = A10M_opposition
+    value = 10
+   }
+   add_stability = 0.04
+   A10M_update = yes
+   country_event = {
+    id = A10M.5
+    days = 1
+   }
+  }
+  x = 40
+  y = 13
+ }
+ focus = {
+  id = A10M_coastal_observers
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = A10M_red_seal
+   focus = A10M_fixed_term
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_coastal_watch
+   navy_experience = 15
+  }
+  x = 38
+  y = 14
+ }
+ focus = {
+  id = A10M_defence_plans
+  icon = GFX_goal_generic_defence
+  cost = 5
+  prerequisite = {
+   focus = A10M_coastal_observers
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   army_experience = 20
+   add_command_power = 15
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 500
+    producer = A10
+   }
+  }
+  x = 38
+  y = 15
+ }
+ focus = {
+  id = A10M_veteran_settlement
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10M_defence_plans
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10M_settlement_effect = yes
+  }
+  x = 36
+  y = 16
+ }
+ focus = {
+  id = A10M_restore_markets
+  icon = GFX_goal_generic_construction
+  cost = 5
+  prerequisite = {
+   focus = A10M_defence_plans
+  }
+  available = {
+   has_country_flag = A10M_active
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   A10M_recovery_effect = yes
+  }
+  x = 40
+  y = 16
+ }
+ focus = {
+  id = A10M_iron_archipelago
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = A10M_veteran_settlement
+  }
+  prerequisite = {
+   focus = A10M_restore_markets
+  }
+  available = {
+   has_country_flag = A10M_active
+   A10M_crisis_contained = yes
+  }
+  ai_will_do = {
+   factor = 2
+  }
+  completion_reward = {
+   add_ideas = A10M_iron_state
+   add_stability = 0.04
+   add_political_power = 75
+   set_country_flag = A10M_consolidated
+  }
+  x = 38
+  y = 17
  }
 }

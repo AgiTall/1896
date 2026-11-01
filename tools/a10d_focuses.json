@@ -1,0 +1,578 @@
+[
+  {
+    "id": "A10D_island_census",
+    "name_ru": "Перепись островных хозяйств",
+    "name_en": "The Island Household Census",
+    "desc_ru": "Сборщики пошлин знают число тюков, но не число голодных семей. Перепись лодок, колодцев и посевов покажет, какие провинции действительно способны кормить соседей.",
+    "desc_en": "Customs collectors can count bales, but not hungry households. A census of boats, wells and cultivated land will show which provinces can actually feed their neighbours.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 22,
+    "y": 4,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_confederation",
+        "A10W_oath",
+        "A10M_coup"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_political_power = 35 add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes country_event = { id = A10D_development.3 days = 3 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_municipal_roads",
+    "name_ru": "Муниципальные дороги",
+    "name_en": "Municipal Roads",
+    "desc_ru": "Дорога от поля до пристани важнее обещаний о большой железной дороге. Общины получат инструменты и оплату за мощёные участки, мосты и дренажные канавы.",
+    "desc_en": "The road from a field to its landing stage matters more than promises of a grand railway. Communities will receive tools and wages for paving, bridges and drainage ditches.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 20,
+    "y": 6,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_island_census"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_roads = yes add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_mail_ferries",
+    "name_ru": "Почтовые паромы",
+    "name_en": "The Mail Ferries",
+    "desc_ru": "Между островами ходят парусники с несовместимыми расписаниями. Договор с капитанами соединит почтовую службу, перевозку врачей и доставку зерна в одну сеть.",
+    "desc_en": "Sailing vessels connect the islands on incompatible timetables. Agreements with their captains will unite mail, visiting doctors and grain deliveries in one service.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 24,
+    "y": 6,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_island_census"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_equipment_to_stockpile = { type = convoy_1 amount = 8 producer = A10 } add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_abaca_cooperatives",
+    "name_ru": "Кооперативы абаки",
+    "name_en": "Abaca Cooperatives",
+    "desc_ru": "Корабли всего мира нуждаются в манильском пеньковом канате. Совместные склады и единый вес тюка позволят мелким производителям договариваться с купцами без разорительных авансов.",
+    "desc_en": "The world's ships need Manila hemp rope. Shared warehouses and a standard bale weight will let small growers bargain with merchants without ruinous advances.",
+    "icon": "GFX_goal_generic_trade",
+    "x": 19,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_municipal_roads"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_abaca_exports add_political_power = 35",
+    "ai": 2
+  },
+  {
+    "id": "A10D_sugar_inspectors",
+    "name_ru": "Весы сахарных пристаней",
+    "name_en": "Scales on the Sugar Quays",
+    "desc_ru": "Провинциальные инспекторы проверят вес и качество сахара, а договоры сохранят участки под рис. Экспорт не должен оставлять семьи без хлеба в сезон штормов.",
+    "desc_en": "Provincial inspectors will verify sugar weights and grades, while contracts preserve land for rice. Export earnings must not leave families hungry during the storm season.",
+    "icon": "GFX_goal_generic_trade",
+    "x": 22,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_municipal_roads"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_sugar_standards add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_timber_and_slipways",
+    "name_ru": "Лесопилки у проливов",
+    "name_en": "Sawmills on the Straits",
+    "desc_ru": "Сушильные навесы, пилорамы и учёт рубок обеспечат досками лодочников и строителей. Заказы пойдут в Себу, если остров остаётся в нашем круге, иначе — в доступные союзные мастерские.",
+    "desc_en": "Seasoning sheds, sawmills and managed cutting will supply boatbuilders and carpenters. Cebu will receive the contracts if it remains within our association; otherwise accessible member workshops will take them.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 25,
+    "y": 8,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_mail_ferries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_cebu_workshops = yes add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_provincial_workshops",
+    "name_ru": "Провинциальные мастерские",
+    "name_en": "Provincial Workshops",
+    "desc_ru": "Провинции не обязаны отдавать свои станки столице. Общие чертежи и закупка приводных ремней соединят небольшие мастерские в сеть взаимных заказов.",
+    "desc_en": "The provinces need not surrender their lathes to the capital. Shared drawings and purchases of drive belts will link small workshops through mutual orders.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 19,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_abaca_cooperatives"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_visayan_factory = yes remove_ideas = A10D_workshop_islands add_ideas = A10D_workshop_network set_technology = { early_machine_tools = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_rice_granaries",
+    "name_ru": "Рисовые амбары общин",
+    "name_en": "Communal Rice Granaries",
+    "desc_ru": "Каждая община оставит часть урожая в сухом общественном амбаре. Запас будут учитывать избранные хранители, чтобы тайфун не превращал нехватку пароходов в голод.",
+    "desc_en": "Every community will reserve part of its harvest in a dry public granary. Elected custodians will keep the accounts so that a typhoon cannot turn a steamer shortage into famine.",
+    "icon": "GFX_goal_generic_production",
+    "x": 22,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_sugar_inspectors"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_granary_network add_to_variable = { A10D_supply = 15 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_district_clinics",
+    "name_ru": "Уездные лечебницы",
+    "name_en": "District Clinics",
+    "desc_ru": "Кипячёная вода, перевязочный материал и акушерка спасают больше жизней, чем пышные столичные больницы. Лечебницы станут одновременно местом обучения санитаров для островных гарнизонов.",
+    "desc_en": "Boiled water, clean dressings and a trained midwife save more lives than magnificent hospitals in the capital. District clinics will also train orderlies for the island garrisons.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 25,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_timber_and_slipways"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_district_medicine set_technology = { tech_support = 1 } add_equipment_to_stockpile = { type = support_equipment_1 amount = 100 producer = A10 } country_event = { id = A10D_development.4 days = 2 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_normal_schools",
+    "name_ru": "Учительские семинарии",
+    "name_en": "Teacher Training Colleges",
+    "desc_ru": "Учитель должен уметь объяснить счёт, устройство насоса и содержание государственного письма на языке своей общины. Семинарии подготовят таких наставников для прибрежных городков и горных селений.",
+    "desc_en": "A teacher must explain arithmetic, a pump and an official letter in the language of the community. New colleges will prepare such teachers for coastal towns and upland villages.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 19,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_provincial_workshops"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_teacher_colleges add_political_power = 30",
+    "ai": 2
+  },
+  {
+    "id": "A10D_cable_cooperatives",
+    "name_ru": "Кабельные артели",
+    "name_en": "Cable Cooperatives",
+    "desc_ru": "Местный телеграф не заменит океанских кабелей Палаты, зато позволит сообщать о штормах и ценах без недельного ожидания. Рыбацкие артели дадут береговые команды, мастерские — изоляторы и провод.",
+    "desc_en": "A local telegraph cannot replace the Chamber's ocean cables, but it can carry storm warnings and market prices without a week's delay. Fishing cooperatives will provide shore crews, and workshops the wire and insulators.",
+    "icon": "GFX_goal_generic_intelligence_exchange",
+    "x": 22,
+    "y": 12,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_rice_granaries"
+      ],
+      [
+        "A10D_mail_ferries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_island_telegraph add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_sanitary_commission",
+    "name_ru": "Санитарная комиссия островов",
+    "name_en": "The Islands Sanitary Commission",
+    "desc_ru": "Карантин должен останавливать лихорадку, а не торговлю. Врачи согласуют правила для портов, устроят чистые водозаборы и научат паромные команды распознавать первые признаки болезни.",
+    "desc_en": "Quarantine should stop fever rather than commerce. Doctors will agree on port regulations, establish clean water intakes and teach ferry crews to recognise the first signs of disease.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 25,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_district_clinics"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "swap_ideas = { remove_idea = A10D_district_medicine add_idea = A10D_public_health } add_stability = 0.03 add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_island_polytechnic",
+    "name_ru": "Островной политехникум",
+    "name_en": "The Island Polytechnic",
+    "desc_ru": "Машинисты, землемеры и химики нуждаются в собственном училище. Политехникум объединит преподавателей из провинций и беженцев со старого материка вокруг практических задач островной жизни.",
+    "desc_en": "Engine drivers, surveyors and chemists need a college of their own. The polytechnic will bring provincial teachers and refugees from the old continents together around the practical problems of island life.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 20,
+    "y": 14,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_normal_schools"
+      ],
+      [
+        "A10D_cable_cooperatives"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_research_slot = 1 add_ideas = A10D_polytechnic",
+    "ai": 2
+  },
+  {
+    "id": "A10D_national_market",
+    "name_ru": "Рынок тысячи пристаней",
+    "name_en": "The Market of a Thousand Quays",
+    "desc_ru": "Расписания паромов, проверенные весы, ремесленные школы и здоровые портовые города наконец складываются в одно хозяйство. Каждый остров сохранит своё лицо, а его товары найдут дорогу к соседям.",
+    "desc_en": "Ferry timetables, honest scales, trade schools and healthy ports are finally becoming one economy. Each island will keep its character while its goods find a reliable passage to its neighbours.",
+    "icon": "GFX_goal_generic_trade",
+    "x": 22,
+    "y": 16,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_island_polytechnic"
+      ],
+      [
+        "A10D_sanitary_commission"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_market_factory = yes add_ideas = A10D_common_market add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes country_event = { id = A10D_development.6 days = 2 }",
+    "ai": 2
+  },
+  {
+    "id": "A10_coastal_arsenals",
+    "name_ru": "Береговые арсеналы",
+    "name_en": "Coastal Arsenals",
+    "desc_ru": "Защита островов начинается с сухого склада, исправного затвора и собственного оружейника. Береговые мастерские получат станки и запас винтовок для будущих гарнизонов.",
+    "desc_en": "Island defence begins with a dry store, a working bolt and a gunsmith of our own. Coastal workshops will receive machine tools and a reserve of rifles for future garrisons.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 30,
+    "y": 4,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10_confederation",
+        "A10W_oath",
+        "A10M_coup"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_arsenal = yes add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1500 producer = A10 }",
+    "ai": 4
+  },
+  {
+    "id": "A10D_rifle_inspections",
+    "name_ru": "Осмотр полковых винтовок",
+    "name_en": "The Regimental Rifle Inspection",
+    "desc_ru": "На соседних островах одинаковое слово «патрон» означает разный калибр. Оружейники перепишут системы, отделят опасные стволы и вернут в строй исправные винтовки.",
+    "desc_en": "On neighbouring islands the same word for cartridge can mean different calibres. Gunsmiths will catalogue each system, condemn unsafe barrels and return serviceable rifles to the ranks.",
+    "icon": "GFX_goal_generic_production",
+    "x": 28,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_coastal_arsenals"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "army_experience = 10 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 } add_tech_bonus = { name = A10D_rifle_studies bonus = 0.5 uses = 1 category = infantry_weapons }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_coastal_boatyards",
+    "name_ru": "Лодочные верфи",
+    "name_en": "Coastal Boatyards",
+    "desc_ru": "Малой стране нужны ремонтные стапели раньше океанских броненосцев. Лодочники и котельщики начнут строить простые грузовые суда и обслуживать прибрежные пароходы.",
+    "desc_en": "A small country needs repair slips before ocean-going battleships. Boatbuilders and boiler makers will begin with simple cargo vessels and the maintenance of coastal steamers.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 32,
+    "y": 9,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10_coastal_arsenals"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_boatyard = yes add_equipment_to_stockpile = { type = convoy_1 amount = 10 producer = A10 } add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_common_calibres",
+    "name_ru": "Общий калибр снабжения",
+    "name_en": "One Calibre for the Supply Columns",
+    "desc_ru": "Не требуется немедленно перевооружать каждого солдата. Достаточно разделить склады по системам, ввести одинаковые ящики и перестать посылать части патроны, которыми она не может стрелять.",
+    "desc_en": "We need not rearm every soldier at once. Separate stores by rifle system, standardise the ammunition boxes and stop sending units cartridges they cannot fire.",
+    "icon": "GFX_goal_generic_production",
+    "x": 27,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_rifle_inspections"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "remove_ideas = A10D_separate_quartermasters add_ideas = A10D_standard_stores add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 } add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_chart_the_straits",
+    "name_ru": "Промеры проливов",
+    "name_en": "Sound the Straits",
+    "desc_ru": "Рыбаки знают рифы, которые отсутствуют на адмиральских картах. Гидрографы запишут их знания, поставят сигнальные огни и соберут службу лоцманов для тёмных и штормовых проходов.",
+    "desc_en": "Fishermen know reefs missing from the admirals' charts. Hydrographers will record that knowledge, establish signal lights and organise pilots for passages in darkness and storms.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 32,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_coastal_boatyards"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "navy_experience = 15 add_ideas = A10D_pilot_stations add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_field_batteries",
+    "name_ru": "Полевые батареи",
+    "name_en": "Field Batteries",
+    "desc_ru": "Пехоте нужны лёгкие полевые пушки и несколько старых гаубиц, которые можно разобрать для вьючной перевозки. Расчёты обучатся выбирать позиции в джунглях и экономить привозные снаряды.",
+    "desc_en": "Infantry needs light field guns and a few old howitzers that can be broken down for pack transport. Their crews will learn to choose jungle positions and conserve imported shells.",
+    "icon": "GFX_goal_generic_army_artillery",
+    "x": 29,
+    "y": 8,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_common_calibres"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "set_technology = { early_artillery = 1 } add_equipment_to_stockpile = { type = field_gun_equipment_0 amount = 48 producer = A10 } add_equipment_to_stockpile = { type = howitzer_equipment_0 amount = 12 producer = A10 } army_experience = 10",
+    "ai": 2
+  },
+  {
+    "id": "A10D_harbour_defences",
+    "name_ru": "Батареи у гаваней",
+    "name_en": "Harbour Batteries",
+    "desc_ru": "Старое морское орудие на береговом станке всё ещё опасно для десантной баржи. Укрытые склады и наблюдательные посты помогут защищать гавани без разорительного состязания с японскими броненосцами.",
+    "desc_en": "An old naval gun on a shore mounting can still threaten a landing barge. Sheltered magazines and observation posts will help defend the harbours without an unaffordable race against Japanese battleships.",
+    "icon": "GFX_goal_generic_fortify_city",
+    "x": 34,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_chart_the_straits"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "OR = { 1084 = { A10D_eligible_state_trigger = yes } 628 = { A10D_eligible_state_trigger = yes } }",
+    "reward": "A10D_fortify_harbours = yes add_ideas = A10D_coastal_defence",
+    "ai": 2
+  },
+  {
+    "id": "A10D_sappers_and_pack_trains",
+    "name_ru": "Сапёры и вьючные колонны",
+    "name_en": "Sappers and Pack Trains",
+    "desc_ru": "Мулы, плоты и переносные мостки доставят боеприпасы туда, где не пройдёт повозка. Сапёры научатся готовить тропы до подхода колонн, а не после первых потерь от голода.",
+    "desc_en": "Mules, rafts and portable footbridges can carry ammunition where wagons fail. Sappers will prepare trails before the supply columns arrive, rather than after the first losses to hunger.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 27,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_field_batteries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "set_technology = { tech_support = 1 tech_engineers = 1 } add_equipment_to_stockpile = { type = support_equipment_1 amount = 150 producer = A10 } add_ideas = A10D_pack_columns",
+    "ai": 2
+  },
+  {
+    "id": "A10D_merchant_reserve",
+    "name_ru": "Резерв торговых судов",
+    "name_en": "The Merchant Shipping Reserve",
+    "desc_ru": "Судовладельцы заранее узнают условия найма, а армия — грузоподъёмность каждого судна. Резервные команды не позволят мобилизации сразу остановить рисовые перевозки.",
+    "desc_en": "Shipowners will know the charter terms in advance, and the army the capacity of every vessel. Reserve crews will keep mobilisation from bringing the rice trade to an immediate halt.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 32,
+    "y": 12,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_harbour_defences"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = A10 } add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes country_event = { id = A10D_development.5 days = 2 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_staff_college",
+    "name_ru": "Штабная школа островов",
+    "name_en": "The Islands Staff College",
+    "desc_ru": "Штаб должен рассчитывать прилив так же уверенно, как численность батальона. В школе сведут полевых офицеров, лоцманов и интендантов за одним картографическим столом.",
+    "desc_en": "A staff must calculate the tide as confidently as a battalion's strength. The college will put field officers, pilots and quartermasters around the same map table.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 28,
+    "y": 12,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_sappers_and_pack_trains"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_staff_school army_experience = 15 add_command_power = 20",
+    "ai": 2
+  },
+  {
+    "id": "A10D_gunboat_school",
+    "name_ru": "Школа канонерских команд",
+    "name_en": "The Gunboat Crews School",
+    "desc_ru": "Будущим командирам предстоит служить на канонерках, миноносцах и вооружённых пароходах. Они начнут с котельного дела, стрельбы по щитам и сопровождения тихоходных транспортов.",
+    "desc_en": "Future commanders will serve in gunboats, torpedo craft and armed steamers. They will begin with boiler practice, gunnery targets and the escort of slow transports.",
+    "icon": "GFX_goal_generic_navy_cruiser",
+    "x": 30,
+    "y": 14,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_merchant_reserve"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "if = { limit = { has_dlc = \"Man the Guns\" } set_technology = { torpedo_boat_ship_hull_light = 1 gunboat_ship_hull_light = 1 } } else = { set_technology = { early_destroyer = 1 } } navy_experience = 20 add_tech_bonus = { name = A10D_light_vessels bonus = 0.5 uses = 1 category = naval_equipment }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_ammunition_toolrooms",
+    "name_ru": "Инструментальные цеха арсеналов",
+    "name_en": "Arsenal Toolrooms",
+    "desc_ru": "Новые цеха будут делать гильзы, пружины и запасные части по общим допускам. Заказ мал, но его можно выполнять круглый год, не ожидая очередного застрахованного каравана.",
+    "desc_en": "New toolrooms will make cartridge cases, springs and spare parts to shared tolerances. The order is modest, but it can be filled all year without waiting for another insured convoy.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 27,
+    "y": 14,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_staff_college"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_toolroom = yes add_ideas = A10D_ammunition_contracts add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 800 producer = A10 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_patrol_flotillas",
+    "name_ru": "Дозорные флотилии",
+    "name_en": "Patrol Flotillas",
+    "desc_ru": "Небольшие дозоры прикроют подходы к паромным линиям и передадут предупреждение гарнизонам. Их задача — сохранить перевозки и уйти от превосходящих сил, пока береговые батареи готовятся к бою.",
+    "desc_en": "Small patrols will cover the ferry approaches and warn the garrisons. Their task is to preserve shipping and withdraw from superior forces while the harbour batteries prepare for action.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 33,
+    "y": 14,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_gunboat_school"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_second_boatyard = yes add_ideas = A10D_escort_service navy_experience = 10",
+    "ai": 2
+  },
+  {
+    "id": "A10_landing_plans",
+    "name_ru": "Планы островных высадок",
+    "name_en": "Plans for Island Landings",
+    "desc_ru": "Высадка начинается с пресной воды, приливной таблицы и лодки для разгрузки, а не с приказа наступать. Армия и флот отработают ограниченные операции, оставив решение о войне гражданской или военной власти.",
+    "desc_en": "A landing begins with fresh water, a tide table and an unloading boat, rather than an order to advance. The army and fleet will rehearse limited operations, leaving the decision for war to the country's government.",
+    "icon": "GFX_goal_generic_amphibious_assault",
+    "x": 30,
+    "y": 16,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_ammunition_toolrooms"
+      ],
+      [
+        "A10D_patrol_flotillas"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "if = { limit = { has_dlc = \"Man the Guns\" } set_technology = { mtg_transport = 1 } } else = { set_technology = { transport = 1 } } add_ideas = A10D_landing_staff add_command_power = 25 add_war_support = 0.08 navy_experience = 10",
+    "ai": 2
+  }
+]

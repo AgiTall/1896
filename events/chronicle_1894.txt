@@ -1,0 +1,4734 @@
+add_namespace = ch94
+country_event = {
+ id = ch94.1
+ title = ch94.1.t
+ desc = ch94.1.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.1.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_1_a
+  add_fuel = -4000
+  navy_experience = 15
+  add_equipment_to_stockpile = {
+   type = convoy_1
+   amount = -5
+  }
+  add_timed_idea = {
+   idea = CH94_escorts
+   days = 90
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.101
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.1.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_1_b
+  add_equipment_to_stockpile = {
+   type = convoy_1
+   amount = -10
+  }
+  navy_experience = 25
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.101
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.101
+ title = ch94.1.t
+ desc = {
+  text = ch94.1.inactive
+  trigger = {
+   has_global_flag = ch94_1_inactive
+  }
+ }
+ desc = {
+  text = ch94.1.news_a
+  trigger = {
+   has_global_flag = ch94_1_a
+   NOT = {
+    has_global_flag = ch94_1_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.1.news_b
+  trigger = {
+   has_global_flag = ch94_1_b
+   NOT = {
+    has_global_flag = ch94_1_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.201
+ title = ch94.1.t
+ desc = ch94.1.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_1_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.2
+ title = ch94.2.t
+ desc = ch94.2.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.2.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_2_a
+  add_stability = 0.04
+  add_political_power = -25
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.102
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.2.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_2_b
+  add_stability = -0.08
+  navy_experience = -15
+  add_political_power = 35
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.102
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.102
+ title = ch94.2.t
+ desc = {
+  text = ch94.2.inactive
+  trigger = {
+   has_global_flag = ch94_2_inactive
+  }
+ }
+ desc = {
+  text = ch94.2.news_a
+  trigger = {
+   has_global_flag = ch94_2_a
+   NOT = {
+    has_global_flag = ch94_2_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.2.news_b
+  trigger = {
+   has_global_flag = ch94_2_b
+   NOT = {
+    has_global_flag = ch94_2_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.202
+ title = ch94.2.t
+ desc = ch94.2.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_2_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.3
+ title = ch94.3.t
+ desc = ch94.3.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.3.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_3_a
+  add_timed_idea = {
+   idea = CH94_northern_faith
+   days = 365
+  }
+  add_war_support = 0.06
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.103
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.3.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_3_b
+  add_manpower = 1500
+  add_political_power = 25
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.103
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.103
+ title = ch94.3.t
+ desc = {
+  text = ch94.3.inactive
+  trigger = {
+   has_global_flag = ch94_3_inactive
+  }
+ }
+ desc = {
+  text = ch94.3.news_a
+  trigger = {
+   has_global_flag = ch94_3_a
+   NOT = {
+    has_global_flag = ch94_3_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.3.news_b
+  trigger = {
+   has_global_flag = ch94_3_b
+   NOT = {
+    has_global_flag = ch94_3_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.203
+ title = ch94.3.t
+ desc = ch94.3.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_3_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.4
+ title = ch94.4.t
+ desc = ch94.4.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.4.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_4_a
+  set_country_flag = CH94_back_wilhelmina
+  add_political_power = -40
+  add_timed_idea = {
+   idea = CH94_royal_campaign
+   days = 180
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.104
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.4.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_4_b
+  set_country_flag = CH94_keep_regency
+  add_stability = 0.04
+  add_political_power = 20
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.104
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.104
+ title = ch94.4.t
+ desc = {
+  text = ch94.4.inactive
+  trigger = {
+   has_global_flag = ch94_4_inactive
+  }
+ }
+ desc = {
+  text = ch94.4.news_a
+  trigger = {
+   has_global_flag = ch94_4_a
+   NOT = {
+    has_global_flag = ch94_4_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.4.news_b
+  trigger = {
+   has_global_flag = ch94_4_b
+   NOT = {
+    has_global_flag = ch94_4_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.204
+ title = ch94.4.t
+ desc = ch94.4.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_4_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.5
+ title = ch94.5.t
+ desc = ch94.5.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.5.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_5_a
+  add_stability = -0.06
+  add_war_support = 0.04
+  A10 = {
+   add_manpower = 1000
+   add_war_support = 0.08
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.105
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.5.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_5_b
+  add_stability = 0.04
+  add_political_power = -35
+  A10 = {
+   add_war_support = -0.05
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.105
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.105
+ title = ch94.5.t
+ desc = {
+  text = ch94.5.inactive
+  trigger = {
+   has_global_flag = ch94_5_inactive
+  }
+ }
+ desc = {
+  text = ch94.5.news_a
+  trigger = {
+   has_global_flag = ch94_5_a
+   NOT = {
+    has_global_flag = ch94_5_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.5.news_b
+  trigger = {
+   has_global_flag = ch94_5_b
+   NOT = {
+    has_global_flag = ch94_5_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.205
+ title = ch94.5.t
+ desc = ch94.5.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_5_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.6
+ title = ch94.6.t
+ desc = ch94.6.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.6.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_6_a
+  add_political_power = -65
+  add_stability = 0.05
+  add_timed_idea = {
+   idea = CH94_credit
+   days = 120
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.106
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.6.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_6_b
+  add_stability = -0.08
+  add_timed_idea = {
+   idea = CH94_naval_shortage
+   days = 180
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.106
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.106
+ title = ch94.6.t
+ desc = {
+  text = ch94.6.inactive
+  trigger = {
+   has_global_flag = ch94_6_inactive
+  }
+ }
+ desc = {
+  text = ch94.6.news_a
+  trigger = {
+   has_global_flag = ch94_6_a
+   NOT = {
+    has_global_flag = ch94_6_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.6.news_b
+  trigger = {
+   has_global_flag = ch94_6_b
+   NOT = {
+    has_global_flag = ch94_6_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.206
+ title = ch94.6.t
+ desc = ch94.6.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_6_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.7
+ title = ch94.7.t
+ desc = ch94.7.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.7.a
+  ai_chance = {
+   factor = 100
+   modifier = {
+    factor = 0
+    NOT = {
+     date > 1894.3.7
+     BLV_is_britain = yes
+     country_exists = A01
+     country_exists = A03
+     NOT = {
+      has_war_with = A01
+     }
+     A01 = {
+      has_war_with = A03
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_7_processed
+    }
+   }
+   set_global_flag = BLV_ch94_7_processed
+   set_global_flag = ch94_7_a
+   if = {
+    limit = {
+     date > 1894.3.7
+     BLV_is_britain = yes
+     country_exists = A01
+     country_exists = A03
+     NOT = {
+      has_war_with = A01
+     }
+     A01 = {
+      has_war_with = A03
+     }
+    }
+    set_country_flag = BLV_borneo_corridors
+    A01 = {
+     remove_ideas = CH93_blockade
+     add_timed_idea = {
+      idea = CH94_corridors
+      days = 90
+     }
+    }
+    add_political_power = -25
+   }
+   else = {
+    set_global_flag = ch94_7_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.107
+     }
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.7.b
+  ai_chance = {
+   factor = 0
+   modifier = {
+    add = 100
+    NOT = {
+     date > 1894.3.7
+     BLV_is_britain = yes
+     country_exists = A01
+     country_exists = A03
+     NOT = {
+      has_war_with = A01
+     }
+     A01 = {
+      has_war_with = A03
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_7_processed
+    }
+   }
+   set_global_flag = BLV_ch94_7_processed
+   set_global_flag = ch94_7_b
+   if = {
+    limit = {
+     date > 1894.3.7
+     BLV_is_britain = yes
+     country_exists = A01
+     country_exists = A03
+     NOT = {
+      has_war_with = A01
+     }
+     A01 = {
+      has_war_with = A03
+     }
+    }
+    set_country_flag = BLV_borneo_pressure
+    add_political_power = 25
+    A01 = {
+     add_stability = -0.02
+    }
+   }
+   else = {
+    set_global_flag = ch94_7_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.107
+     }
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.107
+ title = ch94.7.t
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+ desc = {
+  text = ch94.7.inactive
+  trigger = {
+   has_global_flag = ch94_7_inactive
+  }
+ }
+ desc = {
+  text = ch94.7.news_a
+  trigger = {
+   has_global_flag = ch94_7_a
+   NOT = {
+    has_global_flag = ch94_7_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.7.news_b
+  trigger = {
+   has_global_flag = ch94_7_b
+   NOT = {
+    has_global_flag = ch94_7_inactive
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.207
+ title = ch94.7.t
+ desc = ch94.7.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_7_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.8
+ title = ch94.8.t
+ desc = ch94.8.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.8.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_8_a
+  add_timed_idea = {
+   idea = CH94_anathema
+   days = 365
+  }
+  add_war_support = 0.04
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.108
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.8.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_8_b
+  remove_ideas = CH94_anathema
+  add_stability = 0.04
+  add_political_power = -25
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.108
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.108
+ title = ch94.8.t
+ desc = {
+  text = ch94.8.inactive
+  trigger = {
+   has_global_flag = ch94_8_inactive
+  }
+ }
+ desc = {
+  text = ch94.8.news_a
+  trigger = {
+   has_global_flag = ch94_8_a
+   NOT = {
+    has_global_flag = ch94_8_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.8.news_b
+  trigger = {
+   has_global_flag = ch94_8_b
+   NOT = {
+    has_global_flag = ch94_8_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.208
+ title = ch94.8.t
+ desc = ch94.8.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_8_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.9
+ title = ch94.9.t
+ desc = ch94.9.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.9.a
+  trigger = {
+   date > 1894.3.24
+   country_exists = A02
+   NOT = {
+    has_war_with = A02
+   }
+   A02 = {
+    has_capitulated = no
+    has_country_flag = BLV_serum_contract
+    NOT = {
+     has_country_flag = BLV_ethical_research
+    }
+   }
+  }
+  ai_chance = {
+   factor = 100
+   modifier = {
+    factor = 0
+    NOT = {
+     date > 1894.3.24
+     country_exists = A02
+     NOT = {
+      has_war_with = A02
+     }
+     A02 = {
+      has_capitulated = no
+      has_country_flag = BLV_serum_contract
+      NOT = {
+       has_country_flag = BLV_ethical_research
+      }
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_9_processed
+    }
+   }
+   set_global_flag = BLV_ch94_9_processed
+   set_global_flag = ch94_9_a
+   if = {
+    limit = {
+     date > 1894.3.24
+     country_exists = A02
+     NOT = {
+      has_war_with = A02
+     }
+     A02 = {
+      has_capitulated = no
+      has_country_flag = BLV_serum_contract
+      NOT = {
+       has_country_flag = BLV_ethical_research
+      }
+     }
+    }
+    add_political_power = -50
+    A02 = {
+     add_to_variable = {
+      BLV_reserve = 5
+     }
+     add_stability = 0.02
+    }
+   }
+   else = {
+    set_global_flag = ch94_9_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.109
+     }
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.9.b
+  ai_chance = {
+   factor = 0
+   modifier = {
+    add = 100
+    NOT = {
+     date > 1894.3.24
+     country_exists = A02
+     NOT = {
+      has_war_with = A02
+     }
+     A02 = {
+      has_capitulated = no
+      has_country_flag = BLV_serum_contract
+      NOT = {
+       has_country_flag = BLV_ethical_research
+      }
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_9_processed
+    }
+   }
+   set_global_flag = BLV_ch94_9_processed
+   set_global_flag = ch94_9_b
+   if = {
+    limit = {
+     date > 1894.3.24
+     country_exists = A02
+     NOT = {
+      has_war_with = A02
+     }
+     A02 = {
+      has_capitulated = no
+      has_country_flag = BLV_serum_contract
+      NOT = {
+       has_country_flag = BLV_ethical_research
+      }
+     }
+    }
+    add_political_power = -15
+   }
+   else = {
+    set_global_flag = ch94_9_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.109
+     }
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.109
+ title = ch94.9.t
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+ desc = {
+  text = ch94.9.inactive
+  trigger = {
+   has_global_flag = ch94_9_inactive
+  }
+ }
+ desc = {
+  text = ch94.9.news_a
+  trigger = {
+   has_global_flag = ch94_9_a
+   NOT = {
+    has_global_flag = ch94_9_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.9.news_b
+  trigger = {
+   has_global_flag = ch94_9_b
+   NOT = {
+    has_global_flag = ch94_9_inactive
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.209
+ title = ch94.9.t
+ desc = ch94.9.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_9_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.10
+ title = ch94.10.t
+ desc = ch94.10.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.10.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_10_a
+  CH94_open_second_front = yes
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.110
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.10.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_10_b
+  set_country_flag = A10_borneo_opportunity_refused
+  add_stability = 0.04
+  add_manpower = 1000
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.110
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.110
+ title = ch94.10.t
+ desc = {
+  text = ch94.10.inactive
+  trigger = {
+   has_global_flag = ch94_10_inactive
+  }
+ }
+ desc = {
+  text = ch94.10.news_a
+  trigger = {
+   has_global_flag = ch94_10_a
+   NOT = {
+    has_global_flag = ch94_10_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.10.news_b
+  trigger = {
+   has_global_flag = ch94_10_b
+   NOT = {
+    has_global_flag = ch94_10_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.210
+ title = ch94.10.t
+ desc = ch94.10.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_10_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.11
+ title = ch94.11.t
+ desc = ch94.11.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.11.a
+  ai_chance = {
+   factor = 100
+   modifier = {
+    factor = 0
+    NOT = {
+     date > 1894.4.21
+     BLV_is_britain = yes
+     1021 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_11_processed
+    }
+   }
+   set_global_flag = BLV_ch94_11_processed
+   set_global_flag = ch94_11_a
+   if = {
+    limit = {
+     date > 1894.4.21
+     BLV_is_britain = yes
+     1021 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+    set_country_flag = BLV_singapore_accord
+    clr_country_flag = BLV_singapore_curfew
+    add_political_power = 35
+    add_stability = -0.02
+    add_timed_idea = {
+     idea = CH94_singapore_market
+     days = 180
+    }
+   }
+   else = {
+    set_global_flag = ch94_11_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.111
+     }
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.11.b
+  ai_chance = {
+   factor = 0
+   modifier = {
+    add = 100
+    NOT = {
+     date > 1894.4.21
+     BLV_is_britain = yes
+     1021 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_11_processed
+    }
+   }
+   set_global_flag = BLV_ch94_11_processed
+   set_global_flag = ch94_11_b
+   if = {
+    limit = {
+     date > 1894.4.21
+     BLV_is_britain = yes
+     1021 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+    set_country_flag = BLV_singapore_curfew
+    clr_country_flag = BLV_singapore_accord
+    add_stability = -0.06
+    add_manpower = -500
+    navy_experience = 10
+   }
+   else = {
+    set_global_flag = ch94_11_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.111
+     }
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.111
+ title = ch94.11.t
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+ desc = {
+  text = ch94.11.inactive
+  trigger = {
+   has_global_flag = ch94_11_inactive
+  }
+ }
+ desc = {
+  text = ch94.11.news_a
+  trigger = {
+   has_global_flag = ch94_11_a
+   NOT = {
+    has_global_flag = ch94_11_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.11.news_b
+  trigger = {
+   has_global_flag = ch94_11_b
+   NOT = {
+    has_global_flag = ch94_11_inactive
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.211
+ title = ch94.11.t
+ desc = ch94.11.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_11_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.12
+ title = ch94.12.t
+ desc = ch94.12.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.12.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_12_a
+  CH94_hawaiian_republic = yes
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.112
+    }
+   }
+  }
+  trigger = {
+   NOT = {
+    has_country_flag = MNR_command
+   }
+  }
+ }
+ option = {
+  name = ch94.12.b
+  ai_chance = {
+   factor = 0
+   modifier = {
+    add = 100
+    has_country_flag = MNR_command
+   }
+  }
+  set_global_flag = ch94_12_b
+  CH94_hawaiian_succession = yes
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.112
+    }
+   }
+  }
+  trigger = {
+   NOT = {
+    has_country_flag = MNR_civic
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.112
+ title = ch94.12.t
+ desc = {
+  text = ch94.12.inactive
+  trigger = {
+   has_global_flag = ch94_12_inactive
+  }
+ }
+ desc = {
+  text = ch94.12.news_a
+  trigger = {
+   has_global_flag = ch94_12_a
+   NOT = {
+    has_global_flag = ch94_12_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.12.news_b
+  trigger = {
+   has_global_flag = ch94_12_b
+   NOT = {
+    has_global_flag = ch94_12_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.212
+ title = ch94.12.t
+ desc = ch94.12.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_12_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.13
+ title = ch94.13.t
+ desc = ch94.13.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.13.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_13_a
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   army_experience = 20
+   add_manpower = -700
+   add_timed_idea = {
+    idea = CH94_assault
+    days = 45
+   }
+  }
+  else = {
+   set_global_flag = ch94_13_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.113
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.13.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_13_b
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   add_timed_idea = {
+    idea = CH94_siege
+    days = 90
+   }
+   A03 = {
+    add_fuel = -3000
+   }
+  }
+  else = {
+   set_global_flag = ch94_13_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.113
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.113
+ title = ch94.13.t
+ desc = {
+  text = ch94.13.inactive
+  trigger = {
+   has_global_flag = ch94_13_inactive
+  }
+ }
+ desc = {
+  text = ch94.13.news_a
+  trigger = {
+   has_global_flag = ch94_13_a
+   NOT = {
+    has_global_flag = ch94_13_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.13.news_b
+  trigger = {
+   has_global_flag = ch94_13_b
+   NOT = {
+    has_global_flag = ch94_13_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.213
+ title = ch94.13.t
+ desc = ch94.13.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_13_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.14
+ title = ch94.14.t
+ desc = ch94.14.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.14.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_14_a
+  if = {
+   limit = {
+    has_war_with = A10
+   }
+   add_timed_idea = {
+    idea = CH94_redeployment
+    days = 90
+   }
+   A01 = {
+    add_timed_idea = {
+     idea = CH94_respite
+     days = 90
+    }
+   }
+   A10 = {
+    add_war_support = -0.02
+   }
+  }
+  else = {
+   set_global_flag = ch94_14_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.114
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.14.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_14_b
+  if = {
+   limit = {
+    has_war_with = A10
+   }
+   add_timed_idea = {
+    idea = CH94_assault
+    days = 60
+   }
+   A10 = {
+    add_timed_idea = {
+     idea = CH94_respite
+     days = 60
+    }
+   }
+  }
+  else = {
+   set_global_flag = ch94_14_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.114
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.114
+ title = ch94.14.t
+ desc = {
+  text = ch94.14.inactive
+  trigger = {
+   has_global_flag = ch94_14_inactive
+  }
+ }
+ desc = {
+  text = ch94.14.news_a
+  trigger = {
+   has_global_flag = ch94_14_a
+   NOT = {
+    has_global_flag = ch94_14_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.14.news_b
+  trigger = {
+   has_global_flag = ch94_14_b
+   NOT = {
+    has_global_flag = ch94_14_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.214
+ title = ch94.14.t
+ desc = ch94.14.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_14_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.15
+ title = ch94.15.t
+ desc = ch94.15.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.15.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_15_a
+  add_equipment_to_stockpile = {
+   type = infantry_equipment_0
+   amount = -500
+  }
+  if = {
+   limit = {
+    country_exists = ATJ
+   }
+   ATJ = {
+    add_equipment_to_stockpile = {
+     type = infantry_equipment_0
+     amount = 500
+     producer = A01
+    }
+   }
+  }
+  add_manpower = 1000
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.115
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.15.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_15_b
+  add_manpower = -700
+  add_stability = -0.05
+  army_experience = 10
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.115
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.115
+ title = ch94.15.t
+ desc = {
+  text = ch94.15.inactive
+  trigger = {
+   has_global_flag = ch94_15_inactive
+  }
+ }
+ desc = {
+  text = ch94.15.news_a
+  trigger = {
+   has_global_flag = ch94_15_a
+   NOT = {
+    has_global_flag = ch94_15_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.15.news_b
+  trigger = {
+   has_global_flag = ch94_15_b
+   NOT = {
+    has_global_flag = ch94_15_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.215
+ title = ch94.15.t
+ desc = ch94.15.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_15_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.16
+ title = ch94.16.t
+ desc = ch94.16.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.16.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_16_a
+  add_timed_idea = {
+   idea = CH94_iron_legion
+   days = 365
+  }
+  navy_experience = 30
+  add_equipment_to_stockpile = {
+   type = convoy_1
+   amount = 15
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.116
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.16.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_16_b
+  PHW = {
+   add_timed_idea = {
+    idea = CH94_legion_raids
+    days = 180
+   }
+   add_stability = -0.04
+  }
+  navy_experience = 15
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.116
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.116
+ title = ch94.16.t
+ desc = {
+  text = ch94.16.inactive
+  trigger = {
+   has_global_flag = ch94_16_inactive
+  }
+ }
+ desc = {
+  text = ch94.16.news_a
+  trigger = {
+   has_global_flag = ch94_16_a
+   NOT = {
+    has_global_flag = ch94_16_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.16.news_b
+  trigger = {
+   has_global_flag = ch94_16_b
+   NOT = {
+    has_global_flag = ch94_16_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.216
+ title = ch94.16.t
+ desc = ch94.16.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_16_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.17
+ title = ch94.17.t
+ desc = ch94.17.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.17.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_17_a
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   CH94_kuching_dutch = yes
+  }
+  else = {
+   set_global_flag = ch94_17_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.117
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.17.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_17_b
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   if = {
+    limit = {
+     has_war_with = A03
+    }
+    add_manpower = -700
+    A03 = {
+     add_manpower = -400
+     army_experience = 10
+    }
+   }
+  }
+  else = {
+   set_global_flag = ch94_17_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.117
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.117
+ title = ch94.17.t
+ desc = {
+  text = ch94.17.inactive
+  trigger = {
+   has_global_flag = ch94_17_inactive
+  }
+ }
+ desc = {
+  text = ch94.17.news_a
+  trigger = {
+   has_global_flag = ch94_17_a
+   NOT = {
+    has_global_flag = ch94_17_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.17.news_b
+  trigger = {
+   has_global_flag = ch94_17_b
+   NOT = {
+    has_global_flag = ch94_17_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.217
+ title = ch94.17.t
+ desc = ch94.17.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_17_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.18
+ title = ch94.18.t
+ desc = ch94.18.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.18.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_18_a
+  add_war_support = 0.05
+  add_stability = -0.04
+  A03 = {
+   add_war_support = 0.04
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.118
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.18.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_18_b
+  CH94_haiti_cooperation = yes
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.118
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.118
+ title = ch94.18.t
+ desc = {
+  text = ch94.18.inactive
+  trigger = {
+   has_global_flag = ch94_18_inactive
+  }
+ }
+ desc = {
+  text = ch94.18.news_a
+  trigger = {
+   has_global_flag = ch94_18_a
+   NOT = {
+    has_global_flag = ch94_18_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.18.news_b
+  trigger = {
+   has_global_flag = ch94_18_b
+   NOT = {
+    has_global_flag = ch94_18_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.218
+ title = ch94.18.t
+ desc = ch94.18.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_18_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.19
+ title = ch94.19.t
+ desc = ch94.19.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.19.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_19_a
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   if = {
+    limit = {
+     has_war_with = A03
+    }
+    add_fuel = -6000
+    A03 = {
+     navy_experience = 20
+     add_timed_idea = {
+      idea = CH94_assault
+      days = 30
+     }
+    }
+   }
+  }
+  else = {
+   set_global_flag = ch94_19_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.119
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.19.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_19_b
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   if = {
+    limit = {
+     has_war_with = A03
+    }
+    navy_experience = 25
+    add_fuel = -4000
+    A03 = {
+     add_fuel = -8000
+     add_timed_idea = {
+      idea = CH94_naval_shortage
+      days = 90
+     }
+    }
+   }
+  }
+  else = {
+   set_global_flag = ch94_19_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.119
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.119
+ title = ch94.19.t
+ desc = {
+  text = ch94.19.inactive
+  trigger = {
+   has_global_flag = ch94_19_inactive
+  }
+ }
+ desc = {
+  text = ch94.19.news_a
+  trigger = {
+   has_global_flag = ch94_19_a
+   NOT = {
+    has_global_flag = ch94_19_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.19.news_b
+  trigger = {
+   has_global_flag = ch94_19_b
+   NOT = {
+    has_global_flag = ch94_19_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.219
+ title = ch94.19.t
+ desc = ch94.19.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_19_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.20
+ title = ch94.20.t
+ desc = ch94.20.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.20.a
+  trigger = {
+   OR = {
+    has_country_flag = BLV_calibrated
+    AND = {
+     date > 1894.7.19
+     BLV_is_britain = yes
+     OR = {
+      has_country_flag = BLV_calibrated
+      A02 = {
+       has_country_flag = SEN_laboratory_done
+       BLV_tesla_access = yes
+      }
+     }
+    }
+   }
+  }
+  ai_chance = {
+   factor = 100
+   modifier = {
+    factor = 0
+    NOT = {
+     date > 1894.7.19
+     BLV_is_britain = yes
+     OR = {
+      has_country_flag = BLV_calibrated
+      A02 = {
+       has_country_flag = SEN_laboratory_done
+       BLV_tesla_access = yes
+      }
+     }
+    }
+   }
+   modifier = {
+    add = 100
+    has_country_flag = BLV_calibrated
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_20_processed
+    }
+   }
+   set_global_flag = BLV_ch94_20_processed
+   set_global_flag = ch94_20_a
+   if = {
+    limit = {
+     date > 1894.7.19
+     BLV_is_britain = yes
+     OR = {
+      has_country_flag = BLV_calibrated
+      A02 = {
+       has_country_flag = SEN_laboratory_done
+       BLV_tesla_access = yes
+      }
+     }
+    }
+    BLV_apply_calibration = yes
+   }
+   else = {
+    set_global_flag = ch94_20_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.120
+     }
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.20.b
+  trigger = {
+   NOT = {
+    has_country_flag = BLV_calibrated
+   }
+  }
+  ai_chance = {
+   factor = 0
+   modifier = {
+    add = 100
+    NOT = {
+     date > 1894.7.19
+     BLV_is_britain = yes
+     OR = {
+      has_country_flag = BLV_calibrated
+      A02 = {
+       has_country_flag = SEN_laboratory_done
+       BLV_tesla_access = yes
+      }
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_20_processed
+    }
+   }
+   set_global_flag = BLV_ch94_20_processed
+   set_global_flag = ch94_20_b
+   if = {
+    limit = {
+     date > 1894.7.19
+     BLV_is_britain = yes
+     OR = {
+      has_country_flag = BLV_calibrated
+      A02 = {
+       has_country_flag = SEN_laboratory_done
+       BLV_tesla_access = yes
+      }
+     }
+    }
+    set_country_flag = CH94_tesla_accident
+    add_political_power = -50
+    add_stability = -0.03
+   }
+   else = {
+    set_global_flag = ch94_20_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.120
+     }
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.120
+ title = ch94.20.t
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+ desc = {
+  text = ch94.20.inactive
+  trigger = {
+   has_global_flag = ch94_20_inactive
+  }
+ }
+ desc = {
+  text = ch94.20.news_a
+  trigger = {
+   has_global_flag = ch94_20_a
+   NOT = {
+    has_global_flag = ch94_20_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.20.news_b
+  trigger = {
+   has_global_flag = ch94_20_b
+   NOT = {
+    has_global_flag = ch94_20_inactive
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.220
+ title = ch94.20.t
+ desc = ch94.20.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_20_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.21
+ title = ch94.21.t
+ desc = ch94.21.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.21.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_21_a
+  add_stability = 0.04
+  add_political_power = -20
+  add_equipment_to_stockpile = {
+   type = convoy_1
+   amount = 5
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.121
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.21.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_21_b
+  add_stability = -0.05
+  add_manpower = -500
+  army_experience = 10
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.121
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.121
+ title = ch94.21.t
+ desc = {
+  text = ch94.21.inactive
+  trigger = {
+   has_global_flag = ch94_21_inactive
+  }
+ }
+ desc = {
+  text = ch94.21.news_a
+  trigger = {
+   has_global_flag = ch94_21_a
+   NOT = {
+    has_global_flag = ch94_21_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.21.news_b
+  trigger = {
+   has_global_flag = ch94_21_b
+   NOT = {
+    has_global_flag = ch94_21_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.221
+ title = ch94.21.t
+ desc = ch94.21.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_21_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.22
+ title = ch94.22.t
+ desc = ch94.22.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.22.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_22_a
+  A02 = {
+   add_political_power = -30
+  }
+  add_manpower = 1000
+  add_stability = 0.05
+  add_timed_idea = {
+   idea = CH94_corridors
+   days = 90
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.122
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.22.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_22_b
+  add_stability = -0.08
+  add_manpower = -1000
+  add_political_power = 20
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.122
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.122
+ title = ch94.22.t
+ desc = {
+  text = ch94.22.inactive
+  trigger = {
+   has_global_flag = ch94_22_inactive
+  }
+ }
+ desc = {
+  text = ch94.22.news_a
+  trigger = {
+   has_global_flag = ch94_22_a
+   NOT = {
+    has_global_flag = ch94_22_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.22.news_b
+  trigger = {
+   has_global_flag = ch94_22_b
+   NOT = {
+    has_global_flag = ch94_22_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.222
+ title = ch94.22.t
+ desc = ch94.22.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_22_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.23
+ title = ch94.23.t
+ desc = ch94.23.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.23.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_23_a
+  add_political_power = -40
+  add_stability = 0.05
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.123
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.23.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_23_b
+  add_stability = -0.08
+  add_manpower = -500
+  add_war_support = 0.04
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.123
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.123
+ title = ch94.23.t
+ desc = {
+  text = ch94.23.inactive
+  trigger = {
+   has_global_flag = ch94_23_inactive
+  }
+ }
+ desc = {
+  text = ch94.23.news_a
+  trigger = {
+   has_global_flag = ch94_23_a
+   NOT = {
+    has_global_flag = ch94_23_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.23.news_b
+  trigger = {
+   has_global_flag = ch94_23_b
+   NOT = {
+    has_global_flag = ch94_23_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.223
+ title = ch94.23.t
+ desc = ch94.23.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_23_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.24
+ title = ch94.24.t
+ desc = ch94.24.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.24.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_24_a
+  if = {
+   limit = {
+    has_war_with = A10
+   }
+   if = {
+    limit = {
+     has_war_with = A10
+    }
+    A10 = {
+     add_timed_idea = {
+      idea = CH94_blockade
+      days = 120
+     }
+    }
+    add_fuel = -5000
+   }
+  }
+  else = {
+   set_global_flag = ch94_24_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.124
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.24.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_24_b
+  if = {
+   limit = {
+    has_war_with = A10
+   }
+   if = {
+    limit = {
+     has_war_with = A10
+    }
+    A10 = {
+     add_equipment_to_stockpile = {
+      type = convoy_1
+      amount = -8
+     }
+    }
+    add_fuel = -2000
+   }
+  }
+  else = {
+   set_global_flag = ch94_24_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.124
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.124
+ title = ch94.24.t
+ desc = {
+  text = ch94.24.inactive
+  trigger = {
+   has_global_flag = ch94_24_inactive
+  }
+ }
+ desc = {
+  text = ch94.24.news_a
+  trigger = {
+   has_global_flag = ch94_24_a
+   NOT = {
+    has_global_flag = ch94_24_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.24.news_b
+  trigger = {
+   has_global_flag = ch94_24_b
+   NOT = {
+    has_global_flag = ch94_24_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.224
+ title = ch94.24.t
+ desc = ch94.24.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_24_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.25
+ title = ch94.25.t
+ desc = ch94.25.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.25.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_25_a
+  if = {
+   limit = {
+    has_war_with = A03
+    334 = {
+     is_owned_by = A01
+    }
+   }
+   CH94_burn_oil = yes
+  }
+  else = {
+   set_global_flag = ch94_25_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.125
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.25.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_25_b
+  if = {
+   limit = {
+    has_war_with = A03
+    334 = {
+     is_owned_by = A01
+    }
+   }
+   CH94_capture_oil = yes
+  }
+  else = {
+   set_global_flag = ch94_25_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.125
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.125
+ title = ch94.25.t
+ desc = {
+  text = ch94.25.inactive
+  trigger = {
+   has_global_flag = ch94_25_inactive
+  }
+ }
+ desc = {
+  text = ch94.25.news_a
+  trigger = {
+   has_global_flag = ch94_25_a
+   NOT = {
+    has_global_flag = ch94_25_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.25.news_b
+  trigger = {
+   has_global_flag = ch94_25_b
+   NOT = {
+    has_global_flag = ch94_25_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.225
+ title = ch94.25.t
+ desc = ch94.25.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_25_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.26
+ title = ch94.26.t
+ desc = ch94.26.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.26.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_26_a
+  CH94_sulu_cooperation = yes
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.126
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.26.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_26_b
+  navy_experience = 15
+  add_political_power = 25
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.126
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.126
+ title = ch94.26.t
+ desc = {
+  text = ch94.26.inactive
+  trigger = {
+   has_global_flag = ch94_26_inactive
+  }
+ }
+ desc = {
+  text = ch94.26.news_a
+  trigger = {
+   has_global_flag = ch94_26_a
+   NOT = {
+    has_global_flag = ch94_26_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.26.news_b
+  trigger = {
+   has_global_flag = ch94_26_b
+   NOT = {
+    has_global_flag = ch94_26_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.226
+ title = ch94.26.t
+ desc = ch94.26.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_26_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.27
+ title = ch94.27.t
+ desc = ch94.27.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.27.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_27_a
+  CH94_ito_emergency = yes
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.127
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.27.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_27_b
+  add_war_support = -0.06
+  add_stability = 0.03
+  A09 = {
+   add_political_power = 50
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.127
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.127
+ title = ch94.27.t
+ desc = {
+  text = ch94.27.inactive
+  trigger = {
+   has_global_flag = ch94_27_inactive
+  }
+ }
+ desc = {
+  text = ch94.27.news_a
+  trigger = {
+   has_global_flag = ch94_27_a
+   NOT = {
+    has_global_flag = ch94_27_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.27.news_b
+  trigger = {
+   has_global_flag = ch94_27_b
+   NOT = {
+    has_global_flag = ch94_27_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.227
+ title = ch94.27.t
+ desc = ch94.27.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_27_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.28
+ title = ch94.28.t
+ desc = ch94.28.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.28.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_28_a
+  add_timed_idea = {
+   idea = CH94_legion_raids
+   days = 90
+  }
+  add_stability = -0.04
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.128
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.28.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_28_b
+  A03 = {
+   add_equipment_to_stockpile = {
+    type = convoy_1
+    amount = -15
+   }
+   add_timed_idea = {
+    idea = CH94_legion_raids
+    days = 90
+   }
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.128
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.128
+ title = ch94.28.t
+ desc = {
+  text = ch94.28.inactive
+  trigger = {
+   has_global_flag = ch94_28_inactive
+  }
+ }
+ desc = {
+  text = ch94.28.news_a
+  trigger = {
+   has_global_flag = ch94_28_a
+   NOT = {
+    has_global_flag = ch94_28_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.28.news_b
+  trigger = {
+   has_global_flag = ch94_28_b
+   NOT = {
+    has_global_flag = ch94_28_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.228
+ title = ch94.28.t
+ desc = ch94.28.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_28_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.29
+ title = ch94.29.t
+ desc = ch94.29.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.29.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_29_a
+  add_stability = -0.06
+  add_manpower = -500
+  PCB = {
+   add_stability = -0.05
+  }
+  army_experience = 10
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.129
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.29.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_29_b
+  add_political_power = -35
+  add_stability = 0.04
+  PCB = {
+   add_stability = 0.05
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.129
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.129
+ title = ch94.29.t
+ desc = {
+  text = ch94.29.inactive
+  trigger = {
+   has_global_flag = ch94_29_inactive
+  }
+ }
+ desc = {
+  text = ch94.29.news_a
+  trigger = {
+   has_global_flag = ch94_29_a
+   NOT = {
+    has_global_flag = ch94_29_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.29.news_b
+  trigger = {
+   has_global_flag = ch94_29_b
+   NOT = {
+    has_global_flag = ch94_29_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.229
+ title = ch94.29.t
+ desc = ch94.29.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_29_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.30
+ title = ch94.30.t
+ desc = ch94.30.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.30.a
+  trigger = {
+   NOT = {
+    has_country_flag = BLV_patents_offered
+   }
+  }
+  ai_chance = {
+   factor = 100
+   modifier = {
+    factor = 0
+    NOT = {
+     date > 1894.10.24
+     BLV_is_britain = yes
+     A02 = {
+      has_country_flag = BLV_calibrated
+      BLV_tesla_access = yes
+     }
+    }
+   }
+   modifier = {
+    add = 100
+    has_country_flag = BLV_patents_private
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_30_processed
+    }
+   }
+   set_global_flag = BLV_ch94_30_processed
+   set_global_flag = ch94_30_a
+   if = {
+    limit = {
+     date > 1894.10.24
+     BLV_is_britain = yes
+     A02 = {
+      has_country_flag = BLV_calibrated
+      BLV_tesla_access = yes
+     }
+    }
+    BLV_apply_patents_private = yes
+   }
+   else = {
+    set_global_flag = ch94_30_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.130
+     }
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.30.b
+  trigger = {
+   OR = {
+    has_country_flag = BLV_patents_offered
+    AND = {
+     country_exists = A04
+     NOT = {
+      has_war_with = A04
+     }
+     NOT = {
+      has_country_flag = BLV_patents_private
+     }
+    }
+   }
+  }
+  ai_chance = {
+   factor = 0
+   modifier = {
+    add = 100
+    NOT = {
+     date > 1894.10.24
+     BLV_is_britain = yes
+     A02 = {
+      has_country_flag = BLV_calibrated
+      BLV_tesla_access = yes
+     }
+    }
+   }
+   modifier = {
+    add = 100
+    has_country_flag = BLV_patents_offered
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_30_processed
+    }
+   }
+   set_global_flag = BLV_ch94_30_processed
+   set_global_flag = ch94_30_b
+   if = {
+    limit = {
+     date > 1894.10.24
+     BLV_is_britain = yes
+     A02 = {
+      has_country_flag = BLV_calibrated
+      BLV_tesla_access = yes
+     }
+    }
+    BLV_apply_patents_offer = yes
+   }
+   else = {
+    set_global_flag = ch94_30_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.130
+     }
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.130
+ title = ch94.30.t
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+ desc = {
+  text = ch94.30.inactive
+  trigger = {
+   has_global_flag = ch94_30_inactive
+  }
+ }
+ desc = {
+  text = ch94.30.news_a
+  trigger = {
+   has_global_flag = ch94_30_a
+   NOT = {
+    has_global_flag = ch94_30_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.30.news_b
+  trigger = {
+   has_global_flag = ch94_30_b
+   NOT = {
+    has_global_flag = ch94_30_inactive
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.230
+ title = ch94.30.t
+ desc = ch94.30.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_30_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.31
+ title = ch94.31.t
+ desc = ch94.31.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.31.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_31_a
+  add_war_support = 0.10
+  add_timed_idea = {
+   idea = CH94_assault
+   days = 90
+  }
+  add_stability = -0.03
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.131
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.31.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_31_b
+  add_stability = 0.05
+  add_political_power = -25
+  add_war_support = -0.04
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.131
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.131
+ title = ch94.31.t
+ desc = {
+  text = ch94.31.inactive
+  trigger = {
+   has_global_flag = ch94_31_inactive
+  }
+ }
+ desc = {
+  text = ch94.31.news_a
+  trigger = {
+   has_global_flag = ch94_31_a
+   NOT = {
+    has_global_flag = ch94_31_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.31.news_b
+  trigger = {
+   has_global_flag = ch94_31_b
+   NOT = {
+    has_global_flag = ch94_31_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.231
+ title = ch94.31.t
+ desc = ch94.31.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_31_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.32
+ title = ch94.32.t
+ desc = ch94.32.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.32.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_32_a
+  CH94_pobedonostsev_dies = yes
+  add_stability = 0.06
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.132
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.32.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_32_b
+  CH94_pobedonostsev_dies = yes
+  add_stability = -0.08
+  add_political_power = -30
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.132
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.132
+ title = ch94.32.t
+ desc = {
+  text = ch94.32.inactive
+  trigger = {
+   has_global_flag = ch94_32_inactive
+  }
+ }
+ desc = {
+  text = ch94.32.news_a
+  trigger = {
+   has_global_flag = ch94_32_a
+   NOT = {
+    has_global_flag = ch94_32_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.32.news_b
+  trigger = {
+   has_global_flag = ch94_32_b
+   NOT = {
+    has_global_flag = ch94_32_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.232
+ title = ch94.32.t
+ desc = ch94.32.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_32_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.33
+ title = ch94.33.t
+ desc = ch94.33.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.33.a
+  ai_chance = {
+   factor = 100
+   modifier = {
+    factor = 0
+    NOT = {
+     date > 1894.11.27
+     BLV_is_britain = yes
+     326 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_33_processed
+    }
+   }
+   set_global_flag = BLV_ch94_33_processed
+   set_global_flag = ch94_33_a
+   if = {
+    limit = {
+     date > 1894.11.27
+     BLV_is_britain = yes
+     326 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+    set_country_flag = BLV_hongkong_charter
+    clr_country_flag = BLV_hongkong_curfew
+    add_political_power = -30
+    add_stability = 0.04
+    add_equipment_to_stockpile = {
+     type = convoy_1
+     amount = 5
+    }
+   }
+   else = {
+    set_global_flag = ch94_33_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.133
+     }
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.33.b
+  ai_chance = {
+   factor = 0
+   modifier = {
+    add = 100
+    NOT = {
+     date > 1894.11.27
+     BLV_is_britain = yes
+     326 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    NOT = {
+     has_global_flag = BLV_ch94_33_processed
+    }
+   }
+   set_global_flag = BLV_ch94_33_processed
+   set_global_flag = ch94_33_b
+   if = {
+    limit = {
+     date > 1894.11.27
+     BLV_is_britain = yes
+     326 = {
+      is_owned_by = A02
+      is_controlled_by = A02
+     }
+    }
+    set_country_flag = BLV_hongkong_curfew
+    clr_country_flag = BLV_hongkong_charter
+    add_political_power = 15
+    add_timed_idea = {
+     idea = CH94_blockade
+     days = 60
+    }
+    add_stability = -0.03
+   }
+   else = {
+    set_global_flag = ch94_33_inactive
+   }
+   A02 = {
+    BLV_refresh = yes
+   }
+   hidden_effect = {
+    every_country = {
+     limit = {
+      is_ai = no
+      NOT = {
+       tag = ROOT
+      }
+     }
+     country_event = {
+      id = ch94.133
+     }
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.133
+ title = ch94.33.t
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+ desc = {
+  text = ch94.33.inactive
+  trigger = {
+   has_global_flag = ch94_33_inactive
+  }
+ }
+ desc = {
+  text = ch94.33.news_a
+  trigger = {
+   has_global_flag = ch94_33_a
+   NOT = {
+    has_global_flag = ch94_33_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.33.news_b
+  trigger = {
+   has_global_flag = ch94_33_b
+   NOT = {
+    has_global_flag = ch94_33_inactive
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.233
+ title = ch94.33.t
+ desc = ch94.33.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_33_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.34
+ title = ch94.34.t
+ desc = ch94.34.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.34.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_34_a
+  set_global_flag = CH94_peace_talks
+  every_country = {
+   limit = {
+    OR = {
+     tag = A01
+     tag = A03
+     tag = A10
+    }
+   }
+   add_war_support = -0.03
+   add_stability = 0.02
+  }
+  add_political_power = -25
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.134
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.34.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_34_b
+  every_country = {
+   limit = {
+    OR = {
+     tag = A01
+     tag = A03
+     tag = A10
+    }
+   }
+   add_war_support = 0.03
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.134
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.134
+ title = ch94.34.t
+ desc = {
+  text = ch94.34.inactive
+  trigger = {
+   has_global_flag = ch94_34_inactive
+  }
+ }
+ desc = {
+  text = ch94.34.news_a
+  trigger = {
+   has_global_flag = ch94_34_a
+   NOT = {
+    has_global_flag = ch94_34_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.34.news_b
+  trigger = {
+   has_global_flag = ch94_34_b
+   NOT = {
+    has_global_flag = ch94_34_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.234
+ title = ch94.34.t
+ desc = ch94.34.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_34_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.35
+ title = ch94.35.t
+ desc = ch94.35.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.35.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_35_a
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   if = {
+    limit = {
+     has_war_with = A03
+    }
+    A03 = {
+     add_timed_idea = {
+      idea = CH94_assault
+      days = 45
+     }
+     add_manpower = -500
+    }
+   }
+  }
+  else = {
+   set_global_flag = ch94_35_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.135
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.35.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_35_b
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   if = {
+    limit = {
+     has_war_with = A03
+    }
+    add_timed_idea = {
+     idea = CH94_defence
+     days = 90
+    }
+    army_experience = 15
+   }
+  }
+  else = {
+   set_global_flag = ch94_35_inactive
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.135
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.135
+ title = ch94.35.t
+ desc = {
+  text = ch94.35.inactive
+  trigger = {
+   has_global_flag = ch94_35_inactive
+  }
+ }
+ desc = {
+  text = ch94.35.news_a
+  trigger = {
+   has_global_flag = ch94_35_a
+   NOT = {
+    has_global_flag = ch94_35_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.35.news_b
+  trigger = {
+   has_global_flag = ch94_35_b
+   NOT = {
+    has_global_flag = ch94_35_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.235
+ title = ch94.35.t
+ desc = ch94.35.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_35_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.36
+ title = ch94.36.t
+ desc = ch94.36.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.36.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_36_a
+  every_country = {
+   limit = {
+    OR = {
+     tag = A01
+     tag = A03
+     tag = A10
+    }
+    has_war = yes
+   }
+   add_timed_idea = {
+    idea = CH94_exhaustion
+    days = 180
+   }
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.136
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.36.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_36_b
+  every_country = {
+   limit = {
+    OR = {
+     tag = A01
+     tag = A03
+     tag = A10
+    }
+   }
+   add_war_support = 0.05
+   add_manpower = 1000
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.136
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.136
+ title = ch94.36.t
+ desc = {
+  text = ch94.36.inactive
+  trigger = {
+   has_global_flag = ch94_36_inactive
+  }
+ }
+ desc = {
+  text = ch94.36.news_a
+  trigger = {
+   has_global_flag = ch94_36_a
+   NOT = {
+    has_global_flag = ch94_36_inactive
+   }
+  }
+ }
+ desc = {
+  text = ch94.36.news_b
+  trigger = {
+   has_global_flag = ch94_36_b
+   NOT = {
+    has_global_flag = ch94_36_inactive
+   }
+  }
+ }
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.236
+ title = ch94.36.t
+ desc = ch94.36.absent
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ immediate = {
+  set_global_flag = ch94_36_skipped
+ }
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.37
+ title = ch94.37.t
+ desc = ch94.37.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.37.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_37_a
+  set_country_flag = CH94_saigo_expedition
+  add_political_power = -40
+  add_tech_bonus = {
+   name = CH94_research
+   bonus = 0.25
+   uses = 1
+   category = industry
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.137
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.37.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_37_b
+  add_political_power = 20
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.137
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.137
+ title = ch94.37.t
+ desc = {
+  text = ch94.37.news_a
+  trigger = {
+   has_global_flag = ch94_37_a
+  }
+ }
+ desc = {
+  text = ch94.37.news_b
+  trigger = {
+   has_global_flag = ch94_37_b
+  }
+ }
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.38
+ title = ch94.38.t
+ desc = ch94.38.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.38.a
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_38_a
+  set_global_flag = CH94_spitsbergen_settlement
+  add_stability = 0.04
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.138
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.38.b
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_38_b
+  add_war_support = 0.04
+  add_stability = -0.02
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.138
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.138
+ title = ch94.38.t
+ desc = {
+  text = ch94.38.news_a
+  trigger = {
+   has_global_flag = ch94_38_a
+  }
+ }
+ desc = {
+  text = ch94.38.news_b
+  trigger = {
+   has_global_flag = ch94_38_b
+  }
+ }
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}
+country_event = {
+ id = ch94.39
+ title = ch94.39.t
+ desc = ch94.39.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ fire_only_once = yes
+ timeout_days = 3
+ option = {
+  name = ch94.39.a
+  ai_chance = {
+   factor = 0
+  }
+  set_global_flag = ch94_39_a
+  set_global_flag = CH94_japan_dossier_shared
+  A02 = {
+   add_political_power = 25
+  }
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.139
+    }
+   }
+  }
+ }
+ option = {
+  name = ch94.39.b
+  ai_chance = {
+   factor = 100
+  }
+  set_global_flag = ch94_39_b
+  set_country_flag = CH94_japan_dossier_reserved
+  add_political_power = 25
+  hidden_effect = {
+   every_country = {
+    limit = {
+     is_ai = no
+     NOT = {
+      tag = ROOT
+     }
+    }
+    country_event = {
+     id = ch94.139
+    }
+   }
+  }
+ }
+}
+country_event = {
+ id = ch94.139
+ title = ch94.39.t
+ desc = {
+  text = ch94.39.news_a
+  trigger = {
+   has_global_flag = ch94_39_a
+  }
+ }
+ desc = {
+  text = ch94.39.news_b
+  trigger = {
+   has_global_flag = ch94_39_b
+  }
+ }
+ is_triggered_only = yes
+ option = {
+  name = ch94.read
+ }
+}

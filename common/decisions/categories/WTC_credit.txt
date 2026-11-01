@@ -1,0 +1,2 @@
+WTC_debt_ledger = { icon = generic_economy allowed = { NOT = { original_tag = A04 } } visible = { has_country_flag = WTC_ledger_open country_exists = A04 NOT = { has_war_with = A04 } } }
+WTC_board = { icon = generic_political_actions allowed = { original_tag = A04 } visible = { has_country_flag = WTC_board_initialized } }

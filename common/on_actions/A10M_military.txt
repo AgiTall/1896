@@ -1,0 +1,3 @@
+on_actions = {
+ on_monthly = { effect = { if = { limit = { A10M_government_active = yes } A10M_monthly = yes } } }
+}

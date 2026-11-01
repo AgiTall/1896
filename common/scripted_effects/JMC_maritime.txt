@@ -1,0 +1,84 @@
+JMC_finish_register_effect = {
+ if = { limit = { JMC_can_finish_register = yes }
+  set_country_flag = JMC_register_done
+  country_event = { id = jmc_maritime.1 days = 1 }
+ }
+ clr_country_flag = JMC_register_in_progress
+}
+JMC_finish_repairs_effect = {
+ if = { limit = { JMC_can_finish_repairs = yes }
+  set_country_flag = JMC_repairs_done
+  add_equipment_to_stockpile = { type = support_equipment_1 amount = 75 producer = A03 }
+  navy_experience = 8
+  add_timed_idea = { idea = JMC_yard_coordination days = 180 }
+  country_event = { id = jmc_maritime.2 days = 1 }
+ }
+ clr_country_flag = JMC_repairs_in_progress
+}
+JMC_finish_coaling_effect = {
+ if = { limit = { JMC_can_finish_coaling = yes }
+  set_country_flag = JMC_coaling_done
+  add_timed_idea = { idea = JMC_coaling_network days = 180 }
+  country_event = { id = jmc_maritime.3 days = 1 }
+ }
+ clr_country_flag = JMC_coaling_in_progress
+}
+JMC_finish_drills_effect = {
+ if = { limit = { JMC_can_finish_drills = yes }
+  set_country_flag = JMC_drills_done
+  navy_experience = 10
+  add_timed_idea = { idea = JMC_escort_training days = 120 }
+  country_event = { id = jmc_maritime.4 days = 1 }
+ }
+ clr_country_flag = JMC_drills_in_progress
+}
+JMC_finish_programme_effect = {
+ if = { limit = { JMC_can_finish_conference = yes }
+  set_country_flag = JMC_programme_complete
+  # The civilian escort plan operates while the cabinet considers the alternative.
+  remove_ideas = JMC_expedition_plan
+  clr_country_flag = JMC_expedition_course
+  add_ideas = JMC_merchant_plan
+  set_country_flag = JMC_merchant_course
+  country_event = { id = jmc_maritime.5 days = 1 }
+ }
+ clr_country_flag = JMC_conference_in_progress
+}
+JMC_replenish_reserves_effect = {
+ if = { limit = { JMC_can_finish_reserves = yes }
+  add_equipment_to_stockpile = { type = convoy_1 amount = 6 producer = A03 }
+  add_timed_idea = { idea = JMC_ready_stores days = 90 }
+ }
+ clr_country_flag = JMC_reserves_in_progress
+}
+
+JMC_register_merchant_outcome_effect = {
+ if = { limit = { JMC_can_answer_register = yes }
+  set_country_flag = JMC_register_outcome_chosen
+  add_political_power = 20
+ }
+}
+JMC_register_navy_outcome_effect = {
+ if = { limit = { JMC_can_answer_register = yes }
+  set_country_flag = JMC_register_outcome_chosen
+  navy_experience = 5
+ }
+}
+JMC_choose_merchant_course_effect = {
+ if = { limit = { JMC_can_choose_course = yes }
+  set_country_flag = JMC_course_confirmed
+  remove_ideas = JMC_expedition_plan
+  clr_country_flag = JMC_expedition_course
+  add_ideas = JMC_merchant_plan
+  set_country_flag = JMC_merchant_course
+ }
+}
+JMC_choose_expedition_course_effect = {
+ if = { limit = { JMC_can_choose_course = yes }
+  set_country_flag = JMC_course_confirmed
+  remove_ideas = JMC_merchant_plan
+  clr_country_flag = JMC_merchant_course
+  add_ideas = JMC_expedition_plan
+  set_country_flag = JMC_expedition_course
+ }
+}

@@ -1,0 +1,105 @@
+add_namespace = A10W_path
+
+country_event = {
+ id = A10W_path.1 title = A10W_path.1.t desc = A10W_path.1.d picture = GFX_1896_event_trade is_triggered_only = yes
+ trigger = { tag = A04 country_exists = A10 A10 = { has_country_flag = A10W_oath_pending } }
+ option = {
+  name = A10W_path.1.a ai_chance = { factor = 75 }
+  trigger = { is_subject = no has_capitulated = no NOT = { has_war_with = A10 } A10 = { OR = { is_subject = no is_subject_of = A04 } } }
+  A10 = { A10W_accept_oath_effect = yes }
+  add_political_power = 15
+ }
+ option = {
+  name = A10W_path.1.b ai_chance = { factor = 25 }
+  A10 = { clr_country_flag = A10W_oath_pending clr_country_flag = A10W_oath_accepted set_country_flag = A10W_oath_refused country_event = { id = A10W_path.3 days = 1 } }
+ }
+}
+country_event = {
+ id = A10W_path.2 title = A10W_path.2.t desc = A10W_path.2.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ option = { name = A10W_path.2.a }
+}
+country_event = {
+ id = A10W_path.3 title = A10W_path.3.t desc = A10W_path.3.d picture = GFX_1896_event_talks is_triggered_only = yes
+ option = { name = A10W_path.3.a }
+}
+country_event = {
+ id = A10W_path.4 hidden = yes is_triggered_only = yes
+ trigger = { tag = A10 NOT = { has_country_flag = A10W_oath_accepted } NOT = { has_country_flag = A10W_oath_refused } }
+ immediate = { clr_country_flag = A10W_oath_pending set_country_flag = A10W_oath_refused country_event = { id = A10W_path.3 days = 1 } }
+}
+country_event = {
+ id = A10W_path.8 title = A10W_path.8.t desc = A10W_path.8.d picture = GFX_1896_event_talks is_triggered_only = yes
+ option = { name = A10W_path.8.a ai_chance = { factor = 60 } add_to_variable = { A10W_charter_tension = -10 } add_political_power = -30 add_stability = 0.02 A10W_refresh_effect = yes }
+ option = { name = A10W_path.8.b ai_chance = { factor = 40 } add_to_variable = { A10W_charter_tension = 10 } add_political_power = 50 A10W_refresh_effect = yes }
+}
+country_event = {
+ id = A10W_path.10 title = A10W_path.10.t desc = A10W_path.10.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ trigger = { tag = A04 country_exists = A10 A10 = { has_country_flag = A10W_colony_pending } }
+ option = {
+  name = A10W_path.10.a ai_chance = { factor = 70 }
+  trigger = { A10 = { A10W_colony_eligible = yes } }
+  A10 = { A10W_establish_colony_effect = yes }
+ }
+ option = {
+  name = A10W_path.10.b ai_chance = { factor = 30 }
+  A10 = { clr_country_flag = A10W_colony_pending set_country_flag = A10W_colony_refused country_event = { id = A10W_path.12 days = 1 } }
+ }
+}
+country_event = {
+ id = A10W_path.11 title = A10W_path.11.t desc = A10W_path.11.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ option = { name = A10W_path.11.a }
+}
+country_event = {
+ id = A10W_path.12 title = A10W_path.12.t desc = A10W_path.12.d picture = GFX_1896_event_talks is_triggered_only = yes
+ option = { name = A10W_path.12.a clr_country_flag = A10W_colony_pending set_country_flag = A10W_colony_refused }
+}
+country_event = {
+ id = A10W_path.14 hidden = yes is_triggered_only = yes
+ trigger = { tag = A10 NOT = { has_country_flag = A10W_colony_ratified } NOT = { has_country_flag = A10W_colony_refused } }
+ immediate = { clr_country_flag = A10W_colony_pending set_country_flag = A10W_colony_refused country_event = { id = A10W_path.12 days = 1 } }
+}
+country_event = {
+ id = A10W_path.20 title = A10W_path.20.t desc = A10W_path.20.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ trigger = { tag = A04 country_exists = A10 A10 = { has_country_flag = A10W_metropole_pending } }
+ option = {
+  name = A10W_path.20.a ai_chance = { factor = 40 }
+  trigger = { A10 = { A10W_metropole_eligible = yes } }
+  custom_effect_tooltip = A10W_voluntary_office_tt
+  set_country_flag = A10W_voluntary_office
+  A10 = { A10W_establish_metropole_effect = yes }
+ }
+ option = {
+  name = A10W_path.20.b ai_chance = { factor = 60 }
+  A10 = { clr_country_flag = A10W_metropole_pending set_country_flag = A10W_metropole_refused country_event = { id = A10W_path.22 days = 1 } }
+ }
+}
+country_event = {
+ id = A10W_path.21 title = A10W_path.21.t desc = A10W_path.21.d picture = GFX_1896_event_treaty is_triggered_only = yes
+ option = { name = A10W_path.21.a }
+}
+country_event = {
+ id = A10W_path.22 title = A10W_path.22.t desc = A10W_path.22.d picture = GFX_1896_event_talks is_triggered_only = yes
+ option = { name = A10W_path.22.a clr_country_flag = A10W_metropole_pending set_country_flag = A10W_metropole_refused }
+}
+country_event = {
+ id = A10W_path.24 hidden = yes is_triggered_only = yes
+ trigger = { tag = A10 NOT = { has_country_flag = A10W_metropole_ratified } NOT = { has_country_flag = A10W_metropole_refused } }
+ immediate = { clr_country_flag = A10W_metropole_pending set_country_flag = A10W_metropole_refused country_event = { id = A10W_path.22 days = 1 } }
+}
+country_event = {
+ id = A10W_path.30 title = A10W_path.30.t desc = A10W_path.30.d picture = GFX_1896_event_trade is_triggered_only = yes
+ trigger = { tag = A10 check_variable = { A10W_charter_tension > 89 } }
+ option = {
+  name = A10W_path.30.a ai_chance = { factor = 65 }
+  add_to_variable = { A10W_charter_tension = -30 }
+  add_timed_idea = { idea = A10W_emergency_mediation days = 120 }
+  add_stability = 0.01 A10W_refresh_effect = yes
+ }
+ option = {
+  name = A10W_path.30.b ai_chance = { factor = 35 }
+  add_to_variable = { A10W_charter_tension = -15 }
+  add_stability = -0.05 add_war_support = -0.03
+  add_to_variable = { WTC_debt = 5 }
+  WTC_refresh_effect = yes A10W_refresh_effect = yes
+ }
+}

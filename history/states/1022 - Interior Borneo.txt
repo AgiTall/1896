@@ -2,7 +2,7 @@ state = {
 	id = 1022
 	name = "STATE_1022"
 
-	manpower = 8600
+	manpower = 5568
 
 	impassable = yes 
 	force_link_ownership_to = 334 # Kalimantan

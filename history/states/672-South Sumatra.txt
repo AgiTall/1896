@@ -1,7 +1,7 @@
 state = { #South Sumatra
 	id = 672
 	name = "STATE_672"
-	manpower = 2834381
+	manpower = 1835099
 	
 	state_category = rural
 	

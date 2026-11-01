@@ -1,0 +1,45 @@
+JPA_negotiate_guarantees_effect = {
+ remove_ideas = JPA_forced_guarantees clr_country_flag = JPA_finance_forced
+ if = { limit = { NOT = { has_country_flag = JPC_chapter_2 } }
+  set_country_flag = JPC_chapter_2 country_event = { id = japan_canon.2 days = 1 }
+ }
+ else = { add_to_variable = { JPF_debt_pressure = -5 } add_to_variable = { JPF_budget_confidence = 5 } JPF_refresh_effect = yes }
+}
+JPA_negotiate_north_effect = {
+ remove_ideas = JPA_unwritten_neutrality
+ if = { limit = { NOT = { has_country_flag = JPC_chapter_3 } }
+  set_country_flag = JPC_chapter_3 country_event = { id = japan_canon.3 days = 1 }
+ }
+ JPN_north_protocol_focus_effect = yes
+ add_to_variable = { JPN_north_trust = 10 } JPN_north_refresh_effect = yes
+}
+JPA_emergency_compromises_effect = {
+ # Canonical war proceeds, but incomplete domestic work has a persistent price.
+ JPF_initialize_effect = yes JPN_north_initialize_effect = yes JPL_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPC_guarantees_signed } NOT = { has_country_flag = JPT_treasury_control } }
+  set_country_flag = JPC_guarantees_signed set_country_flag = JPA_finance_forced
+  remove_ideas = JPC_bad_loans add_ideas = JPC_guarantees add_ideas = JPA_forced_guarantees
+  add_to_variable = { JPF_debt_pressure = 12 } add_to_variable = { JPF_budget_confidence = -8 }
+ }
+ if = { limit = { NOT = { has_country_flag = JPC_north_signed } NOT = { has_country_flag = JPT_north_rebel } }
+  set_country_flag = JPC_north_signed set_country_flag = JPA_north_forced
+  add_ideas = JPC_north_neutral add_ideas = JPA_unwritten_neutrality
+  add_to_variable = { JPN_north_trust = -15 } add_to_variable = { JPN_north_fleet_irritation = 10 }
+  if = { limit = { country_exists = A08 NOT = { has_war_with = A08 } }
+   diplomatic_relation = { country = A08 relation = non_aggression_pact }
+   A08 = { set_country_flag = JPC_northern_neutrality country_event = { id = japan_canon.33 days = 1 } }
+  }
+ }
+ if = { limit = { NOT = { has_country_flag = JPA_manila_prepared } }
+  add_to_variable = { JPL_garrison_burden = 10 } add_to_variable = { JPL_garrison_fatigue = 10 }
+ }
+ if = { limit = { NOT = { has_country_flag = JPA_dutch_prepared } }
+  add_timed_idea = { idea = JPA_hasty_orders days = 120 }
+ }
+ JPF_refresh_effect = yes JPN_north_refresh_effect = yes JPL_refresh_effect = yes
+ country_event = { id = japan_agency.3 days = 1 }
+}
+JPA_refresh_policy_effect = {
+ if = { limit = { has_country_flag = JPA_manila_first has_war_with = A10 NOT = { has_idea = JPA_manila_escorts } } add_ideas = JPA_manila_escorts }
+ if = { limit = { has_country_flag = JPA_borneo_first has_war_with = A01 NOT = { has_idea = JPA_borneo_escorts } } add_ideas = JPA_borneo_escorts }
+}

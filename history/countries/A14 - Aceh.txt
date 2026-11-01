@@ -1,3 +1,14 @@
-capital = 1050
+﻿capital = 1050
 set_politics = { ruling_party = neutrality elections_allowed = no }
 set_popularities = { neutrality = 100 }
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_research_slots = 2
+set_technology = {
+	basic_railways = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = A14 }
+# END 1893 START RESEARCH AND TRAINS

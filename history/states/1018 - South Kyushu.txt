@@ -1,7 +1,7 @@
 state = {
 	id = 1018
 	name = "STATE_1018" # South Kyushu
-	manpower = 3023000
+	manpower = 2088662
 
 	state_category = rural
 

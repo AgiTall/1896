@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-31",
+  "focuses": 117,
+  "scripts": 48,
+  "focus_paths": {
+    "confederation": 57,
+    "federation": 61,
+    "colony": 56,
+    "metropole": 56,
+    "junta": 62,
+    "directorate": 62
+  },
+  "checked_modifier_types": 37,
+  "ideas": 87,
+  "events": 56,
+  "checks": [
+    "balanced parsed scripts",
+    "six reachable political outcomes",
+    "symmetric exclusions",
+    "focus layout and dependency order",
+    "bilingual localisation with no A10 duplicates",
+    "real sprites and textures",
+    "engine effect/trigger/modifier names",
+    "reference integrity",
+    "nine guarded consent/accessions",
+    "legacy 80 percent gates",
+    "subject faction guard",
+    "country-scoped monthly update"
+  ],
+  "limitations": [
+    "Static graph checks abstract focus availability and AI scheduling",
+    "Separate bounded model tests cover supply and sovereignty transitions",
+    "No full campaign or combat balance playthrough"
+  ]
+}

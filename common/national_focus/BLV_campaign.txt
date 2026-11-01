@@ -1,0 +1,2324 @@
+focus_tree = {
+ id = BLV_campaign
+ country = {
+  factor = 0
+  modifier = {
+   add = 200
+   tag = A02
+  }
+ }
+ default = no
+ continuous_focus_position = {
+  x = 100
+  y = 2500
+ }
+ focus = {
+  id = BLV_leviathan
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_initialize = yes
+   add_political_power = 40
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 0
+ }
+ focus = {
+  id = BLV_audit
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_leviathan
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = 10
+   }
+   add_political_power = 30
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 1
+ }
+ focus = {
+  id = BLV_hamilton
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_open_council = yes
+   custom_effect_tooltip = BLV_council_tt
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_audit
+  }
+  prerequisite = {
+   focus = BLV_budget_subscriptions
+   focus = BLV_budget_advance
+  }
+  x = 20
+  y = 3
+ }
+ focus = {
+  id = BLV_commission
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  prerequisite = {
+   focus = BLV_hamilton
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_crown = 2
+   }
+   add_to_variable = {
+    BLV_cohesion = 5
+   }
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 4
+ }
+ focus = {
+  id = BLV_admiralty
+  icon = GFX_goal_generic_national_unity
+  cost = 7
+  prerequisite = {
+   focus = BLV_commission
+  }
+  mutually_exclusive = {
+   focus = BLV_constitution
+  }
+  mutually_exclusive = {
+   focus = BLV_crown
+  }
+  available = {
+   NOT = {
+    has_country_flag = BLV_path_chosen
+   }
+   check_variable = {
+    BLV_admiralty > 3
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 8
+  }
+  completion_reward = {
+   BLV_choose_admiralty = yes
+   BLV_refresh = yes
+  }
+  x = 16
+  y = 5
+ }
+ focus = {
+  id = BLV_constitution
+  icon = GFX_goal_generic_national_unity
+  cost = 7
+  prerequisite = {
+   focus = BLV_commission
+  }
+  mutually_exclusive = {
+   focus = BLV_admiralty
+  }
+  mutually_exclusive = {
+   focus = BLV_crown
+  }
+  available = {
+   NOT = {
+    has_country_flag = BLV_path_chosen
+   }
+   check_variable = {
+    BLV_delegates > 3
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   BLV_choose_constitution = yes
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 5
+ }
+ focus = {
+  id = BLV_crown
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 7
+  prerequisite = {
+   focus = BLV_commission
+  }
+  mutually_exclusive = {
+   focus = BLV_admiralty
+  }
+  mutually_exclusive = {
+   focus = BLV_constitution
+  }
+  available = {
+   NOT = {
+    has_country_flag = BLV_path_chosen
+   }
+   check_variable = {
+    BLV_crown > 3
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 3
+  }
+  completion_reward = {
+   BLV_choose_crown = yes
+   BLV_refresh = yes
+  }
+  x = 24
+  y = 5
+ }
+ focus = {
+  id = BLV_naval_cabinet
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_admiralty
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_procurement_spirit
+   BLV_refresh = yes
+  }
+  x = 16
+  y = 6
+ }
+ focus = {
+  id = BLV_merit
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_naval_cabinet
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   army_experience = 15
+   navy_experience = 15
+   add_to_variable = {
+    BLV_cohesion = 5
+   }
+   BLV_refresh = yes
+  }
+  x = 16
+  y = 7
+ }
+ focus = {
+  id = BLV_strategic_reserve
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_merit
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = 20
+   }
+   add_stability = -0.02
+   BLV_refresh = yes
+  }
+  x = 16
+  y = 8
+ }
+ focus = {
+  id = BLV_naval_state
+  icon = GFX_goal_generic_navy_battleship
+  cost = 5
+  prerequisite = {
+   focus = BLV_strategic_reserve
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_naval_state
+   add_ideas = BLV_naval_state_spirit
+   BLV_refresh = yes
+  }
+  x = 16
+  y = 9
+ }
+ focus = {
+  id = BLV_imperial_budget
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_constitution
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_cohesion = 8
+   }
+   add_political_power = 35
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 6
+ }
+ focus = {
+  id = BLV_rights
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_imperial_budget
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_island_rights_spirit
+   add_to_variable = {
+    BLV_reserve = -10
+   }
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 7
+ }
+ focus = {
+  id = BLV_delegates
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_rights
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_cohesion = 10
+   }
+   set_country_flag = BLV_dominion_policy
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 8
+ }
+ focus = {
+  id = BLV_maritime_commonwealth
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_delegates
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_maritime_commonwealth_spirit
+   BLV_refresh = yes
+  }
+  x = 20
+  y = 9
+ }
+ focus = {
+  id = BLV_royal_secretariat
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  prerequisite = {
+   focus = BLV_crown
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_royal_secretariat_spirit
+   BLV_refresh = yes
+  }
+  x = 24
+  y = 6
+ }
+ focus = {
+  id = BLV_crown_guard
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_royal_secretariat
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_raise_guard = yes
+   BLV_refresh = yes
+  }
+  x = 24
+  y = 7
+ }
+ focus = {
+  id = BLV_loyal_governors
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  prerequisite = {
+   focus = BLV_crown_guard
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_cohesion = 10
+   }
+   add_to_variable = {
+    BLV_reserve = -15
+   }
+   BLV_refresh = yes
+  }
+  x = 24
+  y = 8
+ }
+ focus = {
+  id = BLV_imperial_prerogative
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  prerequisite = {
+   focus = BLV_loyal_governors
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_royal_prerogative
+   add_ideas = BLV_imperial_prerogative_spirit
+   BLV_refresh = yes
+  }
+  x = 24
+  y = 9
+ }
+ focus = {
+  id = BLV_rationing
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  prerequisite = {
+   focus = BLV_audit
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_regular_budget
+   add_to_variable = {
+    BLV_reserve = 10
+   }
+   BLV_refresh = yes
+  }
+  x = 2
+  y = 2
+ }
+ focus = {
+  id = BLV_bermuda_workshops
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  prerequisite = {
+   focus = BLV_rationing
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   BLV_refresh = yes
+  }
+  x = 0
+  y = 3
+ }
+ focus = {
+  id = BLV_coal_depots
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_depots_ready
+   add_fuel = 15000
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_rationing
+  }
+  x = 4
+  y = 3
+ }
+ focus = {
+  id = BLV_machine_tools
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_tech_bonus = {
+    name = BLV_research
+    bonus = 0.5
+    uses = 1
+    category = industry
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_bermuda_workshops
+  }
+  prerequisite = {
+   focus = BLV_coal_depots
+  }
+  x = 2
+  y = 4
+ }
+ focus = {
+  id = BLV_ordnance
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 5
+  prerequisite = {
+   focus = BLV_machine_tools
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = arms_factory
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   BLV_refresh = yes
+  }
+  x = 0
+  y = 5
+ }
+ focus = {
+  id = BLV_nz_industry
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  available = {
+   284 = {
+    is_owned_by = ROOT
+    is_controlled_by = ROOT
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   284 = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_machine_tools
+  }
+  x = 4
+  y = 5
+ }
+ focus = {
+  id = BLV_cable_school
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_tech_bonus = {
+    name = BLV_research
+    bonus = 0.5
+    uses = 1
+    category = industry
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_ordnance
+  }
+  prerequisite = {
+   focus = BLV_nz_industry
+  }
+  x = 2
+  y = 6
+ }
+ focus = {
+  id = BLV_island_economy
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  prerequisite = {
+   focus = BLV_cable_school
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_island_industry_spirit
+   BLV_refresh = yes
+  }
+  x = 2
+  y = 7
+ }
+ focus = {
+  id = BLV_credit_audit
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = BLV_audit
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTC_initialize_effect = yes
+   set_country_flag = WTN_relations_open
+   add_political_power = 30
+   BLV_refresh = yes
+  }
+  x = 10
+  y = 2
+ }
+ focus = {
+  id = BLV_chamber_desk
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  prerequisite = {
+   focus = BLV_credit_audit
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = WTN_compact_desk_open
+   custom_effect_tooltip = WTN_open_compact_tt
+   BLV_refresh = yes
+  }
+  x = 10
+  y = 3
+ }
+ focus = {
+  id = BLV_independent_accounts
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_chamber_desk
+  }
+  mutually_exclusive = {
+   focus = BLV_lambert_compact
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_political_power = -50
+   add_to_variable = {
+    WTC_debt = -15
+   }
+   WTC_refresh_effect = yes
+   set_country_flag = BLV_own_accounts
+   BLV_refresh = yes
+  }
+  x = 8
+  y = 4
+ }
+ focus = {
+  id = BLV_lambert_compact
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_chamber_desk
+  }
+  mutually_exclusive = {
+   focus = BLV_independent_accounts
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   clr_country_flag = WTN_cover_revoked
+   set_country_flag = BLV_chamber_course
+   A04 = {
+    WTC_check_cover_effect = yes
+   }
+   add_to_variable = {
+    BLV_reserve = 10
+   }
+   BLV_refresh = yes
+  }
+  x = 12
+  y = 4
+ }
+ focus = {
+  id = BLV_insurance
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_independent_accounts
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = -10
+   }
+   add_ideas = BLV_insurance_spirit
+   BLV_refresh = yes
+  }
+  x = 8
+  y = 5
+ }
+ focus = {
+  id = BLV_revoke_cover
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_insurance
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = WTN_cover_revoked
+   A04 = {
+    WTC_check_cover_effect = yes
+   }
+   add_stability = -0.03
+   BLV_refresh = yes
+  }
+  x = 8
+  y = 6
+ }
+ focus = {
+  id = BLV_service_contracts
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_lambert_compact
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_british_contract
+    days = 360
+   }
+   add_to_variable = {
+    BLV_reserve = 15
+   }
+   BLV_refresh = yes
+  }
+  x = 12
+  y = 5
+ }
+ focus = {
+  id = BLV_debt_settlement
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  available = {
+   has_political_power > 74
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_political_power = -75
+   add_to_variable = {
+    WTC_debt = -20
+   }
+   WTC_refresh_effect = yes
+   add_to_variable = {
+    BLV_cohesion = 5
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_chamber_desk
+  }
+  x = 10
+  y = 8
+ }
+ focus = {
+  id = BLV_fleet_register
+  icon = GFX_goal_generic_navy_cruiser
+  cost = 5
+  prerequisite = {
+   focus = BLV_audit
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   navy_experience = 20
+   add_to_variable = {
+    BLV_reserve = 5
+   }
+   BLV_refresh = yes
+  }
+  x = 38
+  y = 2
+ }
+ focus = {
+  id = BLV_bermuda_dock
+  icon = GFX_goal_generic_construct_naval_dockyard
+  cost = 5
+  prerequisite = {
+   focus = BLV_fleet_register
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = dockyard
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   696 = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_building_construction = {
+      type = naval_base
+      province = 13010
+      level = 2
+      instant_build = yes
+     }
+    }
+   }
+   BLV_refresh = yes
+  }
+  x = 38
+  y = 3
+ }
+ focus = {
+  id = BLV_engine_rooms
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = BLV_bermuda_dock
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_engine_rooms_spirit
+   add_tech_bonus = {
+    name = BLV_research
+    bonus = 0.5
+    uses = 1
+    category = naval_equipment
+   }
+   BLV_refresh = yes
+  }
+  x = 38
+  y = 4
+ }
+ focus = {
+  id = BLV_battle_line
+  icon = GFX_goal_generic_navy_battleship
+  cost = 5
+  mutually_exclusive = {
+   focus = BLV_cruiser_routes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_battle_line_spirit
+   add_to_variable = {
+    BLV_reserve = -10
+   }
+   navy_experience = 25
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_naval_staff
+  }
+  x = 36
+  y = 7
+ }
+ focus = {
+  id = BLV_cruiser_routes
+  icon = GFX_goal_generic_navy_cruiser
+  cost = 5
+  mutually_exclusive = {
+   focus = BLV_battle_line
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_cruiser_routes_spirit
+   navy_experience = 20
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_naval_staff
+  }
+  x = 40
+  y = 7
+ }
+ focus = {
+  id = BLV_naval_staff
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_naval_staff_spirit
+   navy_experience = 15
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_fleet_register
+  }
+  prerequisite = {
+   focus = BLV_yards_state
+   focus = BLV_yards_contracts
+  }
+  x = 38
+  y = 6
+ }
+ focus = {
+  id = BLV_convoy_service
+  icon = GFX_goal_generic_navy_cruiser
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_equipment_to_stockpile = {
+    type = convoy_1
+    amount = 20
+   }
+   add_ideas = BLV_escorts_spirit
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_battle_line
+   focus = BLV_cruiser_routes
+  }
+  x = 38
+  y = 8
+ }
+ focus = {
+  id = BLV_singapore_docks
+  icon = GFX_goal_generic_construct_naval_dockyard
+  cost = 5
+  prerequisite = {
+   focus = BLV_convoy_service
+  }
+  available = {
+   1021 = {
+    is_owned_by = ROOT
+    is_controlled_by = ROOT
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   1021 = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = dockyard
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   BLV_refresh = yes
+  }
+  x = 38
+  y = 9
+ }
+ focus = {
+  id = BLV_fleet_logistics
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = BLV_singapore_docks
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = 20
+   }
+   add_ideas = BLV_fleet_logistics_spirit
+   BLV_refresh = yes
+  }
+  x = 38
+  y = 10
+ }
+ focus = {
+  id = BLV_garrison_audit
+  icon = GFX_goal_generic_defence
+  cost = 5
+  prerequisite = {
+   focus = BLV_hamilton
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   army_experience = 10
+   set_country_flag = BLV_rotation_open
+   BLV_refresh = yes
+  }
+  x = 46
+  y = 4
+ }
+ focus = {
+  id = BLV_rotation
+  icon = GFX_goal_generic_defence
+  cost = 5
+  prerequisite = {
+   focus = BLV_garrison_audit
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = -10
+   }
+   add_ideas = BLV_rotation_spirit
+   BLV_refresh = yes
+  }
+  x = 46
+  y = 5
+ }
+ focus = {
+  id = BLV_marines
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_raise_guard = yes
+   add_tech_bonus = {
+    name = BLV_research
+    bonus = 0.25
+    uses = 1
+    category = industry
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_rotation
+  }
+  prerequisite = {
+   focus = BLV_rotation_medical
+   focus = BLV_rotation_depots
+  }
+  x = 46
+  y = 7
+ }
+ focus = {
+  id = BLV_field_hospitals
+  icon = GFX_goal_generic_defence
+  cost = 5
+  prerequisite = {
+   focus = BLV_marines
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_field_hospitals_spirit
+   BLV_refresh = yes
+  }
+  x = 46
+  y = 8
+ }
+ focus = {
+  id = BLV_colonial_service
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  prerequisite = {
+   focus = BLV_field_hospitals
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_cohesion = 8
+   }
+   add_manpower = 1500
+   BLV_refresh = yes
+  }
+  x = 46
+  y = 9
+ }
+ focus = {
+  id = BLV_amphibious_staff
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  prerequisite = {
+   focus = BLV_colonial_service
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_expedition_staff_spirit
+   army_experience = 20
+   BLV_refresh = yes
+  }
+  x = 46
+  y = 10
+ }
+ focus = {
+  id = BLV_station_census
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_hamilton
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_cohesion = 8
+   }
+   BLV_refresh = yes
+  }
+  x = 30
+  y = 4
+ }
+ focus = {
+  id = BLV_australian_dossier
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_station_census
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_australia_dossier
+   add_political_power = 25
+   BLV_refresh = yes
+  }
+  x = 30
+  y = 5
+ }
+ focus = {
+  id = BLV_dominion_charters
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  prerequisite = {
+   focus = BLV_australian_dossier
+  }
+  mutually_exclusive = {
+   focus = BLV_colonial_red_line
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_dominion_policy
+   add_to_variable = {
+    BLV_cohesion = 5
+   }
+   BLV_refresh = yes
+  }
+  x = 32
+  y = 6
+ }
+ focus = {
+  id = BLV_nz_ports
+  icon = GFX_goal_generic_construct_naval_dockyard
+  cost = 5
+  prerequisite = {
+   focus = BLV_australian_dossier
+  }
+  available = {
+   284 = {
+    is_owned_by = ROOT
+    is_controlled_by = ROOT
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   284 = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = dockyard
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   BLV_refresh = yes
+  }
+  x = 30
+  y = 7
+ }
+ focus = {
+  id = BLV_pacific_stations
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_nz_ports
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = 10
+   }
+   add_to_variable = {
+    BLV_cohesion = 5
+   }
+   BLV_refresh = yes
+  }
+  x = 30
+  y = 8
+ }
+ focus = {
+  id = BLV_colonial_red_line
+  icon = GFX_goal_generic_demand_territory
+  cost = 5
+  prerequisite = {
+   focus = BLV_australian_dossier
+  }
+  mutually_exclusive = {
+   focus = BLV_dominion_charters
+  }
+  available = {
+   has_country_flag = BLV_crown_path
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_hard_empire
+   clr_country_flag = BLV_dominion_policy
+   add_war_support = 0.05
+   BLV_refresh = yes
+  }
+  x = 28
+  y = 6
+ }
+ focus = {
+  id = BLV_australia_sovereignty
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  prerequisite = {
+   focus = BLV_dominion_charters
+  }
+  available = {
+   country_exists = A07
+   A07 = {
+    is_subject_of = A02
+    has_country_flag = AUC_commonwealth_proclaimed
+   }
+   NOT = {
+    has_war_with = A07
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_recognise_australia = yes
+   BLV_refresh = yes
+  }
+  x = 32
+  y = 9
+ }
+ focus = {
+  id = BLV_reconquest
+  icon = GFX_goal_generic_demand_territory
+  cost = 7
+  prerequisite = {
+   focus = BLV_colonial_red_line
+  }
+  available = {
+   has_country_flag = BLV_hard_empire
+   is_subject = no
+   country_exists = A07
+   A07 = {
+    is_subject = no
+   }
+   NOT = {
+    has_war_with = A07
+   }
+   NOT = {
+    is_in_faction_with = A07
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   create_wargoal = {
+    type = puppet_wargoal_focus
+    target = A07
+   }
+   BLV_refresh = yes
+  }
+  x = 28
+  y = 9
+ }
+ focus = {
+  id = BLV_malacca
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = BLV_hamilton
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  available = {
+   date > 1893.11.27
+  }
+  completion_reward = {
+   BLV_request_passage_policy = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_passage_decided
+  }
+  x = 54
+  y = 4
+ }
+ focus = {
+  id = BLV_batavia_oil
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  prerequisite = {
+   focus = BLV_malacca
+  }
+  available = {
+   country_exists = A01
+   NOT = {
+    has_war_with = A01
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_oil = yes
+   BLV_refresh = yes
+  }
+  x = 52
+  y = 5
+ }
+ focus = {
+  id = BLV_philippine_mission
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  available = {
+   country_exists = A10
+   NOT = {
+    has_war_with = A10
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_philippines = yes
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_malacca
+  }
+  x = 56
+  y = 5
+ }
+ focus = {
+  id = BLV_pacific_deterrent
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_pacific_deterrent_spirit
+   navy_experience = 15
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_batavia_oil
+  }
+  prerequisite = {
+   focus = BLV_philippine_mission
+  }
+  x = 54
+  y = 6
+ }
+ focus = {
+  id = BLV_japanese_note
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  prerequisite = {
+   focus = BLV_pacific_deterrent
+  }
+  available = {
+   country_exists = A03
+   NOT = {
+    has_war_with = A03
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_navigation = yes
+   BLV_refresh = yes
+  }
+  x = 52
+  y = 7
+ }
+ focus = {
+  id = BLV_war_plans
+  icon = GFX_goal_generic_demand_territory
+  cost = 5
+  available = {
+   is_subject = no
+   country_exists = A03
+   has_country_flag = BLV_navigation_refused
+   NOT = {
+    has_war_with = A03
+   }
+   NOT = {
+    is_in_faction_with = A03
+   }
+   327 = {
+    is_owned_by = A03
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   create_wargoal = {
+    type = take_state_focus
+    target = A03
+    generator = {
+     327
+    }
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_pacific_deterrent
+  }
+  x = 56
+  y = 7
+ }
+ focus = {
+  id = BLV_eastern_supply
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = 20
+   }
+   add_equipment_to_stockpile = {
+    type = convoy_1
+    amount = 10
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_japanese_note
+  }
+  prerequisite = {
+   focus = BLV_war_plans
+  }
+  x = 54
+  y = 8
+ }
+ focus = {
+  id = BLV_song_records
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_audit
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = SEN_survey_done
+   add_to_variable = {
+    SEN_readiness = 20
+   }
+   BLV_refresh = yes
+  }
+  x = 62
+  y = 2
+ }
+ focus = {
+  id = BLV_instruments
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_song_records
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = SEN_laboratory_done
+   add_to_variable = {
+    SEN_science = 15
+   }
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   BLV_refresh = yes
+  }
+  x = 62
+  y = 3
+ }
+ focus = {
+  id = BLV_malta_license
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  available = {
+   has_global_flag = SEN_tesla_alive
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_license = yes
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_instruments
+  }
+  prerequisite = {
+   focus = BLV_letters_open
+   focus = BLV_letters_sealed
+  }
+  x = 62
+  y = 5
+ }
+ focus = {
+  id = BLV_ungudja
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_malta_license
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  available = {
+   date > 1893.4.11
+  }
+  completion_reward = {
+   BLV_review_ungudja = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_ungudja_file
+  }
+  x = 62
+  y = 6
+ }
+ focus = {
+  id = BLV_clinical_rules
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_ungudja
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_science = 10
+   }
+   set_country_flag = BLV_clinical_review
+   BLV_refresh = yes
+  }
+  x = 62
+  y = 7
+ }
+ focus = {
+  id = BLV_serum_contract
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_clinical_rules
+  }
+  mutually_exclusive = {
+   focus = BLV_ethical_research
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  available = {
+   date > 1893.6.27
+  }
+  completion_reward = {
+   BLV_apply_serum_contract = yes
+   BLV_refresh = yes
+  }
+  x = 60
+  y = 8
+ }
+ focus = {
+  id = BLV_ethical_research
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_clinical_rules
+  }
+  mutually_exclusive = {
+   focus = BLV_serum_contract
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  available = {
+   date > 1893.6.27
+  }
+  completion_reward = {
+   BLV_apply_ethical_research = yes
+   BLV_refresh = yes
+  }
+  x = 64
+  y = 8
+ }
+ focus = {
+  id = BLV_calibration
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  available = {
+   date > 1894.7.19
+   BLV_tesla_access = yes
+  }
+  completion_reward = {
+   BLV_apply_calibration = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_calibrated
+  }
+  prerequisite = {
+   focus = BLV_clinical_rules
+  }
+  prerequisite = {
+   focus = BLV_serum_contract
+   focus = BLV_ethical_research
+  }
+  x = 62
+  y = 9
+ }
+ focus = {
+  id = BLV_research_school
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = BLV_calibration
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = BLV_measurement_school_spirit
+   add_tech_bonus = {
+    name = BLV_research
+    bonus = 0.5
+    uses = 1
+    category = industry
+   }
+   BLV_refresh = yes
+  }
+  x = 62
+  y = 10
+ }
+ focus = {
+  id = BLV_greenland_watch
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_hamilton
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_security = 10
+   }
+   add_to_variable = {
+    SEN_readiness = 10
+   }
+   BLV_refresh = yes
+  }
+  x = 72
+  y = 4
+ }
+ focus = {
+  id = BLV_arctic_depots
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_greenland_watch
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_readiness = 20
+   }
+   add_to_variable = {
+    BLV_reserve = -10
+   }
+   BLV_refresh = yes
+  }
+  x = 70
+  y = 5
+ }
+ focus = {
+  id = BLV_russian_note
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  available = {
+   country_exists = A06
+   NOT = {
+    has_war_with = A06
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_russia = yes
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_greenland_watch
+  }
+  x = 74
+  y = 5
+ }
+ focus = {
+  id = BLV_scientific_cargo
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_security = 20
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_arctic_depots
+  }
+  prerequisite = {
+   focus = BLV_russian_note
+  }
+  x = 72
+  y = 6
+ }
+ focus = {
+  id = BLV_polar_mandate
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_scientific_cargo
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  available = {
+   date > 1896.8.4
+  }
+  completion_reward = {
+   BLV_request_polar_policy = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_polar_decided
+  }
+  x = 72
+  y = 7
+ }
+ focus = {
+  id = BLV_archive
+  icon = GFX_goal_generic_intelligence_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_polar_mandate
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_science = 10
+   }
+   set_country_flag = BLV_archive_ready
+   BLV_refresh = yes
+  }
+  x = 72
+  y = 8
+ }
+ focus = {
+  id = BLV_remember_home
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_research_school
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_political_power = 30
+   set_country_flag = BLV_return_open
+   BLV_refresh = yes
+  }
+  x = 78
+  y = 11
+ }
+ focus = {
+  id = BLV_coastal_trials
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_remember_home
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_readiness = 15
+   }
+   BLV_refresh = yes
+  }
+  x = 78
+  y = 12
+ }
+ focus = {
+  id = BLV_long_range
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_coastal_trials
+  }
+  available = {
+   date > 1899.12.31
+   BLV_tesla_access = yes
+   BLV_artifact_access = yes
+   check_variable = {
+    SEN_science > 59
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_prototype_open
+   custom_effect_tooltip = BLV_prototype_tt
+   BLV_refresh = yes
+  }
+  x = 78
+  y = 13
+ }
+ focus = {
+  id = BLV_pioneer_station
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_long_range
+  }
+  available = {
+   has_country_flag = SEN_advanced_knowledge
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = BLV_station_open
+   custom_effect_tooltip = BLV_station_tt
+   BLV_refresh = yes
+  }
+  x = 78
+  y = 14
+ }
+ focus = {
+  id = BLV_tesla_patents
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  prerequisite = {
+   focus = BLV_calibration
+  }
+  available = {
+   date > 1894.10.24
+   has_country_flag = BLV_calibrated
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_patent_policy = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_patents_decided
+  }
+  x = 66
+  y = 10
+ }
+ focus = {
+  id = BLV_ship_suppressors
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  available = {
+   date > 1895.5.19
+   has_country_flag = BLV_calibrated
+   BLV_tesla_access = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_installation_policy = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_installation_decided
+  }
+  prerequisite = {
+   focus = BLV_tesla_patents
+  }
+  x = 66
+  y = 11
+ }
+ focus = {
+  id = BLV_airship_service
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  available = {
+   date > 1896.5.19
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_airship_policy = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_airships_decided
+  }
+  prerequisite = {
+   focus = BLV_amphibious_staff
+  }
+  x = 46
+  y = 11
+ }
+ focus = {
+  id = BLV_crowns_council
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  prerequisite = {
+   focus = BLV_hamilton
+  }
+  available = {
+   date > 1896.12.9
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   BLV_request_crowns_policy = yes
+   BLV_refresh = yes
+  }
+  bypass = {
+   has_country_flag = BLV_crowns_decided
+  }
+  x = 20
+  y = 11
+ }
+ focus = {
+  id = BLV_budget_subscriptions
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = 8
+   }
+   add_to_variable = {
+    BLV_cohesion = 3
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_audit
+  }
+  mutually_exclusive = {
+   focus = BLV_budget_advance
+  }
+  x = 18
+  y = 2
+ }
+ focus = {
+  id = BLV_budget_advance
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   WTC_initialize_effect = yes
+   add_to_variable = {
+    WTC_debt = 8
+   }
+   add_to_variable = {
+    BLV_reserve = 18
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_audit
+  }
+  mutually_exclusive = {
+   focus = BLV_budget_subscriptions
+  }
+  x = 22
+  y = 2
+ }
+ focus = {
+  id = BLV_yards_state
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_reserve = 8
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_engine_rooms
+  }
+  mutually_exclusive = {
+   focus = BLV_yards_contracts
+  }
+  x = 36
+  y = 5
+ }
+ focus = {
+  id = BLV_yards_contracts
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 35
+   navy_experience = 4
+  }
+  prerequisite = {
+   focus = BLV_engine_rooms
+  }
+  mutually_exclusive = {
+   focus = BLV_yards_state
+  }
+  x = 40
+  y = 5
+ }
+ focus = {
+  id = BLV_rotation_medical
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_to_variable = {
+    BLV_cohesion = 4
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_rotation
+  }
+  mutually_exclusive = {
+   focus = BLV_rotation_depots
+  }
+  x = 44
+  y = 6
+ }
+ focus = {
+  id = BLV_rotation_depots
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   army_experience = 8
+   add_to_variable = {
+    BLV_reserve = 5
+   }
+   BLV_refresh = yes
+  }
+  prerequisite = {
+   focus = BLV_rotation
+  }
+  mutually_exclusive = {
+   focus = BLV_rotation_medical
+  }
+  x = 48
+  y = 6
+ }
+ focus = {
+  id = BLV_letters_open
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_science = 4
+   }
+  }
+  prerequisite = {
+   focus = BLV_instruments
+  }
+  mutually_exclusive = {
+   focus = BLV_letters_sealed
+  }
+  x = 60
+  y = 4
+ }
+ focus = {
+  id = BLV_letters_sealed
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_to_variable = {
+    SEN_security = 6
+   }
+  }
+  prerequisite = {
+   focus = BLV_instruments
+  }
+  mutually_exclusive = {
+   focus = BLV_letters_open
+  }
+  x = 64
+  y = 4
+ }
+}

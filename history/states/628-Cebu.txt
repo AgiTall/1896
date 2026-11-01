@@ -25,5 +25,5 @@ state = {
   12153
  }
  local_supplies = 6.0
- manpower = 2876194
+ manpower = 1732614
 }

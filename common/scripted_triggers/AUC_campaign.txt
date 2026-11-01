@@ -1,0 +1,24 @@
+AUC_approval_AVC = { country_exists = AVC has_country_flag = AUC_vote_AVC AVC = { has_country_flag = AUC_join_authorized AUC_can_negotiate = yes } }
+AUC_approval_AQL = { country_exists = AQL has_country_flag = AUC_vote_AQL AQL = { has_country_flag = AUC_join_authorized AUC_can_negotiate = yes } }
+AUC_approval_ASA = { country_exists = ASA has_country_flag = AUC_vote_ASA ASA = { has_country_flag = AUC_join_authorized AUC_can_negotiate = yes } }
+AUC_approval_AWA = { country_exists = AWA has_country_flag = AUC_vote_AWA AWA = { has_country_flag = AUC_join_authorized AUC_can_negotiate = yes } }
+AUC_approval_ATA = { country_exists = ATA has_country_flag = AUC_vote_ATA ATA = { has_country_flag = AUC_join_authorized AUC_can_negotiate = yes } }
+AUC_can_negotiate = {
+ country_exists = A07 has_war = no has_capitulated = no
+ NOT = { has_war_with = A07 }
+ OR = { is_subject = no is_subject_of = A02 }
+ A07 = { has_war = no has_capitulated = no OR = { is_subject = no is_subject_of = A02 } }
+ OR = { is_in_faction = no is_in_faction_with = A07 AND = { is_subject_of = A02 is_in_faction_with = A02 A07 = { has_country_flag = AUC_british_charter } } }
+}
+AUC_two_approvals = { count_triggers = { amount > 1
+AUC_approval_AVC = yes
+AUC_approval_AQL = yes
+AUC_approval_ASA = yes
+AUC_approval_AWA = yes
+AUC_approval_ATA = yes
+} }
+AUC_owns_australia = { 285 = { is_owned_by = ROOT is_controlled_by = ROOT } 517 = { is_owned_by = ROOT is_controlled_by = ROOT } 521 = { is_owned_by = ROOT is_controlled_by = ROOT } 872 = { is_owned_by = ROOT is_controlled_by = ROOT } 873 = { is_owned_by = ROOT is_controlled_by = ROOT } 1075 = { is_owned_by = ROOT is_controlled_by = ROOT } 519 = { is_owned_by = ROOT is_controlled_by = ROOT } 520 = { is_owned_by = ROOT is_controlled_by = ROOT } 674 = { is_owned_by = ROOT is_controlled_by = ROOT } 522 = { is_owned_by = ROOT is_controlled_by = ROOT } 870 = { is_owned_by = ROOT is_controlled_by = ROOT } 871 = { is_owned_by = ROOT is_controlled_by = ROOT } 1074 = { is_owned_by = ROOT is_controlled_by = ROOT } 518 = { is_owned_by = ROOT is_controlled_by = ROOT } }
+
+AUC_holds_owned_states = { tag = A07 all_owned_state = { is_controlled_by = A07 } owns_state = 285 }
+
+AUC_can_form_federation = { AUC_two_approvals = yes OR = { AND = { has_country_flag = AUC_british_charter OR = { is_subject = no is_subject_of = A02 } } AND = { is_subject = no count_triggers = { amount > 1 AND = { AUC_approval_AVC = yes AVC = { is_subject = no } } AND = { AUC_approval_AQL = yes AQL = { is_subject = no } } AND = { AUC_approval_ASA = yes ASA = { is_subject = no } } AND = { AUC_approval_AWA = yes AWA = { is_subject = no } } AND = { AUC_approval_ATA = yes ATA = { is_subject = no } } } } } }

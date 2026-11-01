@@ -1,0 +1,9 @@
+ideas = { country = {
+JPD_standardized_industry = { picture = jpc_credit removal_cost = -1 modifier = { industrial_capacity_factory = 0.05 production_speed_dockyard_factor = 0.05 } }
+JPD_sustainable_finance = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = -0.03 } }
+JPD_industrial_economy = { picture = jpc_credit removal_cost = -1 modifier = { industrial_capacity_factory = 0.08 production_factory_max_efficiency_factor = 0.05 research_speed_factor = 0.03 } }
+JPD_professional_supply = { picture = jpc_fleet removal_cost = -1 modifier = { supply_consumption_factor = -0.05 army_org_factor = 0.05 } }
+JPD_oceanic_service = { picture = jpc_fleet removal_cost = -1 modifier = { naval_supply_consumption_factor = -0.08 navy_org_factor = 0.05 } }
+JPD_permanent_staff = { picture = jpc_fleet removal_cost = -1 modifier = { supply_consumption_factor = -0.05 naval_coordination = 0.08 } }
+JPD_settled_government = { picture = jpc_fleet removal_cost = -1 modifier = { political_power_gain = 0.10 stability_factor = 0.05 } }
+} }

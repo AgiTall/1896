@@ -1,0 +1,43 @@
+sub_units = {
+
+	machine_gun_company = {
+		abbreviation = "MG"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 1198
+		ai_priority = 100
+		active = no
+		affects_speed = no
+		is_artillery_brigade = no
+		
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+		allowed_battalion_groups = { infantry mobile }
+		
+		categories = {
+			category_regimental_support_battalions
+			category_army
+			category_machine_gun
+		}
+
+		divisional = no
+		combat_width = 0
+
+		manpower = 180
+		need = {
+			machine_gun_equipment = 24
+		}
+		
+		max_strength = 0.6
+		max_organisation = 0
+		default_morale = 0.1
+		training_time = 120
+		weight = 0.5
+		supply_consumption = 0.1
+		
+	}
+}

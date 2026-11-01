@@ -1,0 +1,209 @@
+focus_tree = {
+ id = WTN_PHI_focus
+ country = {
+  factor = 0
+  modifier = {
+   add = 100
+   tag = PLS
+  }
+ }
+ default = no
+ continuous_focus_position = {
+  x = 100
+  y = 1900
+ }
+ focus = {
+  id = WTN_PHI_council
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTC_initialize_effect = yes
+   add_political_power = 45
+  }
+  x = 4
+  y = 0
+ }
+ focus = {
+  id = WTN_PHI_accounts
+  icon = GFX_goal_generic_political_pressure
+  cost = 5
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTC_initialize_effect = yes
+   add_to_variable = {
+    WTC_debt = -5
+   }
+   WTC_refresh_effect = yes
+  }
+  prerequisite = {
+   focus = WTN_PHI_focus_mandate_public
+   focus = WTN_PHI_focus_mandate_delegated
+  }
+  x = 4
+  y = 2
+ }
+ focus = {
+  id = WTN_PHI_own_resources
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = WTN_PHI_accounts
+  }
+  mutually_exclusive = {
+   focus = WTN_PHI_chamber_channel
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTC_initialize_effect = yes
+   add_to_variable = {
+    WTC_debt = -10
+   }
+   WTC_refresh_effect = yes
+   add_stability = -0.02
+   add_timed_idea = {
+    idea = WTN_domestic_workshops
+    days = 240
+   }
+  }
+  x = 2
+  y = 3
+ }
+ focus = {
+  id = WTN_PHI_chamber_channel
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = WTN_PHI_accounts
+  }
+  mutually_exclusive = {
+   focus = WTN_PHI_own_resources
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = WTN_compact_desk_open
+   custom_effect_tooltip = WTN_open_compact_tt
+  }
+  x = 8
+  y = 3
+ }
+ focus = {
+  id = WTN_PHI_local_service
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  prerequisite = {
+   focus = WTN_PHI_own_resources
+   focus = WTN_PHI_chamber_channel
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_island_contract
+    days = 240
+   }
+   WTN_local_workshops_effect = yes
+  }
+  x = 4
+  y = 4
+ }
+ focus = {
+  id = WTN_PHI_programme_1
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = WTN_PHI_local_service
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = WTN_relations_open
+   custom_effect_tooltip = WTN_open_relations_tt
+  }
+  x = 4
+  y = 5
+ }
+ focus = {
+  id = WTN_PHI_programme_2
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = WTN_PHI_programme_1
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_political_power = 40
+  }
+  x = 4
+  y = 6
+ }
+ focus = {
+  id = WTN_PHI_programme_3
+  icon = GFX_goal_generic_navy_doctrines_tactics
+  cost = 5
+  prerequisite = {
+   focus = WTN_PHI_programme_2
+  }
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = WTN_local_services
+   WTN_local_workshops_effect = yes
+  }
+  x = 4
+  y = 7
+ }
+ focus = {
+  id = WTN_PHI_focus_mandate_public
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_political_power = 20
+  }
+  prerequisite = {
+   focus = WTN_PHI_council
+  }
+  mutually_exclusive = {
+   focus = WTN_PHI_focus_mandate_delegated
+  }
+  x = 2
+  y = 1
+ }
+ focus = {
+  id = WTN_PHI_focus_mandate_delegated
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 40
+  }
+  prerequisite = {
+   focus = WTN_PHI_council
+  }
+  mutually_exclusive = {
+   focus = WTN_PHI_focus_mandate_public
+  }
+  x = 6
+  y = 1
+ }
+}

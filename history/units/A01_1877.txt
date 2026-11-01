@@ -1,4 +1,4 @@
-# Large formations: 16+3 marines (41w), 16+4 KNIL (44w), 12+2 reserve (30w).
+# TGWR field guns use 2 width: 16+3 marines (38w), 16+4 KNIL (40w), 12+2 reserve (28w).
 division_template = {
  name = "Batavische Mariniers"
  regiments = {
@@ -18,9 +18,9 @@ division_template = {
   marine = { x = 3 y = 1 }
   marine = { x = 3 y = 2 }
   marine = { x = 3 y = 3 }
-  artillery_brigade = { x = 4 y = 0 }
-  artillery_brigade = { x = 4 y = 1 }
-  artillery_brigade = { x = 4 y = 2 }
+  field_gun_brigade = { x = 4 y = 0 }
+  field_gun_brigade = { x = 4 y = 1 }
+  field_gun_brigade = { x = 4 y = 2 }
  }
  priority = 2
 }
@@ -43,10 +43,10 @@ division_template = {
   infantry = { x = 3 y = 1 }
   infantry = { x = 3 y = 2 }
   infantry = { x = 3 y = 3 }
-  artillery_brigade = { x = 4 y = 0 }
-  artillery_brigade = { x = 4 y = 1 }
-  artillery_brigade = { x = 4 y = 2 }
-  artillery_brigade = { x = 4 y = 3 }
+  field_gun_brigade = { x = 4 y = 0 }
+  field_gun_brigade = { x = 4 y = 1 }
+  field_gun_brigade = { x = 4 y = 2 }
+  field_gun_brigade = { x = 4 y = 3 }
  }
  priority = 1
 }
@@ -65,8 +65,8 @@ division_template = {
   infantry = { x = 2 y = 1 }
   infantry = { x = 2 y = 2 }
   infantry = { x = 2 y = 3 }
-  artillery_brigade = { x = 4 y = 0 }
-  artillery_brigade = { x = 4 y = 1 }
+  field_gun_brigade = { x = 4 y = 0 }
+  field_gun_brigade = { x = 4 y = 1 }
  }
  priority = 0
 }

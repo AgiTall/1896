@@ -1,0 +1,16 @@
+units = { fleet = { name = "Leviathan Atlantic Fleet" naval_base = 13010 task_force = { name = "Atlantic Squadron" location = 13010
+ship = { name = "HMS Royal Sovereign" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = A02 version_name = "Leviathan Ironclad" } } }
+ship = { name = "HMS Hood" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = A02 version_name = "Leviathan Ironclad" } } }
+ship = { name = "HMS Blake" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A02 version_name = "Leviathan Cruiser" } } }
+ship = { name = "HMS Blenheim" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A02 version_name = "Leviathan Cruiser" } } }
+ship = { name = "HMS Edgar" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A02 version_name = "Leviathan Cruiser" } } }
+ship = { name = "HMS Royal Arthur" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = A02 version_name = "Leviathan Cruiser" } } }
+ship = { name = "HMS Lightning" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+ship = { name = "HMS Decoy" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+ship = { name = "HMS Havock" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+ship = { name = "HMS Hornet" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+ship = { name = "HMS Ferret" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+ship = { name = "HMS Lynx" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+ship = { name = "HMS Boxer" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+ship = { name = "HMS Rocket" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = A02 version_name = "Leviathan Escort" } } }
+} } }

@@ -1,5 +1,5 @@
 A10_ensure_confederation_faction = {
- if = { limit = { NOT = { is_in_faction = yes } }
+ if = { limit = { is_subject = no NOT = { is_in_faction = yes } }
   create_faction_from_template = A10_confederation_template
  }
 }

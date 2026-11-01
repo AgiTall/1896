@@ -1,0 +1,4 @@
+on_actions = {
+ on_startup = { effect = { A10 = { if = { limit = { exists = yes } A10R_initialize = yes A10R_refresh = yes } } } }
+ on_monthly = { effect = { if = { limit = { tag = A10 exists = yes has_capitulated = no } A10R_monthly = yes } } }
+}

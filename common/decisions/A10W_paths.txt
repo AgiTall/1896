@@ -1,0 +1,80 @@
+A10W_charter_book = {
+ A10W_renew_oath = {
+  icon = generic_political_discourse cost = 50 days_re_enable = 180
+  visible = { NOT = { has_country_flag = A10W_oath_accepted } }
+  available = { A10W_chamber_reachable = yes NOT = { has_country_flag = A10W_oath_pending } NOT = { has_country_flag = A10W_oath_retry_cooldown } }
+  complete_effect = { A10W_request_oath_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_renew_colonial_convention = {
+  icon = generic_political_discourse cost = 75 days_re_enable = 180
+  visible = { has_completed_focus = A10W_colony NOT = { has_country_flag = A10W_colony_ratified } }
+  available = { A10W_colony_eligible = yes NOT = { has_country_flag = A10W_colony_pending } NOT = { has_country_flag = A10W_convention_cooldown } }
+  complete_effect = { clr_country_flag = A10W_colony_refused A10W_request_colony_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_renew_metropolitan_convention = {
+  icon = generic_political_discourse cost = 100 days_re_enable = 180
+  visible = { has_completed_focus = A10W_new_metropole NOT = { has_country_flag = A10W_metropole_ratified } }
+  available = { A10W_metropole_eligible = yes NOT = { has_country_flag = A10W_metropole_pending } NOT = { has_country_flag = A10W_convention_cooldown } }
+  complete_effect = { clr_country_flag = A10W_metropole_refused A10W_request_metropole_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_public_accounts = {
+  icon = generic_political_discourse cost = 60 days_re_enable = 120
+  available = { has_completed_focus = A10W_creditors_register check_variable = { WTC_debt > 4 } }
+  complete_effect = { add_to_variable = { WTC_debt = -5 } add_to_variable = { A10W_charter_tension = -5 } WTC_refresh_effect = yes A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_port_arbitration = {
+  icon = generic_political_discourse cost = 45 days_re_enable = 60
+  available = { check_variable = { A10W_charter_tension > 9 } }
+  complete_effect = { add_to_variable = { A10W_charter_tension = -12 } A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 modifier = { factor = 3 check_variable = { A10W_charter_tension > 59 } } }
+ }
+ A10W_fund_harbour_hospitals = {
+  icon = generic_political_discourse cost = 75 days_re_enable = 180
+  available = { has_completed_focus = A10W_local_shareholding check_variable = { A10W_charter_tension > 14 } }
+  complete_effect = { add_to_variable = { A10W_charter_tension = -20 } add_stability = 0.02 add_timed_idea = { idea = A10W_emergency_mediation days = 90 } A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_customs_advance = {
+  icon = generic_political_discourse cost = 35 days_re_enable = 180
+  available = { has_completed_focus = A10W_bonded_warehouses A10W_chamber_reachable = yes has_country_flag = A10W_oath_accepted check_variable = { WTC_debt < 65 } }
+  complete_effect = { add_to_variable = { WTC_debt = 12 } add_to_variable = { A10W_charter_tension = 10 } add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = A04 } WTC_refresh_effect = yes A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 modifier = { factor = 0 has_equipment = { convoy_1 > 29 } } }
+ }
+ A10W_local_bond_sale = {
+  icon = generic_political_discourse cost = 50 days_re_enable = 180
+  available = { has_completed_focus = A10W_local_shareholding check_variable = { WTC_debt > 7 } }
+  complete_effect = { add_to_variable = { WTC_debt = -8 } add_to_variable = { A10W_charter_tension = 10 } add_timed_idea = { idea = A10W_emergency_mediation days = 120 } WTC_refresh_effect = yes A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 modifier = { factor = 0 check_variable = { A10W_charter_tension > 59 } } }
+ }
+ A10W_move_exchange_to_manila = {
+  icon = generic_political_discourse cost = 100 fire_only_once = yes
+  visible = { has_country_flag = A10W_metropole_ratified has_country_flag = A10W_temporary_exchange }
+  available = { owns_state = 327 controls_state = 327 has_war = no is_subject = no }
+  complete_effect = { A10W_locate_exchange_effect = yes add_stability = 0.03 add_to_variable = { A10W_charter_tension = -10 } A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_underwriting_reserve = {
+  icon = generic_political_discourse cost = 60 days_re_enable = 180
+  visible = { has_completed_focus = A10W_oceanic_covenant }
+  available = { NOT = { has_idea = WTC_silver_convoy } check_variable = { WTC_debt < 85 } }
+  complete_effect = { add_timed_idea = { idea = WTC_silver_convoy days = 180 } add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_constabulary_drill = {
+  icon = generic_political_discourse cost = 45 days_re_enable = 120
+  available = { has_completed_focus = A10W_charter_constabulary has_equipment = { infantry_equipment > 199 } }
+  complete_effect = { add_equipment_to_stockpile = { type = infantry_equipment amount = -200 } add_command_power = 10 army_experience = 8 add_to_variable = { A10W_charter_tension = -5 } A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ A10W_cable_school = {
+  icon = generic_political_discourse cost = 60 days_re_enable = 180
+  visible = { has_completed_focus = A10W_duplicate_cables }
+  available = { NOT = { has_idea = WTC_technocratic_credit } }
+  complete_effect = { add_timed_idea = { idea = WTC_technocratic_credit days = 180 } add_to_variable = { A10W_charter_tension = -5 } A10W_refresh_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+}

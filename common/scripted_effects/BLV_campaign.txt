@@ -1,0 +1,201 @@
+BLV_initialize = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_initialized } }
+ set_country_flag = BLV_initialized set_variable = { BLV_reserve = 55 } set_variable = { BLV_cohesion = 50 }
+ set_variable = { BLV_admiralty = 2 } set_variable = { BLV_crown = 2 } set_variable = { BLV_delegates = 2 }
+ WTC_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = SEN_initialized } } set_country_flag = SEN_initialized set_variable = { SEN_science = 0 } set_variable = { SEN_readiness = 0 } set_variable = { SEN_security = 20 } set_variable = { SEN_exposure = 0 } }
+ if = { limit = { NOT = { has_global_flag = SEN_world_initialized } }
+  set_global_flag = SEN_world_initialized
+  if = { limit = { NOT = { has_global_flag = SEN_tesla_lost } }
+   set_global_flag = SEN_tesla_alive
+   if = { limit = { NOT = { any_country = { has_country_flag = SEN_tesla_host } } }
+    if = { limit = { country_exists = MLT } MLT = { set_country_flag = SEN_tesla_host } 116 = { set_state_flag = SEN_tesla_site } }
+    else = { set_country_flag = SEN_tesla_host capital_scope = { set_state_flag = SEN_tesla_site } }
+   }
+  }
+ }
+}
+BLV_initialize_fleet = yes
+BLV_refresh = yes
+}
+
+BLV_refresh = {
+if = { limit = { tag = A02 has_country_flag = BLV_initialized }
+ hidden_effect = {
+  clamp_variable = { var = BLV_reserve min = 0 max = 100 } clamp_variable = { var = BLV_cohesion min = 0 max = 100 }
+  clamp_variable = { var = BLV_admiralty min = 0 max = 10 } clamp_variable = { var = BLV_crown min = 0 max = 10 } clamp_variable = { var = BLV_delegates min = 0 max = 10 }
+  clamp_variable = { var = SEN_science min = 0 max = 100 } clamp_variable = { var = SEN_readiness min = 0 max = 100 } clamp_variable = { var = SEN_security min = 0 max = 100 } clamp_variable = { var = SEN_exposure min = 0 max = 100 }
+ }
+ if = { limit = { check_variable = { BLV_reserve < 20 } } add_ideas = BLV_supply_crisis_spirit } else = { remove_ideas = BLV_supply_crisis_spirit }
+ if = { limit = { check_variable = { BLV_cohesion < 25 } } add_ideas = BLV_imperial_strain_spirit } else = { remove_ideas = BLV_imperial_strain_spirit }
+ if = { limit = { BLV_oil_live = yes } add_ideas = BLV_oil_contract_spirit } else = { remove_ideas = BLV_oil_contract_spirit }
+}
+}
+
+BLV_monthly = {
+if = { limit = { BLV_is_britain = yes has_country_flag = BLV_initialized }
+ if = { limit = { has_country_flag = BLV_regular_budget } add_to_variable = { BLV_reserve = -1 } } else = { add_to_variable = { BLV_reserve = -2 } }
+ if = { limit = { has_country_flag = BLV_depots_ready } add_to_variable = { BLV_reserve = 2 } }
+ if = { limit = { check_variable = { BLV_reserve < 20 } } add_to_variable = { BLV_cohesion = -3 } }
+ else_if = { limit = { check_variable = { BLV_reserve > 49 } } add_to_variable = { BLV_cohesion = 1 } }
+ if = { limit = { has_country_flag = BLV_hard_empire has_war = yes } add_to_variable = { BLV_cohesion = -1 } }
+ if = { limit = { BLV_oil_live = yes } add_fuel = 3000 }
+ if = { limit = { has_country_flag = SEN_return_done } add_to_variable = { BLV_reserve = -2 } add_to_variable = { SEN_exposure = 2 } }
+ if = { limit = { check_variable = { BLV_reserve < 10 } NOT = { has_country_flag = BLV_crisis_cooldown } }
+  set_country_flag = { flag = BLV_crisis_cooldown days = 180 } country_event = { id = blv_campaign.4 days = 1 }
+ }
+ BLV_refresh = yes
+}
+}
+
+BLV_open_council = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_council_open } }
+ set_country_flag = BLV_council_open set_country_flag = { flag = BLV_debate_pending days = 210 }
+ country_event = { id = blv_campaign.1 days = 1 } country_event = { id = blv_campaign.2 days = 180 }
+}
+}
+
+BLV_extend_debate = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_path_chosen } }
+ add_stability = -0.03 set_country_flag = { flag = BLV_debate_pending days = 210 } country_event = { id = blv_campaign.2 days = 180 }
+}
+}
+
+BLV_choose_admiralty = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_path_chosen } }
+ set_country_flag = BLV_path_chosen set_country_flag = BLV_admiralty_path clr_country_flag = BLV_debate_pending
+ remove_ideas = PZ_british_admiralty add_ideas = BLV_admiralty_spirit
+ 
+}
+}
+
+BLV_choose_constitution = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_path_chosen } }
+ set_country_flag = BLV_path_chosen set_country_flag = BLV_constitution_path clr_country_flag = BLV_debate_pending
+ remove_ideas = PZ_british_admiralty add_ideas = BLV_constitution_spirit
+ if = { limit = { has_character = A02_canon_leader }
+ add_country_leader_role = { character = A02_canon_leader promote_leader = yes country_leader = { ideology = conservatism expire = "1965.1.1.1" traits = { } } }
+} set_popularities = { democratic = 65 neutrality = 35 } set_politics = { ruling_party = democratic elections_allowed = yes }
+}
+}
+
+BLV_choose_crown = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_path_chosen } }
+ set_country_flag = BLV_path_chosen set_country_flag = BLV_crown_path clr_country_flag = BLV_debate_pending
+ remove_ideas = PZ_british_admiralty add_ideas = BLV_crown_spirit
+ 
+}
+}
+
+BLV_recognise_australia = {
+if = { limit = { BLV_is_britain = yes country_exists = A07 NOT = { has_war_with = A07 } A07 = { is_subject_of = A02 has_country_flag = AUC_commonwealth_proclaimed } }
+ set_autonomy = { target = A07 autonomy_state = autonomy_free end_wars = no end_civil_wars = no }
+ A07 = { set_country_flag = AUC_sovereignty_recognized clr_country_flag = AUC_sovereignty_pending if = { limit = { is_in_faction_with = A02 } leave_faction = yes } country_event = { id = auc_campaign.4 days = 1 } }
+ add_to_variable = { BLV_cohesion = 5 }
+}
+}
+
+BLV_request_oil = {
+if = { limit = { BLV_is_britain = yes country_exists = A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = BLV_oil_pending } }
+ set_country_flag = { flag = BLV_oil_pending days = 45 } A01 = { country_event = { id = blv_campaign.5 days = 1 } }
+}
+}
+
+BLV_request_philippines = {
+if = { limit = { BLV_is_britain = yes country_exists = A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = BLV_philippines_pending } }
+ set_country_flag = { flag = BLV_philippines_pending days = 45 } A10 = { country_event = { id = blv_campaign.6 days = 1 } }
+}
+}
+
+BLV_request_navigation = {
+if = { limit = { BLV_is_britain = yes country_exists = A03 NOT = { has_war_with = A03 } NOT = { has_country_flag = BLV_navigation_pending } }
+ set_country_flag = { flag = BLV_navigation_pending days = 45 } A03 = { country_event = { id = blv_campaign.7 days = 1 } }
+}
+}
+
+BLV_request_russia = {
+if = { limit = { BLV_is_britain = yes country_exists = A06 NOT = { has_war_with = A06 } NOT = { has_country_flag = BLV_russia_pending } }
+ set_country_flag = { flag = BLV_russia_pending days = 45 } A06 = { country_event = { id = blv_campaign.8 days = 1 } }
+}
+}
+
+BLV_request_license = {
+if = { limit = { BLV_license_possible = yes }
+ set_country_flag = { flag = BLV_license_pending days = 45 }
+ every_country = { limit = { has_country_flag = SEN_tesla_host has_capitulated = no NOT = { has_war_with = A02 } } country_event = { id = blv_campaign.9 days = 1 } }
+}
+}
+
+BLV_raise_guard = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_guard_raised } 696 = { is_owned_by = A02 is_controlled_by = A02 } }
+ set_country_flag = BLV_guard_raised load_oob = BLV_campaign_guard army_experience = 10
+}
+}
+
+BLV_finish_excavation = {
+if = { limit = { has_country_flag = BLV_excavation_active BLV_excavation_requirements = yes }
+ BLV_claim_artifact = yes add_to_variable = { BLV_reserve = -5 } BLV_refresh = yes
+} clr_country_flag = BLV_excavation_active
+}
+
+BLV_finish_decode = {
+if = { limit = { has_country_flag = BLV_decode_active BLV_decode_requirements = yes }
+ set_country_flag = BLV_decoded set_country_flag = SEN_spectral_copy add_to_variable = { SEN_science = 25 } add_to_variable = { BLV_reserve = -5 } BLV_refresh = yes
+} clr_country_flag = BLV_decode_active
+}
+
+BLV_finish_prototype = {
+if = { limit = { has_country_flag = BLV_prototype_active BLV_prototype_requirements = yes }
+ set_country_flag = SEN_advanced_knowledge add_ideas = BLV_prototype_spirit add_to_variable = { BLV_reserve = -5 } BLV_refresh = yes
+} clr_country_flag = BLV_prototype_active
+}
+
+BLV_finish_station = {
+if = { limit = { has_country_flag = BLV_station_active BLV_station_requirements = yes }
+ set_country_flag = SEN_return_done add_ideas = BLV_coastal_station_spirit add_to_variable = { BLV_reserve = -5 } BLV_refresh = yes
+} clr_country_flag = BLV_station_active
+}
+
+BLV_claim_artifact = {
+if = { limit = { BLV_is_britain = yes 101 = { is_owned_by = A02 is_controlled_by = A02 } NOT = { has_global_flag = SEN_artifact_found } NOT = { has_global_flag = SEN_artifact_destroyed } }
+ every_country = { clr_country_flag = SEN_artifact_holder }
+ every_state = { limit = { has_state_flag = SEN_artifact_site } clr_state_flag = SEN_artifact_site }
+ set_global_flag = SEN_artifact_found set_country_flag = SEN_artifact_holder 101 = { set_state_flag = SEN_artifact_site }
+ add_to_variable = { SEN_science = 10 } country_event = { id = blv_campaign.11 days = 1 }
+}
+}
+
+BLV_custody = {
+if = { limit = { has_global_flag = SEN_artifact_found NOT = { has_global_flag = SEN_artifact_destroyed } }
+ every_state = { limit = { has_state_flag = SEN_artifact_site }
+  controller = { if = { limit = { exists = yes NOT = { tag = ZZZ } NOT = { has_country_flag = SEN_artifact_holder } }
+   every_country = { clr_country_flag = SEN_artifact_holder } set_country_flag = SEN_artifact_holder
+  } }
+ }
+}
+if = { limit = { has_global_flag = SEN_tesla_alive }
+ every_state = { limit = { has_state_flag = SEN_tesla_site }
+  controller = { if = { limit = { exists = yes NOT = { tag = ZZZ } NOT = { has_country_flag = SEN_tesla_host } }
+   every_country = { clr_country_flag = SEN_tesla_host } set_country_flag = SEN_tesla_host
+  } }
+ }
+}
+}
+
+BLV_initialize_fleet = {
+if = { limit = { BLV_is_britain = yes NOT = { has_country_flag = BLV_fleet_initialized } 696 = { is_owned_by = A02 is_controlled_by = A02 } }
+ set_country_flag = BLV_fleet_initialized
+ if = { limit = { has_dlc = "Man the Guns" }
+set_technology = { early_ship_hull_heavy = 1 basic_heavy_battery = 1 }
+create_equipment_variant = { name = "Leviathan Ironclad" type = ship_hull_heavy_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_heavy_battery_1 fixed_ship_anti_air_slot = empty fixed_ship_fire_control_system_slot = ship_fire_control_system_0 fixed_ship_engine_slot = heavy_ship_engine_1 fixed_ship_armor_slot = ship_armor_bb_1 front_1_custom_slot = ship_heavy_battery_1 mid_1_custom_slot = empty mid_2_custom_slot = empty rear_1_custom_slot = empty } }
+create_equipment_variant = { name = "Leviathan Cruiser" type = ship_hull_cruiser_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_medium_battery_1 fixed_ship_fire_control_system_slot = ship_fire_control_system_0 fixed_ship_engine_slot = cruiser_ship_engine_1 fixed_ship_armor_slot = ship_armor_protected_cruiser_1 fixed_ship_secondaries_slot = empty mid_1_custom_slot = empty mid_2_custom_slot = empty rear_1_custom_slot = empty } }
+create_equipment_variant = { name = "Leviathan Escort" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } }
+  load_oob = BLV_campaign_atlantic
+  if = { limit = { 1021 = { is_owned_by = A02 is_controlled_by = A02 } } load_oob = BLV_campaign_eastern } else = { load_oob = BLV_campaign_eastern_reserve }
+ } else = {
+  load_oob = BLV_campaign_atlantic_legacy
+  if = { limit = { 1021 = { is_owned_by = A02 is_controlled_by = A02 } } load_oob = BLV_campaign_eastern_legacy } else = { load_oob = BLV_campaign_eastern_reserve_legacy }
+ }
+ add_fuel = 100000
+}
+}

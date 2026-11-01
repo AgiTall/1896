@@ -1,0 +1,40 @@
+ideas = { country = {
+ WTN_british_contract = { picture = jpc_credit removal_cost = -1 modifier = { industrial_capacity_dockyard = 0.03 naval_supply_consumption_factor = -0.03 } }
+ WTN_osaka_contract = { picture = jpc_credit removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.04 } }
+ WTN_northern_contract = { picture = jpc_credit removal_cost = -1 modifier = { supply_consumption_factor = -0.03 } }
+ WTN_research_contract = { picture = jpc_credit removal_cost = -1 modifier = { research_speed_factor = 0.02 } }
+ WTN_caribbean_contract = { picture = jpc_credit removal_cost = -1 modifier = { convoy_escort_efficiency = 0.04 } }
+ WTN_colonial_contract = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_buildings_factor = 0.03 } }
+ WTN_island_contract = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_buildings_factor = 0.02 naval_coordination = 0.02 } }
+ WTN_domestic_workshops = { picture = jpc_credit removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.03 } }
+ WTN_insurance_office = { picture = jpc_credit removal_cost = -1 modifier = { political_power_gain = 0.05 } }
+ WTN_cable_office = { picture = jpc_credit removal_cost = -1 modifier = { naval_coordination = 0.03 } }
+ WTN_warden_contract = { picture = jpc_credit removal_cost = -1 modifier = { industrial_capacity_dockyard = 0.03 } }
+ WTN_solvent_accounts = { picture = jpc_credit removal_cost = -1 modifier = { stability_factor = 0.03 } }
+ WTN_guard_settlement = { picture = jpc_credit removal_cost = -1 modifier = { political_power_gain = 0.08 } }
+ WTN_technical_directorate = { picture = jpc_credit removal_cost = -1 modifier = { research_speed_factor = 0.03 } }
+ WTN_secret_accounts = { picture = jpc_credit removal_cost = -1 modifier = { political_power_gain = 0.05 naval_coordination = 0.02 } }
+ WTN_island_congress = { picture = jpc_credit removal_cost = -1 modifier = { stability_factor = 0.03 political_power_gain = 0.03 } }
+ WTN_british_stations = { picture = jpc_credit removal_cost = -1 modifier = { naval_coordination = 0.03 } }
+ WTN_northern_observatory = { picture = jpc_credit removal_cost = -1 modifier = { research_speed_factor = 0.02 } }
+ WTN_osaka_accounts = { picture = jpc_credit removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.03 } }
+ WTN_northern_stores = { picture = jpc_credit removal_cost = -1 modifier = { supply_consumption_factor = -0.02 } }
+ WTN_havana_routes = { picture = jpc_credit removal_cost = -1 modifier = { convoy_escort_efficiency = 0.03 } }
+ WTN_colonial_council = { picture = jpc_credit removal_cost = -1 modifier = { stability_factor = 0.03 } }
+ WTN_harbour_court = { picture = jpc_credit removal_cost = -1 modifier = { stability_factor = 0.03 } }
+ WTN_island_cooperation = { picture = jpc_credit removal_cost = -1 modifier = { naval_coordination = 0.02 } }
+ WTN_local_services = { picture = jpc_credit removal_cost = -1 modifier = { stability_factor = 0.02 } }
+ WTN_link_research_services = { picture = jpc_credit removal_cost = -1 modifier = { research_speed_factor = 0.02 } }
+ WTN_link_workshop_services = { picture = jpc_credit removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.02 } }
+ WTN_link_northern_services = { picture = jpc_credit removal_cost = -1 modifier = { supply_consumption_factor = -0.02 } }
+ WTN_link_fuel_services = { picture = jpc_credit removal_cost = -1 modifier = { naval_supply_consumption_factor = -0.03 } }
+ WTN_link_colonial_services = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_buildings_factor = 0.02 } }
+ WTN_link_caribbean_services = { picture = jpc_credit removal_cost = -1 modifier = { convoy_escort_efficiency = 0.02 } }
+ WTN_pact_british_services = { picture = jpc_credit removal_cost = -1 modifier = { industrial_capacity_dockyard = 0.03 naval_supply_consumption_factor = -0.03 } }
+ WTN_pact_osaka_services = { picture = jpc_credit removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.04 } }
+ WTN_pact_northern_services = { picture = jpc_credit removal_cost = -1 modifier = { supply_consumption_factor = -0.03 } }
+ WTN_pact_research_services = { picture = jpc_credit removal_cost = -1 modifier = { research_speed_factor = 0.02 } }
+ WTN_pact_caribbean_services = { picture = jpc_credit removal_cost = -1 modifier = { convoy_escort_efficiency = 0.04 } }
+ WTN_pact_colonial_services = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_buildings_factor = 0.03 } }
+ WTN_pact_island_services = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_buildings_factor = 0.02 naval_coordination = 0.02 } }
+} }

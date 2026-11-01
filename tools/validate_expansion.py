@@ -7,6 +7,7 @@ from pathlib import Path
 import copy
 import json
 import re
+from datetime import date
 
 R = Path(__file__).resolve().parents[1]
 
@@ -56,6 +57,7 @@ paths = [
 trees = {p: parse(read(p)) for p in paths}
 effects = {k: v for p in paths[:3] for k, op, v in trees[p]}
 effects.update({k: v for k, op, v in parse(read('common/scripted_effects/A01_federal_recovery.txt'))})
+effects.update({k: v for k, op, v in parse(read('common/scripted_effects/JPS_calendar_clocks.txt'))})
 borneo_trigger = dict((k, v) for k, op, v in parse(read('common/scripted_triggers/A03_borneo_triggers.txt')))['A03_controls_borneo_province']
 borneo_provinces = {int(v) for k, op, v in value(borneo_trigger, 'OR') if k == 'controls_province'}
 expected_borneo = set()
@@ -69,6 +71,7 @@ events = {value(body, 'id'): body for p in paths[7:] for k, op, body in trees[p]
 
 class Model:
     def __init__(self):
+        self.now = date(1893,1,1)
         self.flags = {tag: set() for tag in ['A01', 'A03']}
         self.missions = {tag: {} for tag in self.flags}
         self.bop = .15
@@ -97,6 +100,8 @@ class Model:
                 _, comparison, threshold = next(entry for entry in val if entry[0] == 'value')
                 ok = self.bop < float(threshold) if comparison == '<' else self.bop > float(threshold)
             elif key == 'tag': ok = tag == val
+            elif key == 'date':
+                d=date(*map(int,val.split('.')));ok=self.now>d if op=='>' else self.now<d
             else: raise AssertionError(('Unmodelled condition', key))
             result.append(ok)
         return all(result)
@@ -126,12 +131,14 @@ class Model:
             elif key == 'give_resource_rights': self.rights.add(int(value(val, 'state')))
             elif key == 'remove_resource_rights': self.rights.discard(int(val))
             elif key.isdigit(): pass  # Borneo Convention resource-rights scopes are checked separately.
+            elif key in ['navy_experience', 'add_command_power']: pass
             elif key in ['set_technology', 'load_oob', 'create_equipment_variant', 'add_equipment_to_stockpile', 'add_fuel', 'add_timed_idea', 'remove_ideas', 'add_ideas', 'add_stability', 'add_war_support', 'add_political_power', 'add_to_variable', 'clamp_variable', 'diplomatic_relation', 'set_variable', 'set_power_balance', 'delete_unit_template_and_units']: pass
             else: raise AssertionError(('Unmodelled effect', key))
 
 def preparation():
     m = Model()
     m.flags['A01'].update(['A01_balance_initialized', 'A01_refused_japanese_ultimatum'])
+    m.run(effects['JPS_restore_clocks_effect'])
     m.run(effects['A01_begin_expansion_preparations_effect'])
     return m
 
@@ -142,19 +149,19 @@ def assert_clocks(m, days):
 refusal = next(v for k,o,v in events['A01_japan.1'] if k == 'option')
 assert ('A01_begin_expansion_preparations_effect', '=', 'yes') not in refusal
 m = Model(); m.run([e for e in refusal if e[0] != 'name']); assert not m.missions['A01']
-m = preparation(); assert_clocks(m, 288)
-m.run(effects['A01_begin_expansion_preparations_effect']); assert_clocks(m, 288)
-for decision, days in [('A03_charter_transports', 273), ('A03_advance_coaling', 258), ('A03_final_sailing_orders', 243)]:
+m = preparation(); assert_clocks(m, 120)
+m.run(effects['A01_begin_expansion_preparations_effect']); assert_clocks(m, 120)
+for decision, days in [('A03_charter_transports', 120), ('A03_advance_coaling', 120), ('A03_final_sailing_orders', 120)]:
     m.run(value(decisions[decision], 'complete_effect'), 'A03'); assert_clocks(m, days)
-# The focus may speed up existing preparation, but must never start it.
+# The narrative focus cannot alter the canonical calendar.
 focuses = parse(read('common/national_focus/a03_focus.txt'))
 tree = value(focuses, 'focus_tree')
-campaign_focus = next(body for key, op, body in tree if key == 'focus' and value(body, 'id') == 'A03_southern_campaign')
-m.run(value(campaign_focus, 'completion_reward'), 'A03'); assert_clocks(m, 228)
+campaign_focus = next(body for key, op, body in tree if key == 'focus' and value(body, 'id') == 'JPC_batavia_demands')
+m.run(value(campaign_focus, 'completion_reward'), 'A03'); assert_clocks(m, 120)
 m = preparation()
 for decision in ['A03_charter_transports', 'A03_advance_coaling', 'A03_final_sailing_orders']:
     m.run(value(decisions[decision], 'complete_effect'), 'A03')
-for decision, days in [('A01_lease_brunei', 423), ('A01_rubber_concession', 483), ('A01_supply_concession', 513)]:
+for decision, days in [('A01_lease_brunei', 120), ('A01_rubber_concession', 120), ('A01_supply_concession', 120)]:
     m.run(value(decisions[decision], 'complete_effect')); assert_clocks(m, days)
 assert m.owner[1023] == 'A03'
 m.run(value(events['expansion.13'], 'immediate'))
@@ -177,7 +184,7 @@ for controlled in [set(), {1}] + [{province} for province in sorted(borneo_provi
     occupied = bool(controlled & borneo_provinces)
     m = preparation(); m.war = True; m.controlled_provinces = set(controlled)
     m.run(effects['A01_start_expansion_campaign_effect'])
-    assert m.missions == {'A01': {'A01_japanese_expansion': 180}, 'A03': {'A03_japanese_expansion': 180}}
+    assert m.missions == {'A01': {'A01_japanese_expansion': 1006}, 'A03': {'A03_japanese_expansion': 1006}}
     m.run(value(decisions['A01_japanese_expansion'], 'timeout_effect'))
     first = copy.deepcopy(m.__dict__)
     m.run(value(decisions['A03_japanese_expansion'], 'timeout_effect'), 'A03')
@@ -245,3 +252,4 @@ for lang in ['russian', 'english']:
 report = {'status': 'passed', 'checks': ['Balanced changed scripts and mission references', 'Diplomatic refusal does not start or reset independent preparation', 'Both preparation clocks start once and stay synchronised across all concessions and naval decisions', 'Lease return and temporary resource-rights expiry', 'Both wartime missions start together', 'Deadline outcomes and duplicate callback protection', 'Queued pressure suppressed at neutral or strong Ludolf balance', 'Old unconditional peace offer disabled', 'Russian and English mission, decision and event labels'], 'outcomes': outcomes, 'engine_campaign_test': 'Not run; script model is not the HOI4 engine.'}
 (R/'tools/expansion_validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
 print(json.dumps(report, ensure_ascii=False, indent=2))
+

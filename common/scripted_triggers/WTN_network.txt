@@ -1,0 +1,82 @@
+WTN_is_customer = {
+ exists = yes
+ NOT = { tag = A04 }
+ NOT = { tag = ZZZ }
+ country_exists = A04
+ has_capitulated = no
+ NOT = { has_war_with = A04 }
+ A04 = { has_capitulated = no }
+}
+WTN_can_receive_credit = {
+ WTN_is_customer = yes
+ NOT = { has_country_flag = JPI_autarky }
+ NOT = { has_country_flag = WTC_active_loan }
+ NOT = { has_country_flag = WTC_receivership }
+ NOT = { has_country_flag = WTN_offer_cooldown }
+ check_variable = { WTC_debt < 81 }
+}
+WTN_can_open_offer = {
+ WTN_can_receive_credit = yes
+ WTN_registered_customer = yes
+ NOT = { has_country_flag = WTN_offer_reserved }
+ A04 = { NOT = { check_variable = { WTN_liquidity < 10 } } }
+ A04 = { NOT = { has_country_flag = WTN_credit_suspended } }
+}
+WTN_can_accept_offer = {
+ WTN_is_customer = yes
+ has_country_flag = WTN_offer_pending
+ has_country_flag = WTN_offer_reserved
+ WTN_has_reservation = yes
+ NOT = { has_country_flag = JPI_autarky }
+ NOT = { has_country_flag = WTC_active_loan }
+ NOT = { has_country_flag = WTC_receivership }
+ check_variable = { WTC_debt < 81 }
+}
+WTN_can_take_standard_credit = {
+ WTN_is_customer = yes
+ NOT = { has_country_flag = JPI_autarky }
+ NOT = { has_country_flag = WTC_active_loan }
+ NOT = { has_country_flag = WTC_receivership }
+ NOT = { has_country_flag = WTN_offer_reserved }
+ check_variable = { WTC_debt < 80 }
+ A04 = { NOT = { check_variable = { WTN_liquidity < 10 } } }
+ A04 = { NOT = { has_country_flag = WTN_credit_suspended } }
+}
+WTN_can_request_compact = {
+ WTN_is_customer = yes
+ has_country_flag = WTN_compact_desk_open
+ NOT = { has_country_flag = JPI_autarky }
+ NOT = { has_country_flag = WTN_compact_pending }
+ NOT = { has_country_flag = WTN_compact_cooldown }
+ NOT = { has_country_flag = WTN_trade_partner }
+ check_variable = { WTC_debt < 71 }
+}
+WTN_can_sign_compact = {
+ WTN_is_customer = yes
+ has_country_flag = WTN_compact_pending
+ NOT = { has_country_flag = WTN_trade_partner }
+ NOT = { has_country_flag = JPI_autarky }
+ check_variable = { WTC_debt < 71 }
+}
+WTN_can_answer_compact = {
+ tag = A04
+ exists = yes
+ has_capitulated = no
+ FROM = { WTN_can_sign_compact = yes }
+}
+WTN_can_answer_concession = {
+ WTN_is_customer = yes
+ has_country_flag = WTN_concession_pending
+ check_variable = { WTC_debt > 70 }
+ check_variable = { WTC_debt < 100 }
+}
+WTN_can_answer_sanctions = {
+ WTN_is_customer = yes
+ has_country_flag = WTN_sanctions_pending
+ check_variable = { WTC_debt > 90 }
+}
+WTN_can_answer_default = {
+ WTN_is_customer = yes
+ has_country_flag = WTC_default_pending
+ NOT = { check_variable = { WTC_debt < 100 } }
+}

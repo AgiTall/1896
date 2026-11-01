@@ -1,0 +1,16 @@
+A10R_canonical_republics = {
+ name = "Philippine Republics: the Confederation"
+ allowed = { original_tag = A10 }
+ enable = { is_historical_focus_on = yes }
+ abort = { OR = { has_country_flag = A10M_active has_country_flag = A10W_path } }
+ ai_national_focuses = {
+  A10_island_congress A10R_provincial_rolls A10_confederation A10_visayan_compact
+  A10_mindanao_compact A10_united_command A10R_emergency_council
+  A10D_island_census A10_coastal_arsenals A10R_common_treasury
+  A10R_republican_court A10R_language_charters A10R_tenant_guarantees
+  A10R_civilian_inspectors A10R_assembly_of_islands A10R_republics_forever
+  A10R_rotating_presidency A10R_customs_union A10R_republican_compact_end
+  A10R_luzon_relief A10_luzon_charter A10_capital_charters
+  A10R_war_accounts A10R_veterans_land A10_federal_reconstruction A10R_peace_generation
+ }
+}

@@ -2,8 +2,8 @@ A01_inevitable_conflict_category = {
  A01_japanese_invasion_countdown = {
   priority = 100
   icon = generic_prepare_civil_war
-  days_mission_timeout = 288
-  fire_only_once = yes
+  days_mission_timeout = 365
+  fire_only_once = no
   selectable_mission = no
   is_good = no
   available = {
@@ -36,15 +36,15 @@ A01_inevitable_conflict_category = {
   cancel_if_not_visible = yes
   timeout_effect = {
    A03 = {
-    A03_start_southern_war_effect = yes
+    JPC_issue_ultimatum = yes
    }
   }
  }
  A01_japanese_expansion = {
   priority = 110
   icon = generic_prepare_civil_war
-  days_mission_timeout = 180
-  fire_only_once = yes
+  days_mission_timeout = 1006
+  fire_only_once = no
   selectable_mission = no
   is_good = no
   available = {
@@ -133,15 +133,9 @@ A01_inevitable_conflict_category = {
     }
    }
    set_country_flag = A01_temporary_rubber_concession
-   add_days_mission_timeout = {
-    mission = A01_japanese_invasion_countdown
-    days = 60
-   }
+   add_political_power = 5
    A03 = {
-    add_days_mission_timeout = {
-     mission = A03_japanese_invasion_countdown
-     days = 60
-    }
+    add_political_power = 5
    }
    country_event = {
     id = expansion.12
@@ -179,15 +173,9 @@ A01_inevitable_conflict_category = {
      producer = A01
     }
    }
-   add_days_mission_timeout = {
-    mission = A01_japanese_invasion_countdown
-    days = 30
-   }
+   add_political_power = 5
    A03 = {
-    add_days_mission_timeout = {
-     mission = A03_japanese_invasion_countdown
-     days = 30
-    }
+    add_political_power = 5
    }
   }
   ai_will_do = {

@@ -1,0 +1,1 @@
+on_actions = { on_startup = { effect = { CH96_tick = yes } } on_daily = { effect = { CH96_tick = yes } } }

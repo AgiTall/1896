@@ -1,0 +1,128 @@
+A10M_initialize = {
+ if = { limit = { NOT = { has_country_flag = A10M_initialized } }
+  set_country_flag = A10M_initialized
+  set_variable = { var = A10M_opposition value = 0 }
+  set_variable = { var = A10M_repression value = 0 }
+  set_variable = { var = A10M_strain value = 0 }
+ }
+}
+A10M_update = {
+ clamp_variable = { var = A10M_opposition min = 0 max = 100 }
+ clamp_variable = { var = A10M_repression min = 0 max = 100 }
+ clamp_variable = { var = A10M_strain min = 0 max = 100 }
+ if = { limit = { check_variable = { var = A10M_opposition value = 65 compare = greater_than_or_equals } }
+  add_ideas = A10M_strikes
+ } else = { remove_ideas = A10M_strikes }
+ if = { limit = { check_variable = { var = A10M_strain value = 65 compare = greater_than_or_equals } }
+  add_ideas = A10M_rationing
+ } else = { remove_ideas = A10M_rationing }
+}
+A10M_begin_coup = {
+ A10M_initialize = yes
+ set_country_flag = A10M_active
+ set_variable = { var = A10M_opposition value = 35 }
+ set_variable = { var = A10M_repression value = 35 }
+ set_variable = { var = A10M_strain value = 25 }
+ if = { limit = { has_character = A10M_mateo_sandoval }
+  add_country_leader_role = { character = A10M_mateo_sandoval promote_leader = yes country_leader = { ideology = despotism expire = "1965.1.1.1" traits = { } } }
+ } else = {
+  create_country_leader = { name = A10M_mateo_sandoval_name picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds" ideology = despotism expire = "1965.1.1.1" }
+ }
+ retire_character = A10_canon_leader
+ set_politics = { ruling_party = neutrality elections_allowed = no }
+ set_cosmetic_tag = A10M_MILITARY
+ remove_ideas = A10_separatism
+ remove_ideas = PZ_philippine_confederation
+ add_ideas = A10M_martial_government
+ add_stability = -0.08
+ add_war_support = 0.10
+ custom_effect_tooltip = A10M_system_tt
+ country_event = { id = A10M.1 days = 1 }
+}
+A10M_recall_members = {
+ # The subject iterator cannot select independent or foreign-overlord republics.
+ every_subject_country = {
+  limit = { OR = { tag = PVI tag = PSM tag = PMD tag = PNM tag = PCB tag = PPN tag = PNL tag = PML tag = PBT } }
+  A10 = { annex_country = { target = PREV transfer_troops = yes } }
+ }
+ add_to_variable = { var = A10M_opposition value = 7 }
+ custom_effect_tooltip = A10M_recall_members_tt
+ country_event = { id = A10M.6 days = 2 }
+ A10M_update = yes
+}
+A10M_monthly = {
+ add_to_variable = { var = A10M_opposition value = 2 }
+ if = { limit = { has_war = yes }
+  add_to_variable = { var = A10M_strain value = 2 }
+ } else = { subtract_from_variable = { var = A10M_strain value = 1 } }
+ if = { limit = { check_variable = { var = A10M_repression value = 65 compare = greater_than_or_equals } }
+  add_to_variable = { var = A10M_opposition value = 2 }
+  add_to_variable = { var = A10M_strain value = 2 }
+ }
+ if = { limit = { NOT = { has_country_flag = A10M_junta } }
+  subtract_from_variable = { var = A10M_repression value = 1 }
+ }
+ if = { limit = { has_idea = A10M_requisition_bureaus } add_to_variable = { var = A10M_strain value = 2 } }
+ if = { limit = { has_idea = A10M_compensation_bonds } subtract_from_variable = { var = A10M_strain value = 2 } }
+ if = { limit = { has_idea = A10M_compulsory_labour }
+  add_to_variable = { var = A10M_opposition value = 3 }
+  add_to_variable = { var = A10M_strain value = 2 }
+ }
+ if = { limit = { has_idea = A10M_field_hospitals } subtract_from_variable = { var = A10M_strain value = 1 } }
+ if = { limit = { has_idea = A10M_supply_inspectorate } subtract_from_variable = { var = A10M_strain value = 1 } }
+ if = { limit = { has_idea = A10M_professional_service } subtract_from_variable = { var = A10M_opposition value = 1 } }
+ if = { limit = { has_idea = A10M_published_budget } subtract_from_variable = { var = A10M_strain value = 1 } }
+ if = { limit = { has_idea = A10M_veterans_obligations }
+  subtract_from_variable = { var = A10M_opposition value = 1 }
+  subtract_from_variable = { var = A10M_strain value = 2 }
+ }
+ if = { limit = { has_idea = A10M_civil_recovery }
+  subtract_from_variable = { var = A10M_opposition value = 1 }
+  subtract_from_variable = { var = A10M_strain value = 1 }
+ }
+ A10M_update = yes
+ if = { limit = {
+   check_variable = { var = A10M_opposition value = 80 compare = greater_than_or_equals }
+   NOT = { has_country_flag = A10M_conspiracy_cooldown }
+  }
+  set_country_flag = { flag = A10M_conspiracy_cooldown days = 150 }
+  country_event = { id = A10M.4 days = 1 }
+ }
+ if = { limit = {
+   check_variable = { var = A10M_strain value = 80 compare = greater_than_or_equals }
+   NOT = { has_country_flag = A10M_hunger_cooldown }
+  }
+  set_country_flag = { flag = A10M_hunger_cooldown days = 150 }
+  country_event = { id = A10M.3 days = 3 }
+ }
+}
+A10M_junta_effect = {
+ set_country_flag = A10M_junta
+ add_ideas = A10M_permanent_junta
+ add_to_variable = { var = A10M_repression value = 15 }
+ add_to_variable = { var = A10M_opposition value = 10 }
+ custom_effect_tooltip = A10M_junta_tt
+ A10M_update = yes
+}
+A10M_directorate_effect = {
+ set_country_flag = A10M_directorate
+ add_ideas = A10M_military_directorate
+ subtract_from_variable = { var = A10M_repression value = 10 }
+ subtract_from_variable = { var = A10M_opposition value = 8 }
+ A10M_update = yes
+}
+A10M_settlement_effect = {
+ add_ideas = A10M_veterans_obligations
+ subtract_from_variable = { var = A10M_opposition value = 10 }
+ subtract_from_variable = { var = A10M_strain value = 10 }
+ custom_effect_tooltip = A10M_settlement_tt
+ A10M_update = yes
+}
+A10M_recovery_effect = {
+ add_ideas = A10M_civil_recovery
+ remove_ideas = A10M_compulsory_labour
+ subtract_from_variable = { var = A10M_repression value = 10 }
+ subtract_from_variable = { var = A10M_strain value = 10 }
+ custom_effect_tooltip = A10M_recovery_tt
+ A10M_update = yes
+}

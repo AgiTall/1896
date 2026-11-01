@@ -1,0 +1,498 @@
+[
+  {
+    "id": "A10W_oath",
+    "name_ru": "Присяга торговой палате",
+    "desc_ru": "Совет островов предлагает Палате верность договорам в обмен на кредит, страхование и признание. Присяга ещё не передаёт суверенитет: каждая уступка должна получить отдельную печать. Ответ с Мадейры определит цену союза, а молчание заставит открыть собственную кассу.",
+    "name_en": "Oath to the Chamber",
+    "desc_en": "The island council offers fidelity to the Chamber’s contracts in return for credit, insurance and recognition. The oath does not surrender sovereignty: every concession requires a separate seal. Madeira’s reply will set the price of association, while silence will force us to open our own treasury.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 5,
+    "y": 3,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "A10W_request_oath_effect = yes add_political_power = 35",
+    "ai": 0.4
+  },
+  {
+    "id": "A10W_creditors_register",
+    "name_ru": "Переписать долговые книги",
+    "desc_ru": "Векселя Манилы, расписки Себу и обязательства провинциальных касс редко сходятся в одной сумме. Общий реестр отделит законный долг от повторных требований. Палата получит прозрачные счета; острова — основание спорить с её поверенными.",
+    "name_en": "Reconcile the Debt Books",
+    "desc_en": "Manila’s bills, Cebu’s receipts and provincial treasury obligations rarely agree on a single total. A common register will separate legitimate debt from duplicate claims. The Chamber will receive transparent accounts, and the islands will gain grounds to challenge its agents.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 5,
+    "y": 4,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_oath"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_audited_ledger add_to_variable = { WTC_debt = -5 } WTC_refresh_effect = yes custom_effect_tooltip = A10W_accounts_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_bonded_warehouses",
+    "name_ru": "Склады под двойной печатью",
+    "desc_ru": "Ни одна партия абаки не должна исчезать между пристанью и таможней. Склады будут запирать местный сборщик и поверенный страховщика; часть сборов обеспечит портовые работы. Купцы получат надёжный оборот, но аренда складов сделает каждую поставку дороже.",
+    "name_en": "Warehouses under Two Seals",
+    "desc_en": "No shipment of abaca should disappear between quay and customs house. A local collector and an insurer’s agent will seal the warehouses together, and a share of the fees will support harbour works. Merchants gain reliable trade at the cost of dearer storage.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 3,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_creditors_register"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_bonded_customs add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_silver_convoy",
+    "name_ru": "Полис «Серебряного конвоя»",
+    "desc_ru": "Подпись старой гвардии открывает страховую книгу, но не превращает торговые суда в броненосцы. Мы оплатим ограниченный полис и подготовим местный страховой резерв на случай отказа. Убытки придётся считать даже под самым дорогим флагом.",
+    "name_en": "The Silver Convoy Policy",
+    "desc_en": "The old guard’s signature opens the insurance book without turning merchantmen into ironclads. We will pay for a limited policy and prepare a local reserve should the application fail. Losses must still be counted beneath the costliest flag.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 7,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_creditors_register"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "if = { limit = { A10W_chamber_reachable = yes has_country_flag = A10W_oath_accepted } add_timed_idea = { idea = WTC_silver_convoy days = 240 } add_to_variable = { WTC_debt = 3 } WTC_refresh_effect = yes } else = { add_political_power = 35 }",
+    "ai": 1
+  },
+  {
+    "id": "A10W_cable_priority",
+    "name_ru": "Кабель и портовая стража",
+    "desc_ru": "Связь с Мадейрой бесполезна, если противник первым займёт телеграфную станцию. Совместим кабельный договор с дозорами на пристанях, сигнальными постами и учениями островных рот. Палата продаёт доступ к сведениям; защищать берега предстоит нашим людям.",
+    "name_en": "Cable and Harbour Watch",
+    "desc_en": "A cable to Madeira is useless if an enemy captures the telegraph station first. The cable agreement will be paired with quay patrols, signal posts and drills for island companies. The Chamber sells access to information; our own people must defend the shore.",
+    "icon": "GFX_goal_generic_defence",
+    "x": 5,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_bonded_warehouses"
+      ],
+      [
+        "A10W_silver_convoy"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "set_country_flag = A10R_war_ready add_ideas = A10W_port_watch add_command_power = 15 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 } if = { limit = { A10W_chamber_reachable = yes has_country_flag = A10W_oath_accepted } add_timed_idea = { idea = WTC_cable_contract days = 180 } add_to_variable = { WTC_debt = 3 } WTC_refresh_effect = yes }",
+    "ai": 1
+  },
+  {
+    "id": "A10W_harbour_survey",
+    "name_ru": "Опись причалов и маяков",
+    "desc_ru": "Поверенные требуют карту доходов, судовладельцы — карту мелей. Одна экспедиция составит обе, проверив фарватеры, маяки и склады. Новые работы оплачиваются векселями: каждый причал должен принести больше, чем стоит его обслуживание.",
+    "name_en": "Survey the Quays and Lights",
+    "desc_en": "The agents demand a map of revenues, while shipowners require a map of shoals. One survey will produce both by inspecting channels, lights and warehouses. New works are paid through bills: every quay must earn more than its upkeep.",
+    "icon": "GFX_goal_generic_construct_infrastructure",
+    "x": 3,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_cable_priority"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { WTC_debt = 5 } WTC_refresh_effect = yes if = { limit = { capital_scope = { is_owned_by = A10 is_controlled_by = A10 } } capital_scope = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } } navy_experience = 10",
+    "ai": 1
+  },
+  {
+    "id": "A10W_local_shareholding",
+    "name_ru": "Доли для островных домов",
+    "desc_ru": "Если все дивиденды уплывут на Мадейру, присяга останется чужой сделкой. Выделим долю местным торговым домам, кооперативам грузчиков и провинциальным кассам. Их представители смогут проверять отчёты, хотя крупные держатели уже спорят о числе голосов.",
+    "name_en": "Shares for Island Houses",
+    "desc_en": "If every dividend sails to Madeira, the oath will remain a foreign bargain. We will reserve shares for island trading houses, dockers’ cooperatives and provincial treasuries. Their delegates may examine the accounts, though large holders already dispute the voting rules.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 7,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_cable_priority"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_local_shareholders add_to_variable = { A10W_charter_tension = -10 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_charter_congress",
+    "name_ru": "Съезд под двумя печатями",
+    "desc_ru": "На стол съезда положены два проекта: островная колониальная хартия под покровительством Палаты и самостоятельная метрополия её восточной сети. Ни один не отменяет права делегатов спорить о труде, налогах и представительстве. Прежде чем выбрать хозяина книги, договоримся, кто сможет её читать.",
+    "name_en": "Congress beneath Two Seals",
+    "desc_en": "The congress has two drafts before it: an island colonial charter under Chamber protection, and a sovereign metropole of its eastern network. Neither removes disputes over labour, taxation and representation. Before choosing the keeper of the ledger, we must decide who may read it.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 5,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_harbour_survey"
+      ],
+      [
+        "A10W_local_shareholding"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "remove_ideas = A10_separatism country_event = { id = A10W_path.8 days = 1 }",
+    "ai": 1
+  },
+  {
+    "id": "A10W_colonial_charter",
+    "name_ru": "Проект колониальной хартии",
+    "desc_ru": "Сторонники покровительства готовы передать внешние договоры Палате, сохранив островные суды и местную стражу. Пока обе стороны не ратифицируют конвенцию, документ остаётся внутренним уставом. Даже самая подробная хартия не даёт Мадейре власти без её согласия.",
+    "name_en": "Draft a Colonial Charter",
+    "desc_en": "The protection party will entrust foreign agreements to the Chamber while retaining island courts and a local constabulary. Until both sides ratify a convention, the document remains an internal charter. Even the most detailed charter grants Madeira no authority without its consent.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 9,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_charter_congress"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10W_metropolitan_charter"
+    ],
+    "available": "always = yes",
+    "reward": "set_country_flag = A10W_colonial_selected add_ideas = A10W_provisional_charter custom_effect_tooltip = A10W_colony_draft_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_resident_council",
+    "name_ru": "Совет при резиденте",
+    "desc_ru": "Резидент должен знать острова через избранных поверенных, а не только через счета экспортёров. Провинции получат места в совете, но печать казначейства останется общей. Такая власть работает быстрее съезда и вызывает немало подозрений у тех, кто лишится последнего слова.",
+    "name_en": "The Resident’s Council",
+    "desc_en": "The resident must know the islands through appointed local delegates as well as exporters’ accounts. Provinces will receive seats on the council, while the treasury seal remains central. Such authority works faster than congress and attracts suspicion from those losing their final say.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 1,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_colonial_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_resident_council_spirit add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_revenue_covenant",
+    "name_ru": "Разделить портовые сборы",
+    "desc_ru": "Определим заранее, сколько сборов идёт на причалы, сколько — на островную казну и сколько — кредиторам. Публичные доли урежут старые расписки без передачи самой земли. Уступка доходов облегчит долг сегодня и стеснит стройки в ближайшие месяцы.",
+    "name_en": "Apportion the Port Dues",
+    "desc_en": "We will establish how much of each due supports quays, the island treasury and creditors. Published shares can reduce old obligations without transferring land. Assigning revenues lightens debt today and constrains construction in the coming months.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 3,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_colonial_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { WTC_debt = -10 } add_timed_idea = { idea = WTC_port_concession days = 180 } add_to_variable = { A10W_charter_tension = 5 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_charter_constabulary",
+    "name_ru": "Островная контрактная стража",
+    "desc_ru": "Палата не пришлёт армию для каждой таможенной ссоры. Службу у складов, мостов и телеграфа возьмут островные роты с единым жалованьем. Стража подчинится местным начальникам; её содержание войдёт в бюджет хартии.",
+    "name_en": "The Island Charter Constabulary",
+    "desc_en": "The Chamber will not send an army for every customs dispute. Island companies with regular pay will guard warehouses, bridges and telegraphs. The constabulary will answer to local officers, and its upkeep will appear in the charter budget.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 1,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_resident_council"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "army_experience = 15 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 800 producer = A10 } add_command_power = 10",
+    "ai": 1
+  },
+  {
+    "id": "A10W_export_estates",
+    "name_ru": "Абака, сахар и аренда",
+    "desc_ru": "Экспортные дома обещают средства для дорог в обмен на долгие договоры аренды. Межи проверят местные суды, а ставки занесут в общую книгу. Выручка расширит хозяйство, но земледельцы опасаются, что чужие векселя окажутся прочнее их прав.",
+    "name_en": "Abaca, Sugar and Leaseholds",
+    "desc_en": "Export houses offer road funding in return for long leases. Local courts will verify boundaries and record the rates in a common register. Revenues will expand the economy, though cultivators fear foreign bills may prove stronger than their rights.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 3,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_revenue_covenant"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_export_estates_spirit A10W_workshop_effect = yes add_to_variable = { WTC_debt = 8 } add_to_variable = { A10W_charter_tension = 15 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_debt_conversion",
+    "name_ru": "Обмен долга на длинные бумаги",
+    "desc_ru": "Короткие расписки грозят казне новым кризисом при каждом выходе судна. Заменим их долгими бумагами под согласованные сборы и публичную отчётность. Это сократит внешний счёт, но будущие бюджеты ещё долго будут оплачивать нынешнюю передышку.",
+    "name_en": "Convert the Debt into Long Bonds",
+    "desc_en": "Short notes threaten a treasury crisis whenever a ship departs. We will replace them with long bonds secured against agreed dues and public accounts. The external balance will fall, while future budgets continue paying for the present respite.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_charter_constabulary"
+      ],
+      [
+        "A10W_export_estates"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { WTC_debt = -15 } add_to_variable = { A10W_charter_tension = 5 } add_timed_idea = { idea = A10W_emergency_mediation days = 180 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_colony",
+    "name_ru": "Ратифицировать островную колонию",
+    "desc_ru": "Пошлём окончательную конвенцию на Мадейру: Палата получает верховное покровительство, острова сохраняют собственное управление и вооружённую стражу. Согласие превратит хартию в реальную зависимость. Отказ оставит наш кабинет у власти и откроет новый раунд переговоров после передышки.",
+    "name_en": "Ratify the Island Colony",
+    "desc_en": "We will send Madeira the final convention: the Chamber receives paramount protection, while the islands retain local administration and armed guards. Acceptance will turn the charter into actual dependency. Refusal leaves our cabinet in office and allows a renewed negotiation after an interval.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 13,
+    "cost": 7,
+    "prerequisites": [
+      [
+        "A10W_debt_conversion"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "A10W_request_colony_effect = yes custom_effect_tooltip = A10W_colony_convention_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_port_welfare",
+    "name_ru": "Лазареты у причалов",
+    "desc_ru": "Постоянные отчисления на воду, лазареты и помощь семьям грузчиков обойдутся дороже разовой милостыни. Зато эпидемия или несчастье не будет всякий раз останавливать порт. Совет хартии отвечает за эти расходы при любом исходе переговоров с Палатой.",
+    "name_en": "Hospitals beside the Quays",
+    "desc_en": "Regular funding for water, hospitals and dockers’ families costs more than occasional charity. An epidemic or accident need no longer close the harbour each time. The charter council will meet these obligations regardless of the Chamber’s response.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_colony"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_port_hospitals add_to_variable = { A10W_charter_tension = -15 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_metropolitan_charter",
+    "name_ru": "Проект новой метрополии",
+    "desc_ru": "Зачем вечно отправлять книги на другой край света, если главный оборот проходит у наших берегов? Островные дома предлагают собственный директорат и восточный центр расчётов. Мадейра получит предложение стать автономной атлантической конторой, а не приказ покинуть свои земли.",
+    "name_en": "Draft a New Metropole",
+    "desc_en": "Why must the books cross the world when the principal traffic passes our shores? Island houses propose their own directorate and an eastern clearing centre. Madeira will receive an invitation to become an autonomous Atlantic office, never an order to surrender its land.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 8,
+    "y": 9,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_charter_congress"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10W_colonial_charter"
+    ],
+    "available": "always = yes",
+    "reward": "set_country_flag = A10W_metropolitan_selected add_ideas = A10W_provisional_exchange custom_effect_tooltip = A10W_metropole_draft_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_island_registries",
+    "name_ru": "Островные торговые реестры",
+    "desc_ru": "Новая метрополия начинается с признанных подписей, образцов мер и надёжного хранения контрактов. Канцелярии приведут портовые книги к одному порядку. Ни одна контора не получит власть над чужим берегом только потому, что занесла его в свой атлас.",
+    "name_en": "Island Commercial Registers",
+    "desc_en": "A new metropole begins with recognized signatures, standard measures and reliable custody of contracts. Clerks will bring the port books under common rules. No office acquires authority over another shore merely by entering it in an atlas.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 7,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_metropolitan_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_political_power = 50 add_to_variable = { A10W_charter_tension = -5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_merchant_assembly",
+    "name_ru": "Собрание торговых домов",
+    "desc_ru": "Островные дома согласны содержать общий секретариат, если решения не замкнутся в нескольких семьях. Распределим места между портами и учредим слушания по крупным договорам. Новое собрание ускорит сбор средств, но споры о дивидендах останутся частью его жизни.",
+    "name_en": "Assembly of Merchant Houses",
+    "desc_en": "Island houses will fund a common secretariat if decisions do not remain confined to a handful of families. Seats will be apportioned among ports, with hearings for major contracts. The assembly will raise funds more readily, though dividend disputes remain part of its life.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 9,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_metropolitan_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_merchant_assembly_spirit add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_duplicate_cables",
+    "name_ru": "Копии по двум кабелям",
+    "desc_ru": "Одна оборванная линия не должна лишать острова всех котировок и приказов. Школы связистов подготовят людей для запасных станций, а важные книги будут храниться в нескольких портах. Технократам обещан заказ на оборудование вместо права закрывать сведения.",
+    "name_en": "Copies over Two Cables",
+    "desc_en": "A severed line must not deprive the islands of every quotation and order. Signal schools will staff reserve stations, while important books are stored in several ports. Technocrats will receive equipment orders rather than the right to suppress information.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 7,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_island_registries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_duplicate_cables_spirit add_to_variable = { WTC_debt = 5 } WTC_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_secretariat_rules",
+    "name_ru": "Ограничить тайный секретариат",
+    "desc_ru": "Закрытая переписка нужна торговле, но секретный департамент охотно превращает её в отдельную власть. Учредим двойную подпись на чрезвычайных поручениях и закрытую проверку расходов. Часть поверенных уйдёт, зато островной совет узнает цену собственных тайн.",
+    "name_en": "Bind the Secret Secretariat",
+    "desc_en": "Commerce needs confidential correspondence, but the secret department readily turns secrecy into a separate power. Emergency instructions will require two signatures, with private audits of expenditure. Some agents will depart, but the island council will know the cost of its own secrets.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 9,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_merchant_assembly"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { A10W_charter_tension = -10 } add_stability = 0.03 add_political_power = -25 A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_escrow_exchange",
+    "name_ru": "Биржа обеспеченных обязательств",
+    "desc_ru": "Наши расписки должны опираться на реальные склады и проверенные доходы. Биржа введёт залоговые счета, открытые тарифы и суд для торговых споров. Прибыль останется умереннее громких обещаний, зато меньше домов обрушится от одной пропавшей шхуны.",
+    "name_en": "Exchange of Secured Obligations",
+    "desc_en": "Our notes must rest on real warehouses and verified revenues. The exchange will establish escrow accounts, published tariffs and a court for commercial disputes. Returns may be more modest than grand promises, but fewer houses will collapse when a single schooner disappears.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 8,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_duplicate_cables"
+      ],
+      [
+        "A10W_secretariat_rules"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_escrow_courts A10W_workshop_effect = yes add_to_variable = { WTC_debt = 8 } add_to_variable = { A10W_charter_tension = 5 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_new_metropole",
+    "name_ru": "Манильская конвенция",
+    "desc_ru": "Предложим Мадейре перенести верховный расчётный центр на острова и сохранить за старой палатой широкую автономию атлантической конторы. Такая перемена требует её добровольной подписи. Пока Манила не возвращена, директорат будет заседать при временной островной бирже; отказ Мадейры не закроет её двери.",
+    "name_en": "The Manila Convention",
+    "desc_en": "We will invite Madeira to place the principal clearing centre in the islands while retaining broad autonomy as the Atlantic office. This change requires its voluntary signature. Until Manila is recovered, the directorate will sit at a provisional island exchange; Madeira’s refusal will not close its doors.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 8,
+    "y": 13,
+    "cost": 7,
+    "prerequisites": [
+      [
+        "A10W_escrow_exchange"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "A10W_request_metropole_effect = yes custom_effect_tooltip = A10W_metropole_convention_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_oceanic_covenant",
+    "name_ru": "Хартия двух океанов",
+    "desc_ru": "Свяжем страховые резервы, школы связи и сопровождение судов общим уставом. Каждая контора отвечает за свои убытки и нанимает охрану по договору; островная армия не становится войском Палаты. Так новая сеть сможет расти через согласованные сделки, сохраняя цену каждой гарантии в книгах.",
+    "name_en": "Covenant of Two Oceans",
+    "desc_en": "A common covenant will connect insurance reserves, signal schools and convoy protection. Each office bears its own losses and hires guards by contract; the island army remains under island command. The new network can grow through agreed bargains, with every guarantee’s cost recorded in its books.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 8,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_new_metropole"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_network_covenant add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  }
+]

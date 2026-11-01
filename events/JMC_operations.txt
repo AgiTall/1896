@@ -1,0 +1,20 @@
+add_namespace = jmc_operations
+
+country_event = {
+ id = jmc_operations.1
+ title = jmc_operations.1.t
+ desc = jmc_operations.1.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ trigger = { JMC_pilots_requirements = yes has_idea = JMC_pilot_service }
+ option = { name = jmc_operations.1.a }
+}
+country_event = {
+ id = jmc_operations.2
+ title = jmc_operations.2.t
+ desc = jmc_operations.2.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { JMC_transports_requirements = yes has_idea = JMC_transport_service }
+ option = { name = jmc_operations.2.a }
+}

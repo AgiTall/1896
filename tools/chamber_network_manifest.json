@@ -1,0 +1,1375 @@
+{
+  "WTN": {
+    "tags": [
+      "A04"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_annual_report",
+        "x": 18,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_common_registry",
+        "x": 18,
+        "y": 1,
+        "parents": [
+          "WTN_annual_report"
+        ]
+      },
+      {
+        "id": "WTN_credit_committee",
+        "x": 2,
+        "y": 3,
+        "parents": [
+          "WTN_focus_mandate_public",
+          "WTN_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_gold_reserves",
+        "x": 0,
+        "y": 4,
+        "parents": [
+          "WTN_credit_committee"
+        ]
+      },
+      {
+        "id": "WTN_arbitration",
+        "x": 4,
+        "y": 4,
+        "parents": [
+          "WTN_credit_committee"
+        ]
+      },
+      {
+        "id": "WTN_reserve_audit",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "WTN_gold_reserves",
+          "WTN_arbitration"
+        ]
+      },
+      {
+        "id": "WTN_mutual_settlement",
+        "x": 2,
+        "y": 6,
+        "parents": [
+          "WTN_reserve_audit"
+        ]
+      },
+      {
+        "id": "WTN_solvent_chamber",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "WTN_mutual_settlement"
+        ]
+      },
+      {
+        "id": "WTN_guard_charter",
+        "x": 10,
+        "y": 3,
+        "parents": [
+          "WTN_focus_mandate_public",
+          "WTN_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_silver_convoy",
+        "x": 8,
+        "y": 4,
+        "parents": [
+          "WTN_guard_charter"
+        ]
+      },
+      {
+        "id": "WTN_insured_ports",
+        "x": 12,
+        "y": 4,
+        "parents": [
+          "WTN_guard_charter"
+        ]
+      },
+      {
+        "id": "WTN_market_rules",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "WTN_silver_convoy",
+          "WTN_insured_ports"
+        ]
+      },
+      {
+        "id": "WTN_guard_settlement_charter",
+        "x": 10,
+        "y": 6,
+        "parents": [
+          "WTN_market_rules"
+        ]
+      },
+      {
+        "id": "WTN_tech_charter",
+        "x": 18,
+        "y": 3,
+        "parents": [
+          "WTN_focus_mandate_public",
+          "WTN_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_cable_survey",
+        "x": 16,
+        "y": 4,
+        "parents": [
+          "WTN_tech_charter"
+        ]
+      },
+      {
+        "id": "WTN_malta_correspondence",
+        "x": 20,
+        "y": 4,
+        "parents": [
+          "WTN_tech_charter"
+        ]
+      },
+      {
+        "id": "WTN_measurement_fund",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "WTN_cable_survey",
+          "WTN_malta_correspondence"
+        ]
+      },
+      {
+        "id": "WTN_open_patents",
+        "x": 18,
+        "y": 6,
+        "parents": [
+          "WTN_measurement_fund"
+        ]
+      },
+      {
+        "id": "WTN_secret_charter",
+        "x": 26,
+        "y": 3,
+        "parents": [
+          "WTN_focus_mandate_public",
+          "WTN_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_cable_watch",
+        "x": 24,
+        "y": 4,
+        "parents": [
+          "WTN_secret_charter"
+        ]
+      },
+      {
+        "id": "WTN_strait_wardens",
+        "x": 28,
+        "y": 4,
+        "parents": [
+          "WTN_secret_charter"
+        ]
+      },
+      {
+        "id": "WTN_pirate_contacts",
+        "x": 26,
+        "y": 5,
+        "parents": [
+          "WTN_cable_watch",
+          "WTN_strait_wardens"
+        ]
+      },
+      {
+        "id": "WTN_secret_accounts_control",
+        "x": 26,
+        "y": 6,
+        "parents": [
+          "WTN_pirate_contacts"
+        ]
+      },
+      {
+        "id": "WTN_foreign_offices",
+        "x": 34,
+        "y": 3,
+        "parents": [
+          "WTN_focus_mandate_public",
+          "WTN_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_british_understanding",
+        "x": 34,
+        "y": 4,
+        "parents": [
+          "WTN_foreign_offices"
+        ]
+      },
+      {
+        "id": "WTN_pacific_accounts",
+        "x": 34,
+        "y": 5,
+        "parents": [
+          "WTN_british_understanding"
+        ]
+      },
+      {
+        "id": "WTN_colonial_desks",
+        "x": 34,
+        "y": 6,
+        "parents": [
+          "WTN_pacific_accounts"
+        ]
+      },
+      {
+        "id": "WTN_caribbean_routes",
+        "x": 34,
+        "y": 7,
+        "parents": [
+          "WTN_colonial_desks"
+        ]
+      },
+      {
+        "id": "WTN_northern_observers",
+        "x": 34,
+        "y": 8,
+        "parents": [
+          "WTN_caribbean_routes"
+        ]
+      },
+      {
+        "id": "WTN_island_congress_protocol",
+        "x": 34,
+        "y": 9,
+        "parents": [
+          "WTN_northern_observers"
+        ]
+      },
+      {
+        "id": "WTN_focus_mandate_public",
+        "x": 16,
+        "y": 2,
+        "parents": [
+          "WTN_common_registry"
+        ]
+      },
+      {
+        "id": "WTN_focus_mandate_delegated",
+        "x": 20,
+        "y": 2,
+        "parents": [
+          "WTN_common_registry"
+        ]
+      }
+    ]
+  },
+  "WTN_BRI": {
+    "tags": [
+      "A02"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_BRI_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_BRI_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_BRI_council"
+        ]
+      },
+      {
+        "id": "WTN_BRI_independent_admiralty",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_BRI_accounts"
+        ]
+      },
+      {
+        "id": "WTN_BRI_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_BRI_accounts"
+        ]
+      },
+      {
+        "id": "WTN_BRI_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_BRI_independent_admiralty",
+          "WTN_BRI_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_BRI_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_BRI_local_service"
+        ]
+      },
+      {
+        "id": "WTN_BRI_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_BRI_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_BRI_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_BRI_programme_2"
+        ]
+      },
+      {
+        "id": "WTN_BRI_programme_4",
+        "x": 6,
+        "y": 14,
+        "parents": [
+          "WTN_BRI_programme_3"
+        ]
+      },
+      {
+        "id": "WTN_BRI_programme_5",
+        "x": 6,
+        "y": 16,
+        "parents": [
+          "WTN_BRI_programme_4"
+        ]
+      }
+    ]
+  },
+  "WTN_RUS": {
+    "tags": [
+      "A06"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_RUS_council",
+        "x": 4,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_RUS_accounts",
+        "x": 4,
+        "y": 2,
+        "parents": [
+          "WTN_RUS_focus_mandate_public",
+          "WTN_RUS_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_RUS_own_resources",
+        "x": 2,
+        "y": 3,
+        "parents": [
+          "WTN_RUS_accounts"
+        ]
+      },
+      {
+        "id": "WTN_RUS_chamber_channel",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "WTN_RUS_accounts"
+        ]
+      },
+      {
+        "id": "WTN_RUS_local_service",
+        "x": 4,
+        "y": 4,
+        "parents": [
+          "WTN_RUS_own_resources",
+          "WTN_RUS_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_RUS_programme_1",
+        "x": 4,
+        "y": 5,
+        "parents": [
+          "WTN_RUS_local_service"
+        ]
+      },
+      {
+        "id": "WTN_RUS_programme_2",
+        "x": 2,
+        "y": 6,
+        "parents": [
+          "WTN_RUS_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_RUS_programme_3",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_RUS_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_RUS_programme_4",
+        "x": 4,
+        "y": 7,
+        "parents": [
+          "WTN_RUS_programme_2",
+          "WTN_RUS_programme_3"
+        ]
+      },
+      {
+        "id": "WTN_RUS_focus_mandate_public",
+        "x": 2,
+        "y": 1,
+        "parents": [
+          "WTN_RUS_council"
+        ]
+      },
+      {
+        "id": "WTN_RUS_focus_mandate_delegated",
+        "x": 6,
+        "y": 1,
+        "parents": [
+          "WTN_RUS_council"
+        ]
+      }
+    ]
+  },
+  "WTN_OSA": {
+    "tags": [
+      "A09"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_OSA_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_OSA_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_OSA_council"
+        ]
+      },
+      {
+        "id": "WTN_OSA_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_OSA_accounts"
+        ]
+      },
+      {
+        "id": "WTN_OSA_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_OSA_accounts"
+        ]
+      },
+      {
+        "id": "WTN_OSA_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_OSA_own_resources",
+          "WTN_OSA_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_OSA_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_OSA_local_service"
+        ]
+      },
+      {
+        "id": "WTN_OSA_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_OSA_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_OSA_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_OSA_programme_2"
+        ]
+      },
+      {
+        "id": "WTN_OSA_programme_4",
+        "x": 6,
+        "y": 14,
+        "parents": [
+          "WTN_OSA_programme_3"
+        ]
+      }
+    ]
+  },
+  "WTN_NOR": {
+    "tags": [
+      "A08"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_NOR_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_NOR_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_NOR_council"
+        ]
+      },
+      {
+        "id": "WTN_NOR_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_NOR_accounts"
+        ]
+      },
+      {
+        "id": "WTN_NOR_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_NOR_accounts"
+        ]
+      },
+      {
+        "id": "WTN_NOR_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_NOR_own_resources",
+          "WTN_NOR_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_NOR_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_NOR_local_service"
+        ]
+      },
+      {
+        "id": "WTN_NOR_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_NOR_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_NOR_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_NOR_programme_2"
+        ]
+      }
+    ]
+  },
+  "WTN_IRN": {
+    "tags": [
+      "A05"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_IRN_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_IRN_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_IRN_council"
+        ]
+      },
+      {
+        "id": "WTN_IRN_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_IRN_accounts"
+        ]
+      },
+      {
+        "id": "WTN_IRN_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_IRN_accounts"
+        ]
+      },
+      {
+        "id": "WTN_IRN_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_IRN_own_resources",
+          "WTN_IRN_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_IRN_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_IRN_local_service"
+        ]
+      },
+      {
+        "id": "WTN_IRN_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_IRN_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_IRN_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_IRN_programme_2"
+        ]
+      },
+      {
+        "id": "WTN_IRN_programme_4",
+        "x": 6,
+        "y": 14,
+        "parents": [
+          "WTN_IRN_programme_3"
+        ]
+      }
+    ]
+  },
+  "WTN_AUS": {
+    "tags": [
+      "A07",
+      "AVC",
+      "AQL",
+      "ASA",
+      "AWA",
+      "ATA"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_AUS_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_AUS_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_AUS_council"
+        ]
+      },
+      {
+        "id": "WTN_AUS_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_AUS_accounts"
+        ]
+      },
+      {
+        "id": "WTN_AUS_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_AUS_accounts"
+        ]
+      },
+      {
+        "id": "WTN_AUS_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_AUS_own_resources",
+          "WTN_AUS_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_AUS_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_AUS_local_service"
+        ]
+      },
+      {
+        "id": "WTN_AUS_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_AUS_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_AUS_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_AUS_programme_2"
+        ]
+      },
+      {
+        "id": "WTN_AUS_programme_4",
+        "x": 6,
+        "y": 14,
+        "parents": [
+          "WTN_AUS_programme_3"
+        ]
+      }
+    ]
+  },
+  "WTN_SUL": {
+    "tags": [
+      "A11",
+      "A12",
+      "A13",
+      "A14"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_SUL_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_SUL_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_SUL_council"
+        ]
+      },
+      {
+        "id": "WTN_SUL_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_SUL_accounts"
+        ]
+      },
+      {
+        "id": "WTN_SUL_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_SUL_accounts"
+        ]
+      },
+      {
+        "id": "WTN_SUL_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_SUL_own_resources",
+          "WTN_SUL_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_SUL_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_SUL_local_service"
+        ]
+      },
+      {
+        "id": "WTN_SUL_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_SUL_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_SUL_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_SUL_programme_2"
+        ]
+      }
+    ]
+  },
+  "WTN_MLT": {
+    "tags": [
+      "MLT"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_MLT_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_MLT_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_MLT_council"
+        ]
+      },
+      {
+        "id": "WTN_MLT_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_MLT_accounts"
+        ]
+      },
+      {
+        "id": "WTN_MLT_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_MLT_accounts"
+        ]
+      },
+      {
+        "id": "WTN_MLT_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_MLT_own_resources",
+          "WTN_MLT_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_MLT_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_MLT_local_service"
+        ]
+      },
+      {
+        "id": "WTN_MLT_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_MLT_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_MLT_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_MLT_programme_2"
+        ]
+      }
+    ]
+  },
+  "WTN_PCF": {
+    "tags": [
+      "PCF"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_PCF_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_PCF_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_PCF_council"
+        ]
+      },
+      {
+        "id": "WTN_PCF_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_PCF_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PCF_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_PCF_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PCF_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_PCF_own_resources",
+          "WTN_PCF_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_PCF_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_PCF_local_service"
+        ]
+      },
+      {
+        "id": "WTN_PCF_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_PCF_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_PCF_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_PCF_programme_2"
+        ]
+      }
+    ]
+  },
+  "WTN_PAZ": {
+    "tags": [
+      "PAZ"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_PAZ_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_PAZ_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_PAZ_council"
+        ]
+      },
+      {
+        "id": "WTN_PAZ_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_PAZ_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PAZ_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_PAZ_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PAZ_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_PAZ_own_resources",
+          "WTN_PAZ_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_PAZ_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_PAZ_local_service"
+        ]
+      },
+      {
+        "id": "WTN_PAZ_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_PAZ_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_PAZ_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_PAZ_programme_2"
+        ]
+      }
+    ]
+  },
+  "WTN_PHR": {
+    "tags": [
+      "PHR"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_PHR_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_PHR_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_PHR_council"
+        ]
+      },
+      {
+        "id": "WTN_PHR_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_PHR_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PHR_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_PHR_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PHR_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_PHR_own_resources",
+          "WTN_PHR_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_PHR_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_PHR_local_service"
+        ]
+      },
+      {
+        "id": "WTN_PHR_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_PHR_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_PHR_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_PHR_programme_2"
+        ]
+      }
+    ]
+  },
+  "WTN_HAW": {
+    "tags": [
+      "PHW"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_HAW_council",
+        "x": 6,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_HAW_accounts",
+        "x": 6,
+        "y": 2,
+        "parents": [
+          "WTN_HAW_council"
+        ]
+      },
+      {
+        "id": "WTN_HAW_own_resources",
+        "x": 2,
+        "y": 4,
+        "parents": [
+          "WTN_HAW_accounts"
+        ]
+      },
+      {
+        "id": "WTN_HAW_chamber_channel",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "WTN_HAW_accounts"
+        ]
+      },
+      {
+        "id": "WTN_HAW_local_service",
+        "x": 6,
+        "y": 6,
+        "parents": [
+          "WTN_HAW_own_resources",
+          "WTN_HAW_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_HAW_programme_1",
+        "x": 6,
+        "y": 8,
+        "parents": [
+          "WTN_HAW_local_service"
+        ]
+      },
+      {
+        "id": "WTN_HAW_programme_2",
+        "x": 6,
+        "y": 10,
+        "parents": [
+          "WTN_HAW_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_HAW_programme_3",
+        "x": 6,
+        "y": 12,
+        "parents": [
+          "WTN_HAW_programme_2"
+        ]
+      }
+    ]
+  },
+  "WTN_SEA": {
+    "tags": [
+      "PSY",
+      "PTG",
+      "PKR",
+      "PPM",
+      "PZN",
+      "PPE"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_SEA_council",
+        "x": 4,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_SEA_accounts",
+        "x": 4,
+        "y": 2,
+        "parents": [
+          "WTN_SEA_focus_mandate_public",
+          "WTN_SEA_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_SEA_own_resources",
+        "x": 2,
+        "y": 3,
+        "parents": [
+          "WTN_SEA_accounts"
+        ]
+      },
+      {
+        "id": "WTN_SEA_chamber_channel",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "WTN_SEA_accounts"
+        ]
+      },
+      {
+        "id": "WTN_SEA_local_service",
+        "x": 4,
+        "y": 4,
+        "parents": [
+          "WTN_SEA_own_resources",
+          "WTN_SEA_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_SEA_programme_1",
+        "x": 4,
+        "y": 5,
+        "parents": [
+          "WTN_SEA_local_service"
+        ]
+      },
+      {
+        "id": "WTN_SEA_programme_2",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "WTN_SEA_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_SEA_programme_3",
+        "x": 4,
+        "y": 7,
+        "parents": [
+          "WTN_SEA_programme_2"
+        ]
+      },
+      {
+        "id": "WTN_SEA_focus_mandate_public",
+        "x": 2,
+        "y": 1,
+        "parents": [
+          "WTN_SEA_council"
+        ]
+      },
+      {
+        "id": "WTN_SEA_focus_mandate_delegated",
+        "x": 6,
+        "y": 1,
+        "parents": [
+          "WTN_SEA_council"
+        ]
+      }
+    ]
+  },
+  "WTN_PHI": {
+    "tags": [
+      "PLS",
+      "PSL",
+      "PCB",
+      "PPN",
+      "PVI",
+      "PSM",
+      "PMD",
+      "PNM",
+      "PNL",
+      "PML",
+      "PBT"
+    ],
+    "focuses": [
+      {
+        "id": "WTN_PHI_council",
+        "x": 4,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "WTN_PHI_accounts",
+        "x": 4,
+        "y": 2,
+        "parents": [
+          "WTN_PHI_focus_mandate_public",
+          "WTN_PHI_focus_mandate_delegated"
+        ]
+      },
+      {
+        "id": "WTN_PHI_own_resources",
+        "x": 2,
+        "y": 3,
+        "parents": [
+          "WTN_PHI_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PHI_chamber_channel",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "WTN_PHI_accounts"
+        ]
+      },
+      {
+        "id": "WTN_PHI_local_service",
+        "x": 4,
+        "y": 4,
+        "parents": [
+          "WTN_PHI_own_resources",
+          "WTN_PHI_chamber_channel"
+        ]
+      },
+      {
+        "id": "WTN_PHI_programme_1",
+        "x": 4,
+        "y": 5,
+        "parents": [
+          "WTN_PHI_local_service"
+        ]
+      },
+      {
+        "id": "WTN_PHI_programme_2",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "WTN_PHI_programme_1"
+        ]
+      },
+      {
+        "id": "WTN_PHI_programme_3",
+        "x": 4,
+        "y": 7,
+        "parents": [
+          "WTN_PHI_programme_2"
+        ]
+      },
+      {
+        "id": "WTN_PHI_focus_mandate_public",
+        "x": 2,
+        "y": 1,
+        "parents": [
+          "WTN_PHI_council"
+        ]
+      },
+      {
+        "id": "WTN_PHI_focus_mandate_delegated",
+        "x": 6,
+        "y": 1,
+        "parents": [
+          "WTN_PHI_council"
+        ]
+      }
+    ]
+  }
+}

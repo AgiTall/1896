@@ -12,11 +12,11 @@ state = {
   buildings = {
    infrastructure = 1
   }
-  owner = A07
-  add_core_of = A07
+  owner = AQL
+  add_core_of = AQL
  }
  state_category = pastoral
- manpower = 60000
+ manpower = 53278
  buildings_max_level_factor = 1.000
  local_supplies = 0.000
 }

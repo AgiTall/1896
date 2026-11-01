@@ -1,0 +1,18 @@
+{
+  "state": 1086,
+  "population": 69376,
+  "sources": [
+    {
+      "state": 1049,
+      "province": 12113,
+      "population_before": 3126543,
+      "transferred": 53552
+    },
+    {
+      "state": 334,
+      "province": 13298,
+      "population_before": 855346,
+      "transferred": 15824
+    }
+  ]
+}

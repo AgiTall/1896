@@ -23,8 +23,8 @@ A03_wartime_operations = {
   complete_effect = {
    set_country_flag = A03_second_wave_sent
    # 45 дней дополнительного времени для кампании
-   add_days_mission_timeout = { mission = A03_japanese_expansion days = 45 }
-   A01 = { add_days_mission_timeout = { mission = A01_japanese_expansion days = 45 } }
+   add_political_power = 5
+   A01 = { add_political_power = 5 }
    # Немедленное подкрепление к берегам Борнео
    add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1000 producer = A03 }
    add_manpower = 5000
@@ -60,8 +60,8 @@ A03_wartime_operations = {
   complete_effect = {
    set_country_flag = A03_reserves_mobilized
    # 30 дней к таймеру кампании
-   add_days_mission_timeout = { mission = A03_japanese_expansion days = 30 }
-   A01 = { add_days_mission_timeout = { mission = A01_japanese_expansion days = 30 } }
+   add_political_power = 5
+   A01 = { add_political_power = 5 }
    add_manpower = 15000
    add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2000 producer = A03 }
    add_fuel = 20000
@@ -96,8 +96,8 @@ A03_wartime_operations = {
   complete_effect = {
    set_country_flag = A03_press_campaign_done
    # 20 дней к таймеру за счёт пропаганды
-   add_days_mission_timeout = { mission = A03_japanese_expansion days = 20 }
-   A01 = { add_days_mission_timeout = { mission = A01_japanese_expansion days = 20 } }
+   add_political_power = 5
+   A01 = { add_political_power = 5 }
    add_war_support = 0.07
    add_stability = 0.03
    add_political_power = 25

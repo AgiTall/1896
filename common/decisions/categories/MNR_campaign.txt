@@ -1,0 +1,1 @@
+MNR_campaign_category = { icon = generic_political_discourse visible = { MNR_is_minor = yes has_country_flag = MNR_initialized } }

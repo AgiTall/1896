@@ -1,0 +1,85 @@
+A10D_development = {
+ A10D_hire_coastal_boats = {
+  icon = generic_political_discourse cost = 40 days_remove = 21 days_re_enable = 60
+  available = { has_capitulated = no check_variable = { A10D_supply < 89 } }
+  remove_effect = { if = { limit = { has_capitulated = no } add_to_variable = { A10D_supply = 12 } A10D_refresh_supply = yes navy_experience = 2 } }
+  ai_will_do = { factor = 2 }
+ }
+ A10D_buy_reserve_rice = {
+  icon = generic_political_discourse cost = 35 days_remove = 21 days_re_enable = 90
+  available = { has_capitulated = no check_variable = { A10D_supply < 89 } }
+  modifier = { consumer_goods_factor = 0.02 }
+  remove_effect = { if = { limit = { has_capitulated = no } add_to_variable = { A10D_supply = 12 } A10D_refresh_supply = yes } }
+  ai_will_do = { factor = 2 }
+ }
+ A10D_repair_typhoon_quays = {
+  icon = generic_political_discourse cost = 60 days_remove = 35 days_re_enable = 180
+  available = { has_capitulated = no has_idea = A10D_monsoon_damage }
+  visible = { has_idea = A10D_monsoon_damage }
+  remove_effect = { if = { limit = { has_capitulated = no } remove_ideas = A10D_monsoon_damage add_to_variable = { A10D_supply = 20 } A10D_refresh_supply = yes } }
+  ai_will_do = { factor = 5 }
+ }
+ A10D_export_rope_contract = {
+  icon = generic_political_discourse cost = 30 days_remove = 30 days_re_enable = 120
+  available = { has_capitulated = no has_completed_focus = A10D_abaca_cooperatives check_variable = { A10D_supply > 24 } }
+  visible = { has_completed_focus = A10D_abaca_cooperatives }
+  complete_effect = { subtract_from_variable = { A10D_supply = 10 } A10D_refresh_supply = yes }
+  remove_effect = { if = { limit = { has_capitulated = no } add_political_power = 65 } }
+  ai_will_do = { factor = 1 }
+ }
+ A10D_purchase_provincial_tools = {
+  icon = generic_political_discourse cost = 65 days_remove = 45 days_re_enable = 180
+  available = { has_capitulated = no has_completed_focus = A10D_provincial_workshops check_variable = { A10D_supply > 24 } }
+  visible = { has_completed_focus = A10D_provincial_workshops }
+  complete_effect = { subtract_from_variable = { A10D_supply = 10 } A10D_refresh_supply = yes }
+  remove_effect = { if = { limit = { has_capitulated = no } add_timed_idea = { idea = A10D_tools_programme days = 120 } } }
+  ai_will_do = { factor = 1 }
+ }
+ A10D_evening_literacy = {
+  icon = generic_political_discourse cost = 40 days_remove = 35 days_re_enable = 150
+  available = { has_capitulated = no has_completed_focus = A10D_normal_schools check_variable = { A10D_supply > 14 } }
+  visible = { has_completed_focus = A10D_normal_schools }
+  complete_effect = { subtract_from_variable = { A10D_supply = 5 } A10D_refresh_supply = yes }
+  remove_effect = { if = { limit = { has_capitulated = no } add_timed_idea = { idea = A10D_evening_classes days = 120 } add_stability = 0.01 } }
+  ai_will_do = { factor = 1 }
+ }
+ A10D_garrison_field_drills = {
+  icon = generic_political_discourse cost = 35 days_remove = 21 days_re_enable = 90
+  available = { has_capitulated = no has_completed_focus = A10D_common_calibres has_equipment = { infantry_equipment > 149 } check_variable = { A10D_supply > 19 } }
+  visible = { has_completed_focus = A10D_common_calibres }
+  complete_effect = { add_equipment_to_stockpile = { type = infantry_equipment amount = -150 } subtract_from_variable = { A10D_supply = 5 } A10D_refresh_supply = yes }
+  remove_effect = { if = { limit = { has_capitulated = no } army_experience = 8 } }
+  ai_will_do = { factor = 1 }
+ }
+ A10D_train_volunteer_orderlies = {
+  icon = generic_political_discourse cost = 45 days_remove = 30 days_re_enable = 180
+  available = { has_capitulated = no has_completed_focus = A10D_district_clinics check_variable = { A10D_supply > 14 } }
+  visible = { has_completed_focus = A10D_district_clinics }
+  complete_effect = { subtract_from_variable = { A10D_supply = 5 } A10D_refresh_supply = yes }
+  remove_effect = { if = { limit = { has_capitulated = no } add_timed_idea = { idea = A10D_volunteer_orderlies days = 120 } } }
+  ai_will_do = { factor = 1 }
+ }
+ A10D_collect_for_soldiers_families = {
+  icon = generic_political_discourse cost = 50 days_remove = 35 days_re_enable = 150
+  available = { has_capitulated = no has_war = yes has_war_support < 0.85 check_variable = { A10D_supply > 24 } }
+  visible = { has_war = yes }
+  complete_effect = { subtract_from_variable = { A10D_supply = 10 } A10D_refresh_supply = yes add_timed_idea = { idea = A10D_war_collections days = 90 } }
+  remove_effect = { if = { limit = { has_capitulated = no } add_war_support = 0.04 } }
+  ai_will_do = { factor = 2 }
+ }
+ A10D_emergency_shipping_levy = {
+  icon = generic_political_discourse cost = 60 days_remove = 30 days_re_enable = 180
+  available = { has_capitulated = no has_war = yes check_variable = { A10D_supply < 71 } }
+  visible = { has_war = yes }
+  complete_effect = { add_stability = -0.02 }
+  remove_effect = { if = { limit = { has_capitulated = no } add_equipment_to_stockpile = { type = convoy_1 amount = 8 producer = A10 } add_to_variable = { A10D_supply = 20 } A10D_refresh_supply = yes } }
+  ai_will_do = { factor = 3 }
+ }
+ A10D_restore_peacetime_routes = {
+  icon = generic_political_discourse cost = 45 days_remove = 45 days_re_enable = 120
+  available = { has_capitulated = no has_war = no has_completed_focus = A10D_mail_ferries check_variable = { A10D_supply < 86 } }
+  visible = { has_war = no has_completed_focus = A10D_mail_ferries }
+  remove_effect = { if = { limit = { has_capitulated = no } add_to_variable = { A10D_supply = 15 } A10D_refresh_supply = yes add_stability = 0.01 } }
+  ai_will_do = { factor = 2 }
+ }
+}

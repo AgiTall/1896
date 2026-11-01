@@ -1,0 +1,20 @@
+ideas = { country = {
+ A10W_conditional_oath = { picture = jpc_credit removal_cost = -1 modifier = { political_power_gain = -0.05 trade_opinion_factor = 10 } }
+ A10W_audited_ledger = { picture = jpc_credit removal_cost = -1 modifier = { political_power_gain = 0.05 consumer_goods_factor = 0.01 } }
+ A10W_bonded_customs = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_buildings_factor = 0.04 consumer_goods_factor = 0.02 } }
+ A10W_port_watch = { picture = generic_army_war_college removal_cost = -1 modifier = { army_defence_factor = 0.03 supply_consumption_factor = -0.03 } }
+ A10W_local_shareholders = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.03 political_power_gain = 0.03 } }
+ A10W_provisional_charter = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = 0.02 political_power_gain = -0.05 } }
+ A10W_resident_council_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 stability_factor = -0.03 } }
+ A10W_export_estates_spirit = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_infrastructure_factor = 0.10 consumer_goods_factor = 0.03 stability_factor = -0.03 } }
+ A10W_colonial_administration = { picture = jpc_credit removal_cost = -1 modifier = { production_speed_buildings_factor = 0.06 consumer_goods_factor = 0.04 political_power_gain = -0.05 } }
+ A10W_port_hospitals = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.04 recruitable_population_factor = 0.03 consumer_goods_factor = 0.01 } }
+ A10W_provisional_exchange = { picture = jpc_credit removal_cost = -1 modifier = { research_speed_factor = 0.02 political_power_gain = 0.03 consumer_goods_factor = 0.02 } }
+ A10W_merchant_assembly_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 stability_factor = -0.02 } }
+ A10W_duplicate_cables_spirit = { picture = jpc_north removal_cost = -1 modifier = { naval_coordination = 0.04 research_speed_factor = 0.02 consumer_goods_factor = 0.01 } }
+ A10W_escrow_courts = { picture = jpc_credit removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.05 production_speed_buildings_factor = 0.04 } }
+ A10W_metropolitan_directorate = { picture = jpc_credit removal_cost = -1 modifier = { political_power_gain = 0.10 research_speed_factor = 0.03 consumer_goods_factor = 0.04 } }
+ A10W_network_covenant = { picture = jpc_fleet removal_cost = -1 modifier = { convoy_escort_efficiency = 0.05 naval_coordination = 0.03 consumer_goods_factor = 0.02 } }
+ A10W_charter_strikes = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = -0.05 production_speed_buildings_factor = -0.08 political_power_gain = -0.10 } }
+ A10W_emergency_mediation = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { consumer_goods_factor = 0.03 political_power_gain = -0.05 } }
+} }

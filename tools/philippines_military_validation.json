@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "status": "PASS",
+  "focuses": 28,
+  "event_options": 12,
+  "decisions": 9,
+  "scenario_groups": 8,
+  "checks": [
+    "65 threshold: integer/fractional onset, recovery, containment and 0–100 bounds",
+    "12 monthly war/peace, 65 repression and junta/ordinary decay scenarios",
+    "all nine institution costs/recovery monthly deltas",
+    "80 integer/fractional scheduling and independent exact 150-day crisis cooldowns",
+    "all 12 event options, debt-tolerant compromise, conditional delivery and 180-day purge expiry",
+    "all nine decision costs, repeat gates, forced-labour reversal and unaffordable decision rejection",
+    "history character and old-save fallback, coup cleanup, idempotent initialization, own-subject troop recall",
+    "both full focus outcomes and shared finale; sustainable wartime recovery; one monthly dispatch; capitulation pause"
+  ],
+  "method": "Executes parsed actual A10M effect/trigger/event/decision/focus/on_action bodies with fail-closed unsupported operations",
+  "limitations": [
+    "Bounded script model is not the HOI4 engine",
+    "No combat, AI timing, economy modifier recalculation or campaign balance simulation"
+  ]
+}

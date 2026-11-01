@@ -57,9 +57,7 @@ for folder,size in [('gfx/flags',(82,52)),('gfx/flags/medium',(41,26)),('gfx/fla
 colors=(R/'common/countries/cosmetic.txt').read_text()
 for tag in ('A01_CROWN','A01_COMMONWEALTH','A01_ROYAL_EMPIRE'):assert tag+' = { color = rgb { 235 135 45 }' in colors
 for lang in ('russian','english'):
- s=(R/f'localisation/{lang}/zzzzzzz_monarchy_l_{lang}.yml').read_text(encoding='utf-8-sig')
- s+=(R/f'localisation/{lang}/zzzzzzzz_crown_rework_l_{lang}.yml').read_text(encoding='utf-8-sig')
- s+=(R/f'localisation/{lang}/zzzzzzzzzz_royal_story_l_{lang}.yml').read_text(encoding='utf-8-sig')
+ s=(R/f'localisation/{lang}/1896_main_l_{lang}.yml').read_text(encoding='utf-8-sig')
  keys=set(re.findall(r'^\s+(\S+):\d',s,re.M))
  for fid in royal.keys()-{'A01_crown_above_factions','A01_royal_island_charter','A01_crown_island_council','A01_crown_legal_guarantees','A01_wilhelmina_comes_of_age','A01_royal_constitution'}:assert fid in keys and fid+'_desc' in keys
  for k in events:

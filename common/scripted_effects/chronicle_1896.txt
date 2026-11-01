@@ -1,0 +1,2263 @@
+CH96_tick = {
+ if = {
+  limit = {
+   date > 1895.12.31
+   date < 1897.1.1
+  }
+  CH96_align_borneo_timer = yes
+  if = {
+   limit = {
+    date > 1896.2.13
+    NOT = {
+     has_global_flag = CH96_batavia_signed
+    }
+   }
+   A01 = {
+    remove_mission = A01_japanese_expansion
+   }
+   A03 = {
+    remove_mission = A03_japanese_expansion
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.9
+    NOT = {
+     has_global_flag = ch96_queued_1
+    }
+   }
+   set_global_flag = ch96_queued_1
+   if = {
+    limit = {
+     country_exists = A03
+    }
+    A03 = {
+     country_event = {
+      id = ch96.1
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_1_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.201
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.24
+    NOT = {
+     has_global_flag = ch96_queued_2
+    }
+   }
+   set_global_flag = ch96_queued_2
+   if = {
+    limit = {
+     country_exists = A10
+    }
+    A10 = {
+     country_event = {
+      id = ch96.2
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_2_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.202
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.14
+    NOT = {
+     has_global_flag = ch96_queued_3
+    }
+   }
+   set_global_flag = ch96_queued_3
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch96.3
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_3_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.203
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.19
+    NOT = {
+     has_global_flag = ch96_queued_4
+    }
+   }
+   set_global_flag = ch96_queued_4
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch96.4
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_4_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.204
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.3.9
+    NOT = {
+     has_global_flag = ch96_queued_5
+    }
+   }
+   set_global_flag = ch96_queued_5
+   if = {
+    limit = {
+     country_exists = A03
+    }
+    A03 = {
+     country_event = {
+      id = ch96.5
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_5_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.205
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.3.24
+    NOT = {
+     has_global_flag = ch96_queued_6
+    }
+   }
+   set_global_flag = ch96_queued_6
+   if = {
+    limit = {
+     country_exists = A10
+    }
+    A10 = {
+     country_event = {
+      id = ch96.6
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_6_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.206
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.4.3
+    NOT = {
+     has_global_flag = ch96_queued_7
+    }
+   }
+   set_global_flag = ch96_queued_7
+   if = {
+    limit = {
+     country_exists = PHW
+    }
+    PHW = {
+     country_event = {
+      id = ch96.7
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_7_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.207
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.4.17
+    NOT = {
+     has_global_flag = ch96_queued_8
+    }
+   }
+   set_global_flag = ch96_queued_8
+   if = {
+    limit = {
+     country_exists = A03
+    }
+    A03 = {
+     country_event = {
+      id = ch96.8
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_8_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.208
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.5.4
+    NOT = {
+     has_global_flag = ch96_queued_9
+    }
+   }
+   set_global_flag = ch96_queued_9
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch96.9
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_9_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.209
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.5.19
+    NOT = {
+     has_global_flag = ch96_queued_10
+    }
+   }
+   set_global_flag = ch96_queued_10
+   if = {
+    limit = {
+     country_exists = A02
+    }
+    A02 = {
+     country_event = {
+      id = ch96.10
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_10_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.210
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.6.11
+    NOT = {
+     has_global_flag = ch96_queued_11
+    }
+   }
+   set_global_flag = ch96_queued_11
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch96.11
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_11_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.211
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.6.27
+    NOT = {
+     has_global_flag = ch96_queued_12
+    }
+   }
+   set_global_flag = ch96_queued_12
+   if = {
+    limit = {
+     country_exists = A07
+    }
+    A07 = {
+     country_event = {
+      id = ch96.12
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_12_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.212
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.7.9
+    NOT = {
+     has_global_flag = ch96_queued_13
+    }
+   }
+   set_global_flag = ch96_queued_13
+   if = {
+    limit = {
+     country_exists = A05
+    }
+    A05 = {
+     country_event = {
+      id = ch96.13
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_13_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.213
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.7.21
+    NOT = {
+     has_global_flag = ch96_queued_14
+    }
+   }
+   set_global_flag = ch96_queued_14
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch96.14
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_14_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.214
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.8.4
+    NOT = {
+     has_global_flag = ch96_queued_15
+    }
+   }
+   set_global_flag = ch96_queued_15
+   if = {
+    limit = {
+     country_exists = A02
+    }
+    A02 = {
+     country_event = {
+      id = ch96.15
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_15_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.215
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.8.19
+    NOT = {
+     has_global_flag = ch96_queued_16
+    }
+   }
+   set_global_flag = ch96_queued_16
+   if = {
+    limit = {
+     country_exists = A08
+    }
+    A08 = {
+     country_event = {
+      id = ch96.16
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_16_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.216
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.9.7
+    NOT = {
+     has_global_flag = ch96_queued_17
+    }
+   }
+   set_global_flag = ch96_queued_17
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch96.17
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_17_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.217
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.9.24
+    NOT = {
+     has_global_flag = ch96_queued_18
+    }
+   }
+   set_global_flag = ch96_queued_18
+   if = {
+    limit = {
+     country_exists = A10
+    }
+    A10 = {
+     country_event = {
+      id = ch96.18
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_18_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.218
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.10.9
+    NOT = {
+     has_global_flag = ch96_queued_19
+    }
+   }
+   set_global_flag = ch96_queued_19
+   if = {
+    limit = {
+     country_exists = PHW
+    }
+    PHW = {
+     country_event = {
+      id = ch96.19
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_19_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.219
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.10.21
+    NOT = {
+     has_global_flag = ch96_queued_20
+    }
+   }
+   set_global_flag = ch96_queued_20
+   if = {
+    limit = {
+     country_exists = A10
+    }
+    A10 = {
+     country_event = {
+      id = ch96.20
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_20_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.220
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.11.4
+    NOT = {
+     has_global_flag = ch96_queued_21
+    }
+   }
+   set_global_flag = ch96_queued_21
+   if = {
+    limit = {
+     country_exists = A06
+    }
+    A06 = {
+     country_event = {
+      id = ch96.21
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_21_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.221
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.11.17
+    NOT = {
+     has_global_flag = ch96_queued_22
+    }
+   }
+   set_global_flag = ch96_queued_22
+   if = {
+    limit = {
+     country_exists = A06
+    }
+    A06 = {
+     country_event = {
+      id = ch96.22
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_22_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.222
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.12.9
+    NOT = {
+     has_global_flag = ch96_queued_23
+    }
+   }
+   set_global_flag = ch96_queued_23
+   if = {
+    limit = {
+     country_exists = A02
+    }
+    A02 = {
+     country_event = {
+      id = ch96.23
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_23_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.223
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.12.30
+    NOT = {
+     has_global_flag = ch96_queued_24
+    }
+   }
+   set_global_flag = ch96_queued_24
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch96.24
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch96_24_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch96.224
+     }
+    }
+   }
+  }
+ }
+}
+CH96_finish_borneo_war = {
+ set_country_flag = A01_expansion_resolved
+ set_country_flag = A01_borneo_treaty
+ set_global_flag = CH96_batavia_signed
+ A01_cleanup_expansion_effect = yes
+ A01_disband_war_militia_effect = yes
+ if = {
+  limit = {
+   has_war_with = A03
+  }
+  white_peace = {
+   tag = A03
+  }
+ }
+ A01_initialize_postwar_accounts_effect = yes
+}
+CH96_batavia_compromise = {
+ if = {
+  limit = {
+   country_exists = A03
+   NOT = {
+    has_global_flag = CH96_batavia_signed
+   }
+   OR = {
+    has_war_with = A03
+    has_country_flag = A01_expansion_resolved
+   }
+  }
+  CH96_finish_borneo_war = yes
+  CH96_restore_borneo = yes
+  set_country_flag = CH96_dutch_victory
+  A03 = {
+   clr_country_flag = A03_borneo_victory
+   set_country_flag = CH96_japan_withdrawn
+  }
+  CH96_ludolf_cabinet = yes
+  add_stability = 0.05
+ }
+ else = {
+  set_global_flag = ch96_3_inactive
+ }
+}
+CH96_hard_peace = {
+ if = {
+  limit = {
+   country_exists = A03
+   has_war_with = A03
+   NOT = {
+    has_global_flag = CH96_batavia_signed
+   }
+  }
+  CH96_finish_borneo_war = yes
+  CH96_transfer_north = yes
+  CH96_transfer_south = yes
+  set_variable = {
+   CH96_reparations_millions = 15
+  }
+  WTC_initialize_effect = yes
+  add_to_variable = {
+   WTC_debt = 15
+  }
+  WTC_refresh_effect = yes
+  A04 = {
+   WTN_initialize_effect = yes
+   add_to_variable = {
+    WTN_liquidity = 15
+   }
+   WTN_update_ledger_effect = yes
+  }
+  add_stability = -0.10
+ }
+ else = {
+  set_global_flag = ch96_3_inactive
+ }
+}
+CH96_ludolf_cabinet = {
+ if = {
+  limit = {
+   has_character = A01_ludolf_sloot_van_de_beele
+  }
+  A01_end_dismissal_debate_effect = yes
+  clr_country_flag = A01_admirals_seized_power
+  set_country_flag = A01_ludolf_survived
+  set_country_flag = A01_ludolf_reform_path
+  promote_character = {
+   character = A01_ludolf_sloot_van_de_beele
+   ideology = oligarchism
+  }
+  add_stability = 0.04
+ }
+ else = {
+  set_global_flag = ch96_4_inactive
+ }
+}
+CH96_admiral_coup = {
+ if = {
+  limit = {
+   has_character = A01_council_of_admirals
+  }
+  A01_end_dismissal_debate_effect = yes
+  set_country_flag = A01_admirals_seized_power
+  set_country_flag = A01_ludolf_imprisoned
+  promote_character = {
+   character = A01_council_of_admirals
+   ideology = despotism
+  }
+  if = {
+   limit = {
+    has_character = A01_ludolf_sloot_van_de_beele
+   }
+   retire_character = A01_ludolf_sloot_van_de_beele
+  }
+  add_ideas = A01_military_directorate
+  add_stability = -0.05
+ }
+ else = {
+  set_global_flag = ch96_4_inactive
+ }
+}
+CH96_manila_protocol = {
+ if = {
+  limit = {
+   country_exists = A10
+  }
+  if = {
+   limit = {
+    A10 = {
+     is_subject_of = A03
+    }
+   }
+   set_autonomy = {
+    target = A10
+    autonomy_state = autonomy_free
+   }
+  }
+  A10 = {
+   if = {
+    limit = {
+     has_war_with = A03
+    }
+    white_peace = {
+     tag = A03
+    }
+   }
+   every_subject_country = {
+    if = {
+     limit = {
+      has_war_with = A03
+     }
+     white_peace = {
+      tag = A03
+     }
+    }
+   }
+   set_country_flag = A10_archipelago_peace_signed
+   add_stability = 0.06
+  }
+  set_global_flag = CH96_manila_signed
+  CH96_transfer_visayas = yes
+ }
+ else = {
+  set_global_flag = ch96_5_inactive
+ }
+}
+CH96_visayas_war = {
+ if = {
+  limit = {
+   country_exists = A10
+   NOT = {
+    has_war_with = A10
+   }
+   is_subject = no
+  }
+  declare_war_on = {
+   target = A10
+   type = annex_everything
+  }
+ }
+}
+CH96_reconstruction_credit = {
+ WTN_initialize_effect = yes
+ if = {
+  limit = {
+   check_variable = {
+    WTN_liquidity > 19
+   }
+  }
+  add_to_variable = {
+   WTN_liquidity = -20
+  }
+  WTN_update_ledger_effect = yes
+  every_country = {
+   limit = {
+    OR = {
+     tag = A01
+     tag = A03
+    }
+   }
+   WTC_initialize_effect = yes
+   add_to_variable = {
+    WTC_debt = 10
+   }
+   WTC_refresh_effect = yes
+   add_political_power = 30
+   add_timed_idea = {
+    idea = CH96_reconstruction
+    days = 180
+   }
+  }
+ }
+ else = {
+  set_global_flag = ch96_9_inactive
+ }
+}
+CH96_default = {
+ every_country = {
+  limit = {
+   OR = {
+    tag = A01
+    tag = A03
+   }
+  }
+  WTC_initialize_effect = yes
+  set_variable = {
+   WTC_debt = 100
+  }
+  WTC_refresh_effect = yes
+  add_stability = -0.04
+ }
+}
+CH96_haiti_truce = {
+ if = {
+  limit = {
+   country_exists = PHR
+  }
+  if = {
+   limit = {
+    has_war_with = PHR
+   }
+   white_peace = {
+    tag = PHR
+   }
+  }
+  319 = {
+   if = {
+    limit = {
+     is_owned_by = A05
+    }
+    PHR = {
+     transfer_state = 319
+    }
+   }
+  }
+  diplomatic_relation = {
+   country = PHR
+   relation = non_aggression_pact
+  }
+ }
+}
+CH96_equal_citizenship = {
+ if = {
+  limit = {
+   has_country_leader = {
+    character = A01_ludolf_sloot_van_de_beele
+    ruling_only = yes
+   }
+  }
+  set_country_flag = A01_equal_citizenship_established
+  remove_ideas = CH96_racial_divide
+  add_ideas = CH96_citizenship
+  add_stability = 0.04
+ }
+ else = {
+  set_global_flag = ch96_14_inactive
+ }
+}
+CH96_hokkaido_dominion = {
+ if = {
+  limit = {
+   country_exists = A03
+   OR = {
+    is_subject = no
+    is_subject_of = A03
+   }
+  }
+  if = {
+   limit = {
+    has_war_with = A03
+   }
+   white_peace = {
+    tag = A03
+   }
+  }
+  A03 = {
+   set_autonomy = {
+    target = A08
+    autonomy_state = autonomy_dominion
+    freedom_level = 0.75
+   }
+  }
+  set_country_flag = CH96_hokkaido_dominion
+  add_stability = 0.04
+ }
+ else = {
+  set_global_flag = ch96_16_inactive
+ }
+}
+CH96_hokkaido_independence = {
+ if = {
+  limit = {
+   is_subject_of = A03
+  }
+  A03 = {
+   set_autonomy = {
+    target = A08
+    autonomy_state = autonomy_free
+    end_wars = no
+   }
+  }
+ }
+ if = {
+  limit = {
+   country_exists = A03
+   NOT = {
+    has_war_with = A03
+   }
+   is_subject = no
+  }
+  declare_war_on = {
+   target = A03
+   type = annex_everything
+  }
+ }
+}
+CH96_sulu_treaty = {
+ if = {
+  limit = {
+   country_exists = PSL
+  }
+  if = {
+   limit = {
+    has_war_with = PSL
+   }
+   white_peace = {
+    tag = PSL
+   }
+  }
+  if = {
+   limit = {
+    PSL = {
+     is_subject_of = A10
+    }
+   }
+   set_autonomy = {
+    target = PSL
+    autonomy_state = autonomy_free
+   }
+  }
+  diplomatic_relation = {
+   country = PSL
+   relation = non_aggression_pact
+  }
+ }
+}
+CH96_confederation_breakup = {
+ A10_release_PVI = yes
+ A10_release_PSM = yes
+ A10_release_PCB = yes
+ A10_release_PPN = yes
+ every_subject_country = {
+  limit = {
+   OR = {
+    tag = PVI
+    tag = PSM
+    tag = PCB
+    tag = PPN
+    tag = PMD
+    tag = PNM
+    tag = PML
+    tag = PBT
+   }
+  }
+  save_event_target_as = CH96_leaving_member
+  A10 = {
+   set_autonomy = {
+    target = event_target:CH96_leaving_member
+    autonomy_state = autonomy_free
+    end_wars = no
+   }
+  }
+ }
+ add_to_variable = {
+  A10R_cohesion = -30
+ }
+ A10R_refresh = yes
+ add_stability = -0.08
+}
+CH96_united_crowns = {
+ BLV_apply_crowns_legal = yes
+}
+CH96_borneo_rematch = {
+ if = {
+  limit = {
+   country_exists = A01
+   country_exists = A03
+   A03 = {
+    NOT = {
+     has_war_with = A01
+    }
+    is_subject = no
+   }
+  }
+  A03 = {
+   diplomatic_relation = {
+    country = A01
+    relation = non_aggression_pact
+    active = no
+   }
+   declare_war_on = {
+    target = A01
+    type = take_state_focus
+    generator = {
+     1023
+     1024
+    }
+   }
+  }
+  set_global_flag = CH96_borneo_rematch
+ }
+}
+CH96_transfer_north = {
+ 1024 = {
+  if = {
+   limit = {
+    is_owned_by = A01
+   }
+   A03 = {
+    transfer_state = 1024
+   }
+  }
+ }
+ 1023 = {
+  if = {
+   limit = {
+    is_owned_by = A01
+   }
+   A03 = {
+    transfer_state = 1023
+   }
+  }
+ }
+ 1059 = {
+  if = {
+   limit = {
+    is_owned_by = A01
+   }
+   A03 = {
+    transfer_state = 1059
+   }
+  }
+ }
+ 333 = {
+  if = {
+   limit = {
+    is_owned_by = A01
+   }
+   A03 = {
+    transfer_state = 333
+   }
+  }
+ }
+}
+CH96_transfer_south = {
+ 334 = {
+  if = {
+   limit = {
+    is_owned_by = A01
+   }
+   A03 = {
+    transfer_state = 334
+   }
+  }
+ }
+ 1022 = {
+  if = {
+   limit = {
+    is_owned_by = A01
+   }
+   A03 = {
+    transfer_state = 1022
+   }
+  }
+ }
+ 1055 = {
+  if = {
+   limit = {
+    is_owned_by = A01
+   }
+   A03 = {
+    transfer_state = 1055
+   }
+  }
+ }
+}
+CH96_transfer_visayas = {
+ 624 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A10 = {
+    transfer_state = 624
+   }
+  }
+ }
+ 625 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A10 = {
+    transfer_state = 625
+   }
+  }
+ }
+ 627 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A10 = {
+    transfer_state = 627
+   }
+  }
+ }
+ 628 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A10 = {
+    transfer_state = 628
+   }
+  }
+ }
+ 1026 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A10 = {
+    transfer_state = 1026
+   }
+  }
+ }
+ 1085 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A10 = {
+    transfer_state = 1085
+   }
+  }
+ }
+}
+CH96_align_borneo_timer = {
+ if = {
+  limit = {
+   date < 1896.2.15
+   A01 = {
+    has_war_with = A03
+    NOT = {
+     has_country_flag = CH96_timer_aligned
+    }
+   }
+  }
+  A01 = {
+   set_country_flag = CH96_timer_aligned
+   set_country_flag = JPS_war_clock_v2
+   remove_mission = A01_japanese_expansion
+   activate_mission = A01_japanese_expansion
+  }
+  A03 = {
+   remove_mission = A03_japanese_expansion
+   activate_mission = A03_japanese_expansion
+  }
+  if = {
+   limit = {
+    date > 1895.12.31
+    date < 1896.1.2
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -961
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -961
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.1
+    date < 1896.1.3
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -962
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -962
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.2
+    date < 1896.1.4
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -963
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -963
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.3
+    date < 1896.1.5
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -964
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -964
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.4
+    date < 1896.1.6
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -965
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -965
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.5
+    date < 1896.1.7
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -966
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -966
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.6
+    date < 1896.1.8
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -967
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -967
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.7
+    date < 1896.1.9
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -968
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -968
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.8
+    date < 1896.1.10
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -969
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -969
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.9
+    date < 1896.1.11
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -970
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -970
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.10
+    date < 1896.1.12
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -971
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -971
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.11
+    date < 1896.1.13
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -972
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -972
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.12
+    date < 1896.1.14
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -973
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -973
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.13
+    date < 1896.1.15
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -974
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -974
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.14
+    date < 1896.1.16
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -975
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -975
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.15
+    date < 1896.1.17
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -976
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -976
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.16
+    date < 1896.1.18
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -977
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -977
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.17
+    date < 1896.1.19
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -978
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -978
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.18
+    date < 1896.1.20
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -979
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -979
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.19
+    date < 1896.1.21
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -980
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -980
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.20
+    date < 1896.1.22
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -981
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -981
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.21
+    date < 1896.1.23
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -982
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -982
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.22
+    date < 1896.1.24
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -983
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -983
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.23
+    date < 1896.1.25
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -984
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -984
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.24
+    date < 1896.1.26
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -985
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -985
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.25
+    date < 1896.1.27
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -986
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -986
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.26
+    date < 1896.1.28
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -987
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -987
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.27
+    date < 1896.1.29
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -988
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -988
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.28
+    date < 1896.1.30
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -989
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -989
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.29
+    date < 1896.1.31
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -990
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -990
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.30
+    date < 1896.2.1
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -991
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -991
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.1.31
+    date < 1896.2.2
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -992
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -992
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.1
+    date < 1896.2.3
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -993
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -993
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.2
+    date < 1896.2.4
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -994
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -994
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.3
+    date < 1896.2.5
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -995
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -995
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.4
+    date < 1896.2.6
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -996
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -996
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.5
+    date < 1896.2.7
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -997
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -997
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.6
+    date < 1896.2.8
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -998
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -998
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.7
+    date < 1896.2.9
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -999
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -999
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.8
+    date < 1896.2.10
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -1000
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -1000
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.9
+    date < 1896.2.11
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -1001
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -1001
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.10
+    date < 1896.2.12
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -1002
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -1002
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.11
+    date < 1896.2.13
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -1003
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -1003
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.12
+    date < 1896.2.14
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -1004
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -1004
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1896.2.13
+    date < 1896.2.15
+   }
+   A01 = {
+    add_days_mission_timeout = {
+     mission = A01_japanese_expansion
+     days = -1005
+    }
+   }
+   A03 = {
+    add_days_mission_timeout = {
+     mission = A03_japanese_expansion
+     days = -1005
+    }
+   }
+  }
+ }
+}
+CH96_restore_borneo = {
+ 333 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A01 = {
+    transfer_state = 333
+   }
+  }
+  if = {
+   limit = {
+    is_owned_by = A01
+    is_controlled_by = A03
+   }
+   set_state_controller = A01
+  }
+ }
+ 334 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A01 = {
+    transfer_state = 334
+   }
+  }
+  if = {
+   limit = {
+    is_owned_by = A01
+    is_controlled_by = A03
+   }
+   set_state_controller = A01
+  }
+ }
+ 1022 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A01 = {
+    transfer_state = 1022
+   }
+  }
+  if = {
+   limit = {
+    is_owned_by = A01
+    is_controlled_by = A03
+   }
+   set_state_controller = A01
+  }
+ }
+ 1023 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A01 = {
+    transfer_state = 1023
+   }
+  }
+  if = {
+   limit = {
+    is_owned_by = A01
+    is_controlled_by = A03
+   }
+   set_state_controller = A01
+  }
+ }
+ 1024 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A01 = {
+    transfer_state = 1024
+   }
+  }
+  if = {
+   limit = {
+    is_owned_by = A01
+    is_controlled_by = A03
+   }
+   set_state_controller = A01
+  }
+ }
+ 1055 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A01 = {
+    transfer_state = 1055
+   }
+  }
+  if = {
+   limit = {
+    is_owned_by = A01
+    is_controlled_by = A03
+   }
+   set_state_controller = A01
+  }
+ }
+ 1059 = {
+  if = {
+   limit = {
+    is_owned_by = A03
+   }
+   A01 = {
+    transfer_state = 1059
+   }
+  }
+  if = {
+   limit = {
+    is_owned_by = A01
+    is_controlled_by = A03
+   }
+   set_state_controller = A01
+  }
+ }
+}

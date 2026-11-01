@@ -1,7 +1,7 @@
 state = {
  id = 639
  name = "STATE_639"
- manpower = 1035
+ manpower = 1536
  state_category = small_island
  history = {
   buildings = {

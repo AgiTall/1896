@@ -1,0 +1,24 @@
+A10R_member_trigger = {
+ OR = { tag = PVI tag = PSM tag = PMD tag = PNM tag = PCB tag = PPN tag = PNL tag = PML tag = PBT }
+}
+A10R_archipelago_state_trigger = {
+ OR = { state = 1084 state = 624 state = 625 state = 627 state = 1026 state = 628 state = 1085 state = 623 state = 327 state = 1027 state = 626 state = 1025 }
+}
+A10R_republican_government = {
+ has_country_flag = A10_confederal_path
+ NOT = { has_country_flag = A10M_active }
+ NOT = { has_country_flag = A10W_oath_accepted }
+}
+A10R_republic_has_consented = {
+ OR = {
+  AND = { tag = PVI A10 = { has_country_flag = A10R_consent_PVI } }
+  AND = { tag = PSM A10 = { has_country_flag = A10R_consent_PSM } }
+  AND = { tag = PCB A10 = { has_country_flag = A10R_consent_PCB } }
+  AND = { tag = PPN A10 = { has_country_flag = A10R_consent_PPN } }
+  AND = { tag = PMD A10 = { has_country_flag = A10R_consent_PMD } }
+  AND = { tag = PNM A10 = { has_country_flag = A10R_consent_PNM } }
+  AND = { tag = PNL A10 = { has_country_flag = A10R_consent_PNL } }
+  AND = { tag = PML A10 = { has_country_flag = A10R_consent_PML } }
+  AND = { tag = PBT A10 = { has_country_flag = A10R_consent_PBT } }
+ }
+}

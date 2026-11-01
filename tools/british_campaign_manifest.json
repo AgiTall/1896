@@ -1,0 +1,790 @@
+{
+  "focuses": [
+    {
+      "id": "BLV_leviathan",
+      "x": 20,
+      "y": 0,
+      "parents": []
+    },
+    {
+      "id": "BLV_audit",
+      "x": 20,
+      "y": 1,
+      "parents": [
+        "BLV_leviathan"
+      ]
+    },
+    {
+      "id": "BLV_hamilton",
+      "x": 20,
+      "y": 3,
+      "parents": [
+        "BLV_audit",
+        "BLV_budget_subscriptions",
+        "BLV_budget_advance"
+      ]
+    },
+    {
+      "id": "BLV_commission",
+      "x": 20,
+      "y": 4,
+      "parents": [
+        "BLV_hamilton"
+      ]
+    },
+    {
+      "id": "BLV_admiralty",
+      "x": 16,
+      "y": 5,
+      "parents": [
+        "BLV_commission"
+      ]
+    },
+    {
+      "id": "BLV_constitution",
+      "x": 20,
+      "y": 5,
+      "parents": [
+        "BLV_commission"
+      ]
+    },
+    {
+      "id": "BLV_crown",
+      "x": 24,
+      "y": 5,
+      "parents": [
+        "BLV_commission"
+      ]
+    },
+    {
+      "id": "BLV_naval_cabinet",
+      "x": 16,
+      "y": 6,
+      "parents": [
+        "BLV_admiralty"
+      ]
+    },
+    {
+      "id": "BLV_merit",
+      "x": 16,
+      "y": 7,
+      "parents": [
+        "BLV_naval_cabinet"
+      ]
+    },
+    {
+      "id": "BLV_strategic_reserve",
+      "x": 16,
+      "y": 8,
+      "parents": [
+        "BLV_merit"
+      ]
+    },
+    {
+      "id": "BLV_naval_state",
+      "x": 16,
+      "y": 9,
+      "parents": [
+        "BLV_strategic_reserve"
+      ]
+    },
+    {
+      "id": "BLV_imperial_budget",
+      "x": 20,
+      "y": 6,
+      "parents": [
+        "BLV_constitution"
+      ]
+    },
+    {
+      "id": "BLV_rights",
+      "x": 20,
+      "y": 7,
+      "parents": [
+        "BLV_imperial_budget"
+      ]
+    },
+    {
+      "id": "BLV_delegates",
+      "x": 20,
+      "y": 8,
+      "parents": [
+        "BLV_rights"
+      ]
+    },
+    {
+      "id": "BLV_maritime_commonwealth",
+      "x": 20,
+      "y": 9,
+      "parents": [
+        "BLV_delegates"
+      ]
+    },
+    {
+      "id": "BLV_royal_secretariat",
+      "x": 24,
+      "y": 6,
+      "parents": [
+        "BLV_crown"
+      ]
+    },
+    {
+      "id": "BLV_crown_guard",
+      "x": 24,
+      "y": 7,
+      "parents": [
+        "BLV_royal_secretariat"
+      ]
+    },
+    {
+      "id": "BLV_loyal_governors",
+      "x": 24,
+      "y": 8,
+      "parents": [
+        "BLV_crown_guard"
+      ]
+    },
+    {
+      "id": "BLV_imperial_prerogative",
+      "x": 24,
+      "y": 9,
+      "parents": [
+        "BLV_loyal_governors"
+      ]
+    },
+    {
+      "id": "BLV_rationing",
+      "x": 2,
+      "y": 2,
+      "parents": [
+        "BLV_audit"
+      ]
+    },
+    {
+      "id": "BLV_bermuda_workshops",
+      "x": 0,
+      "y": 3,
+      "parents": [
+        "BLV_rationing"
+      ]
+    },
+    {
+      "id": "BLV_coal_depots",
+      "x": 4,
+      "y": 3,
+      "parents": [
+        "BLV_rationing"
+      ]
+    },
+    {
+      "id": "BLV_machine_tools",
+      "x": 2,
+      "y": 4,
+      "parents": [
+        "BLV_bermuda_workshops",
+        "BLV_coal_depots"
+      ]
+    },
+    {
+      "id": "BLV_ordnance",
+      "x": 0,
+      "y": 5,
+      "parents": [
+        "BLV_machine_tools"
+      ]
+    },
+    {
+      "id": "BLV_nz_industry",
+      "x": 4,
+      "y": 5,
+      "parents": [
+        "BLV_machine_tools"
+      ]
+    },
+    {
+      "id": "BLV_cable_school",
+      "x": 2,
+      "y": 6,
+      "parents": [
+        "BLV_ordnance",
+        "BLV_nz_industry"
+      ]
+    },
+    {
+      "id": "BLV_island_economy",
+      "x": 2,
+      "y": 7,
+      "parents": [
+        "BLV_cable_school"
+      ]
+    },
+    {
+      "id": "BLV_credit_audit",
+      "x": 10,
+      "y": 2,
+      "parents": [
+        "BLV_audit"
+      ]
+    },
+    {
+      "id": "BLV_chamber_desk",
+      "x": 10,
+      "y": 3,
+      "parents": [
+        "BLV_credit_audit"
+      ]
+    },
+    {
+      "id": "BLV_independent_accounts",
+      "x": 8,
+      "y": 4,
+      "parents": [
+        "BLV_chamber_desk"
+      ]
+    },
+    {
+      "id": "BLV_lambert_compact",
+      "x": 12,
+      "y": 4,
+      "parents": [
+        "BLV_chamber_desk"
+      ]
+    },
+    {
+      "id": "BLV_insurance",
+      "x": 8,
+      "y": 5,
+      "parents": [
+        "BLV_independent_accounts"
+      ]
+    },
+    {
+      "id": "BLV_revoke_cover",
+      "x": 8,
+      "y": 6,
+      "parents": [
+        "BLV_insurance"
+      ]
+    },
+    {
+      "id": "BLV_service_contracts",
+      "x": 12,
+      "y": 5,
+      "parents": [
+        "BLV_lambert_compact"
+      ]
+    },
+    {
+      "id": "BLV_debt_settlement",
+      "x": 10,
+      "y": 8,
+      "parents": [
+        "BLV_chamber_desk"
+      ]
+    },
+    {
+      "id": "BLV_fleet_register",
+      "x": 38,
+      "y": 2,
+      "parents": [
+        "BLV_audit"
+      ]
+    },
+    {
+      "id": "BLV_bermuda_dock",
+      "x": 38,
+      "y": 3,
+      "parents": [
+        "BLV_fleet_register"
+      ]
+    },
+    {
+      "id": "BLV_engine_rooms",
+      "x": 38,
+      "y": 4,
+      "parents": [
+        "BLV_bermuda_dock"
+      ]
+    },
+    {
+      "id": "BLV_battle_line",
+      "x": 36,
+      "y": 7,
+      "parents": [
+        "BLV_naval_staff"
+      ]
+    },
+    {
+      "id": "BLV_cruiser_routes",
+      "x": 40,
+      "y": 7,
+      "parents": [
+        "BLV_naval_staff"
+      ]
+    },
+    {
+      "id": "BLV_naval_staff",
+      "x": 38,
+      "y": 6,
+      "parents": [
+        "BLV_fleet_register",
+        "BLV_yards_state",
+        "BLV_yards_contracts"
+      ]
+    },
+    {
+      "id": "BLV_convoy_service",
+      "x": 38,
+      "y": 8,
+      "parents": [
+        "BLV_battle_line",
+        "BLV_cruiser_routes"
+      ]
+    },
+    {
+      "id": "BLV_singapore_docks",
+      "x": 38,
+      "y": 9,
+      "parents": [
+        "BLV_convoy_service"
+      ]
+    },
+    {
+      "id": "BLV_fleet_logistics",
+      "x": 38,
+      "y": 10,
+      "parents": [
+        "BLV_singapore_docks"
+      ]
+    },
+    {
+      "id": "BLV_garrison_audit",
+      "x": 46,
+      "y": 4,
+      "parents": [
+        "BLV_hamilton"
+      ]
+    },
+    {
+      "id": "BLV_rotation",
+      "x": 46,
+      "y": 5,
+      "parents": [
+        "BLV_garrison_audit"
+      ]
+    },
+    {
+      "id": "BLV_marines",
+      "x": 46,
+      "y": 7,
+      "parents": [
+        "BLV_rotation",
+        "BLV_rotation_medical",
+        "BLV_rotation_depots"
+      ]
+    },
+    {
+      "id": "BLV_field_hospitals",
+      "x": 46,
+      "y": 8,
+      "parents": [
+        "BLV_marines"
+      ]
+    },
+    {
+      "id": "BLV_colonial_service",
+      "x": 46,
+      "y": 9,
+      "parents": [
+        "BLV_field_hospitals"
+      ]
+    },
+    {
+      "id": "BLV_amphibious_staff",
+      "x": 46,
+      "y": 10,
+      "parents": [
+        "BLV_colonial_service"
+      ]
+    },
+    {
+      "id": "BLV_station_census",
+      "x": 30,
+      "y": 4,
+      "parents": [
+        "BLV_hamilton"
+      ]
+    },
+    {
+      "id": "BLV_australian_dossier",
+      "x": 30,
+      "y": 5,
+      "parents": [
+        "BLV_station_census"
+      ]
+    },
+    {
+      "id": "BLV_dominion_charters",
+      "x": 32,
+      "y": 6,
+      "parents": [
+        "BLV_australian_dossier"
+      ]
+    },
+    {
+      "id": "BLV_nz_ports",
+      "x": 30,
+      "y": 7,
+      "parents": [
+        "BLV_australian_dossier"
+      ]
+    },
+    {
+      "id": "BLV_pacific_stations",
+      "x": 30,
+      "y": 8,
+      "parents": [
+        "BLV_nz_ports"
+      ]
+    },
+    {
+      "id": "BLV_colonial_red_line",
+      "x": 28,
+      "y": 6,
+      "parents": [
+        "BLV_australian_dossier"
+      ]
+    },
+    {
+      "id": "BLV_australia_sovereignty",
+      "x": 32,
+      "y": 9,
+      "parents": [
+        "BLV_dominion_charters"
+      ]
+    },
+    {
+      "id": "BLV_reconquest",
+      "x": 28,
+      "y": 9,
+      "parents": [
+        "BLV_colonial_red_line"
+      ]
+    },
+    {
+      "id": "BLV_malacca",
+      "x": 54,
+      "y": 4,
+      "parents": [
+        "BLV_hamilton"
+      ]
+    },
+    {
+      "id": "BLV_batavia_oil",
+      "x": 52,
+      "y": 5,
+      "parents": [
+        "BLV_malacca"
+      ]
+    },
+    {
+      "id": "BLV_philippine_mission",
+      "x": 56,
+      "y": 5,
+      "parents": [
+        "BLV_malacca"
+      ]
+    },
+    {
+      "id": "BLV_pacific_deterrent",
+      "x": 54,
+      "y": 6,
+      "parents": [
+        "BLV_batavia_oil",
+        "BLV_philippine_mission"
+      ]
+    },
+    {
+      "id": "BLV_japanese_note",
+      "x": 52,
+      "y": 7,
+      "parents": [
+        "BLV_pacific_deterrent"
+      ]
+    },
+    {
+      "id": "BLV_war_plans",
+      "x": 56,
+      "y": 7,
+      "parents": [
+        "BLV_pacific_deterrent"
+      ]
+    },
+    {
+      "id": "BLV_eastern_supply",
+      "x": 54,
+      "y": 8,
+      "parents": [
+        "BLV_japanese_note",
+        "BLV_war_plans"
+      ]
+    },
+    {
+      "id": "BLV_song_records",
+      "x": 62,
+      "y": 2,
+      "parents": [
+        "BLV_audit"
+      ]
+    },
+    {
+      "id": "BLV_instruments",
+      "x": 62,
+      "y": 3,
+      "parents": [
+        "BLV_song_records"
+      ]
+    },
+    {
+      "id": "BLV_malta_license",
+      "x": 62,
+      "y": 5,
+      "parents": [
+        "BLV_instruments",
+        "BLV_letters_open",
+        "BLV_letters_sealed"
+      ]
+    },
+    {
+      "id": "BLV_ungudja",
+      "x": 62,
+      "y": 6,
+      "parents": [
+        "BLV_malta_license"
+      ]
+    },
+    {
+      "id": "BLV_clinical_rules",
+      "x": 62,
+      "y": 7,
+      "parents": [
+        "BLV_ungudja"
+      ]
+    },
+    {
+      "id": "BLV_serum_contract",
+      "x": 60,
+      "y": 8,
+      "parents": [
+        "BLV_clinical_rules"
+      ]
+    },
+    {
+      "id": "BLV_ethical_research",
+      "x": 64,
+      "y": 8,
+      "parents": [
+        "BLV_clinical_rules"
+      ]
+    },
+    {
+      "id": "BLV_calibration",
+      "x": 62,
+      "y": 9,
+      "parents": [
+        "BLV_clinical_rules",
+        "BLV_serum_contract",
+        "BLV_ethical_research"
+      ]
+    },
+    {
+      "id": "BLV_research_school",
+      "x": 62,
+      "y": 10,
+      "parents": [
+        "BLV_calibration"
+      ]
+    },
+    {
+      "id": "BLV_greenland_watch",
+      "x": 72,
+      "y": 4,
+      "parents": [
+        "BLV_hamilton"
+      ]
+    },
+    {
+      "id": "BLV_arctic_depots",
+      "x": 70,
+      "y": 5,
+      "parents": [
+        "BLV_greenland_watch"
+      ]
+    },
+    {
+      "id": "BLV_russian_note",
+      "x": 74,
+      "y": 5,
+      "parents": [
+        "BLV_greenland_watch"
+      ]
+    },
+    {
+      "id": "BLV_scientific_cargo",
+      "x": 72,
+      "y": 6,
+      "parents": [
+        "BLV_arctic_depots",
+        "BLV_russian_note"
+      ]
+    },
+    {
+      "id": "BLV_polar_mandate",
+      "x": 72,
+      "y": 7,
+      "parents": [
+        "BLV_scientific_cargo"
+      ]
+    },
+    {
+      "id": "BLV_archive",
+      "x": 72,
+      "y": 8,
+      "parents": [
+        "BLV_polar_mandate"
+      ]
+    },
+    {
+      "id": "BLV_remember_home",
+      "x": 78,
+      "y": 11,
+      "parents": [
+        "BLV_research_school"
+      ]
+    },
+    {
+      "id": "BLV_coastal_trials",
+      "x": 78,
+      "y": 12,
+      "parents": [
+        "BLV_remember_home"
+      ]
+    },
+    {
+      "id": "BLV_long_range",
+      "x": 78,
+      "y": 13,
+      "parents": [
+        "BLV_coastal_trials"
+      ]
+    },
+    {
+      "id": "BLV_pioneer_station",
+      "x": 78,
+      "y": 14,
+      "parents": [
+        "BLV_long_range"
+      ]
+    },
+    {
+      "id": "BLV_tesla_patents",
+      "x": 66,
+      "y": 10,
+      "parents": [
+        "BLV_calibration"
+      ]
+    },
+    {
+      "id": "BLV_ship_suppressors",
+      "x": 66,
+      "y": 11,
+      "parents": [
+        "BLV_tesla_patents"
+      ]
+    },
+    {
+      "id": "BLV_airship_service",
+      "x": 46,
+      "y": 11,
+      "parents": [
+        "BLV_amphibious_staff"
+      ]
+    },
+    {
+      "id": "BLV_crowns_council",
+      "x": 20,
+      "y": 11,
+      "parents": [
+        "BLV_hamilton"
+      ]
+    },
+    {
+      "id": "BLV_budget_subscriptions",
+      "x": 18,
+      "y": 2,
+      "parents": [
+        "BLV_audit"
+      ]
+    },
+    {
+      "id": "BLV_budget_advance",
+      "x": 22,
+      "y": 2,
+      "parents": [
+        "BLV_audit"
+      ]
+    },
+    {
+      "id": "BLV_yards_state",
+      "x": 36,
+      "y": 5,
+      "parents": [
+        "BLV_engine_rooms"
+      ]
+    },
+    {
+      "id": "BLV_yards_contracts",
+      "x": 40,
+      "y": 5,
+      "parents": [
+        "BLV_engine_rooms"
+      ]
+    },
+    {
+      "id": "BLV_rotation_medical",
+      "x": 44,
+      "y": 6,
+      "parents": [
+        "BLV_rotation"
+      ]
+    },
+    {
+      "id": "BLV_rotation_depots",
+      "x": 48,
+      "y": 6,
+      "parents": [
+        "BLV_rotation"
+      ]
+    },
+    {
+      "id": "BLV_letters_open",
+      "x": 60,
+      "y": 4,
+      "parents": [
+        "BLV_instruments"
+      ]
+    },
+    {
+      "id": "BLV_letters_sealed",
+      "x": 64,
+      "y": 4,
+      "parents": [
+        "BLV_instruments"
+      ]
+    }
+  ],
+  "events": 10,
+  "ideas": 29,
+  "decisions": 14,
+  "starting_ships": 28
+}

@@ -1,4 +1,4 @@
-# Canon 1893. Generic portrait; historical likeness not supplied.
+﻿# Canon 1893. Generic portrait; historical likeness not supplied.
 capital = 1083
 recruit_character = PAZ_canon_leader
 set_politics = { ruling_party = neutrality elections_allowed = no }
@@ -15,3 +15,13 @@ oob = "PAZ_1893"
 
 recruit_character = PAZ_prophet
 add_ideas = PZ_aztec_prophecy
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_technology = {
+	basic_railways = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = PAZ }
+# END 1893 START RESEARCH AND TRAINS

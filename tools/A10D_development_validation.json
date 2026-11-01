@@ -1,0 +1,24 @@
+{
+  "focuses": 32,
+  "focus_groups": {
+    "economy": 16,
+    "military": 16
+  },
+  "focus_source": "common/national_focus/a10_focus.txt",
+  "ideas": 28,
+  "decisions": 11,
+  "events": 6,
+  "localisation_keys": 117,
+  "political_openers": [
+    "A10M_coup",
+    "A10W_oath",
+    "A10_confederation"
+  ],
+  "congress_alone_unlocks_development": false,
+  "supply_boundaries": "passed",
+  "safe_state_scope": "passed",
+  "repeated_recovery": "passed",
+  "startup_idempotence": "passed",
+  "sprites_and_technology": "passed",
+  "engine_campaign_tested": false
+}

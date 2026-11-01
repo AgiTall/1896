@@ -1,0 +1,71 @@
+{
+  "focus_count": 84,
+  "deadline_days": 120,
+  "council_days": 14,
+  "priority_days": 35,
+  "all_four_priorities_days": 154,
+  "exclusive_pairs": [
+    [
+      "JPF_public_accounts",
+      "JPF_small_subscription"
+    ],
+    [
+      "JPN_north_civilian_holds",
+      "JPN_north_emergency_calendar"
+    ],
+    [
+      "JPL_convoy_timetable",
+      "JPL_names_and_units"
+    ]
+  ],
+  "art_references": {
+    "JPF_bond_register": "A01_governors_secretariat",
+    "JPF_public_accounts": "A01_constitution",
+    "JPF_small_subscription": "A01_invest_in_mass_consumer_goods",
+    "JPF_excise_bargain": "A01_civilian_procurement",
+    "JPF_delivery_calendar": "A01_naval_budget_compromise",
+    "JPF_coal_not_glory": "A03_merchant_marine",
+    "JPF_madeira_table": "A01_wtc_oil_and_rubber_offer",
+    "JPF_royalty_register": "A01_rubber_processing",
+    "JPF_return_small_savings": "A01_reconstruction_commission",
+    "JPF_civil_budget": "A01_pacific_settlement",
+    "JPN_north_supply_register": "A01_prepare_bornean_logistics",
+    "JPN_north_civilian_holds": "A01_archipelago_shipping",
+    "JPN_north_emergency_calendar": "A01_naval_general_staff",
+    "JPN_north_inspection_channel": "A01_officers_audience",
+    "JPN_north_tokyo_auditors": "A01_governors_secretariat",
+    "JPN_north_admiralty_hearing": "A01_admirals_council_coup",
+    "JPN_north_imperial_arbitration": "A03_imperial_council",
+    "JPN_north_postwar_audience": "A01_last_chance_to_negotiate",
+    "JPN_north_permanent_protocol": "A01_sultans_compact",
+    "JPN_north_keep_distance": "A01_federal_defence_compact",
+    "JPL_port_and_mountains": "A01_jungle_supply",
+    "JPL_convoy_timetable": "A01_secure_sea_lanes",
+    "JPL_names_and_units": "A01_island_garrisons",
+    "JPL_municipal_buyers": "A01_civilian_procurement",
+    "JPL_payroll_inquiry": "A01_governors_secretariat",
+    "JPL_supply_board": "A01_prepare_bornean_logistics",
+    "JPL_quartermaster_school": "A01_technical_college",
+    "JPL_medical_rotation": "A01_equal_service",
+    "JPL_limited_mandate": "A01_colonial_charter",
+    "JPL_borneo_is_not_luzon": "A03_expeditionary_staff",
+    "JPC_state_guarantees": "A01_naval_budget_compromise",
+    "JPC_iwasaki_accounts": "A01_governors_secretariat",
+    "JPC_one_war_cabinet": "A03_expeditionary_staff",
+    "JPC_casualty_returns": "A01_equal_service",
+    "JPC_wtc_mission": "A01_wtc_oil_and_rubber_offer",
+    "JPC_no_short_war": "A01_wartime_industry",
+    "JPC_imperial_inspection": "A01_officers_audience",
+    "JPC_1895_accounts": "A01_civilian_procurement",
+    "JPC_hold_until_talks": "A01_admiralty_diplomacy",
+    "JPC_count_the_cost": "A01_reconstruction_commission",
+    "JPC_oil_promise": "A01_rubber_processing",
+    "JPC_partial_demobilisation": "A01_fleet_of_recovery",
+    "JPC_three_heads_again": "A03_imperial_council"
+  },
+  "continuous_focus_position": [
+    100,
+    3300
+  ],
+  "requires_restart_for_new_assets_and_localisation": true
+}

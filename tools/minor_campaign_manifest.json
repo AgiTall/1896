@@ -1,0 +1,5461 @@
+{
+  "A05": {
+    "tag": "A05",
+    "ru": "Железный Союз",
+    "en": "Iron Union",
+    "capital": 315,
+    "kind": "convoy",
+    "partners": [
+      "PHW",
+      "PCF"
+    ],
+    "threat": "PAZ",
+    "opening": "Гавана кормит американских изгнанников, но эскадры требуют угля, а верфи — рабочих рук. Морская республика и постоянное адмиральское правление предлагают разную цену единства.",
+    "opening_en": "Havana feeds American exiles while its squadrons need coal and its yards need workers. A naval republic and permanent admiral rule offer different forms of unity.",
+    "civic": "Конгресс гаванских общин",
+    "civic_en": "Congress of Havana Communities",
+    "command": "Мандат адмирала Грейвса",
+    "command_en": "Admiral Graves' Mandate",
+    "economy": [
+      "Ведомости Гаванского порта",
+      "Мастерские беженцев",
+      "Контракты американских капитанов"
+    ],
+    "economy_en": [
+      "Havana Port Ledgers",
+      "Refugee Workshops",
+      "American Captains' Contracts"
+    ],
+    "defence": [
+      "Гаванские добровольцы",
+      "Охрана Пуэрто-Рико",
+      "Снабжение Карибской эскадры"
+    ],
+    "defence_en": [
+      "Havana Volunteers",
+      "Guard Puerto Rico",
+      "Caribbean Squadron Supply"
+    ],
+    "project": "MNR_A05_project",
+    "project_en": "Run a Caribbean Convoy",
+    "crisis": "Капитаны требуют уголь, а городские делегаты — продовольствие. Приоритет флоту сохранит боевую готовность ценой доверия гавани.",
+    "crisis_en": "Captains demand coal while city delegates demand food. Prioritising the fleet will cost the harbour's confidence.",
+    "goal": "Карибская морская республика",
+    "goal_en": "A Caribbean Maritime Republic",
+    "objective": "caribbean",
+    "focuses": [
+      {
+        "id": "MNR_A05_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_A05_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_A05_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A05_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_A05_economy_local",
+          "MNR_A05_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_A05_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_A05_economy1"
+        ]
+      },
+      {
+        "id": "MNR_A05_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_A05_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A05_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_A05_defence_garrison",
+          "MNR_A05_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_A05_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_A05_defence1"
+        ]
+      },
+      {
+        "id": "MNR_A05_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_A05_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A05_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_A05_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A05_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_A05_root"
+        ]
+      },
+      {
+        "id": "MNR_A05_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_A05_civic"
+        ]
+      },
+      {
+        "id": "MNR_A05_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_A05_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_A05_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_A05_root"
+        ]
+      },
+      {
+        "id": "MNR_A05_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_A05_command"
+        ]
+      },
+      {
+        "id": "MNR_A05_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_A05_command_law"
+        ]
+      },
+      {
+        "id": "MNR_A05_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_A05_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A05_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_A05_projects",
+          "MNR_A05_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A05_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_A05_economy2",
+          "MNR_A05_defence2",
+          "MNR_A05_specialists",
+          "MNR_A05_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A05_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_A05_civic_settlement",
+          "MNR_A05_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_A05_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_A05_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A05_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_A05_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A05_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_A05_defence0"
+        ]
+      },
+      {
+        "id": "MNR_A05_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_A05_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes 315 = { is_owned_by = ROOT is_controlled_by = ROOT } 686 = { is_owned_by = ROOT is_controlled_by = ROOT } OR = { MNR_has_live_partner = yes has_country_flag = MNR_insured }",
+    "escort_port": 7622
+  },
+  "PCF": {
+    "tag": "PCF",
+    "ru": "Рыцари Конфедерации",
+    "en": "Confederate Knights",
+    "capital": 1082,
+    "kind": "relief",
+    "partners": [
+      "A05",
+      "PAZ"
+    ],
+    "threat": "A05",
+    "opening": "Плантационные семьи удерживают центральную Кубу, но зависимые работники и бедные поселенцы требуют земли и оплаты. Старые сословия можно сохранить или заменить договором свободных хозяйств.",
+    "opening_en": "Plantation families control central Cuba while dependent workers and poor settlers demand land and wages. Preserve estates or negotiate a compact of free farms.",
+    "civic": "Договор свободных хозяйств",
+    "civic_en": "A Compact of Free Farms",
+    "command": "Совет плантационных домов",
+    "command_en": "Council of Plantation Houses",
+    "economy": [
+      "Урожайные ведомости",
+      "Сельские кооперативы",
+      "Оплачиваемая переработка тростника"
+    ],
+    "economy_en": [
+      "Harvest Ledgers",
+      "Rural Cooperatives",
+      "Paid Cane Processing"
+    ],
+    "defence": [
+      "Окружная милиция",
+      "Дороги Санта-Клары",
+      "Арсенал центральной Кубы"
+    ],
+    "defence_en": [
+      "District Militia",
+      "Santa Clara Roads",
+      "Central Cuban Arsenal"
+    ],
+    "project": "MNR_PCF_project",
+    "project_en": "Deliver the Harvest to Communities",
+    "crisis": "Работники остановили вывоз урожая. Переговоры требуют средств, а принудительный порядок усилит зависимость кабинета от вооружённых владельцев.",
+    "crisis_en": "Workers have halted harvest shipments. Negotiations cost resources; coercion deepens reliance on armed estate owners.",
+    "goal": "Устойчивое хозяйство центральной Кубы",
+    "goal_en": "A Sustainable Central Cuban Economy",
+    "objective": "mandate",
+    "focuses": [
+      {
+        "id": "MNR_PCF_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PCF_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PCF_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PCF_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PCF_economy_local",
+          "MNR_PCF_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PCF_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PCF_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PCF_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PCF_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PCF_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PCF_defence_garrison",
+          "MNR_PCF_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PCF_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PCF_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PCF_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PCF_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PCF_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PCF_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PCF_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PCF_root"
+        ]
+      },
+      {
+        "id": "MNR_PCF_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PCF_civic"
+        ]
+      },
+      {
+        "id": "MNR_PCF_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PCF_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PCF_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PCF_root"
+        ]
+      },
+      {
+        "id": "MNR_PCF_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PCF_command"
+        ]
+      },
+      {
+        "id": "MNR_PCF_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PCF_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PCF_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PCF_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PCF_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PCF_projects",
+          "MNR_PCF_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PCF_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PCF_economy2",
+          "MNR_PCF_defence2",
+          "MNR_PCF_specialists",
+          "MNR_PCF_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PCF_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PCF_civic_settlement",
+          "MNR_PCF_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PCF_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PCF_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PCF_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PCF_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PCF_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PCF_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PCF_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PCF_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PAZ": {
+    "tag": "PAZ",
+    "ru": "Ацтекское Возрождение",
+    "en": "Aztec Revival",
+    "capital": 1083,
+    "kind": "survey",
+    "partners": [
+      "PCF",
+      "PHR"
+    ],
+    "threat": "A05",
+    "opening": "Мексиканские изгнанники расселились между Сьерра-Маэстрой и Санто-Доминго. Генералы хотят снабжать поселения, а Пророк Пятого Солнца — подчинить их единому священному закону.",
+    "opening_en": "Mexican exiles are scattered between the Sierra Maestra and Santo Domingo. Officers favour settlement supply while the Prophet seeks a single sacred law.",
+    "civic": "Съезд мексиканских поселений",
+    "civic_en": "Congress of Mexican Settlements",
+    "command": "Закон Пятого Солнца",
+    "command_en": "Law of the Fifth Sun",
+    "economy": [
+      "Землемеры Сьерра-Маэстры",
+      "Мастерские переселенцев",
+      "Межостровные ведомости"
+    ],
+    "economy_en": [
+      "Sierra Maestra Surveyors",
+      "Settler Workshops",
+      "Inter-Island Ledgers"
+    ],
+    "defence": [
+      "Горные ополчения",
+      "Перевалы и прибрежные склады",
+      "Военные мастерские изгнанников"
+    ],
+    "defence_en": [
+      "Mountain Militias",
+      "Passes and Coastal Depots",
+      "Exiles' Military Workshops"
+    ],
+    "project": "MNR_PAZ_project",
+    "project_en": "Survey Settlement Routes",
+    "crisis": "Священные смотрители спорят с землемерами о распределении припасов. От этого решения зависит доверие разобщённых поселений.",
+    "crisis_en": "Sacred overseers dispute supplies with surveyors. The settlement determines the scattered communities' trust.",
+    "goal": "Связать два берега изгнания",
+    "goal_en": "Connect the Two Shores of Exile",
+    "objective": "two_shores",
+    "focuses": [
+      {
+        "id": "MNR_PAZ_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PAZ_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PAZ_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PAZ_economy_local",
+          "MNR_PAZ_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PAZ_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PAZ_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PAZ_defence_garrison",
+          "MNR_PAZ_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PAZ_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PAZ_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PAZ_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PAZ_root"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PAZ_civic"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PAZ_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PAZ_root"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PAZ_command"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PAZ_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PAZ_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PAZ_projects",
+          "MNR_PAZ_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PAZ_economy2",
+          "MNR_PAZ_defence2",
+          "MNR_PAZ_specialists",
+          "MNR_PAZ_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PAZ_civic_settlement",
+          "MNR_PAZ_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PAZ_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PAZ_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PAZ_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PAZ_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PAZ_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes 1083 = { is_owned_by = ROOT is_controlled_by = ROOT } 319 = { is_owned_by = ROOT is_controlled_by = ROOT }"
+  },
+  "PHR": {
+    "tag": "PHR",
+    "ru": "Дети Урагана",
+    "en": "Children of the Hurricane",
+    "capital": 318,
+    "kind": "relief",
+    "partners": [
+      "PAZ",
+      "PSL"
+    ],
+    "threat": "A05",
+    "opening": "Общины Гаити объединяет сопротивление внешнему господству. Но ополчение, лечебницы и сельские советы спорят о том, кому распоряжаться скудными припасами.",
+    "opening_en": "Resistance to foreign domination unites Haiti's communities, but militias, clinics and village councils dispute scarce supplies.",
+    "civic": "Собрание гаитянских общин",
+    "civic_en": "Assembly of Haitian Communities",
+    "command": "Союз боевых братств",
+    "command_en": "League of Fighting Brotherhoods",
+    "economy": [
+      "Общие рисовые склады",
+      "Мастерские Порт-о-Пренса",
+      "Сельские лечебницы"
+    ],
+    "economy_en": [
+      "Common Rice Stores",
+      "Port-au-Prince Workshops",
+      "Village Clinics"
+    ],
+    "defence": [
+      "Ополчения лесных троп",
+      "Наблюдатели у побережья",
+      "Ремонт трофейного оружия"
+    ],
+    "defence_en": [
+      "Forest-Trail Militias",
+      "Coastal Watchers",
+      "Captured Arms Repair"
+    ],
+    "project": "MNR_PHR_project",
+    "project_en": "Run a Food Convoy",
+    "crisis": "Боевая дружина забрала рис у соседней общины. Возмещение укрепит союз, а отказ усилит военных и недоверие деревень.",
+    "crisis_en": "A war band seized a neighbouring village's rice. Restitution strengthens the compact; refusal empowers commanders and distrust.",
+    "goal": "Сохранить свободные общины Гаити",
+    "goal_en": "Preserve Haiti's Free Communities",
+    "objective": "mandate",
+    "focuses": [
+      {
+        "id": "MNR_PHR_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PHR_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PHR_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PHR_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PHR_economy_local",
+          "MNR_PHR_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PHR_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PHR_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PHR_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PHR_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PHR_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PHR_defence_garrison",
+          "MNR_PHR_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PHR_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PHR_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PHR_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PHR_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PHR_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PHR_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PHR_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PHR_root"
+        ]
+      },
+      {
+        "id": "MNR_PHR_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PHR_civic"
+        ]
+      },
+      {
+        "id": "MNR_PHR_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PHR_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PHR_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PHR_root"
+        ]
+      },
+      {
+        "id": "MNR_PHR_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PHR_command"
+        ]
+      },
+      {
+        "id": "MNR_PHR_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PHR_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PHR_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PHR_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PHR_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PHR_projects",
+          "MNR_PHR_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PHR_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PHR_economy2",
+          "MNR_PHR_defence2",
+          "MNR_PHR_specialists",
+          "MNR_PHR_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PHR_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PHR_civic_settlement",
+          "MNR_PHR_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PHR_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PHR_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PHR_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PHR_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PHR_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PHR_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PHR_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PHR_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PHW": {
+    "tag": "PHW",
+    "ru": "Гавайский рубеж",
+    "en": "Hawaiian Frontier",
+    "capital": 629,
+    "kind": "convoy",
+    "partners": [
+      "A07",
+      "A02"
+    ],
+    "threat": "A03",
+    "opening": "Королевство живёт перевалкой грузов и страхом перед большим флотом. Сохранённая корона или морское правительство должны подготовить острова к грядущей смене власти.",
+    "opening_en": "Shipping sustains the kingdom under the shadow of larger fleets. A preserved Crown or naval government must prepare for the approaching succession.",
+    "civic": "Конституционная гавайская корона",
+    "civic_en": "A Constitutional Hawaiian Crown",
+    "command": "Правительство морского рубежа",
+    "command_en": "Government of the Maritime Frontier",
+    "economy": [
+      "Гонолульские грузовые ведомости",
+      "Островные ремонтные мастерские",
+      "Запасные рейсы через Тихий океан"
+    ],
+    "economy_en": [
+      "Honolulu Cargo Ledgers",
+      "Island Repair Workshops",
+      "Reserve Pacific Voyages"
+    ],
+    "defence": [
+      "Островная территориальная стража",
+      "Охрана гавайских гаваней",
+      "Доковая служба Гонолулу"
+    ],
+    "defence_en": [
+      "Island Territorial Guard",
+      "Protect Hawaiian Harbours",
+      "Honolulu Dock Service"
+    ],
+    "project": "MNR_PHW_project",
+    "project_en": "Run a Pacific Trading Voyage",
+    "crisis": "Судовладельцы требуют подчинить островные сборы эскадре. Двор и муниципалитеты настаивают на гражданской смете.",
+    "crisis_en": "Shipowners demand that the squadron control island levies. The Court and municipalities insist on civilian estimates.",
+    "goal": "Гавайи после смены власти",
+    "goal_en": "Hawaii After the Succession",
+    "objective": "hawaii",
+    "focuses": [
+      {
+        "id": "MNR_PHW_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PHW_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PHW_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PHW_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PHW_economy_local",
+          "MNR_PHW_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PHW_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PHW_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PHW_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PHW_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PHW_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PHW_defence_garrison",
+          "MNR_PHW_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PHW_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PHW_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PHW_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PHW_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PHW_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PHW_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PHW_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PHW_root"
+        ]
+      },
+      {
+        "id": "MNR_PHW_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PHW_civic"
+        ]
+      },
+      {
+        "id": "MNR_PHW_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PHW_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PHW_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PHW_root"
+        ]
+      },
+      {
+        "id": "MNR_PHW_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PHW_command"
+        ]
+      },
+      {
+        "id": "MNR_PHW_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PHW_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PHW_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PHW_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PHW_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PHW_projects",
+          "MNR_PHW_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PHW_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PHW_economy2",
+          "MNR_PHW_defence2",
+          "MNR_PHW_specialists",
+          "MNR_PHW_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PHW_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PHW_civic_settlement",
+          "MNR_PHW_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PHW_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PHW_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PHW_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PHW_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PHW_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PHW_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PHW_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PHW_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes has_country_flag = MNR_hawaii_succession 629 = { is_owned_by = ROOT is_controlled_by = ROOT }",
+    "escort_port": 4180
+  },
+  "MLT": {
+    "tag": "MLT",
+    "ru": "Мальта",
+    "en": "Malta",
+    "capital": 116,
+    "kind": "science",
+    "partners": [
+      "A02",
+      "A06"
+    ],
+    "threat": "",
+    "opening": "Мальта принимает изгнанные дворы и лабораторию Теслы, оставаясь отдельным государством. Местный совет должен извлекать пользу из посредничества, не отдавая остров покровителю.",
+    "opening_en": "Malta hosts exiled courts and Tesla's laboratory as a separate state. Its council must benefit from mediation without surrendering the island.",
+    "civic": "Гражданская хартия Валлетты",
+    "civic_en": "Valletta Civic Charter",
+    "command": "Совет дворов в изгнании",
+    "command_en": "Council of Exiled Courts",
+    "economy": [
+      "Портовые ведомости Валлетты",
+      "Мастерские Святого Ангела",
+      "Приборная школа Мальты"
+    ],
+    "economy_en": [
+      "Valletta Harbour Ledgers",
+      "Saint Angelo Workshops",
+      "Malta Instrument School"
+    ],
+    "defence": [
+      "Мальтийская береговая стража",
+      "Нейтральные причалы Валлетты",
+      "Арсенал островной обороны"
+    ],
+    "defence_en": [
+      "Maltese Coast Guard",
+      "Valletta's Neutral Quays",
+      "Island Defence Arsenal"
+    ],
+    "project": "MNR_MLT_project",
+    "project_en": "Run an Instrument Research Session",
+    "crisis": "Дворы требуют закрыть научную переписку, а инженеры — сохранить связи с иностранными лабораториями. Тесла не становится собственностью ни одной делегации.",
+    "crisis_en": "The courts demand closed correspondence while engineers seek foreign contacts. Tesla does not become any delegation's property.",
+    "goal": "Независимый остров переговоров",
+    "goal_en": "An Independent Island of Negotiation",
+    "objective": "science",
+    "focuses": [
+      {
+        "id": "MNR_MLT_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_MLT_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_MLT_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_MLT_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_MLT_economy_local",
+          "MNR_MLT_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_MLT_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_MLT_economy1"
+        ]
+      },
+      {
+        "id": "MNR_MLT_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_MLT_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_MLT_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_MLT_defence_garrison",
+          "MNR_MLT_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_MLT_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_MLT_defence1"
+        ]
+      },
+      {
+        "id": "MNR_MLT_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_MLT_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_MLT_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_MLT_contacts"
+        ]
+      },
+      {
+        "id": "MNR_MLT_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_MLT_root"
+        ]
+      },
+      {
+        "id": "MNR_MLT_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_MLT_civic"
+        ]
+      },
+      {
+        "id": "MNR_MLT_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_MLT_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_MLT_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_MLT_root"
+        ]
+      },
+      {
+        "id": "MNR_MLT_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_MLT_command"
+        ]
+      },
+      {
+        "id": "MNR_MLT_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_MLT_command_law"
+        ]
+      },
+      {
+        "id": "MNR_MLT_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_MLT_contacts"
+        ]
+      },
+      {
+        "id": "MNR_MLT_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_MLT_projects",
+          "MNR_MLT_chamber"
+        ]
+      },
+      {
+        "id": "MNR_MLT_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_MLT_economy2",
+          "MNR_MLT_defence2",
+          "MNR_MLT_specialists",
+          "MNR_MLT_chamber"
+        ]
+      },
+      {
+        "id": "MNR_MLT_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_MLT_civic_settlement",
+          "MNR_MLT_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_MLT_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_MLT_economy0"
+        ]
+      },
+      {
+        "id": "MNR_MLT_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_MLT_economy0"
+        ]
+      },
+      {
+        "id": "MNR_MLT_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_MLT_defence0"
+        ]
+      },
+      {
+        "id": "MNR_MLT_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_MLT_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes check_variable = { SEN_science > 14 } 116 = { is_owned_by = ROOT is_controlled_by = ROOT }",
+    "escort_port": 12003
+  },
+  "PSL": {
+    "tag": "PSL",
+    "ru": "Султанат Сулу",
+    "en": "Sultanate of Sulu",
+    "capital": 1025,
+    "kind": "customs",
+    "partners": [
+      "A10",
+      "PHR"
+    ],
+    "threat": "A03",
+    "opening": "Султану нужны пошлины и верные гавани, а дато хотят сохранять собственные суда и вооружённых людей. Выбор договора или морской мобилизации определит судьбу султаната.",
+    "opening_en": "The Sultan needs customs income and loyal harbours while the datu defend their own ships and armed followers. Choose a negotiated compact or maritime mobilisation.",
+    "civic": "Договор султана и дато",
+    "civic_en": "A Compact of Sultan and Datu",
+    "command": "Морской сбор под знамёнами султана",
+    "command_en": "The Sultan's Maritime Muster",
+    "economy": [
+      "Таможенные книги Холо",
+      "Мастерские местных верфей",
+      "Пошлины вместо случайной дани"
+    ],
+    "economy_en": [
+      "Jolo Customs Books",
+      "Local Yard Workshops",
+      "Customs Instead of Arbitrary Tribute"
+    ],
+    "defence": [
+      "Береговые дружины дато",
+      "Посты в проливах Сулу",
+      "Оружейники султанской гавани"
+    ],
+    "defence_en": [
+      "Datu Coastal Companies",
+      "Sulu Strait Posts",
+      "The Sultan's Harbour Armourers"
+    ],
+    "project": "MNR_PSL_project",
+    "project_en": "Complete a Customs Season",
+    "crisis": "Один из дато удержал пошлины и требует признать его права. Договор ограничит произвол, а силовой ответ потребует расходов на верные дружины.",
+    "crisis_en": "A datu withheld customs dues and demands recognised rights. A compact limits arbitrary rule; coercion costs loyal troops and supplies.",
+    "goal": "Султанат, способный держать проливы",
+    "goal_en": "A Sultanate Able to Hold the Straits",
+    "objective": "stock",
+    "focuses": [
+      {
+        "id": "MNR_PSL_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PSL_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PSL_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSL_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PSL_economy_local",
+          "MNR_PSL_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PSL_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PSL_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PSL_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PSL_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSL_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PSL_defence_garrison",
+          "MNR_PSL_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PSL_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PSL_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PSL_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PSL_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSL_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PSL_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PSL_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PSL_root"
+        ]
+      },
+      {
+        "id": "MNR_PSL_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PSL_civic"
+        ]
+      },
+      {
+        "id": "MNR_PSL_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PSL_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PSL_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PSL_root"
+        ]
+      },
+      {
+        "id": "MNR_PSL_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PSL_command"
+        ]
+      },
+      {
+        "id": "MNR_PSL_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PSL_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PSL_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PSL_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PSL_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PSL_projects",
+          "MNR_PSL_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PSL_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PSL_economy2",
+          "MNR_PSL_defence2",
+          "MNR_PSL_specialists",
+          "MNR_PSL_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PSL_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PSL_civic_settlement",
+          "MNR_PSL_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PSL_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PSL_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PSL_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PSL_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PSL_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PSL_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PSL_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PSL_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes ",
+    "escort_port": 1421
+  },
+  "PSY": {
+    "tag": "PSY",
+    "ru": "Султанат Сейшелы",
+    "en": "Seychelles Sultanate",
+    "capital": 709,
+    "kind": "convoy",
+    "partners": [
+      "A02",
+      "MLT"
+    ],
+    "threat": "",
+    "opening": "Двор в изгнании зависит от маленькой гавани Маэ и беженцев. Корона может заключить договор с островными общинами или управлять через закрытый придворный совет.",
+    "opening_en": "An exiled court depends on Mahe's small harbour and refugees. Negotiate with island communities or govern through a closed royal council.",
+    "civic": "Хартия общин Маэ",
+    "civic_en": "Charter of Mahe Communities",
+    "command": "Двор султана в изгнании",
+    "command_en": "The Sultan's Exiled Court",
+    "economy": [
+      "Книги Викторийской гавани",
+      "Островные мастерские",
+      "Служба воды и снабжения"
+    ],
+    "economy_en": [
+      "Victoria Harbour Books",
+      "Island Workshops",
+      "Water and Supply Service"
+    ],
+    "defence": [
+      "Стража убежища",
+      "Прибрежные сигнальные посты",
+      "Ремонт гарнизонного оружия"
+    ],
+    "defence_en": [
+      "Refuge Guard",
+      "Coastal Signal Posts",
+      "Garrison Arms Repair"
+    ],
+    "project": "MNR_PSY_project",
+    "project_en": "Deliver Supplies to Mahe",
+    "crisis": "Новый транспорт с беженцами пришёл в гавань без продовольственного запаса. Придворные и островные старейшины спорят о цене гостеприимства.",
+    "crisis_en": "A refugee transport reached the harbour without food reserves. Courtiers and elders dispute the cost of shelter.",
+    "goal": "Островное королевство убежища",
+    "goal_en": "An Island Kingdom of Refuge",
+    "objective": "trade",
+    "focuses": [
+      {
+        "id": "MNR_PSY_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PSY_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PSY_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSY_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PSY_economy_local",
+          "MNR_PSY_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PSY_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PSY_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PSY_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PSY_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSY_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PSY_defence_garrison",
+          "MNR_PSY_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PSY_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PSY_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PSY_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PSY_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSY_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PSY_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PSY_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PSY_root"
+        ]
+      },
+      {
+        "id": "MNR_PSY_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PSY_civic"
+        ]
+      },
+      {
+        "id": "MNR_PSY_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PSY_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PSY_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PSY_root"
+        ]
+      },
+      {
+        "id": "MNR_PSY_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PSY_command"
+        ]
+      },
+      {
+        "id": "MNR_PSY_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PSY_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PSY_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PSY_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PSY_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PSY_projects",
+          "MNR_PSY_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PSY_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PSY_economy2",
+          "MNR_PSY_defence2",
+          "MNR_PSY_specialists",
+          "MNR_PSY_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PSY_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PSY_civic_settlement",
+          "MNR_PSY_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PSY_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PSY_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PSY_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PSY_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PSY_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PSY_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PSY_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PSY_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes OR = { MNR_has_live_partner = yes has_country_flag = MNR_insured }",
+    "escort_port": 2188
+  },
+  "A08": {
+    "tag": "A08",
+    "ru": "Северная армия",
+    "en": "Northern Army",
+    "capital": 536,
+    "kind": "defence",
+    "partners": [
+      "A03",
+      "A09"
+    ],
+    "threat": "A03",
+    "opening": "Хакодатское перемирие сохранило армию Сайго, но не решило вопроса о будущем Хоккайдо. Поселенческий договор и мобилизационная армия предлагают разные отношения с Токио.",
+    "opening_en": "The Hakodate armistice preserved Saigo's army without settling Hokkaido's future. A settlement compact and permanent mobilisation offer different relations with Tokyo.",
+    "civic": "Северный поселенческий договор",
+    "civic_en": "Northern Settler Compact",
+    "command": "Мобилизационный приказ Сайго",
+    "command_en": "Saigo's Mobilisation Order",
+    "economy": [
+      "Склады Хакодате",
+      "Мастерские северных поселений",
+      "Паёк между гарнизоном и деревней"
+    ],
+    "economy_en": [
+      "Hakodate Depots",
+      "Northern Settlement Workshops",
+      "Share Rations with the Villages"
+    ],
+    "defence": [
+      "Северные стрелковые части",
+      "Зимние линии снабжения",
+      "Хоккайдский арсенал"
+    ],
+    "defence_en": [
+      "Northern Rifle Units",
+      "Winter Supply Lines",
+      "Hokkaido Arsenal"
+    ],
+    "project": "MNR_A08_project",
+    "project_en": "Complete Winter Garrison Exercises",
+    "crisis": "Офицеры требуют очередного набора, пока поселенцы не собрали урожай. Соглашение сохранит доверие деревень, но отложит усиление армии.",
+    "crisis_en": "Officers demand recruits before the harvest. A compact preserves village confidence but delays army expansion.",
+    "goal": "Север, способный выбирать свою судьбу",
+    "goal_en": "A North Able to Choose Its Future",
+    "objective": "north",
+    "focuses": [
+      {
+        "id": "MNR_A08_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_A08_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_A08_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A08_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_A08_economy_local",
+          "MNR_A08_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_A08_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_A08_economy1"
+        ]
+      },
+      {
+        "id": "MNR_A08_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_A08_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A08_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_A08_defence_garrison",
+          "MNR_A08_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_A08_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_A08_defence1"
+        ]
+      },
+      {
+        "id": "MNR_A08_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_A08_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A08_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_A08_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A08_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_A08_root"
+        ]
+      },
+      {
+        "id": "MNR_A08_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_A08_civic"
+        ]
+      },
+      {
+        "id": "MNR_A08_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_A08_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_A08_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_A08_root"
+        ]
+      },
+      {
+        "id": "MNR_A08_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_A08_command"
+        ]
+      },
+      {
+        "id": "MNR_A08_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_A08_command_law"
+        ]
+      },
+      {
+        "id": "MNR_A08_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_A08_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A08_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_A08_projects",
+          "MNR_A08_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A08_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_A08_economy2",
+          "MNR_A08_defence2",
+          "MNR_A08_specialists",
+          "MNR_A08_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A08_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_A08_civic_settlement",
+          "MNR_A08_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_A08_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_A08_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A08_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_A08_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A08_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_A08_defence0"
+        ]
+      },
+      {
+        "id": "MNR_A08_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_A08_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 59 } check_variable = { MNR_mandate > 69 } MNR_has_route = yes 536 = { is_owned_by = ROOT is_controlled_by = ROOT }"
+  },
+  "A09": {
+    "tag": "A09",
+    "ru": "Осака",
+    "en": "Osaka",
+    "capital": 531,
+    "kind": "finance",
+    "partners": [
+      "A03",
+      "A04"
+    ],
+    "threat": "",
+    "opening": "Торговые дома удерживают Осаку между государственными заказами и долгами. Поддержка Токио может спасти текущий сезон, но лишить купцов свободы решений.",
+    "opening_en": "Osaka's houses balance state orders against debt. Tokyo's contracts may save the season while costing commercial independence.",
+    "civic": "Союз самостоятельных торговых домов",
+    "civic_en": "League of Independent Houses",
+    "command": "Казённые заказы для Осаки",
+    "command_en": "State Orders for Osaka",
+    "economy": [
+      "Сверить осакские обязательства",
+      "Мастерские торговых домов",
+      "Расчёты без двойного залога"
+    ],
+    "economy_en": [
+      "Audit Osaka Liabilities",
+      "Trading-House Workshops",
+      "Accounts Without Double Collateral"
+    ],
+    "defence": [
+      "Охрана купеческих складов",
+      "Пристанская таможенная стража",
+      "Оружейные заказы для охраны"
+    ],
+    "defence_en": [
+      "Protect Merchant Depots",
+      "Harbour Customs Guard",
+      "Arms Orders for the Guard"
+    ],
+    "project": "MNR_A09_project",
+    "project_en": "Complete a Settlement Season",
+    "crisis": "Кредиторы требуют нового залога, а государственный заказчик — скидки. Кабинету предстоит выбрать, кому уступить в текущем сезоне.",
+    "crisis_en": "Creditors demand more collateral while the state customer demands discounts. The cabinet must decide whom to accommodate.",
+    "goal": "Платёжеспособная Золотая середина",
+    "goal_en": "A Solvent Golden Mean",
+    "objective": "debt",
+    "focuses": [
+      {
+        "id": "MNR_A09_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_A09_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_A09_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A09_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_A09_economy_local",
+          "MNR_A09_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_A09_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_A09_economy1"
+        ]
+      },
+      {
+        "id": "MNR_A09_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_A09_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A09_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_A09_defence_garrison",
+          "MNR_A09_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_A09_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_A09_defence1"
+        ]
+      },
+      {
+        "id": "MNR_A09_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_A09_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A09_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_A09_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A09_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_A09_root"
+        ]
+      },
+      {
+        "id": "MNR_A09_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_A09_civic"
+        ]
+      },
+      {
+        "id": "MNR_A09_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_A09_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_A09_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_A09_root"
+        ]
+      },
+      {
+        "id": "MNR_A09_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_A09_command"
+        ]
+      },
+      {
+        "id": "MNR_A09_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_A09_command_law"
+        ]
+      },
+      {
+        "id": "MNR_A09_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_A09_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A09_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_A09_projects",
+          "MNR_A09_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A09_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_A09_economy2",
+          "MNR_A09_defence2",
+          "MNR_A09_specialists",
+          "MNR_A09_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A09_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_A09_civic_settlement",
+          "MNR_A09_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_A09_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_A09_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A09_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_A09_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A09_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_A09_defence0"
+        ]
+      },
+      {
+        "id": "MNR_A09_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_A09_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes check_variable = { WTC_debt < 51 }"
+  },
+  "A11": {
+    "tag": "A11",
+    "ru": "Кутай",
+    "en": "Kutai",
+    "capital": 1055,
+    "kind": "customs",
+    "partners": [
+      "A01",
+      "A04"
+    ],
+    "threat": "",
+    "opening": "Речные пристани Махаками должны кормить двор и платить по действующим обязательствам. Местная хартия не отменяет чужие ресурсные права.",
+    "opening_en": "Mahakam river landings must support the court and honour existing obligations; a charter does not erase foreign resource rights.",
+    "civic": "Договор речных общин",
+    "civic_en": "River Community Compact",
+    "command": "Султанская речная стража",
+    "command_en": "Sultan's River Guard",
+    "economy": [
+      "Книги пристаней Махаками",
+      "Мастерские Кутая",
+      "Проверенные права на ренту"
+    ],
+    "economy_en": [
+      "Mahakam Landing Books",
+      "Kutai Workshops",
+      "Audited Rent Rights"
+    ],
+    "defence": [
+      "Речные дружины",
+      "Стража переправ",
+      "Кутайские оружейники"
+    ],
+    "defence_en": [
+      "River Companies",
+      "Crossing Guards",
+      "Kutai Armourers"
+    ],
+    "project": "MNR_A11_project",
+    "project_en": "Run a River Customs Season",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Хартия речного султаната",
+    "goal_en": "A Charter for the River Sultanate",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_A11_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_A11_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_A11_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A11_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_A11_economy_local",
+          "MNR_A11_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_A11_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_A11_economy1"
+        ]
+      },
+      {
+        "id": "MNR_A11_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_A11_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A11_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_A11_defence_garrison",
+          "MNR_A11_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_A11_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_A11_defence1"
+        ]
+      },
+      {
+        "id": "MNR_A11_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_A11_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A11_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_A11_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A11_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_A11_root"
+        ]
+      },
+      {
+        "id": "MNR_A11_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_A11_civic"
+        ]
+      },
+      {
+        "id": "MNR_A11_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_A11_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_A11_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_A11_root"
+        ]
+      },
+      {
+        "id": "MNR_A11_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_A11_command"
+        ]
+      },
+      {
+        "id": "MNR_A11_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_A11_command_law"
+        ]
+      },
+      {
+        "id": "MNR_A11_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_A11_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A11_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_A11_projects",
+          "MNR_A11_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A11_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_A11_economy2",
+          "MNR_A11_defence2",
+          "MNR_A11_specialists",
+          "MNR_A11_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A11_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_A11_civic_settlement",
+          "MNR_A11_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_A11_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_A11_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A11_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_A11_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A11_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_A11_defence0"
+        ]
+      },
+      {
+        "id": "MNR_A11_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_A11_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "A12": {
+    "tag": "A12",
+    "ru": "Понтианак",
+    "en": "Pontianak",
+    "capital": 334,
+    "kind": "convoy",
+    "partners": [
+      "A01",
+      "A04"
+    ],
+    "threat": "",
+    "opening": "Гавань на Капуасе зависит от устойчивой торговли и переговоров с покровителем. Военная охрана должна защищать порт, а не разорять его поборами.",
+    "opening_en": "The Kapuas harbour needs regular trade and negotiations with its patron; guards must protect commerce rather than live on arbitrary levies.",
+    "civic": "Купеческо-султанский договор",
+    "civic_en": "Merchant-Sultan Compact",
+    "command": "Пристанская власть дворца",
+    "command_en": "Palace Harbour Authority",
+    "economy": [
+      "Пошлины Капуаса",
+      "Понтианакские мастерские",
+      "Распорядок торговой гавани"
+    ],
+    "economy_en": [
+      "Kapuas Customs",
+      "Pontianak Workshops",
+      "Commercial Harbour Rules"
+    ],
+    "defence": [
+      "Городская стража Понтианака",
+      "Посты у речного устья",
+      "Портовый оружейный двор"
+    ],
+    "defence_en": [
+      "Pontianak Town Guard",
+      "River-Mouth Posts",
+      "Harbour Armoury"
+    ],
+    "project": "MNR_A12_project",
+    "project_en": "Deliver Cargo Through the Kapuas Mouth",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Гавань с признанными правилами",
+    "goal_en": "A Harbour with Recognised Rules",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_A12_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_A12_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_A12_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A12_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_A12_economy_local",
+          "MNR_A12_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_A12_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_A12_economy1"
+        ]
+      },
+      {
+        "id": "MNR_A12_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_A12_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A12_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_A12_defence_garrison",
+          "MNR_A12_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_A12_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_A12_defence1"
+        ]
+      },
+      {
+        "id": "MNR_A12_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_A12_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A12_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_A12_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A12_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_A12_root"
+        ]
+      },
+      {
+        "id": "MNR_A12_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_A12_civic"
+        ]
+      },
+      {
+        "id": "MNR_A12_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_A12_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_A12_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_A12_root"
+        ]
+      },
+      {
+        "id": "MNR_A12_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_A12_command"
+        ]
+      },
+      {
+        "id": "MNR_A12_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_A12_command_law"
+        ]
+      },
+      {
+        "id": "MNR_A12_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_A12_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A12_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_A12_projects",
+          "MNR_A12_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A12_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_A12_economy2",
+          "MNR_A12_defence2",
+          "MNR_A12_specialists",
+          "MNR_A12_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A12_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_A12_civic_settlement",
+          "MNR_A12_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_A12_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_A12_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A12_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_A12_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A12_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_A12_defence0"
+        ]
+      },
+      {
+        "id": "MNR_A12_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_A12_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes ",
+    "escort_port": 4279
+  },
+  "A13": {
+    "tag": "A13",
+    "ru": "Банджар",
+    "en": "Banjar",
+    "capital": 1022,
+    "kind": "defence",
+    "partners": [
+      "A01",
+      "A11"
+    ],
+    "threat": "",
+    "opening": "Разрозненные речные поселения требуют защиты от произвольных сборов. Гарнизон хочет единого командования, а старейшины — права голоса.",
+    "opening_en": "Scattered river settlements seek protection from arbitrary dues; garrisons want unified command and elders representation.",
+    "civic": "Совет речных старейшин",
+    "civic_en": "River Elders Council",
+    "command": "Банджарский оборонный сбор",
+    "command_en": "Banjar Defence Muster",
+    "economy": [
+      "Перепись речных хозяйств",
+      "Мастерские Банджармасина",
+      "Общий речной склад"
+    ],
+    "economy_en": [
+      "River Farm Census",
+      "Banjarmasin Workshops",
+      "Common River Depot"
+    ],
+    "defence": [
+      "Стража речных троп",
+      "Посты заболоченных переходов",
+      "Банджарские ремонтные команды"
+    ],
+    "defence_en": [
+      "River-Trail Guard",
+      "Marsh-Crossing Posts",
+      "Banjar Repair Teams"
+    ],
+    "project": "MNR_A13_project",
+    "project_en": "Train the River-Crossing Guard",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Защищённые речные общины",
+    "goal_en": "Protected River Communities",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_A13_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_A13_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_A13_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A13_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_A13_economy_local",
+          "MNR_A13_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_A13_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_A13_economy1"
+        ]
+      },
+      {
+        "id": "MNR_A13_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_A13_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A13_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_A13_defence_garrison",
+          "MNR_A13_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_A13_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_A13_defence1"
+        ]
+      },
+      {
+        "id": "MNR_A13_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_A13_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A13_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_A13_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A13_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_A13_root"
+        ]
+      },
+      {
+        "id": "MNR_A13_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_A13_civic"
+        ]
+      },
+      {
+        "id": "MNR_A13_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_A13_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_A13_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_A13_root"
+        ]
+      },
+      {
+        "id": "MNR_A13_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_A13_command"
+        ]
+      },
+      {
+        "id": "MNR_A13_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_A13_command_law"
+        ]
+      },
+      {
+        "id": "MNR_A13_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_A13_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A13_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_A13_projects",
+          "MNR_A13_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A13_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_A13_economy2",
+          "MNR_A13_defence2",
+          "MNR_A13_specialists",
+          "MNR_A13_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A13_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_A13_civic_settlement",
+          "MNR_A13_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_A13_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_A13_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A13_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_A13_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A13_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_A13_defence0"
+        ]
+      },
+      {
+        "id": "MNR_A13_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_A13_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "A14": {
+    "tag": "A14",
+    "ru": "Ачех",
+    "en": "Aceh",
+    "capital": 1050,
+    "kind": "defence",
+    "partners": [
+      "A01",
+      "PSL"
+    ],
+    "threat": "",
+    "opening": "Ачехские старейшины и улемы хотят сохранить местный закон. Условия покровительства можно уточнять переговорами, а силовое отделение не возникает от одного фокуса.",
+    "opening_en": "Acehnese elders and scholars seek to preserve local law; patronage is negotiated and no focus instantly causes secession.",
+    "civic": "Соглашение старейшин и улемов",
+    "civic_en": "Compact of Elders and Scholars",
+    "command": "Ачехский военный совет",
+    "command_en": "Acehnese Military Council",
+    "economy": [
+      "Книги северосуматранских портов",
+      "Ачехские мастерские",
+      "Снабжение горных общин"
+    ],
+    "economy_en": [
+      "Northern Sumatran Port Books",
+      "Acehnese Workshops",
+      "Mountain Community Supply"
+    ],
+    "defence": [
+      "Добровольцы местных общин",
+      "Горные наблюдательные посты",
+      "Ачехская оружейная служба"
+    ],
+    "defence_en": [
+      "Community Volunteers",
+      "Mountain Watch Posts",
+      "Acehnese Arms Service"
+    ],
+    "project": "MNR_A14_project",
+    "project_en": "Drill the Mountain Companies",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Ачехская местная хартия",
+    "goal_en": "An Acehnese Local Charter",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_A14_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_A14_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_A14_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A14_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_A14_economy_local",
+          "MNR_A14_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_A14_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_A14_economy1"
+        ]
+      },
+      {
+        "id": "MNR_A14_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_A14_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A14_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_A14_defence_garrison",
+          "MNR_A14_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_A14_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_A14_defence1"
+        ]
+      },
+      {
+        "id": "MNR_A14_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_A14_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_A14_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_A14_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A14_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_A14_root"
+        ]
+      },
+      {
+        "id": "MNR_A14_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_A14_civic"
+        ]
+      },
+      {
+        "id": "MNR_A14_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_A14_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_A14_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_A14_root"
+        ]
+      },
+      {
+        "id": "MNR_A14_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_A14_command"
+        ]
+      },
+      {
+        "id": "MNR_A14_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_A14_command_law"
+        ]
+      },
+      {
+        "id": "MNR_A14_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_A14_contacts"
+        ]
+      },
+      {
+        "id": "MNR_A14_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_A14_projects",
+          "MNR_A14_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A14_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_A14_economy2",
+          "MNR_A14_defence2",
+          "MNR_A14_specialists",
+          "MNR_A14_chamber"
+        ]
+      },
+      {
+        "id": "MNR_A14_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_A14_civic_settlement",
+          "MNR_A14_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_A14_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_A14_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A14_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_A14_economy0"
+        ]
+      },
+      {
+        "id": "MNR_A14_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_A14_defence0"
+        ]
+      },
+      {
+        "id": "MNR_A14_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_A14_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PCB": {
+    "tag": "PCB",
+    "ru": "Республика Себу",
+    "en": "Cebu Republic",
+    "capital": 628,
+    "kind": "customs",
+    "partners": [
+      "A10",
+      "PSL"
+    ],
+    "threat": "A03",
+    "opening": "Себуанские торговые дома контролируют склады, но рабочие гавани требуют представительства. Общие связи с конфедерацией должны приносить пользу городу.",
+    "opening_en": "Cebu houses control the depots while dockworkers demand representation; confederal ties must benefit the city.",
+    "civic": "Муниципальная торговая хартия",
+    "civic_en": "Municipal Trade Charter",
+    "command": "Совет крупнейших торговых домов",
+    "command_en": "Council of the Largest Houses",
+    "economy": [
+      "Себуанские торговые книги",
+      "Гаванские мастерские Себу",
+      "Портовые расчётные правила"
+    ],
+    "economy_en": [
+      "Cebu Trade Books",
+      "Cebu Harbour Workshops",
+      "Port Settlement Rules"
+    ],
+    "defence": [
+      "Муниципальная портовая стража",
+      "Сигналы пролива Себу",
+      "Арсенал торговой республики"
+    ],
+    "defence_en": [
+      "Municipal Harbour Guard",
+      "Cebu Strait Signals",
+      "Trading Republic Arsenal"
+    ],
+    "project": "MNR_PCB_project",
+    "project_en": "Complete a Cebu Port Season",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Республика работающих гаваней",
+    "goal_en": "A Republic of Working Harbours",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PCB_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PCB_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PCB_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PCB_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PCB_economy_local",
+          "MNR_PCB_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PCB_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PCB_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PCB_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PCB_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PCB_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PCB_defence_garrison",
+          "MNR_PCB_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PCB_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PCB_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PCB_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PCB_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PCB_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PCB_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PCB_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PCB_root"
+        ]
+      },
+      {
+        "id": "MNR_PCB_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PCB_civic"
+        ]
+      },
+      {
+        "id": "MNR_PCB_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PCB_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PCB_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PCB_root"
+        ]
+      },
+      {
+        "id": "MNR_PCB_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PCB_command"
+        ]
+      },
+      {
+        "id": "MNR_PCB_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PCB_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PCB_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PCB_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PCB_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PCB_projects",
+          "MNR_PCB_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PCB_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PCB_economy2",
+          "MNR_PCB_defence2",
+          "MNR_PCB_specialists",
+          "MNR_PCB_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PCB_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PCB_civic_settlement",
+          "MNR_PCB_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PCB_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PCB_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PCB_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PCB_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PCB_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PCB_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PCB_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PCB_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes ",
+    "escort_port": 12118
+  },
+  "PPN": {
+    "tag": "PPN",
+    "ru": "Конфедерация Панай",
+    "en": "Panay Confederation",
+    "capital": 1085,
+    "kind": "relief",
+    "partners": [
+      "A10",
+      "PCB"
+    ],
+    "threat": "A03",
+    "opening": "Касики Панай согласуют рисовые поставки между общинами. Земельный договор может дать им доверие крестьян или закрепить власть старых семейств.",
+    "opening_en": "Panay's chiefs coordinate rice supplies; a land compact may earn farmers' trust or entrench the old families.",
+    "civic": "Союз крестьянских общин",
+    "civic_en": "League of Farming Communities",
+    "command": "Старший совет касиков",
+    "command_en": "Senior Council of Chiefs",
+    "economy": [
+      "Рисовые амбары Илоило",
+      "Общинные мастерские Панай",
+      "Согласованные земельные ведомости"
+    ],
+    "economy_en": [
+      "Iloilo Rice Granaries",
+      "Panay Community Workshops",
+      "Agreed Land Ledgers"
+    ],
+    "defence": [
+      "Общинная островная стража",
+      "Наблюдатели рисовых дорог",
+      "Ремонт оружия для Панай"
+    ],
+    "defence_en": [
+      "Community Island Guard",
+      "Rice-Road Watchers",
+      "Panay Arms Repair"
+    ],
+    "project": "MNR_PPN_project",
+    "project_en": "Deliver Rice Between Communities",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Панай без голодных деревень",
+    "goal_en": "Panay Without Hungry Villages",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PPN_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PPN_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PPN_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PPN_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PPN_economy_local",
+          "MNR_PPN_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PPN_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PPN_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PPN_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PPN_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PPN_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PPN_defence_garrison",
+          "MNR_PPN_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PPN_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PPN_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PPN_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PPN_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PPN_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PPN_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PPN_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PPN_root"
+        ]
+      },
+      {
+        "id": "MNR_PPN_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PPN_civic"
+        ]
+      },
+      {
+        "id": "MNR_PPN_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PPN_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PPN_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PPN_root"
+        ]
+      },
+      {
+        "id": "MNR_PPN_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PPN_command"
+        ]
+      },
+      {
+        "id": "MNR_PPN_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PPN_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PPN_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PPN_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PPN_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PPN_projects",
+          "MNR_PPN_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PPN_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PPN_economy2",
+          "MNR_PPN_defence2",
+          "MNR_PPN_specialists",
+          "MNR_PPN_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PPN_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PPN_civic_settlement",
+          "MNR_PPN_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PPN_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PPN_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PPN_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PPN_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PPN_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PPN_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PPN_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PPN_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PVI": {
+    "tag": "PVI",
+    "ru": "Висайская республика",
+    "en": "Visayan Republic",
+    "capital": 624,
+    "kind": "convoy",
+    "partners": [
+      "A10",
+      "PCB"
+    ],
+    "threat": "A03",
+    "opening": "Разные островные советы требуют равного доступа к паромам и общему бюджету. Централизация охраны не должна лишить малые гавани права голоса.",
+    "opening_en": "Island councils seek equal ferry access and budget representation; centralised guards must not silence small harbours.",
+    "civic": "Съезд висайских городов",
+    "civic_en": "Congress of Visayan Towns",
+    "command": "Единая островная комендатура",
+    "command_en": "Unified Island Command",
+    "economy": [
+      "Паромные ведомости Висайев",
+      "Висайские мастерские",
+      "Общий график межостровных рейсов"
+    ],
+    "economy_en": [
+      "Visayan Ferry Ledgers",
+      "Visayan Workshops",
+      "Common Inter-Island Timetables"
+    ],
+    "defence": [
+      "Стража паромных линий",
+      "Наблюдательные посты Висайев",
+      "Ремонтное управление республики"
+    ],
+    "defence_en": [
+      "Ferry-Line Guard",
+      "Visayan Watch Posts",
+      "Republic Repair Administration"
+    ],
+    "project": "MNR_PVI_project",
+    "project_en": "Run an Inter-Island Ferry Season",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Связанные гаванями Висайи",
+    "goal_en": "Harbours Connecting the Visayas",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PVI_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PVI_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PVI_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PVI_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PVI_economy_local",
+          "MNR_PVI_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PVI_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PVI_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PVI_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PVI_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PVI_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PVI_defence_garrison",
+          "MNR_PVI_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PVI_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PVI_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PVI_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PVI_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PVI_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PVI_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PVI_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PVI_root"
+        ]
+      },
+      {
+        "id": "MNR_PVI_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PVI_civic"
+        ]
+      },
+      {
+        "id": "MNR_PVI_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PVI_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PVI_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PVI_root"
+        ]
+      },
+      {
+        "id": "MNR_PVI_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PVI_command"
+        ]
+      },
+      {
+        "id": "MNR_PVI_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PVI_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PVI_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PVI_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PVI_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PVI_projects",
+          "MNR_PVI_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PVI_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PVI_economy2",
+          "MNR_PVI_defence2",
+          "MNR_PVI_specialists",
+          "MNR_PVI_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PVI_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PVI_civic_settlement",
+          "MNR_PVI_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PVI_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PVI_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PVI_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PVI_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PVI_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PVI_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PVI_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PVI_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes ",
+    "escort_port": 1372
+  },
+  "PSM": {
+    "tag": "PSM",
+    "ru": "Республика Самар",
+    "en": "Samar Republic",
+    "capital": 625,
+    "kind": "repair",
+    "partners": [
+      "A10",
+      "PVI"
+    ],
+    "threat": "A03",
+    "opening": "Самар нуждается в надёжных лодках и защите лесных дорог. Шторм способен отрезать гарнизоны раньше, чем придёт неприятель.",
+    "opening_en": "Samar needs reliable boats and forest roads; storms may isolate its garrisons before an enemy arrives.",
+    "civic": "Советы лесных и прибрежных общин",
+    "civic_en": "Forest and Coastal Councils",
+    "command": "Самарское береговое командование",
+    "command_en": "Samar Coastal Command",
+    "economy": [
+      "Ведомости штормовых повреждений",
+      "Самарские лодочные мастерские",
+      "Запасные склады Самар"
+    ],
+    "economy_en": [
+      "Storm Damage Ledgers",
+      "Samar Boat Workshops",
+      "Samar Reserve Depots"
+    ],
+    "defence": [
+      "Лесная территориальная стража",
+      "Смотровые посты Самар",
+      "Ремонт гарнизонных винтовок"
+    ],
+    "defence_en": [
+      "Forest Territorial Guard",
+      "Samar Lookout Posts",
+      "Garrison Rifle Repair"
+    ],
+    "project": "MNR_PSM_project",
+    "project_en": "Restore Samar Supply Routes",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Остров, переживший штормовой сезон",
+    "goal_en": "An Island Surviving the Storm Season",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PSM_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PSM_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PSM_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSM_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PSM_economy_local",
+          "MNR_PSM_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PSM_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PSM_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PSM_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PSM_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSM_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PSM_defence_garrison",
+          "MNR_PSM_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PSM_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PSM_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PSM_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PSM_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PSM_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PSM_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PSM_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PSM_root"
+        ]
+      },
+      {
+        "id": "MNR_PSM_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PSM_civic"
+        ]
+      },
+      {
+        "id": "MNR_PSM_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PSM_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PSM_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PSM_root"
+        ]
+      },
+      {
+        "id": "MNR_PSM_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PSM_command"
+        ]
+      },
+      {
+        "id": "MNR_PSM_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PSM_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PSM_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PSM_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PSM_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PSM_projects",
+          "MNR_PSM_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PSM_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PSM_economy2",
+          "MNR_PSM_defence2",
+          "MNR_PSM_specialists",
+          "MNR_PSM_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PSM_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PSM_civic_settlement",
+          "MNR_PSM_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PSM_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PSM_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PSM_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PSM_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PSM_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PSM_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PSM_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PSM_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PMD": {
+    "tag": "PMD",
+    "ru": "Республика Минданао",
+    "en": "Mindanao Republic",
+    "capital": 627,
+    "kind": "relief",
+    "partners": [
+      "A10",
+      "PSL"
+    ],
+    "threat": "A03",
+    "opening": "Муниципалитеты и сельские общины ищут общий порядок снабжения. Религиозные и местные различия делают договор важнее приказа из столицы.",
+    "opening_en": "Towns and villages seek common supply arrangements; religious and local differences make agreement essential.",
+    "civic": "Межобщинный договор Минданао",
+    "civic_en": "Mindanao Intercommunity Compact",
+    "command": "Южное территориальное командование",
+    "command_en": "Southern Territorial Command",
+    "economy": [
+      "Книги сельских поставок",
+      "Муниципальные мастерские Минданао",
+      "Общие лечебницы и амбары"
+    ],
+    "economy_en": [
+      "Rural Supply Books",
+      "Mindanao Municipal Workshops",
+      "Shared Clinics and Granaries"
+    ],
+    "defence": [
+      "Стража общинных дорог",
+      "Береговые дозоры Минданао",
+      "Ремонтные мастерские гарнизона"
+    ],
+    "defence_en": [
+      "Community Road Guard",
+      "Mindanao Coastal Patrols",
+      "Garrison Repair Workshops"
+    ],
+    "project": "MNR_PMD_project",
+    "project_en": "Deliver Aid to Remote Communities",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Минданао по общему договору",
+    "goal_en": "Mindanao Under a Shared Compact",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PMD_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PMD_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PMD_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PMD_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PMD_economy_local",
+          "MNR_PMD_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PMD_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PMD_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PMD_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PMD_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PMD_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PMD_defence_garrison",
+          "MNR_PMD_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PMD_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PMD_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PMD_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PMD_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PMD_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PMD_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PMD_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PMD_root"
+        ]
+      },
+      {
+        "id": "MNR_PMD_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PMD_civic"
+        ]
+      },
+      {
+        "id": "MNR_PMD_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PMD_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PMD_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PMD_root"
+        ]
+      },
+      {
+        "id": "MNR_PMD_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PMD_command"
+        ]
+      },
+      {
+        "id": "MNR_PMD_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PMD_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PMD_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PMD_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PMD_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PMD_projects",
+          "MNR_PMD_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PMD_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PMD_economy2",
+          "MNR_PMD_defence2",
+          "MNR_PMD_specialists",
+          "MNR_PMD_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PMD_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PMD_civic_settlement",
+          "MNR_PMD_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PMD_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PMD_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PMD_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PMD_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PMD_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PMD_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PMD_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PMD_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PNM": {
+    "tag": "PNM",
+    "ru": "Северный Минданао",
+    "en": "Northern Mindanao",
+    "capital": 1026,
+    "kind": "survey",
+    "partners": [
+      "A10",
+      "PMD"
+    ],
+    "threat": "A03",
+    "opening": "Северные гавани и внутренние поселения плохо связаны. Землемеры и охрана дорог могут превратить формальное правительство в работающий союз.",
+    "opening_en": "Northern harbours and inland settlements lack connections; surveyors and road guards can make the government effective.",
+    "civic": "Совет северных поселений",
+    "civic_en": "Council of Northern Settlements",
+    "command": "Североминданайская комендатура",
+    "command_en": "Northern Mindanao Command",
+    "economy": [
+      "Карты внутренних дорог",
+      "Мастерские северных гаваней",
+      "Обследование складских маршрутов"
+    ],
+    "economy_en": [
+      "Inland Road Maps",
+      "Northern Harbour Workshops",
+      "Depot Route Surveys"
+    ],
+    "defence": [
+      "Дорожные территориальные части",
+      "Наблюдатели перевалов",
+      "Северные оружейные мастерские"
+    ],
+    "defence_en": [
+      "Road Territorial Units",
+      "Pass Watchers",
+      "Northern Arms Workshops"
+    ],
+    "project": "MNR_PNM_project",
+    "project_en": "Survey the Inland Settlement Route",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Соединить северные гавани с глубинкой",
+    "goal_en": "Connect Northern Harbours to the Interior",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PNM_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PNM_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PNM_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PNM_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PNM_economy_local",
+          "MNR_PNM_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PNM_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PNM_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PNM_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PNM_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PNM_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PNM_defence_garrison",
+          "MNR_PNM_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PNM_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PNM_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PNM_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PNM_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PNM_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PNM_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PNM_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PNM_root"
+        ]
+      },
+      {
+        "id": "MNR_PNM_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PNM_civic"
+        ]
+      },
+      {
+        "id": "MNR_PNM_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PNM_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PNM_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PNM_root"
+        ]
+      },
+      {
+        "id": "MNR_PNM_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PNM_command"
+        ]
+      },
+      {
+        "id": "MNR_PNM_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PNM_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PNM_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PNM_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PNM_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PNM_projects",
+          "MNR_PNM_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PNM_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PNM_economy2",
+          "MNR_PNM_defence2",
+          "MNR_PNM_specialists",
+          "MNR_PNM_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PNM_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PNM_civic_settlement",
+          "MNR_PNM_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PNM_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PNM_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PNM_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PNM_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PNM_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PNM_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PNM_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PNM_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PNL": {
+    "tag": "PNL",
+    "ru": "Северный Лусон",
+    "en": "Northern Luzon",
+    "capital": 623,
+    "kind": "defence",
+    "partners": [
+      "A10",
+      "PBT"
+    ],
+    "threat": "A03",
+    "opening": "После освобождения горные муниципалитеты должны восстановить хозяйство и подготовить оборону. Республика не обязана возвращаться к прежней теократической форме.",
+    "opening_en": "After liberation, mountain municipalities must rebuild and defend themselves without automatically restoring the former theocratic state.",
+    "civic": "Союз горных муниципалитетов",
+    "civic_en": "League of Mountain Municipalities",
+    "command": "Лусонский оборонный комитет",
+    "command_en": "Luzon Defence Committee",
+    "economy": [
+      "Перепись освобождённых хозяйств",
+      "Горные мастерские Лусона",
+      "Продовольственные пути к побережью"
+    ],
+    "economy_en": [
+      "Liberated Farm Census",
+      "Luzon Mountain Workshops",
+      "Food Routes to the Coast"
+    ],
+    "defence": [
+      "Горные стрелковые дружины",
+      "Посты лусонских перевалов",
+      "Арсенал освобождённого Севера"
+    ],
+    "defence_en": [
+      "Mountain Rifle Companies",
+      "Luzon Pass Posts",
+      "Liberated North Arsenal"
+    ],
+    "project": "MNR_PNL_project",
+    "project_en": "Prepare Mountain Road Defences",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Северный Лусон после освобождения",
+    "goal_en": "Northern Luzon After Liberation",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PNL_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PNL_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PNL_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PNL_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PNL_economy_local",
+          "MNR_PNL_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PNL_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PNL_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PNL_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PNL_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PNL_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PNL_defence_garrison",
+          "MNR_PNL_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PNL_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PNL_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PNL_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PNL_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PNL_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PNL_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PNL_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PNL_root"
+        ]
+      },
+      {
+        "id": "MNR_PNL_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PNL_civic"
+        ]
+      },
+      {
+        "id": "MNR_PNL_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PNL_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PNL_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PNL_root"
+        ]
+      },
+      {
+        "id": "MNR_PNL_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PNL_command"
+        ]
+      },
+      {
+        "id": "MNR_PNL_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PNL_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PNL_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PNL_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PNL_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PNL_projects",
+          "MNR_PNL_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PNL_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PNL_economy2",
+          "MNR_PNL_defence2",
+          "MNR_PNL_specialists",
+          "MNR_PNL_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PNL_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PNL_civic_settlement",
+          "MNR_PNL_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PNL_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PNL_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PNL_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PNL_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PNL_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PNL_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PNL_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PNL_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PML": {
+    "tag": "PML",
+    "ru": "Республика Манила",
+    "en": "Manila Republic",
+    "capital": 327,
+    "kind": "repair",
+    "partners": [
+      "A10",
+      "PCB"
+    ],
+    "threat": "A03",
+    "opening": "Освобождённая Манила должна восстановить склады и вернуть доверие жителей. Торговые дома и муниципальные делегаты спорят о порядке реконструкции.",
+    "opening_en": "Liberated Manila must restore depots and public trust while merchant houses and municipal delegates dispute reconstruction.",
+    "civic": "Выборная городская дума",
+    "civic_en": "An Elected City Council",
+    "command": "Портовая чрезвычайная администрация",
+    "command_en": "Emergency Port Administration",
+    "economy": [
+      "Перепись разрушенных складов",
+      "Манильские восстановительные мастерские",
+      "Прозрачные сметы реконструкции"
+    ],
+    "economy_en": [
+      "Damaged Depot Census",
+      "Manila Reconstruction Workshops",
+      "Public Reconstruction Estimates"
+    ],
+    "defence": [
+      "Городская стража освобождения",
+      "Охрана манильских причалов",
+      "Манильский ремонтный арсенал"
+    ],
+    "defence_en": [
+      "Liberation City Guard",
+      "Protect Manila Quays",
+      "Manila Repair Arsenal"
+    ],
+    "project": "MNR_PML_project",
+    "project_en": "Restore Manila's Harbour Quarter",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Манила, вернувшаяся к мирной работе",
+    "goal_en": "Manila Returned to Civilian Work",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PML_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PML_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PML_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PML_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PML_economy_local",
+          "MNR_PML_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PML_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PML_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PML_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PML_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PML_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PML_defence_garrison",
+          "MNR_PML_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PML_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PML_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PML_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PML_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PML_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PML_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PML_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PML_root"
+        ]
+      },
+      {
+        "id": "MNR_PML_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PML_civic"
+        ]
+      },
+      {
+        "id": "MNR_PML_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PML_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PML_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PML_root"
+        ]
+      },
+      {
+        "id": "MNR_PML_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PML_command"
+        ]
+      },
+      {
+        "id": "MNR_PML_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PML_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PML_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PML_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PML_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PML_projects",
+          "MNR_PML_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PML_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PML_economy2",
+          "MNR_PML_defence2",
+          "MNR_PML_specialists",
+          "MNR_PML_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PML_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PML_civic_settlement",
+          "MNR_PML_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PML_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PML_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PML_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PML_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PML_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PML_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PML_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PML_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  },
+  "PBT": {
+    "tag": "PBT",
+    "ru": "Республика Батаан",
+    "en": "Bataan Republic",
+    "capital": 1027,
+    "kind": "defence",
+    "partners": [
+      "A10",
+      "PNL"
+    ],
+    "threat": "A03",
+    "opening": "Батаан прикрывает подходы к Маниле, но его жители не хотят жить одним гарнизоном. Оборону полуострова нужно совместить с местным хозяйством.",
+    "opening_en": "Bataan guards Manila's approaches, but its residents need more than a garrison; defence must coexist with local livelihoods.",
+    "civic": "Хартия муниципалитетов Батаана",
+    "civic_en": "Bataan Municipal Charter",
+    "command": "Командование полуостровной обороны",
+    "command_en": "Peninsula Defence Command",
+    "economy": [
+      "Сметы полуостровных хозяйств",
+      "Батаанские мастерские",
+      "Резерв продовольствия полуострова"
+    ],
+    "economy_en": [
+      "Peninsula Farm Estimates",
+      "Bataan Workshops",
+      "Peninsula Food Reserve"
+    ],
+    "defence": [
+      "Батаанские территориальные части",
+      "Наблюдатели манильских подходов",
+      "Арсенал полуострова"
+    ],
+    "defence_en": [
+      "Bataan Territorial Units",
+      "Manila Approach Watchers",
+      "Peninsula Arsenal"
+    ],
+    "project": "MNR_PBT_project",
+    "project_en": "Drill the Peninsula Defence Force",
+    "crisis": "Местный совет требует отчёта о припасах и правах общин. Договор с делегатами укрепит доверие, а чрезвычайный порядок передаст больше власти гарнизону.",
+    "crisis_en": "The local council demands accounts of supplies and community rights. A compact strengthens trust; emergency rule empowers the garrison.",
+    "goal": "Батаан с собственной хартией",
+    "goal_en": "Bataan with Its Own Charter",
+    "objective": "charter",
+    "focuses": [
+      {
+        "id": "MNR_PBT_root",
+        "x": 10,
+        "y": 0,
+        "parents": []
+      },
+      {
+        "id": "MNR_PBT_economy0",
+        "x": 2,
+        "y": 5,
+        "parents": [
+          "MNR_PBT_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PBT_economy1",
+        "x": 2,
+        "y": 7,
+        "parents": [
+          "MNR_PBT_economy_local",
+          "MNR_PBT_economy_contracts"
+        ]
+      },
+      {
+        "id": "MNR_PBT_economy2",
+        "x": 2,
+        "y": 8,
+        "parents": [
+          "MNR_PBT_economy1"
+        ]
+      },
+      {
+        "id": "MNR_PBT_defence0",
+        "x": 10,
+        "y": 5,
+        "parents": [
+          "MNR_PBT_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PBT_defence1",
+        "x": 10,
+        "y": 7,
+        "parents": [
+          "MNR_PBT_defence_garrison",
+          "MNR_PBT_defence_mobile"
+        ]
+      },
+      {
+        "id": "MNR_PBT_defence2",
+        "x": 10,
+        "y": 8,
+        "parents": [
+          "MNR_PBT_defence1"
+        ]
+      },
+      {
+        "id": "MNR_PBT_contacts",
+        "x": 18,
+        "y": 5,
+        "parents": [
+          "MNR_PBT_common_programme"
+        ]
+      },
+      {
+        "id": "MNR_PBT_chamber",
+        "x": 16,
+        "y": 6,
+        "parents": [
+          "MNR_PBT_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PBT_civic",
+        "x": 8,
+        "y": 1,
+        "parents": [
+          "MNR_PBT_root"
+        ]
+      },
+      {
+        "id": "MNR_PBT_civic_law",
+        "x": 8,
+        "y": 2,
+        "parents": [
+          "MNR_PBT_civic"
+        ]
+      },
+      {
+        "id": "MNR_PBT_civic_settlement",
+        "x": 8,
+        "y": 3,
+        "parents": [
+          "MNR_PBT_civic_law"
+        ]
+      },
+      {
+        "id": "MNR_PBT_command",
+        "x": 12,
+        "y": 1,
+        "parents": [
+          "MNR_PBT_root"
+        ]
+      },
+      {
+        "id": "MNR_PBT_command_law",
+        "x": 12,
+        "y": 2,
+        "parents": [
+          "MNR_PBT_command"
+        ]
+      },
+      {
+        "id": "MNR_PBT_command_settlement",
+        "x": 12,
+        "y": 3,
+        "parents": [
+          "MNR_PBT_command_law"
+        ]
+      },
+      {
+        "id": "MNR_PBT_projects",
+        "x": 20,
+        "y": 6,
+        "parents": [
+          "MNR_PBT_contacts"
+        ]
+      },
+      {
+        "id": "MNR_PBT_specialists",
+        "x": 18,
+        "y": 7,
+        "parents": [
+          "MNR_PBT_projects",
+          "MNR_PBT_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PBT_goal",
+        "x": 10,
+        "y": 10,
+        "parents": [
+          "MNR_PBT_economy2",
+          "MNR_PBT_defence2",
+          "MNR_PBT_specialists",
+          "MNR_PBT_chamber"
+        ]
+      },
+      {
+        "id": "MNR_PBT_common_programme",
+        "x": 10,
+        "y": 4,
+        "parents": [
+          "MNR_PBT_civic_settlement",
+          "MNR_PBT_command_settlement"
+        ]
+      },
+      {
+        "id": "MNR_PBT_economy_local",
+        "x": 0,
+        "y": 6,
+        "parents": [
+          "MNR_PBT_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PBT_economy_contracts",
+        "x": 4,
+        "y": 6,
+        "parents": [
+          "MNR_PBT_economy0"
+        ]
+      },
+      {
+        "id": "MNR_PBT_defence_garrison",
+        "x": 8,
+        "y": 6,
+        "parents": [
+          "MNR_PBT_defence0"
+        ]
+      },
+      {
+        "id": "MNR_PBT_defence_mobile",
+        "x": 12,
+        "y": 6,
+        "parents": [
+          "MNR_PBT_defence0"
+        ]
+      }
+    ],
+    "goal_trigger": "MNR_home_secure = yes check_variable = { MNR_progress > 2 } check_variable = { MNR_reserve > 34 } check_variable = { MNR_mandate > 64 } MNR_has_route = yes "
+  }
+}

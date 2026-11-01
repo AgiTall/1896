@@ -1,0 +1,58 @@
+JPN_north_council = {
+ JPN_north_scheduled_shipment = {
+  icon = generic_army_support cost = 35 days_re_enable = 90
+  visible = { NOT = { has_country_flag = JPN_north_compact_signed } }
+  available = { country_exists = A08 NOT = { has_war_with = A08 } has_equipment = { infantry_equipment > 249 } has_equipment = { convoy_1 > 3 } check_variable = { JPN_north_supply_months < 4 } }
+  complete_effect = { JPN_north_send_rifles_effect = yes }
+  ai_will_do = { base = 5 modifier = { factor = 0 check_variable = { JPN_north_supply_months > 2 } } }
+ }
+ JPN_north_bread_before_rifles = {
+  icon = generic_political_discourse cost = 45 days_re_enable = 180
+  visible = { has_country_flag = JPN_north_civilian_holds NOT = { has_country_flag = JPN_north_compact_signed } check_variable = { JPN_north_civilian_shipments < 3 } }
+  available = { country_exists = A08 NOT = { has_war_with = A08 } has_equipment = { convoy_1 > 1 } check_variable = { JPN_north_supply_months < 4 } }
+  complete_effect = { JPN_north_civilian_supply_effect = yes }
+  ai_will_do = { base = 2 modifier = { factor = 0 check_variable = { JPN_north_supply_months > 2 } } }
+ }
+ JPN_north_written_postponement = {
+  icon = generic_political_discourse cost = 30 days_re_enable = 120
+  visible = { has_war_with = A01 has_country_flag = JPN_north_emergency_schedule NOT = { has_country_flag = JPN_north_compact_signed } check_variable = { JPN_north_deferrals < 2 } }
+  available = { has_war_with = A01 check_variable = { JPN_north_trust > 24 } check_variable = { JPN_north_supply_months < 3 } }
+  complete_effect = { JPN_north_defer_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 0 has_equipment = { infantry_equipment > 249 } } }
+ }
+ JPN_north_meiji_letter = {
+  icon = generic_political_discourse cost = 50 fire_only_once = yes
+  visible = { NOT = { has_country_flag = JPN_north_compact_signed } }
+  available = { check_variable = { JPN_north_trust < 61 } }
+  complete_effect = { add_to_variable = { JPN_north_trust = 12 } add_to_variable = { JPN_north_fleet_irritation = 4 } JPN_north_refresh_effect = yes }
+  ai_will_do = { base = 3 modifier = { factor = 0 check_variable = { JPN_north_trust > 39 } } }
+ }
+ JPN_north_admiralty_appropriation = {
+  icon = generic_navy cost = 60 days_re_enable = 180
+  visible = { NOT = { has_country_flag = JPN_north_compact_signed } check_variable = { JPN_north_fleet_grants < 3 } }
+  available = { check_variable = { JPN_north_fleet_irritation > 34 } }
+  complete_effect = { JPN_north_fleet_grant_effect = yes }
+  ai_will_do = { base = 2 modifier = { factor = 0 check_variable = { JPN_north_fleet_irritation < 55 } } }
+ }
+ JPN_north_send_inspectors = {
+  icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { has_country_flag = JPN_north_inspection_channel NOT = { has_country_flag = JPN_north_inspection_queued } NOT = { has_country_flag = JPN_north_compact_signed } }
+  available = { country_exists = A08 NOT = { has_war_with = A08 } }
+  complete_effect = { JPN_north_inspection_queue_effect = yes }
+  ai_will_do = { base = 3 }
+ }
+ JPN_north_clear_arrears = {
+  icon = generic_army_support cost = 75 fire_only_once = yes
+  visible = { has_country_flag = JPN_north_protocol_broken NOT = { has_country_flag = JPN_north_compact_signed } }
+  available = { country_exists = A08 NOT = { has_war_with = A08 } has_equipment = { infantry_equipment > 499 } has_equipment = { convoy_1 > 5 } check_variable = { JPN_north_fleet_irritation < 68 } }
+  complete_effect = { JPN_north_restore_protocol_effect = yes }
+  ai_will_do = { base = 5 }
+ }
+ JPN_north_negotiate_compact = {
+  icon = generic_political_discourse cost = 100 days_re_enable = 90
+  visible = { has_country_flag = JPN_north_compact_ready NOT = { has_country_flag = JPN_north_compact_signed } NOT = { has_country_flag = JPN_north_compact_queued } }
+  available = { country_exists = A08 NOT = { has_war_with = A08 } NOT = { has_war_with = A01 } check_variable = { JPN_north_trust > 54 } check_variable = { JPN_north_fleet_irritation < 60 } has_equipment = { infantry_equipment > 249 } has_equipment = { convoy_1 > 3 } }
+  complete_effect = { JPN_north_compact_queue_effect = yes }
+  ai_will_do = { base = 5 }
+ }
+}

@@ -1,0 +1,677 @@
+focus_tree = {
+ id = MNR_MLT_tree
+ country = {
+  factor = 0
+  modifier = {
+   add = 200
+   tag = MLT
+  }
+ }
+ default = no
+ continuous_focus_position = {
+  x = 50
+  y = 1800
+ }
+ focus = {
+  id = MNR_MLT_root
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   MNR_initialize = yes
+   add_political_power = 40
+   if = {
+    limit = {
+     NOT = {
+      has_country_flag = MNR_crisis_queued
+     }
+    }
+    set_country_flag = MNR_crisis_queued
+    country_event = {
+     id = mnr_campaign.205
+     days = 240
+     random_days = 30
+    }
+   }
+   MNR_refresh = yes
+  }
+  x = 10
+  y = 0
+ }
+ focus = {
+  id = MNR_MLT_economy0
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    MNR_reserve = 8
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_common_programme
+  }
+  x = 2
+  y = 5
+ }
+ focus = {
+  id = MNR_MLT_economy1
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 10
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_economy_local
+   focus = MNR_MLT_economy_contracts
+  }
+  x = 2
+  y = 7
+ }
+ focus = {
+  id = MNR_MLT_economy2
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  prerequisite = {
+   focus = MNR_MLT_economy1
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = MNR_MLT_economy_spirit
+   MNR_refresh = yes
+  }
+  x = 2
+  y = 8
+ }
+ focus = {
+  id = MNR_MLT_defence0
+  icon = GFX_goal_generic_defence
+  cost = 5
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     NOT = {
+      has_country_flag = MNR_template_ready
+     }
+    }
+    set_country_flag = MNR_template_ready
+    load_oob = MNR_MLT_template
+   }
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 200
+    producer = ROOT
+   }
+   army_experience = 5
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_common_programme
+  }
+  x = 10
+  y = 5
+ }
+ focus = {
+  id = MNR_MLT_defence1
+  icon = GFX_goal_generic_defence
+  cost = 5
+  available = {
+   MNR_home_secure = yes
+   check_variable = {
+    MNR_reserve > 4
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   subtract_from_variable = {
+    MNR_reserve = 5
+   }
+   add_timed_idea = {
+    idea = MNR_emergency
+    days = 365
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_defence_garrison
+   focus = MNR_MLT_defence_mobile
+  }
+  x = 10
+  y = 7
+ }
+ focus = {
+  id = MNR_MLT_defence2
+  icon = GFX_goal_generic_defence
+  cost = 10
+  prerequisite = {
+   focus = MNR_MLT_defence1
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = arms_factory
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+   MNR_refresh = yes
+  }
+  x = 10
+  y = 8
+ }
+ focus = {
+  id = MNR_MLT_contacts
+  icon = GFX_goal_generic_improve_relations
+  cost = 5
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = MNR_contacts
+   add_political_power = 25
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_common_programme
+  }
+  x = 18
+  y = 5
+ }
+ focus = {
+  id = MNR_MLT_chamber
+  icon = GFX_goal_generic_trade
+  cost = 5
+  prerequisite = {
+   focus = MNR_MLT_contacts
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTC_initialize_effect = yes
+   set_country_flag = WTN_compact_desk_open
+   set_country_flag = WTN_relations_open
+   MNR_refresh = yes
+  }
+  x = 16
+  y = 6
+ }
+ focus = {
+  id = MNR_MLT_civic
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  mutually_exclusive = {
+   focus = MNR_MLT_command
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = MNR_civic
+   add_ideas = MNR_civic_service
+   add_to_variable = {
+    MNR_mandate = 8
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_root
+  }
+  x = 8
+  y = 1
+ }
+ focus = {
+  id = MNR_MLT_civic_law
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = MNR_MLT_civic
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    MNR_mandate = 6
+   }
+   add_political_power = 30
+   MNR_refresh = yes
+  }
+  x = 8
+  y = 2
+ }
+ focus = {
+  id = MNR_MLT_civic_settlement
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = MNR_MLT_civic_law
+  }
+  available = {
+   MNR_home_secure = yes
+   check_variable = {
+    MNR_mandate > 34
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_stability = 0.05
+   add_to_variable = {
+    MNR_reserve = 10
+   }
+   MNR_refresh = yes
+  }
+  x = 8
+  y = 3
+ }
+ focus = {
+  id = MNR_MLT_command
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 5
+  mutually_exclusive = {
+   focus = MNR_MLT_civic
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = MNR_command
+   add_ideas = MNR_command_service
+   add_to_variable = {
+    MNR_mandate = -4
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_root
+  }
+  x = 12
+  y = 1
+ }
+ focus = {
+  id = MNR_MLT_command_law
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = MNR_MLT_command
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   army_experience = 8
+   add_war_support = 0.05
+   MNR_refresh = yes
+  }
+  x = 12
+  y = 2
+ }
+ focus = {
+  id = MNR_MLT_command_settlement
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = MNR_MLT_command_law
+  }
+  available = {
+   MNR_home_secure = yes
+   check_variable = {
+    MNR_mandate > 34
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_to_variable = {
+    MNR_reserve = 10
+   }
+   army_experience = 5
+   MNR_refresh = yes
+  }
+  x = 12
+  y = 3
+ }
+ focus = {
+  id = MNR_MLT_projects
+  icon = GFX_goal_generic_production
+  cost = 5
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = MNR_projects_open
+   add_political_power = 25
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_contacts
+  }
+  x = 20
+  y = 6
+ }
+ focus = {
+  id = MNR_MLT_specialists
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 5
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_technology = {
+    tech_support = 1
+   }
+   add_equipment_to_stockpile = {
+    type = support_equipment_1
+    amount = 50
+    producer = ROOT
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_projects
+  }
+  prerequisite = {
+   focus = MNR_MLT_chamber
+  }
+  x = 18
+  y = 7
+ }
+ focus = {
+  id = MNR_MLT_goal
+  icon = GFX_goal_generic_scientific_exchange
+  cost = 10
+  prerequisite = {
+   focus = MNR_MLT_economy2
+  }
+  prerequisite = {
+   focus = MNR_MLT_defence2
+  }
+  prerequisite = {
+   focus = MNR_MLT_specialists
+  }
+  prerequisite = {
+   focus = MNR_MLT_chamber
+  }
+  available = {
+   MNR_home_secure = yes
+   MNR_home_secure = yes
+   check_variable = {
+    MNR_progress > 2
+   }
+   check_variable = {
+    MNR_reserve > 34
+   }
+   check_variable = {
+    MNR_mandate > 64
+   }
+   MNR_has_route = yes
+   check_variable = {
+    SEN_science > 14
+   }
+   116 = {
+    is_owned_by = ROOT
+    is_controlled_by = ROOT
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   if = {
+    limit = {
+     NOT = {
+      has_country_flag = MNR_goal_complete
+     }
+    }
+    set_country_flag = MNR_goal_complete
+    add_political_power = 100
+    add_stability = 0.05
+    add_research_slot = 1
+    country_event = {
+     id = mnr_campaign.405
+    }
+   }
+   MNR_refresh = yes
+  }
+  x = 10
+  y = 10
+ }
+ focus = {
+  id = MNR_MLT_common_programme
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 35
+   add_to_variable = {
+    MNR_mandate = 5
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_civic_settlement
+   focus = MNR_MLT_command_settlement
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  x = 10
+  y = 4
+ }
+ focus = {
+  id = MNR_MLT_economy_local
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_to_variable = {
+    MNR_reserve = 10
+   }
+   add_tech_bonus = {
+    name = FSP_local_tools
+    bonus = 0.25
+    uses = 1
+    category = industry
+   }
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_economy0
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  mutually_exclusive = {
+   focus = MNR_MLT_economy_contracts
+  }
+  x = 0
+  y = 6
+ }
+ focus = {
+  id = MNR_MLT_economy_contracts
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 45
+   add_equipment_to_stockpile = {
+    type = support_equipment_1
+    amount = 25
+    producer = ROOT
+   }
+  }
+  prerequisite = {
+   focus = MNR_MLT_economy0
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  mutually_exclusive = {
+   focus = MNR_MLT_economy_local
+  }
+  x = 4
+  y = 6
+ }
+ focus = {
+  id = MNR_MLT_defence_garrison
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_to_variable = {
+    MNR_mandate = 8
+   }
+   army_experience = 5
+   MNR_refresh = yes
+  }
+  prerequisite = {
+   focus = MNR_MLT_defence0
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  mutually_exclusive = {
+   focus = MNR_MLT_defence_mobile
+  }
+  x = 8
+  y = 6
+ }
+ focus = {
+  id = MNR_MLT_defence_mobile
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   army_experience = 12
+   add_war_support = 0.05
+  }
+  prerequisite = {
+   focus = MNR_MLT_defence0
+  }
+  available = {
+   MNR_home_secure = yes
+  }
+  cancel_if_invalid = yes
+  mutually_exclusive = {
+   focus = MNR_MLT_defence_garrison
+  }
+  x = 12
+  y = 6
+ }
+}

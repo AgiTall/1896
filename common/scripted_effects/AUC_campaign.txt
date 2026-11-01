@@ -1,0 +1,166 @@
+AUC_open_referendums = {
+ set_country_flag = AUC_referendums_open
+ if = { limit = { country_exists = AVC AVC = { AUC_can_negotiate = yes NOT = { has_country_flag = AUC_join_authorized } } } AVC = { country_event = { id = auc_campaign.10 days = 1 } } }
+ if = { limit = { country_exists = AQL AQL = { AUC_can_negotiate = yes NOT = { has_country_flag = AUC_join_authorized } } } AQL = { country_event = { id = auc_campaign.11 days = 1 } } }
+ if = { limit = { country_exists = ASA ASA = { AUC_can_negotiate = yes NOT = { has_country_flag = AUC_join_authorized } } } ASA = { country_event = { id = auc_campaign.12 days = 1 } } }
+ if = { limit = { country_exists = AWA AWA = { AUC_can_negotiate = yes NOT = { has_country_flag = AUC_join_authorized } } } AWA = { country_event = { id = auc_campaign.13 days = 1 } } }
+ if = { limit = { country_exists = ATA ATA = { AUC_can_negotiate = yes NOT = { has_country_flag = AUC_join_authorized } } } ATA = { country_event = { id = auc_campaign.14 days = 1 } } }
+}
+
+AUC_request_charter = {
+ if = { limit = { country_exists = A02 OR = { is_subject_of = A02 is_subject = no } NOT = { has_war_with = A02 } NOT = { has_country_flag = AUC_charter_pending } }
+  set_country_flag = { flag = AUC_charter_pending days = 45 } set_country_flag = { flag = AUC_charter_cooldown days = 180 }
+  A02 = { country_event = { id = auc_campaign.1 days = 1 } }
+ }
+}
+AUC_release_federation = {
+ if = { limit = { tag = A02 country_exists = A07 A07 = { is_subject_of = A02 } }
+  set_autonomy = { target = A07 autonomy_state = autonomy_free end_wars = no end_civil_wars = no }
+  A07 = { if = { limit = { is_in_faction_with = A02 } leave_faction = yes } }
+ }
+}
+AUC_independence_war = {
+ if = { limit = { tag = A07 is_subject_of = A02 has_country_flag = AUC_sovereignty_refused NOT = { has_war_with = A02 } }
+  A02 = { AUC_release_federation = yes }
+  if = { limit = { is_subject = no NOT = { is_in_faction_with = A02 } }
+   declare_war_on = { target = A02 type = annex_everything }
+   set_country_flag = AUC_independence_war_started
+   set_country_flag = { flag = AUC_independence_opening days = 180 }
+  }
+ }
+}
+AUC_found_commonwealth = {
+ if = { limit = { tag = A07 AUC_can_form_federation = yes has_war = no }
+  set_country_flag = AUC_commonwealth_proclaimed
+  set_cosmetic_tag = AUC_COMMONWEALTH
+  add_ideas = AUC_federal_compact_spirit
+  AUC_integrate_AVC = yes
+  AUC_integrate_AQL = yes
+  AUC_integrate_ASA = yes
+  AUC_integrate_AWA = yes
+  AUC_integrate_ATA = yes
+ }
+}
+AUC_pacific_partners = {
+ if = { limit = { country_exists = A01 NOT = { has_war_with = A01 } } give_military_access = A01 A01 = { give_military_access = ROOT } }
+ if = { limit = { country_exists = A10 NOT = { has_war_with = A10 } } give_military_access = A10 A10 = { give_military_access = ROOT } }
+}
+
+AUC_integrate_AVC = {
+ if = { limit = { tag = A07 has_country_flag = AUC_commonwealth_proclaimed AUC_approval_AVC = yes
+  OR = { AVC = { is_subject = no } AND = { has_country_flag = AUC_british_charter AVC = { is_subject_of = A02 } } }
+  OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } }
+ }
+  if = { limit = { AVC = { is_subject_of = A02 } } A02 = { set_autonomy = { target = AVC autonomy_state = autonomy_free end_wars = no end_civil_wars = no } } }
+  AVC = { if = { limit = { is_in_faction_with = A02 } leave_faction = yes } }
+  if = { limit = { AVC = { is_subject = no } }
+   annex_country = { target = AVC transfer_troops = yes }
+   517 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   clr_country_flag = AUC_vote_AVC set_country_flag = AUC_integrated_AVC
+  }
+ }
+}
+
+AUC_raise_AVC_militia = {
+ if = { limit = { tag = AVC NOT = { has_country_flag = AUC_militia_raised } 517 = { is_owned_by = ROOT is_controlled_by = ROOT } }
+  set_country_flag = AUC_militia_raised load_oob = AUC_campaign_AVC
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200 }
+  army_experience = 10
+ }
+}
+AUC_integrate_AQL = {
+ if = { limit = { tag = A07 has_country_flag = AUC_commonwealth_proclaimed AUC_approval_AQL = yes
+  OR = { AQL = { is_subject = no } AND = { has_country_flag = AUC_british_charter AQL = { is_subject_of = A02 } } }
+  OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } }
+ }
+  if = { limit = { AQL = { is_subject_of = A02 } } A02 = { set_autonomy = { target = AQL autonomy_state = autonomy_free end_wars = no end_civil_wars = no } } }
+  AQL = { if = { limit = { is_in_faction_with = A02 } leave_faction = yes } }
+  if = { limit = { AQL = { is_subject = no } }
+   annex_country = { target = AQL transfer_troops = yes }
+   521 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   872 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   873 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   1075 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   clr_country_flag = AUC_vote_AQL set_country_flag = AUC_integrated_AQL
+  }
+ }
+}
+
+AUC_raise_AQL_militia = {
+ if = { limit = { tag = AQL NOT = { has_country_flag = AUC_militia_raised } 521 = { is_owned_by = ROOT is_controlled_by = ROOT } }
+  set_country_flag = AUC_militia_raised load_oob = AUC_campaign_AQL
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200 }
+  army_experience = 10
+ }
+}
+AUC_integrate_ASA = {
+ if = { limit = { tag = A07 has_country_flag = AUC_commonwealth_proclaimed AUC_approval_ASA = yes
+  OR = { ASA = { is_subject = no } AND = { has_country_flag = AUC_british_charter ASA = { is_subject_of = A02 } } }
+  OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } }
+ }
+  if = { limit = { ASA = { is_subject_of = A02 } } A02 = { set_autonomy = { target = ASA autonomy_state = autonomy_free end_wars = no end_civil_wars = no } } }
+  ASA = { if = { limit = { is_in_faction_with = A02 } leave_faction = yes } }
+  if = { limit = { ASA = { is_subject = no } }
+   annex_country = { target = ASA transfer_troops = yes }
+   519 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   520 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   674 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   clr_country_flag = AUC_vote_ASA set_country_flag = AUC_integrated_ASA
+  }
+ }
+}
+
+AUC_raise_ASA_militia = {
+ if = { limit = { tag = ASA NOT = { has_country_flag = AUC_militia_raised } 519 = { is_owned_by = ROOT is_controlled_by = ROOT } }
+  set_country_flag = AUC_militia_raised load_oob = AUC_campaign_ASA
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200 }
+  army_experience = 10
+ }
+}
+AUC_integrate_AWA = {
+ if = { limit = { tag = A07 has_country_flag = AUC_commonwealth_proclaimed AUC_approval_AWA = yes
+  OR = { AWA = { is_subject = no } AND = { has_country_flag = AUC_british_charter AWA = { is_subject_of = A02 } } }
+  OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } }
+ }
+  if = { limit = { AWA = { is_subject_of = A02 } } A02 = { set_autonomy = { target = AWA autonomy_state = autonomy_free end_wars = no end_civil_wars = no } } }
+  AWA = { if = { limit = { is_in_faction_with = A02 } leave_faction = yes } }
+  if = { limit = { AWA = { is_subject = no } }
+   annex_country = { target = AWA transfer_troops = yes }
+   522 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   870 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   871 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   1074 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   clr_country_flag = AUC_vote_AWA set_country_flag = AUC_integrated_AWA
+  }
+ }
+}
+
+AUC_raise_AWA_militia = {
+ if = { limit = { tag = AWA NOT = { has_country_flag = AUC_militia_raised } 522 = { is_owned_by = ROOT is_controlled_by = ROOT } }
+  set_country_flag = AUC_militia_raised load_oob = AUC_campaign_AWA
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200 }
+  army_experience = 10
+ }
+}
+AUC_integrate_ATA = {
+ if = { limit = { tag = A07 has_country_flag = AUC_commonwealth_proclaimed AUC_approval_ATA = yes
+  OR = { ATA = { is_subject = no } AND = { has_country_flag = AUC_british_charter ATA = { is_subject_of = A02 } } }
+  OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } }
+ }
+  if = { limit = { ATA = { is_subject_of = A02 } } A02 = { set_autonomy = { target = ATA autonomy_state = autonomy_free end_wars = no end_civil_wars = no } } }
+  ATA = { if = { limit = { is_in_faction_with = A02 } leave_faction = yes } }
+  if = { limit = { ATA = { is_subject = no } }
+   annex_country = { target = ATA transfer_troops = yes }
+   518 = { if = { limit = { is_owned_by = ROOT } add_core_of = ROOT } }
+   clr_country_flag = AUC_vote_ATA set_country_flag = AUC_integrated_ATA
+  }
+ }
+}
+
+AUC_raise_ATA_militia = {
+ if = { limit = { tag = ATA NOT = { has_country_flag = AUC_militia_raised } 518 = { is_owned_by = ROOT is_controlled_by = ROOT } }
+  set_country_flag = AUC_militia_raised load_oob = AUC_campaign_ATA
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 200 }
+  army_experience = 10
+ }
+}

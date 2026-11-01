@@ -1,4 +1,4 @@
-capital = 334 # Kalimantan Barat
+﻿capital = 334 # Kalimantan Barat
 
 recruit_character = INS_syarif_muhammad_alkadrie
 
@@ -13,8 +13,8 @@ set_technology = {
 if = {
 	limit = { NOT = { has_dlc = "By Blood Alone" } }
 	set_technology = {
-		early_fighter = 1
-		early_bomber = 1
+		scout_plane = 1
+		airship = 1
 	}
 }
 if = {
@@ -23,7 +23,7 @@ if = {
 }
 if = {
 	limit = { has_dlc = "No Step Back" }
-	set_technology = { gwtank_chassis = 1 }
+	set_technology = { tank_design = 1 }
 }
 
 set_politics = {
@@ -38,3 +38,14 @@ set_popularities = {
 	neutrality = 90
 	fascism = 0
 }
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_technology = {
+	basic_railways = 1
+	basic_torpedo = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = POK }
+# END 1893 START RESEARCH AND TRAINS

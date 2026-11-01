@@ -1,7 +1,7 @@
 state = {
 	id = 535
 	name = "STATE_535" # was Koshinetsu, is actually Hokuriku
-	manpower = 3871000
+	manpower = 2674566
 	state_category = city # was large_city
 	
 	resources = {

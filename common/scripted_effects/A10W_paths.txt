@@ -1,0 +1,146 @@
+A10W_initialize_effect = {
+ if = { limit = { NOT = { has_country_flag = A10W_initialized } }
+  set_country_flag = A10W_initialized
+  set_country_flag = A10W_path
+  remove_ideas = PZ_philippine_confederation
+  set_variable = { A10W_charter_tension = 25 }
+  WTC_initialize_effect = yes
+  add_ideas = A10W_conditional_oath
+ }
+}
+A10W_refresh_effect = {
+ clamp_variable = { var = A10W_charter_tension min = 0 max = 100 }
+ if = { limit = { check_variable = { A10W_charter_tension > 59 } } add_ideas = A10W_charter_strikes }
+ else = { remove_ideas = A10W_charter_strikes }
+ if = { limit = { check_variable = { A10W_charter_tension > 89 } NOT = { has_country_flag = A10W_strike_cooldown } }
+  set_country_flag = { flag = A10W_strike_cooldown days = 180 }
+  country_event = { id = A10W_path.30 days = 3 }
+ }
+}
+A10W_request_oath_effect = {
+ A10W_initialize_effect = yes
+ clr_country_flag = A10W_oath_refused
+ set_country_flag = { flag = A10W_oath_retry_cooldown days = 180 }
+ if = { limit = { A10W_chamber_reachable = yes }
+  set_country_flag = { flag = A10W_oath_pending days = 45 }
+  A04 = { country_event = { id = A10W_path.1 days = 7 } }
+  country_event = { id = A10W_path.4 days = 46 }
+ }
+ else = {
+  clr_country_flag = A10W_oath_pending
+  clr_country_flag = A10W_oath_accepted
+  set_country_flag = A10W_oath_refused
+  country_event = { id = A10W_path.3 days = 1 }
+ }
+}
+A10W_accept_oath_effect = {
+ clr_country_flag = A10W_oath_pending
+ clr_country_flag = A10W_oath_refused
+ set_country_flag = A10W_oath_accepted
+ add_stability = 0.02
+ country_event = { id = A10W_path.2 days = 1 }
+}
+A10W_request_colony_effect = {
+ set_country_flag = { flag = A10W_convention_cooldown days = 180 }
+ if = { limit = { A10W_colony_eligible = yes }
+  set_country_flag = { flag = A10W_colony_pending days = 45 }
+  A04 = { country_event = { id = A10W_path.10 days = 7 } }
+  country_event = { id = A10W_path.14 days = 46 }
+ }
+ else = { country_event = { id = A10W_path.12 days = 1 } }
+}
+A10W_establish_colony_effect = {
+ if = { limit = { A10W_colony_eligible = yes }
+  # Only an empty, single-country faction can be dissolved by this treaty.
+  if = { limit = { is_faction_leader = yes num_faction_members < 2 } dismantle_faction = yes }
+  A04 = {
+   set_autonomy = { target = A10 autonomy_state = A10W_chartered_colony freedom_level = 0.35 end_wars = no end_civil_wars = no }
+   if = { limit = { is_faction_leader = yes } add_to_faction = A10 }
+   add_political_power = 35
+  }
+  set_country_flag = A10W_colony_ratified
+  clr_country_flag = A10W_colony_refused
+  clr_country_flag = A10W_colony_pending
+  set_cosmetic_tag = A10W_COLONY
+  create_country_leader = { name = A10W_resident_name desc = A10W_resident_desc picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds" ideology = oligarchism expire = "1970.1.1" }
+  set_politics = { ruling_party = neutrality elections_allowed = no }
+  remove_ideas = A10W_provisional_charter
+  remove_ideas = A10W_conditional_oath
+  add_ideas = A10W_colonial_administration
+  add_to_variable = { WTC_debt = -15 }
+  add_to_variable = { A10W_charter_tension = 15 }
+  WTC_refresh_effect = yes
+  A10W_refresh_effect = yes
+  country_event = { id = A10W_path.11 days = 1 }
+ }
+ else = {
+  clr_country_flag = A10W_colony_pending
+  set_country_flag = A10W_colony_refused
+  country_event = { id = A10W_path.12 days = 1 }
+ }
+}
+A10W_request_metropole_effect = {
+ set_country_flag = { flag = A10W_convention_cooldown days = 180 }
+ if = { limit = { A10W_metropole_eligible = yes }
+  set_country_flag = { flag = A10W_metropole_pending days = 45 }
+  A04 = { country_event = { id = A10W_path.20 days = 7 } }
+  country_event = { id = A10W_path.24 days = 46 }
+ }
+ else = { country_event = { id = A10W_path.22 days = 1 } }
+}
+A10W_establish_metropole_effect = {
+ if = { limit = { A10W_metropole_eligible = yes A04 = { has_country_flag = A10W_voluntary_office } }
+  A04 = {
+   if = { limit = { is_faction_leader = yes num_faction_members < 2 } dismantle_faction = yes }
+  }
+  set_autonomy = { target = A04 autonomy_state = A10W_atlantic_office freedom_level = 0.70 end_wars = no end_civil_wars = no }
+  if = { limit = { is_faction_leader = yes } add_to_faction = A04 }
+  set_country_flag = A10W_metropole_ratified
+  clr_country_flag = A10W_metropole_refused
+  clr_country_flag = A10W_metropole_pending
+  create_country_leader = { name = A10W_directorate_name desc = A10W_directorate_desc picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds" ideology = oligarchism expire = "1970.1.1" }
+  set_politics = { ruling_party = neutrality elections_allowed = no }
+  remove_ideas = A10W_provisional_exchange
+  remove_ideas = A10W_conditional_oath
+  add_ideas = A10W_metropolitan_directorate
+  A10W_locate_exchange_effect = yes
+  add_to_variable = { WTC_debt = -10 }
+  add_to_variable = { A10W_charter_tension = 10 }
+  WTC_refresh_effect = yes
+  A10W_refresh_effect = yes
+  country_event = { id = A10W_path.21 days = 1 }
+ }
+ else = {
+  clr_country_flag = A10W_metropole_pending
+  set_country_flag = A10W_metropole_refused
+  country_event = { id = A10W_path.22 days = 1 }
+ }
+}
+A10W_locate_exchange_effect = {
+ if = { limit = { owns_state = 327 controls_state = 327 }
+  set_capital = { state = 327 remember_old_capital = no }
+  set_cosmetic_tag = A10W_METRO
+  clr_country_flag = A10W_temporary_exchange
+  set_country_flag = A10W_manila_exchange
+ }
+ else = {
+  set_cosmetic_tag = A10W_PACIFIC
+  set_country_flag = A10W_temporary_exchange
+ }
+}
+A10W_workshop_effect = {
+ if = { limit = { capital_scope = { is_owned_by = A10 is_controlled_by = A10 } }
+  capital_scope = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+ }
+ else = { add_political_power = 50 }
+}
+A10W_monthly_effect = {
+ if = { limit = { tag = A10 has_country_flag = A10W_path }
+  if = { limit = { has_idea = A10W_bonded_customs } add_to_variable = { A10W_charter_tension = 1 } }
+  if = { limit = { has_idea = A10W_export_estates_spirit } add_to_variable = { A10W_charter_tension = 1 } }
+  if = { limit = { has_idea = A10W_metropolitan_directorate } add_to_variable = { A10W_charter_tension = 1 } }
+  if = { limit = { check_variable = { WTC_debt > 70 } } add_to_variable = { A10W_charter_tension = 2 } }
+  if = { limit = { has_idea = A10W_port_hospitals } add_to_variable = { A10W_charter_tension = -1 } }
+  A10W_refresh_effect = yes
+ }
+}

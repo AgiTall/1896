@@ -1,0 +1,9 @@
+FRA = {
+	ship_hull_heavy_1 = {
+		pool = {
+			icons = {
+				GFX_FRA_ship_courbet
+			}
+		 }
+	}
+}

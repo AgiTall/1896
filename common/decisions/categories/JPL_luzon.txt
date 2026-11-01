@@ -1,0 +1,5 @@
+JPL_luzon_cabinet = {
+ icon = generic_political_discourse
+ allowed = { has_country_flag = JSM_legacy_campaign_enabled  original_tag = A03 }
+ visible = { has_country_flag = JPL_theater_active }
+}

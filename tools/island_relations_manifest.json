@@ -1,0 +1,814 @@
+{
+  "partners": {
+    "A04": [
+      "A02",
+      "A01",
+      "A03",
+      "A06",
+      "A09",
+      "A05",
+      "MLT",
+      "A10"
+    ],
+    "A01": [
+      "A02",
+      "A05",
+      "A11",
+      "A12",
+      "A13",
+      "A14"
+    ],
+    "A02": [
+      "A01",
+      "A05",
+      "MLT",
+      "A07",
+      "AVC",
+      "AQL",
+      "ASA",
+      "AWA",
+      "ATA"
+    ],
+    "A03": [
+      "A08",
+      "A09"
+    ],
+    "A05": [
+      "A02",
+      "A01"
+    ],
+    "A06": [
+      "MLT",
+      "A02"
+    ],
+    "A08": [
+      "A03",
+      "A09"
+    ],
+    "A09": [
+      "A03",
+      "A08"
+    ],
+    "A10": [
+      "A11",
+      "A12",
+      "A13",
+      "MLT"
+    ],
+    "MLT": [
+      "A02",
+      "A06",
+      "A04"
+    ],
+    "PCF": [
+      "A02",
+      "A01",
+      "A04"
+    ],
+    "PAZ": [
+      "A02",
+      "A01",
+      "A04"
+    ],
+    "PHR": [
+      "A02",
+      "A01",
+      "A04"
+    ],
+    "PHW": [
+      "A02",
+      "A03",
+      "A04"
+    ],
+    "PSY": [
+      "A02",
+      "A04",
+      "PZN",
+      "PPE"
+    ],
+    "PTG": [
+      "A02",
+      "PHW"
+    ],
+    "PKR": [
+      "A08",
+      "A06"
+    ],
+    "PPM": [
+      "A06",
+      "A02"
+    ],
+    "PZN": [
+      "PSY",
+      "PPE"
+    ],
+    "PPE": [
+      "PSY",
+      "PZN"
+    ],
+    "A07": [
+      "A02",
+      "AVC",
+      "AQL",
+      "ASA",
+      "AWA",
+      "ATA"
+    ],
+    "AVC": [
+      "A02",
+      "A07",
+      "AQL",
+      "ASA",
+      "AWA",
+      "ATA"
+    ],
+    "AQL": [
+      "A02",
+      "A07",
+      "AVC",
+      "ASA",
+      "AWA",
+      "ATA"
+    ],
+    "ASA": [
+      "A02",
+      "A07",
+      "AVC",
+      "AQL",
+      "AWA",
+      "ATA"
+    ],
+    "AWA": [
+      "A02",
+      "A07",
+      "AVC",
+      "AQL",
+      "ASA",
+      "ATA"
+    ],
+    "ATA": [
+      "A02",
+      "A07",
+      "AVC",
+      "AQL",
+      "ASA",
+      "AWA"
+    ],
+    "A11": [
+      "A01",
+      "A03",
+      "A10"
+    ],
+    "A12": [
+      "A01",
+      "A03",
+      "A10"
+    ],
+    "A13": [
+      "A01",
+      "A03",
+      "A10"
+    ],
+    "A14": [
+      "A01",
+      "A03",
+      "A10"
+    ],
+    "PLS": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PSL": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PCB": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PPN": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PVI": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PSM": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PMD": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PNM": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PNL": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PML": [
+      "A10",
+      "A04",
+      "MLT"
+    ],
+    "PBT": [
+      "A10",
+      "A04",
+      "MLT"
+    ]
+  },
+  "bilateral_pairs": [
+    [
+      "A02",
+      "A04"
+    ],
+    [
+      "A01",
+      "A04"
+    ],
+    [
+      "A03",
+      "A04"
+    ],
+    [
+      "A04",
+      "A06"
+    ],
+    [
+      "A04",
+      "A09"
+    ],
+    [
+      "A04",
+      "A05"
+    ],
+    [
+      "A04",
+      "MLT"
+    ],
+    [
+      "A04",
+      "A10"
+    ],
+    [
+      "A01",
+      "A02"
+    ],
+    [
+      "A01",
+      "A05"
+    ],
+    [
+      "A01",
+      "A11"
+    ],
+    [
+      "A01",
+      "A12"
+    ],
+    [
+      "A01",
+      "A13"
+    ],
+    [
+      "A01",
+      "A14"
+    ],
+    [
+      "A02",
+      "A05"
+    ],
+    [
+      "A02",
+      "MLT"
+    ],
+    [
+      "A02",
+      "A07"
+    ],
+    [
+      "A02",
+      "AVC"
+    ],
+    [
+      "A02",
+      "AQL"
+    ],
+    [
+      "A02",
+      "ASA"
+    ],
+    [
+      "A02",
+      "AWA"
+    ],
+    [
+      "A02",
+      "ATA"
+    ],
+    [
+      "A03",
+      "A08"
+    ],
+    [
+      "A03",
+      "A09"
+    ],
+    [
+      "A06",
+      "MLT"
+    ],
+    [
+      "A02",
+      "A06"
+    ],
+    [
+      "A08",
+      "A09"
+    ],
+    [
+      "A10",
+      "A11"
+    ],
+    [
+      "A10",
+      "A12"
+    ],
+    [
+      "A10",
+      "A13"
+    ],
+    [
+      "A10",
+      "MLT"
+    ],
+    [
+      "A02",
+      "PCF"
+    ],
+    [
+      "A01",
+      "PCF"
+    ],
+    [
+      "A04",
+      "PCF"
+    ],
+    [
+      "A02",
+      "PAZ"
+    ],
+    [
+      "A01",
+      "PAZ"
+    ],
+    [
+      "A04",
+      "PAZ"
+    ],
+    [
+      "A02",
+      "PHR"
+    ],
+    [
+      "A01",
+      "PHR"
+    ],
+    [
+      "A04",
+      "PHR"
+    ],
+    [
+      "A02",
+      "PHW"
+    ],
+    [
+      "A03",
+      "PHW"
+    ],
+    [
+      "A04",
+      "PHW"
+    ],
+    [
+      "A02",
+      "PSY"
+    ],
+    [
+      "A04",
+      "PSY"
+    ],
+    [
+      "PSY",
+      "PZN"
+    ],
+    [
+      "PPE",
+      "PSY"
+    ],
+    [
+      "A02",
+      "PTG"
+    ],
+    [
+      "PHW",
+      "PTG"
+    ],
+    [
+      "A08",
+      "PKR"
+    ],
+    [
+      "A06",
+      "PKR"
+    ],
+    [
+      "A06",
+      "PPM"
+    ],
+    [
+      "A02",
+      "PPM"
+    ],
+    [
+      "PPE",
+      "PZN"
+    ],
+    [
+      "A07",
+      "AVC"
+    ],
+    [
+      "A07",
+      "AQL"
+    ],
+    [
+      "A07",
+      "ASA"
+    ],
+    [
+      "A07",
+      "AWA"
+    ],
+    [
+      "A07",
+      "ATA"
+    ],
+    [
+      "AQL",
+      "AVC"
+    ],
+    [
+      "ASA",
+      "AVC"
+    ],
+    [
+      "AVC",
+      "AWA"
+    ],
+    [
+      "ATA",
+      "AVC"
+    ],
+    [
+      "AQL",
+      "ASA"
+    ],
+    [
+      "AQL",
+      "AWA"
+    ],
+    [
+      "AQL",
+      "ATA"
+    ],
+    [
+      "ASA",
+      "AWA"
+    ],
+    [
+      "ASA",
+      "ATA"
+    ],
+    [
+      "ATA",
+      "AWA"
+    ],
+    [
+      "A03",
+      "A11"
+    ],
+    [
+      "A03",
+      "A12"
+    ],
+    [
+      "A03",
+      "A13"
+    ],
+    [
+      "A03",
+      "A14"
+    ],
+    [
+      "A10",
+      "A14"
+    ],
+    [
+      "A10",
+      "PLS"
+    ],
+    [
+      "A04",
+      "PLS"
+    ],
+    [
+      "MLT",
+      "PLS"
+    ],
+    [
+      "A10",
+      "PSL"
+    ],
+    [
+      "A04",
+      "PSL"
+    ],
+    [
+      "MLT",
+      "PSL"
+    ],
+    [
+      "A10",
+      "PCB"
+    ],
+    [
+      "A04",
+      "PCB"
+    ],
+    [
+      "MLT",
+      "PCB"
+    ],
+    [
+      "A10",
+      "PPN"
+    ],
+    [
+      "A04",
+      "PPN"
+    ],
+    [
+      "MLT",
+      "PPN"
+    ],
+    [
+      "A10",
+      "PVI"
+    ],
+    [
+      "A04",
+      "PVI"
+    ],
+    [
+      "MLT",
+      "PVI"
+    ],
+    [
+      "A10",
+      "PSM"
+    ],
+    [
+      "A04",
+      "PSM"
+    ],
+    [
+      "MLT",
+      "PSM"
+    ],
+    [
+      "A10",
+      "PMD"
+    ],
+    [
+      "A04",
+      "PMD"
+    ],
+    [
+      "MLT",
+      "PMD"
+    ],
+    [
+      "A10",
+      "PNM"
+    ],
+    [
+      "A04",
+      "PNM"
+    ],
+    [
+      "MLT",
+      "PNM"
+    ],
+    [
+      "A10",
+      "PNL"
+    ],
+    [
+      "A04",
+      "PNL"
+    ],
+    [
+      "MLT",
+      "PNL"
+    ],
+    [
+      "A10",
+      "PML"
+    ],
+    [
+      "A04",
+      "PML"
+    ],
+    [
+      "MLT",
+      "PML"
+    ],
+    [
+      "A10",
+      "PBT"
+    ],
+    [
+      "A04",
+      "PBT"
+    ],
+    [
+      "MLT",
+      "PBT"
+    ]
+  ],
+  "services": {
+    "A02_A04": "maritime",
+    "A01_A04": "maritime",
+    "A03_A04": "maritime",
+    "A04_A06": "maritime",
+    "A04_A09": "maritime",
+    "A04_A05": "caribbean",
+    "A04_MLT": "maritime",
+    "A04_A10": "maritime",
+    "A01_A02": "fuel",
+    "A01_A05": "caribbean",
+    "A01_A11": "maritime",
+    "A01_A12": "maritime",
+    "A01_A13": "maritime",
+    "A01_A14": "maritime",
+    "A02_A05": "caribbean",
+    "A02_MLT": "maritime",
+    "A02_A07": "colonial",
+    "A02_AVC": "colonial",
+    "A02_AQL": "colonial",
+    "A02_ASA": "colonial",
+    "A02_AWA": "colonial",
+    "A02_ATA": "colonial",
+    "A03_A08": "northern",
+    "A03_A09": "workshop",
+    "A06_MLT": "research",
+    "A02_A06": "maritime",
+    "A08_A09": "northern",
+    "A10_A11": "maritime",
+    "A10_A12": "maritime",
+    "A10_A13": "maritime",
+    "A10_MLT": "maritime",
+    "A02_PCF": "caribbean",
+    "A01_PCF": "caribbean",
+    "A04_PCF": "caribbean",
+    "A02_PAZ": "caribbean",
+    "A01_PAZ": "caribbean",
+    "A04_PAZ": "caribbean",
+    "A02_PHR": "caribbean",
+    "A01_PHR": "caribbean",
+    "A04_PHR": "caribbean",
+    "A02_PHW": "maritime",
+    "A03_PHW": "maritime",
+    "A04_PHW": "maritime",
+    "A02_PSY": "maritime",
+    "A04_PSY": "maritime",
+    "PSY_PZN": "maritime",
+    "PPE_PSY": "maritime",
+    "A02_PTG": "maritime",
+    "PHW_PTG": "maritime",
+    "A08_PKR": "maritime",
+    "A06_PKR": "maritime",
+    "A06_PPM": "maritime",
+    "A02_PPM": "maritime",
+    "PPE_PZN": "maritime",
+    "A07_AVC": "colonial",
+    "A07_AQL": "colonial",
+    "A07_ASA": "colonial",
+    "A07_AWA": "colonial",
+    "A07_ATA": "colonial",
+    "AQL_AVC": "colonial",
+    "ASA_AVC": "colonial",
+    "AVC_AWA": "colonial",
+    "ATA_AVC": "colonial",
+    "AQL_ASA": "colonial",
+    "AQL_AWA": "colonial",
+    "AQL_ATA": "colonial",
+    "ASA_AWA": "colonial",
+    "ASA_ATA": "colonial",
+    "ATA_AWA": "colonial",
+    "A03_A11": "maritime",
+    "A03_A12": "maritime",
+    "A03_A13": "maritime",
+    "A03_A14": "maritime",
+    "A10_A14": "maritime",
+    "A10_PLS": "maritime",
+    "A04_PLS": "maritime",
+    "MLT_PLS": "maritime",
+    "A10_PSL": "maritime",
+    "A04_PSL": "maritime",
+    "MLT_PSL": "maritime",
+    "A10_PCB": "maritime",
+    "A04_PCB": "maritime",
+    "MLT_PCB": "maritime",
+    "A10_PPN": "maritime",
+    "A04_PPN": "maritime",
+    "MLT_PPN": "maritime",
+    "A10_PVI": "maritime",
+    "A04_PVI": "maritime",
+    "MLT_PVI": "maritime",
+    "A10_PSM": "maritime",
+    "A04_PSM": "maritime",
+    "MLT_PSM": "maritime",
+    "A10_PMD": "maritime",
+    "A04_PMD": "maritime",
+    "MLT_PMD": "maritime",
+    "A10_PNM": "maritime",
+    "A04_PNM": "maritime",
+    "MLT_PNM": "maritime",
+    "A10_PNL": "maritime",
+    "A04_PNL": "maritime",
+    "MLT_PNL": "maritime",
+    "A10_PML": "maritime",
+    "A04_PML": "maritime",
+    "MLT_PML": "maritime",
+    "A10_PBT": "maritime",
+    "A04_PBT": "maritime",
+    "MLT_PBT": "maritime"
+  },
+  "escrow_tags": [
+    "A01",
+    "A02",
+    "A03",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "AQL",
+    "ASA",
+    "ATA",
+    "AVC",
+    "AWA",
+    "MLT",
+    "PAZ",
+    "PBT",
+    "PCB",
+    "PCF",
+    "PHR",
+    "PHW",
+    "PKR",
+    "PLS",
+    "PMD",
+    "PML",
+    "PNL",
+    "PNM",
+    "PPE",
+    "PPM",
+    "PPN",
+    "PSL",
+    "PSM",
+    "PSY",
+    "PTG",
+    "PVI",
+    "PZN"
+  ]
+}

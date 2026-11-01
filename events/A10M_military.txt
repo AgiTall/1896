@@ -1,0 +1,109 @@
+add_namespace = A10M
+country_event = {
+ id = A10M.1 title = A10M.1.t desc = A10M.1.d picture = GFX_report_event_JAP_army_occupation
+ is_triggered_only = yes
+ trigger = { has_country_flag = A10M_active }
+ option = { name = A10M.1.a ai_chance = { factor = 45 }
+  add_political_power = 60 add_stability = -0.04
+  add_to_variable = { var = A10M_repression value = 15 }
+  add_to_variable = { var = A10M_opposition value = 8 }
+  A10M_update = yes
+ }
+ option = { name = A10M.1.b ai_chance = { factor = 55 }
+  add_political_power = -25 add_command_power = 10
+  subtract_from_variable = { var = A10M_opposition value = 8 }
+  add_to_variable = { var = A10M_strain value = 5 }
+  A10M_update = yes
+ }
+}
+country_event = {
+ id = A10M.2 title = A10M.2.t desc = A10M.2.d picture = GFX_report_event_JAP_army_occupation
+ is_triggered_only = yes
+ trigger = { has_country_flag = A10M_active }
+ option = { name = A10M.2.a ai_chance = { factor = 65 }
+  add_political_power = -35 add_stability = 0.02
+  subtract_from_variable = { var = A10M_opposition value = 8 }
+  subtract_from_variable = { var = A10M_repression value = 5 }
+  A10M_update = yes
+ }
+ option = { name = A10M.2.b ai_chance = { factor = 35 }
+  add_command_power = 20
+  add_timed_idea = { idea = A10M_shattered_officer_corps days = 180 }
+  add_to_variable = { var = A10M_repression value = 15 }
+  subtract_from_variable = { var = A10M_opposition value = 15 }
+  add_stability = -0.05
+  A10M_update = yes
+ }
+}
+country_event = {
+ id = A10M.3 title = A10M.3.t desc = A10M.3.d picture = GFX_report_event_JAP_army_occupation
+ is_triggered_only = yes
+ trigger = { has_country_flag = A10M_active check_variable = { var = A10M_strain value = 65 compare = greater_than_or_equals } }
+ option = { name = A10M.3.a ai_chance = { factor = 75 }
+  add_political_power = -50 add_war_support = -0.04
+  subtract_from_variable = { var = A10M_strain value = 30 }
+  subtract_from_variable = { var = A10M_opposition value = 10 }
+  A10M_update = yes
+ }
+ option = { name = A10M.3.b ai_chance = { factor = 25 }
+  add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 350 producer = A10 }
+  add_manpower = -1000 add_stability = -0.06
+  subtract_from_variable = { var = A10M_strain value = 15 }
+  add_to_variable = { var = A10M_opposition value = 15 }
+  add_to_variable = { var = A10M_repression value = 10 }
+  A10M_update = yes
+ }
+}
+country_event = {
+ id = A10M.4 title = A10M.4.t desc = A10M.4.d picture = GFX_report_event_JAP_army_occupation
+ is_triggered_only = yes
+ trigger = { has_country_flag = A10M_active check_variable = { var = A10M_opposition value = 65 compare = greater_than_or_equals } }
+ option = { name = A10M.4.a ai_chance = { factor = 70 }
+  add_political_power = -60 add_war_support = -0.05
+  subtract_from_variable = { var = A10M_opposition value = 30 }
+  subtract_from_variable = { var = A10M_repression value = 10 }
+  add_to_variable = { var = A10M_strain value = 5 }
+  A10M_update = yes
+ }
+ option = { name = A10M.4.b ai_chance = { factor = 30 }
+  add_stability = -0.08 add_manpower = -800
+  subtract_from_variable = { var = A10M_opposition value = 25 }
+  add_to_variable = { var = A10M_repression value = 20 }
+  add_to_variable = { var = A10M_strain value = 10 }
+  add_timed_idea = { idea = A10M_shattered_officer_corps days = 180 }
+  A10M_update = yes
+ }
+}
+country_event = {
+ id = A10M.5 title = A10M.5.t desc = A10M.5.d picture = GFX_report_event_JAP_army_occupation
+ is_triggered_only = yes
+ trigger = { has_country_flag = A10M_active }
+ option = { name = A10M.5.a ai_chance = { factor = 50 }
+  add_war_support = 0.06 add_political_power = 35
+  add_to_variable = { var = A10M_opposition value = 8 }
+  A10M_update = yes
+ }
+ option = { name = A10M.5.b ai_chance = { factor = 50 }
+  add_political_power = -35 add_stability = 0.04
+  subtract_from_variable = { var = A10M_opposition value = 12 }
+  subtract_from_variable = { var = A10M_repression value = 8 }
+  A10M_update = yes
+ }
+}
+country_event = {
+ id = A10M.6 title = A10M.6.t desc = A10M.6.d picture = GFX_report_event_JAP_army_occupation
+ is_triggered_only = yes
+ trigger = { has_country_flag = A10M_active }
+ option = { name = A10M.6.a ai_chance = { factor = 65 }
+  add_political_power = -30 add_stability = 0.03
+  subtract_from_variable = { var = A10M_opposition value = 10 }
+  add_to_variable = { var = A10M_strain value = 5 }
+  A10M_update = yes
+ }
+ option = { name = A10M.6.b ai_chance = { factor = 35 }
+  add_manpower = 2500 add_stability = -0.03
+  add_to_variable = { var = A10M_opposition value = 10 }
+  add_to_variable = { var = A10M_repression value = 10 }
+  A10M_update = yes
+ }
+}

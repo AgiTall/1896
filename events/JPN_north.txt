@@ -1,0 +1,118 @@
+add_namespace = japan_north
+country_event = {
+ id = japan_north.1 title = japan_north.1.t desc = japan_north.1.d picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ trigger = { tag = A03 country_exists = A08 has_country_flag = JPN_north_active NOT = { has_war_with = A08 } NOT = { has_country_flag = JPN_north_compact_signed } }
+ immediate = { clr_country_flag = JPN_north_dispatch_pending }
+ option = {
+  name = japan_north.1.a ai_chance = { factor = 70 }
+  trigger = { has_political_power > 24 has_equipment = { infantry_equipment > 249 } has_equipment = { convoy_1 > 3 } }
+  add_political_power = -25 JPN_north_send_rifles_effect = yes
+ }
+ option = {
+  name = japan_north.1.b ai_chance = { factor = 20 }
+  trigger = { has_political_power > 24 has_war_with = A01 has_country_flag = JPN_north_emergency_schedule check_variable = { JPN_north_deferrals < 2 } }
+  add_political_power = -25 JPN_north_defer_effect = yes
+ }
+ option = {
+  name = japan_north.1.c ai_chance = { factor = 20 }
+  trigger = { has_political_power > 19 has_country_flag = JPN_north_inspection_channel NOT = { has_country_flag = JPN_north_inspection_queued } }
+  add_political_power = -20 JPN_north_inspection_queue_effect = yes
+ }
+ option = {
+  name = japan_north.1.e ai_chance = { factor = 5 }
+  add_to_variable = { JPN_north_trust = -10 }
+  add_to_variable = { JPN_north_fleet_irritation = -4 }
+  JPN_north_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_north.2 title = japan_north.2.t desc = japan_north.2.d picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A03 country_exists = A08 has_country_flag = JPN_north_active NOT = { has_war_with = A08 } }
+ option = {
+  name = japan_north.2.a ai_chance = { factor = 70 }
+  add_to_variable = { JPN_north_trust = 8 } add_to_variable = { JPN_north_fleet_irritation = 6 }
+  add_to_variable = { JPN_north_supply_months = 1 }
+  set_country_flag = JPN_north_inspection_restricted JPN_north_refresh_effect = yes
+ }
+ option = {
+  name = japan_north.2.b ai_chance = { factor = 10 }
+  add_to_variable = { JPN_north_trust = -12 } add_to_variable = { JPN_north_fleet_irritation = -8 }
+  army_experience = 8 set_country_flag = JPN_north_inspection_overreach JPN_north_refresh_effect = yes
+ }
+ option = {
+  name = japan_north.2.c ai_chance = { factor = 20 }
+  trigger = { has_political_power > 39 }
+  add_political_power = -40 add_to_variable = { JPN_north_trust = 12 }
+  add_to_variable = { JPN_north_fleet_irritation = 3 }
+  set_country_flag = JPN_north_inspection_restricted JPN_north_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_north.3 title = japan_north.3.t desc = japan_north.3.d picture = GFX_jpc_council
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPN_north_active has_country_flag = JPN_north_protocol_broken }
+ option = {
+  name = japan_north.3.a ai_chance = { factor = 75 }
+  trigger = { has_political_power > 49 }
+  add_political_power = -50 add_to_variable = { JPN_north_trust = 8 }
+  add_to_variable = { JPN_north_fleet_irritation = 6 }
+  JPN_north_refresh_effect = yes
+ }
+ option = {
+  name = japan_north.3.b ai_chance = { factor = 25 }
+  add_war_support = -0.02 add_to_variable = { JPN_north_trust = -4 }
+  add_to_variable = { JPN_north_fleet_irritation = -8 }
+  JPN_north_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_north.4 title = japan_north.4.t desc = japan_north.4.d picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPN_north_active NOT = { has_country_flag = JPN_north_compact_signed } }
+ option = {
+  name = japan_north.4.a ai_chance = { factor = 70 }
+  trigger = { has_political_power > 59 check_variable = { JPN_north_fleet_grants < 3 } }
+  add_political_power = -60 JPN_north_fleet_grant_effect = yes
+ }
+ option = {
+  name = japan_north.4.b ai_chance = { factor = 30 }
+  add_to_variable = { JPN_north_fleet_irritation = 6 }
+  add_to_variable = { JPN_north_trust = 4 }
+  add_war_support = -0.02 JPN_north_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_north.5 title = japan_north.5.t desc = japan_north.5.d picture = GFX_jpc_council
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPN_north_active country_exists = A08 NOT = { has_war_with = A08 } }
+ option = {
+  name = japan_north.5.a ai_chance = { factor = 80 }
+  trigger = { has_political_power > 34 }
+  add_political_power = -35 add_to_variable = { JPN_north_trust = 6 }
+  set_country_flag = JPN_north_postwar_audience JPN_north_refresh_effect = yes
+ }
+ option = {
+  name = japan_north.5.b ai_chance = { factor = 20 }
+  add_to_variable = { JPN_north_trust = -6 }
+  add_to_variable = { JPN_north_fleet_irritation = -4 }
+  JPN_north_refresh_effect = yes
+ }
+}
+country_event = {
+ id = japan_north.6 title = japan_north.6.t desc = japan_north.6.d picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPN_north_active country_exists = A08 NOT = { has_war_with = A08 } NOT = { has_country_flag = JPN_north_compact_signed } }
+ immediate = { clr_country_flag = JPN_north_compact_queued }
+ option = {
+  name = japan_north.6.a ai_chance = { factor = 90 }
+  trigger = { NOT = { has_war_with = A01 } check_variable = { JPN_north_trust > 54 } check_variable = { JPN_north_fleet_irritation < 60 } has_equipment = { infantry_equipment > 249 } has_equipment = { convoy_1 > 3 } }
+  JPN_north_sign_compact_effect = yes
+ }
+ option = {
+  name = japan_north.6.b ai_chance = { factor = 10 }
+  add_to_variable = { JPN_north_trust = -4 }
+  JPN_north_refresh_effect = yes
+ }
+}

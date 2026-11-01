@@ -1,0 +1,278 @@
+MNR_initialize = {
+if = { limit = { MNR_is_minor = yes NOT = { has_country_flag = MNR_initialized } }
+ set_country_flag = MNR_initialized set_variable = { MNR_reserve = 40 } set_variable = { MNR_mandate = 45 } set_variable = { MNR_progress = 0 }
+ WTC_initialize_effect = yes
+ if = { limit = { tag = MLT NOT = { has_country_flag = SEN_initialized } } set_country_flag = SEN_initialized set_variable = { SEN_science = 0 } set_variable = { SEN_readiness = 0 } set_variable = { SEN_security = 20 } set_variable = { SEN_exposure = 0 } }
+}
+}
+
+MNR_refresh = {
+if = { limit = { MNR_is_minor = yes has_country_flag = MNR_initialized }
+ clamp_variable = { var = MNR_reserve min = 0 max = 100 } clamp_variable = { var = MNR_mandate min = 0 max = 100 } clamp_variable = { var = MNR_progress min = 0 max = 3 }
+ if = { limit = { check_variable = { MNR_reserve < 25 } } add_ideas = MNR_shortages } else = { remove_ideas = MNR_shortages }
+ if = { limit = { check_variable = { MNR_mandate < 25 } } add_ideas = MNR_discontent } else = { remove_ideas = MNR_discontent }
+}
+}
+
+MNR_monthly = {
+MNR_initialize = yes
+if = { limit = { has_war = yes } subtract_from_variable = { MNR_reserve = 1 } }
+if = { limit = { has_idea = MNR_civic_service has_war = no } add_to_variable = { MNR_mandate = 1 } }
+MNR_refresh = yes
+}
+
+MNR_refresh_network = {
+if = { limit = { tag = A01 has_country_flag = MNR_pact_A11 OR = { has_capitulated = yes NOT = { country_exists = A11 } has_war_with = A11 A11 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A01 } } } } }
+ clr_country_flag = MNR_pact_A11 if = { limit = { country_exists = A11 } A11 = { clr_country_flag = MNR_pact_A01 } } }
+if = { limit = { tag = A01 has_country_flag = MNR_pact_A12 OR = { has_capitulated = yes NOT = { country_exists = A12 } has_war_with = A12 A12 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A01 } } } } }
+ clr_country_flag = MNR_pact_A12 if = { limit = { country_exists = A12 } A12 = { clr_country_flag = MNR_pact_A01 } } }
+if = { limit = { tag = A01 has_country_flag = MNR_pact_A13 OR = { has_capitulated = yes NOT = { country_exists = A13 } has_war_with = A13 A13 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A01 } } } } }
+ clr_country_flag = MNR_pact_A13 if = { limit = { country_exists = A13 } A13 = { clr_country_flag = MNR_pact_A01 } } }
+if = { limit = { tag = A01 has_country_flag = MNR_pact_A14 OR = { has_capitulated = yes NOT = { country_exists = A14 } has_war_with = A14 A14 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A01 } } } } }
+ clr_country_flag = MNR_pact_A14 if = { limit = { country_exists = A14 } A14 = { clr_country_flag = MNR_pact_A01 } } }
+if = { limit = { tag = A02 has_country_flag = MNR_pact_MLT OR = { has_capitulated = yes NOT = { country_exists = MLT } has_war_with = MLT MLT = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A02 } } } } }
+ clr_country_flag = MNR_pact_MLT if = { limit = { country_exists = MLT } MLT = { clr_country_flag = MNR_pact_A02 } } }
+if = { limit = { tag = A02 has_country_flag = MNR_pact_PHW OR = { has_capitulated = yes NOT = { country_exists = PHW } has_war_with = PHW PHW = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A02 } } } } }
+ clr_country_flag = MNR_pact_PHW if = { limit = { country_exists = PHW } PHW = { clr_country_flag = MNR_pact_A02 } } }
+if = { limit = { tag = A02 has_country_flag = MNR_pact_PSY OR = { has_capitulated = yes NOT = { country_exists = PSY } has_war_with = PSY PSY = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A02 } } } } }
+ clr_country_flag = MNR_pact_PSY if = { limit = { country_exists = PSY } PSY = { clr_country_flag = MNR_pact_A02 } } }
+if = { limit = { tag = A03 has_country_flag = MNR_pact_A08 OR = { has_capitulated = yes NOT = { country_exists = A08 } has_war_with = A08 A08 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A03 } } } } }
+ clr_country_flag = MNR_pact_A08 if = { limit = { country_exists = A08 } A08 = { clr_country_flag = MNR_pact_A03 } } }
+if = { limit = { tag = A03 has_country_flag = MNR_pact_A09 OR = { has_capitulated = yes NOT = { country_exists = A09 } has_war_with = A09 A09 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A03 } } } } }
+ clr_country_flag = MNR_pact_A09 if = { limit = { country_exists = A09 } A09 = { clr_country_flag = MNR_pact_A03 } } }
+if = { limit = { tag = A04 has_country_flag = MNR_pact_A09 OR = { has_capitulated = yes NOT = { country_exists = A09 } has_war_with = A09 A09 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A04 } } } } }
+ clr_country_flag = MNR_pact_A09 if = { limit = { country_exists = A09 } A09 = { clr_country_flag = MNR_pact_A04 } } }
+if = { limit = { tag = A04 has_country_flag = MNR_pact_A11 OR = { has_capitulated = yes NOT = { country_exists = A11 } has_war_with = A11 A11 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A04 } } } } }
+ clr_country_flag = MNR_pact_A11 if = { limit = { country_exists = A11 } A11 = { clr_country_flag = MNR_pact_A04 } } }
+if = { limit = { tag = A04 has_country_flag = MNR_pact_A12 OR = { has_capitulated = yes NOT = { country_exists = A12 } has_war_with = A12 A12 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A04 } } } } }
+ clr_country_flag = MNR_pact_A12 if = { limit = { country_exists = A12 } A12 = { clr_country_flag = MNR_pact_A04 } } }
+if = { limit = { tag = A05 has_country_flag = MNR_pact_PCF OR = { has_capitulated = yes NOT = { country_exists = PCF } has_war_with = PCF PCF = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A05 } } } } }
+ clr_country_flag = MNR_pact_PCF if = { limit = { country_exists = PCF } PCF = { clr_country_flag = MNR_pact_A05 } } }
+if = { limit = { tag = A05 has_country_flag = MNR_pact_PHW OR = { has_capitulated = yes NOT = { country_exists = PHW } has_war_with = PHW PHW = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A05 } } } } }
+ clr_country_flag = MNR_pact_PHW if = { limit = { country_exists = PHW } PHW = { clr_country_flag = MNR_pact_A05 } } }
+if = { limit = { tag = A06 has_country_flag = MNR_pact_MLT OR = { has_capitulated = yes NOT = { country_exists = MLT } has_war_with = MLT MLT = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A06 } } } } }
+ clr_country_flag = MNR_pact_MLT if = { limit = { country_exists = MLT } MLT = { clr_country_flag = MNR_pact_A06 } } }
+if = { limit = { tag = A07 has_country_flag = MNR_pact_PHW OR = { has_capitulated = yes NOT = { country_exists = PHW } has_war_with = PHW PHW = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A07 } } } } }
+ clr_country_flag = MNR_pact_PHW if = { limit = { country_exists = PHW } PHW = { clr_country_flag = MNR_pact_A07 } } }
+if = { limit = { tag = A08 has_country_flag = MNR_pact_A03 OR = { has_capitulated = yes NOT = { country_exists = A03 } has_war_with = A03 A03 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A08 } } } } }
+ clr_country_flag = MNR_pact_A03 if = { limit = { country_exists = A03 } A03 = { clr_country_flag = MNR_pact_A08 } } }
+if = { limit = { tag = A08 has_country_flag = MNR_pact_A09 OR = { has_capitulated = yes NOT = { country_exists = A09 } has_war_with = A09 A09 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A08 } } } } }
+ clr_country_flag = MNR_pact_A09 if = { limit = { country_exists = A09 } A09 = { clr_country_flag = MNR_pact_A08 } } }
+if = { limit = { tag = A09 has_country_flag = MNR_pact_A03 OR = { has_capitulated = yes NOT = { country_exists = A03 } has_war_with = A03 A03 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A09 } } } } }
+ clr_country_flag = MNR_pact_A03 if = { limit = { country_exists = A03 } A03 = { clr_country_flag = MNR_pact_A09 } } }
+if = { limit = { tag = A09 has_country_flag = MNR_pact_A04 OR = { has_capitulated = yes NOT = { country_exists = A04 } has_war_with = A04 A04 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A09 } } } } }
+ clr_country_flag = MNR_pact_A04 if = { limit = { country_exists = A04 } A04 = { clr_country_flag = MNR_pact_A09 } } }
+if = { limit = { tag = A09 has_country_flag = MNR_pact_A08 OR = { has_capitulated = yes NOT = { country_exists = A08 } has_war_with = A08 A08 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A09 } } } } }
+ clr_country_flag = MNR_pact_A08 if = { limit = { country_exists = A08 } A08 = { clr_country_flag = MNR_pact_A09 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PBT OR = { has_capitulated = yes NOT = { country_exists = PBT } has_war_with = PBT PBT = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PBT if = { limit = { country_exists = PBT } PBT = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PCB OR = { has_capitulated = yes NOT = { country_exists = PCB } has_war_with = PCB PCB = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PCB if = { limit = { country_exists = PCB } PCB = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PMD OR = { has_capitulated = yes NOT = { country_exists = PMD } has_war_with = PMD PMD = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PMD if = { limit = { country_exists = PMD } PMD = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PML OR = { has_capitulated = yes NOT = { country_exists = PML } has_war_with = PML PML = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PML if = { limit = { country_exists = PML } PML = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PNL OR = { has_capitulated = yes NOT = { country_exists = PNL } has_war_with = PNL PNL = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PNL if = { limit = { country_exists = PNL } PNL = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PNM OR = { has_capitulated = yes NOT = { country_exists = PNM } has_war_with = PNM PNM = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PNM if = { limit = { country_exists = PNM } PNM = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PPN OR = { has_capitulated = yes NOT = { country_exists = PPN } has_war_with = PPN PPN = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PPN if = { limit = { country_exists = PPN } PPN = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PSL OR = { has_capitulated = yes NOT = { country_exists = PSL } has_war_with = PSL PSL = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PSL if = { limit = { country_exists = PSL } PSL = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PSM OR = { has_capitulated = yes NOT = { country_exists = PSM } has_war_with = PSM PSM = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PSM if = { limit = { country_exists = PSM } PSM = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A10 has_country_flag = MNR_pact_PVI OR = { has_capitulated = yes NOT = { country_exists = PVI } has_war_with = PVI PVI = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A10 } } } } }
+ clr_country_flag = MNR_pact_PVI if = { limit = { country_exists = PVI } PVI = { clr_country_flag = MNR_pact_A10 } } }
+if = { limit = { tag = A11 has_country_flag = MNR_pact_A01 OR = { has_capitulated = yes NOT = { country_exists = A01 } has_war_with = A01 A01 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A11 } } } } }
+ clr_country_flag = MNR_pact_A01 if = { limit = { country_exists = A01 } A01 = { clr_country_flag = MNR_pact_A11 } } }
+if = { limit = { tag = A11 has_country_flag = MNR_pact_A04 OR = { has_capitulated = yes NOT = { country_exists = A04 } has_war_with = A04 A04 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A11 } } } } }
+ clr_country_flag = MNR_pact_A04 if = { limit = { country_exists = A04 } A04 = { clr_country_flag = MNR_pact_A11 } } }
+if = { limit = { tag = A11 has_country_flag = MNR_pact_A13 OR = { has_capitulated = yes NOT = { country_exists = A13 } has_war_with = A13 A13 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A11 } } } } }
+ clr_country_flag = MNR_pact_A13 if = { limit = { country_exists = A13 } A13 = { clr_country_flag = MNR_pact_A11 } } }
+if = { limit = { tag = A12 has_country_flag = MNR_pact_A01 OR = { has_capitulated = yes NOT = { country_exists = A01 } has_war_with = A01 A01 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A12 } } } } }
+ clr_country_flag = MNR_pact_A01 if = { limit = { country_exists = A01 } A01 = { clr_country_flag = MNR_pact_A12 } } }
+if = { limit = { tag = A12 has_country_flag = MNR_pact_A04 OR = { has_capitulated = yes NOT = { country_exists = A04 } has_war_with = A04 A04 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A12 } } } } }
+ clr_country_flag = MNR_pact_A04 if = { limit = { country_exists = A04 } A04 = { clr_country_flag = MNR_pact_A12 } } }
+if = { limit = { tag = A13 has_country_flag = MNR_pact_A01 OR = { has_capitulated = yes NOT = { country_exists = A01 } has_war_with = A01 A01 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A13 } } } } }
+ clr_country_flag = MNR_pact_A01 if = { limit = { country_exists = A01 } A01 = { clr_country_flag = MNR_pact_A13 } } }
+if = { limit = { tag = A13 has_country_flag = MNR_pact_A11 OR = { has_capitulated = yes NOT = { country_exists = A11 } has_war_with = A11 A11 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A13 } } } } }
+ clr_country_flag = MNR_pact_A11 if = { limit = { country_exists = A11 } A11 = { clr_country_flag = MNR_pact_A13 } } }
+if = { limit = { tag = A14 has_country_flag = MNR_pact_A01 OR = { has_capitulated = yes NOT = { country_exists = A01 } has_war_with = A01 A01 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A14 } } } } }
+ clr_country_flag = MNR_pact_A01 if = { limit = { country_exists = A01 } A01 = { clr_country_flag = MNR_pact_A14 } } }
+if = { limit = { tag = A14 has_country_flag = MNR_pact_PSL OR = { has_capitulated = yes NOT = { country_exists = PSL } has_war_with = PSL PSL = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_A14 } } } } }
+ clr_country_flag = MNR_pact_PSL if = { limit = { country_exists = PSL } PSL = { clr_country_flag = MNR_pact_A14 } } }
+if = { limit = { tag = MLT has_country_flag = MNR_pact_A02 OR = { has_capitulated = yes NOT = { country_exists = A02 } has_war_with = A02 A02 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_MLT } } } } }
+ clr_country_flag = MNR_pact_A02 if = { limit = { country_exists = A02 } A02 = { clr_country_flag = MNR_pact_MLT } } }
+if = { limit = { tag = MLT has_country_flag = MNR_pact_A06 OR = { has_capitulated = yes NOT = { country_exists = A06 } has_war_with = A06 A06 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_MLT } } } } }
+ clr_country_flag = MNR_pact_A06 if = { limit = { country_exists = A06 } A06 = { clr_country_flag = MNR_pact_MLT } } }
+if = { limit = { tag = MLT has_country_flag = MNR_pact_PSY OR = { has_capitulated = yes NOT = { country_exists = PSY } has_war_with = PSY PSY = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_MLT } } } } }
+ clr_country_flag = MNR_pact_PSY if = { limit = { country_exists = PSY } PSY = { clr_country_flag = MNR_pact_MLT } } }
+if = { limit = { tag = PAZ has_country_flag = MNR_pact_PCF OR = { has_capitulated = yes NOT = { country_exists = PCF } has_war_with = PCF PCF = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PAZ } } } } }
+ clr_country_flag = MNR_pact_PCF if = { limit = { country_exists = PCF } PCF = { clr_country_flag = MNR_pact_PAZ } } }
+if = { limit = { tag = PAZ has_country_flag = MNR_pact_PHR OR = { has_capitulated = yes NOT = { country_exists = PHR } has_war_with = PHR PHR = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PAZ } } } } }
+ clr_country_flag = MNR_pact_PHR if = { limit = { country_exists = PHR } PHR = { clr_country_flag = MNR_pact_PAZ } } }
+if = { limit = { tag = PBT has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PBT } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PBT } } }
+if = { limit = { tag = PBT has_country_flag = MNR_pact_PNL OR = { has_capitulated = yes NOT = { country_exists = PNL } has_war_with = PNL PNL = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PBT } } } } }
+ clr_country_flag = MNR_pact_PNL if = { limit = { country_exists = PNL } PNL = { clr_country_flag = MNR_pact_PBT } } }
+if = { limit = { tag = PCB has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PCB } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PCB } } }
+if = { limit = { tag = PCB has_country_flag = MNR_pact_PML OR = { has_capitulated = yes NOT = { country_exists = PML } has_war_with = PML PML = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PCB } } } } }
+ clr_country_flag = MNR_pact_PML if = { limit = { country_exists = PML } PML = { clr_country_flag = MNR_pact_PCB } } }
+if = { limit = { tag = PCB has_country_flag = MNR_pact_PPN OR = { has_capitulated = yes NOT = { country_exists = PPN } has_war_with = PPN PPN = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PCB } } } } }
+ clr_country_flag = MNR_pact_PPN if = { limit = { country_exists = PPN } PPN = { clr_country_flag = MNR_pact_PCB } } }
+if = { limit = { tag = PCB has_country_flag = MNR_pact_PSL OR = { has_capitulated = yes NOT = { country_exists = PSL } has_war_with = PSL PSL = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PCB } } } } }
+ clr_country_flag = MNR_pact_PSL if = { limit = { country_exists = PSL } PSL = { clr_country_flag = MNR_pact_PCB } } }
+if = { limit = { tag = PCB has_country_flag = MNR_pact_PVI OR = { has_capitulated = yes NOT = { country_exists = PVI } has_war_with = PVI PVI = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PCB } } } } }
+ clr_country_flag = MNR_pact_PVI if = { limit = { country_exists = PVI } PVI = { clr_country_flag = MNR_pact_PCB } } }
+if = { limit = { tag = PCF has_country_flag = MNR_pact_A05 OR = { has_capitulated = yes NOT = { country_exists = A05 } has_war_with = A05 A05 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PCF } } } } }
+ clr_country_flag = MNR_pact_A05 if = { limit = { country_exists = A05 } A05 = { clr_country_flag = MNR_pact_PCF } } }
+if = { limit = { tag = PCF has_country_flag = MNR_pact_PAZ OR = { has_capitulated = yes NOT = { country_exists = PAZ } has_war_with = PAZ PAZ = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PCF } } } } }
+ clr_country_flag = MNR_pact_PAZ if = { limit = { country_exists = PAZ } PAZ = { clr_country_flag = MNR_pact_PCF } } }
+if = { limit = { tag = PHR has_country_flag = MNR_pact_PAZ OR = { has_capitulated = yes NOT = { country_exists = PAZ } has_war_with = PAZ PAZ = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PHR } } } } }
+ clr_country_flag = MNR_pact_PAZ if = { limit = { country_exists = PAZ } PAZ = { clr_country_flag = MNR_pact_PHR } } }
+if = { limit = { tag = PHR has_country_flag = MNR_pact_PSL OR = { has_capitulated = yes NOT = { country_exists = PSL } has_war_with = PSL PSL = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PHR } } } } }
+ clr_country_flag = MNR_pact_PSL if = { limit = { country_exists = PSL } PSL = { clr_country_flag = MNR_pact_PHR } } }
+if = { limit = { tag = PHW has_country_flag = MNR_pact_A02 OR = { has_capitulated = yes NOT = { country_exists = A02 } has_war_with = A02 A02 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PHW } } } } }
+ clr_country_flag = MNR_pact_A02 if = { limit = { country_exists = A02 } A02 = { clr_country_flag = MNR_pact_PHW } } }
+if = { limit = { tag = PHW has_country_flag = MNR_pact_A05 OR = { has_capitulated = yes NOT = { country_exists = A05 } has_war_with = A05 A05 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PHW } } } } }
+ clr_country_flag = MNR_pact_A05 if = { limit = { country_exists = A05 } A05 = { clr_country_flag = MNR_pact_PHW } } }
+if = { limit = { tag = PHW has_country_flag = MNR_pact_A07 OR = { has_capitulated = yes NOT = { country_exists = A07 } has_war_with = A07 A07 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PHW } } } } }
+ clr_country_flag = MNR_pact_A07 if = { limit = { country_exists = A07 } A07 = { clr_country_flag = MNR_pact_PHW } } }
+if = { limit = { tag = PMD has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PMD } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PMD } } }
+if = { limit = { tag = PMD has_country_flag = MNR_pact_PNM OR = { has_capitulated = yes NOT = { country_exists = PNM } has_war_with = PNM PNM = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PMD } } } } }
+ clr_country_flag = MNR_pact_PNM if = { limit = { country_exists = PNM } PNM = { clr_country_flag = MNR_pact_PMD } } }
+if = { limit = { tag = PMD has_country_flag = MNR_pact_PSL OR = { has_capitulated = yes NOT = { country_exists = PSL } has_war_with = PSL PSL = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PMD } } } } }
+ clr_country_flag = MNR_pact_PSL if = { limit = { country_exists = PSL } PSL = { clr_country_flag = MNR_pact_PMD } } }
+if = { limit = { tag = PML has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PML } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PML } } }
+if = { limit = { tag = PML has_country_flag = MNR_pact_PCB OR = { has_capitulated = yes NOT = { country_exists = PCB } has_war_with = PCB PCB = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PML } } } } }
+ clr_country_flag = MNR_pact_PCB if = { limit = { country_exists = PCB } PCB = { clr_country_flag = MNR_pact_PML } } }
+if = { limit = { tag = PNL has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PNL } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PNL } } }
+if = { limit = { tag = PNL has_country_flag = MNR_pact_PBT OR = { has_capitulated = yes NOT = { country_exists = PBT } has_war_with = PBT PBT = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PNL } } } } }
+ clr_country_flag = MNR_pact_PBT if = { limit = { country_exists = PBT } PBT = { clr_country_flag = MNR_pact_PNL } } }
+if = { limit = { tag = PNM has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PNM } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PNM } } }
+if = { limit = { tag = PNM has_country_flag = MNR_pact_PMD OR = { has_capitulated = yes NOT = { country_exists = PMD } has_war_with = PMD PMD = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PNM } } } } }
+ clr_country_flag = MNR_pact_PMD if = { limit = { country_exists = PMD } PMD = { clr_country_flag = MNR_pact_PNM } } }
+if = { limit = { tag = PPN has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PPN } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PPN } } }
+if = { limit = { tag = PPN has_country_flag = MNR_pact_PCB OR = { has_capitulated = yes NOT = { country_exists = PCB } has_war_with = PCB PCB = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PPN } } } } }
+ clr_country_flag = MNR_pact_PCB if = { limit = { country_exists = PCB } PCB = { clr_country_flag = MNR_pact_PPN } } }
+if = { limit = { tag = PSL has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSL } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PSL } } }
+if = { limit = { tag = PSL has_country_flag = MNR_pact_A14 OR = { has_capitulated = yes NOT = { country_exists = A14 } has_war_with = A14 A14 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSL } } } } }
+ clr_country_flag = MNR_pact_A14 if = { limit = { country_exists = A14 } A14 = { clr_country_flag = MNR_pact_PSL } } }
+if = { limit = { tag = PSL has_country_flag = MNR_pact_PCB OR = { has_capitulated = yes NOT = { country_exists = PCB } has_war_with = PCB PCB = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSL } } } } }
+ clr_country_flag = MNR_pact_PCB if = { limit = { country_exists = PCB } PCB = { clr_country_flag = MNR_pact_PSL } } }
+if = { limit = { tag = PSL has_country_flag = MNR_pact_PHR OR = { has_capitulated = yes NOT = { country_exists = PHR } has_war_with = PHR PHR = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSL } } } } }
+ clr_country_flag = MNR_pact_PHR if = { limit = { country_exists = PHR } PHR = { clr_country_flag = MNR_pact_PSL } } }
+if = { limit = { tag = PSL has_country_flag = MNR_pact_PMD OR = { has_capitulated = yes NOT = { country_exists = PMD } has_war_with = PMD PMD = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSL } } } } }
+ clr_country_flag = MNR_pact_PMD if = { limit = { country_exists = PMD } PMD = { clr_country_flag = MNR_pact_PSL } } }
+if = { limit = { tag = PSM has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSM } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PSM } } }
+if = { limit = { tag = PSM has_country_flag = MNR_pact_PVI OR = { has_capitulated = yes NOT = { country_exists = PVI } has_war_with = PVI PVI = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSM } } } } }
+ clr_country_flag = MNR_pact_PVI if = { limit = { country_exists = PVI } PVI = { clr_country_flag = MNR_pact_PSM } } }
+if = { limit = { tag = PSY has_country_flag = MNR_pact_A02 OR = { has_capitulated = yes NOT = { country_exists = A02 } has_war_with = A02 A02 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSY } } } } }
+ clr_country_flag = MNR_pact_A02 if = { limit = { country_exists = A02 } A02 = { clr_country_flag = MNR_pact_PSY } } }
+if = { limit = { tag = PSY has_country_flag = MNR_pact_MLT OR = { has_capitulated = yes NOT = { country_exists = MLT } has_war_with = MLT MLT = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PSY } } } } }
+ clr_country_flag = MNR_pact_MLT if = { limit = { country_exists = MLT } MLT = { clr_country_flag = MNR_pact_PSY } } }
+if = { limit = { tag = PVI has_country_flag = MNR_pact_A10 OR = { has_capitulated = yes NOT = { country_exists = A10 } has_war_with = A10 A10 = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PVI } } } } }
+ clr_country_flag = MNR_pact_A10 if = { limit = { country_exists = A10 } A10 = { clr_country_flag = MNR_pact_PVI } } }
+if = { limit = { tag = PVI has_country_flag = MNR_pact_PCB OR = { has_capitulated = yes NOT = { country_exists = PCB } has_war_with = PCB PCB = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PVI } } } } }
+ clr_country_flag = MNR_pact_PCB if = { limit = { country_exists = PCB } PCB = { clr_country_flag = MNR_pact_PVI } } }
+if = { limit = { tag = PVI has_country_flag = MNR_pact_PSM OR = { has_capitulated = yes NOT = { country_exists = PSM } has_war_with = PSM PSM = { OR = { has_capitulated = yes NOT = { has_country_flag = MNR_pact_PVI } } } } }
+ clr_country_flag = MNR_pact_PSM if = { limit = { country_exists = PSM } PSM = { clr_country_flag = MNR_pact_PVI } } }
+if = { limit = { MNR_has_live_partner = yes } add_ideas = MNR_network_service } else = { remove_ideas = MNR_network_service }
+}
+
+MNR_A05_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 315 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 315 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes }  }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort A05" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_A05_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_A05_escorts_legacy }
+}
+}
+
+MNR_PHW_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 629 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 629 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes }  }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort PHW" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_PHW_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_PHW_escorts_legacy }
+}
+}
+
+MNR_MLT_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 116 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 116 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes }  }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort MLT" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_MLT_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_MLT_escorts_legacy }
+}
+}
+
+MNR_PSL_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 1025 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 1025 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes }  }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort PSL" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_PSL_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_PSL_escorts_legacy }
+}
+}
+
+MNR_PSY_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 709 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 709 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes }  }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort PSY" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_PSY_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_PSY_escorts_legacy }
+}
+}
+
+MNR_A12_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 334 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 334 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes }  }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort A12" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_A12_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_A12_escorts_legacy }
+}
+}
+
+MNR_PCB_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 628 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 628 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes }  }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort PCB" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_PCB_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_PCB_escorts_legacy }
+}
+}
+
+MNR_PVI_commission_escorts = {
+if = { limit = { MNR_home_secure = yes 624 = { is_owned_by = ROOT is_controlled_by = ROOT } has_country_flag = MNR_yard_active NOT = { has_country_flag = MNR_escorts_delivered } }
+ clr_country_flag = MNR_yard_active set_country_flag = MNR_escorts_delivered
+ 624 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = dockyard level = 1 instant_build = yes } add_building_construction = { type = naval_base province = 1372 level = 1 instant_build = yes } }
+ if = { limit = { has_dlc = "Man the Guns" }
+  set_technology = { early_ship_hull_light = 1 }
+  create_equipment_variant = { name = "Local Escort PVI" type = ship_hull_light_1 parent_version = 0 modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty } } load_oob = MNR_PVI_escorts
+ } else = { set_technology = { early_destroyer = 1 } load_oob = MNR_PVI_escorts_legacy }
+}
+}

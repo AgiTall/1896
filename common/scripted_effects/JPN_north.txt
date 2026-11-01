@@ -1,0 +1,259 @@
+# All variables are owned by A03. A08 keeps its government, divisions and territory.
+JPN_north_initialize_effect = {
+ if = { limit = { tag = A03 NOT = { has_country_flag = JPN_north_initialized } }
+  set_country_flag = JPN_north_initialized
+  set_variable = { JPN_north_trust = 45 }
+  set_variable = { JPN_north_fleet_irritation = 20 }
+  set_variable = { JPN_north_supply_months = 0 }
+  set_variable = { JPN_north_dispatch_clock = 0 }
+  set_variable = { JPN_north_deferrals = 0 }
+  set_variable = { JPN_north_civilian_shipments = 0 }
+  set_variable = { JPN_north_fleet_grants = 0 }
+ }
+}
+JPN_north_clamp_effect = {
+ clamp_variable = { var = JPN_north_trust min = 0 max = 100 }
+ clamp_variable = { var = JPN_north_fleet_irritation min = 0 max = 100 }
+ clamp_variable = { var = JPN_north_supply_months min = 0 max = 6 }
+}
+JPN_north_refresh_effect = {
+ JPN_north_clamp_effect = yes
+ if = { limit = { has_country_flag = JPN_north_active NOT = { has_country_flag = JPN_north_compact_signed } }
+  if = { limit = { check_variable = { JPN_north_fleet_irritation > 59 } }
+   add_ideas = JPN_north_fleet_grievance
+  }
+  else = { remove_ideas = JPN_north_fleet_grievance }
+  if = { limit = { check_variable = { JPN_north_trust < 35 } }
+   add_ideas = JPN_north_closed_warehouses
+  }
+  else = { remove_ideas = JPN_north_closed_warehouses }
+  if = { limit = {
+   NOT = { has_country_flag = JPN_north_arbitration_grace }
+   OR = { check_variable = { JPN_north_trust < 20 } check_variable = { JPN_north_fleet_irritation > 79 } }
+  }
+   set_country_flag = JPN_north_protocol_broken
+   add_ideas = JPN_north_broken_protocol
+   if = { limit = { NOT = { has_country_flag = JPN_north_failure_seen } }
+    set_country_flag = JPN_north_failure_seen
+    country_event = { id = japan_north.3 days = 1 }
+   }
+  }
+  if = { limit = { check_variable = { JPN_north_fleet_irritation > 64 } NOT = { has_country_flag = JPN_north_admiralty_seen } }
+   set_country_flag = JPN_north_admiralty_seen
+   country_event = { id = japan_north.4 days = 2 }
+  }
+ }
+}
+# Called by the original JPC_northern_protocol focus. Idempotent and also safe in an old save.
+JPN_north_protocol_focus_effect = {
+ JPN_north_initialize_effect = yes
+ if = { limit = { country_exists = A08 NOT = { has_war_with = A08 } NOT = { has_country_flag = JPN_north_protocol_endorsed } }
+  set_country_flag = JPN_north_protocol_endorsed
+  add_to_variable = { JPN_north_trust = 5 }
+  add_to_variable = { JPN_north_supply_months = 1 }
+  JPN_north_refresh_effect = yes
+ }
+}
+# Called by the original JPC_honshu_depots focus. The depot belongs to Tokyo, never to A08.
+JPN_north_depots_focus_effect = {
+ JPN_north_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPN_north_depots_registered } }
+  set_country_flag = JPN_north_depots_registered
+  add_to_variable = { JPN_north_supply_months = 1 }
+  add_to_variable = { JPN_north_fleet_irritation = -5 }
+  JPN_north_refresh_effect = yes
+ }
+}
+# Called by JPC_three_heads_again and by the first peace with A01 after the war.
+JPN_north_postwar_focus_effect = {
+ JPN_north_initialize_effect = yes
+ if = { limit = {
+  has_country_flag = JPN_north_active
+  NOT = { has_war_with = A01 }
+  NOT = { has_country_flag = JPN_north_postwar_return }
+ }
+  set_country_flag = JPN_north_postwar_return
+  set_variable = { JPN_north_supply_months = 0 }
+  add_to_variable = { JPN_north_trust = -12 }
+  add_to_variable = { JPN_north_fleet_irritation = 10 }
+  add_ideas = JPN_north_unfinished_peace
+  country_event = { id = japan_north.5 days = 3 }
+  JPN_north_refresh_effect = yes
+ }
+}
+JPN_north_send_rifles_effect = {
+ # The available trigger is repeated here to prevent negative stockpiles from stale events.
+ if = { limit = {
+  country_exists = A08 NOT = { has_war_with = A08 }
+  has_equipment = { infantry_equipment > 249 }
+  has_equipment = { convoy_1 > 3 }
+ }
+  add_equipment_to_stockpile = { type = infantry_equipment amount = -250 }
+  add_equipment_to_stockpile = { type = convoy_1 amount = -4 }
+  A08 = {
+   add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 250 producer = A03 }
+   add_equipment_to_stockpile = { type = convoy_1 amount = 4 producer = A03 }
+  }
+  add_to_variable = { JPN_north_trust = 8 }
+  add_to_variable = { JPN_north_fleet_irritation = 6 }
+  add_to_variable = { JPN_north_supply_months = 3 }
+  JPF_add_war_expense_effect = yes
+  JPN_north_refresh_effect = yes
+ }
+}
+JPN_north_civilian_supply_effect = {
+ if = { limit = {
+  country_exists = A08 NOT = { has_war_with = A08 }
+  has_equipment = { convoy_1 > 1 }
+  check_variable = { JPN_north_civilian_shipments < 3 }
+ }
+  add_equipment_to_stockpile = { type = convoy_1 amount = -2 }
+  A08 = { add_equipment_to_stockpile = { type = convoy_1 amount = 2 producer = A03 } }
+  add_to_variable = { JPN_north_civilian_shipments = 1 }
+  add_to_variable = { JPN_north_trust = 5 }
+  add_to_variable = { JPN_north_fleet_irritation = 2 }
+  add_to_variable = { JPN_north_supply_months = 2 }
+  JPF_add_war_expense_effect = yes
+  JPN_north_refresh_effect = yes
+ }
+}
+JPN_north_defer_effect = {
+ if = { limit = {
+  has_war_with = A01 has_country_flag = JPN_north_emergency_schedule
+  check_variable = { JPN_north_deferrals < 2 }
+ }
+  add_to_variable = { JPN_north_deferrals = 1 }
+  add_to_variable = { JPN_north_supply_months = 2 }
+  add_to_variable = { JPN_north_trust = -6 }
+  add_to_variable = { JPN_north_fleet_irritation = -5 }
+  JPN_north_refresh_effect = yes
+ }
+}
+JPN_north_inspection_queue_effect = {
+ if = { limit = {
+  has_country_flag = JPN_north_active
+  has_country_flag = JPN_north_inspection_channel
+  NOT = { has_country_flag = JPN_north_inspection_queued }
+ }
+  set_country_flag = JPN_north_inspection_queued
+  country_event = { id = japan_north.2 days = 7 }
+ }
+}
+JPN_north_fleet_grant_effect = {
+ if = { limit = { check_variable = { JPN_north_fleet_grants < 3 } }
+  add_to_variable = { JPN_north_fleet_grants = 1 }
+  add_to_variable = { JPN_north_fleet_irritation = -14 }
+  add_to_variable = { JPN_north_trust = -3 }
+  add_timed_idea = { idea = JPN_north_fleet_appropriation days = 180 }
+  JPF_add_war_expense_effect = yes
+  JPN_north_refresh_effect = yes
+ }
+}
+JPN_north_restore_protocol_effect = {
+ if = { limit = {
+  country_exists = A08 NOT = { has_war_with = A08 }
+  has_equipment = { infantry_equipment > 499 }
+  has_equipment = { convoy_1 > 5 }
+ }
+  add_equipment_to_stockpile = { type = infantry_equipment amount = -500 }
+  add_equipment_to_stockpile = { type = convoy_1 amount = -6 }
+  A08 = {
+   add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A03 }
+   add_equipment_to_stockpile = { type = convoy_1 amount = 6 producer = A03 }
+  }
+  add_to_variable = { JPN_north_trust = 18 }
+  add_to_variable = { JPN_north_fleet_irritation = 12 }
+  set_variable = { JPN_north_supply_months = 4 }
+  clr_country_flag = JPN_north_protocol_broken
+  remove_ideas = JPN_north_broken_protocol
+  JPF_add_war_expense_effect = yes
+  JPN_north_refresh_effect = yes
+ }
+}
+JPN_north_compact_queue_effect = {
+ if = { limit = {
+  has_country_flag = JPN_north_compact_ready
+  NOT = { has_country_flag = JPN_north_compact_queued }
+  NOT = { has_country_flag = JPN_north_compact_signed }
+ }
+  set_country_flag = JPN_north_compact_queued
+  country_event = { id = japan_north.6 days = 7 }
+ }
+}
+JPN_north_sign_compact_effect = {
+ if = { limit = {
+  country_exists = A08 NOT = { has_war_with = A08 }
+  NOT = { has_war_with = A01 }
+  check_variable = { JPN_north_trust > 54 }
+  check_variable = { JPN_north_fleet_irritation < 60 }
+  has_equipment = { infantry_equipment > 249 }
+  has_equipment = { convoy_1 > 3 }
+  NOT = { has_country_flag = JPN_north_compact_signed }
+ }
+  JPN_north_send_rifles_effect = yes
+  set_country_flag = JPN_north_compact_signed
+  clr_country_flag = JPN_north_protocol_broken
+  remove_ideas = JPN_north_obligation
+  remove_ideas = JPN_north_broken_protocol
+  remove_ideas = JPN_north_unfinished_peace
+  remove_ideas = JPN_north_closed_warehouses
+  remove_ideas = JPN_north_fleet_grievance
+  add_ideas = JPN_north_limited_compact
+ }
+}
+JPN_north_daily_effect = {
+ JPN_north_initialize_effect = yes
+ if = { limit = {
+  has_country_flag = JPC_north_signed country_exists = A08 NOT = { has_war_with = A08 }
+  NOT = { has_country_flag = JPN_north_active }
+ }
+  set_country_flag = JPN_north_active
+  add_ideas = JPN_north_obligation
+ }
+ if = { limit = { has_country_flag = JPN_north_active }
+  if = { limit = { has_war_with = A01 } set_country_flag = JPN_north_saw_dutch_war }
+  if = { limit = {
+   has_country_flag = JPN_north_saw_dutch_war
+   NOT = { has_war_with = A01 }
+   NOT = { has_country_flag = JPN_north_postwar_return }
+  } JPN_north_postwar_focus_effect = yes }
+  if = { limit = { OR = { NOT = { country_exists = A08 } has_war_with = A08 } }
+   clr_country_flag = JPN_north_active
+   remove_ideas = JPN_north_obligation
+   remove_ideas = JPN_north_broken_protocol
+   remove_ideas = JPN_north_unfinished_peace
+   remove_ideas = JPN_north_closed_warehouses
+   remove_ideas = JPN_north_fleet_grievance
+  }
+ }
+}
+JPN_north_monthly_effect = {
+ if = { limit = {
+  has_country_flag = JPN_north_active
+  country_exists = A08 NOT = { has_war_with = A08 }
+  NOT = { has_country_flag = JPN_north_compact_signed }
+ }
+  add_to_variable = { JPN_north_dispatch_clock = 1 }
+  if = { limit = { check_variable = { JPN_north_supply_months > 0 } }
+   add_to_variable = { JPN_north_supply_months = -1 }
+   add_to_variable = { JPN_north_trust = 1 }
+   add_to_variable = { JPN_north_fleet_irritation = -1 }
+  }
+  else = {
+   add_to_variable = { JPN_north_trust = -3 }
+   add_to_variable = { JPN_north_fleet_irritation = 1 }
+  }
+  if = { limit = { has_country_flag = JPN_north_tokyo_auditors }
+   add_to_variable = { JPN_north_fleet_irritation = -1 }
+  }
+  JPN_north_refresh_effect = yes
+  if = { limit = {
+   check_variable = { JPN_north_dispatch_clock > 3 }
+   NOT = { has_country_flag = JPN_north_dispatch_pending }
+  }
+   set_variable = { JPN_north_dispatch_clock = 0 }
+   set_country_flag = { flag = JPN_north_dispatch_pending days = 45 }
+   country_event = { id = japan_north.1 days = 1 }
+  }
+ }
+}

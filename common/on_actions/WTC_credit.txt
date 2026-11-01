@@ -1,0 +1,11 @@
+on_actions = {
+ on_startup = { effect = {
+  A04 = { WTC_board_initialize_effect = yes WTC_check_cover_effect = yes }
+  every_country = { limit = { NOT = { tag = A04 } } WTC_initialize_effect = yes }
+ } }
+ on_daily = { effect = {
+  if = { limit = { tag = A04 } WTC_board_initialize_effect = yes WTC_check_cover_effect = yes }
+  else = { WTC_initialize_effect = yes }
+ } }
+ on_monthly = { effect = { if = { limit = { NOT = { tag = A04 } } WTC_monthly_effect = yes } } }
+}

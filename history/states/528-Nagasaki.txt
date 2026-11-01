@@ -1,7 +1,7 @@
 state = {
 	id = 528
 	name = "STATE_528" # North Kyushu
-	manpower = 6046000 # was 9069000
+	manpower = 4177325 # was 9069000
 
 	state_category = city # was large_city
 

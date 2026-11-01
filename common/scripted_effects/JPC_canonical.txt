@@ -1,0 +1,15 @@
+JPC_initialize = {
+ if = { limit = { NOT = { has_country_flag = JPC_initialized } }
+  set_country_flag = JPC_initialized
+  add_ideas = JPC_three_heads add_ideas = JPC_bad_loans
+  if = { limit = { owns_state = 327 } add_ideas = JPC_luzon }
+ }
+}
+JPC_issue_ultimatum = {
+ set_country_flag = JPI_ultimatum_due
+ if = { limit = { date > 1893.12.31 has_completed_focus = JPR_defence_budget has_completed_focus = JPC_garrison_accounts has_country_flag = JPI_tesla_ready has_country_flag = JPI_southern_ready country_exists = A01 NOT = { has_country_flag = pacific_trade_accord } NOT = { has_war_with = A01 } NOT = { has_country_flag = JPC_ultimatum_sent } A01 = { has_country_flag = JPS_opening_clock_v3 NOT = { has_country_flag = A01_expansion_resolved } } }
+  JPA_emergency_compromises_effect = yes
+  set_country_flag = JPC_ultimatum_sent
+  A01 = { country_event = { id = japan_canon.5 days = 1 } }
+ }
+}

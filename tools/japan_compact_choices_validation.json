@@ -1,0 +1,19 @@
+{
+  "focuses": 63,
+  "width": 22,
+  "last_row": 25,
+  "empty_rows": 0,
+  "maximum_direct_edge_rows": 5,
+  "industrial_routes": 32,
+  "industrial_focuses_per_route": 9,
+  "checks": [
+    "all 32 industrial routes reach both readiness flags",
+    "reciprocal exclusive choices",
+    "both logistics alternatives unlock professional logistics",
+    "no late budget wires or redundant full-height links",
+    "AI references existing focuses"
+  ],
+  "limitations": [
+    "Schematic and script checks; current revision not loaded in the game engine"
+  ]
+}

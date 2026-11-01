@@ -1,0 +1,3 @@
+on_actions = {
+ on_monthly = { effect = { if = { limit = { tag = A10 has_country_flag = A10W_path } A10W_monthly_effect = yes } } }
+}

@@ -1,0 +1,5 @@
+on_actions = {
+ on_startup = { effect = { every_country = { limit = { MNR_is_minor = yes } MNR_initialize = yes MNR_refresh = yes } } }
+ on_daily = { effect = { if = { limit = { MNR_is_minor = yes } MNR_initialize = yes MNR_refresh = yes } MNR_refresh_network = yes } }
+ on_monthly = { effect = { if = { limit = { MNR_is_minor = yes } MNR_monthly = yes } } }
+}

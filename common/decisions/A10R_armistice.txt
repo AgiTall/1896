@@ -1,0 +1,9 @@
+A10_japanese_settlement = {
+ A10R_request_defensive_armistice = {
+  icon = generic_political_discourse cost = 75 days_re_enable = 180
+  visible = { has_war_with = A03 date > 1894.1.1 }
+  available = { is_subject = no has_capitulated = no controls_state = 1084 has_war_support < 0.20 NOT = { has_country_flag = A10R_armistice_pending } }
+  complete_effect = { set_country_flag = { flag = A10R_armistice_pending days = 30 } A03 = { country_event = { id = A10R_congress.40 days = 2 } } }
+  ai_will_do = { factor = 1 }
+ }
+}

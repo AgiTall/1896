@@ -1,0 +1,18 @@
+ideas = { country = {
+ A10R_provisional_compact = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 stability_factor = 0.03 } }
+ A10R_common_treasury_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.15 consumer_goods_factor = -0.03 } }
+ A10R_arbitration = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.04 resistance_target = -0.05 } }
+ A10R_tenant_rights = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.04 recruitable_population_factor = 0.05 } }
+ A10R_confederal_covenant = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.15 stability_factor = 0.05 production_factory_efficiency_gain_factor = 0.05 } }
+ A10R_customs_union_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { production_speed_industrial_complex_factor = 0.06 consumer_goods_factor = -0.03 } }
+ A10R_republican_solidarity = { picture = generic_army_war_college removal_cost = -1 modifier = { army_org_factor = 0.04 stability_factor = 0.05 army_defence_factor = 0.04 } }
+ A10R_bill_of_rights_spirit = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.05 compliance_growth = 0.05 resistance_target = -0.05 } }
+ A10R_federal_citizenship = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { recruitable_population_factor = 0.08 political_power_gain = 0.10 } }
+ A10R_responsible_cabinet = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.20 research_speed_factor = 0.04 } }
+ A10R_fractured_council = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = -0.20 army_org_factor = -0.05 production_factory_efficiency_gain_factor = -0.05 } }
+ A10R_trusted_council = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { political_power_gain = 0.10 army_org_factor = 0.03 } }
+ A10R_emergency_concessions = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { consumer_goods_factor = 0.05 political_power_gain = -0.10 } }
+ A10R_reconstruction = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { production_speed_infrastructure_factor = 0.10 consumer_goods_factor = 0.05 } }
+ A10R_island_recovery = { picture = generic_pp_unity_bonus removal_cost = -1 modifier = { stability_factor = 0.05 production_speed_industrial_complex_factor = 0.05 monthly_population = 0.05 } }
+ A10R_bitter_armistice = { picture = generic_army_war_college removal_cost = -1 modifier = { war_support_factor = -0.10 stability_factor = -0.05 } }
+} }

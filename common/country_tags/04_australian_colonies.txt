@@ -1,0 +1,5 @@
+AVC = "countries/AVC.txt"
+AQL = "countries/AQL.txt"
+ASA = "countries/ASA.txt"
+AWA = "countries/AWA.txt"
+ATA = "countries/ATA.txt"

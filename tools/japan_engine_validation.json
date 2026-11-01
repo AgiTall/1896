@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-12",
+  "mode": "Explicit -debug game launch with the user’s configured mod list unchanged",
+  "active_mods": [
+    "[22:07:07][no_game_date][gameapplication.cpp:1518]: Active Mod: 1896",
+    "[22:07:07][no_game_date][gameapplication.cpp:1518]: Active Mod: Modifier Icons"
+  ],
+  "targeted_diagnostics": [],
+  "targeted_diagnostic_count": 0,
+  "load_exception": [
+    "[22:07:14][1893.01.01.12][gamelobby.cpp:1779]: Exception in: C:\\mnt\\gsg\\hoi4\\hoi4_merged\\clausewitz\\clausewitzlib\\remotefile.cpp, line: 238. Description: Failed allocate data buffer."
+  ],
+  "limitations": [
+    "No full campaign or combat balance playthrough",
+    "Global load exception previously documented in docs/LOAD_ISOLATION_RESULTS.md",
+    "Other base-content diagnostics remain outside this task",
+    "Final province-list refresh is statically checked; this report records the prior debug load"
+  ]
+}

@@ -1,0 +1,14 @@
+JMC_finish_pilots_effect = {
+ if = { limit = { JMC_can_finish_pilots = yes }
+  add_timed_idea = { idea = JMC_pilot_service days = 120 }
+  country_event = { id = jmc_operations.1 days = 1 }
+ }
+ clr_country_flag = JMC_pilots_in_progress
+}
+JMC_finish_transports_effect = {
+ if = { limit = { JMC_can_finish_transports = yes }
+  add_timed_idea = { idea = JMC_transport_service days = 120 }
+  country_event = { id = jmc_operations.2 days = 1 }
+ }
+ clr_country_flag = JMC_transports_in_progress
+}

@@ -6,15 +6,6 @@ on_actions = {
  on_daily = { effect = { A01 = { A01_update_spirit_categories = yes } } }
  on_monthly = { effect = { A01 = {
   if = { limit = {
-   has_country_flag = A01_royal_path_revealed
-   NOT = { has_country_flag = A01_constitutional_monarchy_path }
-   NOT = { has_country_flag = A01_royal_dictatorship_path }
-   NOT = { has_country_flag = A01_crown_petitions_cooldown }
-  }
-   set_country_flag = { flag = A01_crown_petitions_cooldown days = 90 }
-   country_event = { id = A01_crown.2 days = 1 }
-  }
-  if = { limit = {
    has_country_flag = A01_crown_balance_initialized
    power_balance_value = { id = A01_crown_council_balance value > 0.85 }
    NOT = { has_country_flag = A01_palace_crisis_seen }

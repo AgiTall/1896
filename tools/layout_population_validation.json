@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "population": 136000000,
+  "groups": {
+    "Other": 15000000,
+    "British Leviathan": 4000000,
+    "Japan": 48000000,
+    "Dutch East Indies": 42000000,
+    "Philippines": 8000000,
+    "Australia": 6000000,
+    "New Zealand": 1500000,
+    "Caribbean": 8000000,
+    "Ceylon": 1500000,
+    "Madagascar": 2000000
+  },
+  "focuses": {
+    "a01": 132,
+    "a03": 68
+  },
+  "overlaps": 0,
+  "upward_dependencies": 0,
+  "gameplay_preserved": "Japan: branching industry checked by validate_japan_industry.py; Netherlands unchanged by this pass",
+  "limitation": "Schematic preview, not an in-game screenshot; ZZZ territories outside the listed groups are excluded."
+}

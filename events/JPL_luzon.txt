@@ -1,0 +1,158 @@
+add_namespace = japan_luzon
+
+country_event = {
+ id = japan_luzon.1
+ title = japan_luzon.1.t
+ desc = japan_luzon.1.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPL_theater_active has_war_with = A10 }
+ option = {
+  name = japan_luzon.1.a
+  trigger = { has_political_power > 74 }
+  ai_chance = { factor = 70 }
+  add_political_power = -75
+  JPL_supply_allocation_effect = yes
+  add_to_variable = { JPL_garrison_fatigue = -5 }
+  JPL_refresh_effect = yes
+ }
+ option = {
+  name = japan_luzon.1.b
+  ai_chance = { factor = 30 }
+  add_to_variable = { JPL_garrison_burden = -5 }
+  add_to_variable = { JPL_garrison_fatigue = 8 }
+  add_timed_idea = { idea = JPL_perimeter_order days = 90 }
+  JPL_refresh_effect = yes
+ }
+}
+
+country_event = {
+ id = japan_luzon.2
+ title = japan_luzon.2.t
+ desc = japan_luzon.2.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPL_theater_active has_war_with = A10 check_variable = { JPL_garrison_burden > 59 } }
+ option = {
+  name = japan_luzon.2.a
+  trigger = { has_political_power > 59 }
+  ai_chance = { factor = 75 }
+  add_political_power = -60
+  JPL_escort_allocation_effect = yes
+  add_to_variable = { JPL_garrison_burden = -6 }
+  JPL_refresh_effect = yes
+ }
+ option = {
+  name = japan_luzon.2.b
+  ai_chance = { factor = 25 }
+  add_to_variable = { JPL_garrison_burden = -5 }
+  add_to_variable = { JPL_garrison_fatigue = 10 }
+  add_stability = -0.02
+  JPL_refresh_effect = yes
+ }
+}
+
+country_event = {
+ id = japan_luzon.3
+ title = japan_luzon.3.t
+ desc = japan_luzon.3.d
+ picture = GFX_1896_event_recruit
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPL_theater_active has_war_with = A10 check_variable = { JPL_garrison_fatigue > 54 } }
+ option = {
+  name = japan_luzon.3.a
+  trigger = { has_political_power > 74 }
+  ai_chance = { factor = 80 }
+  add_political_power = -75
+  JPL_hospital_allocation_effect = yes
+  add_to_variable = { JPL_garrison_fatigue = -5 }
+  JPL_refresh_effect = yes
+ }
+ option = {
+  name = japan_luzon.3.b
+  ai_chance = { factor = 20 }
+  add_to_variable = { JPL_garrison_fatigue = 8 }
+  add_stability = -0.03
+  add_war_support = 0.02
+  JPL_refresh_effect = yes
+ }
+}
+
+country_event = {
+ id = japan_luzon.4
+ title = japan_luzon.4.t
+ desc = japan_luzon.4.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPL_theater_active has_war_with = A10 NOT = { has_country_flag = JPL_accounts_corrected } }
+ option = {
+  name = japan_luzon.4.a
+  trigger = { has_political_power > 64 controls_state = 327 }
+  ai_chance = { factor = 80 }
+  add_political_power = -65
+  JPL_correct_accounts_effect = yes
+  add_stability = -0.01
+ }
+ option = {
+  name = japan_luzon.4.b
+  ai_chance = { factor = 20 }
+  add_to_variable = { JPL_garrison_burden = 5 }
+  add_stability = -0.02
+  JPL_refresh_effect = yes
+ }
+}
+
+country_event = {
+ id = japan_luzon.5
+ title = japan_luzon.5.t
+ desc = japan_luzon.5.d
+ picture = GFX_1896_event_talks
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPL_theater_active has_war_with = A10 NOT = { has_war_with = A01 } has_country_flag = A03_borneo_victory }
+ option = {
+  name = japan_luzon.5.a
+  trigger = { has_political_power > 59 }
+  ai_chance = { factor = 80 }
+  add_political_power = -60
+  JPL_escort_allocation_effect = yes
+  add_to_variable = { JPL_garrison_burden = -9 }
+  add_to_variable = { JPL_garrison_fatigue = -5 }
+  JPL_refresh_effect = yes
+ }
+ option = {
+  name = japan_luzon.5.b
+  ai_chance = { factor = 20 }
+  add_war_support = 0.03
+  add_to_variable = { JPL_garrison_fatigue = 8 }
+  add_to_variable = { JPL_garrison_burden = 5 }
+  JPL_refresh_effect = yes
+ }
+}
+
+country_event = {
+ id = japan_luzon.6
+ title = japan_luzon.6.t
+ desc = japan_luzon.6.d
+ picture = GFX_1896_event_unrest
+ is_triggered_only = yes
+ trigger = { tag = A03 has_country_flag = JPL_theater_active has_war_with = A10 NOT = { controls_state = 327 } }
+ option = {
+  name = japan_luzon.6.a
+  trigger = { has_political_power > 49 }
+  ai_chance = { factor = 75 }
+  add_political_power = -50
+  add_to_variable = { JPL_garrison_fatigue = -8 }
+  add_to_variable = { JPL_garrison_burden = 10 }
+  add_war_support = -0.03
+  JPF_add_war_expense_effect = yes
+  JPL_refresh_effect = yes
+ }
+ option = {
+  name = japan_luzon.6.b
+  ai_chance = { factor = 25 }
+  add_to_variable = { JPL_garrison_burden = -5 }
+  add_to_variable = { JPL_garrison_fatigue = 12 }
+  add_stability = -0.02
+  JPL_refresh_effect = yes
+ }
+}

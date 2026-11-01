@@ -1,0 +1,177 @@
+# Public hooks are safe to call repeatedly; unrelated systems never edit JPF variables.
+JPF_initialize_effect = {
+ if = { limit = { tag = A03 NOT = { has_country_flag = JPF_initialized } }
+  set_country_flag = JPF_initialized
+  set_variable = { JPF_debt_pressure = 62 }
+  set_variable = { JPF_budget_confidence = 34 }
+  set_variable = { JPF_monthly_service = 5 }
+  set_variable = { JPF_savings_used = 0 }
+  add_ideas = JPF_treasury_ledger
+  JPF_refresh_effect = yes
+  set_country_flag = JPF_opening_queued
+  country_event = { id = japan_finance.1 days = 5 }
+ }
+}
+JPF_refresh_effect = {
+ clamp_variable = { var = JPF_debt_pressure min = 0 max = 100 }
+ clamp_variable = { var = JPF_budget_confidence min = 0 max = 100 }
+ if = { limit = { NOT = { has_country_flag = JPF_finance_closed } }
+  if = { limit = { check_variable = { var = JPF_debt_pressure value = 75 compare = greater_than_or_equals } }
+   if = { limit = { NOT = { has_idea = JPF_debt_distress } } add_ideas = JPF_debt_distress }
+  }
+  else = { remove_ideas = JPF_debt_distress }
+  if = { limit = { check_variable = { var = JPF_budget_confidence value = 30 compare = less_than } }
+   if = { limit = { NOT = { has_idea = JPF_budget_mistrust } } add_ideas = JPF_budget_mistrust }
+  }
+  else = { remove_ideas = JPF_budget_mistrust }
+  if = { limit = { has_country_flag = JPF_accounts_reformed check_variable = { var = JPF_budget_confidence value = 65 compare = greater_than_or_equals } }
+   if = { limit = { NOT = { has_idea = JPF_verified_accounts } } add_ideas = JPF_verified_accounts }
+  }
+  else = { remove_ideas = JPF_verified_accounts }
+  if = { limit = { check_variable = { var = JPF_debt_pressure value = 75 compare = greater_than_or_equals } }
+   set_variable = { JPF_monthly_service = 8 }
+  }
+  else_if = { limit = { check_variable = { var = JPF_debt_pressure value = 50 compare = greater_than_or_equals } }
+   set_variable = { JPF_monthly_service = 5 }
+  }
+  else = { set_variable = { JPF_monthly_service = 3 } }
+ }
+}
+JPF_add_war_expense_effect = {
+ JPF_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPF_finance_closed } }
+  add_to_variable = { JPF_debt_pressure = 5 }
+  add_to_variable = { JPF_budget_confidence = -2 }
+  JPF_refresh_effect = yes
+ }
+}
+JPF_audit_savings_effect = {
+ JPF_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPF_finance_closed } check_variable = { var = JPF_savings_used value = 4 compare = less_than } }
+  add_to_variable = { JPF_savings_used = 1 }
+  add_to_variable = { JPF_debt_pressure = -3 }
+  add_to_variable = { JPF_budget_confidence = 1 }
+  JPF_refresh_effect = yes
+ }
+}
+JPF_reform_accounts_effect = {
+ JPF_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPF_accounts_reformed } }
+  set_country_flag = JPF_accounts_reformed
+  add_to_variable = { JPF_debt_pressure = -6 }
+  add_to_variable = { JPF_budget_confidence = 10 }
+  JPF_refresh_effect = yes
+ }
+}
+JPF_state_guarantees_effect = {
+ JPF_initialize_effect = yes
+ if = { limit = { has_country_flag = JPC_guarantees_signed NOT = { has_country_flag = JPA_finance_forced } NOT = { has_country_flag = JPF_guarantee_queued } }
+  set_country_flag = JPF_guarantee_queued
+  country_event = { id = japan_finance.2 days = 2 }
+ }
+}
+JPF_fleet_invoice_effect = {
+ if = { limit = { has_war_with = A01 NOT = { has_country_flag = JPF_invoice_queued } }
+  set_country_flag = JPF_invoice_queued
+  country_event = { id = japan_finance.3 days = 2 }
+ }
+}
+JPF_cash_crisis_effect = {
+ if = { limit = { NOT = { has_country_flag = JPF_crisis_cooldown } NOT = { has_country_flag = JPF_crisis_pending } }
+  set_country_flag = { flag = JPF_crisis_cooldown days = 180 }
+  set_country_flag = JPF_crisis_pending
+  country_event = { id = japan_finance.4 days = 1 }
+ }
+}
+JPF_credit_table_effect = {
+ if = { limit = { country_exists = A04 NOT = { has_war_with = A04 } NOT = { has_country_flag = JPF_credit_queued } has_completed_focus = JPI_japanese_terms }
+  set_country_flag = JPF_credit_queued
+  country_event = { id = japan_finance.5 days = 1 }
+ }
+}
+JPF_oil_settlement_effect = {
+ JPF_initialize_effect = yes
+ if = { limit = { has_country_flag = JPC_guarantees_signed has_country_flag = A03_borneo_victory NOT = { has_country_flag = JPF_guarantee_settled } }
+  set_country_flag = JPF_guarantee_settled
+  remove_ideas = JPC_guarantees
+  remove_ideas = JPC_bad_loans
+  add_ideas = JPC_monopoly
+  add_to_variable = { JPF_debt_pressure = -12 }
+  add_to_variable = { JPF_budget_confidence = 8 }
+  JPF_refresh_effect = yes
+  set_country_flag = JPF_royalty_queued
+  country_event = { id = japan_finance.6 days = 2 }
+ }
+}
+JPF_monthly_tick_effect = {
+ JPF_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPF_finance_closed } }
+  # This fixed service charge is paid in political capital, not invented currency.
+  JPF_refresh_effect = yes
+  if = { limit = { check_variable = { var = JPF_debt_pressure value = 75 compare = greater_than_or_equals } }
+   add_political_power = -8
+  }
+  else_if = { limit = { check_variable = { var = JPF_debt_pressure value = 50 compare = greater_than_or_equals } }
+   add_political_power = -5
+  }
+  else = { add_political_power = -3 }
+  if = { limit = { has_war_with = A01 }
+   add_to_variable = { JPF_debt_pressure = 3 }
+   add_to_variable = { JPF_budget_confidence = -2 }
+  }
+  else_if = { limit = { has_war = yes }
+   add_to_variable = { JPF_debt_pressure = 2 }
+   add_to_variable = { JPF_budget_confidence = -1 }
+  }
+  else = {
+   add_to_variable = { JPF_debt_pressure = -2 }
+   add_to_variable = { JPF_budget_confidence = 1 }
+  }
+  if = { limit = { has_country_flag = JPC_guarantees_signed NOT = { has_country_flag = JPF_guarantee_settled } }
+   add_to_variable = { JPF_debt_pressure = 1 }
+  }
+  if = { limit = { has_country_flag = JPF_accounts_reformed }
+   add_to_variable = { JPF_debt_pressure = -1 }
+   add_to_variable = { JPF_budget_confidence = 1 }
+  }
+  if = { limit = { has_country_flag = JPF_delivery_schedule } add_to_variable = { JPF_debt_pressure = -1 } }
+  if = { limit = { has_country_flag = JPF_royalty_office has_country_flag = JPF_guarantee_settled }
+   add_to_variable = { JPF_debt_pressure = -1 }
+  }
+  JPF_refresh_effect = yes
+  if = { limit = { OR = {
+   check_variable = { var = JPF_debt_pressure value = 95 compare = greater_than_or_equals }
+   check_variable = { var = JPF_budget_confidence value = 10 compare = less_than_or_equals }
+  } } JPF_cash_crisis_effect = yes }
+  else_if = { limit = {
+   check_variable = { var = JPF_debt_pressure value = 80 compare = greater_than_or_equals }
+   check_variable = { var = JPF_budget_confidence value = 40 compare = less_than }
+   NOT = { has_country_flag = JPF_crisis_cooldown }
+  } random = { chance = 25 JPF_cash_crisis_effect = yes } }
+ }
+}
+JPF_close_ledger_effect = {
+ set_country_flag = JPF_finance_closed
+ set_variable = { JPF_debt_pressure = 0 }
+ set_variable = { JPF_monthly_service = 0 }
+ remove_ideas = JPC_bad_loans remove_ideas = JPC_guarantees
+ remove_ideas = JPF_treasury_ledger
+ remove_ideas = JPF_debt_distress
+ remove_ideas = JPF_budget_mistrust
+ remove_ideas = JPF_verified_accounts
+ remove_ideas = JPF_cash_freeze
+ remove_ideas = JPF_delivery_arrears
+ remove_ideas = JPF_families_arrears
+ add_stability = 0.03
+}
+
+JPF_defeat_restructuring_effect = {
+ if = { limit = { has_country_flag = A03_borneo_defeat NOT = { has_country_flag = JPF_defeat_restructured } }
+  set_country_flag = JPF_defeat_restructured
+  add_to_variable = { JPF_debt_pressure = -20 }
+  add_to_variable = { JPF_budget_confidence = 5 }
+  add_stability = -0.04
+  add_timed_idea = { idea = JPF_civilian_retrenchment days = 180 }
+  JPF_refresh_effect = yes
+ }
+}

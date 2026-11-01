@@ -1,0 +1,65 @@
+add_namespace = jmc_maritime
+
+country_event = {
+ id = jmc_maritime.1
+ title = jmc_maritime.1.t
+ desc = jmc_maritime.1.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ trigger = { JMC_can_answer_register = yes }
+ option = {
+  name = jmc_maritime.1.merchant
+  ai_chance = { factor = 60 }
+  JMC_register_merchant_outcome_effect = yes
+ }
+ option = {
+  name = jmc_maritime.1.navy
+  ai_chance = { factor = 40 }
+  JMC_register_navy_outcome_effect = yes
+ }
+}
+country_event = {
+ id = jmc_maritime.2
+ title = jmc_maritime.2.t
+ desc = jmc_maritime.2.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A03 exists = yes has_country_flag = JMC_repairs_done }
+ option = { name = jmc_maritime.2.a }
+}
+country_event = {
+ id = jmc_maritime.3
+ title = jmc_maritime.3.t
+ desc = jmc_maritime.3.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A03 exists = yes has_country_flag = JMC_coaling_done }
+ option = { name = jmc_maritime.3.a }
+}
+country_event = {
+ id = jmc_maritime.4
+ title = jmc_maritime.4.t
+ desc = jmc_maritime.4.d
+ picture = GFX_1896_event_navy
+ is_triggered_only = yes
+ trigger = { tag = A03 exists = yes has_country_flag = JMC_drills_done }
+ option = { name = jmc_maritime.4.a }
+}
+country_event = {
+ id = jmc_maritime.5
+ title = jmc_maritime.5.t
+ desc = jmc_maritime.5.d
+ picture = GFX_1896_event_council
+ is_triggered_only = yes
+ trigger = { JMC_can_choose_course = yes }
+ option = {
+  name = jmc_maritime.5.merchant
+  ai_chance = { factor = 70 }
+  JMC_choose_merchant_course_effect = yes
+ }
+ option = {
+  name = jmc_maritime.5.expedition
+  ai_chance = { factor = 30 }
+  JMC_choose_expedition_course_effect = yes
+ }
+}

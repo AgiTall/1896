@@ -18,8 +18,8 @@ state = {
    1652
    10
   }
-  owner = A07
-  add_core_of = A07
+  owner = AWA
+  add_core_of = AWA
  }
  provinces = {
   1498
@@ -43,7 +43,7 @@ state = {
   10983
   12323
  }
- manpower = 310000
+ manpower = 275270
  buildings_max_level_factor = 1.000
  state_category = pastoral
  local_supplies = 0.000

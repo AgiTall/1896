@@ -1,4 +1,4 @@
-capital = 1058
+﻿capital = 1058
 oob = "A01_1877"
 
 recruit_character = A01_ludolf_sloot_van_de_beele
@@ -6,10 +6,10 @@ recruit_character = A01_ludolf_sloot_van_de_beele
 set_research_slots = 3
 set_technology = {
 	infantry_weapons = 1
-	gw_artillery = 1
+	early_artillery = 1
 	tech_support = 1
 	marines = 1
-	early_ship_hull_submarine = 1
+
 	early_ship_hull_light = 1
 	early_ship_hull_cruiser = 1
 }
@@ -25,19 +25,19 @@ set_country_flag = A01_colonial_constraints_initialized
 if = {
 	limit = { NOT = { has_dlc = "By Blood Alone" } }
 	set_technology = {
-		early_fighter = 1
-		early_bomber = 1
+
+
 	}
 }
 
 if = {
 	limit = { NOT = { has_dlc = "No Step Back" } }
-	set_technology = { gwtank = 1 }
+	set_technology = {  }
 }
 
 if = {
 	limit = { has_dlc = "No Step Back" }
-	set_technology = { gwtank_chassis = 1 }
+	set_technology = {  }
 }
 
 if = {
@@ -83,14 +83,14 @@ set_convoys = 50
 
 if = {
  limit = { has_dlc = "Man the Guns" }
- set_technology = { early_ship_hull_light = 1 early_ship_hull_cruiser = 1 basic_battery = 1 basic_torpedo = 1 basic_light_battery = 1  }
+ set_technology = { early_ship_hull_light = 1 early_ship_hull_cruiser = 1 basic_battery = 1 basic_torpedo = 1   }
  create_equipment_variant = {
   name = "Pacific Escort" type = ship_hull_light_1 parent_version = 0
-  modules = { fixed_ship_battery_slot = ship_light_battery_1 fixed_ship_anti_air_slot = empty fixed_ship_fire_control_system_slot = ship_fire_control_system_0 fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty }
+  modules = { fixed_ship_battery_slot = ship_light_battery_1   fixed_ship_radar_slot = empty fixed_ship_engine_slot = light_ship_engine_1 fixed_ship_torpedo_slot = ship_torpedo_1 mid_1_custom_slot = empty rear_1_custom_slot = empty }
  }
  create_equipment_variant = {
   name = "Pacific Cruiser" type = ship_hull_cruiser_1 parent_version = 0
-  modules = { fixed_ship_battery_slot = ship_light_medium_battery_1 fixed_ship_anti_air_slot = empty fixed_ship_fire_control_system_slot = ship_fire_control_system_0 fixed_ship_radar_slot = empty fixed_ship_engine_slot = cruiser_ship_engine_1 fixed_ship_armor_slot = ship_armor_cruiser_1 mid_1_custom_slot = ship_torpedo_1 mid_2_custom_slot = empty rear_1_custom_slot = empty }
+  modules = { fixed_ship_battery_slot = ship_light_medium_battery_1  fixed_ship_fire_control_system_slot = ship_fire_control_system_0  fixed_ship_engine_slot = cruiser_ship_engine_1 fixed_ship_armor_slot = ship_armor_protected_cruiser_1 mid_1_custom_slot = ship_torpedo_1  rear_1_custom_slot = empty }
  }
  set_naval_oob = "A01_pacific_naval"
 
@@ -119,3 +119,68 @@ recruit_character = A01_postwar_conservative
 recruit_character = A01_postwar_indonesian
 
 promote_character = A01_ludolf_sloot_van_de_beele
+
+if = { limit = { has_dlc = "Man the Guns" } set_technology = { basic_coal_engine = 1 } }
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_technology = {
+	basic_railways = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = A01 }
+# END 1893 START RESEARCH AND TRAINS
+
+# BEGIN MAJOR RESEARCH PROFILE 1893
+# Колониальная армия, сапёры, тропическая разведка и паровой флот; промышленная модернизация ещё впереди.
+set_technology = {
+	basic_field_gun = 1
+	early_artillery = 1
+	early_machine_tools = 1
+	excavation1 = 1
+	machine_guns = 1
+	marines = 1
+	narrow_gauge_railway = 1
+	powder_type_b = 1
+	tech_engineers = 1
+	tech_logistics_company = 1
+	tech_recon = 1
+	tech_support = 1
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_battery = 1
+		basic_coal_engine = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_light = 1
+		early_torpedo_tubes = 1
+		gunboat_ship_hull_light = 1
+		ironclad_artillery = 1
+		ironclad_coal_engine = 1
+		ironclad_ship_hull_heavy = 1
+		mtg_transport = 1
+		torpedo_boat_ship_hull_light = 1
+		victorian_ship_hull_cruiser = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			transport = 1
+		}
+	}
+}
+# END MAJOR RESEARCH PROFILE 1893
+
+# BEGIN EDITABLE COMMANDER PLACEHOLDERS
+recruit_character = A01_placeholder_marshal_01
+recruit_character = A01_placeholder_general_01
+recruit_character = A01_placeholder_general_02
+recruit_character = A01_placeholder_general_03
+recruit_character = A01_placeholder_general_04
+recruit_character = A01_placeholder_general_05
+# END EDITABLE COMMANDER PLACEHOLDERS

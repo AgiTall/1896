@@ -1,0 +1,52 @@
+A10R_initialize = {
+ if = { limit = { NOT = { has_country_flag = A10R_initialized } }
+  set_country_flag = A10R_initialized
+  set_variable = { A10R_cohesion = 45 }
+  set_variable = { A10R_federal_votes = 0 }
+  A10D_initialize = yes
+  A10M_initialize = yes
+ }
+}
+A10R_refresh = {
+ clamp_variable = { var = A10R_cohesion min = 0 max = 100 }
+ if = { limit = { A10R_republican_government = yes }
+  if = { limit = { check_variable = { A10R_cohesion < 35 } }
+   add_ideas = A10R_fractured_council
+  } else = { remove_ideas = A10R_fractured_council }
+  if = { limit = { check_variable = { A10R_cohesion > 74 } }
+   add_ideas = A10R_trusted_council
+  } else = { remove_ideas = A10R_trusted_council }
+ } else = { remove_ideas = A10R_fractured_council remove_ideas = A10R_trusted_council }
+}
+A10R_monthly = {
+ if = { limit = { A10R_republican_government = yes }
+  if = { limit = { has_war = yes }
+   add_to_variable = { A10R_cohesion = -2 }
+  } else = { add_to_variable = { A10R_cohesion = 1 } }
+  if = { limit = { has_idea = A10R_common_treasury_spirit } add_to_variable = { A10R_cohesion = 1 } }
+  if = { limit = { has_country_flag = A10R_federal_transition NOT = { has_completed_focus = A10R_federal_parliament } }
+   add_to_variable = { A10R_cohesion = -1 }
+  }
+  if = { limit = { check_variable = { A10R_cohesion < 25 } NOT = { has_country_flag = A10R_council_crisis_cooldown } }
+   set_country_flag = { flag = A10R_council_crisis_cooldown days = 120 }
+   country_event = { id = A10R_congress.10 days = 1 }
+  }
+ }
+ A10R_refresh = yes
+}
+A10R_civilian_government = {
+ create_country_leader = { name = A10R_federal_presidency_name desc = A10R_federal_presidency_desc picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds" ideology = liberalism expire = "1970.1.1" }
+ set_popularities = { democratic = 60 neutrality = 35 fascism = 5 communism = 0 }
+ set_politics = { ruling_party = democratic elections_allowed = yes election_frequency = 48 }
+}
+A10R_confederal_government = {
+ create_country_leader = { name = A10R_confederal_presidency_name desc = A10R_confederal_presidency_desc picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds" ideology = oligarchism expire = "1970.1.1" }
+ set_politics = { ruling_party = neutrality elections_allowed = no }
+}
+A10R_rebuild_harbour = {
+ random_owned_controlled_state = {
+  limit = { A10R_archipelago_state_trigger = yes is_coastal = yes }
+  add_extra_state_shared_building_slots = 1
+  add_building_construction = { type = dockyard level = 1 instant_build = yes }
+ }
+}

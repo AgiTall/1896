@@ -1,0 +1,31 @@
+{
+  "monthly_scenarios": 16,
+  "integer_cohesion_boundaries": 9,
+  "ratifications": 9,
+  "guarded_annexation_failures": 4,
+  "quorum_populations": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    9
+  ],
+  "pending_local_consultations": [],
+  "checks": [
+    "country dispatcher calls A10 once",
+    "war/treasury/transition/parliament effects",
+    "crisis cooldown expires",
+    "cohesion bounds and tier spirits",
+    "nine successful and refused votes",
+    "idempotent votes",
+    "separate consent trigger",
+    "foreign sovereignty and occupation preserved",
+    "federation quorum",
+    "nine local consultations",
+    "60 percent local-vote boundary",
+    "consent and equal rights protect legacy cores",
+    "80 percent integration boundary"
+  ],
+  "engine_campaign_tested": false
+}

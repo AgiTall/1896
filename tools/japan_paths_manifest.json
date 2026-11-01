@@ -1,0 +1,22 @@
+{
+  "focuses": [
+    "JPX_sea",
+    "JPX_sea_institution",
+    "JPX_land",
+    "JPX_land_institution",
+    "JPX_trade",
+    "JPX_trade_institution",
+    "JPX_kami",
+    "JPX_kami_institution",
+    "JPX_throne",
+    "JPX_throne_institution"
+  ],
+  "events": [
+    "japan_paths.1",
+    "japan_paths.2",
+    "japan_paths.3",
+    "japan_paths.4",
+    "japan_paths.5"
+  ],
+  "scope": "Maritime route opens the main campaign; four alternative prologues; war clock unchanged."
+}

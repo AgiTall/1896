@@ -1,0 +1,97 @@
+JMC_maritime_programme = {
+ JMC_port_register = {
+  icon = generic_political_discourse
+  cost = 35
+  days_remove = 21
+  fire_only_once = no
+  visible = { has_completed_focus = JSM_steel NOT = { has_country_flag = JMC_register_done } }
+  available = { JMC_can_start_register = yes }
+  cancel_trigger = { NOT = { JMC_register_requirements = yes } }
+  cancel_if_not_visible = yes
+  complete_effect = { if = { limit = { JMC_can_start_register = yes } set_country_flag = JMC_register_in_progress } }
+  cancel_effect = { clr_country_flag = JMC_register_in_progress }
+  remove_effect = { JMC_finish_register_effect = yes }
+  ai_will_do = { base = 4 }
+ }
+ JMC_repair_contracts = {
+  icon = generic_naval
+  cost = 50
+  days_remove = 35
+  fire_only_once = no
+  visible = { has_country_flag = JMC_register_done has_completed_focus = JSM_workshops NOT = { has_country_flag = JMC_repairs_done } }
+  available = { JMC_can_start_repairs = yes }
+  cancel_trigger = { NOT = { JMC_repairs_requirements = yes } }
+  cancel_if_not_visible = yes
+  complete_effect = { if = { limit = { JMC_can_start_repairs = yes } set_country_flag = JMC_repairs_in_progress } }
+  cancel_effect = { clr_country_flag = JMC_repairs_in_progress }
+  remove_effect = { JMC_finish_repairs_effect = yes }
+  ai_will_do = { base = 4 }
+ }
+ JMC_coaling_stations = {
+  icon = generic_naval
+  cost = 60
+  days_remove = 35
+  fire_only_once = no
+  visible = { has_country_flag = JMC_register_done has_completed_focus = JSM_shipyards NOT = { has_country_flag = JMC_coaling_done } }
+  available = { JMC_can_start_coaling = yes }
+  cancel_trigger = { NOT = { JMC_coaling_requirements = yes } }
+  cancel_if_not_visible = yes
+  complete_effect = {
+   if = { limit = { JMC_can_start_coaling = yes }
+    set_country_flag = JMC_coaling_in_progress
+    add_equipment_to_stockpile = { type = support_equipment amount = -50 }
+   }
+  }
+  cancel_effect = { clr_country_flag = JMC_coaling_in_progress }
+  remove_effect = { JMC_finish_coaling_effect = yes }
+  ai_will_do = { base = 4 }
+ }
+ JMC_escort_rehearsal = {
+  icon = generic_naval
+  cost = 40
+  days_remove = 21
+  fire_only_once = no
+  visible = { has_country_flag = JMC_repairs_done has_country_flag = JMC_coaling_done NOT = { has_country_flag = JMC_drills_done } }
+  available = { JMC_can_start_drills = yes }
+  cancel_trigger = { NOT = { JMC_drills_requirements = yes } }
+  cancel_if_not_visible = yes
+  complete_effect = { if = { limit = { JMC_can_start_drills = yes } set_country_flag = JMC_drills_in_progress } }
+  cancel_effect = { clr_country_flag = JMC_drills_in_progress }
+  remove_effect = { JMC_finish_drills_effect = yes }
+  ai_will_do = { base = 4 }
+ }
+ JMC_sailing_conference = {
+  icon = generic_political_discourse
+  cost = 50
+  days_remove = 14
+  fire_only_once = no
+  visible = { has_country_flag = JMC_register_done has_country_flag = JMC_repairs_done has_country_flag = JMC_coaling_done has_country_flag = JMC_drills_done has_completed_focus = JSM_council NOT = { has_country_flag = JMC_programme_complete } }
+  available = { JMC_can_start_conference = yes }
+  cancel_trigger = { NOT = { JMC_conference_requirements = yes } }
+  cancel_if_not_visible = yes
+  complete_effect = { if = { limit = { JMC_can_start_conference = yes } set_country_flag = JMC_conference_in_progress } }
+  cancel_effect = { clr_country_flag = JMC_conference_in_progress }
+  remove_effect = { JMC_finish_programme_effect = yes }
+  ai_will_do = { base = 5 }
+ }
+ JMC_replenish_reserves = {
+  icon = generic_naval
+  cost = 45
+  days_remove = 30
+  days_re_enable = 120
+  fire_only_once = no
+  visible = { has_country_flag = JMC_programme_complete }
+  available = { JMC_can_start_reserves = yes }
+  cancel_trigger = { NOT = { JMC_can_manage_programme = yes has_country_flag = JMC_programme_complete } }
+  cancel_if_not_visible = yes
+  complete_effect = {
+   if = { limit = { JMC_can_start_reserves = yes }
+    set_country_flag = JMC_reserves_in_progress
+    add_equipment_to_stockpile = { type = support_equipment amount = -25 }
+   }
+  }
+  cancel_effect = { clr_country_flag = JMC_reserves_in_progress }
+  remove_effect = { JMC_replenish_reserves_effect = yes }
+  ai_will_do = { base = 2 }
+ }
+}

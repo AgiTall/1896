@@ -1,0 +1,8 @@
+spriteTypes = {
+spriteType = { name = "GFX_goal_jpc_north" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_north.dds" }
+spriteType = { name = "GFX_goal_jpc_north_shine" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_north.dds" effectFile = "gfx/FX/buttonstate.lua" }
+spriteType = { name = "GFX_idea_jpc_north" legacy_lazy_load = no texturefile = "gfx/interface/ideas/jpc_north.dds" }
+spriteType = { name = "GFX_goal_jpc_luzon" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_luzon.dds" }
+spriteType = { name = "GFX_goal_jpc_luzon_shine" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_luzon.dds" effectFile = "gfx/FX/buttonstate.lua" }
+spriteType = { name = "GFX_idea_jpc_luzon" legacy_lazy_load = no texturefile = "gfx/interface/ideas/jpc_luzon.dds" }
+}

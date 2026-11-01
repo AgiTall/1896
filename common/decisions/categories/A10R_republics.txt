@@ -1,0 +1,2 @@
+A10R_council = { icon = generic_political_actions allowed = { tag = A10 } visible = { A10R_republican_government = yes } }
+A10R_federal_ratification = { icon = generic_political_actions allowed = { tag = A10 } visible = { has_country_flag = A10R_federal_transition A10R_republican_government = yes } }

@@ -1,0 +1,76 @@
+{
+  "existing_missing_legacy_events": [
+    "A03_imperial.1",
+    "A03_imperial.2",
+    "A03_imperial.3"
+  ],
+  "focuses": 63,
+  "roots": [
+    "A03_imperial_council"
+  ],
+  "spirits": 15,
+  "events": 22,
+  "scenarios": [
+    {
+      "missing_industry": "deadline deferred; towers alone insufficient; southern order resumes once"
+    },
+    {
+      "missing_politics": "industry cannot bypass budget or Manila; completion resumes once"
+    },
+    {
+      "oil_before_countdown": "30 days earlier, applied once after mission activation"
+    },
+    {
+      "foothold": true,
+      "wars_started": [
+        [
+          "A10",
+          "A03",
+          "1893-04-02"
+        ],
+        [
+          "A03",
+          "A01",
+          "1894-01-02"
+        ]
+      ],
+      "outcome": "Japanese treaty",
+      "repeat_safe": true
+    },
+    {
+      "foothold": false,
+      "wars_started": [
+        [
+          "A10",
+          "A03",
+          "1893-04-02"
+        ],
+        [
+          "A03",
+          "A01",
+          "1894-01-02"
+        ]
+      ],
+      "outcome": "Dutch victory",
+      "repeat_safe": true
+    },
+    {
+      "three_accelerations": "45 days earlier; war 1893-11-18; ultimatum once"
+    },
+    {
+      "trade_accord": "both clocks cancelled; no invasion"
+    },
+    {
+      "British note": "rejected",
+      "British war": "starts; survives Borneo treaty"
+    },
+    {
+      "snapshot_resume": "same events, wars, flags and ownership as uninterrupted model"
+    }
+  ],
+  "optional_countries_absent": "passed",
+  "limitations": [
+    "Bounded script model; no combat or focus AI simulation",
+    "Engine loading and a complete campaign are separate checks"
+  ]
+}

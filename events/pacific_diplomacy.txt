@@ -16,6 +16,7 @@ country_event = {
  is_triggered_only = yes
  option = {
   name = pacific.1.a
+  trigger = { always = no }
   ai_chance = {
    factor = 0
   }

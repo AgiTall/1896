@@ -1,0 +1,4 @@
+add_namespace = japan_agency
+country_event = { id = japan_agency.1 title = japan_agency.1.t desc = japan_agency.1.d picture = GFX_jpc_council is_triggered_only = yes trigger = { tag = A03 } option = { name = japan_agency.1.a ai_chance = { factor = 100 } } }
+country_event = { id = japan_agency.2 title = japan_agency.2.t desc = japan_agency.2.d picture = GFX_jpc_council is_triggered_only = yes trigger = { tag = A03 } option = { name = japan_agency.2.a ai_chance = { factor = 100 } } }
+country_event = { id = japan_agency.3 title = japan_agency.3.t desc = japan_agency.3.d picture = GFX_jpc_council is_triggered_only = yes trigger = { tag = A03 } option = { name = japan_agency.3.a ai_chance = { factor = 100 } } }

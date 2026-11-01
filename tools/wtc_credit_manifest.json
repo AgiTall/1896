@@ -1,0 +1,14 @@
+{
+  "debt_range": [
+    0,
+    100
+  ],
+  "demands": ">70",
+  "sanctions": ">90",
+  "local_coup": 100,
+  "annexation": false,
+  "borrowers": "every existing country except A04",
+  "events": 9,
+  "ideas": 12,
+  "Dutch_openings": 2
+}

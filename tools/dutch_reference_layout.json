@@ -1,0 +1,535 @@
+{
+  "file": "common/national_focus/a01_focus.txt",
+  "sha256": "bca83569c41d35117a2a0299d2767af31953af82e1bf727d9285e9b52fb8bbb9",
+  "positions": {
+    "A01_constitution": [
+      16,
+      0
+    ],
+    "A01_wtc_oil_and_rubber_offer": [
+      3,
+      16
+    ],
+    "A01_lone_wolf_path": [
+      16,
+      2
+    ],
+    "A01_strengthen_ludolfs_power": [
+      9,
+      3
+    ],
+    "A01_last_chance_to_negotiate": [
+      15,
+      4
+    ],
+    "A01_admirals_council_coup": [
+      23,
+      3
+    ],
+    "A01_direct_naval_rule": [
+      23,
+      5
+    ],
+    "A01_build_bornean_fortifications": [
+      15,
+      6
+    ],
+    "A01_improve_bornean_fortifications": [
+      15,
+      9
+    ],
+    "A01_open_papuan_road": [
+      13,
+      10
+    ],
+    "A01_fortify_australian_frontier": [
+      17,
+      10
+    ],
+    "A01_java_development": [
+      3,
+      8
+    ],
+    "A01_sumatran_railways": [
+      5,
+      9
+    ],
+    "A01_surabaya_arsenal": [
+      7,
+      8
+    ],
+    "A01_batavia_docks": [
+      1,
+      9
+    ],
+    "A01_rubber_processing": [
+      5,
+      10
+    ],
+    "A01_local_rifles": [
+      7,
+      9
+    ],
+    "A01_technical_college": [
+      3,
+      11
+    ],
+    "A01_knil_reform": [
+      9,
+      5
+    ],
+    "A01_island_garrisons": [
+      7,
+      6
+    ],
+    "A01_marine_brigades": [
+      11,
+      6
+    ],
+    "A01_jungle_supply": [
+      9,
+      7
+    ],
+    "A01_coastal_watch": [
+      11,
+      8
+    ],
+    "A01_admiralty_shipyards": [
+      21,
+      6
+    ],
+    "A01_naval_general_staff": [
+      21,
+      7
+    ],
+    "A01_military_industry": [
+      25,
+      6
+    ],
+    "A01_defence_in_depth": [
+      25,
+      7
+    ],
+    "A01_archipelago_command": [
+      23,
+      8
+    ],
+    "A01_wartime_industry": [
+      15,
+      11
+    ],
+    "A01_secure_sea_lanes": [
+      11,
+      9
+    ],
+    "A01_pacific_settlement": [
+      15,
+      13
+    ],
+    "A01_admiralty_diplomacy": [
+      23,
+      9
+    ],
+    "A01_reconstruction_commission": [
+      3,
+      17
+    ],
+    "A01_autonomous_sultanates": [
+      20,
+      17
+    ],
+    "A01_british_raj_model": [
+      24,
+      18
+    ],
+    "A01_sultanates_language_guarantees": [
+      24,
+      19
+    ],
+    "A01_northern_memory": [
+      30,
+      20
+    ],
+    "A01_fleet_of_recovery": [
+      32,
+      22
+    ],
+    "A01_ludolf_survives": [
+      13,
+      15
+    ],
+    "A01_negotiated_resignation": [
+      32,
+      15
+    ],
+    "A01_review_borneo_convention": [
+      32,
+      38
+    ],
+    "A01_dutch_literacy": [
+      3,
+      5
+    ],
+    "A01_rural_labour_duty": [
+      3,
+      6
+    ],
+    "A01_factory_resettlement": [
+      3,
+      7
+    ],
+    "A01_production_standardisation": [
+      3,
+      12
+    ],
+    "A01_java_steam_power": [
+      3,
+      13
+    ],
+    "A01_local_nco_schools": [
+      9,
+      10
+    ],
+    "A01_direct_rivalry": [
+      17,
+      4
+    ],
+    "A01_state_loan": [
+      13,
+      7
+    ],
+    "A01_request_fortification_project": [
+      17,
+      7
+    ],
+    "A01_own_fortifications": [
+      13,
+      8
+    ],
+    "A01_implement_fortification_project": [
+      17,
+      8
+    ],
+    "A01_equal_citizenship": [
+      20,
+      19
+    ],
+    "A01_elected_civil_service": [
+      20,
+      27
+    ],
+    "A01_democratic_federation": [
+      20,
+      28
+    ],
+    "A01_purge_civil_service": [
+      30,
+      16
+    ],
+    "A01_purge_officer_corps": [
+      34,
+      16
+    ],
+    "A01_military_state": [
+      32,
+      19
+    ],
+    "A01_crown_above_factions": [
+      60,
+      16
+    ],
+    "A01_royal_island_charter": [
+      60,
+      17
+    ],
+    "A01_wilhelmina_comes_of_age": [
+      60,
+      21
+    ],
+    "A01_royal_constitution": [
+      56,
+      27
+    ],
+    "A01_island_representation": [
+      20,
+      18
+    ],
+    "A01_public_recovery_fund": [
+      1,
+      19
+    ],
+    "A01_wtc_recovery_agreement": [
+      5,
+      19
+    ],
+    "A01_electoral_commission": [
+      18,
+      30
+    ],
+    "A01_postwar_admiralty_shipyards": [
+      34,
+      20
+    ],
+    "A01_crown_island_council": [
+      52,
+      18
+    ],
+    "A01_crown_legal_guarantees": [
+      60,
+      18
+    ],
+    "A01_repair_ports": [
+      1,
+      18
+    ],
+    "A01_families_compensation": [
+      5,
+      18
+    ],
+    "A01_wtc_settlement": [
+      5,
+      21
+    ],
+    "A01_domestic_debt_redemption": [
+      1,
+      21
+    ],
+    "A01_recovery_investment": [
+      3,
+      23
+    ],
+    "A01_demobilise_colonial_army": [
+      10,
+      17
+    ],
+    "A01_joint_officer_schools": [
+      8,
+      18
+    ],
+    "A01_blame_the_military": [
+      14,
+      17
+    ],
+    "A01_civilian_defence_ministry": [
+      12,
+      18
+    ],
+    "A01_federal_defence_command": [
+      8,
+      20
+    ],
+    "A01_golden_bridges": [
+      12,
+      19
+    ],
+    "A01_town_hall_crisis": [
+      10,
+      21
+    ],
+    "A01_general_amnesty": [
+      8,
+      23
+    ],
+    "A01_ludolf_retirement_navy": [
+      12,
+      23
+    ],
+    "A01_abolish_admirals_council": [
+      16,
+      24
+    ],
+    "A01_federal_constitution": [
+      20,
+      26
+    ],
+    "A01_legalise_federal_parties": [
+      22,
+      30
+    ],
+    "A01_first_federal_election": [
+      20,
+      31
+    ],
+    "A01_liberal_victory": [
+      16,
+      33
+    ],
+    "A01_conservative_victory": [
+      20,
+      33
+    ],
+    "A01_peoples_party_victory": [
+      24,
+      33
+    ],
+    "A01_emma_and_daughter": [
+      60,
+      19
+    ],
+    "A01_royal_guard_corps": [
+      68,
+      18
+    ],
+    "A01_royal_naval_advisors": [
+      68,
+      20
+    ],
+    "A01_island_delegation": [
+      52,
+      19
+    ],
+    "A01_royal_dictatorship": [
+      64,
+      27
+    ],
+    "A01_crown_absolute_rule": [
+      64,
+      28
+    ],
+    "A01_royal_secret_police": [
+      68,
+      28
+    ],
+    "A01_crown_militarism": [
+      64,
+      33
+    ],
+    "A01_crown_parliament": [
+      56,
+      28
+    ],
+    "A01_crown_commonwealth": [
+      56,
+      33
+    ],
+    "A01_summon_grand_council": [
+      60,
+      22
+    ],
+    "A01_settle_crown_crisis": [
+      60,
+      26
+    ],
+    "A01_sultans_at_the_palace": [
+      52,
+      20
+    ],
+    "A01_indonesian_petition": [
+      52,
+      21
+    ],
+    "A01_equal_subjects": [
+      50,
+      23
+    ],
+    "A01_princely_guarantees": [
+      54,
+      23
+    ],
+    "A01_island_compact": [
+      52,
+      25
+    ],
+    "A01_royal_commission": [
+      60,
+      23
+    ],
+    "A01_win_the_captains": [
+      68,
+      23
+    ],
+    "A01_admirals_on_trial": [
+      58,
+      24
+    ],
+    "A01_purge_the_admiralty": [
+      62,
+      24
+    ],
+    "A01_admirals_retirement": [
+      66,
+      24
+    ],
+    "A01_civilian_admiralty": [
+      60,
+      25
+    ],
+    "A01_guard_academy": [
+      72,
+      19
+    ],
+    "A01_royal_academies": [
+      72,
+      20
+    ],
+    "A01_capital_of_two_worlds": [
+      72,
+      21
+    ],
+    "A01_electoral_act": [
+      56,
+      29
+    ],
+    "A01_first_royal_election": [
+      56,
+      30
+    ],
+    "A01_responsible_cabinet": [
+      56,
+      31
+    ],
+    "A01_reform_procurement": [
+      64,
+      32
+    ],
+    "A01_island_officer_commissions": [
+      48,
+      27
+    ],
+    "A01_royal_development_bank": [
+      48,
+      29
+    ],
+    "A01_crown_provincial_diets": [
+      62,
+      29
+    ],
+    "A01_renew_the_fleet": [
+      68,
+      30
+    ],
+    "A01_open_seas_kingdom": [
+      50,
+      35
+    ],
+    "A01_homeland_in_exile": [
+      56,
+      35
+    ],
+    "A01_archipelago_great_power": [
+      62,
+      35
+    ],
+    "A01_cabinet_open_budget": [
+      52,
+      32
+    ],
+    "A01_cabinet_princely_budget": [
+      56,
+      32
+    ],
+    "A01_cabinet_island_schools": [
+      60,
+      32
+    ],
+    "A01_european_democratic_unity": [
+      -8,
+      2
+    ],
+    "A01_wtc_strengthening_path": [
+      48,
+      2
+    ]
+  },
+  "source": "Saved 132-focus source plus its authored layout_population_20261013 coordinate revision. No gameplay replacement."
+}

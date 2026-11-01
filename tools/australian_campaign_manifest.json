@@ -1,0 +1,1432 @@
+{
+  "AVC": [
+    {
+      "id": "AUC_AVC_melbourne",
+      "x": 20,
+      "y": 0,
+      "parents": []
+    },
+    {
+      "id": "AUC_AVC_foundries",
+      "x": 0,
+      "y": 3,
+      "parents": [
+        "AUC_AVC_public_works",
+        "AUC_AVC_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_AVC_tariffs",
+      "x": 8,
+      "y": 3,
+      "parents": [
+        "AUC_AVC_public_works",
+        "AUC_AVC_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_AVC_dockyards",
+      "x": 4,
+      "y": 4,
+      "parents": [
+        "AUC_AVC_foundries",
+        "AUC_AVC_tariffs"
+      ]
+    },
+    {
+      "id": "AUC_AVC_rifles",
+      "x": 28,
+      "y": 2,
+      "parents": [
+        "AUC_AVC_muster"
+      ]
+    },
+    {
+      "id": "AUC_AVC_harbour",
+      "x": 28,
+      "y": 4,
+      "parents": [
+        "AUC_AVC_rifles"
+      ]
+    },
+    {
+      "id": "AUC_AVC_school",
+      "x": 36,
+      "y": 4,
+      "parents": [
+        "AUC_AVC_rifles",
+        "AUC_AVC_supply_depots"
+      ]
+    },
+    {
+      "id": "AUC_AVC_demand",
+      "x": 20,
+      "y": 2,
+      "parents": [
+        "AUC_AVC_opening_parliament",
+        "AUC_AVC_opening_delegates"
+      ]
+    },
+    {
+      "id": "AUC_AVC_federal",
+      "x": 16,
+      "y": 3,
+      "parents": [
+        "AUC_AVC_demand"
+      ]
+    },
+    {
+      "id": "AUC_AVC_separate",
+      "x": 24,
+      "y": 3,
+      "parents": [
+        "AUC_AVC_demand"
+      ]
+    },
+    {
+      "id": "AUC_AVC_mandate",
+      "x": 16,
+      "y": 5,
+      "parents": [
+        "AUC_AVC_federal"
+      ]
+    },
+    {
+      "id": "AUC_AVC_credit",
+      "x": 44,
+      "y": 1,
+      "parents": [
+        "AUC_AVC_melbourne"
+      ]
+    },
+    {
+      "id": "AUC_AVC_services",
+      "x": 44,
+      "y": 5,
+      "parents": [
+        "AUC_AVC_credit",
+        "AUC_AVC_harbour",
+        "AUC_AVC_school"
+      ]
+    },
+    {
+      "id": "AUC_AVC_opening_parliament",
+      "x": 16,
+      "y": 1,
+      "parents": [
+        "AUC_AVC_melbourne"
+      ]
+    },
+    {
+      "id": "AUC_AVC_opening_delegates",
+      "x": 24,
+      "y": 1,
+      "parents": [
+        "AUC_AVC_melbourne"
+      ]
+    },
+    {
+      "id": "AUC_AVC_recovery",
+      "x": 4,
+      "y": 1,
+      "parents": [
+        "AUC_AVC_melbourne"
+      ]
+    },
+    {
+      "id": "AUC_AVC_public_works",
+      "x": 0,
+      "y": 2,
+      "parents": [
+        "AUC_AVC_recovery"
+      ]
+    },
+    {
+      "id": "AUC_AVC_merchant_orders",
+      "x": 8,
+      "y": 2,
+      "parents": [
+        "AUC_AVC_recovery"
+      ]
+    },
+    {
+      "id": "AUC_AVC_technical_school",
+      "x": 4,
+      "y": 5,
+      "parents": [
+        "AUC_AVC_dockyards"
+      ]
+    },
+    {
+      "id": "AUC_AVC_muster",
+      "x": 32,
+      "y": 1,
+      "parents": [
+        "AUC_AVC_melbourne"
+      ]
+    },
+    {
+      "id": "AUC_AVC_supply_depots",
+      "x": 36,
+      "y": 2,
+      "parents": [
+        "AUC_AVC_muster"
+      ]
+    },
+    {
+      "id": "AUC_AVC_joint_exercises",
+      "x": 32,
+      "y": 5,
+      "parents": [
+        "AUC_AVC_school",
+        "AUC_AVC_harbour"
+      ]
+    },
+    {
+      "id": "AUC_AVC_local_civil_service",
+      "x": 24,
+      "y": 5,
+      "parents": [
+        "AUC_AVC_separate"
+      ]
+    },
+    {
+      "id": "AUC_AVC_district_councils",
+      "x": 20,
+      "y": 6,
+      "parents": [
+        "AUC_AVC_mandate",
+        "AUC_AVC_local_civil_service"
+      ]
+    },
+    {
+      "id": "AUC_AVC_trade_delegation",
+      "x": 44,
+      "y": 6,
+      "parents": [
+        "AUC_AVC_services"
+      ]
+    },
+    {
+      "id": "AUC_AVC_development_programme",
+      "x": 12,
+      "y": 7,
+      "parents": [
+        "AUC_AVC_technical_school",
+        "AUC_AVC_district_councils"
+      ]
+    },
+    {
+      "id": "AUC_AVC_prepared_colony",
+      "x": 32,
+      "y": 8,
+      "parents": [
+        "AUC_AVC_joint_exercises",
+        "AUC_AVC_trade_delegation"
+      ]
+    }
+  ],
+  "AQL": [
+    {
+      "id": "AUC_AQL_brisbane",
+      "x": 20,
+      "y": 0,
+      "parents": []
+    },
+    {
+      "id": "AUC_AQL_ports",
+      "x": 0,
+      "y": 3,
+      "parents": [
+        "AUC_AQL_public_works",
+        "AUC_AQL_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_AQL_labour",
+      "x": 8,
+      "y": 3,
+      "parents": [
+        "AUC_AQL_public_works",
+        "AUC_AQL_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_AQL_workshops",
+      "x": 4,
+      "y": 4,
+      "parents": [
+        "AUC_AQL_ports",
+        "AUC_AQL_labour"
+      ]
+    },
+    {
+      "id": "AUC_AQL_rifles",
+      "x": 28,
+      "y": 2,
+      "parents": [
+        "AUC_AQL_muster"
+      ]
+    },
+    {
+      "id": "AUC_AQL_harbour",
+      "x": 28,
+      "y": 4,
+      "parents": [
+        "AUC_AQL_rifles"
+      ]
+    },
+    {
+      "id": "AUC_AQL_school",
+      "x": 36,
+      "y": 4,
+      "parents": [
+        "AUC_AQL_rifles",
+        "AUC_AQL_supply_depots"
+      ]
+    },
+    {
+      "id": "AUC_AQL_demand",
+      "x": 20,
+      "y": 2,
+      "parents": [
+        "AUC_AQL_opening_parliament",
+        "AUC_AQL_opening_delegates"
+      ]
+    },
+    {
+      "id": "AUC_AQL_federal",
+      "x": 16,
+      "y": 3,
+      "parents": [
+        "AUC_AQL_demand"
+      ]
+    },
+    {
+      "id": "AUC_AQL_separate",
+      "x": 24,
+      "y": 3,
+      "parents": [
+        "AUC_AQL_demand"
+      ]
+    },
+    {
+      "id": "AUC_AQL_mandate",
+      "x": 16,
+      "y": 5,
+      "parents": [
+        "AUC_AQL_federal"
+      ]
+    },
+    {
+      "id": "AUC_AQL_credit",
+      "x": 44,
+      "y": 1,
+      "parents": [
+        "AUC_AQL_brisbane"
+      ]
+    },
+    {
+      "id": "AUC_AQL_services",
+      "x": 44,
+      "y": 5,
+      "parents": [
+        "AUC_AQL_credit",
+        "AUC_AQL_harbour",
+        "AUC_AQL_school"
+      ]
+    },
+    {
+      "id": "AUC_AQL_opening_parliament",
+      "x": 16,
+      "y": 1,
+      "parents": [
+        "AUC_AQL_brisbane"
+      ]
+    },
+    {
+      "id": "AUC_AQL_opening_delegates",
+      "x": 24,
+      "y": 1,
+      "parents": [
+        "AUC_AQL_brisbane"
+      ]
+    },
+    {
+      "id": "AUC_AQL_recovery",
+      "x": 4,
+      "y": 1,
+      "parents": [
+        "AUC_AQL_brisbane"
+      ]
+    },
+    {
+      "id": "AUC_AQL_public_works",
+      "x": 0,
+      "y": 2,
+      "parents": [
+        "AUC_AQL_recovery"
+      ]
+    },
+    {
+      "id": "AUC_AQL_merchant_orders",
+      "x": 8,
+      "y": 2,
+      "parents": [
+        "AUC_AQL_recovery"
+      ]
+    },
+    {
+      "id": "AUC_AQL_technical_school",
+      "x": 4,
+      "y": 5,
+      "parents": [
+        "AUC_AQL_workshops"
+      ]
+    },
+    {
+      "id": "AUC_AQL_muster",
+      "x": 32,
+      "y": 1,
+      "parents": [
+        "AUC_AQL_brisbane"
+      ]
+    },
+    {
+      "id": "AUC_AQL_supply_depots",
+      "x": 36,
+      "y": 2,
+      "parents": [
+        "AUC_AQL_muster"
+      ]
+    },
+    {
+      "id": "AUC_AQL_joint_exercises",
+      "x": 32,
+      "y": 5,
+      "parents": [
+        "AUC_AQL_school",
+        "AUC_AQL_harbour"
+      ]
+    },
+    {
+      "id": "AUC_AQL_local_civil_service",
+      "x": 24,
+      "y": 5,
+      "parents": [
+        "AUC_AQL_separate"
+      ]
+    },
+    {
+      "id": "AUC_AQL_district_councils",
+      "x": 20,
+      "y": 6,
+      "parents": [
+        "AUC_AQL_mandate",
+        "AUC_AQL_local_civil_service"
+      ]
+    },
+    {
+      "id": "AUC_AQL_trade_delegation",
+      "x": 44,
+      "y": 6,
+      "parents": [
+        "AUC_AQL_services"
+      ]
+    },
+    {
+      "id": "AUC_AQL_development_programme",
+      "x": 12,
+      "y": 7,
+      "parents": [
+        "AUC_AQL_technical_school",
+        "AUC_AQL_district_councils"
+      ]
+    },
+    {
+      "id": "AUC_AQL_prepared_colony",
+      "x": 32,
+      "y": 8,
+      "parents": [
+        "AUC_AQL_joint_exercises",
+        "AUC_AQL_trade_delegation"
+      ]
+    }
+  ],
+  "ASA": [
+    {
+      "id": "AUC_ASA_adelaide",
+      "x": 20,
+      "y": 0,
+      "parents": []
+    },
+    {
+      "id": "AUC_ASA_telegraph",
+      "x": 0,
+      "y": 3,
+      "parents": [
+        "AUC_ASA_public_works",
+        "AUC_ASA_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_ASA_inland",
+      "x": 8,
+      "y": 3,
+      "parents": [
+        "AUC_ASA_public_works",
+        "AUC_ASA_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_ASA_arsenal",
+      "x": 4,
+      "y": 4,
+      "parents": [
+        "AUC_ASA_telegraph",
+        "AUC_ASA_inland"
+      ]
+    },
+    {
+      "id": "AUC_ASA_rifles",
+      "x": 28,
+      "y": 2,
+      "parents": [
+        "AUC_ASA_muster"
+      ]
+    },
+    {
+      "id": "AUC_ASA_harbour",
+      "x": 28,
+      "y": 4,
+      "parents": [
+        "AUC_ASA_rifles"
+      ]
+    },
+    {
+      "id": "AUC_ASA_school",
+      "x": 36,
+      "y": 4,
+      "parents": [
+        "AUC_ASA_rifles",
+        "AUC_ASA_supply_depots"
+      ]
+    },
+    {
+      "id": "AUC_ASA_demand",
+      "x": 20,
+      "y": 2,
+      "parents": [
+        "AUC_ASA_opening_parliament",
+        "AUC_ASA_opening_delegates"
+      ]
+    },
+    {
+      "id": "AUC_ASA_federal",
+      "x": 16,
+      "y": 3,
+      "parents": [
+        "AUC_ASA_demand"
+      ]
+    },
+    {
+      "id": "AUC_ASA_separate",
+      "x": 24,
+      "y": 3,
+      "parents": [
+        "AUC_ASA_demand"
+      ]
+    },
+    {
+      "id": "AUC_ASA_mandate",
+      "x": 16,
+      "y": 5,
+      "parents": [
+        "AUC_ASA_federal"
+      ]
+    },
+    {
+      "id": "AUC_ASA_credit",
+      "x": 44,
+      "y": 1,
+      "parents": [
+        "AUC_ASA_adelaide"
+      ]
+    },
+    {
+      "id": "AUC_ASA_services",
+      "x": 44,
+      "y": 5,
+      "parents": [
+        "AUC_ASA_credit",
+        "AUC_ASA_harbour",
+        "AUC_ASA_school"
+      ]
+    },
+    {
+      "id": "AUC_ASA_opening_parliament",
+      "x": 16,
+      "y": 1,
+      "parents": [
+        "AUC_ASA_adelaide"
+      ]
+    },
+    {
+      "id": "AUC_ASA_opening_delegates",
+      "x": 24,
+      "y": 1,
+      "parents": [
+        "AUC_ASA_adelaide"
+      ]
+    },
+    {
+      "id": "AUC_ASA_recovery",
+      "x": 4,
+      "y": 1,
+      "parents": [
+        "AUC_ASA_adelaide"
+      ]
+    },
+    {
+      "id": "AUC_ASA_public_works",
+      "x": 0,
+      "y": 2,
+      "parents": [
+        "AUC_ASA_recovery"
+      ]
+    },
+    {
+      "id": "AUC_ASA_merchant_orders",
+      "x": 8,
+      "y": 2,
+      "parents": [
+        "AUC_ASA_recovery"
+      ]
+    },
+    {
+      "id": "AUC_ASA_technical_school",
+      "x": 4,
+      "y": 5,
+      "parents": [
+        "AUC_ASA_arsenal"
+      ]
+    },
+    {
+      "id": "AUC_ASA_muster",
+      "x": 32,
+      "y": 1,
+      "parents": [
+        "AUC_ASA_adelaide"
+      ]
+    },
+    {
+      "id": "AUC_ASA_supply_depots",
+      "x": 36,
+      "y": 2,
+      "parents": [
+        "AUC_ASA_muster"
+      ]
+    },
+    {
+      "id": "AUC_ASA_joint_exercises",
+      "x": 32,
+      "y": 5,
+      "parents": [
+        "AUC_ASA_school",
+        "AUC_ASA_harbour"
+      ]
+    },
+    {
+      "id": "AUC_ASA_local_civil_service",
+      "x": 24,
+      "y": 5,
+      "parents": [
+        "AUC_ASA_separate"
+      ]
+    },
+    {
+      "id": "AUC_ASA_district_councils",
+      "x": 20,
+      "y": 6,
+      "parents": [
+        "AUC_ASA_mandate",
+        "AUC_ASA_local_civil_service"
+      ]
+    },
+    {
+      "id": "AUC_ASA_trade_delegation",
+      "x": 44,
+      "y": 6,
+      "parents": [
+        "AUC_ASA_services"
+      ]
+    },
+    {
+      "id": "AUC_ASA_development_programme",
+      "x": 12,
+      "y": 7,
+      "parents": [
+        "AUC_ASA_technical_school",
+        "AUC_ASA_district_councils"
+      ]
+    },
+    {
+      "id": "AUC_ASA_prepared_colony",
+      "x": 32,
+      "y": 8,
+      "parents": [
+        "AUC_ASA_joint_exercises",
+        "AUC_ASA_trade_delegation"
+      ]
+    }
+  ],
+  "AWA": [
+    {
+      "id": "AUC_AWA_perth",
+      "x": 20,
+      "y": 0,
+      "parents": []
+    },
+    {
+      "id": "AUC_AWA_gold",
+      "x": 0,
+      "y": 3,
+      "parents": [
+        "AUC_AWA_public_works",
+        "AUC_AWA_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_AWA_railway",
+      "x": 8,
+      "y": 3,
+      "parents": [
+        "AUC_AWA_public_works",
+        "AUC_AWA_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_AWA_fremantle",
+      "x": 4,
+      "y": 4,
+      "parents": [
+        "AUC_AWA_gold",
+        "AUC_AWA_railway"
+      ]
+    },
+    {
+      "id": "AUC_AWA_rifles",
+      "x": 28,
+      "y": 2,
+      "parents": [
+        "AUC_AWA_muster"
+      ]
+    },
+    {
+      "id": "AUC_AWA_harbour",
+      "x": 28,
+      "y": 4,
+      "parents": [
+        "AUC_AWA_rifles"
+      ]
+    },
+    {
+      "id": "AUC_AWA_school",
+      "x": 36,
+      "y": 4,
+      "parents": [
+        "AUC_AWA_rifles",
+        "AUC_AWA_supply_depots"
+      ]
+    },
+    {
+      "id": "AUC_AWA_demand",
+      "x": 20,
+      "y": 2,
+      "parents": [
+        "AUC_AWA_opening_parliament",
+        "AUC_AWA_opening_delegates"
+      ]
+    },
+    {
+      "id": "AUC_AWA_federal",
+      "x": 16,
+      "y": 3,
+      "parents": [
+        "AUC_AWA_demand"
+      ]
+    },
+    {
+      "id": "AUC_AWA_separate",
+      "x": 24,
+      "y": 3,
+      "parents": [
+        "AUC_AWA_demand"
+      ]
+    },
+    {
+      "id": "AUC_AWA_mandate",
+      "x": 16,
+      "y": 5,
+      "parents": [
+        "AUC_AWA_federal"
+      ]
+    },
+    {
+      "id": "AUC_AWA_credit",
+      "x": 44,
+      "y": 1,
+      "parents": [
+        "AUC_AWA_perth"
+      ]
+    },
+    {
+      "id": "AUC_AWA_services",
+      "x": 44,
+      "y": 5,
+      "parents": [
+        "AUC_AWA_credit",
+        "AUC_AWA_harbour",
+        "AUC_AWA_school"
+      ]
+    },
+    {
+      "id": "AUC_AWA_opening_parliament",
+      "x": 16,
+      "y": 1,
+      "parents": [
+        "AUC_AWA_perth"
+      ]
+    },
+    {
+      "id": "AUC_AWA_opening_delegates",
+      "x": 24,
+      "y": 1,
+      "parents": [
+        "AUC_AWA_perth"
+      ]
+    },
+    {
+      "id": "AUC_AWA_recovery",
+      "x": 4,
+      "y": 1,
+      "parents": [
+        "AUC_AWA_perth"
+      ]
+    },
+    {
+      "id": "AUC_AWA_public_works",
+      "x": 0,
+      "y": 2,
+      "parents": [
+        "AUC_AWA_recovery"
+      ]
+    },
+    {
+      "id": "AUC_AWA_merchant_orders",
+      "x": 8,
+      "y": 2,
+      "parents": [
+        "AUC_AWA_recovery"
+      ]
+    },
+    {
+      "id": "AUC_AWA_technical_school",
+      "x": 4,
+      "y": 5,
+      "parents": [
+        "AUC_AWA_fremantle"
+      ]
+    },
+    {
+      "id": "AUC_AWA_muster",
+      "x": 32,
+      "y": 1,
+      "parents": [
+        "AUC_AWA_perth"
+      ]
+    },
+    {
+      "id": "AUC_AWA_supply_depots",
+      "x": 36,
+      "y": 2,
+      "parents": [
+        "AUC_AWA_muster"
+      ]
+    },
+    {
+      "id": "AUC_AWA_joint_exercises",
+      "x": 32,
+      "y": 5,
+      "parents": [
+        "AUC_AWA_school",
+        "AUC_AWA_harbour"
+      ]
+    },
+    {
+      "id": "AUC_AWA_local_civil_service",
+      "x": 24,
+      "y": 5,
+      "parents": [
+        "AUC_AWA_separate"
+      ]
+    },
+    {
+      "id": "AUC_AWA_district_councils",
+      "x": 20,
+      "y": 6,
+      "parents": [
+        "AUC_AWA_mandate",
+        "AUC_AWA_local_civil_service"
+      ]
+    },
+    {
+      "id": "AUC_AWA_trade_delegation",
+      "x": 44,
+      "y": 6,
+      "parents": [
+        "AUC_AWA_services"
+      ]
+    },
+    {
+      "id": "AUC_AWA_development_programme",
+      "x": 12,
+      "y": 7,
+      "parents": [
+        "AUC_AWA_technical_school",
+        "AUC_AWA_district_councils"
+      ]
+    },
+    {
+      "id": "AUC_AWA_prepared_colony",
+      "x": 32,
+      "y": 8,
+      "parents": [
+        "AUC_AWA_joint_exercises",
+        "AUC_AWA_trade_delegation"
+      ]
+    }
+  ],
+  "ATA": [
+    {
+      "id": "AUC_ATA_hobart",
+      "x": 20,
+      "y": 0,
+      "parents": []
+    },
+    {
+      "id": "AUC_ATA_commerce",
+      "x": 0,
+      "y": 3,
+      "parents": [
+        "AUC_ATA_public_works",
+        "AUC_ATA_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_ATA_shipping",
+      "x": 8,
+      "y": 3,
+      "parents": [
+        "AUC_ATA_public_works",
+        "AUC_ATA_merchant_orders"
+      ]
+    },
+    {
+      "id": "AUC_ATA_yards",
+      "x": 4,
+      "y": 4,
+      "parents": [
+        "AUC_ATA_commerce",
+        "AUC_ATA_shipping"
+      ]
+    },
+    {
+      "id": "AUC_ATA_rifles",
+      "x": 28,
+      "y": 2,
+      "parents": [
+        "AUC_ATA_muster"
+      ]
+    },
+    {
+      "id": "AUC_ATA_harbour",
+      "x": 28,
+      "y": 4,
+      "parents": [
+        "AUC_ATA_rifles"
+      ]
+    },
+    {
+      "id": "AUC_ATA_school",
+      "x": 36,
+      "y": 4,
+      "parents": [
+        "AUC_ATA_rifles",
+        "AUC_ATA_supply_depots"
+      ]
+    },
+    {
+      "id": "AUC_ATA_demand",
+      "x": 20,
+      "y": 2,
+      "parents": [
+        "AUC_ATA_opening_parliament",
+        "AUC_ATA_opening_delegates"
+      ]
+    },
+    {
+      "id": "AUC_ATA_federal",
+      "x": 16,
+      "y": 3,
+      "parents": [
+        "AUC_ATA_demand"
+      ]
+    },
+    {
+      "id": "AUC_ATA_separate",
+      "x": 24,
+      "y": 3,
+      "parents": [
+        "AUC_ATA_demand"
+      ]
+    },
+    {
+      "id": "AUC_ATA_mandate",
+      "x": 16,
+      "y": 5,
+      "parents": [
+        "AUC_ATA_federal"
+      ]
+    },
+    {
+      "id": "AUC_ATA_credit",
+      "x": 44,
+      "y": 1,
+      "parents": [
+        "AUC_ATA_hobart"
+      ]
+    },
+    {
+      "id": "AUC_ATA_services",
+      "x": 44,
+      "y": 5,
+      "parents": [
+        "AUC_ATA_credit",
+        "AUC_ATA_harbour",
+        "AUC_ATA_school"
+      ]
+    },
+    {
+      "id": "AUC_ATA_opening_parliament",
+      "x": 16,
+      "y": 1,
+      "parents": [
+        "AUC_ATA_hobart"
+      ]
+    },
+    {
+      "id": "AUC_ATA_opening_delegates",
+      "x": 24,
+      "y": 1,
+      "parents": [
+        "AUC_ATA_hobart"
+      ]
+    },
+    {
+      "id": "AUC_ATA_recovery",
+      "x": 4,
+      "y": 1,
+      "parents": [
+        "AUC_ATA_hobart"
+      ]
+    },
+    {
+      "id": "AUC_ATA_public_works",
+      "x": 0,
+      "y": 2,
+      "parents": [
+        "AUC_ATA_recovery"
+      ]
+    },
+    {
+      "id": "AUC_ATA_merchant_orders",
+      "x": 8,
+      "y": 2,
+      "parents": [
+        "AUC_ATA_recovery"
+      ]
+    },
+    {
+      "id": "AUC_ATA_technical_school",
+      "x": 4,
+      "y": 5,
+      "parents": [
+        "AUC_ATA_yards"
+      ]
+    },
+    {
+      "id": "AUC_ATA_muster",
+      "x": 32,
+      "y": 1,
+      "parents": [
+        "AUC_ATA_hobart"
+      ]
+    },
+    {
+      "id": "AUC_ATA_supply_depots",
+      "x": 36,
+      "y": 2,
+      "parents": [
+        "AUC_ATA_muster"
+      ]
+    },
+    {
+      "id": "AUC_ATA_joint_exercises",
+      "x": 32,
+      "y": 5,
+      "parents": [
+        "AUC_ATA_school",
+        "AUC_ATA_harbour"
+      ]
+    },
+    {
+      "id": "AUC_ATA_local_civil_service",
+      "x": 24,
+      "y": 5,
+      "parents": [
+        "AUC_ATA_separate"
+      ]
+    },
+    {
+      "id": "AUC_ATA_district_councils",
+      "x": 20,
+      "y": 6,
+      "parents": [
+        "AUC_ATA_mandate",
+        "AUC_ATA_local_civil_service"
+      ]
+    },
+    {
+      "id": "AUC_ATA_trade_delegation",
+      "x": 44,
+      "y": 6,
+      "parents": [
+        "AUC_ATA_services"
+      ]
+    },
+    {
+      "id": "AUC_ATA_development_programme",
+      "x": 12,
+      "y": 7,
+      "parents": [
+        "AUC_ATA_technical_school",
+        "AUC_ATA_district_councils"
+      ]
+    },
+    {
+      "id": "AUC_ATA_prepared_colony",
+      "x": 32,
+      "y": 8,
+      "parents": [
+        "AUC_ATA_joint_exercises",
+        "AUC_ATA_trade_delegation"
+      ]
+    }
+  ],
+  "A07": [
+    {
+      "id": "AUC_A07_leagues",
+      "x": 8,
+      "y": 0,
+      "parents": []
+    },
+    {
+      "id": "AUC_A07_corowa",
+      "x": 8,
+      "y": 2,
+      "parents": [
+        "AUC_A07_opening_parliament",
+        "AUC_A07_opening_delegates"
+      ]
+    },
+    {
+      "id": "AUC_A07_convention",
+      "x": 8,
+      "y": 3,
+      "parents": [
+        "AUC_A07_corowa"
+      ]
+    },
+    {
+      "id": "AUC_A07_senate",
+      "x": 8,
+      "y": 4,
+      "parents": [
+        "AUC_A07_convention"
+      ]
+    },
+    {
+      "id": "AUC_A07_terms_AVC",
+      "x": 0,
+      "y": 5,
+      "parents": [
+        "AUC_A07_senate"
+      ]
+    },
+    {
+      "id": "AUC_A07_terms_AQL",
+      "x": 4,
+      "y": 5,
+      "parents": [
+        "AUC_A07_senate"
+      ]
+    },
+    {
+      "id": "AUC_A07_terms_ASA",
+      "x": 8,
+      "y": 5,
+      "parents": [
+        "AUC_A07_senate"
+      ]
+    },
+    {
+      "id": "AUC_A07_terms_AWA",
+      "x": 12,
+      "y": 5,
+      "parents": [
+        "AUC_A07_senate"
+      ]
+    },
+    {
+      "id": "AUC_A07_terms_ATA",
+      "x": 16,
+      "y": 5,
+      "parents": [
+        "AUC_A07_senate"
+      ]
+    },
+    {
+      "id": "AUC_A07_referendums",
+      "x": 8,
+      "y": 6,
+      "parents": [
+        "AUC_A07_senate"
+      ]
+    },
+    {
+      "id": "AUC_A07_charter",
+      "x": 8,
+      "y": 7,
+      "parents": [
+        "AUC_A07_referendums"
+      ]
+    },
+    {
+      "id": "AUC_A07_commonwealth",
+      "x": 8,
+      "y": 8,
+      "parents": [
+        "AUC_A07_charter"
+      ]
+    },
+    {
+      "id": "AUC_A07_parliament",
+      "x": 6,
+      "y": 9,
+      "parents": [
+        "AUC_A07_commonwealth"
+      ]
+    },
+    {
+      "id": "AUC_A07_six_states",
+      "x": 10,
+      "y": 9,
+      "parents": [
+        "AUC_A07_commonwealth"
+      ]
+    },
+    {
+      "id": "AUC_A07_first_ministry",
+      "x": 8,
+      "y": 10,
+      "parents": [
+        "AUC_A07_commonwealth"
+      ]
+    },
+    {
+      "id": "AUC_A07_customs",
+      "x": 18,
+      "y": 1,
+      "parents": [
+        "AUC_A07_leagues"
+      ]
+    },
+    {
+      "id": "AUC_A07_arsenal",
+      "x": 16,
+      "y": 2,
+      "parents": [
+        "AUC_A07_customs"
+      ]
+    },
+    {
+      "id": "AUC_A07_research",
+      "x": 19,
+      "y": 3,
+      "parents": [
+        "AUC_A07_arsenal",
+        "AUC_A07_accounts"
+      ]
+    },
+    {
+      "id": "AUC_A07_chamber",
+      "x": 22,
+      "y": 1,
+      "parents": [
+        "AUC_A07_leagues"
+      ]
+    },
+    {
+      "id": "AUC_A07_accounts",
+      "x": 22,
+      "y": 2,
+      "parents": [
+        "AUC_A07_chamber"
+      ]
+    },
+    {
+      "id": "AUC_A07_staff",
+      "x": 30,
+      "y": 1,
+      "parents": [
+        "AUC_A07_leagues"
+      ]
+    },
+    {
+      "id": "AUC_A07_coast",
+      "x": 28,
+      "y": 3,
+      "parents": [
+        "AUC_A07_defence_territorial",
+        "AUC_A07_defence_maritime"
+      ]
+    },
+    {
+      "id": "AUC_A07_yards",
+      "x": 32,
+      "y": 3,
+      "parents": [
+        "AUC_A07_defence_territorial",
+        "AUC_A07_defence_maritime"
+      ]
+    },
+    {
+      "id": "AUC_A07_convoys",
+      "x": 30,
+      "y": 4,
+      "parents": [
+        "AUC_A07_coast",
+        "AUC_A07_yards"
+      ]
+    },
+    {
+      "id": "AUC_A07_japan",
+      "x": 30,
+      "y": 5,
+      "parents": [
+        "AUC_A07_convoys"
+      ]
+    },
+    {
+      "id": "AUC_A07_partners",
+      "x": 28,
+      "y": 6,
+      "parents": [
+        "AUC_A07_japan"
+      ]
+    },
+    {
+      "id": "AUC_A07_deter",
+      "x": 32,
+      "y": 6,
+      "parents": [
+        "AUC_A07_japan"
+      ]
+    },
+    {
+      "id": "AUC_A07_japan_goal",
+      "x": 30,
+      "y": 9,
+      "parents": [
+        "AUC_A07_partners",
+        "AUC_A07_deter",
+        "AUC_A07_commonwealth"
+      ]
+    },
+    {
+      "id": "AUC_A07_sovereignty",
+      "x": 18,
+      "y": 8,
+      "parents": [
+        "AUC_A07_charter"
+      ]
+    },
+    {
+      "id": "AUC_A07_own_flag",
+      "x": 16,
+      "y": 10,
+      "parents": [
+        "AUC_A07_commonwealth"
+      ]
+    },
+    {
+      "id": "AUC_A07_break_crown",
+      "x": 20,
+      "y": 10,
+      "parents": [
+        "AUC_A07_sovereignty"
+      ]
+    },
+    {
+      "id": "AUC_A07_british_routes",
+      "x": 18,
+      "y": 11,
+      "parents": [
+        "AUC_A07_commonwealth"
+      ]
+    },
+    {
+      "id": "AUC_A07_opening_parliament",
+      "x": 6,
+      "y": 1,
+      "parents": [
+        "AUC_A07_leagues"
+      ]
+    },
+    {
+      "id": "AUC_A07_opening_delegates",
+      "x": 10,
+      "y": 1,
+      "parents": [
+        "AUC_A07_leagues"
+      ]
+    },
+    {
+      "id": "AUC_A07_defence_territorial",
+      "x": 28,
+      "y": 2,
+      "parents": [
+        "AUC_A07_staff"
+      ]
+    },
+    {
+      "id": "AUC_A07_defence_maritime",
+      "x": 32,
+      "y": 2,
+      "parents": [
+        "AUC_A07_staff"
+      ]
+    }
+  ]
+}

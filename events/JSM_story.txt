@@ -1,0 +1,10 @@
+add_namespace = jsm_story
+country_event = { id = jsm_story.1 title = JSM_offer_title desc = JSM_offer_desc is_triggered_only = yes
+ trigger = { JSM_can_receive_protectorate_offer = yes }
+ option = { name = JSM_accept ai_chance = { factor = 60 }
+  if = { limit = { JSM_can_receive_protectorate_offer = yes } A03 = { puppet = ROOT } }
+ }
+ option = { name = JSM_refuse ai_chance = { factor = 40 }
+  if = { limit = { JSM_can_receive_protectorate_offer = yes } A03 = { create_wargoal = { type = puppet_wargoal_focus target = ROOT } } }
+ }
+}

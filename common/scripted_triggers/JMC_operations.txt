@@ -1,0 +1,34 @@
+JMC_pilots_requirements = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_programme_complete
+ has_country_flag = JMC_course_confirmed
+ has_country_flag = JMC_merchant_course
+ NOT = { has_country_flag = JMC_expedition_course }
+ has_idea = JMC_merchant_plan
+}
+JMC_transports_requirements = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_programme_complete
+ has_country_flag = JMC_course_confirmed
+ has_country_flag = JMC_expedition_course
+ NOT = { has_country_flag = JMC_merchant_course }
+ has_idea = JMC_expedition_plan
+}
+JMC_can_start_pilots = {
+ JMC_pilots_requirements = yes
+ NOT = { has_country_flag = JMC_pilots_in_progress }
+ NOT = { has_equipment = { support_equipment < 20 } }
+}
+JMC_can_start_transports = {
+ JMC_transports_requirements = yes
+ NOT = { has_country_flag = JMC_transports_in_progress }
+ NOT = { has_equipment = { support_equipment < 40 } }
+}
+JMC_can_finish_pilots = {
+ JMC_pilots_requirements = yes
+ has_country_flag = JMC_pilots_in_progress
+}
+JMC_can_finish_transports = {
+ JMC_transports_requirements = yes
+ has_country_flag = JMC_transports_in_progress
+}

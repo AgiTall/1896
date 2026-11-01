@@ -27,8 +27,8 @@ state = {
    7798
    20
   }
-  owner = A07
-  add_core_of = A07
+  owner = AVC
+  add_core_of = AVC
  }
  provinces = {
   1759
@@ -46,7 +46,7 @@ state = {
   12576
   12932
  }
- manpower = 1850000
+ manpower = 1642741
  buildings_max_level_factor = 1.000
  state_category = large_city
  local_supplies = 0.0

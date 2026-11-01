@@ -9,7 +9,7 @@ from collections import Counter
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-SPLIT_STATES = {315, 327, 628, 1082, 1083, 1084, 1085}
+SPLIT_STATES = {315, 327, 628, 334, 1049, 1082, 1083, 1084, 1085, 1086}
 
 
 def validate(repair=False):
@@ -53,7 +53,7 @@ def validate(repair=False):
                 state = target
         if fields[1] == "naval_base_spawn" and state == target:
             ports[province] += 1
-    moved = {p for p, s in province_states.items() if s in {1082, 1083, 1084, 1085}}
+    moved = {p for p, s in province_states.items() if s in {1082, 1083, 1084, 1085, 1086}}
     if repair and failures:
         backup = ROOT / "tools/backups/canon_map_buildings/buildings.txt"
         backup.parent.mkdir(parents=True, exist_ok=True)

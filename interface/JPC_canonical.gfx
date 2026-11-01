@@ -1,0 +1,9 @@
+spriteTypes = {
+spriteType = { name = "GFX_goal_jpc_fleet" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_fleet.dds" }
+spriteType = { name = "GFX_goal_jpc_fleet_shine" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_fleet.dds" effectFile = "gfx/FX/buttonstate.lua" }
+spriteType = { name = "GFX_idea_jpc_fleet" legacy_lazy_load = no texturefile = "gfx/interface/ideas/jpc_fleet.dds" }
+spriteType = { name = "GFX_goal_jpc_credit" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_credit.dds" }
+spriteType = { name = "GFX_goal_jpc_credit_shine" legacy_lazy_load = no texturefile = "gfx/interface/goals/jpc_credit.dds" effectFile = "gfx/FX/buttonstate.lua" }
+spriteType = { name = "GFX_idea_jpc_credit" legacy_lazy_load = no texturefile = "gfx/interface/ideas/jpc_credit.dds" }
+spriteType = { name = "GFX_jpc_council" legacy_lazy_load = no texturefile = "gfx/event_pictures/jpc_council.dds" }
+}

@@ -1,0 +1,60 @@
+CH93_tick = {
+ if = { limit = { date > 1892.12.31 date < 1894.1.1 }
+ if = { limit = { date > 1892.12.31 NOT = { has_global_flag = ch93_queued_1 } } set_global_flag = ch93_queued_1 if = { limit = { country_exists = A04 } A04 = { country_event = { id = ch93.1 } } } else = { set_global_flag = ch93_1_skipped } }
+ if = { limit = { date > 1893.1.7 NOT = { has_global_flag = ch93_queued_37 } } set_global_flag = ch93_queued_37 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.37 } } } else = { set_global_flag = ch93_37_skipped } }
+ if = { limit = { date > 1893.1.9 NOT = { has_global_flag = ch93_queued_2 } } set_global_flag = ch93_queued_2 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.2 } } } else = { set_global_flag = ch93_2_skipped } }
+ if = { limit = { date > 1893.1.19 NOT = { has_global_flag = ch93_queued_3 } } set_global_flag = ch93_queued_3 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.3 } } } else = { set_global_flag = ch93_3_skipped } }
+ if = { limit = { date > 1893.2.4 NOT = { has_global_flag = ch93_queued_4 } } set_global_flag = ch93_queued_4 if = { limit = { country_exists = A02 } A02 = { country_event = { id = ch93.4 } } } else = { set_global_flag = ch93_4_skipped } }
+ if = { limit = { date > 1893.2.13 NOT = { has_global_flag = ch93_queued_5 } } set_global_flag = ch93_queued_5 if = { limit = { country_exists = A05 } A05 = { country_event = { id = ch93.5 } } } else = { set_global_flag = ch93_5_skipped } }
+ if = { limit = { date > 1893.2.21 NOT = { has_global_flag = ch93_queued_6 } } set_global_flag = ch93_queued_6 if = { limit = { country_exists = A06 } A06 = { country_event = { id = ch93.6 } } } else = { set_global_flag = ch93_6_skipped } }
+ if = { limit = { date > 1893.3.7 NOT = { has_global_flag = ch93_queued_7 } } set_global_flag = ch93_queued_7 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.7 } } } else = { set_global_flag = ch93_7_skipped } }
+ if = { limit = { date > 1893.3.14 NOT = { has_global_flag = ch93_queued_8 } } set_global_flag = ch93_queued_8 if = { limit = { country_exists = A10 } A10 = { country_event = { id = ch93.8 } } } else = { set_global_flag = ch93_8_skipped } }
+ if = { limit = { date > 1893.3.19 NOT = { has_global_flag = ch93_queued_38 } } set_global_flag = ch93_queued_38 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.38 } } } else = { set_global_flag = ch93_38_skipped } }
+ if = { limit = { date > 1893.3.27 NOT = { has_global_flag = ch93_queued_9 } } set_global_flag = ch93_queued_9 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.9 } } } else = { set_global_flag = ch93_9_skipped } }
+ if = { limit = { date > 1893.4.1 NOT = { has_global_flag = ch93_queued_10 } } set_global_flag = ch93_queued_10 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.10 } } } else = { set_global_flag = ch93_10_skipped } }
+ if = { limit = { date > 1893.4.11 NOT = { has_global_flag = ch93_queued_11 } } set_global_flag = ch93_queued_11 if = { limit = { country_exists = A04 } A04 = { country_event = { id = ch93.11 } } } else = { set_global_flag = ch93_11_skipped } }
+ if = { limit = { date > 1893.4.24 NOT = { has_global_flag = ch93_queued_12 } } set_global_flag = ch93_queued_12 if = { limit = { country_exists = A04 } A04 = { country_event = { id = ch93.12 } } } else = { set_global_flag = ch93_12_skipped } }
+ if = { limit = { date > 1893.5.4 NOT = { has_global_flag = ch93_queued_13 } } set_global_flag = ch93_queued_13 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.13 } } } else = { set_global_flag = ch93_13_skipped } }
+ if = { limit = { date > 1893.5.17 NOT = { has_global_flag = ch93_queued_14 } } set_global_flag = ch93_queued_14 if = { limit = { country_exists = A05 } A05 = { country_event = { id = ch93.14 } } } else = { set_global_flag = ch93_14_skipped } }
+ if = { limit = { date > 1893.5.28 NOT = { has_global_flag = ch93_queued_15 } } set_global_flag = ch93_queued_15 if = { limit = { country_exists = A02 } A02 = { country_event = { id = ch93.15 } } } else = { set_global_flag = ch93_15_skipped } }
+ if = { limit = { date > 1893.5.31 NOT = { has_global_flag = ch93_queued_16 } } set_global_flag = ch93_queued_16 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.16 } } } else = { set_global_flag = ch93_16_skipped } }
+ if = { limit = { date > 1893.6.14 NOT = { has_global_flag = ch93_queued_17 } } set_global_flag = ch93_queued_17 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.17 } } } else = { set_global_flag = ch93_17_skipped } }
+ if = { limit = { date > 1893.6.27 NOT = { has_global_flag = ch93_queued_18 } } set_global_flag = ch93_queued_18 if = { limit = { country_exists = A02 } A02 = { country_event = { id = ch93.18 } } } else = { set_global_flag = ch93_18_skipped } }
+ if = { limit = { date > 1893.7.9 NOT = { has_global_flag = ch93_queued_19 } } set_global_flag = ch93_queued_19 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.19 } } } else = { set_global_flag = ch93_19_skipped } }
+ if = { limit = { date > 1893.7.21 NOT = { has_global_flag = ch93_queued_20 } } set_global_flag = ch93_queued_20 if = { limit = { country_exists = PSL } PSL = { country_event = { id = ch93.20 } } } else = { set_global_flag = ch93_20_skipped } }
+ if = { limit = { date > 1893.7.29 NOT = { has_global_flag = ch93_queued_21 } } set_global_flag = ch93_queued_21 if = { limit = { country_exists = A02 } A02 = { country_event = { id = ch93.21 } } } else = { set_global_flag = ch93_21_skipped } }
+ if = { limit = { date > 1893.8.4 NOT = { has_global_flag = ch93_queued_22 } } set_global_flag = ch93_queued_22 if = { limit = { country_exists = PHW } PHW = { country_event = { id = ch93.22 } } } else = { set_global_flag = ch93_22_skipped } }
+ if = { limit = { date > 1893.8.17 NOT = { has_global_flag = ch93_queued_23 } } set_global_flag = ch93_queued_23 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.23 } } } else = { set_global_flag = ch93_23_skipped } }
+ if = { limit = { date > 1893.8.26 NOT = { has_global_flag = ch93_queued_24 } } set_global_flag = ch93_queued_24 if = { limit = { country_exists = A02 } A02 = { country_event = { id = ch93.24 } } } else = { set_global_flag = ch93_24_skipped } }
+ if = { limit = { date > 1893.8.31 NOT = { has_global_flag = ch93_queued_25 } } set_global_flag = ch93_queued_25 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.25 } } } else = { set_global_flag = ch93_25_skipped } }
+ if = { limit = { date > 1893.9.11 NOT = { has_global_flag = ch93_queued_26 } } set_global_flag = ch93_queued_26 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.26 } } } else = { set_global_flag = ch93_26_skipped } }
+ if = { limit = { date > 1893.9.24 NOT = { has_global_flag = ch93_queued_27 } } set_global_flag = ch93_queued_27 if = { limit = { country_exists = A06 } A06 = { country_event = { id = ch93.27 } } } else = { set_global_flag = ch93_27_skipped } }
+ if = { limit = { date > 1893.10.7 NOT = { has_global_flag = ch93_queued_28 } } set_global_flag = ch93_queued_28 if = { limit = { country_exists = A04 } A04 = { country_event = { id = ch93.28 } } } else = { set_global_flag = ch93_28_skipped } }
+ if = { limit = { date > 1893.10.11 NOT = { has_global_flag = ch93_queued_39 } } set_global_flag = ch93_queued_39 if = { limit = { country_exists = A02 } A02 = { country_event = { id = ch93.39 } } } else = { set_global_flag = ch93_39_skipped } }
+ if = { limit = { date > 1893.10.16 NOT = { has_global_flag = ch93_queued_29 } } set_global_flag = ch93_queued_29 if = { limit = { country_exists = A03 } A03 = { country_event = { id = ch93.29 } } } else = { set_global_flag = ch93_29_skipped } }
+ if = { limit = { date > 1893.10.28 NOT = { has_global_flag = ch93_queued_30 } } set_global_flag = ch93_queued_30 if = { limit = { country_exists = A04 } A04 = { country_event = { id = ch93.30 } } } else = { set_global_flag = ch93_30_skipped } }
+ if = { limit = { date > 1893.11.4 NOT = { has_global_flag = ch93_queued_31 } } set_global_flag = ch93_queued_31 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.31 } } } else = { set_global_flag = ch93_31_skipped } }
+ if = { limit = { date > 1893.11.13 NOT = { has_global_flag = ch93_queued_32 } } set_global_flag = ch93_queued_32 if = { limit = { country_exists = A10 } A10 = { country_event = { id = ch93.32 } } } else = { set_global_flag = ch93_32_skipped } }
+ if = { limit = { date > 1893.11.19 NOT = { has_global_flag = ch93_queued_40 } } set_global_flag = ch93_queued_40 if = { limit = { country_exists = A06 } A06 = { country_event = { id = ch93.40 } } } else = { set_global_flag = ch93_40_skipped } }
+ if = { limit = { date > 1893.11.27 NOT = { has_global_flag = ch93_queued_33 } } set_global_flag = ch93_queued_33 if = { limit = { country_exists = A02 } A02 = { country_event = { id = ch93.33 } } } else = { set_global_flag = ch93_33_skipped } }
+ if = { limit = { date > 1893.12.23 NOT = { has_global_flag = ch93_queued_34 } } set_global_flag = ch93_queued_34 if = { limit = { country_exists = A04 } A04 = { country_event = { id = ch93.34 } } } else = { set_global_flag = ch93_34_skipped } }
+ if = { limit = { date > 1893.12.27 NOT = { has_global_flag = ch93_queued_35 } } set_global_flag = ch93_queued_35 if = { limit = { country_exists = A01 } A01 = { country_event = { id = ch93.35 } } } else = { set_global_flag = ch93_35_skipped } }
+ if = { limit = { date > 1893.12.30 NOT = { has_global_flag = ch93_queued_36 } } set_global_flag = ch93_queued_36 if = { limit = { country_exists = A04 } A04 = { country_event = { id = ch93.36 } } } else = { set_global_flag = ch93_36_skipped } }
+ }
+}
+
+CH93_cede_borneo = {
+ set_country_flag = pacific_trade_accord
+ A03 = { set_country_flag = pacific_trade_accord }
+ 1024 = { if = { limit = { is_owned_by = A01 } A03 = { transfer_state = 1024 } } }
+ 1023 = { if = { limit = { is_owned_by = A01 } A03 = { transfer_state = 1023 } } }
+}
+CH93_start_war = {
+ if = { limit = { country_exists = A01 country_exists = A03 NOT = { has_global_flag = ch93_16_a } A01 = { NOT = { has_country_flag = A01_expansion_resolved } } NOT = { has_war_with = A01 } }
+  set_country_flag = JPI_tesla_ready
+  A03_prepare_southern_war_effect = yes
+  add_timed_idea = { idea = A03_southern_blitz days = 180 }
+  declare_war_on = { target = A01 type = take_state_focus generator = { 1023 1024 } }
+  A01 = { set_country_flag = A01_japanese_invasion_begun }
+ }
+}

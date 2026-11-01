@@ -1,0 +1,482 @@
+{
+  "blocked_buildings": [
+    "rocket_site",
+    "nuclear_reactor",
+    "nuclear_reactor_heavy_water",
+    "commercial_nuclear_reactor",
+    "nuclear_facility"
+  ],
+  "baseline": [
+    "infantry_weapons",
+    "construction0",
+    "basic_railways",
+    "basic_train"
+  ],
+  "countries": [
+    {
+      "tag": "A01",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A02",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A03",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A04",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A05",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A06",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A07",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A08",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A09",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A10",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A11",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A12",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A13",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "A14",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "AQL",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "ASA",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "ATA",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "ATJ",
+      "added_technologies": [
+        "basic_railways",
+        "basic_torpedo",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "AVC",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "AWA",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "GOW",
+      "added_technologies": [
+        "basic_railways",
+        "basic_torpedo",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "MLT",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PAZ",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PBT",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PCB",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PCF",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PHR",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PHW",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PKR",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PLS",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PMD",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PML",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PNL",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PNM",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "POK",
+      "added_technologies": [
+        "basic_railways",
+        "basic_torpedo",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PPE",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PPM",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PPN",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PSL",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PSM",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PSY",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PTG",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PVI",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "PZN",
+      "added_technologies": [
+        "basic_railways",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "SSI",
+      "added_technologies": [
+        "basic_railways",
+        "basic_torpedo",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    },
+    {
+      "tag": "TNE",
+      "added_technologies": [
+        "basic_railways",
+        "basic_torpedo",
+        "basic_train",
+        "construction0",
+        "infantry_weapons"
+      ],
+      "trains": 15
+    }
+  ]
+}

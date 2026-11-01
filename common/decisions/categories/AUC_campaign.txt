@@ -1,0 +1,2 @@
+AUC_federation_category = { icon = generic_political_discourse visible = { tag = A07 has_completed_focus = AUC_A07_leagues } }
+AUC_defence_category = { icon = generic_political_discourse visible = { tag = A07 OR = { has_country_flag = AUC_commonwealth_proclaimed has_country_flag = AUC_independence_war_started } } }

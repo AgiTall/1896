@@ -1,0 +1,112 @@
+{
+  "A07": {
+    "en": "New South Wales",
+    "ru": "Новый Южный Уэльс",
+    "adj": "Новоюжноуэльск.",
+    "capital": 285,
+    "city": "Sydney",
+    "states": [
+      285
+    ],
+    "leader": "George Dibbs",
+    "leader_ru": "Джордж Диббс",
+    "color": [
+      40,
+      108,
+      111
+    ]
+  },
+  "AVC": {
+    "en": "Victoria",
+    "ru": "Виктория",
+    "adj": "Викторианск.",
+    "capital": 517,
+    "city": "Melbourne",
+    "states": [
+      517
+    ],
+    "leader": "William Shiels",
+    "leader_ru": "Уильям Шилс",
+    "color": [
+      58,
+      76,
+      145
+    ]
+  },
+  "AQL": {
+    "en": "Queensland",
+    "ru": "Квинсленд",
+    "adj": "Квинслендск.",
+    "capital": 521,
+    "city": "Brisbane",
+    "states": [
+      521,
+      872,
+      873,
+      1075
+    ],
+    "leader": "Samuel Griffith",
+    "leader_ru": "Сэмюэл Гриффит",
+    "color": [
+      148,
+      48,
+      69
+    ]
+  },
+  "ASA": {
+    "en": "South Australia",
+    "ru": "Южная Австралия",
+    "adj": "Южноавстралийск.",
+    "capital": 519,
+    "city": "Adelaide",
+    "states": [
+      519,
+      520,
+      674
+    ],
+    "leader": "John Downer",
+    "leader_ru": "Джон Даунер",
+    "color": [
+      185,
+      142,
+      66
+    ]
+  },
+  "AWA": {
+    "en": "Western Australia",
+    "ru": "Западная Австралия",
+    "adj": "Западноавстралийск.",
+    "capital": 522,
+    "city": "Perth",
+    "states": [
+      522,
+      870,
+      871,
+      1074
+    ],
+    "leader": "John Forrest",
+    "leader_ru": "Джон Форрест",
+    "color": [
+      86,
+      128,
+      70
+    ]
+  },
+  "ATA": {
+    "en": "Tasmania",
+    "ru": "Тасмания",
+    "adj": "Тасманийск.",
+    "capital": 518,
+    "city": "Hobart",
+    "states": [
+      518
+    ],
+    "leader": "Henry Dobson",
+    "leader_ru": "Генри Добсон",
+    "color": [
+      139,
+      92,
+      153
+    ]
+  }
+}

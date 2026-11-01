@@ -1,0 +1,17 @@
+ideas = { country = {
+JPC_three_heads = { picture = jpc_fleet removal_cost = -1 modifier = { political_power_gain = -0.15 stability_factor = -0.08 } }
+JPC_bad_loans = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = 0.12 production_speed_dockyard_factor = -0.10 } }
+JPC_guarantees = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = 0.07 production_speed_dockyard_factor = 0.05 } }
+JPC_north_neutral = { picture = jpc_fleet removal_cost = -1 modifier = { recruitable_population_factor = -0.08 political_power_gain = -0.05 } }
+JPC_luzon = { picture = jpc_fleet removal_cost = -1 cancel = { NOT = { owns_state = 327 } } modifier = { consumer_goods_factor = 0.04 supply_consumption_factor = 0.05 } }
+JPC_two_fronts = { picture = jpc_fleet removal_cost = -1 cancel = { OR = { NOT = { has_war_with = A01 } NOT = { has_war_with = A10 } } } modifier = { navy_org_factor = -0.08 supply_consumption_factor = 0.08 } }
+JPC_joint_staff = { picture = jpc_fleet removal_cost = -1 modifier = { supply_consumption_factor = -0.05 naval_coordination = 0.05 } }
+JPC_exhaustion = { picture = jpc_fleet removal_cost = -1 modifier = { stability_factor = -0.06 war_support_factor = -0.05 consumer_goods_factor = 0.05 } }
+JPC_credit = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = 0.05 production_speed_dockyard_factor = 0.05 } }
+JPC_pacific_watch = { picture = jpc_fleet removal_cost = -1 modifier = { army_defence_factor = 0.05 war_support_factor = 0.03 } }
+JPC_neutral_ports = { picture = jpc_credit removal_cost = -1 cancel = { has_war_with = PHW } modifier = { naval_supply_consumption_factor = -0.05 } }
+JPC_paper_victory = { picture = jpc_fleet removal_cost = -1 modifier = { stability_factor = -0.05 consumer_goods_factor = 0.05 } }
+JPC_monopoly = { picture = jpc_credit removal_cost = -1 modifier = { local_resources_factor = 0.08 consumer_goods_factor = 0.03 } }
+JPC_returned_split = { picture = jpc_fleet removal_cost = -1 modifier = { political_power_gain = -0.10 stability_factor = -0.04 } }
+JPC_recovery = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = -0.03 stability_factor = 0.03 } }
+} }

@@ -1,0 +1,128 @@
+[
+  {
+    "year": 1893,
+    "id": 4,
+    "guard": "date > 1893.2.4 BLV_is_britain = yes country_exists = A06 NOT = { has_war_with = A06 }",
+    "policy": null
+  },
+  {
+    "year": 1893,
+    "id": 11,
+    "guard": "date > 1893.4.11 country_exists = A02",
+    "policy": null
+  },
+  {
+    "year": 1893,
+    "id": 15,
+    "guard": "date > 1893.5.28 BLV_is_britain = yes",
+    "policy": null
+  },
+  {
+    "year": 1893,
+    "id": 18,
+    "guard": "date > 1893.6.27 BLV_is_britain = yes date > 1893.6.27",
+    "policy": "serum"
+  },
+  {
+    "year": 1893,
+    "id": 24,
+    "guard": "date > 1893.8.26 BLV_is_britain = yes BLV_tesla_access = yes",
+    "policy": null
+  },
+  {
+    "year": 1893,
+    "id": 33,
+    "guard": "date > 1893.11.27 BLV_is_britain = yes",
+    "policy": "passage"
+  },
+  {
+    "year": 1893,
+    "id": 39,
+    "guard": "date > 1893.10.11 BLV_is_britain = yes country_exists = A06 NOT = { has_war_with = A06 }",
+    "policy": null
+  },
+  {
+    "year": 1893,
+    "id": 40,
+    "guard": "date > 1893.11.19 has_global_flag = CH93_crowns_plot_exposed",
+    "policy": null
+  },
+  {
+    "year": 1894,
+    "id": 7,
+    "guard": "date > 1894.3.7 BLV_is_britain = yes country_exists = A01 country_exists = A03 NOT = { has_war_with = A01 } A01 = { has_war_with = A03 }",
+    "policy": null
+  },
+  {
+    "year": 1894,
+    "id": 9,
+    "guard": "date > 1894.3.24 country_exists = A02 NOT = { has_war_with = A02 } A02 = { has_capitulated = no has_country_flag = BLV_serum_contract NOT = { has_country_flag = BLV_ethical_research } }",
+    "policy": null
+  },
+  {
+    "year": 1894,
+    "id": 11,
+    "guard": "date > 1894.4.21 BLV_is_britain = yes 1021 = { is_owned_by = A02 is_controlled_by = A02 }",
+    "policy": null
+  },
+  {
+    "year": 1894,
+    "id": 20,
+    "guard": "date > 1894.7.19 BLV_is_britain = yes OR = { has_country_flag = BLV_calibrated A02 = { has_country_flag = SEN_laboratory_done BLV_tesla_access = yes } }",
+    "policy": "calibration"
+  },
+  {
+    "year": 1894,
+    "id": 30,
+    "guard": "date > 1894.10.24 BLV_is_britain = yes A02 = { has_country_flag = BLV_calibrated BLV_tesla_access = yes }",
+    "policy": "patent"
+  },
+  {
+    "year": 1894,
+    "id": 33,
+    "guard": "date > 1894.11.27 BLV_is_britain = yes 326 = { is_owned_by = A02 is_controlled_by = A02 }",
+    "policy": null
+  },
+  {
+    "year": 1895,
+    "id": 8,
+    "guard": "date > 1895.4.21 BLV_is_britain = yes 1021 = { is_owned_by = A02 is_controlled_by = A02 }",
+    "policy": null
+  },
+  {
+    "year": 1895,
+    "id": 10,
+    "guard": "date > 1895.5.19 BLV_is_britain = yes A02 = { has_country_flag = BLV_calibrated BLV_tesla_access = yes }",
+    "policy": "installation"
+  },
+  {
+    "year": 1895,
+    "id": 15,
+    "guard": "date > 1895.8.4 BLV_is_britain = yes",
+    "policy": null
+  },
+  {
+    "year": 1896,
+    "id": 10,
+    "guard": "date > 1896.5.19 BLV_is_britain = yes",
+    "policy": "airship"
+  },
+  {
+    "year": 1896,
+    "id": 12,
+    "guard": "date > 1896.6.27 tag = A07",
+    "policy": null
+  },
+  {
+    "year": 1896,
+    "id": 15,
+    "guard": "date > 1896.8.4 BLV_is_britain = yes 101 = { is_owned_by = A02 is_controlled_by = A02 }",
+    "policy": "polar"
+  },
+  {
+    "year": 1896,
+    "id": 23,
+    "guard": "date > 1896.12.9 BLV_is_britain = yes",
+    "policy": "crowns"
+  }
+]

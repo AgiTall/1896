@@ -1,0 +1,91 @@
+technologies = {
+
+gwtank = {
+ allow_branch = { NOT = { has_dlc = "No Step Back" } }
+ #Leichttraktor
+
+		enable_equipments = {
+			gw_tank_equipment
+
+		}
+		enable_subunits = {
+			light_armor
+
+		}
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		path = {
+			leads_to_tech = basic_light_tank
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = basic_heavy_tank
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1893
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1923.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1924.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1925.1.1"
+			}
+		}
+
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+		}
+
+		special_project_specialization = { specialization_land }
+	}
+}

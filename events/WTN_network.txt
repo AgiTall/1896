@@ -1,0 +1,66 @@
+add_namespace = wtn_network
+country_event = {
+ id = wtn_network.1
+ title = wtn_network.1.t
+ desc = wtn_network.1.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ timeout_days = 20
+ trigger = { WTN_can_accept_offer = yes }
+ option = { name = wtn_network.1.b ai_chance = { factor = 40 } WTN_close_offer_effect = yes }
+ option = { name = wtn_network.1.a ai_chance = { factor = 60 modifier = { factor = 0 check_variable = { WTC_debt > 60 } } } WTN_accept_offer_effect = yes }
+}
+country_event = {
+ id = wtn_network.2
+ hidden = yes
+ is_triggered_only = yes
+ trigger = { has_country_flag = WTN_offer_reserved NOT = { has_country_flag = WTN_offer_pending } }
+ immediate = { WTN_close_offer_effect = yes }
+}
+country_event = {
+ id = wtn_network.3
+ title = wtn_network.3.t
+ desc = wtn_network.3.d
+ picture = GFX_1896_event_trade
+ is_triggered_only = yes
+ timeout_days = 20
+ trigger = { WTN_can_answer_compact = yes }
+ option = {
+  name = wtn_network.3.b ai_chance = { factor = 30 }
+  hidden_effect = {
+   if = { limit = { WTN_can_answer_compact = yes }
+    FROM = {
+     clr_country_flag = WTN_compact_pending clr_country_flag = WTN_compact_waiting_reply
+     set_country_flag = { flag = WTN_compact_declined_notice days = 15 }
+     country_event = { id = wtn_network.5 days = 1 }
+    }
+   }
+  }
+ }
+ option = {
+  name = wtn_network.3.a
+  ai_chance = { factor = 70 modifier = { factor = 0 check_variable = { WTN_reputation < 20 } } }
+  hidden_effect = { if = { limit = { WTN_can_answer_compact = yes } FROM = { WTN_sign_compact_effect = yes } WTN_update_ledger_effect = yes } }
+ }
+}
+country_event = {
+ id = wtn_network.4 title = wtn_network.4.t desc = wtn_network.4.d
+ picture = GFX_1896_event_trade is_triggered_only = yes timeout_days = 20
+ trigger = { has_country_flag = WTN_compact_accepted_notice }
+ option = { name = wtn_network.ack }
+}
+country_event = {
+ id = wtn_network.5 title = wtn_network.5.t desc = wtn_network.5.d
+ picture = GFX_1896_event_trade is_triggered_only = yes timeout_days = 20
+ trigger = { has_country_flag = WTN_compact_declined_notice }
+ option = { name = wtn_network.ack }
+}
+country_event = {
+ id = wtn_network.6 hidden = yes is_triggered_only = yes
+ trigger = { has_country_flag = WTN_compact_waiting_reply NOT = { has_country_flag = WTN_compact_pending } }
+ immediate = {
+  clr_country_flag = WTN_compact_waiting_reply
+  set_country_flag = { flag = WTN_compact_declined_notice days = 15 }
+  country_event = { id = wtn_network.5 days = 1 }
+ }
+}

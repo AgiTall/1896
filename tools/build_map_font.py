@@ -10,13 +10,13 @@ from PIL import Image, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 FONT_DIR = ROOT / "gfx" / "fonts"
-SOURCE_TTF = FONT_DIR / "Preciosa.ttf"
+SOURCE_TTF = FONT_DIR / "mirandascript.ttf"
 OUTPUT_FNT = FONT_DIR / "hoi_mapfont4.fnt"
 OUTPUT_DDS = FONT_DIR / "hoi_mapfont4.dds"
 
 FONT_SIZE = 78
-LINE_HEIGHT = 78
-BASELINE = 67
+LINE_HEIGHT = 84
+BASELINE = 70
 PADDING = 4
 ATLAS_WIDTH = 2048
 ATLAS_HEIGHT = 1024
@@ -75,7 +75,7 @@ def pack(rectangles: list[dict[str, object]]) -> None:
         height = int(glyph["height"])
         candidates = [rect for rect in free if width <= rect[2] and height <= rect[3]]
         if not candidates:
-            raise RuntimeError(f"Preciosa glyph atlas does not fit {ATLAS_WIDTH}x{ATLAS_HEIGHT}")
+            raise RuntimeError(f"Miranda Script glyph atlas does not fit {ATLAS_WIDTH}x{ATLAS_HEIGHT}")
         x, y, _, _ = min(candidates, key=lambda rect: (rect[1], rect[0], rect[2] * rect[3]))
         glyph["x"] = x
         glyph["y"] = y
@@ -164,22 +164,23 @@ def main() -> None:
 
     kernings: list[tuple[int, int, int]] = []
     glyph_by_id = {int(glyph["id"]): glyph for glyph in glyphs}
+    advances = {i: g["font"].getlength(str(g["character"])) for i, g in glyph_by_id.items()}
     for first_id in character_ids:
         first_glyph = glyph_by_id[first_id]
         first = str(first_glyph["character"])
         selected_font = first_glyph["font"]
-        first_length = selected_font.getlength(first)
+        first_length = advances[first_id]
         for second_id in character_ids:
             second_glyph = glyph_by_id[second_id]
             if second_glyph["font"] is not selected_font:
                 continue
             second = str(second_glyph["character"])
-            amount = round(selected_font.getlength(first + second) - first_length - selected_font.getlength(second))
+            amount = round(selected_font.getlength(first + second) - first_length - advances[second_id])
             if amount:
                 kernings.append((first_id, second_id, amount))
 
     lines = [
-        f'info face="Preciosa" size={FONT_SIZE} bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding={PADDING},{PADDING},{PADDING},{PADDING} spacing=1,1 outline=0',
+        f'info face="Miranda script" size={FONT_SIZE} bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding={PADDING},{PADDING},{PADDING},{PADDING} spacing=1,1 outline=0',
         f"common lineHeight={LINE_HEIGHT} base={BASELINE} scaleW={ATLAS_WIDTH} scaleH={ATLAS_HEIGHT} pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0",
         'page id=0 file="hoi_mapfont4.dds"',
         f"chars count={len(glyphs)}",

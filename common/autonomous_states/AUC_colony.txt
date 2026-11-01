@@ -1,0 +1,13 @@
+autonomy_state = {
+ id = AUC_self_governing_colony
+ is_puppet = yes
+ use_overlord_color = no
+ min_freedom_level = 0.5
+ rule = { desc = AUC_self_governing_colony_desc can_not_declare_war = yes can_decline_call_to_war = yes units_deployed_to_overlord = no can_create_collaboration_government = no }
+ allowed = { OVERLORD = { tag = A02 } }
+ can_take_level = { always = no }
+ can_lose_level = { always = no }
+ ai_subject_wants_higher = { factor = 0 }
+ ai_overlord_wants_lower = { factor = 0 }
+ ai_overlord_wants_garrison = { always = no }
+}

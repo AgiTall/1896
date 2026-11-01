@@ -1,0 +1,5 @@
+A10D_development = {
+ icon = generic_naval
+ allowed = { tag = A10 }
+ visible = { has_country_flag = A10D_initialized has_completed_focus = A10_island_congress }
+}

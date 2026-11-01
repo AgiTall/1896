@@ -1,0 +1,723 @@
+{
+  "coordinates": {
+    "A03_imperial_council": [
+      20,
+      0
+    ],
+    "JPX_sea": [
+      20,
+      1
+    ],
+    "JPX_land": [
+      -18,
+      1
+    ],
+    "JPX_trade": [
+      -10,
+      1
+    ],
+    "JPX_kami": [
+      58,
+      1
+    ],
+    "JPX_throne": [
+      66,
+      1
+    ],
+    "JPC_state_guarantees": [
+      12,
+      2
+    ],
+    "JPC_northern_protocol": [
+      20,
+      2
+    ],
+    "JPC_manila_priority": [
+      30,
+      2
+    ],
+    "JPC_batavia_demands": [
+      34,
+      2
+    ],
+    "JPX_land_institution": [
+      -18,
+      2
+    ],
+    "JPX_trade_institution": [
+      -10,
+      2
+    ],
+    "JPX_kami_institution": [
+      58,
+      2
+    ],
+    "JPX_throne_institution": [
+      66,
+      2
+    ],
+    "JPF_public_accounts": [
+      10,
+      3
+    ],
+    "JPF_small_subscription": [
+      14,
+      3
+    ],
+    "JPN_north_civilian_holds": [
+      18,
+      3
+    ],
+    "JPN_north_emergency_calendar": [
+      22,
+      3
+    ],
+    "JPL_convoy_timetable": [
+      28,
+      3
+    ],
+    "JPL_names_and_units": [
+      32,
+      3
+    ],
+    "JPX_sea_institution": [
+      38,
+      3
+    ],
+    "JPC_osaka_orders": [
+      2,
+      4
+    ],
+    "JPC_honshu_depots": [
+      20,
+      4
+    ],
+    "JPC_garrison_accounts": [
+      30,
+      4
+    ],
+    "JPC_iwasaki_accounts": [
+      12,
+      5
+    ],
+    "JPN_north_supply_register": [
+      20,
+      5
+    ],
+    "JPL_port_and_mountains": [
+      30,
+      5
+    ],
+    "JPF_bond_register": [
+      12,
+      6
+    ],
+    "JPN_north_inspection_channel": [
+      18,
+      6
+    ],
+    "JPN_north_admiralty_hearing": [
+      22,
+      6
+    ],
+    "JPL_municipal_buyers": [
+      28,
+      6
+    ],
+    "JPL_payroll_inquiry": [
+      32,
+      6
+    ],
+    "JPC_one_war_cabinet": [
+      36,
+      6
+    ],
+    "JPC_pledged_yards": [
+      2,
+      7
+    ],
+    "JPF_excise_bargain": [
+      10,
+      7
+    ],
+    "JPN_north_tokyo_auditors": [
+      18,
+      7
+    ],
+    "JPC_borneo_bridgehead": [
+      36,
+      7
+    ],
+    "JPC_regional_dispatches": [
+      42,
+      7
+    ],
+    "JPC_convoy_budget": [
+      2,
+      8
+    ],
+    "JPF_delivery_calendar": [
+      14,
+      8
+    ],
+    "JPN_north_imperial_arbitration": [
+      20,
+      8
+    ],
+    "JPL_supply_board": [
+      28,
+      8
+    ],
+    "JPL_quartermaster_school": [
+      32,
+      8
+    ],
+    "JPC_casualty_returns": [
+      36,
+      8
+    ],
+    "JPC_wtc_mission": [
+      38,
+      8
+    ],
+    "JPC_honolulu_letters": [
+      42,
+      8
+    ],
+    "JPC_australian_assurances": [
+      46,
+      8
+    ],
+    "JPC_war_workshops": [
+      2,
+      9
+    ],
+    "JPF_coal_not_glory": [
+      10,
+      9
+    ],
+    "JPC_hospital_ships": [
+      32,
+      9
+    ],
+    "JPF_madeira_table": [
+      14,
+      10
+    ],
+    "JPL_medical_rotation": [
+      30,
+      10
+    ],
+    "JPC_no_short_war": [
+      34,
+      10
+    ],
+    "JPC_nz_watch": [
+      46,
+      10
+    ],
+    "JPC_replace_losses": [
+      2,
+      11
+    ],
+    "JPC_imperial_inspection": [
+      34,
+      11
+    ],
+    "JPC_sulu_escorts": [
+      28,
+      11
+    ],
+    "JPL_limited_mandate": [
+      26,
+      12
+    ],
+    "JPC_1895_accounts": [
+      34,
+      12
+    ],
+    "JPC_hold_until_talks": [
+      34,
+      13
+    ],
+    "JPC_count_the_cost": [
+      24,
+      15
+    ],
+    "JPC_oil_promise": [
+      2,
+      16
+    ],
+    "JPC_defeat_inquest": [
+      32,
+      16
+    ],
+    "JPL_borneo_is_not_luzon": [
+      36,
+      16
+    ],
+    "JPC_rebuild_ports": [
+      2,
+      17
+    ],
+    "JPF_return_small_savings": [
+      12,
+      17
+    ],
+    "JPC_partial_demobilisation": [
+      24,
+      17
+    ],
+    "JPF_royalty_register": [
+      10,
+      18
+    ],
+    "JPC_three_heads_again": [
+      24,
+      18
+    ],
+    "JPF_civil_budget": [
+      12,
+      19
+    ],
+    "JPN_north_postwar_audience": [
+      20,
+      19
+    ],
+    "JPN_north_permanent_protocol": [
+      20,
+      20
+    ],
+    "A03_manage_triple_split": [
+      8,
+      20
+    ],
+    "A03_constitutional_debate": [
+      30,
+      20
+    ],
+    "A03_two_faced_colonialism": [
+      42,
+      20
+    ],
+    "JPN_north_keep_distance": [
+      20,
+      21
+    ],
+    "A03_naval_zaibatsu_compromise": [
+      6,
+      21
+    ],
+    "A03_placate_continental_army": [
+      10,
+      21
+    ],
+    "A03_prime_minister_filter": [
+      28,
+      21
+    ],
+    "A03_direct_imperial_rule": [
+      32,
+      21
+    ],
+    "A03_asian_liberation_crusade": [
+      40,
+      21
+    ],
+    "A03_kempeitai_iron_fist": [
+      44,
+      21
+    ],
+    "A03_pacific_resource_lifeline": [
+      6,
+      22
+    ],
+    "A03_continental_ambitions": [
+      10,
+      22
+    ],
+    "A03_sacred_shield_monarch": [
+      28,
+      22
+    ],
+    "A03_divine_sovereignty": [
+      32,
+      22
+    ],
+    "A03_showcase_of_prosperity": [
+      40,
+      22
+    ],
+    "A03_total_resource_drain": [
+      44,
+      22
+    ],
+    "A03_grand_southern_mandate": [
+      8,
+      23
+    ],
+    "A03_privy_council_arbiters": [
+      28,
+      23
+    ],
+    "A03_pan_asian_brotherhood": [
+      40,
+      23
+    ],
+    "A03_labor_battalions": [
+      44,
+      23
+    ],
+    "A03_cabinet_dissolution": [
+      28,
+      24
+    ],
+    "A03_imperial_predator": [
+      42,
+      25
+    ]
+  },
+  "localisation_keys": [
+    "A01_abolish_admirals_council_desc",
+    "A01_accept_naval_appointments_desc",
+    "A01_accountable_civil_service_desc",
+    "A01_admiralty_deadline_desc",
+    "A01_agrarian_society_desc",
+    "A01_army_development_desc",
+    "A01_army_transition_desc",
+    "A01_audit_wtc_contracts_desc",
+    "A01_begin_island_defence_desc",
+    "A01_bilingual_ballots_desc",
+    "A01_borneo_australian_commitments_desc",
+    "A01_borneo_australian_defence_desc",
+    "A01_borneo_british_commitments_desc",
+    "A01_borneo_british_defence_desc",
+    "A01_borneo_fortification_directorate_desc",
+    "A01_borneo_local_commitments_desc",
+    "A01_borneo_local_defence_desc",
+    "A01_borneo_self_build_desc",
+    "A01_borneo_state_loan_desc",
+    "A01_build_bornean_fortifications_desc",
+    "A01_campaign_constitutional_desc",
+    "A01_campaign_indonesian_desc",
+    "A01_campaign_order_desc",
+    "A01_civic_development_desc",
+    "A01_civilian_defence_ministry_desc",
+    "A01_civilian_reform_mandate_desc",
+    "A01_coalition_roundtable_desc",
+    "A01_coastal_watch_desc",
+    "A01_colonial_security_policy_desc",
+    "A01_concede_naval_budget_desc",
+    "A01_congress_loosen_laws_desc",
+    "A01_congress_tighten_laws_desc",
+    "A01_conservative_victory_desc",
+    "A01_convene_council_of_sultans_desc",
+    "A01_council_concessions_desc",
+    "A01_crown_above_factions_desc",
+    "A01_crown_audiences_desc",
+    "A01_crown_compromise_desc",
+    "A01_crown_order_desc",
+    "A01_crown_struggle_desc",
+    "A01_defeat_legacy_desc",
+    "A01_demobilise_colonial_army_desc",
+    "A01_direct_rivalry_desc",
+    "A01_domestic_debt_redemption_desc",
+    "A01_dutch_literacy_desc",
+    "A01_elected_civil_service_desc",
+    "A01_electoral_commission_desc",
+    "A01_equal_citizenship_desc",
+    "A01_european_democratic_unity_desc",
+    "A01_extend_cabinet_hearings_desc",
+    "A01_factory_resettlement_desc",
+    "A01_factory_workforce_desc",
+    "A01_families_compensation_desc",
+    "A01_federal_constitution_desc",
+    "A01_federal_constitution_idea_desc",
+    "A01_federal_defence_command_desc",
+    "A01_federal_defence_command_idea_desc",
+    "A01_first_federal_election_desc",
+    "A01_fund_widows_desc",
+    "A01_future.3.d",
+    "A01_government_course_desc",
+    "A01_guard_oaths_desc",
+    "A01_honour_naval_officers_desc",
+    "A01_implement_fortification_project_desc",
+    "A01_inevitable_conflict_category_desc",
+    "A01_island_garrisons_desc",
+    "A01_island_representation_desc",
+    "A01_island_representation_idea_desc",
+    "A01_japanese_expansion_desc",
+    "A01_japanese_invasion_countdown_desc",
+    "A01_joint_naval_exercises_desc",
+    "A01_joint_officer_corps_desc",
+    "A01_joint_officer_schools_desc",
+    "A01_knil_reform_desc",
+    "A01_last_chance_to_negotiate_desc",
+    "A01_lease_brunei_desc",
+    "A01_legalise_federal_parties_desc",
+    "A01_liberal_victory_desc",
+    "A01_meet_princely_envoys_desc",
+    "A01_mobilize_colonial_police_desc",
+    "A01_motion_to_dismiss_ludolf_desc",
+    "A01_open_admiralty_accounts_desc",
+    "A01_own_fortifications_desc",
+    "A01_pacific_settlement_desc",
+    "A01_pay_the_captains_desc",
+    "A01_peoples_party_victory_desc",
+    "A01_postwar_budget_burden_desc",
+    "A01_postwar_destruction_desc",
+    "A01_production_standardisation_desc",
+    "A01_public_recovery_fund_desc",
+    "A01_purged_fleet_desc",
+    "A01_recovery_investment_desc",
+    "A01_recovery_investment_idea_desc",
+    "A01_repair_ports_desc",
+    "A01_request_fortification_project_desc",
+    "A01_restored_port_network_desc",
+    "A01_royal_dictatorship_desc",
+    "A01_royal_election_term_desc",
+    "A01_royal_story.10.d",
+    "A01_royal_story.11.d",
+    "A01_royal_story.15.d",
+    "A01_rubber_concession_desc",
+    "A01_rural_labour_duty_desc",
+    "A01_secure_witnesses_desc",
+    "A01_state_loan_desc",
+    "A01_sultanate_conference_desc",
+    "A01_supply_concession_desc",
+    "A01_town_hall_crisis_desc",
+    "A01_unpaid_families_desc",
+    "A01_veterans_register_desc",
+    "A01_wtc_port_concession_desc",
+    "A01_wtc_reconstruction_credit_desc",
+    "A01_wtc_recovery_agreement_desc",
+    "A01_wtc_recovery_guarantees_desc",
+    "A01_wtc_settlement_desc",
+    "A01_wtc_strengthening_path_desc",
+    "A03_advance_coaling_desc",
+    "A03_charter_transports_desc",
+    "A03_final_sailing_orders_desc",
+    "A03_imperial_council",
+    "A03_imperial_council_desc",
+    "A03_imperial_press_campaign_desc",
+    "A03_japanese_expansion_desc",
+    "A03_japanese_invasion_countdown_desc",
+    "A03_mobilize_reserves_desc",
+    "A03_prime_minister_filter",
+    "A03_prime_minister_filter_desc",
+    "A03_rush_second_wave_desc",
+    "A03_sacred_shield_monarch",
+    "A03_sacred_shield_monarch_desc",
+    "A03_southern_blitz_desc",
+    "A03_southern_campaign_desc",
+    "A03_southern_preparations_desc",
+    "A10_equal_citizenship_desc",
+    "A10_federal_reconstruction_desc",
+    "A10_federation_desc",
+    "A10_gendarmerie_desc",
+    "A10_integrate_1026_desc",
+    "A10_integrate_1027_desc",
+    "A10_integrate_1085_desc",
+    "A10_integrate_327_desc",
+    "A10_integrate_623_desc",
+    "A10_integrate_624_desc",
+    "A10_integrate_625_desc",
+    "A10_integrate_627_desc",
+    "A10_integrate_628_desc",
+    "A10_integration_desc",
+    "A10_local_administration_desc",
+    "A10_pacify_1026_desc",
+    "A10_pacify_1027_desc",
+    "A10_pacify_1085_desc",
+    "A10_pacify_327_desc",
+    "A10_pacify_623_desc",
+    "A10_pacify_624_desc",
+    "A10_pacify_625_desc",
+    "A10_pacify_627_desc",
+    "A10_pacify_628_desc",
+    "A10_strike_japan_desc",
+    "JPA_forced_guarantees_desc",
+    "JPC_1895_accounts",
+    "JPC_1895_accounts_desc",
+    "JPC_australian_assurances",
+    "JPC_batavia_demands",
+    "JPC_batavia_demands_desc",
+    "JPC_borneo_bridgehead",
+    "JPC_borneo_bridgehead_desc",
+    "JPC_cabinet_desc",
+    "JPC_casualty_returns",
+    "JPC_casualty_returns_desc",
+    "JPC_convoy_budget",
+    "JPC_convoy_budget_desc",
+    "JPC_count_the_cost",
+    "JPC_count_the_cost_desc",
+    "JPC_defeat_inquest",
+    "JPC_defeat_inquest_desc",
+    "JPC_emergency_shipping_desc",
+    "JPC_garrison_accounts",
+    "JPC_garrison_accounts_desc",
+    "JPC_honolulu_letters",
+    "JPC_honshu_depots",
+    "JPC_honshu_depots_desc",
+    "JPC_hospital_ships",
+    "JPC_hospital_ships_desc",
+    "JPC_imperial_inspection",
+    "JPC_imperial_inspection_desc",
+    "JPC_iwasaki_accounts",
+    "JPC_iwasaki_accounts_desc",
+    "JPC_manila_priority",
+    "JPC_manila_priority_desc",
+    "JPC_no_short_war",
+    "JPC_no_short_war_desc",
+    "JPC_northern_protocol",
+    "JPC_northern_protocol_desc",
+    "JPC_nz_watch",
+    "JPC_oil_promise",
+    "JPC_one_war_cabinet",
+    "JPC_one_war_cabinet_desc",
+    "JPC_osaka_orders",
+    "JPC_osaka_orders_desc",
+    "JPC_partial_demobilisation",
+    "JPC_pledged_yards",
+    "JPC_pledged_yards_desc",
+    "JPC_rebuild_ports",
+    "JPC_regional_dispatches",
+    "JPC_repay_credit_desc",
+    "JPC_replace_losses",
+    "JPC_replace_losses_desc",
+    "JPC_state_guarantees",
+    "JPC_state_guarantees_desc",
+    "JPC_three_heads_again",
+    "JPC_three_heads_again_desc",
+    "JPC_war_workshops",
+    "JPC_war_workshops_desc",
+    "JPC_wtc_mission",
+    "JPF_bond_register",
+    "JPF_bond_register_desc",
+    "JPF_close_ledger_desc",
+    "JPF_coal_not_glory",
+    "JPF_coal_not_glory_desc",
+    "JPF_defer_yard_orders_desc",
+    "JPF_delivery_calendar",
+    "JPF_delivery_calendar_desc",
+    "JPF_excise_bargain",
+    "JPF_excise_bargain_desc",
+    "JPF_finance_desc",
+    "JPF_levy_excise_desc",
+    "JPF_madeira_table",
+    "JPF_osaka_advance_desc",
+    "JPF_pay_dockworkers_desc",
+    "JPF_public_accounts",
+    "JPF_public_accounts_desc",
+    "JPF_publish_accounts_desc",
+    "JPF_redeem_small_savers_desc",
+    "JPF_royalty_register",
+    "JPF_service_bonds_desc",
+    "JPF_small_subscription",
+    "JPF_small_subscription_desc",
+    "JPF_voluntary_subscription_desc",
+    "JPL_convoy_timetable",
+    "JPL_convoy_timetable_desc",
+    "JPL_escort_manila_desc",
+    "JPL_hold_port_perimeter_desc",
+    "JPL_medical_rotation",
+    "JPL_municipal_buyers",
+    "JPL_names_and_units",
+    "JPL_names_and_units_desc",
+    "JPL_open_field_hospitals_desc",
+    "JPL_payroll_inquiry",
+    "JPL_port_and_mountains",
+    "JPL_prosecute_false_accounts_desc",
+    "JPL_purchase_locally_desc",
+    "JPL_quartermaster_school",
+    "JPL_quartermaster_school_desc",
+    "JPL_rotate_garrison_desc",
+    "JPL_supply_board",
+    "JPL_supply_board_desc",
+    "JPL_supply_manila_desc",
+    "JPL_verify_garrison_books_desc",
+    "JPN_north_admiralty_appropriation_desc",
+    "JPN_north_admiralty_hearing",
+    "JPN_north_bread_before_rifles_desc",
+    "JPN_north_civilian_holds",
+    "JPN_north_civilian_holds_desc",
+    "JPN_north_clear_arrears_desc",
+    "JPN_north_council_desc",
+    "JPN_north_emergency_calendar",
+    "JPN_north_emergency_calendar_desc",
+    "JPN_north_inspection_channel",
+    "JPN_north_inspection_channel_desc",
+    "JPN_north_keep_distance",
+    "JPN_north_meiji_letter_desc",
+    "JPN_north_permanent_protocol",
+    "JPN_north_permanent_protocol_desc",
+    "JPN_north_postwar_audience",
+    "JPN_north_scheduled_shipment_desc",
+    "JPN_north_supply_register",
+    "JPN_north_supply_register_desc",
+    "JPN_north_tokyo_auditors",
+    "JPN_north_tokyo_auditors_desc",
+    "JPN_north_written_postponement_desc",
+    "JPX_kami_desc",
+    "JPX_kami_institution_desc",
+    "JPX_kami_mandate_desc",
+    "JPX_land_desc",
+    "JPX_land_institution_desc",
+    "JPX_land_mandate_desc",
+    "JPX_sea_desc",
+    "JPX_sea_institution_desc",
+    "JPX_sea_mandate_desc",
+    "JPX_throne_desc",
+    "JPX_throne_institution_desc",
+    "JPX_throne_mandate_desc",
+    "JPX_trade_desc",
+    "JPX_trade_institution_desc",
+    "JPX_trade_mandate_desc",
+    "WTC_board_old_guard_desc",
+    "WTC_board_secret_desc",
+    "WTC_board_technocrats_desc",
+    "WTC_borrow_desc",
+    "WTC_cables_desc",
+    "WTC_concede_desc",
+    "WTC_debt_ledger_desc",
+    "WTC_insure_desc",
+    "WTC_naval_service_desc",
+    "WTC_port_concession_desc",
+    "WTC_repay_desc",
+    "borneo_project.1.d",
+    "expansion.11.d",
+    "japan_agency.1.d",
+    "japan_agency.2.d",
+    "japan_agency.3.d",
+    "japan_finance.5.d",
+    "southern_war.2.d",
+    "wtc_credit.22.d"
+  ],
+  "files": [
+    "localisation\\russian\\18XX_characters_l_russian.yml",
+    "localisation\\russian\\18XX_focus_l_russian.yml",
+    "localisation\\russian\\18XX_national_manifestos_l_russian.yml",
+    "localisation\\russian\\A01_colonial_constraints_l_russian.yml",
+    "localisation\\russian\\A01_decisions_l_russian.yml",
+    "localisation\\russian\\A01_industrial_transition_l_russian.yml",
+    "localisation\\russian\\A10_philippines_l_russian.yml",
+    "localisation\\russian\\pacific_content_l_russian.yml",
+    "localisation\\russian\\pz_wartime_operations_l_russian.yml",
+    "localisation\\russian\\zz_ludolf_story_l_russian.yml",
+    "localisation\\russian\\zzz_borneo_war_l_russian.yml",
+    "localisation\\russian\\zzzz_japanese_expansion_l_russian.yml",
+    "localisation\\russian\\zzzz_postwar_future_l_russian.yml",
+    "localisation\\russian\\zzzzzz_JPC_canonical_l_russian.yml",
+    "localisation\\russian\\zzzzzz_postwar_rework_l_russian.yml",
+    "localisation\\russian\\zzzzzzz_JPS_story_l_russian.yml",
+    "localisation\\russian\\zzzzzzz_WTC_credit_l_russian.yml",
+    "localisation\\russian\\zzzzzzz_monarchy_l_russian.yml",
+    "localisation\\russian\\zzzzzzzz_JPS_clocks_l_russian.yml",
+    "localisation\\russian\\zzzzzzzz_JPS_integration_l_russian.yml",
+    "localisation\\russian\\zzzzzzzz_crown_rework_l_russian.yml",
+    "localisation\\russian\\zzzzzzzzz_JPA_agency_l_russian.yml",
+    "localisation\\russian\\zzzzzzzzz_JPX_paths_l_russian.yml",
+    "localisation\\russian\\zzzzzzzzz_crown_peace_events_l_russian.yml",
+    "localisation\\russian\\zzzzzzzzzz_royal_story_l_russian.yml"
+  ]
+}

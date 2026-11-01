@@ -1,0 +1,85 @@
+WTN_world_accounts = {
+ WTN_suspend_credit = {
+  icon = generic_political_discourse cost = 0
+  visible = { NOT = { has_country_flag = WTN_credit_suspended } }
+  complete_effect = { set_country_flag = WTN_credit_suspended }
+  ai_will_do = { base = 0 }
+ }
+ WTN_resume_credit = {
+  icon = generic_political_discourse cost = 0
+  visible = { has_country_flag = WTN_credit_suspended }
+  complete_effect = { clr_country_flag = WTN_credit_suspended }
+  ai_will_do = { base = 0 }
+ }
+ WTN_offer_credit = {
+  icon = generic_political_discourse cost = 15
+  visible = { has_completed_focus = WTN_credit_committee }
+  available = { has_capitulated = no NOT = { check_variable = { WTN_liquidity < 10 } } }
+  target_trigger = { FROM = { WTN_can_open_offer = yes } }
+  complete_effect = { FROM = { WTN_open_offer_effect = yes } }
+  ai_will_do = { base = 1 modifier = { factor = 0 check_variable = { WTN_liquidity < 31 } } }
+ }
+ WTN_review_account = {
+  icon = generic_political_discourse cost = 0 days_re_enable = 7
+  target_trigger = { FROM = { exists = yes has_country_flag = WTC_ledger_open NOT = { tag = A04 } NOT = { tag = ZZZ } } }
+  complete_effect = { WTN_update_ledger_effect = yes custom_effect_tooltip = WTN_account_report_tt }
+  ai_will_do = { base = 0 }
+ }
+ WTN_relieve_account = {
+  icon = generic_political_discourse cost = 35
+  visible = { has_completed_focus = WTN_arbitration }
+  available = { has_capitulated = no NOT = { check_variable = { WTN_liquidity < 8 } } }
+  target_trigger = { FROM = { WTN_is_customer = yes check_variable = { WTC_debt > 11 } NOT = { has_country_flag = WTN_relief_cooldown } } }
+  complete_effect = {
+   if = { limit = { NOT = { check_variable = { WTN_liquidity < 8 } } FROM = { WTN_is_customer = yes check_variable = { WTC_debt > 11 } NOT = { has_country_flag = WTN_relief_cooldown } } }
+    add_to_variable = { WTN_liquidity = -8 }
+    add_to_variable = { WTN_reputation = 4 }
+    FROM = { add_to_variable = { WTC_debt = -12 } set_country_flag = { flag = WTN_relief_cooldown days = 360 } WTC_refresh_effect = yes }
+    WTN_clamp_treasury_effect = yes WTN_update_ledger_effect = yes
+   }
+  }
+  ai_will_do = { base = 1 modifier = { factor = 0 check_variable = { WTN_liquidity < 41 } } }
+ }
+ WTN_recapitalise = {
+  icon = generic_political_discourse cost = 100 days_re_enable = 180
+  available = { check_variable = { WTN_liquidity < 81 } }
+  complete_effect = { add_to_variable = { WTN_liquidity = 20 } add_to_variable = { WTN_reputation = -3 } WTN_clamp_treasury_effect = yes }
+  ai_will_do = { base = 2 modifier = { factor = 0 check_variable = { WTN_liquidity > 29 } } }
+ }
+}
+WTN_foreign_desks = {
+ WTN_request_credit = {
+  icon = generic_political_discourse cost = 20 days_re_enable = 180
+  available = { WTN_can_open_offer = yes }
+  complete_effect = { WTN_open_offer_effect = yes }
+  ai_will_do = { base = 1 modifier = { factor = 0 has_war = no } modifier = { factor = 0 check_variable = { WTC_debt > 45 } } }
+ }
+ WTN_request_compact = {
+  icon = generic_political_discourse cost = 30 days_re_enable = 180
+  visible = { has_country_flag = WTN_compact_desk_open }
+  available = { WTN_can_request_compact = yes }
+  complete_effect = { WTN_request_compact_effect = yes }
+  ai_will_do = { base = 2 }
+ }
+ WTN_terminate_compact = {
+  icon = generic_political_discourse cost = 25 days_re_enable = 180
+  visible = { has_country_flag = WTN_trade_partner }
+  available = { has_country_flag = WTN_trade_partner }
+  complete_effect = { WTN_cancel_compact_effect = yes add_stability = -0.02 }
+  ai_will_do = { base = 0 }
+ }
+ WTN_revoke_cover = {
+  icon = generic_naval cost = 50 days_re_enable = 180
+  visible = { tag = A02 has_completed_focus = WTN_BRI_independent_admiralty }
+  available = { NOT = { has_country_flag = WTN_cover_revoked } }
+  complete_effect = { set_country_flag = WTN_cover_revoked A04 = { WTC_check_cover_effect = yes } }
+  ai_will_do = { base = 0 }
+ }
+ WTN_restore_cover = {
+  icon = generic_naval cost = 25 days_re_enable = 180
+  visible = { tag = A02 has_country_flag = WTN_cover_revoked }
+  available = { country_exists = A04 NOT = { has_war_with = A04 } has_capitulated = no }
+  complete_effect = { clr_country_flag = WTN_cover_revoked A04 = { WTC_check_cover_effect = yes } }
+  ai_will_do = { base = 1 }
+ }
+}

@@ -1,0 +1,1 @@
+characters = { ATA_premier = { name = ATA_premier_name country_leader = { ideology = conservatism expire = "1965.1.1.1" traits = { } } } }

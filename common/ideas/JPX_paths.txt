@@ -1,0 +1,7 @@
+ideas = { country = {
+ JPX_sea_mandate = { picture = jpc_fleet removal_cost = -1 modifier = { navy_org_factor = 0.05 army_org_factor = -0.03 } }
+ JPX_land_mandate = { picture = jpc_north removal_cost = -1 modifier = { army_org_factor = 0.05 navy_org_factor = -0.03 } }
+ JPX_trade_mandate = { picture = jpc_credit removal_cost = -1 modifier = { consumer_goods_factor = -0.03 war_support_factor = -0.05 } }
+ JPX_kami_mandate = { picture = jpc_north removal_cost = -1 modifier = { war_support_factor = 0.06 consumer_goods_factor = 0.03 } }
+ JPX_throne_mandate = { picture = pacific_japan removal_cost = -1 modifier = { political_power_gain = 0.10 stability_factor = -0.03 } }
+} }

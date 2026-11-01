@@ -1,0 +1,872 @@
+CH95_tick = {
+ if = {
+  limit = {
+   date > 1894.12.31
+   date < 1896.1.1
+  }
+  if = {
+   limit = {
+    date > 1895.1.13
+    NOT = {
+     has_global_flag = ch95_queued_1
+    }
+   }
+   set_global_flag = ch95_queued_1
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch95.1
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_1_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.201
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.1.24
+    NOT = {
+     has_global_flag = ch95_queued_2
+    }
+   }
+   set_global_flag = ch95_queued_2
+   if = {
+    limit = {
+     country_exists = A10
+    }
+    A10 = {
+     country_event = {
+      id = ch95.2
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_2_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.202
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.2.9
+    NOT = {
+     has_global_flag = ch95_queued_3
+    }
+   }
+   set_global_flag = ch95_queued_3
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch95.3
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_3_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.203
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.2.19
+    NOT = {
+     has_global_flag = ch95_queued_4
+    }
+   }
+   set_global_flag = ch95_queued_4
+   if = {
+    limit = {
+     country_exists = PHW
+    }
+    PHW = {
+     country_event = {
+      id = ch95.4
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_4_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.204
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.3.4
+    NOT = {
+     has_global_flag = ch95_queued_5
+    }
+   }
+   set_global_flag = ch95_queued_5
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch95.5
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_5_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.205
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.3.14
+    NOT = {
+     has_global_flag = ch95_queued_6
+    }
+   }
+   set_global_flag = ch95_queued_6
+   if = {
+    limit = {
+     country_exists = A06
+    }
+    A06 = {
+     country_event = {
+      id = ch95.6
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_6_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.206
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.4.7
+    NOT = {
+     has_global_flag = ch95_queued_7
+    }
+   }
+   set_global_flag = ch95_queued_7
+   if = {
+    limit = {
+     country_exists = A03
+    }
+    A03 = {
+     country_event = {
+      id = ch95.7
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_7_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.207
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.4.21
+    NOT = {
+     has_global_flag = ch95_queued_8
+    }
+   }
+   set_global_flag = ch95_queued_8
+   if = {
+    limit = {
+     country_exists = A02
+    }
+    A02 = {
+     country_event = {
+      id = ch95.8
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_8_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.208
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.5.4
+    NOT = {
+     has_global_flag = ch95_queued_9
+    }
+   }
+   set_global_flag = ch95_queued_9
+   if = {
+    limit = {
+     country_exists = PSL
+    }
+    PSL = {
+     country_event = {
+      id = ch95.9
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_9_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.209
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.5.19
+    NOT = {
+     has_global_flag = ch95_queued_10
+    }
+   }
+   set_global_flag = ch95_queued_10
+   if = {
+    limit = {
+     country_exists = A02
+    }
+    A02 = {
+     country_event = {
+      id = ch95.10
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_10_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.210
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.6.9
+    NOT = {
+     has_global_flag = ch95_queued_11
+    }
+   }
+   set_global_flag = ch95_queued_11
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch95.11
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_11_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.211
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.6.24
+    NOT = {
+     has_global_flag = ch95_queued_12
+    }
+   }
+   set_global_flag = ch95_queued_12
+   if = {
+    limit = {
+     country_exists = A10
+    }
+    A10 = {
+     country_event = {
+      id = ch95.12
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_12_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.212
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.7.24
+    NOT = {
+     has_global_flag = ch95_queued_13
+    }
+   }
+   set_global_flag = ch95_queued_13
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch95.13
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_13_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.213
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.7.29
+    NOT = {
+     has_global_flag = ch95_queued_14
+    }
+   }
+   set_global_flag = ch95_queued_14
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch95.14
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_14_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.214
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.8.4
+    NOT = {
+     has_global_flag = ch95_queued_15
+    }
+   }
+   set_global_flag = ch95_queued_15
+   if = {
+    limit = {
+     country_exists = A02
+    }
+    A02 = {
+     country_event = {
+      id = ch95.15
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_15_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.215
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.8.14
+    NOT = {
+     has_global_flag = ch95_queued_16
+    }
+   }
+   set_global_flag = ch95_queued_16
+   if = {
+    limit = {
+     country_exists = A06
+    }
+    A06 = {
+     country_event = {
+      id = ch95.16
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_16_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.216
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.9.9
+    NOT = {
+     has_global_flag = ch95_queued_17
+    }
+   }
+   set_global_flag = ch95_queued_17
+   if = {
+    limit = {
+     country_exists = A06
+    }
+    A06 = {
+     country_event = {
+      id = ch95.17
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_17_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.217
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.9.24
+    NOT = {
+     has_global_flag = ch95_queued_18
+    }
+   }
+   set_global_flag = ch95_queued_18
+   if = {
+    limit = {
+     country_exists = A03
+    }
+    A03 = {
+     country_event = {
+      id = ch95.18
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_18_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.218
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.10.7
+    NOT = {
+     has_global_flag = ch95_queued_19
+    }
+   }
+   set_global_flag = ch95_queued_19
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch95.19
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_19_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.219
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.10.19
+    NOT = {
+     has_global_flag = ch95_queued_20
+    }
+   }
+   set_global_flag = ch95_queued_20
+   if = {
+    limit = {
+     country_exists = PHW
+    }
+    PHW = {
+     country_event = {
+      id = ch95.20
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_20_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.220
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.11.4
+    NOT = {
+     has_global_flag = ch95_queued_21
+    }
+   }
+   set_global_flag = ch95_queued_21
+   if = {
+    limit = {
+     country_exists = A01
+    }
+    A01 = {
+     country_event = {
+      id = ch95.21
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_21_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.221
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.11.14
+    NOT = {
+     has_global_flag = ch95_queued_22
+    }
+   }
+   set_global_flag = ch95_queued_22
+   if = {
+    limit = {
+     country_exists = PHR
+    }
+    PHR = {
+     country_event = {
+      id = ch95.22
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_22_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.222
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.12.4
+    NOT = {
+     has_global_flag = ch95_queued_23
+    }
+   }
+   set_global_flag = ch95_queued_23
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch95.23
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_23_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.223
+     }
+    }
+   }
+  }
+  if = {
+   limit = {
+    date > 1895.12.30
+    NOT = {
+     has_global_flag = ch95_queued_24
+    }
+   }
+   set_global_flag = ch95_queued_24
+   if = {
+    limit = {
+     country_exists = A04
+    }
+    A04 = {
+     country_event = {
+      id = ch95.24
+     }
+    }
+   }
+   else = {
+    set_global_flag = ch95_24_skipped
+    every_country = {
+     limit = {
+      is_ai = no
+     }
+     country_event = {
+      id = ch95.224
+     }
+    }
+   }
+  }
+ }
+}
+CH95_restructure = {
+ add_political_power = -40
+ WTN_initialize_effect = yes
+ add_to_variable = {
+  WTN_liquidity = -10
+ }
+ WTN_update_ledger_effect = yes
+ every_country = {
+  limit = {
+   has_country_flag = WTC_ledger_open
+   NOT = {
+    tag = A04
+   }
+   check_variable = {
+    WTC_debt > 0
+   }
+  }
+  add_to_variable = {
+   WTC_debt = -10
+  }
+  WTC_refresh_effect = yes
+  add_stability = 0.02
+ }
+}
+CH95_punish_clients = {
+ add_political_power = 40
+ every_country = {
+  limit = {
+   has_country_flag = WTC_ledger_open
+   check_variable = {
+    WTC_debt > 70
+   }
+  }
+  add_timed_idea = {
+   idea = CH95_blockade
+   days = 90
+  }
+  add_stability = -0.03
+ }
+}
+CH95_hawaii_republic = {
+ MNR_hawaii_constitutional_review = yes
+}
+CH95_hawaii_regency = {
+ MNR_hawaii_constitutional_review = yes
+}
+CH95_mobile_tesla = {
+ BLV_apply_mobile_installation = yes
+}
+CH95_tesla_tower = {
+ BLV_apply_tower_installation = yes
+}
+CH95_brunei_retreat = {
+ if = {
+  limit = {
+   has_war_with = A03
+   1023 = {
+    is_owned_by = A01
+    is_controlled_by = A01
+   }
+  }
+  1023 = {
+   set_state_controller = A03
+  }
+  add_manpower = 400
+  add_war_support = -0.03
+ }
+}
+CH95_pobedonostsev_legacy = {
+ set_country_flag = CH94_pobedonostsev_ill
+ set_country_flag = CH95_generals_council
+ clr_country_flag = CH94_pobedonostsev_dead
+}
+CH95_arms_embargo = {
+ every_country = {
+  limit = {
+   OR = {
+    tag = A01
+    tag = A03
+    tag = A10
+   }
+   has_war = yes
+  }
+  add_timed_idea = {
+   idea = CH95_embargo
+   days = 120
+  }
+ }
+}
+CH95_war_loans = {
+ WTN_initialize_effect = yes
+ if = {
+  limit = {
+   check_variable = {
+    WTN_liquidity > 19
+   }
+  }
+  add_to_variable = {
+   WTN_liquidity = -20
+  }
+  every_country = {
+   limit = {
+    OR = {
+     tag = A01
+     tag = A03
+    }
+    has_war = yes
+   }
+   WTC_initialize_effect = yes
+   add_to_variable = {
+    WTC_debt = 15
+   }
+   add_political_power = 35
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 500
+    producer = A04
+   }
+   WTC_refresh_effect = yes
+  }
+  WTN_update_ledger_effect = yes
+  add_political_power = 30
+ }
+ else = {
+  set_global_flag = ch95_19_inactive
+ }
+}
+CH95_peace_conference = {
+ set_global_flag = CH95_peace_conference_open
+ add_political_power = -30
+ every_country = {
+  limit = {
+   OR = {
+    tag = A01
+    tag = A03
+    tag = A10
+   }
+   has_war = yes
+  }
+  set_country_flag = CH95_invited_to_peace
+  add_war_support = -0.04
+  add_stability = 0.02
+ }
+}

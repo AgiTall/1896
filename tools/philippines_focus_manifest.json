@@ -1,0 +1,2369 @@
+[
+  {
+    "id": "A10_island_congress",
+    "name_ru": "Конгресс в Кавите",
+    "name_en": "The Cavite Congress",
+    "desc_ru": "Манила потеряна, но делегаты островов продолжают прибывать в Кавите. Временный конгресс должен решить, кому подчиняются казна, порты и республиканские отряды.",
+    "desc_en": "Manila has fallen, but island delegates still reach Cavite. The provisional congress must settle who commands the treasury, the ports and the republican detachments.",
+    "x": 25,
+    "y": 0,
+    "prerequisites": [],
+    "reward": "A10R_initialize = yes add_political_power = 60 country_event = { id = A10R_congress.1 days = 1 }",
+    "cost": 1,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_provincial_rolls",
+    "name_ru": "Мандаты островных советов",
+    "name_en": "Credentials of the Island Councils",
+    "desc_ru": "Не каждый человек с печатью представляет свой остров. Проверка мандатов даст общему собранию опору в муниципалитетах и деревнях.",
+    "desc_en": "A seal alone does not confer a mandate. Verifying credentials will root the assembly in the towns and villages.",
+    "x": 22,
+    "y": 1,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "reward": "add_to_variable = { A10R_cohesion = 8 } add_stability = 0.03 A10R_refresh = yes",
+    "cost": 3,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_emergency_council",
+    "name_ru": "Казна правительства в изгнании",
+    "name_en": "Treasury of the Exiled Government",
+    "desc_ru": "Корабельные расписки и пожертвования эмигрантов нужно свести в одну кассовую книгу. Даже осаждённое правительство обязано платить своим служащим.",
+    "desc_en": "Shipping receipts and emigrant donations must enter a single ledger. Even a government under siege must pay its clerks.",
+    "x": 28,
+    "y": 1,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "reward": "add_political_power = 50 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 300 producer = A10 }",
+    "cost": 3,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_confederation",
+    "name_ru": "Договор свободных республик",
+    "name_en": "Compact of Free Republics",
+    "desc_ru": "Висайи и Самар сохранят свои собрания и казну. Взамен они признают общий конгресс, обязуются оборонять соседей и направлять делегатов в Кавите.",
+    "desc_en": "The Visayas and Samar shall retain their assemblies and treasuries in return for a common congress, mutual defence and delegates to Cavite.",
+    "x": 15,
+    "y": 3,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "reward": "set_country_flag = A10_confederal_path remove_ideas = A10_separatism add_ideas = A10R_provisional_compact A10_release_PVI = yes A10_release_PSM = yes add_to_variable = { A10R_cohesion = 10 } A10R_refresh = yes",
+    "cost": 3,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [
+      "A10W_oath",
+      "A10M_coup"
+    ],
+    "ai": 20,
+    "bypass": ""
+  },
+  {
+    "id": "A10_visayan_compact",
+    "name_ru": "Хартии Себу и Паная",
+    "name_en": "Charters of Cebu and Panay",
+    "desc_ru": "Себуанские купцы требуют открытого судоходства, Панай — защиты земледельцев. Отдельные хартии объединят эти требования в обязательства республик.",
+    "desc_en": "Cebu demands open shipping and Panay protection for its farmers. Separate charters shall bind these demands into republican obligations.",
+    "x": 15,
+    "y": 4,
+    "prerequisites": [
+      [
+        "A10_confederation"
+      ]
+    ],
+    "reward": "A10_release_PCB = yes A10_release_PPN = yes add_to_variable = { A10R_cohesion = 5 } add_stability = 0.03 A10R_refresh = yes",
+    "cost": 3,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_mindanao_compact",
+    "name_ru": "Две республики Минданао",
+    "name_en": "The Two Mindanao Republics",
+    "desc_ru": "Север и юг Минданао не согласны уступать власть далёкой столице. Гарантии местного права и вера в общую оборону могут привести их за один стол.",
+    "desc_en": "Northern and southern Mindanao will not surrender authority to a distant capital. Local legal guarantees and mutual defence can bring them to one table.",
+    "x": 15,
+    "y": 5,
+    "prerequisites": [
+      [
+        "A10_visayan_compact"
+      ]
+    ],
+    "reward": "A10_release_PMD = yes A10_release_PNM = yes add_political_power = 35 country_event = { id = A10R_congress.2 days = 1 }",
+    "cost": 3,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_united_command",
+    "name_ru": "Общий штаб республик",
+    "name_en": "The Republican Joint Staff",
+    "desc_ru": "Командиры сохранят свои знамёна, но морские переправы, склады и распоряжения штаба станут общими. Спор о старшинстве не должен решать исход боя.",
+    "desc_en": "Commanders may keep their banners, but crossings, depots and staff orders must be shared. Seniority disputes must not decide a battle.",
+    "x": 15,
+    "y": 6,
+    "prerequisites": [
+      [
+        "A10_mindanao_compact"
+      ]
+    ],
+    "reward": "add_ideas = A10_common_army set_country_flag = A10R_war_ready add_war_support = 0.07 add_to_variable = { A10R_cohesion = 5 } A10R_refresh = yes",
+    "cost": 3,
+    "icon": "GFX_goal_generic_army_doctrines",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_common_treasury",
+    "name_ru": "Взносы вместо поборов",
+    "name_en": "Contributions Instead of Exactions",
+    "desc_ru": "Общий бюджет получит заранее согласованные взносы, а не случайные реквизиции. Республикам придётся отвечать за обещанное перед остальными островами.",
+    "desc_en": "Agreed contributions must replace arbitrary requisitions. Each republic shall account to the other islands for its promises.",
+    "x": 15,
+    "y": 7,
+    "prerequisites": [
+      [
+        "A10_united_command"
+      ]
+    ],
+    "reward": "add_ideas = A10R_common_treasury_spirit add_political_power = 40 add_to_variable = { A10R_cohesion = 5 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_republican_court",
+    "name_ru": "Суд межостровных споров",
+    "name_en": "Court of Inter-Island Arbitration",
+    "desc_ru": "Таможенный спор или задержанный пароход больше не будут поводом для вооружённого столкновения. Решение общего суда обязует даже влиятельные семьи.",
+    "desc_en": "A customs dispute or detained steamer must cease to be a cause for armed confrontation. The common court shall bind even the powerful families.",
+    "x": 13,
+    "y": 8,
+    "prerequisites": [
+      [
+        "A10R_common_treasury"
+      ]
+    ],
+    "reward": "add_ideas = A10R_arbitration add_to_variable = { A10R_cohesion = 8 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_language_charters",
+    "name_ru": "Языки общего дома",
+    "name_en": "Languages of the Common House",
+    "desc_ru": "Петиции на тагальском, себуанском и других островных языках получат одинаковую силу. Переводчики соединят делегатов лучше, чем запрет родной речи.",
+    "desc_en": "Petitions in Tagalog, Cebuano and the other island languages shall have equal standing. Interpreters can unite delegates better than prohibitions.",
+    "x": 17,
+    "y": 8,
+    "prerequisites": [
+      [
+        "A10R_common_treasury"
+      ]
+    ],
+    "reward": "add_stability = 0.05 add_to_variable = { A10R_cohesion = 8 } set_country_flag = A10R_languages_guaranteed A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_tenant_guarantees",
+    "name_ru": "Договор с арендаторами",
+    "name_en": "A Covenant with the Tenants",
+    "desc_ru": "Сельские отряды защищают не одни флаги. Ограничение долговых взысканий и письменные договоры аренды дадут семьям причину доверять республикам.",
+    "desc_en": "The village detachments fight for more than flags. Limits on debt seizures and written leases shall give their families reason to trust the republics.",
+    "x": 13,
+    "y": 9,
+    "prerequisites": [
+      [
+        "A10R_republican_court"
+      ]
+    ],
+    "reward": "add_ideas = A10R_tenant_rights add_to_variable = { A10R_cohesion = 6 } country_event = { id = A10R_congress.3 days = 1 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_civilian_inspectors",
+    "name_ru": "Гражданские комиссары при штабе",
+    "name_en": "Civilian Commissioners to the Staff",
+    "desc_ru": "Общий штаб отвечает перед конгрессом. Комиссары проверят ведомости снабжения и жалобы деревень, не присваивая себе командование полками.",
+    "desc_en": "The joint staff answers to congress. Commissioners shall inspect supply rolls and village complaints without assuming command of regiments.",
+    "x": 17,
+    "y": 9,
+    "prerequisites": [
+      [
+        "A10R_language_charters"
+      ]
+    ],
+    "reward": "add_political_power = 50 add_to_variable = { A10R_cohesion = 6 } add_stability = 0.03 A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_assembly_of_islands",
+    "name_ru": "Собрание всех островов",
+    "name_en": "Assembly of All the Islands",
+    "desc_ru": "Временное соглашение выдержало первые испытания. Теперь делегаты спорят, достаточно ли договора республик или народу нужен общий федеральный закон.",
+    "desc_en": "The provisional compact has survived its first trials. Delegates now dispute whether a treaty of republics is enough or the people require federal law.",
+    "x": 15,
+    "y": 10,
+    "prerequisites": [
+      [
+        "A10R_tenant_guarantees"
+      ],
+      [
+        "A10R_civilian_inspectors"
+      ]
+    ],
+    "reward": "add_to_variable = { A10R_cohesion = 10 } add_stability = 0.05 set_country_flag = A10R_constitutional_debate A10R_refresh = yes country_event = { id = A10R_congress.4 days = 1 }",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_republics_forever",
+    "name_ru": "Союз равных республик",
+    "name_en": "Union of Equal Republics",
+    "desc_ru": "Республики сохранят суверенные собрания, общую оборону и право голоса в союзном бюджете. Доверие между островами станет основой государства.",
+    "desc_en": "The republics shall retain sovereign assemblies, common defence and a voice in the union budget. Trust between islands shall sustain the state.",
+    "x": 13,
+    "y": 12,
+    "prerequisites": [
+      [
+        "A10R_assembly_of_islands"
+      ]
+    ],
+    "reward": "remove_ideas = A10R_provisional_compact add_ideas = A10R_confederal_covenant set_country_flag = A10R_permanent_confederation A10R_confederal_government = yes add_to_variable = { A10R_cohesion = 10 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [
+      "A10R_federal_convention"
+    ],
+    "ai": 15,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_rotating_presidency",
+    "name_ru": "Председательство по очереди",
+    "name_en": "A Rotating Presidency",
+    "desc_ru": "Союзный председатель не будет принадлежать одному острову навечно. Очерёдность председательства даст малым республикам весомый голос.",
+    "desc_en": "No island shall hold the union presidency forever. Rotation shall give the smaller republics an effective voice.",
+    "x": 11,
+    "y": 13,
+    "prerequisites": [
+      [
+        "A10R_republics_forever"
+      ]
+    ],
+    "reward": "add_political_power = 75 add_stability = 0.04 add_to_variable = { A10R_cohesion = 5 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_customs_union",
+    "name_ru": "Одна таможенная граница",
+    "name_en": "A Single Customs Frontier",
+    "desc_ru": "Между союзными портами исчезнут внутренние пошлины. Доходы внешней таможни будут распределяться по открытой ведомости, доступной каждой республике.",
+    "desc_en": "Internal duties shall disappear between union ports. External customs revenues shall be divided through a ledger open to every republic.",
+    "x": 13,
+    "y": 13,
+    "prerequisites": [
+      [
+        "A10R_republics_forever"
+      ]
+    ],
+    "reward": "add_ideas = A10R_customs_union_spirit add_to_variable = { A10R_cohesion = 5 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_trade",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_republican_compact_end",
+    "name_ru": "Солнце над девятью республиками",
+    "name_en": "Sun over the Nine Republics",
+    "desc_ru": "Общая присяга не требует одинаковых законов на каждом острове. Союз обретает постоянные учреждения, сохраняя множество местных голосов.",
+    "desc_en": "A common oath need not impose identical laws on every island. The union gains enduring institutions while preserving its many local voices.",
+    "x": 12,
+    "y": 15,
+    "prerequisites": [
+      [
+        "A10R_rotating_presidency"
+      ],
+      [
+        "A10R_customs_union"
+      ]
+    ],
+    "reward": "add_ideas = A10R_republican_solidarity add_stability = 0.05 add_to_variable = { A10R_cohesion = 10 } A10R_refresh = yes country_event = { id = A10R_congress.8 days = 1 }",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "check_variable = { A10R_cohesion > 49 }",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_federal_convention",
+    "name_ru": "Федеральный конвент",
+    "name_en": "The Federal Convention",
+    "desc_ru": "Сторонники федерации предлагают общее гражданство и ответственное правительство. Ни одна республика не войдёт в новый строй без собственного согласия.",
+    "desc_en": "Federalists propose common citizenship and responsible government. No republic shall enter the new order without its own consent.",
+    "x": 17,
+    "y": 12,
+    "prerequisites": [
+      [
+        "A10R_assembly_of_islands"
+      ]
+    ],
+    "reward": "set_country_flag = A10R_federal_transition add_to_variable = { A10R_cohesion = -8 } country_event = { id = A10R_congress.5 days = 1 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [
+      "A10R_republics_forever"
+    ],
+    "ai": 2,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_bill_of_rights",
+    "name_ru": "Неприкосновенные права островов",
+    "name_en": "An Entrenched Bill of Island Rights",
+    "desc_ru": "Местные языки, избираемые советы и свобода вероисповедания должны быть защищены от будущего большинства. Только так федеральный проект заслужит доверие.",
+    "desc_en": "Local languages, elected councils and freedom of worship must be protected against future majorities. Only then can the federal project earn trust.",
+    "x": 17,
+    "y": 13,
+    "prerequisites": [
+      [
+        "A10R_federal_convention"
+      ]
+    ],
+    "reward": "add_ideas = A10R_bill_of_rights_spirit add_to_variable = { A10R_cohesion = 8 } set_country_flag = A10R_federal_guarantees A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_federation",
+    "name_ru": "Провозгласить федерацию",
+    "name_en": "Proclaim the Federation",
+    "desc_ru": "Делегаты принимают федеральную конституцию. Присоединение республик остаётся предметом отдельных ратификаций; чужое молчание не будет считаться согласием.",
+    "desc_en": "Delegates adopt a federal constitution. The accession of each republic remains subject to a separate ratification; silence shall never count as consent.",
+    "x": 17,
+    "y": 14,
+    "prerequisites": [
+      [
+        "A10R_bill_of_rights"
+      ]
+    ],
+    "reward": "set_country_flag = A10_federal_path set_cosmetic_tag = A10_FED remove_ideas = PZ_philippine_confederation remove_ideas = A10R_provisional_compact add_ideas = A10_federal_administration add_stability = 0.05 country_event = { id = A10R_congress.6 days = 1 }",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "check_variable = { A10R_cohesion > 39 } OR = { check_variable = { A10R_federal_votes > 2 } NOT = { any_subject_country = { A10R_member_trigger = yes NOT = { A10R_republic_has_consented = yes } } } }",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_gendarmerie",
+    "name_ru": "Федеральная служба порядка",
+    "name_en": "A Federal Constabulary",
+    "desc_ru": "Служба порядка получит общий устав и запрет коллективных наказаний. Ей предстоит защищать дороги и суды, а не подменять собой местные советы.",
+    "desc_en": "A common statute shall prohibit collective punishment. The constabulary must protect roads and courts without replacing local councils.",
+    "x": 16,
+    "y": 15,
+    "prerequisites": [
+      [
+        "A10_federation"
+      ]
+    ],
+    "reward": "A10_federal_progress = yes add_manpower = 3000 add_to_variable = { A10R_cohesion = -3 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_local_administration",
+    "name_ru": "Выборные провинциальные советы",
+    "name_en": "Elected Provincial Councils",
+    "desc_ru": "Федеральные чиновники будут работать вместе с избранными советами. Право распоряжаться школами и дорогами останется близко к тем, кто ими пользуется.",
+    "desc_en": "Federal officials shall work alongside elected councils. Schools and roads must remain close to the people who use them.",
+    "x": 18,
+    "y": 15,
+    "prerequisites": [
+      [
+        "A10_federation"
+      ]
+    ],
+    "reward": "A10_federal_progress = yes add_stability = 0.05 add_to_variable = { A10R_cohesion = 5 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_equal_citizenship",
+    "name_ru": "Единое гражданство",
+    "name_en": "Equal Citizenship",
+    "desc_ru": "Гражданин одной провинции получит те же права в другой. Общий паспорт и равный доступ к государственной службе завершат спор о людях первого и второго разряда.",
+    "desc_en": "A citizen of one province shall have equal rights in another. A common passport and equal access to public service will end distinctions of rank between islanders.",
+    "x": 17,
+    "y": 16,
+    "prerequisites": [
+      [
+        "A10_gendarmerie"
+      ],
+      [
+        "A10_local_administration"
+      ]
+    ],
+    "reward": "A10_federal_progress = yes set_country_flag = A10R_equal_rights add_ideas = A10R_federal_citizenship add_political_power = 50",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_federal_parliament",
+    "name_ru": "Первый федеральный парламент",
+    "name_en": "The First Federal Parliament",
+    "desc_ru": "Палата населения и палата островов начнут совместную работу. Правительство будет отвечать перед избранными представителями, а армия — перед законом.",
+    "desc_en": "A population chamber and an island chamber shall begin their work. The cabinet will answer to elected representatives and the army to the law.",
+    "x": 17,
+    "y": 18,
+    "prerequisites": [
+      [
+        "A10_equal_citizenship"
+      ]
+    ],
+    "reward": "A10R_civilian_government = yes add_ideas = A10R_responsible_cabinet add_stability = 0.05 country_event = { id = A10R_congress.9 days = 1 }",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "has_war = no",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_civilian_commonwealth",
+    "name_ru": "Гражданская республика островов",
+    "name_en": "A Civil Commonwealth of Islands",
+    "desc_ru": "Университеты, провинциальные советы и парламент станут опорой общего государства. Власть, выросшая из войны, учится жить доверием граждан.",
+    "desc_en": "Universities, provincial councils and parliament shall sustain the common state. Authority born in war learns to live by the trust of its citizens.",
+    "x": 17,
+    "y": 20,
+    "prerequisites": [
+      [
+        "A10R_federal_parliament"
+      ]
+    ],
+    "reward": "add_research_slot = 1 add_to_variable = { A10R_cohesion = 10 } A10R_refresh = yes",
+    "cost": 6,
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_strike_japan",
+    "name_ru": "Вернуть северные гавани",
+    "name_en": "Recover the Northern Harbours",
+    "desc_ru": "Пока императорские корабли связаны на юге, появляется возможность вернуть гавани Лусона. Штаб готовит переправы, а правительство принимает ответственность за войну.",
+    "desc_en": "With imperial ships committed in the south, an opportunity opens to recover the Luzon harbours. The staff prepares crossings while the government accepts responsibility for war.",
+    "x": 28,
+    "y": 21,
+    "prerequisites": [
+      [
+        "A10_landing_plans"
+      ]
+    ],
+    "reward": "declare_war_on = { target = A03 type = annex_everything }",
+    "cost": 3,
+    "icon": "GFX_goal_generic_major_war",
+    "available": "country_exists = A03 is_subject = no A03 = { has_war_with = A01 } has_country_flag = A10R_war_ready NOT = { has_war_with = A03 } NOT = { has_country_flag = A10_archipelago_peace_signed } NOT = { has_country_flag = A10_manila_peace_signed }",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": "OR = { has_war_with = A03 has_country_flag = A10_archipelago_peace_signed has_country_flag = A10_manila_peace_signed NOT = { country_exists = A03 } }"
+  },
+  {
+    "id": "A10R_luzon_relief",
+    "name_ru": "Комитет помощи Лусону",
+    "name_en": "The Luzon Relief Committee",
+    "desc_ru": "Лодочники, связные и семьи беженцев знают побережье лучше любого штаба. Комитет свяжет местные отряды с республиканскими складами.",
+    "desc_en": "Boatmen, couriers and refugee families know the coast better than any staff. Their committee shall connect local detachments with republican depots.",
+    "x": 11,
+    "y": 7,
+    "prerequisites": [
+      [
+        "A10_united_command"
+      ]
+    ],
+    "reward": "add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 600 producer = A10 } add_manpower = 1500 add_war_support = 0.03",
+    "cost": 4,
+    "icon": "GFX_goal_generic_allies_build_infantry",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_luzon_charter",
+    "name_ru": "Хартия Северного Лусона",
+    "name_en": "Charter of Northern Luzon",
+    "desc_ru": "Освобождение не даёт Кавите права назначать северу хозяев. Местное собрание получит республиканскую хартию и место среди равных союзников.",
+    "desc_en": "Liberation does not entitle Cavite to impose masters on the north. A local assembly shall receive a republican charter and a place among equal allies.",
+    "x": 11,
+    "y": 9,
+    "prerequisites": [
+      [
+        "A10R_luzon_relief"
+      ]
+    ],
+    "reward": "if = { limit = { NOT = { has_country_flag = A10_federal_path } } A10_release_PNL = yes } else = { A10_federal_progress = yes } add_to_variable = { A10R_cohesion = 5 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "623 = { OR = { AND = { is_owned_by = A10 is_controlled_by = A10 } AND = { owner = { tag = PNL is_subject_of = A10 } is_controlled_by = PNL } } }",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": "PNL = { is_subject_of = A10 }"
+  },
+  {
+    "id": "A10_capital_charters",
+    "name_ru": "Манила и Батаан за общим столом",
+    "name_en": "Manila and Bataan at the Common Table",
+    "desc_ru": "Манильский порт и батареи Батаана должны охранять весь архипелаг. Их отдельные хартии не позволят столице поглотить голоса остальных республик.",
+    "desc_en": "Manila harbour and the Bataan batteries must guard the whole archipelago. Separate charters shall prevent the capital from swallowing the voices of the other republics.",
+    "x": 11,
+    "y": 11,
+    "prerequisites": [
+      [
+        "A10_luzon_charter"
+      ]
+    ],
+    "reward": "if = { limit = { NOT = { has_country_flag = A10_federal_path } } A10_release_PML = yes A10_release_PBT = yes } else = { A10_federal_progress = yes } add_stability = 0.05",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "327 = { OR = { AND = { is_owned_by = A10 is_controlled_by = A10 } AND = { owner = { tag = PML is_subject_of = A10 } is_controlled_by = PML } } } 1027 = { OR = { AND = { is_owned_by = A10 is_controlled_by = A10 } AND = { owner = { tag = PBT is_subject_of = A10 } is_controlled_by = PBT } } }",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_war_accounts",
+    "name_ru": "Счёт войны",
+    "name_en": "Accounts of the War",
+    "desc_ru": "После последних выстрелов остаются сожжённые склады, вдовы и неоплаченные расписки. Комиссия восстановления начнёт с открытого подсчёта потерь.",
+    "desc_en": "Burned warehouses, bereaved families and unpaid receipts remain after the guns fall silent. Reconstruction shall begin with an open accounting of the losses.",
+    "x": 22,
+    "y": 21,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "reward": "add_ideas = A10R_reconstruction add_political_power = 50 country_event = { id = A10R_congress.7 days = 1 }",
+    "cost": 4,
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "available": "has_war = no OR = { has_country_flag = A10_archipelago_peace_signed has_country_flag = A10_manila_peace_signed has_country_flag = A10R_defensive_armistice NOT = { country_exists = A03 } }",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_veterans_land",
+    "name_ru": "Земля и пенсии ветеранам",
+    "name_en": "Land and Pensions for Veterans",
+    "desc_ru": "Вернувшимся солдатам нужны не новые походы, а кров, работа и признание ран. Земельные комиссии разберут требования без изгнания крестьянских семей.",
+    "desc_en": "Returning soldiers need shelter, work and care for their wounds. Land commissions shall examine their claims without expelling farming families.",
+    "x": 20,
+    "y": 22,
+    "prerequisites": [
+      [
+        "A10R_war_accounts"
+      ]
+    ],
+    "reward": "add_stability = 0.06 add_war_support = -0.03 add_to_variable = { A10R_cohesion = 6 } A10R_refresh = yes",
+    "cost": 4,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10_federal_reconstruction",
+    "name_ru": "Восстановить островные гавани",
+    "name_en": "Rebuild the Island Harbours",
+    "desc_ru": "Мир не соединит острова, если пароходы не могут войти в гавань. Общие средства пойдут на причалы, карантинные станции и ремонтные мастерские.",
+    "desc_en": "Peace cannot reconnect islands whose harbours remain unusable. Common funds shall restore quays, quarantine stations and repair workshops.",
+    "x": 24,
+    "y": 22,
+    "prerequisites": [
+      [
+        "A10R_war_accounts"
+      ]
+    ],
+    "reward": "A10R_rebuild_harbour = yes A10_federal_progress = yes add_political_power = 25",
+    "cost": 4,
+    "icon": "GFX_goal_generic_construct_naval_dockyard",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10R_peace_generation",
+    "name_ru": "Поколение мира",
+    "name_en": "A Generation of Peace",
+    "desc_ru": "Дети, выросшие среди гарнизонов и беженцев, должны узнать другую жизнь. Острова направят силы на школы, торговлю и возвращение разлучённых семей.",
+    "desc_en": "Children raised among garrisons and refugees must learn another life. The islands shall turn to schools, trade and the reunion of divided families.",
+    "x": 22,
+    "y": 24,
+    "prerequisites": [
+      [
+        "A10R_veterans_land"
+      ],
+      [
+        "A10_federal_reconstruction"
+      ]
+    ],
+    "reward": "remove_ideas = A10R_reconstruction add_ideas = A10R_island_recovery add_stability = 0.05 add_to_variable = { A10R_cohesion = 8 } A10R_refresh = yes",
+    "cost": 6,
+    "icon": "GFX_goal_generic_national_unity",
+    "available": "",
+    "mutually_exclusive": [],
+    "ai": 3,
+    "bypass": ""
+  },
+  {
+    "id": "A10D_island_census",
+    "name_ru": "Перепись островных хозяйств",
+    "name_en": "The Island Household Census",
+    "desc_ru": "Сборщики пошлин знают число тюков, но не число голодных семей. Перепись лодок, колодцев и посевов покажет, какие провинции действительно способны кормить соседей.",
+    "desc_en": "Customs collectors can count bales, but not hungry households. A census of boats, wells and cultivated land will show which provinces can actually feed their neighbours.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 22,
+    "y": 4,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_confederation",
+        "A10W_oath",
+        "A10M_coup"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_political_power = 35 add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes country_event = { id = A10D_development.3 days = 3 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_municipal_roads",
+    "name_ru": "Муниципальные дороги",
+    "name_en": "Municipal Roads",
+    "desc_ru": "Дорога от поля до пристани важнее обещаний о большой железной дороге. Общины получат инструменты и оплату за мощёные участки, мосты и дренажные канавы.",
+    "desc_en": "The road from a field to its landing stage matters more than promises of a grand railway. Communities will receive tools and wages for paving, bridges and drainage ditches.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 20,
+    "y": 6,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_island_census"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_roads = yes add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_mail_ferries",
+    "name_ru": "Почтовые паромы",
+    "name_en": "The Mail Ferries",
+    "desc_ru": "Между островами ходят парусники с несовместимыми расписаниями. Договор с капитанами соединит почтовую службу, перевозку врачей и доставку зерна в одну сеть.",
+    "desc_en": "Sailing vessels connect the islands on incompatible timetables. Agreements with their captains will unite mail, visiting doctors and grain deliveries in one service.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 24,
+    "y": 6,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_island_census"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_equipment_to_stockpile = { type = convoy_1 amount = 8 producer = A10 } add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_abaca_cooperatives",
+    "name_ru": "Кооперативы абаки",
+    "name_en": "Abaca Cooperatives",
+    "desc_ru": "Корабли всего мира нуждаются в манильском пеньковом канате. Совместные склады и единый вес тюка позволят мелким производителям договариваться с купцами без разорительных авансов.",
+    "desc_en": "The world's ships need Manila hemp rope. Shared warehouses and a standard bale weight will let small growers bargain with merchants without ruinous advances.",
+    "icon": "GFX_goal_generic_trade",
+    "x": 20,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_municipal_roads"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_abaca_exports add_political_power = 35",
+    "ai": 2
+  },
+  {
+    "id": "A10D_sugar_inspectors",
+    "name_ru": "Весы сахарных пристаней",
+    "name_en": "Scales on the Sugar Quays",
+    "desc_ru": "Провинциальные инспекторы проверят вес и качество сахара, а договоры сохранят участки под рис. Экспорт не должен оставлять семьи без хлеба в сезон штормов.",
+    "desc_en": "Provincial inspectors will verify sugar weights and grades, while contracts preserve land for rice. Export earnings must not leave families hungry during the storm season.",
+    "icon": "GFX_goal_generic_trade",
+    "x": 22,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_municipal_roads"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_sugar_standards add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_timber_and_slipways",
+    "name_ru": "Лесопилки у проливов",
+    "name_en": "Sawmills on the Straits",
+    "desc_ru": "Сушильные навесы, пилорамы и учёт рубок обеспечат досками лодочников и строителей. Заказы пойдут в Себу, если остров остаётся в нашем круге, иначе — в доступные союзные мастерские.",
+    "desc_en": "Seasoning sheds, sawmills and managed cutting will supply boatbuilders and carpenters. Cebu will receive the contracts if it remains within our association; otherwise accessible member workshops will take them.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 24,
+    "y": 8,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_mail_ferries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_cebu_workshops = yes add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_provincial_workshops",
+    "name_ru": "Провинциальные мастерские",
+    "name_en": "Provincial Workshops",
+    "desc_ru": "Провинции не обязаны отдавать свои станки столице. Общие чертежи и закупка приводных ремней соединят небольшие мастерские в сеть взаимных заказов.",
+    "desc_en": "The provinces need not surrender their lathes to the capital. Shared drawings and purchases of drive belts will link small workshops through mutual orders.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 20,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_abaca_cooperatives"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_visayan_factory = yes remove_ideas = A10D_workshop_islands add_ideas = A10D_workshop_network set_technology = { early_machine_tools = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_rice_granaries",
+    "name_ru": "Рисовые амбары общин",
+    "name_en": "Communal Rice Granaries",
+    "desc_ru": "Каждая община оставит часть урожая в сухом общественном амбаре. Запас будут учитывать избранные хранители, чтобы тайфун не превращал нехватку пароходов в голод.",
+    "desc_en": "Every community will reserve part of its harvest in a dry public granary. Elected custodians will keep the accounts so that a typhoon cannot turn a steamer shortage into famine.",
+    "icon": "GFX_goal_generic_production",
+    "x": 22,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_sugar_inspectors"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_granary_network add_to_variable = { A10D_supply = 15 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_district_clinics",
+    "name_ru": "Уездные лечебницы",
+    "name_en": "District Clinics",
+    "desc_ru": "Кипячёная вода, перевязочный материал и акушерка спасают больше жизней, чем пышные столичные больницы. Лечебницы станут одновременно местом обучения санитаров для островных гарнизонов.",
+    "desc_en": "Boiled water, clean dressings and a trained midwife save more lives than magnificent hospitals in the capital. District clinics will also train orderlies for the island garrisons.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 24,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_timber_and_slipways"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_district_medicine set_technology = { tech_support = 1 } add_equipment_to_stockpile = { type = support_equipment_1 amount = 100 producer = A10 } country_event = { id = A10D_development.4 days = 2 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_normal_schools",
+    "name_ru": "Учительские семинарии",
+    "name_en": "Teacher Training Colleges",
+    "desc_ru": "Учитель должен уметь объяснить счёт, устройство насоса и содержание государственного письма на языке своей общины. Семинарии подготовят таких наставников для прибрежных городков и горных селений.",
+    "desc_en": "A teacher must explain arithmetic, a pump and an official letter in the language of the community. New colleges will prepare such teachers for coastal towns and upland villages.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 20,
+    "y": 13,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_provincial_workshops"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_teacher_colleges add_political_power = 30",
+    "ai": 2
+  },
+  {
+    "id": "A10D_cable_cooperatives",
+    "name_ru": "Кабельные артели",
+    "name_en": "Cable Cooperatives",
+    "desc_ru": "Местный телеграф не заменит океанских кабелей Палаты, зато позволит сообщать о штормах и ценах без недельного ожидания. Рыбацкие артели дадут береговые команды, мастерские — изоляторы и провод.",
+    "desc_en": "A local telegraph cannot replace the Chamber's ocean cables, but it can carry storm warnings and market prices without a week's delay. Fishing cooperatives will provide shore crews, and workshops the wire and insulators.",
+    "icon": "GFX_goal_generic_intelligence_exchange",
+    "x": 22,
+    "y": 13,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_rice_granaries"
+      ],
+      [
+        "A10D_mail_ferries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_island_telegraph add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_sanitary_commission",
+    "name_ru": "Санитарная комиссия островов",
+    "name_en": "The Islands Sanitary Commission",
+    "desc_ru": "Карантин должен останавливать лихорадку, а не торговлю. Врачи согласуют правила для портов, устроят чистые водозаборы и научат паромные команды распознавать первые признаки болезни.",
+    "desc_en": "Quarantine should stop fever rather than commerce. Doctors will agree on port regulations, establish clean water intakes and teach ferry crews to recognise the first signs of disease.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 24,
+    "y": 13,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_district_clinics"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "swap_ideas = { remove_idea = A10D_district_medicine add_idea = A10D_public_health } add_stability = 0.03 add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_island_polytechnic",
+    "name_ru": "Островной политехникум",
+    "name_en": "The Island Polytechnic",
+    "desc_ru": "Машинисты, землемеры и химики нуждаются в собственном училище. Политехникум объединит преподавателей из провинций и беженцев со старого материка вокруг практических задач островной жизни.",
+    "desc_en": "Engine drivers, surveyors and chemists need a college of their own. The polytechnic will bring provincial teachers and refugees from the old continents together around the practical problems of island life.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 21,
+    "y": 16,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_normal_schools"
+      ],
+      [
+        "A10D_cable_cooperatives"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_research_slot = 1 add_ideas = A10D_polytechnic",
+    "ai": 2
+  },
+  {
+    "id": "A10D_national_market",
+    "name_ru": "Рынок тысячи пристаней",
+    "name_en": "The Market of a Thousand Quays",
+    "desc_ru": "Расписания паромов, проверенные весы, ремесленные школы и здоровые портовые города наконец складываются в одно хозяйство. Каждый остров сохранит своё лицо, а его товары найдут дорогу к соседям.",
+    "desc_en": "Ferry timetables, honest scales, trade schools and healthy ports are finally becoming one economy. Each island will keep its character while its goods find a reliable passage to its neighbours.",
+    "icon": "GFX_goal_generic_trade",
+    "x": 22,
+    "y": 19,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_island_polytechnic"
+      ],
+      [
+        "A10D_sanitary_commission"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_market_factory = yes add_ideas = A10D_common_market add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes country_event = { id = A10D_development.6 days = 2 }",
+    "ai": 2
+  },
+  {
+    "id": "A10_coastal_arsenals",
+    "name_ru": "Береговые арсеналы",
+    "name_en": "Coastal Arsenals",
+    "desc_ru": "Защита островов начинается с сухого склада, исправного затвора и собственного оружейника. Береговые мастерские получат станки и запас винтовок для будущих гарнизонов.",
+    "desc_en": "Island defence begins with a dry store, a working bolt and a gunsmith of our own. Coastal workshops will receive machine tools and a reserve of rifles for future garrisons.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 28,
+    "y": 4,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10_confederation",
+        "A10W_oath",
+        "A10M_coup"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_arsenal = yes add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1500 producer = A10 }",
+    "ai": 4
+  },
+  {
+    "id": "A10D_rifle_inspections",
+    "name_ru": "Осмотр полковых винтовок",
+    "name_en": "The Regimental Rifle Inspection",
+    "desc_ru": "На соседних островах одинаковое слово «патрон» означает разный калибр. Оружейники перепишут системы, отделят опасные стволы и вернут в строй исправные винтовки.",
+    "desc_en": "On neighbouring islands the same word for cartridge can mean different calibres. Gunsmiths will catalogue each system, condemn unsafe barrels and return serviceable rifles to the ranks.",
+    "icon": "GFX_goal_generic_production",
+    "x": 26,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_coastal_arsenals"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "army_experience = 10 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 } add_tech_bonus = { name = A10D_rifle_studies bonus = 0.5 uses = 1 category = infantry_weapons }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_coastal_boatyards",
+    "name_ru": "Лодочные верфи",
+    "name_en": "Coastal Boatyards",
+    "desc_ru": "Малой стране нужны ремонтные стапели раньше океанских броненосцев. Лодочники и котельщики начнут строить простые грузовые суда и обслуживать прибрежные пароходы.",
+    "desc_en": "A small country needs repair slips before ocean-going battleships. Boatbuilders and boiler makers will begin with simple cargo vessels and the maintenance of coastal steamers.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 30,
+    "y": 6,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10_coastal_arsenals"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_boatyard = yes add_equipment_to_stockpile = { type = convoy_1 amount = 10 producer = A10 } add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_common_calibres",
+    "name_ru": "Общий калибр снабжения",
+    "name_en": "One Calibre for the Supply Columns",
+    "desc_ru": "Не требуется немедленно перевооружать каждого солдата. Достаточно разделить склады по системам, ввести одинаковые ящики и перестать посылать части патроны, которыми она не может стрелять.",
+    "desc_en": "We need not rearm every soldier at once. Separate stores by rifle system, standardise the ammunition boxes and stop sending units cartridges they cannot fire.",
+    "icon": "GFX_goal_generic_production",
+    "x": 26,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_rifle_inspections"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "remove_ideas = A10D_separate_quartermasters add_ideas = A10D_standard_stores add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 } add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_chart_the_straits",
+    "name_ru": "Промеры проливов",
+    "name_en": "Sound the Straits",
+    "desc_ru": "Рыбаки знают рифы, которые отсутствуют на адмиральских картах. Гидрографы запишут их знания, поставят сигнальные огни и соберут службу лоцманов для тёмных и штормовых проходов.",
+    "desc_en": "Fishermen know reefs missing from the admirals' charts. Hydrographers will record that knowledge, establish signal lights and organise pilots for passages in darkness and storms.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 30,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10D_coastal_boatyards"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "navy_experience = 15 add_ideas = A10D_pilot_stations add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10D_field_batteries",
+    "name_ru": "Полевые батареи",
+    "name_en": "Field Batteries",
+    "desc_ru": "Пехоте нужны лёгкие полевые пушки и несколько старых гаубиц, которые можно разобрать для вьючной перевозки. Расчёты обучатся выбирать позиции в джунглях и экономить привозные снаряды.",
+    "desc_en": "Infantry needs light field guns and a few old howitzers that can be broken down for pack transport. Their crews will learn to choose jungle positions and conserve imported shells.",
+    "icon": "GFX_goal_generic_army_artillery",
+    "x": 26,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_common_calibres"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "set_technology = { early_artillery = 1 } add_equipment_to_stockpile = { type = field_gun_equipment_0 amount = 48 producer = A10 } add_equipment_to_stockpile = { type = howitzer_equipment_0 amount = 12 producer = A10 } army_experience = 10",
+    "ai": 2
+  },
+  {
+    "id": "A10D_harbour_defences",
+    "name_ru": "Батареи у гаваней",
+    "name_en": "Harbour Batteries",
+    "desc_ru": "Старое морское орудие на береговом станке всё ещё опасно для десантной баржи. Укрытые склады и наблюдательные посты помогут защищать гавани без разорительного состязания с японскими броненосцами.",
+    "desc_en": "An old naval gun on a shore mounting can still threaten a landing barge. Sheltered magazines and observation posts will help defend the harbours without an unaffordable race against Japanese battleships.",
+    "icon": "GFX_goal_generic_fortify_city",
+    "x": 30,
+    "y": 10,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_chart_the_straits"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "OR = { 1084 = { A10D_eligible_state_trigger = yes } 628 = { A10D_eligible_state_trigger = yes } }",
+    "reward": "A10D_fortify_harbours = yes add_ideas = A10D_coastal_defence",
+    "ai": 2
+  },
+  {
+    "id": "A10D_sappers_and_pack_trains",
+    "name_ru": "Сапёры и вьючные колонны",
+    "name_en": "Sappers and Pack Trains",
+    "desc_ru": "Мулы, плоты и переносные мостки доставят боеприпасы туда, где не пройдёт повозка. Сапёры научатся готовить тропы до подхода колонн, а не после первых потерь от голода.",
+    "desc_en": "Mules, rafts and portable footbridges can carry ammunition where wagons fail. Sappers will prepare trails before the supply columns arrive, rather than after the first losses to hunger.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 26,
+    "y": 12,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_field_batteries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "set_technology = { tech_support = 1 tech_engineers = 1 } add_equipment_to_stockpile = { type = support_equipment_1 amount = 150 producer = A10 } add_ideas = A10D_pack_columns",
+    "ai": 2
+  },
+  {
+    "id": "A10D_merchant_reserve",
+    "name_ru": "Резерв торговых судов",
+    "name_en": "The Merchant Shipping Reserve",
+    "desc_ru": "Судовладельцы заранее узнают условия найма, а армия — грузоподъёмность каждого судна. Резервные команды не позволят мобилизации сразу остановить рисовые перевозки.",
+    "desc_en": "Shipowners will know the charter terms in advance, and the army the capacity of every vessel. Reserve crews will keep mobilisation from bringing the rice trade to an immediate halt.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 30,
+    "y": 12,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_harbour_defences"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = A10 } add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes country_event = { id = A10D_development.5 days = 2 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_staff_college",
+    "name_ru": "Штабная школа островов",
+    "name_en": "The Islands Staff College",
+    "desc_ru": "Штаб должен рассчитывать прилив так же уверенно, как численность батальона. В школе сведут полевых офицеров, лоцманов и интендантов за одним картографическим столом.",
+    "desc_en": "A staff must calculate the tide as confidently as a battalion's strength. The college will put field officers, pilots and quartermasters around the same map table.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 26,
+    "y": 14,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_sappers_and_pack_trains"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "add_ideas = A10D_staff_school army_experience = 15 add_command_power = 20",
+    "ai": 2
+  },
+  {
+    "id": "A10D_gunboat_school",
+    "name_ru": "Школа канонерских команд",
+    "name_en": "The Gunboat Crews School",
+    "desc_ru": "Будущим командирам предстоит служить на канонерках, миноносцах и вооружённых пароходах. Они начнут с котельного дела, стрельбы по щитам и сопровождения тихоходных транспортов.",
+    "desc_en": "Future commanders will serve in gunboats, torpedo craft and armed steamers. They will begin with boiler practice, gunnery targets and the escort of slow transports.",
+    "icon": "GFX_goal_generic_navy_cruiser",
+    "x": 30,
+    "y": 14,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_merchant_reserve"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "if = { limit = { has_dlc = \"Man the Guns\" } set_technology = { torpedo_boat_ship_hull_light = 1 gunboat_ship_hull_light = 1 } } else = { set_technology = { early_destroyer = 1 } } navy_experience = 20 add_tech_bonus = { name = A10D_light_vessels bonus = 0.5 uses = 1 category = naval_equipment }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_ammunition_toolrooms",
+    "name_ru": "Инструментальные цеха арсеналов",
+    "name_en": "Arsenal Toolrooms",
+    "desc_ru": "Новые цеха будут делать гильзы, пружины и запасные части по общим допускам. Заказ мал, но его можно выполнять круглый год, не ожидая очередного застрахованного каравана.",
+    "desc_en": "New toolrooms will make cartridge cases, springs and spare parts to shared tolerances. The order is modest, but it can be filled all year without waiting for another insured convoy.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 26,
+    "y": 16,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_staff_college"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_toolroom = yes add_ideas = A10D_ammunition_contracts add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 800 producer = A10 }",
+    "ai": 2
+  },
+  {
+    "id": "A10D_patrol_flotillas",
+    "name_ru": "Дозорные флотилии",
+    "name_en": "Patrol Flotillas",
+    "desc_ru": "Небольшие дозоры прикроют подходы к паромным линиям и передадут предупреждение гарнизонам. Их задача — сохранить перевозки и уйти от превосходящих сил, пока береговые батареи готовятся к бою.",
+    "desc_en": "Small patrols will cover the ferry approaches and warn the garrisons. Their task is to preserve shipping and withdraw from superior forces while the harbour batteries prepare for action.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 30,
+    "y": 16,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_gunboat_school"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "any_state = { A10D_eligible_state_trigger = yes }",
+    "reward": "A10D_build_second_boatyard = yes add_ideas = A10D_escort_service navy_experience = 10",
+    "ai": 2
+  },
+  {
+    "id": "A10_landing_plans",
+    "name_ru": "Планы островных высадок",
+    "name_en": "Plans for Island Landings",
+    "desc_ru": "Высадка начинается с пресной воды, приливной таблицы и лодки для разгрузки, а не с приказа наступать. Армия и флот отработают ограниченные операции, оставив решение о войне гражданской или военной власти.",
+    "desc_en": "A landing begins with fresh water, a tide table and an unloading boat, rather than an order to advance. The army and fleet will rehearse limited operations, leaving the decision for war to the country's government.",
+    "icon": "GFX_goal_generic_amphibious_assault",
+    "x": 28,
+    "y": 19,
+    "cost": 10,
+    "prerequisites": [
+      [
+        "A10D_ammunition_toolrooms"
+      ],
+      [
+        "A10D_patrol_flotillas"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "",
+    "reward": "if = { limit = { has_dlc = \"Man the Guns\" } set_technology = { mtg_transport = 1 } } else = { set_technology = { transport = 1 } } add_ideas = A10D_landing_staff add_command_power = 25 add_war_support = 0.08 navy_experience = 10",
+    "ai": 2
+  },
+  {
+    "id": "A10W_oath",
+    "name_ru": "Присяга торговой палате",
+    "desc_ru": "Совет островов предлагает Палате верность договорам в обмен на кредит, страхование и признание. Присяга ещё не передаёт суверенитет: каждая уступка должна получить отдельную печать. Ответ с Мадейры определит цену союза, а молчание заставит открыть собственную кассу.",
+    "name_en": "Oath to the Chamber",
+    "desc_en": "The island council offers fidelity to the Chamber’s contracts in return for credit, insurance and recognition. The oath does not surrender sovereignty: every concession requires a separate seal. Madeira’s reply will set the price of association, while silence will force us to open our own treasury.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 5,
+    "y": 3,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10_confederation",
+      "A10M_coup"
+    ],
+    "available": "always = yes",
+    "reward": "A10W_request_oath_effect = yes add_political_power = 35",
+    "ai": 0.4
+  },
+  {
+    "id": "A10W_creditors_register",
+    "name_ru": "Переписать долговые книги",
+    "desc_ru": "Векселя Манилы, расписки Себу и обязательства провинциальных касс редко сходятся в одной сумме. Общий реестр отделит законный долг от повторных требований. Палата получит прозрачные счета; острова — основание спорить с её поверенными.",
+    "name_en": "Reconcile the Debt Books",
+    "desc_en": "Manila’s bills, Cebu’s receipts and provincial treasury obligations rarely agree on a single total. A common register will separate legitimate debt from duplicate claims. The Chamber will receive transparent accounts, and the islands will gain grounds to challenge its agents.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 5,
+    "y": 4,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_oath"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_audited_ledger add_to_variable = { WTC_debt = -5 } WTC_refresh_effect = yes custom_effect_tooltip = A10W_accounts_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_bonded_warehouses",
+    "name_ru": "Склады под двойной печатью",
+    "desc_ru": "Ни одна партия абаки не должна исчезать между пристанью и таможней. Склады будут запирать местный сборщик и поверенный страховщика; часть сборов обеспечит портовые работы. Купцы получат надёжный оборот, но аренда складов сделает каждую поставку дороже.",
+    "name_en": "Warehouses under Two Seals",
+    "desc_en": "No shipment of abaca should disappear between quay and customs house. A local collector and an insurer’s agent will seal the warehouses together, and a share of the fees will support harbour works. Merchants gain reliable trade at the cost of dearer storage.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 3,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_creditors_register"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_bonded_customs add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_silver_convoy",
+    "name_ru": "Полис «Серебряного конвоя»",
+    "desc_ru": "Подпись старой гвардии открывает страховую книгу, но не превращает торговые суда в броненосцы. Мы оплатим ограниченный полис и подготовим местный страховой резерв на случай отказа. Убытки придётся считать даже под самым дорогим флагом.",
+    "name_en": "The Silver Convoy Policy",
+    "desc_en": "The old guard’s signature opens the insurance book without turning merchantmen into ironclads. We will pay for a limited policy and prepare a local reserve should the application fail. Losses must still be counted beneath the costliest flag.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 7,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_creditors_register"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "if = { limit = { A10W_chamber_reachable = yes has_country_flag = A10W_oath_accepted } add_timed_idea = { idea = WTC_silver_convoy days = 240 } add_to_variable = { WTC_debt = 3 } WTC_refresh_effect = yes } else = { add_political_power = 35 }",
+    "ai": 1
+  },
+  {
+    "id": "A10W_cable_priority",
+    "name_ru": "Кабель и портовая стража",
+    "desc_ru": "Связь с Мадейрой бесполезна, если противник первым займёт телеграфную станцию. Совместим кабельный договор с дозорами на пристанях, сигнальными постами и учениями островных рот. Палата продаёт доступ к сведениям; защищать берега предстоит нашим людям.",
+    "name_en": "Cable and Harbour Watch",
+    "desc_en": "A cable to Madeira is useless if an enemy captures the telegraph station first. The cable agreement will be paired with quay patrols, signal posts and drills for island companies. The Chamber sells access to information; our own people must defend the shore.",
+    "icon": "GFX_goal_generic_defence",
+    "x": 5,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_bonded_warehouses"
+      ],
+      [
+        "A10W_silver_convoy"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "set_country_flag = A10R_war_ready add_ideas = A10W_port_watch add_command_power = 15 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 } if = { limit = { A10W_chamber_reachable = yes has_country_flag = A10W_oath_accepted } add_timed_idea = { idea = WTC_cable_contract days = 180 } add_to_variable = { WTC_debt = 3 } WTC_refresh_effect = yes }",
+    "ai": 1
+  },
+  {
+    "id": "A10W_harbour_survey",
+    "name_ru": "Опись причалов и маяков",
+    "desc_ru": "Поверенные требуют карту доходов, судовладельцы — карту мелей. Одна экспедиция составит обе, проверив фарватеры, маяки и склады. Новые работы оплачиваются векселями: каждый причал должен принести больше, чем стоит его обслуживание.",
+    "name_en": "Survey the Quays and Lights",
+    "desc_en": "The agents demand a map of revenues, while shipowners require a map of shoals. One survey will produce both by inspecting channels, lights and warehouses. New works are paid through bills: every quay must earn more than its upkeep.",
+    "icon": "GFX_goal_generic_construct_infrastructure",
+    "x": 3,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_cable_priority"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { WTC_debt = 5 } WTC_refresh_effect = yes if = { limit = { capital_scope = { is_owned_by = A10 is_controlled_by = A10 } } capital_scope = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } } } navy_experience = 10",
+    "ai": 1
+  },
+  {
+    "id": "A10W_local_shareholding",
+    "name_ru": "Доли для островных домов",
+    "desc_ru": "Если все дивиденды уплывут на Мадейру, присяга останется чужой сделкой. Выделим долю местным торговым домам, кооперативам грузчиков и провинциальным кассам. Их представители смогут проверять отчёты, хотя крупные держатели уже спорят о числе голосов.",
+    "name_en": "Shares for Island Houses",
+    "desc_en": "If every dividend sails to Madeira, the oath will remain a foreign bargain. We will reserve shares for island trading houses, dockers’ cooperatives and provincial treasuries. Their delegates may examine the accounts, though large holders already dispute the voting rules.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 7,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_cable_priority"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_local_shareholders add_to_variable = { A10W_charter_tension = -10 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_charter_congress",
+    "name_ru": "Съезд под двумя печатями",
+    "desc_ru": "На стол съезда положены два проекта: островная колониальная хартия под покровительством Палаты и самостоятельная метрополия её восточной сети. Ни один не отменяет права делегатов спорить о труде, налогах и представительстве. Прежде чем выбрать хозяина книги, договоримся, кто сможет её читать.",
+    "name_en": "Congress beneath Two Seals",
+    "desc_en": "The congress has two drafts before it: an island colonial charter under Chamber protection, and a sovereign metropole of its eastern network. Neither removes disputes over labour, taxation and representation. Before choosing the keeper of the ledger, we must decide who may read it.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 5,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_harbour_survey"
+      ],
+      [
+        "A10W_local_shareholding"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "remove_ideas = A10_separatism country_event = { id = A10W_path.8 days = 1 }",
+    "ai": 1
+  },
+  {
+    "id": "A10W_colonial_charter",
+    "name_ru": "Проект колониальной хартии",
+    "desc_ru": "Сторонники покровительства готовы передать внешние договоры Палате, сохранив островные суды и местную стражу. Пока обе стороны не ратифицируют конвенцию, документ остаётся внутренним уставом. Даже самая подробная хартия не даёт Мадейре власти без её согласия.",
+    "name_en": "Draft a Colonial Charter",
+    "desc_en": "The protection party will entrust foreign agreements to the Chamber while retaining island courts and a local constabulary. Until both sides ratify a convention, the document remains an internal charter. Even the most detailed charter grants Madeira no authority without its consent.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 9,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_charter_congress"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10W_metropolitan_charter"
+    ],
+    "available": "always = yes",
+    "reward": "set_country_flag = A10W_colonial_selected add_ideas = A10W_provisional_charter custom_effect_tooltip = A10W_colony_draft_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_resident_council",
+    "name_ru": "Совет при резиденте",
+    "desc_ru": "Резидент должен знать острова через избранных поверенных, а не только через счета экспортёров. Провинции получат места в совете, но печать казначейства останется общей. Такая власть работает быстрее съезда и вызывает немало подозрений у тех, кто лишится последнего слова.",
+    "name_en": "The Resident’s Council",
+    "desc_en": "The resident must know the islands through appointed local delegates as well as exporters’ accounts. Provinces will receive seats on the council, while the treasury seal remains central. Such authority works faster than congress and attracts suspicion from those losing their final say.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 1,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_colonial_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_resident_council_spirit add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_revenue_covenant",
+    "name_ru": "Разделить портовые сборы",
+    "desc_ru": "Определим заранее, сколько сборов идёт на причалы, сколько — на островную казну и сколько — кредиторам. Публичные доли урежут старые расписки без передачи самой земли. Уступка доходов облегчит долг сегодня и стеснит стройки в ближайшие месяцы.",
+    "name_en": "Apportion the Port Dues",
+    "desc_en": "We will establish how much of each due supports quays, the island treasury and creditors. Published shares can reduce old obligations without transferring land. Assigning revenues lightens debt today and constrains construction in the coming months.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 3,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_colonial_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { WTC_debt = -10 } add_timed_idea = { idea = WTC_port_concession days = 180 } add_to_variable = { A10W_charter_tension = 5 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_charter_constabulary",
+    "name_ru": "Островная контрактная стража",
+    "desc_ru": "Палата не пришлёт армию для каждой таможенной ссоры. Службу у складов, мостов и телеграфа возьмут островные роты с единым жалованьем. Стража подчинится местным начальникам; её содержание войдёт в бюджет хартии.",
+    "name_en": "The Island Charter Constabulary",
+    "desc_en": "The Chamber will not send an army for every customs dispute. Island companies with regular pay will guard warehouses, bridges and telegraphs. The constabulary will answer to local officers, and its upkeep will appear in the charter budget.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 1,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_resident_council"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "army_experience = 15 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 800 producer = A10 } add_command_power = 10",
+    "ai": 1
+  },
+  {
+    "id": "A10W_export_estates",
+    "name_ru": "Абака, сахар и аренда",
+    "desc_ru": "Экспортные дома обещают средства для дорог в обмен на долгие договоры аренды. Межи проверят местные суды, а ставки занесут в общую книгу. Выручка расширит хозяйство, но земледельцы опасаются, что чужие векселя окажутся прочнее их прав.",
+    "name_en": "Abaca, Sugar and Leaseholds",
+    "desc_en": "Export houses offer road funding in return for long leases. Local courts will verify boundaries and record the rates in a common register. Revenues will expand the economy, though cultivators fear foreign bills may prove stronger than their rights.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 3,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_revenue_covenant"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_export_estates_spirit A10W_workshop_effect = yes add_to_variable = { WTC_debt = 8 } add_to_variable = { A10W_charter_tension = 15 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_debt_conversion",
+    "name_ru": "Обмен долга на длинные бумаги",
+    "desc_ru": "Короткие расписки грозят казне новым кризисом при каждом выходе судна. Заменим их долгими бумагами под согласованные сборы и публичную отчётность. Это сократит внешний счёт, но будущие бюджеты ещё долго будут оплачивать нынешнюю передышку.",
+    "name_en": "Convert the Debt into Long Bonds",
+    "desc_en": "Short notes threaten a treasury crisis whenever a ship departs. We will replace them with long bonds secured against agreed dues and public accounts. The external balance will fall, while future budgets continue paying for the present respite.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_charter_constabulary"
+      ],
+      [
+        "A10W_export_estates"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { WTC_debt = -15 } add_to_variable = { A10W_charter_tension = 5 } add_timed_idea = { idea = A10W_emergency_mediation days = 180 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_colony",
+    "name_ru": "Ратифицировать островную колонию",
+    "desc_ru": "Пошлём окончательную конвенцию на Мадейру: Палата получает верховное покровительство, острова сохраняют собственное управление и вооружённую стражу. Согласие превратит хартию в реальную зависимость. Отказ оставит наш кабинет у власти и откроет новый раунд переговоров после передышки.",
+    "name_en": "Ratify the Island Colony",
+    "desc_en": "We will send Madeira the final convention: the Chamber receives paramount protection, while the islands retain local administration and armed guards. Acceptance will turn the charter into actual dependency. Refusal leaves our cabinet in office and allows a renewed negotiation after an interval.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 13,
+    "cost": 7,
+    "prerequisites": [
+      [
+        "A10W_debt_conversion"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "A10W_request_colony_effect = yes custom_effect_tooltip = A10W_colony_convention_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_port_welfare",
+    "name_ru": "Лазареты у причалов",
+    "desc_ru": "Постоянные отчисления на воду, лазареты и помощь семьям грузчиков обойдутся дороже разовой милостыни. Зато эпидемия или несчастье не будет всякий раз останавливать порт. Совет хартии отвечает за эти расходы при любом исходе переговоров с Палатой.",
+    "name_en": "Hospitals beside the Quays",
+    "desc_en": "Regular funding for water, hospitals and dockers’ families costs more than occasional charity. An epidemic or accident need no longer close the harbour each time. The charter council will meet these obligations regardless of the Chamber’s response.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 2,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_colony"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_port_hospitals add_to_variable = { A10W_charter_tension = -15 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_metropolitan_charter",
+    "name_ru": "Проект новой метрополии",
+    "desc_ru": "Зачем вечно отправлять книги на другой край света, если главный оборот проходит у наших берегов? Островные дома предлагают собственный директорат и восточный центр расчётов. Мадейра получит предложение стать автономной атлантической конторой, а не приказ покинуть свои земли.",
+    "name_en": "Draft a New Metropole",
+    "desc_en": "Why must the books cross the world when the principal traffic passes our shores? Island houses propose their own directorate and an eastern clearing centre. Madeira will receive an invitation to become an autonomous Atlantic office, never an order to surrender its land.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 8,
+    "y": 9,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_charter_congress"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10W_colonial_charter"
+    ],
+    "available": "always = yes",
+    "reward": "set_country_flag = A10W_metropolitan_selected add_ideas = A10W_provisional_exchange custom_effect_tooltip = A10W_metropole_draft_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_island_registries",
+    "name_ru": "Островные торговые реестры",
+    "desc_ru": "Новая метрополия начинается с признанных подписей, образцов мер и надёжного хранения контрактов. Канцелярии приведут портовые книги к одному порядку. Ни одна контора не получит власть над чужим берегом только потому, что занесла его в свой атлас.",
+    "name_en": "Island Commercial Registers",
+    "desc_en": "A new metropole begins with recognized signatures, standard measures and reliable custody of contracts. Clerks will bring the port books under common rules. No office acquires authority over another shore merely by entering it in an atlas.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 7,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_metropolitan_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_political_power = 50 add_to_variable = { A10W_charter_tension = -5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_merchant_assembly",
+    "name_ru": "Собрание торговых домов",
+    "desc_ru": "Островные дома согласны содержать общий секретариат, если решения не замкнутся в нескольких семьях. Распределим места между портами и учредим слушания по крупным договорам. Новое собрание ускорит сбор средств, но споры о дивидендах останутся частью его жизни.",
+    "name_en": "Assembly of Merchant Houses",
+    "desc_en": "Island houses will fund a common secretariat if decisions do not remain confined to a handful of families. Seats will be apportioned among ports, with hearings for major contracts. The assembly will raise funds more readily, though dividend disputes remain part of its life.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 9,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_metropolitan_charter"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_merchant_assembly_spirit add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_duplicate_cables",
+    "name_ru": "Копии по двум кабелям",
+    "desc_ru": "Одна оборванная линия не должна лишать острова всех котировок и приказов. Школы связистов подготовят людей для запасных станций, а важные книги будут храниться в нескольких портах. Технократам обещан заказ на оборудование вместо права закрывать сведения.",
+    "name_en": "Copies over Two Cables",
+    "desc_en": "A severed line must not deprive the islands of every quotation and order. Signal schools will staff reserve stations, while important books are stored in several ports. Technocrats will receive equipment orders rather than the right to suppress information.",
+    "icon": "GFX_goal_generic_scientific_exchange",
+    "x": 7,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_island_registries"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_duplicate_cables_spirit add_to_variable = { WTC_debt = 5 } WTC_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_secretariat_rules",
+    "name_ru": "Ограничить тайный секретариат",
+    "desc_ru": "Закрытая переписка нужна торговле, но секретный департамент охотно превращает её в отдельную власть. Учредим двойную подпись на чрезвычайных поручениях и закрытую проверку расходов. Часть поверенных уйдёт, зато островной совет узнает цену собственных тайн.",
+    "name_en": "Bind the Secret Secretariat",
+    "desc_en": "Commerce needs confidential correspondence, but the secret department readily turns secrecy into a separate power. Emergency instructions will require two signatures, with private audits of expenditure. Some agents will depart, but the island council will know the cost of its own secrets.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 9,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_merchant_assembly"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_to_variable = { A10W_charter_tension = -10 } add_stability = 0.03 add_political_power = -25 A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_escrow_exchange",
+    "name_ru": "Биржа обеспеченных обязательств",
+    "desc_ru": "Наши расписки должны опираться на реальные склады и проверенные доходы. Биржа введёт залоговые счета, открытые тарифы и суд для торговых споров. Прибыль останется умереннее громких обещаний, зато меньше домов обрушится от одной пропавшей шхуны.",
+    "name_en": "Exchange of Secured Obligations",
+    "desc_en": "Our notes must rest on real warehouses and verified revenues. The exchange will establish escrow accounts, published tariffs and a court for commercial disputes. Returns may be more modest than grand promises, but fewer houses will collapse when a single schooner disappears.",
+    "icon": "GFX_goal_generic_construct_civ_factory",
+    "x": 8,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_duplicate_cables"
+      ],
+      [
+        "A10W_secretariat_rules"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_escrow_courts A10W_workshop_effect = yes add_to_variable = { WTC_debt = 8 } add_to_variable = { A10W_charter_tension = 5 } WTC_refresh_effect = yes A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10W_new_metropole",
+    "name_ru": "Манильская конвенция",
+    "desc_ru": "Предложим Мадейре перенести верховный расчётный центр на острова и сохранить за старой палатой широкую автономию атлантической конторы. Такая перемена требует её добровольной подписи. Пока Манила не возвращена, директорат будет заседать при временной островной бирже; отказ Мадейры не закроет её двери.",
+    "name_en": "The Manila Convention",
+    "desc_en": "We will invite Madeira to place the principal clearing centre in the islands while retaining broad autonomy as the Atlantic office. This change requires its voluntary signature. Until Manila is recovered, the directorate will sit at a provisional island exchange; Madeira’s refusal will not close its doors.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 8,
+    "y": 13,
+    "cost": 7,
+    "prerequisites": [
+      [
+        "A10W_escrow_exchange"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "A10W_request_metropole_effect = yes custom_effect_tooltip = A10W_metropole_convention_tt",
+    "ai": 1
+  },
+  {
+    "id": "A10W_oceanic_covenant",
+    "name_ru": "Хартия двух океанов",
+    "desc_ru": "Свяжем страховые резервы, школы связи и сопровождение судов общим уставом. Каждая контора отвечает за свои убытки и нанимает охрану по договору; островная армия не становится войском Палаты. Так новая сеть сможет расти через согласованные сделки, сохраняя цену каждой гарантии в книгах.",
+    "name_en": "Covenant of Two Oceans",
+    "desc_en": "A common covenant will connect insurance reserves, signal schools and convoy protection. Each office bears its own losses and hires guards by contract; the island army remains under island command. The new network can grow through agreed bargains, with every guarantee’s cost recorded in its books.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 8,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10W_new_metropole"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "always = yes",
+    "reward": "add_ideas = A10W_network_covenant add_to_variable = { A10W_charter_tension = 5 } A10W_refresh_effect = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10M_coup",
+    "name_ru": "Ночь запертых дверей",
+    "desc_ru": "Караулы перекроют подходы к островному конгрессу. Полковник Матео Сандоваль объявит, что свобода республик стала прикрытием бессилия, и передаст власть чрезвычайному военному командованию. Делегатов отпустят лишь после присяги.",
+    "name_en": "The Night of Locked Doors",
+    "desc_en": "Guards will seal the approaches to the island congress. Colonel Mateo Sandoval will declare the republics' freedom a cover for impotence and place power in an emergency military command. Delegates will leave only after taking its oath.",
+    "icon": "GFX_goal_generic_military_sphere",
+    "x": 38,
+    "y": 3,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10_island_congress"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10_confederation",
+      "A10W_oath"
+    ],
+    "available": "is_subject = no",
+    "reward": "A10M_begin_coup = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10M_martial_law",
+    "name_ru": "Приказ о чрезвычайном положении",
+    "desc_ru": "Военные коменданты получат контроль над портами, телеграфом и ночным движением. За каждым обещанием порядка останется семья, которой придётся просить разрешение на обычную жизнь.",
+    "name_en": "The Emergency Proclamation",
+    "desc_en": "Military commandants will control ports, telegraphs and movement after dark. Behind every promise of order stands a family forced to request permission for ordinary life.",
+    "icon": "GFX_goal_generic_major_war",
+    "x": 38,
+    "y": 4,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_coup"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_political_power = 50 add_to_variable = { var = A10M_repression value = 10 } add_to_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_recall_charters",
+    "name_ru": "Отозвать островные хартии",
+    "desc_ru": "Коменданты заменят советы там, где власть конгресса ещё признаётся. Подчинённые нам республики вернут войска и учреждения общему командованию; за чужими границами одного приказа недостаточно.",
+    "name_en": "Revoke the Island Charters",
+    "desc_en": "Commandants will replace councils wherever the congress is still obeyed. Republics subordinate to us will return troops and institutions to the common command; an order alone cannot cross foreign frontiers.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 36,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_martial_law"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_recall_members = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_censor_cables",
+    "name_ru": "Тишина на проводах",
+    "desc_ru": "Частные кабельные сообщения будут проходить через цензора. Режим сможет скрывать передвижения гарнизонов, но вместе с опасными слухами исчезнут сведения, без которых купцы и учёные работают вслепую.",
+    "name_en": "Silence on the Wires",
+    "desc_en": "Private cable messages will pass through a censor. The regime can conceal garrison movements, but useful reports will disappear beside dangerous rumours, leaving merchants and scholars to work blind.",
+    "icon": "GFX_goal_generic_propaganda",
+    "x": 40,
+    "y": 5,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_martial_law"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_censored_society add_to_variable = { var = A10M_repression value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_officer_tribunal",
+    "name_ru": "Трибунал над старым штабом",
+    "desc_ru": "Офицеры, вчера охранявшие конгресс, сегодня должны ответить за его слабость. Процесс определит, станет ли армия орудием личной верности Сандовалю или сохранит место для профессионального возражения.",
+    "name_en": "Tribunal of the Old Staff",
+    "desc_en": "Officers who guarded the congress yesterday must answer for its weakness today. Their trial will decide whether the army becomes an instrument of personal loyalty to Sandoval or retains room for professional dissent.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 38,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_recall_charters"
+      ],
+      [
+        "A10M_censor_cables"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "set_country_flag = A10R_war_ready army_experience = 15 country_event = { id = A10M.2 days = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_rice_commissions",
+    "name_ru": "Рисовые комиссии",
+    "desc_ru": "Без риса не удержать ни гарнизон, ни портовый квартал. Комиссии перепишут запасы и семейные наделы, чтобы штаб впервые увидел цену своих заявок на снабжение.",
+    "name_en": "Rice Commissions",
+    "desc_en": "Neither a garrison nor a dockside district can be held without rice. Commissions will register stocks and household plots so that headquarters can finally see the cost of its supply demands.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 34,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_recall_charters"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "subtract_from_variable = { var = A10M_strain value = 10 } add_political_power = 25 A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_requisition",
+    "name_ru": "Складские книги командования",
+    "desc_ru": "Поставки объединят в обязательные квоты. Арсеналы получат более ровный поток сырья, а сельские пристани — наряды, которым всё труднее соответствовать.",
+    "name_en": "The Command's Warehouse Ledgers",
+    "desc_en": "Deliveries will be combined into compulsory quotas. Arsenals will receive a steadier flow of material while rural landings receive demands that grow harder to fulfil.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 36,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_rice_commissions"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_requisition_bureaus custom_effect_tooltip = A10M_requisition_tt",
+    "ai": 2
+  },
+  {
+    "id": "A10M_compensation",
+    "name_ru": "Расписки вместо конфискаций",
+    "desc_ru": "Военные квитанции должны стать обязательством казны. Выплаты обременят бюджет, зато поставщики смогут снова закупать зерно и не прятать лодки при виде мундира.",
+    "name_en": "Receipts Instead of Confiscations",
+    "desc_en": "Military receipts must become obligations of the treasury. Payments will burden the budget, but suppliers will be able to buy grain again instead of hiding their boats at the sight of a uniform.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 34,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_requisition"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_labour_battalions"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_compensation_bonds subtract_from_variable = { var = A10M_opposition value = 8 } custom_effect_tooltip = A10M_compensation_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_labour_battalions",
+    "name_ru": "Трудовые батальоны",
+    "desc_ru": "Радикалы требуют поставить людей на строительство казарм и мастерских по приказу. Работы ускорятся, но семьи лишатся работников, а за проволокой возникнет новая, более непримиримая оппозиция.",
+    "name_en": "Labour Battalions",
+    "desc_en": "Radicals demand that men be ordered into barracks and workshop construction. Work will accelerate, but families will lose their workers and a more implacable opposition will form behind the wire.",
+    "icon": "GFX_goal_generic_construct_mil_factory",
+    "x": 36,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_requisition"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_compensation"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_compulsory_labour add_to_variable = { var = A10M_repression value = 10 } add_to_variable = { var = A10M_opposition value = 10 } custom_effect_tooltip = A10M_labour_tt A10M_update = yes",
+    "ai": 1
+  },
+  {
+    "id": "A10M_cadet_schools",
+    "name_ru": "Школы военного сословия",
+    "desc_ru": "Коменданты отберут способных юношей для ускоренных офицерских курсов. Образование откроет дорогу тем, кого не принимали старые семейные связи, и одновременно привяжет их будущее к режиму.",
+    "name_en": "Schools of the Military Estate",
+    "desc_en": "Commandants will select able youths for accelerated officer courses. Education will open doors once closed by family connections while binding their future to the regime.",
+    "icon": "GFX_goal_generic_special_forces",
+    "x": 42,
+    "y": 6,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_censor_cables"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_cadet_estate army_experience = 10",
+    "ai": 2
+  },
+  {
+    "id": "A10M_levy_rolls",
+    "name_ru": "Единые призывные списки",
+    "desc_ru": "Разрозненные островные списки сведут воедино. Штаб получит резерв, но мастерские начнут терять опытные руки; командиры обязаны учитывать, кто ещё способен кормить призванных.",
+    "name_en": "Unified Levy Rolls",
+    "desc_en": "Scattered island registers will be brought together. Headquarters will gain a reserve, but workshops will begin losing skilled hands; commanders must account for who can still feed the conscripts.",
+    "icon": "GFX_goal_generic_small_arms",
+    "x": 42,
+    "y": 7,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_cadet_schools"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_military_levies add_manpower = 3500 add_to_variable = { var = A10M_strain value = 7 } add_to_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_medical_corps",
+    "name_ru": "Санитарные команды гарнизонов",
+    "desc_ru": "Полевые лазареты должны остановить потери, которые не видны на карте боёв. На санитарные лодки и лекарства придётся выделить место в каждом снабженческом рейсе.",
+    "name_en": "Garrison Medical Teams",
+    "desc_en": "Field infirmaries must stop losses invisible on battle maps. Medical boats and supplies will need space on every supply voyage.",
+    "icon": "GFX_goal_generic_special_forces",
+    "x": 42,
+    "y": 8,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_levy_rolls"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_field_hospitals subtract_from_variable = { var = A10M_strain value = 8 } custom_effect_tooltip = A10M_hospitals_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_quartermasters",
+    "name_ru": "Инспекция интендантов",
+    "desc_ru": "Складской отчёт не должен зависеть от настроения коменданта. Инспекторы проверят потери и распределение лодок, лишив местных начальников части привычного дохода.",
+    "name_en": "Quartermaster Inspectorate",
+    "desc_en": "Warehouse reports must no longer depend on a commandant's mood. Inspectors will examine losses and boat allocation, depriving local commanders of part of their customary income.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 38,
+    "y": 9,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_officer_tribunal"
+      ],
+      [
+        "A10M_requisition"
+      ],
+      [
+        "A10M_medical_corps"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_supply_inspectorate subtract_from_variable = { var = A10M_strain value = 10 } custom_effect_tooltip = A10M_inspectorate_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_junta",
+    "name_ru": "Власть вечного караула",
+    "desc_ru": "Радикальные полковники отвергают обещание временной власти. По их уставу мирная жизнь станет продолжением военной службы, а само чрезвычайное положение — основой государства.",
+    "name_en": "Rule of the Perpetual Guard",
+    "desc_en": "Radical colonels reject the promise of temporary rule. Under their charter, civilian life will become an extension of military service and the emergency itself the foundation of the state.",
+    "icon": "GFX_goal_generic_military_sphere",
+    "x": 36,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_quartermasters"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_directorate"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_junta_effect = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_directorate",
+    "name_ru": "Директорат военных служб",
+    "desc_ru": "Начальники служб предлагают управлять коллегией и письменным приказом. Конгресс они не вернут, но снабжение, флот и сухопутные части получат собственный голос за закрытой дверью.",
+    "name_en": "Directorate of the Services",
+    "desc_en": "Service chiefs propose rule by a board and written orders. They will not restore the congress, but supply, fleet and land forces will each have a voice behind the closed door.",
+    "icon": "GFX_goal_generic_neutrality_focus",
+    "x": 42,
+    "y": 10,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_quartermasters"
+      ]
+    ],
+    "mutually_exclusive": [
+      "A10M_junta"
+    ],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_directorate_effect = yes",
+    "ai": 3
+  },
+  {
+    "id": "A10M_revolutionary_command",
+    "name_ru": "Командование национального очищения",
+    "desc_ru": "Новый штаб объявит всякое несогласие продолжением прежнего распада. Офицеры получат больше свободы наступать и меньше свободы обсуждать цену приказов.",
+    "name_en": "Command of National Purification",
+    "desc_en": "The new staff will call every dissent a continuation of the old disintegration. Officers will gain greater freedom to attack and less freedom to discuss the cost of orders.",
+    "icon": "GFX_goal_generic_major_war",
+    "x": 36,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_junta"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "army_experience = 20 add_to_variable = { var = A10M_repression value = 10 } add_war_support = 0.04 A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_commissars",
+    "name_ru": "Политические надзиратели",
+    "desc_ru": "Рядом с каждым командиром появится уполномоченный хунты. Он поддержит части, утратившие решимость, и доложит обо всех, кто усомнится в её праве распоряжаться островами.",
+    "name_en": "Political Supervisors",
+    "desc_en": "An envoy of the junta will stand beside every commander. He will stiffen faltering units and report anyone who doubts its right to command the islands.",
+    "icon": "GFX_goal_generic_propaganda",
+    "x": 36,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_revolutionary_command"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_political_commissars add_to_variable = { var = A10M_repression value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_islands_barracks",
+    "name_ru": "Архипелаг казарм",
+    "desc_ru": "Учебные сборы охватят новые возрастные группы. Каждая пристань будет знать своего военного начальника, каждое хозяйство — день, когда его работник обязан явиться к строю.",
+    "name_en": "An Archipelago of Barracks",
+    "desc_en": "Training assemblies will encompass new age groups. Every landing will know its military chief and every household the day its worker must report for duty.",
+    "icon": "GFX_goal_generic_small_arms",
+    "x": 36,
+    "y": 13,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_commissars"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_barracks_state add_manpower = 2500 add_to_variable = { var = A10M_strain value = 8 } add_to_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_red_seal",
+    "name_ru": "Печать верховного коменданта",
+    "desc_ru": "Постановление утвердит личную печать Сандоваля выше всех островных хартий. Командование отпразднует окончание переворота, хотя прекращение самой чрезвычайной власти никто уже не обещает.",
+    "name_en": "Seal of the Supreme Commandant",
+    "desc_en": "A decree will place Sandoval's personal seal above every island charter. The command will celebrate the end of the coup, though no one now promises an end to emergency rule itself.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 36,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_islands_barracks"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_political_power = 50 country_event = { id = A10M.5 days = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_service_council",
+    "name_ru": "Совет родов службы",
+    "desc_ru": "Моряки, интенданты и сухопутные командиры подпишут порядок разрешения споров. Личная ссора полковников больше не должна останавливать рисовую баржу или переброску гарнизона.",
+    "name_en": "Council of the Services",
+    "desc_en": "Sailors, quartermasters and army commanders will sign rules for settling disputes. A personal quarrel between colonels must no longer delay a rice barge or a garrison transfer.",
+    "icon": "GFX_goal_generic_army_doctrines",
+    "x": 42,
+    "y": 11,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_directorate"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_command_power = 20 subtract_from_variable = { var = A10M_opposition value = 5 } A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_audited_budget",
+    "name_ru": "Бюджет под подписью",
+    "desc_ru": "Каждая служба представит расходы общему ревизору. Публиковать придётся хотя бы итоговые суммы: без доверия поставщиков власть останется с аккуратными приказами и пустыми складами.",
+    "name_en": "A Budget Under Signature",
+    "desc_en": "Each service will submit its expenses to a common auditor. At least the totals must be published: without supplier confidence, power will be left with tidy orders and empty warehouses.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 42,
+    "y": 12,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_service_council"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_published_budget subtract_from_variable = { var = A10M_strain value = 8 } custom_effect_tooltip = A10M_budget_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_professional_army",
+    "name_ru": "Служба по военному уставу",
+    "desc_ru": "Профессиональные инструкторы заменят политические проверки проверкой подготовки. Обучение займёт больше времени, зато командир сможет положиться на умение солдата, а не на его подпись под лозунгом.",
+    "name_en": "Service Under Military Regulations",
+    "desc_en": "Professional instructors will replace political examinations with tests of training. Instruction will take longer, but a commander can rely on a soldier's skill rather than his signature beneath a slogan.",
+    "icon": "GFX_goal_generic_special_forces",
+    "x": 42,
+    "y": 13,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_audited_budget"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_professional_service subtract_from_variable = { var = A10M_repression value = 5 } custom_effect_tooltip = A10M_professional_tt A10M_update = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_fixed_term",
+    "name_ru": "Сроки и полномочия комендантов",
+    "desc_ru": "Военная власть сохранит исключительное положение, но полномочия получат срок, а жалобы — путь в служебный суд. Это обещание не вернёт конгресс; оно хотя бы ограничит произвол отдельного гарнизона.",
+    "name_en": "Terms and Powers of Commandants",
+    "desc_en": "Military rule will retain its exceptional position, but appointments will have terms and complaints a route to a service court. This promise will not restore the congress; it will at least limit a garrison's arbitrary rule.",
+    "icon": "GFX_goal_generic_neutrality_focus",
+    "x": 42,
+    "y": 14,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_professional_army"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "subtract_from_variable = { var = A10M_repression value = 10 } subtract_from_variable = { var = A10M_opposition value = 10 } add_stability = 0.04 A10M_update = yes country_event = { id = A10M.5 days = 1 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_coastal_observers",
+    "name_ru": "Цепь береговых наблюдателей",
+    "desc_ru": "Малые сигнальные посты свяжут гарнизоны с дозорными судами. Рыбацкие лодки получат порядок оповещения, а береговая служба — обязанность отличать угрозу от очередного мирного рейса.",
+    "name_en": "Chain of Coastal Observers",
+    "desc_en": "Small signal posts will link garrisons with patrol craft. Fishing boats will receive reporting instructions, and the coastal service a duty to distinguish threats from ordinary voyages.",
+    "icon": "GFX_goal_generic_navy_doctrines_tactics",
+    "x": 38,
+    "y": 15,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_red_seal",
+        "A10M_fixed_term"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "add_ideas = A10M_coastal_watch navy_experience = 15",
+    "ai": 2
+  },
+  {
+    "id": "A10M_defence_plans",
+    "name_ru": "Планы обороны проливов",
+    "desc_ru": "Штаб подготовит маршруты отхода, охрану складов и взаимодействие батарей с флотом. Приказ оборонять остров должен оставлять гарнизону путь к следующей позиции, а не только красивую последнюю телеграмму.",
+    "name_en": "Plans for Strait Defence",
+    "desc_en": "The staff will prepare withdrawal routes, depot security and cooperation between batteries and fleet. An order to defend an island must leave a garrison a route to its next position, as well as a fine final telegram.",
+    "icon": "GFX_goal_generic_defence",
+    "x": 38,
+    "y": 16,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_coastal_observers"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "army_experience = 20 add_command_power = 15 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = A10 }",
+    "ai": 2
+  },
+  {
+    "id": "A10M_veteran_settlement",
+    "name_ru": "Долг перед солдатскими семьями",
+    "desc_ru": "Семьи убитых и искалеченных будут получать содержание по единому списку. Этот расход нельзя вычеркнуть красивой речью о победе: без него военная власть пожрёт собственную опору.",
+    "name_en": "The Debt to Soldiers' Families",
+    "desc_en": "Families of the dead and maimed will receive support from a common register. A fine victory speech cannot cancel this expense: without it, military rule will consume its own support.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 36,
+    "y": 17,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_defence_plans"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_settlement_effect = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_restore_markets",
+    "name_ru": "Открыть рынки после караула",
+    "desc_ru": "Пристани и мастерские должны вновь работать без ежедневного вмешательства коменданта. Трудовые батальоны будут распущены, а часть снабженческих полномочий вернётся гражданским распорядителям.",
+    "name_en": "Open the Markets After the Watch",
+    "desc_en": "Landings and workshops must function again without a commandant's daily intervention. Labour battalions will be disbanded and some supply powers returned to civilian administrators.",
+    "icon": "GFX_goal_generic_construction",
+    "x": 40,
+    "y": 17,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_defence_plans"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active",
+    "reward": "A10M_recovery_effect = yes",
+    "ai": 2
+  },
+  {
+    "id": "A10M_iron_archipelago",
+    "name_ru": "Железный архипелаг",
+    "desc_ru": "Военный режим пережил первые бунты и научился считать цену собственных приказов. Он сохранит гарнизоны и закрытый конгресс, но его прочность теперь зависит от работающих складов и людей, способных дожить до следующего урожая.",
+    "name_en": "The Iron Archipelago",
+    "desc_en": "The military regime has weathered its first revolts and learned to count the cost of its orders. It will retain the garrisons and closed congress, but its strength now depends on functioning depots and people able to survive until the next harvest.",
+    "icon": "GFX_goal_generic_national_unity",
+    "x": 38,
+    "y": 19,
+    "cost": 5,
+    "prerequisites": [
+      [
+        "A10M_veteran_settlement"
+      ],
+      [
+        "A10M_restore_markets"
+      ]
+    ],
+    "mutually_exclusive": [],
+    "available": "has_country_flag = A10M_active A10M_crisis_contained = yes",
+    "reward": "add_ideas = A10M_iron_state add_stability = 0.04 add_political_power = 75 set_country_flag = A10M_consolidated",
+    "ai": 2
+  }
+]

@@ -1,15 +1,15 @@
 state = {
 	id = 334
 	name = "STATE_334"
-	
-	manpower = 855346
+
+	manpower = 543542
 
 	resources = {
 		rubber = 30 #was: 61 #26-02-03: was: 41
 		coal = 4
 		oil = 23 #was: 0 #26-02-03: was: 33
 	}
-	
+
 	state_category = rural
 
 	history = {
@@ -27,16 +27,14 @@ state = {
 			4279 = {
 				naval_base = 1
 			}
-			13298 = {
-				naval_base = 1
-			}
+
 		}
 
 	}
 
 	provinces = {
-		1304 1316 4279 4409 7227 10282 10310 12129 12955 13298
+		1304 1316 4279 4409 7227 10282 10310 12129 12955
 	}
 
-	local_supplies = 0.0 
+	local_supplies = 0.0
 }

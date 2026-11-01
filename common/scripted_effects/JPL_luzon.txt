@@ -1,0 +1,226 @@
+# Country scope, Japan (A03). All figures are kept between 0 and 100.
+# This module does not declare war, transfer territory or settle the A10 war.
+JPL_initialize_effect = {
+ if = {
+  limit = { tag = A03 NOT = { has_country_flag = JPL_initialized } }
+  set_country_flag = JPL_initialized
+  set_variable = { JPL_garrison_burden = 45 }
+  set_variable = { JPL_garrison_fatigue = 20 }
+ }
+}
+
+JPL_bound_values_effect = {
+ clamp_variable = { var = JPL_garrison_burden min = 0 max = 100 }
+ clamp_variable = { var = JPL_garrison_fatigue min = 0 max = 100 }
+}
+
+JPL_clear_theater_ideas_effect = {
+ remove_ideas = JPL_limited_garrison
+ remove_ideas = JPL_overloaded_garrison
+ remove_ideas = JPL_garrison_emergency
+ remove_ideas = JPL_worn_rotations
+ remove_ideas = JPL_exhausted_rotations
+ remove_ideas = JPL_escorts_diverted
+ remove_ideas = JPL_perimeter_order
+ remove_ideas = JPL_hospital_service
+ remove_ideas = JPL_accountable_occupation
+}
+
+JPL_refresh_effect = {
+ JPL_initialize_effect = yes
+ JPL_bound_values_effect = yes
+ if = {
+  limit = { has_country_flag = JPL_theater_active has_war_with = A10 }
+  clamp_variable = { var = JPL_garrison_burden min = 15 max = 100 }
+  if = {
+   limit = { check_variable = { JPL_garrison_burden > 69 } }
+   remove_ideas = JPL_limited_garrison
+   remove_ideas = JPL_overloaded_garrison
+   if = { limit = { NOT = { has_idea = JPL_garrison_emergency } } add_ideas = JPL_garrison_emergency }
+  }
+  else_if = {
+   limit = { check_variable = { JPL_garrison_burden > 39 } }
+   remove_ideas = JPL_limited_garrison
+   remove_ideas = JPL_garrison_emergency
+   if = { limit = { NOT = { has_idea = JPL_overloaded_garrison } } add_ideas = JPL_overloaded_garrison }
+  }
+  else = {
+   remove_ideas = JPL_overloaded_garrison
+   remove_ideas = JPL_garrison_emergency
+   if = { limit = { NOT = { has_idea = JPL_limited_garrison } } add_ideas = JPL_limited_garrison }
+  }
+  if = {
+   limit = { check_variable = { JPL_garrison_fatigue > 84 } }
+   remove_ideas = JPL_worn_rotations
+   if = { limit = { NOT = { has_idea = JPL_exhausted_rotations } } add_ideas = JPL_exhausted_rotations }
+  }
+  else_if = {
+   limit = { check_variable = { JPL_garrison_fatigue > 59 } }
+   remove_ideas = JPL_exhausted_rotations
+   if = { limit = { NOT = { has_idea = JPL_worn_rotations } } add_ideas = JPL_worn_rotations }
+  }
+  else = { remove_ideas = JPL_worn_rotations remove_ideas = JPL_exhausted_rotations }
+  if = {
+   limit = { has_country_flag = JPL_limited_mandate }
+   if = { limit = { NOT = { has_idea = JPL_accountable_occupation } } add_ideas = JPL_accountable_occupation }
+  }
+ }
+ else = { JPL_clear_theater_ideas_effect = yes }
+}
+
+JPL_supply_allocation_effect = {
+ set_country_flag = { flag = JPL_extra_supply days = 90 }
+ add_to_variable = { JPL_garrison_burden = -8 }
+ JPF_add_war_expense_effect = yes
+ JPL_refresh_effect = yes
+}
+JPL_escort_allocation_effect = {
+ set_country_flag = { flag = JPL_escort_allocation days = 90 }
+ add_to_variable = { JPL_garrison_burden = -6 }
+ add_timed_idea = { idea = JPL_escorts_diverted days = 90 }
+ JPF_add_war_expense_effect = yes
+ JPL_refresh_effect = yes
+}
+JPL_hospital_allocation_effect = {
+ set_country_flag = { flag = JPL_field_hospitals days = 90 }
+ add_to_variable = { JPL_garrison_fatigue = -10 }
+ add_timed_idea = { idea = JPL_hospital_service days = 90 }
+ JPF_add_war_expense_effect = yes
+ JPL_refresh_effect = yes
+}
+JPL_rotation_allocation_effect = {
+ set_country_flag = { flag = JPL_fresh_rotations days = 90 }
+ add_to_variable = { JPL_garrison_fatigue = -8 }
+ add_manpower = -1000
+ JPF_add_war_expense_effect = yes
+ JPL_refresh_effect = yes
+}
+JPL_correct_accounts_effect = {
+ if = {
+  limit = { NOT = { has_country_flag = JPL_accounts_corrected } }
+  set_country_flag = JPL_accounts_corrected
+  add_to_variable = { JPL_garrison_burden = -15 }
+  add_to_variable = { JPL_garrison_fatigue = 5 }
+  JPF_audit_savings_effect = yes
+ }
+ JPL_refresh_effect = yes
+}
+
+# Integration hooks for the four existing JPC political focuses.
+JPL_manila_priority_effect = {
+ JPL_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPL_manila_prioritised } }
+  set_country_flag = JPL_manila_prioritised
+  add_to_variable = { JPL_garrison_burden = -5 }
+ }
+ JPL_refresh_effect = yes
+}
+JPL_garrison_accounts_effect = {
+ JPL_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPL_accounts_opened } }
+  set_country_flag = JPL_accounts_opened
+  add_to_variable = { JPL_garrison_burden = -5 }
+ }
+ JPL_refresh_effect = yes
+}
+JPL_hospital_ships_effect = {
+ JPL_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPL_hospital_network } }
+  set_country_flag = JPL_hospital_network
+  add_to_variable = { JPL_garrison_fatigue = -8 }
+ }
+ JPL_refresh_effect = yes
+}
+JPL_hold_until_talks_effect = {
+ JPL_initialize_effect = yes
+ if = { limit = { NOT = { has_country_flag = JPL_talks_prepared } }
+  set_country_flag = JPL_talks_prepared
+  add_to_variable = { JPL_garrison_fatigue = -5 }
+ }
+ JPL_refresh_effect = yes
+}
+
+JPL_safety_check_effect = {
+ JPL_initialize_effect = yes
+ if = {
+  limit = {
+   country_exists = A10 has_war_with = A10
+   any_controlled_state = { OR = {
+    state = 327 state = 623 state = 624 state = 625 state = 626 state = 627
+    state = 628 state = 1025 state = 1026 state = 1027 state = 1084 state = 1085
+   } }
+  }
+  if = {
+   limit = { NOT = { has_country_flag = JPL_theater_active } }
+   set_country_flag = JPL_theater_active
+   JPL_refresh_effect = yes
+  }
+  if = {
+   limit = { NOT = { has_country_flag = JPL_opening_report } }
+   set_country_flag = JPL_opening_report
+   country_event = { id = japan_luzon.1 days = 1 }
+  }
+ }
+ else_if = {
+  limit = { has_country_flag = JPL_theater_active }
+  clr_country_flag = JPL_theater_active
+  clr_country_flag = JPL_extra_supply
+  clr_country_flag = JPL_escort_allocation
+  clr_country_flag = JPL_field_hospitals
+  clr_country_flag = JPL_fresh_rotations
+  clr_country_flag = JPL_civic_purchases
+  JPL_clear_theater_ideas_effect = yes
+ }
+}
+
+JPL_monthly_effect = {
+ JPL_safety_check_effect = yes
+ if = {
+  limit = { has_country_flag = JPL_theater_active }
+  # Fighting continues even after the Borneo peace. No monthly military solution.
+  add_to_variable = { JPL_garrison_burden = 2 }
+  if = { limit = { has_country_flag = JPA_manila_first } add_to_variable = { JPL_garrison_burden = -2 } }
+  add_to_variable = { JPL_garrison_fatigue = 2 }
+  if = { limit = { has_war_with = A01 } add_to_variable = { JPL_garrison_burden = 2 } }
+  if = { limit = { NOT = { has_country_flag = JPL_accounts_corrected } } add_to_variable = { JPL_garrison_burden = 1 } }
+  if = { limit = { NOT = { controls_state = 327 } } add_to_variable = { JPL_garrison_burden = 3 } add_to_variable = { JPL_garrison_fatigue = 2 } }
+  if = { limit = { check_variable = { JPL_garrison_burden > 69 } } add_to_variable = { JPL_garrison_fatigue = 2 } }
+  if = { limit = { has_country_flag = JPL_supply_board } add_to_variable = { JPL_garrison_burden = -1 } }
+  if = { limit = { has_country_flag = JPL_quartermasters_trained } add_to_variable = { JPL_garrison_burden = -1 } }
+  if = { limit = { has_country_flag = JPL_hospital_network } add_to_variable = { JPL_garrison_fatigue = -1 } }
+  if = { limit = { has_country_flag = JPL_rotation_board } add_to_variable = { JPL_garrison_fatigue = -1 } }
+  if = { limit = { has_country_flag = JPL_extra_supply } add_to_variable = { JPL_garrison_burden = -3 } }
+  if = { limit = { has_country_flag = JPL_escort_allocation } add_to_variable = { JPL_garrison_burden = -2 } }
+  if = { limit = { has_country_flag = JPL_civic_purchases } add_to_variable = { JPL_garrison_burden = -1 } }
+  if = { limit = { has_country_flag = JPL_field_hospitals } add_to_variable = { JPL_garrison_fatigue = -2 } }
+  if = { limit = { has_country_flag = JPL_fresh_rotations } add_to_variable = { JPL_garrison_fatigue = -4 } }
+  # The remaining military occupation costs something even under excellent administration.
+  clamp_variable = { var = JPL_garrison_burden min = 15 max = 100 }
+  JPL_refresh_effect = yes
+  if = {
+   limit = { check_variable = { JPL_garrison_burden > 69 } NOT = { has_country_flag = JPL_convoy_event_cooldown } }
+   set_country_flag = { flag = JPL_convoy_event_cooldown days = 180 }
+   country_event = { id = japan_luzon.2 days = 1 }
+  }
+  if = {
+   limit = { check_variable = { JPL_garrison_fatigue > 64 } NOT = { has_country_flag = JPL_medical_event_cooldown } }
+   set_country_flag = { flag = JPL_medical_event_cooldown days = 180 }
+   country_event = { id = japan_luzon.3 days = 5 }
+  }
+  if = {
+   limit = { has_country_flag = A03_borneo_victory NOT = { has_war_with = A01 } NOT = { has_country_flag = JPL_after_borneo_report } }
+   set_country_flag = JPL_after_borneo_report
+   country_event = { id = japan_luzon.5 days = 7 }
+  }
+  if = {
+   limit = { NOT = { controls_state = 327 } NOT = { has_country_flag = JPL_manila_loss_report } }
+   set_country_flag = JPL_manila_loss_report
+   country_event = { id = japan_luzon.6 days = 1 }
+  }
+ }
+ else_if = { limit = { has_country_flag = JPL_opening_report }
+  add_to_variable = { JPL_garrison_burden = -5 }
+  add_to_variable = { JPL_garrison_fatigue = -5 }
+  JPL_bound_values_effect = yes
+ }
+}

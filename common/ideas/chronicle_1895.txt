@@ -1,0 +1,19 @@
+ideas = { country = {
+ CH95_uprising = { picture = jpc_credit modifier = { recruitable_population_factor = 0.05 } }
+ CH95_local_officers = { picture = jpc_credit modifier = { army_org_regain = 0.05 } }
+ CH95_naval_reform = { picture = jpc_credit modifier = { navy_org_factor = 0.05 } }
+ CH95_isolation = { picture = jpc_credit modifier = { research_speed_factor = -0.04 } }
+ CH95_state_guarantee = { picture = jpc_credit modifier = { industrial_capacity_factory = 0.05 } }
+ CH95_naval_crisis = { picture = jpc_credit modifier = { navy_org_factor = -0.10 } }
+ CH95_port_market = { picture = jpc_credit modifier = { production_speed_industrial_complex_factor = 0.05 } }
+ CH95_escorts = { picture = jpc_credit modifier = { naval_coordination = 0.05 } }
+ CH95_tesla_mobile = { picture = jpc_credit modifier = { navy_org_factor = 0.04 research_speed_factor = 0.02 } }
+ CH95_tesla_tower = { picture = jpc_credit modifier = { army_defence_factor = 0.04 research_speed_factor = 0.03 } }
+ CH95_blockade = { picture = jpc_credit modifier = { supply_consumption_factor = 0.10 industrial_capacity_factory = -0.05 } }
+ CH95_defence = { picture = jpc_credit modifier = { army_defence_factor = 0.05 } }
+ CH95_refugees = { picture = jpc_credit modifier = { stability_factor = -0.03 } }
+ CH95_anathema = { picture = jpc_credit modifier = { research_speed_factor = -0.05 } }
+ CH95_embargo = { picture = jpc_credit modifier = { production_factory_efficiency_gain_factor = -0.10 } }
+ CH95_legion_raids = { picture = jpc_credit modifier = { supply_consumption_factor = 0.10 } }
+ CH95_exhaustion = { picture = jpc_credit modifier = { industrial_capacity_factory = -0.05 war_support_factor = -0.05 } }
+} }

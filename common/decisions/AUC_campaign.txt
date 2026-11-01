@@ -1,0 +1,32 @@
+AUC_federation_category = {
+ AUC_retry_charter = { icon = generic_political_discourse cost = 50 days_re_enable = 180 visible = { has_country_flag = AUC_charter_refused NOT = { has_country_flag = AUC_british_charter } } available = { country_exists = A02 OR = { is_subject_of = A02 is_subject = no } NOT = { has_war_with = A02 } AUC_two_approvals = yes NOT = { has_country_flag = AUC_charter_pending } NOT = { has_country_flag = AUC_charter_cooldown } } complete_effect = { AUC_request_charter = yes } ai_will_do = { factor = 1 } }
+ AUC_vote_status_AVC = { icon = generic_political_discourse cost = 0 visible = { AUC_approval_AVC = yes } available = { always = no } complete_effect = { } }
+ AUC_reinvite_AVC = { icon = generic_political_discourse cost = 35 days_re_enable = 180 visible = { country_exists = AVC has_country_flag = AUC_referendums_open NOT = { AUC_approval_AVC = yes } } available = { AVC = { AUC_can_negotiate = yes } } complete_effect = { AVC = { country_event = { id = auc_campaign.10 days = 1 } } } ai_will_do = { factor = 1 } }
+ AUC_admit_AVC = { icon = generic_political_discourse cost = 25 visible = { has_country_flag = AUC_commonwealth_proclaimed country_exists = AVC } available = { AUC_approval_AVC = yes OR = { AVC = { is_subject = no } has_country_flag = AUC_british_charter } OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } } } complete_effect = { AUC_integrate_AVC = yes } ai_will_do = { factor = 5 } }
+ AUC_vote_status_AQL = { icon = generic_political_discourse cost = 0 visible = { AUC_approval_AQL = yes } available = { always = no } complete_effect = { } }
+ AUC_reinvite_AQL = { icon = generic_political_discourse cost = 35 days_re_enable = 180 visible = { country_exists = AQL has_country_flag = AUC_referendums_open NOT = { AUC_approval_AQL = yes } } available = { AQL = { AUC_can_negotiate = yes } } complete_effect = { AQL = { country_event = { id = auc_campaign.11 days = 1 } } } ai_will_do = { factor = 1 } }
+ AUC_admit_AQL = { icon = generic_political_discourse cost = 25 visible = { has_country_flag = AUC_commonwealth_proclaimed country_exists = AQL } available = { AUC_approval_AQL = yes OR = { AQL = { is_subject = no } has_country_flag = AUC_british_charter } OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } } } complete_effect = { AUC_integrate_AQL = yes } ai_will_do = { factor = 5 } }
+ AUC_vote_status_ASA = { icon = generic_political_discourse cost = 0 visible = { AUC_approval_ASA = yes } available = { always = no } complete_effect = { } }
+ AUC_reinvite_ASA = { icon = generic_political_discourse cost = 35 days_re_enable = 180 visible = { country_exists = ASA has_country_flag = AUC_referendums_open NOT = { AUC_approval_ASA = yes } } available = { ASA = { AUC_can_negotiate = yes } } complete_effect = { ASA = { country_event = { id = auc_campaign.12 days = 1 } } } ai_will_do = { factor = 1 } }
+ AUC_admit_ASA = { icon = generic_political_discourse cost = 25 visible = { has_country_flag = AUC_commonwealth_proclaimed country_exists = ASA } available = { AUC_approval_ASA = yes OR = { ASA = { is_subject = no } has_country_flag = AUC_british_charter } OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } } } complete_effect = { AUC_integrate_ASA = yes } ai_will_do = { factor = 5 } }
+ AUC_vote_status_AWA = { icon = generic_political_discourse cost = 0 visible = { AUC_approval_AWA = yes } available = { always = no } complete_effect = { } }
+ AUC_reinvite_AWA = { icon = generic_political_discourse cost = 35 days_re_enable = 180 visible = { country_exists = AWA has_country_flag = AUC_referendums_open NOT = { AUC_approval_AWA = yes } } available = { AWA = { AUC_can_negotiate = yes } } complete_effect = { AWA = { country_event = { id = auc_campaign.13 days = 1 } } } ai_will_do = { factor = 1 } }
+ AUC_admit_AWA = { icon = generic_political_discourse cost = 25 visible = { has_country_flag = AUC_commonwealth_proclaimed country_exists = AWA } available = { AUC_approval_AWA = yes OR = { AWA = { is_subject = no } has_country_flag = AUC_british_charter } OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } } } complete_effect = { AUC_integrate_AWA = yes } ai_will_do = { factor = 5 } }
+ AUC_vote_status_ATA = { icon = generic_political_discourse cost = 0 visible = { AUC_approval_ATA = yes } available = { always = no } complete_effect = { } }
+ AUC_reinvite_ATA = { icon = generic_political_discourse cost = 35 days_re_enable = 180 visible = { country_exists = ATA has_country_flag = AUC_referendums_open NOT = { AUC_approval_ATA = yes } } available = { ATA = { AUC_can_negotiate = yes } } complete_effect = { ATA = { country_event = { id = auc_campaign.14 days = 1 } } } ai_will_do = { factor = 1 } }
+ AUC_admit_ATA = { icon = generic_political_discourse cost = 25 visible = { has_country_flag = AUC_commonwealth_proclaimed country_exists = ATA } available = { AUC_approval_ATA = yes OR = { ATA = { is_subject = no } has_country_flag = AUC_british_charter } OR = { is_subject = no AND = { is_subject_of = A02 has_country_flag = AUC_british_charter } } } complete_effect = { AUC_integrate_ATA = yes } ai_will_do = { factor = 5 } }
+}
+AUC_defence_category = {
+ AUC_seek_recognition = { icon = generic_political_discourse cost = 75 days_re_enable = 180
+  visible = { tag = A07 has_country_flag = AUC_independence_war_started has_war_with = A02 }
+  available = { is_subject = no NOT = { has_country_flag = AUC_independence_opening } AUC_holds_owned_states = yes }
+  complete_effect = { A02 = { country_event = { id = auc_campaign.5 days = 1 } } }
+  ai_will_do = { factor = 3 }
+ }
+ AUC_retry_sovereignty = { icon = generic_political_discourse cost = 75 days_re_enable = 180
+  visible = { tag = A07 has_country_flag = AUC_sovereignty_refused }
+  available = { is_subject_of = A02 NOT = { has_country_flag = AUC_sovereignty_pending } }
+  complete_effect = { set_country_flag = { flag = AUC_sovereignty_pending days = 45 } A02 = { country_event = { id = auc_campaign.3 days = 1 } } }
+  ai_will_do = { factor = 1 }
+ }
+}

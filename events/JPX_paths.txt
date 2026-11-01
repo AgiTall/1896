@@ -1,0 +1,26 @@
+add_namespace = japan_paths
+country_event = { id = japan_paths.1 title = japan_paths.1.t desc = japan_paths.1.d picture = GFX_jpc_council is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = japan_paths.1.a trigger = { has_political_power > 49 } ai_chance = { factor = 60 } add_political_power = -50 navy_experience = 20 army_experience = 5 set_country_flag = JPX_sea_funded }
+ option = { name = japan_paths.1.b ai_chance = { factor = 40 } navy_experience = 5 set_country_flag = JPX_sea_limited }
+}
+country_event = { id = japan_paths.2 title = japan_paths.2.t desc = japan_paths.2.d picture = GFX_jpc_council is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = japan_paths.2.a trigger = { has_political_power > 49 } ai_chance = { factor = 60 } add_political_power = -50 army_experience = 20 add_war_support = 0.03 add_stability = -0.02 set_country_flag = JPX_land_funded }
+ option = { name = japan_paths.2.b ai_chance = { factor = 40 } army_experience = 5 set_country_flag = JPX_land_limited }
+}
+country_event = { id = japan_paths.3 title = japan_paths.3.t desc = japan_paths.3.d picture = GFX_jpc_council is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = japan_paths.3.a trigger = { has_political_power > 49 } ai_chance = { factor = 60 } add_political_power = -50 add_to_variable = { JPF_debt_pressure = -6 } add_to_variable = { JPF_budget_confidence = 5 } JPF_refresh_effect = yes set_country_flag = JPX_trade_funded }
+ option = { name = japan_paths.3.b ai_chance = { factor = 40 } add_to_variable = { JPF_budget_confidence = 2 } JPF_refresh_effect = yes set_country_flag = JPX_trade_limited }
+}
+country_event = { id = japan_paths.4 title = japan_paths.4.t desc = japan_paths.4.d picture = GFX_jpc_council is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = japan_paths.4.a trigger = { has_political_power > 49 } ai_chance = { factor = 60 } add_political_power = -50 add_stability = 0.04 add_war_support = 0.02 set_country_flag = JPX_kami_funded }
+ option = { name = japan_paths.4.b ai_chance = { factor = 40 } add_war_support = 0.02 set_country_flag = JPX_kami_limited }
+}
+country_event = { id = japan_paths.5 title = japan_paths.5.t desc = japan_paths.5.d picture = GFX_jpc_council is_triggered_only = yes
+ trigger = { tag = A03 }
+ option = { name = japan_paths.5.a trigger = { has_political_power > 49 } ai_chance = { factor = 60 } add_political_power = -50 add_to_variable = { JPF_budget_confidence = 8 } JPF_refresh_effect = yes add_stability = 0.02 set_country_flag = JPX_throne_funded }
+ option = { name = japan_paths.5.b ai_chance = { factor = 40 } add_to_variable = { JPF_budget_confidence = 2 } JPF_refresh_effect = yes set_country_flag = JPX_throne_limited }
+}

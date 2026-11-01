@@ -1,0 +1,30 @@
+ideas = { country = {
+ A10D_workshop_islands = { picture = generic_production_bonus removal_cost = -1 modifier = { industrial_capacity_factory = -0.08 production_speed_buildings_factor = -0.08 } }
+ A10D_separate_quartermasters = { picture = generic_army_war_college removal_cost = -1 modifier = { army_org_factor = -0.08 supply_consumption_factor = 0.08 } }
+ A10D_shipping_shortage = { picture = generic_production_bonus removal_cost = -1 modifier = { supply_consumption_factor = 0.10 industrial_capacity_factory = -0.05 stability_factor = -0.05 } }
+ A10D_strained_shipping = { picture = generic_production_bonus removal_cost = -1 modifier = { supply_consumption_factor = 0.05 stability_factor = -0.02 } }
+ A10D_reliable_shipping = { picture = generic_production_bonus removal_cost = -1 modifier = { naval_supply_consumption_factor = -0.03 stability_factor = 0.03 } }
+ A10D_workshop_network = { picture = generic_production_bonus removal_cost = -1 modifier = { industrial_capacity_factory = 0.05 production_factory_efficiency_gain_factor = 0.05 } }
+ A10D_abaca_exports = { picture = generic_production_bonus removal_cost = -1 modifier = { production_speed_dockyard_factor = 0.05 consumer_goods_factor = -0.02 } }
+ A10D_sugar_standards = { picture = generic_production_bonus removal_cost = -1 modifier = { local_resources_factor = 0.05 stability_factor = 0.02 } }
+ A10D_granary_network = { picture = generic_production_bonus removal_cost = -1 modifier = { consumer_goods_factor = -0.02 supply_consumption_factor = -0.03 } }
+ A10D_district_medicine = { picture = generic_production_bonus removal_cost = -1 modifier = { casualty_trickleback = 0.03 experience_loss_factor = -0.03 } }
+ A10D_public_health = { picture = generic_production_bonus removal_cost = -1 modifier = { casualty_trickleback = 0.06 experience_loss_factor = -0.05 monthly_population = 0.03 } }
+ A10D_teacher_colleges = { picture = generic_production_bonus removal_cost = -1 modifier = { research_speed_factor = 0.03 stability_factor = 0.02 } }
+ A10D_island_telegraph = { picture = generic_production_bonus removal_cost = -1 modifier = { planning_speed = 0.05 production_factory_efficiency_gain_factor = 0.03 } }
+ A10D_polytechnic = { picture = generic_production_bonus removal_cost = -1 modifier = { research_speed_factor = 0.03 } }
+ A10D_common_market = { picture = generic_production_bonus removal_cost = -1 modifier = { production_speed_industrial_complex_factor = 0.05 consumer_goods_factor = -0.02 } }
+ A10D_standard_stores = { picture = generic_army_war_college removal_cost = -1 modifier = { supply_consumption_factor = -0.03 production_factory_max_efficiency_factor = 0.03 } }
+ A10D_pilot_stations = { picture = generic_production_bonus removal_cost = -1 modifier = { naval_coordination = 0.03 navy_org_factor = 0.03 } }
+ A10D_coastal_defence = { picture = generic_production_bonus removal_cost = -1 modifier = { army_defence_factor = 0.03 } }
+ A10D_pack_columns = { picture = generic_army_war_college removal_cost = -1 modifier = { supply_consumption_factor = -0.05 attrition = -0.05 } }
+ A10D_staff_school = { picture = generic_army_war_college removal_cost = -1 modifier = { army_org_factor = 0.05 planning_speed = 0.05 training_time_army_factor = -0.05 } }
+ A10D_ammunition_contracts = { picture = generic_production_bonus removal_cost = -1 modifier = { industrial_capacity_factory = 0.04 production_factory_efficiency_gain_factor = 0.04 } }
+ A10D_escort_service = { picture = generic_production_bonus removal_cost = -1 modifier = { convoy_escort_efficiency = 0.08 naval_coordination = 0.03 } }
+ A10D_landing_staff = { picture = generic_army_war_college removal_cost = -1 modifier = { naval_invasion_prep_speed = 0.10 naval_invasion_division_cap = 2 } }
+ A10D_monsoon_damage = { picture = generic_production_bonus removal_cost = -1 modifier = { production_speed_buildings_factor = -0.05 supply_consumption_factor = 0.05 } }
+ A10D_evening_classes = { picture = generic_production_bonus removal_cost = -1 modifier = { research_speed_factor = 0.03 } }
+ A10D_tools_programme = { picture = generic_production_bonus removal_cost = -1 modifier = { production_factory_efficiency_gain_factor = 0.05 } }
+ A10D_volunteer_orderlies = { picture = generic_production_bonus removal_cost = -1 modifier = { casualty_trickleback = 0.04 experience_loss_factor = -0.03 } }
+ A10D_war_collections = { picture = generic_production_bonus removal_cost = -1 modifier = { consumer_goods_factor = 0.02 } }
+} }

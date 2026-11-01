@@ -1,0 +1,7 @@
+# Fictional character created for the 1896 mod; no historical biography is implied.
+characters = {
+ A10M_mateo_sandoval = {
+  name = A10M_mateo_sandoval_name
+  portraits = { civilian = { large = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds" } }
+ }
+}

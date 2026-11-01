@@ -1,0 +1,11 @@
+on_actions = {
+ on_startup = { effect = { A04 = { WTN_initialize_effect = yes WTN_update_ledger_effect = yes } } }
+ on_daily = { effect = {
+  WTN_refresh_links_effect = yes
+  if = { limit = { tag = A04 } WTN_initialize_effect = yes WTN_cleanup_orphan_reserves_effect = yes }
+  else = { WTN_customer_cleanup_effect = yes }
+ } }
+ on_monthly = { effect = {
+  if = { limit = { tag = A04 } WTN_monthly_treasury_effect = yes }
+ } }
+}

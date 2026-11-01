@@ -1,0 +1,14 @@
+ideas = { country = {
+ JPI_workshop_network = {
+  picture = jpc_fleet removal_cost = -1
+  modifier = { production_speed_dockyard_factor = 0.05 }
+ }
+ JPI_shipboard_power = {
+  picture = jpc_fleet removal_cost = -1
+  modifier = { naval_supply_consumption_factor = -0.08 naval_invasion_prep_speed = 0.10 }
+ }
+ JPL_repair_network = {
+  picture = jpc_north removal_cost = -1
+  modifier = { supply_consumption_factor = -0.05 }
+ }
+} }

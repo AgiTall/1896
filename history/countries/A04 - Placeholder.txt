@@ -1,4 +1,4 @@
-# Canon 1893. Generic portrait; historical likeness not supplied.
+﻿# Canon 1893. Generic portrait; historical likeness not supplied.
 capital = 697
 recruit_character = A04_canon_leader
 set_politics = { ruling_party = neutrality elections_allowed = no }
@@ -12,3 +12,58 @@ add_ideas = volunteer_only
 add_ideas = civilian_economy
 add_ideas = limited_exports
 oob = "A04_1893"
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_technology = {
+	basic_railways = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = A04 }
+# END 1893 START RESEARCH AND TRAINS
+
+# BEGIN MAJOR RESEARCH PROFILE 1893
+# Промышленность, электротехника, обслуживание и торговая логистика; ограниченные военные знания.
+set_technology = {
+	dispersed_industry = 1
+	early_artillery = 1
+	early_machine_tools = 1
+	electrical_engineering = 1
+	excavation1 = 1
+	mechanical_engineering = 1
+	powder_type_b = 1
+	standard_gauge_railway = 1
+	tech_engineers = 1
+	tech_logistics_company = 1
+	tech_maintenance_company = 1
+	tech_support = 1
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_coal_engine = 1
+		basic_secondary_battery = 1
+		gunboat_ship_hull_light = 1
+		ironclad_artillery = 1
+		ironclad_coal_engine = 1
+		mtg_transport = 1
+		victorian_ship_hull_cruiser = 1
+	}
+	else = {
+		set_technology = {
+			early_light_cruiser = 1
+			transport = 1
+		}
+	}
+}
+# END MAJOR RESEARCH PROFILE 1893
+
+# BEGIN EDITABLE COMMANDER PLACEHOLDERS
+recruit_character = A04_placeholder_marshal_01
+recruit_character = A04_placeholder_general_01
+recruit_character = A04_placeholder_general_02
+recruit_character = A04_placeholder_general_03
+recruit_character = A04_placeholder_general_04
+recruit_character = A04_placeholder_general_05
+# END EDITABLE COMMANDER PLACEHOLDERS

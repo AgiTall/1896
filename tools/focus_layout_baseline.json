@@ -1,0 +1,3426 @@
+{
+  "a03_focus.txt": {
+    "JSM_steel": [
+      5,
+      0
+    ],
+    "JSM_workshops": [
+      5,
+      2
+    ],
+    "JSM_shipyards": [
+      5,
+      4
+    ],
+    "JSM_council": [
+      5,
+      6
+    ],
+    "JSM_north": [
+      5,
+      8
+    ],
+    "JSM_south": [
+      5,
+      10
+    ],
+    "JSM_ocean": [
+      5,
+      12
+    ]
+  },
+  "a10_focus.txt": {
+    "A10_island_congress": [
+      14,
+      0
+    ],
+    "A10R_provincial_rolls": [
+      12,
+      1
+    ],
+    "A10R_emergency_council": [
+      16,
+      1
+    ],
+    "A10_confederation": [
+      8,
+      1
+    ],
+    "A10_visayan_compact": [
+      8,
+      2
+    ],
+    "A10_mindanao_compact": [
+      8,
+      3
+    ],
+    "A10_united_command": [
+      8,
+      4
+    ],
+    "A10R_common_treasury": [
+      8,
+      5
+    ],
+    "A10R_republican_court": [
+      8,
+      6
+    ],
+    "A10R_language_charters": [
+      10,
+      6
+    ],
+    "A10R_tenant_guarantees": [
+      8,
+      7
+    ],
+    "A10R_civilian_inspectors": [
+      10,
+      7
+    ],
+    "A10R_assembly_of_islands": [
+      9,
+      8
+    ],
+    "A10R_republics_forever": [
+      9,
+      9
+    ],
+    "A10R_rotating_presidency": [
+      6,
+      10
+    ],
+    "A10R_customs_union": [
+      8,
+      10
+    ],
+    "A10R_republican_compact_end": [
+      7,
+      11
+    ],
+    "A10R_federal_convention": [
+      11,
+      9
+    ],
+    "A10R_bill_of_rights": [
+      10,
+      10
+    ],
+    "A10_federation": [
+      10,
+      11
+    ],
+    "A10_gendarmerie": [
+      9,
+      12
+    ],
+    "A10_local_administration": [
+      11,
+      12
+    ],
+    "A10_equal_citizenship": [
+      10,
+      13
+    ],
+    "A10R_federal_parliament": [
+      10,
+      14
+    ],
+    "A10R_civilian_commonwealth": [
+      10,
+      15
+    ],
+    "A10_strike_japan": [
+      18,
+      10
+    ],
+    "A10R_luzon_relief": [
+      6,
+      5
+    ],
+    "A10_luzon_charter": [
+      6,
+      6
+    ],
+    "A10_capital_charters": [
+      6,
+      7
+    ],
+    "A10R_war_accounts": [
+      14,
+      1
+    ],
+    "A10R_veterans_land": [
+      11,
+      2
+    ],
+    "A10_federal_reconstruction": [
+      15,
+      2
+    ],
+    "A10R_peace_generation": [
+      13,
+      3
+    ],
+    "A10D_island_census": [
+      13,
+      2
+    ],
+    "A10D_municipal_roads": [
+      11,
+      3
+    ],
+    "A10D_mail_ferries": [
+      15,
+      3
+    ],
+    "A10D_abaca_cooperatives": [
+      10,
+      4
+    ],
+    "A10D_sugar_inspectors": [
+      12,
+      4
+    ],
+    "A10D_timber_and_slipways": [
+      14,
+      4
+    ],
+    "A10D_provincial_workshops": [
+      10,
+      5
+    ],
+    "A10D_rice_granaries": [
+      12,
+      5
+    ],
+    "A10D_district_clinics": [
+      14,
+      5
+    ],
+    "A10D_normal_schools": [
+      12,
+      6
+    ],
+    "A10D_cable_cooperatives": [
+      14,
+      6
+    ],
+    "A10D_sanitary_commission": [
+      16,
+      6
+    ],
+    "A10D_island_polytechnic": [
+      12,
+      7
+    ],
+    "A10D_export_bureau": [
+      14,
+      7
+    ],
+    "A10D_national_market": [
+      12,
+      8
+    ],
+    "A10D_island_industry": [
+      13,
+      9
+    ],
+    "A10_coastal_arsenals": [
+      17,
+      2
+    ],
+    "A10D_rifle_inspections": [
+      17,
+      3
+    ],
+    "A10D_coastal_boatyards": [
+      20,
+      5
+    ],
+    "A10D_common_calibres": [
+      16,
+      4
+    ],
+    "A10D_field_batteries": [
+      18,
+      4
+    ],
+    "A10D_harbour_defences": [
+      22,
+      6
+    ],
+    "A10D_sappers_and_pack_trains": [
+      16,
+      5
+    ],
+    "A10D_mountain_infantry": [
+      18,
+      5
+    ],
+    "A10D_chart_the_straits": [
+      20,
+      6
+    ],
+    "A10D_staff_college": [
+      18,
+      6
+    ],
+    "A10D_merchant_reserve": [
+      20,
+      7
+    ],
+    "A10D_ammunition_toolrooms": [
+      16,
+      7
+    ],
+    "A10D_signal_corps": [
+      18,
+      7
+    ],
+    "A10D_patrol_flotillas": [
+      19,
+      8
+    ],
+    "A10_landing_plans": [
+      16,
+      9
+    ],
+    "A10D_war_fleet": [
+      16,
+      10
+    ],
+    "A10W_oath": [
+      3,
+      1
+    ],
+    "A10W_creditors_register": [
+      3,
+      2
+    ],
+    "A10W_bonded_warehouses": [
+      2,
+      3
+    ],
+    "A10W_silver_convoy": [
+      4,
+      3
+    ],
+    "A10W_cable_priority": [
+      3,
+      4
+    ],
+    "A10W_harbour_survey": [
+      2,
+      5
+    ],
+    "A10W_local_shareholding": [
+      4,
+      5
+    ],
+    "A10W_charter_congress": [
+      3,
+      6
+    ],
+    "A10W_colonial_charter": [
+      2,
+      7
+    ],
+    "A10W_resident_council": [
+      1,
+      8
+    ],
+    "A10W_revenue_covenant": [
+      3,
+      8
+    ],
+    "A10W_charter_constabulary": [
+      1,
+      9
+    ],
+    "A10W_export_estates": [
+      3,
+      9
+    ],
+    "A10W_debt_conversion": [
+      2,
+      10
+    ],
+    "A10W_colony": [
+      2,
+      11
+    ],
+    "A10W_port_welfare": [
+      2,
+      12
+    ],
+    "A10W_metropolitan_charter": [
+      4,
+      7
+    ],
+    "A10W_island_registries": [
+      5,
+      8
+    ],
+    "A10W_merchant_assembly": [
+      7,
+      8
+    ],
+    "A10W_duplicate_cables": [
+      5,
+      9
+    ],
+    "A10W_secretariat_rules": [
+      7,
+      9
+    ],
+    "A10W_escrow_exchange": [
+      4,
+      10
+    ],
+    "A10W_new_metropole": [
+      4,
+      11
+    ],
+    "A10W_oceanic_covenant": [
+      4,
+      12
+    ],
+    "A10M_coup": [
+      21,
+      1
+    ],
+    "A10M_martial_law": [
+      21,
+      2
+    ],
+    "A10M_recall_charters": [
+      20,
+      3
+    ],
+    "A10M_censor_cables": [
+      22,
+      3
+    ],
+    "A10M_officer_tribunal": [
+      22,
+      4
+    ],
+    "A10M_rice_commissions": [
+      20,
+      4
+    ],
+    "A10M_requisition": [
+      22,
+      5
+    ],
+    "A10M_compensation": [
+      24,
+      6
+    ],
+    "A10M_labour_battalions": [
+      26,
+      6
+    ],
+    "A10M_cadet_schools": [
+      24,
+      4
+    ],
+    "A10M_levy_rolls": [
+      24,
+      5
+    ],
+    "A10M_medical_corps": [
+      28,
+      6
+    ],
+    "A10M_quartermasters": [
+      22,
+      7
+    ],
+    "A10M_junta": [
+      21,
+      8
+    ],
+    "A10M_directorate": [
+      24,
+      8
+    ],
+    "A10M_revolutionary_command": [
+      20,
+      9
+    ],
+    "A10M_commissars": [
+      20,
+      10
+    ],
+    "A10M_islands_barracks": [
+      20,
+      11
+    ],
+    "A10M_red_seal": [
+      20,
+      12
+    ],
+    "A10M_service_council": [
+      24,
+      9
+    ],
+    "A10M_audited_budget": [
+      24,
+      10
+    ],
+    "A10M_professional_army": [
+      24,
+      11
+    ],
+    "A10M_fixed_term": [
+      24,
+      12
+    ],
+    "A10M_coastal_observers": [
+      21,
+      13
+    ],
+    "A10M_defence_plans": [
+      21,
+      14
+    ],
+    "A10M_veteran_settlement": [
+      20,
+      15
+    ],
+    "A10M_restore_markets": [
+      22,
+      15
+    ],
+    "A10M_iron_archipelago": [
+      21,
+      16
+    ]
+  },
+  "AUC_campaign_A07.txt": {
+    "AUC_A07_leagues": [
+      10,
+      0
+    ],
+    "AUC_A07_corowa": [
+      10,
+      2
+    ],
+    "AUC_A07_convention": [
+      10,
+      4
+    ],
+    "AUC_A07_senate": [
+      10,
+      6
+    ],
+    "AUC_A07_terms_AVC": [
+      2,
+      8
+    ],
+    "AUC_A07_terms_AQL": [
+      6,
+      8
+    ],
+    "AUC_A07_terms_ASA": [
+      10,
+      8
+    ],
+    "AUC_A07_terms_AWA": [
+      14,
+      8
+    ],
+    "AUC_A07_terms_ATA": [
+      18,
+      8
+    ],
+    "AUC_A07_referendums": [
+      10,
+      10
+    ],
+    "AUC_A07_charter": [
+      10,
+      12
+    ],
+    "AUC_A07_commonwealth": [
+      10,
+      14
+    ],
+    "AUC_A07_parliament": [
+      6,
+      16
+    ],
+    "AUC_A07_six_states": [
+      14,
+      16
+    ],
+    "AUC_A07_first_ministry": [
+      10,
+      18
+    ],
+    "AUC_A07_customs": [
+      24,
+      2
+    ],
+    "AUC_A07_arsenal": [
+      24,
+      4
+    ],
+    "AUC_A07_research": [
+      24,
+      6
+    ],
+    "AUC_A07_chamber": [
+      28,
+      2
+    ],
+    "AUC_A07_accounts": [
+      28,
+      4
+    ],
+    "AUC_A07_staff": [
+      34,
+      2
+    ],
+    "AUC_A07_coast": [
+      34,
+      4
+    ],
+    "AUC_A07_yards": [
+      34,
+      6
+    ],
+    "AUC_A07_convoys": [
+      34,
+      8
+    ],
+    "AUC_A07_japan": [
+      34,
+      10
+    ],
+    "AUC_A07_partners": [
+      34,
+      12
+    ],
+    "AUC_A07_deter": [
+      34,
+      14
+    ],
+    "AUC_A07_japan_goal": [
+      34,
+      16
+    ],
+    "AUC_A07_sovereignty": [
+      22,
+      14
+    ],
+    "AUC_A07_own_flag": [
+      20,
+      18
+    ],
+    "AUC_A07_break_crown": [
+      24,
+      18
+    ],
+    "AUC_A07_british_routes": [
+      24,
+      20
+    ]
+  },
+  "AUC_campaign_AQL.txt": {
+    "AUC_AQL_brisbane": [
+      8,
+      0
+    ],
+    "AUC_AQL_ports": [
+      2,
+      2
+    ],
+    "AUC_AQL_labour": [
+      2,
+      4
+    ],
+    "AUC_AQL_workshops": [
+      2,
+      6
+    ],
+    "AUC_AQL_rifles": [
+      8,
+      2
+    ],
+    "AUC_AQL_harbour": [
+      8,
+      4
+    ],
+    "AUC_AQL_school": [
+      8,
+      6
+    ],
+    "AUC_AQL_demand": [
+      14,
+      2
+    ],
+    "AUC_AQL_federal": [
+      12,
+      4
+    ],
+    "AUC_AQL_separate": [
+      16,
+      4
+    ],
+    "AUC_AQL_mandate": [
+      12,
+      6
+    ],
+    "AUC_AQL_credit": [
+      20,
+      2
+    ],
+    "AUC_AQL_services": [
+      20,
+      4
+    ],
+    "AUC_AQL_recovery": [
+      4,
+      1
+    ],
+    "AUC_AQL_public_works": [
+      0,
+      2
+    ],
+    "AUC_AQL_merchant_orders": [
+      8,
+      2
+    ],
+    "AUC_AQL_technical_school": [
+      4,
+      5
+    ],
+    "AUC_AQL_muster": [
+      32,
+      1
+    ],
+    "AUC_AQL_supply_depots": [
+      36,
+      2
+    ],
+    "AUC_AQL_joint_exercises": [
+      32,
+      5
+    ],
+    "AUC_AQL_local_civil_service": [
+      24,
+      5
+    ],
+    "AUC_AQL_district_councils": [
+      20,
+      6
+    ],
+    "AUC_AQL_trade_delegation": [
+      44,
+      6
+    ],
+    "AUC_AQL_development_programme": [
+      12,
+      7
+    ],
+    "AUC_AQL_prepared_colony": [
+      32,
+      8
+    ]
+  },
+  "AUC_campaign_ASA.txt": {
+    "AUC_ASA_adelaide": [
+      8,
+      0
+    ],
+    "AUC_ASA_telegraph": [
+      2,
+      2
+    ],
+    "AUC_ASA_inland": [
+      2,
+      4
+    ],
+    "AUC_ASA_arsenal": [
+      2,
+      6
+    ],
+    "AUC_ASA_rifles": [
+      8,
+      2
+    ],
+    "AUC_ASA_harbour": [
+      8,
+      4
+    ],
+    "AUC_ASA_school": [
+      8,
+      6
+    ],
+    "AUC_ASA_demand": [
+      14,
+      2
+    ],
+    "AUC_ASA_federal": [
+      12,
+      4
+    ],
+    "AUC_ASA_separate": [
+      16,
+      4
+    ],
+    "AUC_ASA_mandate": [
+      12,
+      6
+    ],
+    "AUC_ASA_credit": [
+      20,
+      2
+    ],
+    "AUC_ASA_services": [
+      20,
+      4
+    ],
+    "AUC_ASA_recovery": [
+      4,
+      1
+    ],
+    "AUC_ASA_public_works": [
+      0,
+      2
+    ],
+    "AUC_ASA_merchant_orders": [
+      8,
+      2
+    ],
+    "AUC_ASA_technical_school": [
+      4,
+      5
+    ],
+    "AUC_ASA_muster": [
+      32,
+      1
+    ],
+    "AUC_ASA_supply_depots": [
+      36,
+      2
+    ],
+    "AUC_ASA_joint_exercises": [
+      32,
+      5
+    ],
+    "AUC_ASA_local_civil_service": [
+      24,
+      5
+    ],
+    "AUC_ASA_district_councils": [
+      20,
+      6
+    ],
+    "AUC_ASA_trade_delegation": [
+      44,
+      6
+    ],
+    "AUC_ASA_development_programme": [
+      12,
+      7
+    ],
+    "AUC_ASA_prepared_colony": [
+      32,
+      8
+    ]
+  },
+  "AUC_campaign_ATA.txt": {
+    "AUC_ATA_hobart": [
+      8,
+      0
+    ],
+    "AUC_ATA_commerce": [
+      2,
+      2
+    ],
+    "AUC_ATA_shipping": [
+      2,
+      4
+    ],
+    "AUC_ATA_yards": [
+      2,
+      6
+    ],
+    "AUC_ATA_rifles": [
+      8,
+      2
+    ],
+    "AUC_ATA_harbour": [
+      8,
+      4
+    ],
+    "AUC_ATA_school": [
+      8,
+      6
+    ],
+    "AUC_ATA_demand": [
+      14,
+      2
+    ],
+    "AUC_ATA_federal": [
+      12,
+      4
+    ],
+    "AUC_ATA_separate": [
+      16,
+      4
+    ],
+    "AUC_ATA_mandate": [
+      12,
+      6
+    ],
+    "AUC_ATA_credit": [
+      20,
+      2
+    ],
+    "AUC_ATA_services": [
+      20,
+      4
+    ],
+    "AUC_ATA_recovery": [
+      4,
+      1
+    ],
+    "AUC_ATA_public_works": [
+      0,
+      2
+    ],
+    "AUC_ATA_merchant_orders": [
+      8,
+      2
+    ],
+    "AUC_ATA_technical_school": [
+      4,
+      5
+    ],
+    "AUC_ATA_muster": [
+      32,
+      1
+    ],
+    "AUC_ATA_supply_depots": [
+      36,
+      2
+    ],
+    "AUC_ATA_joint_exercises": [
+      32,
+      5
+    ],
+    "AUC_ATA_local_civil_service": [
+      24,
+      5
+    ],
+    "AUC_ATA_district_councils": [
+      20,
+      6
+    ],
+    "AUC_ATA_trade_delegation": [
+      44,
+      6
+    ],
+    "AUC_ATA_development_programme": [
+      12,
+      7
+    ],
+    "AUC_ATA_prepared_colony": [
+      32,
+      8
+    ]
+  },
+  "AUC_campaign_AVC.txt": {
+    "AUC_AVC_melbourne": [
+      8,
+      0
+    ],
+    "AUC_AVC_foundries": [
+      2,
+      2
+    ],
+    "AUC_AVC_tariffs": [
+      2,
+      4
+    ],
+    "AUC_AVC_dockyards": [
+      2,
+      6
+    ],
+    "AUC_AVC_rifles": [
+      8,
+      2
+    ],
+    "AUC_AVC_harbour": [
+      8,
+      4
+    ],
+    "AUC_AVC_school": [
+      8,
+      6
+    ],
+    "AUC_AVC_demand": [
+      14,
+      2
+    ],
+    "AUC_AVC_federal": [
+      12,
+      4
+    ],
+    "AUC_AVC_separate": [
+      16,
+      4
+    ],
+    "AUC_AVC_mandate": [
+      12,
+      6
+    ],
+    "AUC_AVC_credit": [
+      20,
+      2
+    ],
+    "AUC_AVC_services": [
+      20,
+      4
+    ],
+    "AUC_AVC_recovery": [
+      4,
+      1
+    ],
+    "AUC_AVC_public_works": [
+      0,
+      2
+    ],
+    "AUC_AVC_merchant_orders": [
+      8,
+      2
+    ],
+    "AUC_AVC_technical_school": [
+      4,
+      5
+    ],
+    "AUC_AVC_muster": [
+      32,
+      1
+    ],
+    "AUC_AVC_supply_depots": [
+      36,
+      2
+    ],
+    "AUC_AVC_joint_exercises": [
+      32,
+      5
+    ],
+    "AUC_AVC_local_civil_service": [
+      24,
+      5
+    ],
+    "AUC_AVC_district_councils": [
+      20,
+      6
+    ],
+    "AUC_AVC_trade_delegation": [
+      44,
+      6
+    ],
+    "AUC_AVC_development_programme": [
+      12,
+      7
+    ],
+    "AUC_AVC_prepared_colony": [
+      32,
+      8
+    ]
+  },
+  "AUC_campaign_AWA.txt": {
+    "AUC_AWA_perth": [
+      8,
+      0
+    ],
+    "AUC_AWA_gold": [
+      2,
+      2
+    ],
+    "AUC_AWA_railway": [
+      2,
+      4
+    ],
+    "AUC_AWA_fremantle": [
+      2,
+      6
+    ],
+    "AUC_AWA_rifles": [
+      8,
+      2
+    ],
+    "AUC_AWA_harbour": [
+      8,
+      4
+    ],
+    "AUC_AWA_school": [
+      8,
+      6
+    ],
+    "AUC_AWA_demand": [
+      14,
+      2
+    ],
+    "AUC_AWA_federal": [
+      12,
+      4
+    ],
+    "AUC_AWA_separate": [
+      16,
+      4
+    ],
+    "AUC_AWA_mandate": [
+      12,
+      6
+    ],
+    "AUC_AWA_credit": [
+      20,
+      2
+    ],
+    "AUC_AWA_services": [
+      20,
+      4
+    ],
+    "AUC_AWA_recovery": [
+      4,
+      1
+    ],
+    "AUC_AWA_public_works": [
+      0,
+      2
+    ],
+    "AUC_AWA_merchant_orders": [
+      8,
+      2
+    ],
+    "AUC_AWA_technical_school": [
+      4,
+      5
+    ],
+    "AUC_AWA_muster": [
+      32,
+      1
+    ],
+    "AUC_AWA_supply_depots": [
+      36,
+      2
+    ],
+    "AUC_AWA_joint_exercises": [
+      32,
+      5
+    ],
+    "AUC_AWA_local_civil_service": [
+      24,
+      5
+    ],
+    "AUC_AWA_district_councils": [
+      20,
+      6
+    ],
+    "AUC_AWA_trade_delegation": [
+      44,
+      6
+    ],
+    "AUC_AWA_development_programme": [
+      12,
+      7
+    ],
+    "AUC_AWA_prepared_colony": [
+      32,
+      8
+    ]
+  },
+  "BLV_campaign.txt": {
+    "BLV_leviathan": [
+      26,
+      0
+    ],
+    "BLV_audit": [
+      26,
+      2
+    ],
+    "BLV_hamilton": [
+      26,
+      4
+    ],
+    "BLV_commission": [
+      26,
+      6
+    ],
+    "BLV_admiralty": [
+      20,
+      8
+    ],
+    "BLV_constitution": [
+      26,
+      8
+    ],
+    "BLV_crown": [
+      32,
+      8
+    ],
+    "BLV_naval_cabinet": [
+      20,
+      10
+    ],
+    "BLV_merit": [
+      20,
+      12
+    ],
+    "BLV_strategic_reserve": [
+      20,
+      14
+    ],
+    "BLV_naval_state": [
+      20,
+      16
+    ],
+    "BLV_imperial_budget": [
+      26,
+      10
+    ],
+    "BLV_rights": [
+      26,
+      12
+    ],
+    "BLV_delegates": [
+      26,
+      14
+    ],
+    "BLV_maritime_commonwealth": [
+      26,
+      16
+    ],
+    "BLV_royal_secretariat": [
+      32,
+      10
+    ],
+    "BLV_crown_guard": [
+      32,
+      12
+    ],
+    "BLV_loyal_governors": [
+      32,
+      14
+    ],
+    "BLV_imperial_prerogative": [
+      32,
+      16
+    ],
+    "BLV_rationing": [
+      4,
+      4
+    ],
+    "BLV_bermuda_workshops": [
+      4,
+      6
+    ],
+    "BLV_coal_depots": [
+      4,
+      8
+    ],
+    "BLV_machine_tools": [
+      4,
+      10
+    ],
+    "BLV_ordnance": [
+      4,
+      12
+    ],
+    "BLV_nz_industry": [
+      4,
+      14
+    ],
+    "BLV_cable_school": [
+      4,
+      16
+    ],
+    "BLV_island_economy": [
+      4,
+      18
+    ],
+    "BLV_credit_audit": [
+      10,
+      4
+    ],
+    "BLV_chamber_desk": [
+      10,
+      6
+    ],
+    "BLV_independent_accounts": [
+      8,
+      8
+    ],
+    "BLV_lambert_compact": [
+      12,
+      8
+    ],
+    "BLV_insurance": [
+      8,
+      10
+    ],
+    "BLV_revoke_cover": [
+      8,
+      12
+    ],
+    "BLV_service_contracts": [
+      12,
+      10
+    ],
+    "BLV_debt_settlement": [
+      10,
+      14
+    ],
+    "BLV_fleet_register": [
+      46,
+      4
+    ],
+    "BLV_bermuda_dock": [
+      46,
+      6
+    ],
+    "BLV_engine_rooms": [
+      46,
+      8
+    ],
+    "BLV_battle_line": [
+      44,
+      10
+    ],
+    "BLV_cruiser_routes": [
+      48,
+      10
+    ],
+    "BLV_naval_staff": [
+      46,
+      12
+    ],
+    "BLV_convoy_service": [
+      46,
+      14
+    ],
+    "BLV_singapore_docks": [
+      46,
+      16
+    ],
+    "BLV_fleet_logistics": [
+      46,
+      18
+    ],
+    "BLV_garrison_audit": [
+      54,
+      6
+    ],
+    "BLV_rotation": [
+      54,
+      8
+    ],
+    "BLV_marines": [
+      54,
+      10
+    ],
+    "BLV_field_hospitals": [
+      54,
+      12
+    ],
+    "BLV_colonial_service": [
+      54,
+      14
+    ],
+    "BLV_amphibious_staff": [
+      54,
+      16
+    ],
+    "BLV_station_census": [
+      38,
+      6
+    ],
+    "BLV_australian_dossier": [
+      38,
+      8
+    ],
+    "BLV_dominion_charters": [
+      40,
+      10
+    ],
+    "BLV_nz_ports": [
+      38,
+      12
+    ],
+    "BLV_pacific_stations": [
+      38,
+      14
+    ],
+    "BLV_colonial_red_line": [
+      36,
+      10
+    ],
+    "BLV_australia_sovereignty": [
+      40,
+      16
+    ],
+    "BLV_reconquest": [
+      36,
+      18
+    ],
+    "BLV_malacca": [
+      62,
+      6
+    ],
+    "BLV_batavia_oil": [
+      62,
+      8
+    ],
+    "BLV_philippine_mission": [
+      62,
+      10
+    ],
+    "BLV_pacific_deterrent": [
+      62,
+      12
+    ],
+    "BLV_japanese_note": [
+      62,
+      14
+    ],
+    "BLV_war_plans": [
+      62,
+      16
+    ],
+    "BLV_eastern_supply": [
+      62,
+      18
+    ],
+    "BLV_song_records": [
+      70,
+      4
+    ],
+    "BLV_instruments": [
+      70,
+      6
+    ],
+    "BLV_malta_license": [
+      70,
+      8
+    ],
+    "BLV_ungudja": [
+      70,
+      10
+    ],
+    "BLV_clinical_rules": [
+      70,
+      12
+    ],
+    "BLV_serum_contract": [
+      68,
+      14
+    ],
+    "BLV_ethical_research": [
+      72,
+      14
+    ],
+    "BLV_calibration": [
+      70,
+      16
+    ],
+    "BLV_research_school": [
+      70,
+      18
+    ],
+    "BLV_greenland_watch": [
+      78,
+      6
+    ],
+    "BLV_arctic_depots": [
+      78,
+      8
+    ],
+    "BLV_russian_note": [
+      78,
+      10
+    ],
+    "BLV_scientific_cargo": [
+      78,
+      12
+    ],
+    "BLV_polar_mandate": [
+      78,
+      14
+    ],
+    "BLV_archive": [
+      78,
+      16
+    ],
+    "BLV_remember_home": [
+      86,
+      20
+    ],
+    "BLV_coastal_trials": [
+      86,
+      22
+    ],
+    "BLV_long_range": [
+      86,
+      24
+    ],
+    "BLV_pioneer_station": [
+      86,
+      26
+    ],
+    "BLV_tesla_patents": [
+      74,
+      18
+    ],
+    "BLV_ship_suppressors": [
+      74,
+      20
+    ],
+    "BLV_airship_service": [
+      58,
+      20
+    ],
+    "BLV_crowns_council": [
+      34,
+      20
+    ]
+  },
+  "MNR_A05.txt": {
+    "MNR_A05_root": [
+      10,
+      0
+    ],
+    "MNR_A05_economy0": [
+      2,
+      2
+    ],
+    "MNR_A05_economy1": [
+      2,
+      4
+    ],
+    "MNR_A05_economy2": [
+      2,
+      6
+    ],
+    "MNR_A05_defence0": [
+      10,
+      2
+    ],
+    "MNR_A05_defence1": [
+      10,
+      4
+    ],
+    "MNR_A05_defence2": [
+      10,
+      6
+    ],
+    "MNR_A05_contacts": [
+      18,
+      2
+    ],
+    "MNR_A05_chamber": [
+      18,
+      4
+    ],
+    "MNR_A05_civic": [
+      6,
+      8
+    ],
+    "MNR_A05_civic_law": [
+      6,
+      10
+    ],
+    "MNR_A05_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_A05_command": [
+      14,
+      8
+    ],
+    "MNR_A05_command_law": [
+      14,
+      10
+    ],
+    "MNR_A05_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_A05_projects": [
+      24,
+      2
+    ],
+    "MNR_A05_specialists": [
+      24,
+      4
+    ],
+    "MNR_A05_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_A08.txt": {
+    "MNR_A08_root": [
+      10,
+      0
+    ],
+    "MNR_A08_economy0": [
+      2,
+      2
+    ],
+    "MNR_A08_economy1": [
+      2,
+      4
+    ],
+    "MNR_A08_economy2": [
+      2,
+      6
+    ],
+    "MNR_A08_defence0": [
+      10,
+      2
+    ],
+    "MNR_A08_defence1": [
+      10,
+      4
+    ],
+    "MNR_A08_defence2": [
+      10,
+      6
+    ],
+    "MNR_A08_contacts": [
+      18,
+      2
+    ],
+    "MNR_A08_chamber": [
+      18,
+      4
+    ],
+    "MNR_A08_civic": [
+      6,
+      8
+    ],
+    "MNR_A08_civic_law": [
+      6,
+      10
+    ],
+    "MNR_A08_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_A08_command": [
+      14,
+      8
+    ],
+    "MNR_A08_command_law": [
+      14,
+      10
+    ],
+    "MNR_A08_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_A08_projects": [
+      24,
+      2
+    ],
+    "MNR_A08_specialists": [
+      24,
+      4
+    ],
+    "MNR_A08_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_A09.txt": {
+    "MNR_A09_root": [
+      10,
+      0
+    ],
+    "MNR_A09_economy0": [
+      2,
+      2
+    ],
+    "MNR_A09_economy1": [
+      2,
+      4
+    ],
+    "MNR_A09_economy2": [
+      2,
+      6
+    ],
+    "MNR_A09_defence0": [
+      10,
+      2
+    ],
+    "MNR_A09_defence1": [
+      10,
+      4
+    ],
+    "MNR_A09_defence2": [
+      10,
+      6
+    ],
+    "MNR_A09_contacts": [
+      18,
+      2
+    ],
+    "MNR_A09_chamber": [
+      18,
+      4
+    ],
+    "MNR_A09_civic": [
+      6,
+      8
+    ],
+    "MNR_A09_civic_law": [
+      6,
+      10
+    ],
+    "MNR_A09_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_A09_command": [
+      14,
+      8
+    ],
+    "MNR_A09_command_law": [
+      14,
+      10
+    ],
+    "MNR_A09_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_A09_projects": [
+      24,
+      2
+    ],
+    "MNR_A09_specialists": [
+      24,
+      4
+    ],
+    "MNR_A09_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_A11.txt": {
+    "MNR_A11_root": [
+      10,
+      0
+    ],
+    "MNR_A11_economy0": [
+      2,
+      2
+    ],
+    "MNR_A11_economy1": [
+      2,
+      4
+    ],
+    "MNR_A11_economy2": [
+      2,
+      6
+    ],
+    "MNR_A11_defence0": [
+      10,
+      2
+    ],
+    "MNR_A11_defence1": [
+      10,
+      4
+    ],
+    "MNR_A11_defence2": [
+      10,
+      6
+    ],
+    "MNR_A11_contacts": [
+      18,
+      2
+    ],
+    "MNR_A11_chamber": [
+      18,
+      4
+    ],
+    "MNR_A11_civic": [
+      6,
+      8
+    ],
+    "MNR_A11_civic_law": [
+      6,
+      10
+    ],
+    "MNR_A11_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_A11_command": [
+      14,
+      8
+    ],
+    "MNR_A11_command_law": [
+      14,
+      10
+    ],
+    "MNR_A11_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_A11_projects": [
+      24,
+      2
+    ],
+    "MNR_A11_specialists": [
+      24,
+      4
+    ],
+    "MNR_A11_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_A12.txt": {
+    "MNR_A12_root": [
+      10,
+      0
+    ],
+    "MNR_A12_economy0": [
+      2,
+      2
+    ],
+    "MNR_A12_economy1": [
+      2,
+      4
+    ],
+    "MNR_A12_economy2": [
+      2,
+      6
+    ],
+    "MNR_A12_defence0": [
+      10,
+      2
+    ],
+    "MNR_A12_defence1": [
+      10,
+      4
+    ],
+    "MNR_A12_defence2": [
+      10,
+      6
+    ],
+    "MNR_A12_contacts": [
+      18,
+      2
+    ],
+    "MNR_A12_chamber": [
+      18,
+      4
+    ],
+    "MNR_A12_civic": [
+      6,
+      8
+    ],
+    "MNR_A12_civic_law": [
+      6,
+      10
+    ],
+    "MNR_A12_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_A12_command": [
+      14,
+      8
+    ],
+    "MNR_A12_command_law": [
+      14,
+      10
+    ],
+    "MNR_A12_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_A12_projects": [
+      24,
+      2
+    ],
+    "MNR_A12_specialists": [
+      24,
+      4
+    ],
+    "MNR_A12_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_A13.txt": {
+    "MNR_A13_root": [
+      10,
+      0
+    ],
+    "MNR_A13_economy0": [
+      2,
+      2
+    ],
+    "MNR_A13_economy1": [
+      2,
+      4
+    ],
+    "MNR_A13_economy2": [
+      2,
+      6
+    ],
+    "MNR_A13_defence0": [
+      10,
+      2
+    ],
+    "MNR_A13_defence1": [
+      10,
+      4
+    ],
+    "MNR_A13_defence2": [
+      10,
+      6
+    ],
+    "MNR_A13_contacts": [
+      18,
+      2
+    ],
+    "MNR_A13_chamber": [
+      18,
+      4
+    ],
+    "MNR_A13_civic": [
+      6,
+      8
+    ],
+    "MNR_A13_civic_law": [
+      6,
+      10
+    ],
+    "MNR_A13_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_A13_command": [
+      14,
+      8
+    ],
+    "MNR_A13_command_law": [
+      14,
+      10
+    ],
+    "MNR_A13_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_A13_projects": [
+      24,
+      2
+    ],
+    "MNR_A13_specialists": [
+      24,
+      4
+    ],
+    "MNR_A13_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_A14.txt": {
+    "MNR_A14_root": [
+      10,
+      0
+    ],
+    "MNR_A14_economy0": [
+      2,
+      2
+    ],
+    "MNR_A14_economy1": [
+      2,
+      4
+    ],
+    "MNR_A14_economy2": [
+      2,
+      6
+    ],
+    "MNR_A14_defence0": [
+      10,
+      2
+    ],
+    "MNR_A14_defence1": [
+      10,
+      4
+    ],
+    "MNR_A14_defence2": [
+      10,
+      6
+    ],
+    "MNR_A14_contacts": [
+      18,
+      2
+    ],
+    "MNR_A14_chamber": [
+      18,
+      4
+    ],
+    "MNR_A14_civic": [
+      6,
+      8
+    ],
+    "MNR_A14_civic_law": [
+      6,
+      10
+    ],
+    "MNR_A14_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_A14_command": [
+      14,
+      8
+    ],
+    "MNR_A14_command_law": [
+      14,
+      10
+    ],
+    "MNR_A14_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_A14_projects": [
+      24,
+      2
+    ],
+    "MNR_A14_specialists": [
+      24,
+      4
+    ],
+    "MNR_A14_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_MLT.txt": {
+    "MNR_MLT_root": [
+      10,
+      0
+    ],
+    "MNR_MLT_economy0": [
+      2,
+      2
+    ],
+    "MNR_MLT_economy1": [
+      2,
+      4
+    ],
+    "MNR_MLT_economy2": [
+      2,
+      6
+    ],
+    "MNR_MLT_defence0": [
+      10,
+      2
+    ],
+    "MNR_MLT_defence1": [
+      10,
+      4
+    ],
+    "MNR_MLT_defence2": [
+      10,
+      6
+    ],
+    "MNR_MLT_contacts": [
+      18,
+      2
+    ],
+    "MNR_MLT_chamber": [
+      18,
+      4
+    ],
+    "MNR_MLT_civic": [
+      6,
+      8
+    ],
+    "MNR_MLT_civic_law": [
+      6,
+      10
+    ],
+    "MNR_MLT_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_MLT_command": [
+      14,
+      8
+    ],
+    "MNR_MLT_command_law": [
+      14,
+      10
+    ],
+    "MNR_MLT_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_MLT_projects": [
+      24,
+      2
+    ],
+    "MNR_MLT_specialists": [
+      24,
+      4
+    ],
+    "MNR_MLT_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PAZ.txt": {
+    "MNR_PAZ_root": [
+      10,
+      0
+    ],
+    "MNR_PAZ_economy0": [
+      2,
+      2
+    ],
+    "MNR_PAZ_economy1": [
+      2,
+      4
+    ],
+    "MNR_PAZ_economy2": [
+      2,
+      6
+    ],
+    "MNR_PAZ_defence0": [
+      10,
+      2
+    ],
+    "MNR_PAZ_defence1": [
+      10,
+      4
+    ],
+    "MNR_PAZ_defence2": [
+      10,
+      6
+    ],
+    "MNR_PAZ_contacts": [
+      18,
+      2
+    ],
+    "MNR_PAZ_chamber": [
+      18,
+      4
+    ],
+    "MNR_PAZ_civic": [
+      6,
+      8
+    ],
+    "MNR_PAZ_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PAZ_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PAZ_command": [
+      14,
+      8
+    ],
+    "MNR_PAZ_command_law": [
+      14,
+      10
+    ],
+    "MNR_PAZ_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PAZ_projects": [
+      24,
+      2
+    ],
+    "MNR_PAZ_specialists": [
+      24,
+      4
+    ],
+    "MNR_PAZ_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PBT.txt": {
+    "MNR_PBT_root": [
+      10,
+      0
+    ],
+    "MNR_PBT_economy0": [
+      2,
+      2
+    ],
+    "MNR_PBT_economy1": [
+      2,
+      4
+    ],
+    "MNR_PBT_economy2": [
+      2,
+      6
+    ],
+    "MNR_PBT_defence0": [
+      10,
+      2
+    ],
+    "MNR_PBT_defence1": [
+      10,
+      4
+    ],
+    "MNR_PBT_defence2": [
+      10,
+      6
+    ],
+    "MNR_PBT_contacts": [
+      18,
+      2
+    ],
+    "MNR_PBT_chamber": [
+      18,
+      4
+    ],
+    "MNR_PBT_civic": [
+      6,
+      8
+    ],
+    "MNR_PBT_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PBT_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PBT_command": [
+      14,
+      8
+    ],
+    "MNR_PBT_command_law": [
+      14,
+      10
+    ],
+    "MNR_PBT_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PBT_projects": [
+      24,
+      2
+    ],
+    "MNR_PBT_specialists": [
+      24,
+      4
+    ],
+    "MNR_PBT_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PCB.txt": {
+    "MNR_PCB_root": [
+      10,
+      0
+    ],
+    "MNR_PCB_economy0": [
+      2,
+      2
+    ],
+    "MNR_PCB_economy1": [
+      2,
+      4
+    ],
+    "MNR_PCB_economy2": [
+      2,
+      6
+    ],
+    "MNR_PCB_defence0": [
+      10,
+      2
+    ],
+    "MNR_PCB_defence1": [
+      10,
+      4
+    ],
+    "MNR_PCB_defence2": [
+      10,
+      6
+    ],
+    "MNR_PCB_contacts": [
+      18,
+      2
+    ],
+    "MNR_PCB_chamber": [
+      18,
+      4
+    ],
+    "MNR_PCB_civic": [
+      6,
+      8
+    ],
+    "MNR_PCB_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PCB_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PCB_command": [
+      14,
+      8
+    ],
+    "MNR_PCB_command_law": [
+      14,
+      10
+    ],
+    "MNR_PCB_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PCB_projects": [
+      24,
+      2
+    ],
+    "MNR_PCB_specialists": [
+      24,
+      4
+    ],
+    "MNR_PCB_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PCF.txt": {
+    "MNR_PCF_root": [
+      10,
+      0
+    ],
+    "MNR_PCF_economy0": [
+      2,
+      2
+    ],
+    "MNR_PCF_economy1": [
+      2,
+      4
+    ],
+    "MNR_PCF_economy2": [
+      2,
+      6
+    ],
+    "MNR_PCF_defence0": [
+      10,
+      2
+    ],
+    "MNR_PCF_defence1": [
+      10,
+      4
+    ],
+    "MNR_PCF_defence2": [
+      10,
+      6
+    ],
+    "MNR_PCF_contacts": [
+      18,
+      2
+    ],
+    "MNR_PCF_chamber": [
+      18,
+      4
+    ],
+    "MNR_PCF_civic": [
+      6,
+      8
+    ],
+    "MNR_PCF_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PCF_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PCF_command": [
+      14,
+      8
+    ],
+    "MNR_PCF_command_law": [
+      14,
+      10
+    ],
+    "MNR_PCF_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PCF_projects": [
+      24,
+      2
+    ],
+    "MNR_PCF_specialists": [
+      24,
+      4
+    ],
+    "MNR_PCF_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PHR.txt": {
+    "MNR_PHR_root": [
+      10,
+      0
+    ],
+    "MNR_PHR_economy0": [
+      2,
+      2
+    ],
+    "MNR_PHR_economy1": [
+      2,
+      4
+    ],
+    "MNR_PHR_economy2": [
+      2,
+      6
+    ],
+    "MNR_PHR_defence0": [
+      10,
+      2
+    ],
+    "MNR_PHR_defence1": [
+      10,
+      4
+    ],
+    "MNR_PHR_defence2": [
+      10,
+      6
+    ],
+    "MNR_PHR_contacts": [
+      18,
+      2
+    ],
+    "MNR_PHR_chamber": [
+      18,
+      4
+    ],
+    "MNR_PHR_civic": [
+      6,
+      8
+    ],
+    "MNR_PHR_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PHR_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PHR_command": [
+      14,
+      8
+    ],
+    "MNR_PHR_command_law": [
+      14,
+      10
+    ],
+    "MNR_PHR_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PHR_projects": [
+      24,
+      2
+    ],
+    "MNR_PHR_specialists": [
+      24,
+      4
+    ],
+    "MNR_PHR_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PHW.txt": {
+    "MNR_PHW_root": [
+      10,
+      0
+    ],
+    "MNR_PHW_economy0": [
+      2,
+      2
+    ],
+    "MNR_PHW_economy1": [
+      2,
+      4
+    ],
+    "MNR_PHW_economy2": [
+      2,
+      6
+    ],
+    "MNR_PHW_defence0": [
+      10,
+      2
+    ],
+    "MNR_PHW_defence1": [
+      10,
+      4
+    ],
+    "MNR_PHW_defence2": [
+      10,
+      6
+    ],
+    "MNR_PHW_contacts": [
+      18,
+      2
+    ],
+    "MNR_PHW_chamber": [
+      18,
+      4
+    ],
+    "MNR_PHW_civic": [
+      6,
+      8
+    ],
+    "MNR_PHW_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PHW_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PHW_command": [
+      14,
+      8
+    ],
+    "MNR_PHW_command_law": [
+      14,
+      10
+    ],
+    "MNR_PHW_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PHW_projects": [
+      24,
+      2
+    ],
+    "MNR_PHW_specialists": [
+      24,
+      4
+    ],
+    "MNR_PHW_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PMD.txt": {
+    "MNR_PMD_root": [
+      10,
+      0
+    ],
+    "MNR_PMD_economy0": [
+      2,
+      2
+    ],
+    "MNR_PMD_economy1": [
+      2,
+      4
+    ],
+    "MNR_PMD_economy2": [
+      2,
+      6
+    ],
+    "MNR_PMD_defence0": [
+      10,
+      2
+    ],
+    "MNR_PMD_defence1": [
+      10,
+      4
+    ],
+    "MNR_PMD_defence2": [
+      10,
+      6
+    ],
+    "MNR_PMD_contacts": [
+      18,
+      2
+    ],
+    "MNR_PMD_chamber": [
+      18,
+      4
+    ],
+    "MNR_PMD_civic": [
+      6,
+      8
+    ],
+    "MNR_PMD_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PMD_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PMD_command": [
+      14,
+      8
+    ],
+    "MNR_PMD_command_law": [
+      14,
+      10
+    ],
+    "MNR_PMD_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PMD_projects": [
+      24,
+      2
+    ],
+    "MNR_PMD_specialists": [
+      24,
+      4
+    ],
+    "MNR_PMD_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PML.txt": {
+    "MNR_PML_root": [
+      10,
+      0
+    ],
+    "MNR_PML_economy0": [
+      2,
+      2
+    ],
+    "MNR_PML_economy1": [
+      2,
+      4
+    ],
+    "MNR_PML_economy2": [
+      2,
+      6
+    ],
+    "MNR_PML_defence0": [
+      10,
+      2
+    ],
+    "MNR_PML_defence1": [
+      10,
+      4
+    ],
+    "MNR_PML_defence2": [
+      10,
+      6
+    ],
+    "MNR_PML_contacts": [
+      18,
+      2
+    ],
+    "MNR_PML_chamber": [
+      18,
+      4
+    ],
+    "MNR_PML_civic": [
+      6,
+      8
+    ],
+    "MNR_PML_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PML_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PML_command": [
+      14,
+      8
+    ],
+    "MNR_PML_command_law": [
+      14,
+      10
+    ],
+    "MNR_PML_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PML_projects": [
+      24,
+      2
+    ],
+    "MNR_PML_specialists": [
+      24,
+      4
+    ],
+    "MNR_PML_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PNL.txt": {
+    "MNR_PNL_root": [
+      10,
+      0
+    ],
+    "MNR_PNL_economy0": [
+      2,
+      2
+    ],
+    "MNR_PNL_economy1": [
+      2,
+      4
+    ],
+    "MNR_PNL_economy2": [
+      2,
+      6
+    ],
+    "MNR_PNL_defence0": [
+      10,
+      2
+    ],
+    "MNR_PNL_defence1": [
+      10,
+      4
+    ],
+    "MNR_PNL_defence2": [
+      10,
+      6
+    ],
+    "MNR_PNL_contacts": [
+      18,
+      2
+    ],
+    "MNR_PNL_chamber": [
+      18,
+      4
+    ],
+    "MNR_PNL_civic": [
+      6,
+      8
+    ],
+    "MNR_PNL_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PNL_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PNL_command": [
+      14,
+      8
+    ],
+    "MNR_PNL_command_law": [
+      14,
+      10
+    ],
+    "MNR_PNL_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PNL_projects": [
+      24,
+      2
+    ],
+    "MNR_PNL_specialists": [
+      24,
+      4
+    ],
+    "MNR_PNL_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PNM.txt": {
+    "MNR_PNM_root": [
+      10,
+      0
+    ],
+    "MNR_PNM_economy0": [
+      2,
+      2
+    ],
+    "MNR_PNM_economy1": [
+      2,
+      4
+    ],
+    "MNR_PNM_economy2": [
+      2,
+      6
+    ],
+    "MNR_PNM_defence0": [
+      10,
+      2
+    ],
+    "MNR_PNM_defence1": [
+      10,
+      4
+    ],
+    "MNR_PNM_defence2": [
+      10,
+      6
+    ],
+    "MNR_PNM_contacts": [
+      18,
+      2
+    ],
+    "MNR_PNM_chamber": [
+      18,
+      4
+    ],
+    "MNR_PNM_civic": [
+      6,
+      8
+    ],
+    "MNR_PNM_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PNM_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PNM_command": [
+      14,
+      8
+    ],
+    "MNR_PNM_command_law": [
+      14,
+      10
+    ],
+    "MNR_PNM_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PNM_projects": [
+      24,
+      2
+    ],
+    "MNR_PNM_specialists": [
+      24,
+      4
+    ],
+    "MNR_PNM_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PPN.txt": {
+    "MNR_PPN_root": [
+      10,
+      0
+    ],
+    "MNR_PPN_economy0": [
+      2,
+      2
+    ],
+    "MNR_PPN_economy1": [
+      2,
+      4
+    ],
+    "MNR_PPN_economy2": [
+      2,
+      6
+    ],
+    "MNR_PPN_defence0": [
+      10,
+      2
+    ],
+    "MNR_PPN_defence1": [
+      10,
+      4
+    ],
+    "MNR_PPN_defence2": [
+      10,
+      6
+    ],
+    "MNR_PPN_contacts": [
+      18,
+      2
+    ],
+    "MNR_PPN_chamber": [
+      18,
+      4
+    ],
+    "MNR_PPN_civic": [
+      6,
+      8
+    ],
+    "MNR_PPN_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PPN_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PPN_command": [
+      14,
+      8
+    ],
+    "MNR_PPN_command_law": [
+      14,
+      10
+    ],
+    "MNR_PPN_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PPN_projects": [
+      24,
+      2
+    ],
+    "MNR_PPN_specialists": [
+      24,
+      4
+    ],
+    "MNR_PPN_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PSL.txt": {
+    "MNR_PSL_root": [
+      10,
+      0
+    ],
+    "MNR_PSL_economy0": [
+      2,
+      2
+    ],
+    "MNR_PSL_economy1": [
+      2,
+      4
+    ],
+    "MNR_PSL_economy2": [
+      2,
+      6
+    ],
+    "MNR_PSL_defence0": [
+      10,
+      2
+    ],
+    "MNR_PSL_defence1": [
+      10,
+      4
+    ],
+    "MNR_PSL_defence2": [
+      10,
+      6
+    ],
+    "MNR_PSL_contacts": [
+      18,
+      2
+    ],
+    "MNR_PSL_chamber": [
+      18,
+      4
+    ],
+    "MNR_PSL_civic": [
+      6,
+      8
+    ],
+    "MNR_PSL_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PSL_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PSL_command": [
+      14,
+      8
+    ],
+    "MNR_PSL_command_law": [
+      14,
+      10
+    ],
+    "MNR_PSL_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PSL_projects": [
+      24,
+      2
+    ],
+    "MNR_PSL_specialists": [
+      24,
+      4
+    ],
+    "MNR_PSL_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PSM.txt": {
+    "MNR_PSM_root": [
+      10,
+      0
+    ],
+    "MNR_PSM_economy0": [
+      2,
+      2
+    ],
+    "MNR_PSM_economy1": [
+      2,
+      4
+    ],
+    "MNR_PSM_economy2": [
+      2,
+      6
+    ],
+    "MNR_PSM_defence0": [
+      10,
+      2
+    ],
+    "MNR_PSM_defence1": [
+      10,
+      4
+    ],
+    "MNR_PSM_defence2": [
+      10,
+      6
+    ],
+    "MNR_PSM_contacts": [
+      18,
+      2
+    ],
+    "MNR_PSM_chamber": [
+      18,
+      4
+    ],
+    "MNR_PSM_civic": [
+      6,
+      8
+    ],
+    "MNR_PSM_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PSM_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PSM_command": [
+      14,
+      8
+    ],
+    "MNR_PSM_command_law": [
+      14,
+      10
+    ],
+    "MNR_PSM_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PSM_projects": [
+      24,
+      2
+    ],
+    "MNR_PSM_specialists": [
+      24,
+      4
+    ],
+    "MNR_PSM_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PSY.txt": {
+    "MNR_PSY_root": [
+      10,
+      0
+    ],
+    "MNR_PSY_economy0": [
+      2,
+      2
+    ],
+    "MNR_PSY_economy1": [
+      2,
+      4
+    ],
+    "MNR_PSY_economy2": [
+      2,
+      6
+    ],
+    "MNR_PSY_defence0": [
+      10,
+      2
+    ],
+    "MNR_PSY_defence1": [
+      10,
+      4
+    ],
+    "MNR_PSY_defence2": [
+      10,
+      6
+    ],
+    "MNR_PSY_contacts": [
+      18,
+      2
+    ],
+    "MNR_PSY_chamber": [
+      18,
+      4
+    ],
+    "MNR_PSY_civic": [
+      6,
+      8
+    ],
+    "MNR_PSY_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PSY_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PSY_command": [
+      14,
+      8
+    ],
+    "MNR_PSY_command_law": [
+      14,
+      10
+    ],
+    "MNR_PSY_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PSY_projects": [
+      24,
+      2
+    ],
+    "MNR_PSY_specialists": [
+      24,
+      4
+    ],
+    "MNR_PSY_goal": [
+      24,
+      14
+    ]
+  },
+  "MNR_PVI.txt": {
+    "MNR_PVI_root": [
+      10,
+      0
+    ],
+    "MNR_PVI_economy0": [
+      2,
+      2
+    ],
+    "MNR_PVI_economy1": [
+      2,
+      4
+    ],
+    "MNR_PVI_economy2": [
+      2,
+      6
+    ],
+    "MNR_PVI_defence0": [
+      10,
+      2
+    ],
+    "MNR_PVI_defence1": [
+      10,
+      4
+    ],
+    "MNR_PVI_defence2": [
+      10,
+      6
+    ],
+    "MNR_PVI_contacts": [
+      18,
+      2
+    ],
+    "MNR_PVI_chamber": [
+      18,
+      4
+    ],
+    "MNR_PVI_civic": [
+      6,
+      8
+    ],
+    "MNR_PVI_civic_law": [
+      6,
+      10
+    ],
+    "MNR_PVI_civic_settlement": [
+      6,
+      12
+    ],
+    "MNR_PVI_command": [
+      14,
+      8
+    ],
+    "MNR_PVI_command_law": [
+      14,
+      10
+    ],
+    "MNR_PVI_command_settlement": [
+      14,
+      12
+    ],
+    "MNR_PVI_projects": [
+      24,
+      2
+    ],
+    "MNR_PVI_specialists": [
+      24,
+      4
+    ],
+    "MNR_PVI_goal": [
+      24,
+      14
+    ]
+  },
+  "WTN_focus.txt": {
+    "WTN_annual_report": [
+      12,
+      0
+    ],
+    "WTN_common_registry": [
+      12,
+      2
+    ],
+    "WTN_credit_committee": [
+      0,
+      4
+    ],
+    "WTN_gold_reserves": [
+      0,
+      6
+    ],
+    "WTN_arbitration": [
+      0,
+      8
+    ],
+    "WTN_reserve_audit": [
+      0,
+      10
+    ],
+    "WTN_mutual_settlement": [
+      0,
+      12
+    ],
+    "WTN_solvent_chamber": [
+      0,
+      14
+    ],
+    "WTN_guard_charter": [
+      6,
+      4
+    ],
+    "WTN_silver_convoy": [
+      6,
+      6
+    ],
+    "WTN_insured_ports": [
+      6,
+      8
+    ],
+    "WTN_market_rules": [
+      6,
+      10
+    ],
+    "WTN_guard_settlement_charter": [
+      6,
+      12
+    ],
+    "WTN_tech_charter": [
+      12,
+      4
+    ],
+    "WTN_cable_survey": [
+      12,
+      6
+    ],
+    "WTN_malta_correspondence": [
+      12,
+      8
+    ],
+    "WTN_measurement_fund": [
+      12,
+      10
+    ],
+    "WTN_open_patents": [
+      12,
+      12
+    ],
+    "WTN_secret_charter": [
+      18,
+      4
+    ],
+    "WTN_cable_watch": [
+      18,
+      6
+    ],
+    "WTN_strait_wardens": [
+      18,
+      8
+    ],
+    "WTN_pirate_contacts": [
+      18,
+      10
+    ],
+    "WTN_secret_accounts_control": [
+      18,
+      12
+    ],
+    "WTN_foreign_offices": [
+      24,
+      4
+    ],
+    "WTN_british_understanding": [
+      24,
+      6
+    ],
+    "WTN_pacific_accounts": [
+      24,
+      8
+    ],
+    "WTN_colonial_desks": [
+      24,
+      10
+    ],
+    "WTN_caribbean_routes": [
+      24,
+      12
+    ],
+    "WTN_northern_observers": [
+      24,
+      14
+    ],
+    "WTN_island_congress_protocol": [
+      24,
+      16
+    ]
+  },
+  "WTN_PHI_focus.txt": {
+    "WTN_PHI_council": [
+      6,
+      0
+    ],
+    "WTN_PHI_accounts": [
+      6,
+      2
+    ],
+    "WTN_PHI_own_resources": [
+      2,
+      4
+    ],
+    "WTN_PHI_chamber_channel": [
+      10,
+      4
+    ],
+    "WTN_PHI_local_service": [
+      6,
+      6
+    ],
+    "WTN_PHI_programme_1": [
+      6,
+      8
+    ],
+    "WTN_PHI_programme_2": [
+      6,
+      10
+    ],
+    "WTN_PHI_programme_3": [
+      6,
+      12
+    ]
+  },
+  "WTN_RUS_focus.txt": {
+    "WTN_RUS_council": [
+      6,
+      0
+    ],
+    "WTN_RUS_accounts": [
+      6,
+      2
+    ],
+    "WTN_RUS_own_resources": [
+      2,
+      4
+    ],
+    "WTN_RUS_chamber_channel": [
+      10,
+      4
+    ],
+    "WTN_RUS_local_service": [
+      6,
+      6
+    ],
+    "WTN_RUS_programme_1": [
+      6,
+      8
+    ],
+    "WTN_RUS_programme_2": [
+      6,
+      10
+    ],
+    "WTN_RUS_programme_3": [
+      6,
+      12
+    ],
+    "WTN_RUS_programme_4": [
+      6,
+      14
+    ]
+  },
+  "WTN_SEA_focus.txt": {
+    "WTN_SEA_council": [
+      6,
+      0
+    ],
+    "WTN_SEA_accounts": [
+      6,
+      2
+    ],
+    "WTN_SEA_own_resources": [
+      2,
+      4
+    ],
+    "WTN_SEA_chamber_channel": [
+      10,
+      4
+    ],
+    "WTN_SEA_local_service": [
+      6,
+      6
+    ],
+    "WTN_SEA_programme_1": [
+      6,
+      8
+    ],
+    "WTN_SEA_programme_2": [
+      6,
+      10
+    ],
+    "WTN_SEA_programme_3": [
+      6,
+      12
+    ]
+  }
+}

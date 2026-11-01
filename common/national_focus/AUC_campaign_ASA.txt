@@ -1,0 +1,589 @@
+focus_tree = {
+ id = AUC_campaign_ASA
+ country = {
+  factor = 0
+  modifier = {
+   add = 200
+   tag = ASA
+  }
+ }
+ default = no
+ continuous_focus_position = {
+  x = 100
+  y = 2200
+ }
+ focus = {
+  id = AUC_ASA_adelaide
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_political_power = 40
+   add_stability = 0.02
+  }
+  x = 20
+  y = 0
+ }
+ focus = {
+  id = AUC_ASA_telegraph
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+  }
+  prerequisite = {
+   focus = AUC_ASA_public_works
+   focus = AUC_ASA_merchant_orders
+  }
+  x = 0
+  y = 3
+ }
+ focus = {
+  id = AUC_ASA_inland
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = AUC_ASA_inland_spirit
+  }
+  prerequisite = {
+   focus = AUC_ASA_public_works
+   focus = AUC_ASA_merchant_orders
+  }
+  x = 8
+  y = 3
+ }
+ focus = {
+  id = AUC_ASA_arsenal
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = arms_factory
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+  }
+  prerequisite = {
+   focus = AUC_ASA_telegraph
+  }
+  prerequisite = {
+   focus = AUC_ASA_inland
+  }
+  x = 4
+  y = 4
+ }
+ focus = {
+  id = AUC_ASA_rifles
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   AUC_raise_ASA_militia = yes
+  }
+  prerequisite = {
+   focus = AUC_ASA_muster
+  }
+  x = 28
+  y = 2
+ }
+ focus = {
+  id = AUC_ASA_harbour
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = AUC_coastal_watch_spirit
+   navy_experience = 10
+  }
+  prerequisite = {
+   focus = AUC_ASA_rifles
+  }
+  x = 28
+  y = 4
+ }
+ focus = {
+  id = AUC_ASA_school
+  icon = GFX_goal_generic_army_doctrines
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_ideas = AUC_territorial_staff_spirit
+   army_experience = 15
+  }
+  prerequisite = {
+   focus = AUC_ASA_rifles
+  }
+  prerequisite = {
+   focus = AUC_ASA_supply_depots
+  }
+  x = 36
+  y = 4
+ }
+ focus = {
+  id = AUC_ASA_demand
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = AUC_local_terms
+   A07 = {
+    set_country_flag = AUC_terms_ASA
+   }
+   add_political_power = 25
+  }
+  prerequisite = {
+   focus = AUC_ASA_opening_parliament
+   focus = AUC_ASA_opening_delegates
+  }
+  x = 20
+  y = 2
+ }
+ focus = {
+  id = AUC_ASA_federal
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = AUC_ASA_demand
+  }
+  mutually_exclusive = {
+   focus = AUC_ASA_separate
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   set_country_flag = AUC_federal_campaign
+   add_stability = 0.03
+  }
+  x = 16
+  y = 3
+ }
+ focus = {
+  id = AUC_ASA_separate
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = AUC_ASA_demand
+  }
+  mutually_exclusive = {
+   focus = AUC_ASA_federal
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 1
+  }
+  completion_reward = {
+   set_country_flag = AUC_separate_cabinet
+   clr_country_flag = AUC_join_authorized
+   A07 = {
+    clr_country_flag = AUC_vote_ASA
+   }
+   add_ideas = AUC_local_parliament_spirit
+  }
+  x = 24
+  y = 3
+ }
+ focus = {
+  id = AUC_ASA_mandate
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = AUC_ASA_federal
+  }
+  available = {
+   country_exists = A07
+   A07 = {
+    has_country_flag = AUC_referendums_open
+   }
+   AUC_can_negotiate = yes
+   NOT = {
+    has_country_flag = AUC_join_authorized
+   }
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   country_event = {
+    id = auc_campaign.12
+    days = 1
+   }
+  }
+  x = 16
+  y = 5
+ }
+ focus = {
+  id = AUC_ASA_credit
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  prerequisite = {
+   focus = AUC_ASA_adelaide
+  }
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   WTC_initialize_effect = yes
+   set_country_flag = WTN_compact_desk_open
+   set_country_flag = WTN_relations_open
+   custom_effect_tooltip = WTN_open_compact_tt
+  }
+  x = 44
+  y = 1
+ }
+ focus = {
+  id = AUC_ASA_services
+  icon = GFX_goal_generic_national_unity
+  cost = 5
+  cancel_if_invalid = yes
+  ai_will_do = {
+   factor = 5
+  }
+  completion_reward = {
+   add_timed_idea = {
+    idea = WTN_colonial_contract
+    days = 240
+   }
+   add_political_power = 25
+  }
+  prerequisite = {
+   focus = AUC_ASA_credit
+  }
+  prerequisite = {
+   focus = AUC_ASA_harbour
+  }
+  prerequisite = {
+   focus = AUC_ASA_school
+  }
+  x = 44
+  y = 5
+ }
+ focus = {
+  id = AUC_ASA_opening_parliament
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_political_power = 20
+  }
+  prerequisite = {
+   focus = AUC_ASA_adelaide
+  }
+  mutually_exclusive = {
+   focus = AUC_ASA_opening_delegates
+  }
+  x = 16
+  y = 1
+ }
+ focus = {
+  id = AUC_ASA_opening_delegates
+  icon = GFX_goal_generic_national_unity
+  cost = 3
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 40
+  }
+  prerequisite = {
+   focus = AUC_ASA_adelaide
+  }
+  mutually_exclusive = {
+   focus = AUC_ASA_opening_parliament
+  }
+  x = 24
+  y = 1
+ }
+ focus = {
+  id = AUC_ASA_recovery
+  icon = GFX_goal_generic_national_unity
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_political_power = 25
+  }
+  prerequisite = {
+   focus = AUC_ASA_adelaide
+  }
+  cost = 5
+  x = 4
+  y = 1
+ }
+ focus = {
+  id = AUC_ASA_public_works
+  icon = GFX_goal_generic_national_unity
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_manpower = 750
+   add_stability = 0.02
+  }
+  prerequisite = {
+   focus = AUC_ASA_recovery
+  }
+  mutually_exclusive = {
+   focus = AUC_ASA_merchant_orders
+  }
+  cost = 5
+  x = 0
+  y = 2
+ }
+ focus = {
+  id = AUC_ASA_merchant_orders
+  icon = GFX_goal_generic_national_unity
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 60
+  }
+  prerequisite = {
+   focus = AUC_ASA_recovery
+  }
+  mutually_exclusive = {
+   focus = AUC_ASA_public_works
+  }
+  cost = 5
+  x = 8
+  y = 2
+ }
+ focus = {
+  id = AUC_ASA_technical_school
+  icon = GFX_goal_generic_construct_civ_factory
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_tech_bonus = {
+    name = AUC_research
+    bonus = 0.5
+    uses = 1
+    category = industry
+   }
+  }
+  prerequisite = {
+   focus = AUC_ASA_arsenal
+  }
+  cost = 5
+  x = 4
+  y = 5
+ }
+ focus = {
+  id = AUC_ASA_muster
+  icon = GFX_goal_generic_army_doctrines
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   army_experience = 10
+  }
+  prerequisite = {
+   focus = AUC_ASA_adelaide
+  }
+  cost = 5
+  x = 32
+  y = 1
+ }
+ focus = {
+  id = AUC_ASA_supply_depots
+  icon = GFX_goal_generic_army_doctrines
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+    amount = 150
+    producer = ROOT
+   }
+  }
+  prerequisite = {
+   focus = AUC_ASA_muster
+  }
+  cost = 5
+  x = 36
+  y = 2
+ }
+ focus = {
+  id = AUC_ASA_joint_exercises
+  icon = GFX_goal_generic_army_doctrines
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   army_experience = 15
+   add_war_support = 0.03
+  }
+  cost = 5
+  prerequisite = {
+   focus = AUC_ASA_school
+  }
+  prerequisite = {
+   focus = AUC_ASA_harbour
+  }
+  x = 32
+  y = 5
+ }
+ focus = {
+  id = AUC_ASA_local_civil_service
+  icon = GFX_goal_generic_national_unity
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 50
+   add_stability = 0.03
+  }
+  prerequisite = {
+   focus = AUC_ASA_separate
+  }
+  cost = 5
+  x = 24
+  y = 5
+ }
+ focus = {
+  id = AUC_ASA_district_councils
+  icon = GFX_goal_generic_national_unity
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_manpower = 500
+  }
+  prerequisite = {
+   focus = AUC_ASA_mandate
+   focus = AUC_ASA_local_civil_service
+  }
+  cost = 5
+  x = 20
+  y = 6
+ }
+ focus = {
+  id = AUC_ASA_trade_delegation
+  icon = GFX_goal_generic_national_unity
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_political_power = 40
+   navy_experience = 5
+  }
+  prerequisite = {
+   focus = AUC_ASA_services
+  }
+  cost = 5
+  x = 44
+  y = 6
+ }
+ focus = {
+  id = AUC_ASA_development_programme
+  icon = GFX_goal_generic_construct_civ_factory
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   capital_scope = {
+    if = {
+     limit = {
+      is_owned_by = ROOT
+      is_controlled_by = ROOT
+     }
+     add_extra_state_shared_building_slots = 1
+     add_building_construction = {
+      type = industrial_complex
+      level = 1
+      instant_build = yes
+     }
+    }
+   }
+  }
+  cost = 5
+  prerequisite = {
+   focus = AUC_ASA_technical_school
+  }
+  prerequisite = {
+   focus = AUC_ASA_district_councils
+  }
+  x = 12
+  y = 7
+ }
+ focus = {
+  id = AUC_ASA_prepared_colony
+  icon = GFX_goal_generic_national_unity
+  ai_will_do = {
+   factor = 4
+  }
+  completion_reward = {
+   add_stability = 0.03
+   add_war_support = 0.03
+  }
+  cost = 5
+  prerequisite = {
+   focus = AUC_ASA_joint_exercises
+  }
+  prerequisite = {
+   focus = AUC_ASA_trade_delegation
+  }
+  x = 32
+  y = 8
+ }
+}

@@ -1,43 +1,13 @@
 A01_begin_expansion_preparations_effect = {
- if = {
-  limit = {
-   country_exists = A03
-   NOT = {
-    has_country_flag = A01_island_defence_started
-   }
-   NOT = {
-    has_country_flag = A01_expansion_resolved
-   }
-   NOT = {
-    has_war_with = A03
-   }
-   NOT = {
-    has_country_flag = pacific_trade_accord
-   }
-  }
+ if = { limit = { country_exists = A03 NOT = { has_country_flag = A01_preparation_dispatched } NOT = { has_country_flag = A01_expansion_resolved } NOT = { has_war_with = A03 } NOT = { has_country_flag = pacific_trade_accord } }
+  set_country_flag = A01_preparation_dispatched
   set_country_flag = A01_island_defence_started
-  set_country_flag = A01_refused_japanese_ultimatum
   country_event = { id = A01_future.1 days = 1 }
   country_event = { id = A01_japan.2 days = 14 random_days = 16 }
-  activate_mission = A01_japanese_invasion_countdown
-  A03 = {
-   A03_prepare_southern_war_effect = yes
-   activate_mission = A03_japanese_invasion_countdown
-  }
+  A03 = { A03_prepare_southern_war_effect = yes }
  }
 }
-A01_delay_expansion_180_effect = {
- add_days_mission_timeout = {
-  mission = A01_japanese_invasion_countdown
-  days = 180
- }
- A03 = {
-  add_days_mission_timeout = {
-   mission = A03_japanese_invasion_countdown
-   days = 180
-  }
- }
-}
+A01_delay_expansion_180_effect = { add_political_power = 25 }
 A01_start_expansion_campaign_effect = {
  if = {
   limit = {
@@ -64,6 +34,8 @@ A01_start_expansion_campaign_effect = {
   A03 = {
    activate_mission = A03_japanese_expansion
   }
+  JPS_align_war_clocks_effect = yes
+  set_country_flag = JPS_war_clock_v2
  }
 }
 A01_cleanup_expansion_effect = {

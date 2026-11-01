@@ -1,4 +1,4 @@
-# Canon 1893. Generic portrait; historical likeness not supplied.
+﻿# Canon 1893. Generic portrait; historical likeness not supplied.
 capital = 100
 recruit_character = A06_canon_leader
 set_politics = { ruling_party = neutrality elections_allowed = no }
@@ -15,3 +15,62 @@ oob = "A06_1893"
 
 recruit_character = A06_pobedonostsev
 add_ideas = PZ_russian_dual_power
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_technology = {
+	basic_railways = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = A06 }
+# END 1893 START RESEARCH AND TRAINS
+
+# BEGIN MAJOR RESEARCH PROFILE 1893
+# Сохранённые армейские школы, гаубицы, госпитали и электротехнические знания при слабой производственной базе изгнания.
+set_technology = {
+	basic_field_gun = 1
+	basic_howitzer = 1
+	early_artillery = 1
+	early_machine_tools = 1
+	electrical_engineering = 1
+	infantry_weapons1 = 1
+	machine_guns = 1
+	powder_type_b = 1
+	standard_gauge_railway = 1
+	tech_engineers = 1
+	tech_field_hospital = 1
+	tech_recon = 1
+	tech_support = 1
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		basic_secondary_battery = 1
+		coastal_defense_ship_armor_scheme = 1
+		early_torpedo_tubes = 1
+		gunboat_ship_hull_light = 1
+		ironclad_artillery = 1
+		ironclad_coal_engine = 1
+		ironclad_ship_hull_heavy = 1
+		mtg_transport = 1
+		victorian_ship_hull_cruiser = 1
+	}
+	else = {
+		set_technology = {
+			early_light_cruiser = 1
+			transport = 1
+		}
+	}
+}
+# END MAJOR RESEARCH PROFILE 1893
+
+# BEGIN EDITABLE COMMANDER PLACEHOLDERS
+recruit_character = A06_placeholder_marshal_01
+recruit_character = A06_placeholder_general_01
+recruit_character = A06_placeholder_general_02
+recruit_character = A06_placeholder_general_03
+recruit_character = A06_placeholder_general_04
+recruit_character = A06_placeholder_general_05
+# END EDITABLE COMMANDER PLACEHOLDERS

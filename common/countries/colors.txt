@@ -29,3 +29,15 @@ A13 = { color = rgb { 186 65 75 } color_ui = rgb { 186 65 75 } }
 
 
 
+
+MLT = { color = rgb { 190 45 55 } color_ui = rgb { 190 45 55 } }
+
+AVC = { color = rgb { 58 76 145 } color_ui = rgb { 58 76 145 } }
+
+AQL = { color = rgb { 148 48 69 } color_ui = rgb { 148 48 69 } }
+
+ASA = { color = rgb { 185 142 66 } color_ui = rgb { 185 142 66 } }
+
+AWA = { color = rgb { 86 128 70 } color_ui = rgb { 86 128 70 } }
+
+ATA = { color = rgb { 139 92 153 } color_ui = rgb { 139 92 153 } }

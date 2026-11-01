@@ -1,0 +1,68 @@
+add_namespace = A10D_development
+
+country_event = {
+ id = A10D_development.1
+ title = A10D_development.1.t
+ desc = A10D_development.1.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes
+ trigger = { tag = A10 has_capitulated = no }
+ option = { name = A10D_development.1.a ai_chance = { factor = 70 } trigger = { has_political_power > 24 } add_political_power = -25 add_to_variable = { A10D_supply = 8 } A10D_refresh_supply = yes }
+ option = { name = A10D_development.1.b ai_chance = { factor = 30 } add_political_power = 15 navy_experience = 3 }
+}
+
+country_event = {
+ id = A10D_development.2
+ title = A10D_development.2.t
+ desc = A10D_development.2.d
+ picture = GFX_report_event_generic_construction_site
+ is_triggered_only = yes
+ trigger = { tag = A10 has_capitulated = no }
+ immediate = { subtract_from_variable = { A10D_supply = 15 } A10D_refresh_supply = yes add_timed_idea = { idea = A10D_monsoon_damage days = 90 } }
+ option = { name = A10D_development.2.a ai_chance = { factor = 75 } trigger = { has_political_power > 39 } add_political_power = -40 add_to_variable = { A10D_supply = 8 } A10D_refresh_supply = yes }
+ option = { name = A10D_development.2.b ai_chance = { factor = 25 } add_stability = -0.02 add_to_variable = { A10D_supply = 4 } A10D_refresh_supply = yes }
+}
+
+country_event = {
+ id = A10D_development.3
+ title = A10D_development.3.t
+ desc = A10D_development.3.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes
+ trigger = { tag = A10 has_capitulated = no }
+ option = { name = A10D_development.3.a ai_chance = { factor = 60 } add_to_variable = { A10D_supply = 5 } A10D_refresh_supply = yes }
+ option = { name = A10D_development.3.b ai_chance = { factor = 40 } add_stability = 0.02 add_political_power = 10 }
+}
+
+country_event = {
+ id = A10D_development.4
+ title = A10D_development.4.t
+ desc = A10D_development.4.d
+ picture = GFX_report_event_generic_construction_site
+ is_triggered_only = yes
+ trigger = { tag = A10 has_capitulated = no }
+ option = { name = A10D_development.4.a ai_chance = { factor = 65 } trigger = { has_political_power > 24 } add_political_power = -25 add_timed_idea = { idea = A10D_volunteer_orderlies days = 120 } }
+ option = { name = A10D_development.4.b ai_chance = { factor = 35 } add_stability = 0.02 }
+}
+
+country_event = {
+ id = A10D_development.5
+ title = A10D_development.5.t
+ desc = A10D_development.5.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes
+ trigger = { tag = A10 has_capitulated = no }
+ option = { name = A10D_development.5.a ai_chance = { factor = 75 } add_to_variable = { A10D_supply = 8 } A10D_refresh_supply = yes add_stability = 0.01 }
+ option = { name = A10D_development.5.b ai_chance = { factor = 25 } trigger = { has_political_power > 34 } add_political_power = -35 navy_experience = 15 }
+}
+
+country_event = {
+ id = A10D_development.6
+ title = A10D_development.6.t
+ desc = A10D_development.6.d
+ picture = GFX_report_event_generic_parliament
+ is_triggered_only = yes
+ trigger = { tag = A10 has_capitulated = no }
+ option = { name = A10D_development.6.a ai_chance = { factor = 70 } add_to_variable = { A10D_supply = 10 } A10D_refresh_supply = yes add_stability = 0.02 }
+ option = { name = A10D_development.6.b ai_chance = { factor = 30 } add_political_power = 50 add_timed_idea = { idea = A10D_tools_programme days = 180 } }
+}

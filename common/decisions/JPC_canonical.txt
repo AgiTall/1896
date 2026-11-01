@@ -1,0 +1,6 @@
+JPC_cabinet = {
+JPC_emergency_shipping = { icon = generic_political_discourse cost = 50 days_re_enable = 120 visible = { has_war_with = A01 } available = { has_war_with = A01 } complete_effect = { add_equipment_to_stockpile = { type = convoy_1 amount = 10 producer = A03 } } ai_will_do = { base = 1 } }
+JPC_repay_credit = { icon = generic_political_discourse cost = 175 fire_only_once = yes visible = { has_idea = JPC_credit has_war = no } available = { has_idea = JPC_credit has_war = no } complete_effect = { remove_ideas = JPC_credit WTC_initialize_effect = yes add_to_variable = { WTC_debt = -15 } WTC_refresh_effect = yes } ai_will_do = { base = 1 } }
+JPC_support_families = { icon = generic_political_discourse cost = 60 fire_only_once = yes visible = { has_war_with = A01 } available = { has_war_with = A01 } complete_effect = { add_stability = 0.03 } ai_will_do = { base = 1 } }
+JPC_luzon_talks = { icon = generic_political_discourse cost = 25 days_re_enable = 120 visible = { has_war_with = A10 A10 = { OR = { A10_full_archipelago_liberated = yes A10_manila_only_liberated = yes } } } available = { has_war_with = A10 A10 = { OR = { A10_full_archipelago_liberated = yes A10_manila_only_liberated = yes } } } complete_effect = { country_event = { id = A10_settlement.6 days = 1 } } ai_will_do = { base = 1 } }
+}

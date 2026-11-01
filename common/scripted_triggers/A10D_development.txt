@@ -1,0 +1,7 @@
+A10D_eligible_state_trigger = {
+ A10R_archipelago_state_trigger = yes
+ OR = {
+  AND = { is_owned_by = A10 is_controlled_by = A10 }
+  AND = { owner = { A10R_member_trigger = yes is_subject_of = A10 } is_controlled_by = OWNER }
+ }
+}

@@ -1,0 +1,83 @@
+spriteTypes = {
+corneredTileSpriteType = {
+		name = "GFX_tiled_window_thin_border2"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//tiles//tiled_window_thin_border2.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+spriteType = {
+		name = "GFX_sp_air_intercontinental_airship"
+		texturefile = "gfx/interface/special_project/project_icons/sp_air_intercontinental_airship.png"
+	}
+spriteType = {
+		name = "GFX_locked"
+		texturefile = "gfx/texticons/locked.dds"
+		legacy_lazy_load = no
+	}
+textSpriteType = {
+		name = "GFX_button_261x34"
+		texturefile = "gfx//interface//button_261x34.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "GFX_sp_air_transport_plane"
+		texturefile = "gfx/interface/special_project/project_icons/sp_air_transport_plane.png"
+	}
+corneredTileSpriteType = {
+		name = "GFX_tiled_window_transparent_transparent"
+		size= { x=96 y=96 }
+		textureFile = "gfx//interface//tiles//tiled_window_transparent.dds"
+		borderSize = { x=32 y=32 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+corneredTileSpriteType = {
+		name = "GFX_tiled_window_transparent"
+		size= { x=3 y=3 }
+		textureFile = "gfx//interface//tiles//tiled_window_transparent.dds"
+		borderSize = { x=1 y=1 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+textSpriteType = {
+		name = "GFX_button_123x34"
+		texturefile = "gfx//interface//button_123x34.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "GFX_sp_land_tank_prototype"
+		texturefile = "gfx/interface/special_project/project_icons/sp_land_tank_prototype.png"
+	}
+spriteType = {
+		name = "GFX_landcombat_defender_progress_large"
+		texturefile = "gfx/interface/landcombat_defender_progress_large.png"
+	}
+spriteType = {
+		name = "GFX_sp_land_early_armored_car"
+		texturefile = "gfx/interface/special_project/project_icons/sp_land_early_armored_car.png"
+	}
+corneredTileSpriteType = {
+		name = "GFX_tiled_generic_overlay_bg1"
+		size= { x=549 y=600 }
+		textureFile = "gfx//interface//tiles//tiled_generic_overlay_bg1.dds"
+		borderSize = { x=268 y=268 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+textSpriteType = {
+		name = "GFX_government_button"
+		texturefile = "gfx//interface//government_button.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+spriteType = {
+		name = "GFX_sp_land_chemical_warfare"
+		texturefile = "gfx/interface/special_project/project_icons/sp_land_chemical_warfare.png"
+	}
+}

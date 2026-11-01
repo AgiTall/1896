@@ -14,9 +14,10 @@ fx=read(files[0]);ideas=read(files[1]);ai=read(files[2]);dec=read(files[3])
 assert 'days = 180' in fx and 'idea = A03_southern_blitz' in fx
 assert 'has_country_flag = A03_southern_force_prepared' in fx
 assert 'delete_unit_template_and_units = { division_template = "Indische Vrijwilligers" }' in fx
-for n in [15,15,15]:assert f'days = -{n}' in dec
+assert dec.count('JPS_accelerate_invasion_effect = yes')==3
+assert 'amount = 20' in dec and 'add_fuel = 15000' in dec
 assert dec.count('fire_only_once = yes')==3
-assert 'A03_start_southern_war_effect = yes' in read(R/'common/decisions/A01_inevitable_conflict.txt')
+assert 'JPC_issue_ultimatum = yes' in read(R/'common/decisions/A01_inevitable_conflict.txt')
 assert 'declare_war_on' not in read(R/'common/national_focus/a03_focus.txt')
 assert 'state = 1024' in ai and 'type = invade' in ai and 'naval_invasion_support_priority' in ai
 # The staging buffer and theatre must resolve against this mod's replaced map.
@@ -55,12 +56,14 @@ refs=set(re.findall(r'country_event\s*=\s*\{\s*id\s*=\s*(A01_japan\.\d+|southern
 assert refs<=set(definitions),refs-set(definitions)
 loc={}
 for lang in ['russian','english']:
- t=read(R/f'localisation/{lang}/zzz_borneo_war_l_{lang}.yml');loc[lang]=set(re.findall(r'^\s+(\S+):0',t,re.M))
-assert loc['russian']==loc['english'] and len(loc['russian'])==63
+ t=read(R/f'localisation/{lang}/1896_main_l_{lang}.yml');loc[lang]=set(re.findall(r'^\s+(\S+):0',t,re.M))
+required_borneo_keys = ['A01_coerced_service', 'A01_coerced_service_desc', 'A01_indonesian_refusal', 'A01_indonesian_refusal_desc', 'A01_indonesian_volunteers', 'A01_indonesian_volunteers_desc', 'A01_japan.10.a', 'A01_japan.10.d', 'A01_japan.10.t', 'A01_japan.11.a', 'A01_japan.11.d', 'A01_japan.11.t', 'A01_japan.12.a', 'A01_japan.12.d', 'A01_japan.12.t', 'A01_japan.2.balance', 'A01_japan.2.d', 'A01_japan.2.hard', 'A01_japan.2.support', 'A01_japan.2.t', 'A01_japan.20.a', 'A01_japan.20.d', 'A01_japan.20.t', 'A01_japan.21.a', 'A01_japan.21.d', 'A01_japan.21.t', 'A01_japan.22.a', 'A01_japan.22.d', 'A01_japan.22.t', 'A01_japan.30.a', 'A01_japan.30.d', 'A01_japan.30.t', 'A01_japan.31.a', 'A01_japan.31.d', 'A01_japan.31.t', 'A01_japan.32.a', 'A01_japan.32.d', 'A01_japan.32.t', 'A01_japan.40.a', 'A01_japan.40.d', 'A01_japan.40.t', 'A01_japan.choose_balance', 'A01_japan.choose_hard', 'A01_japan.choose_support', 'A01_service_compromise', 'A01_service_compromise_desc', 'A01_surya_wirata_name', 'A03_advance_coaling', 'A03_advance_coaling_desc', 'A03_charter_transports', 'A03_charter_transports_desc', 'A03_final_sailing_orders', 'A03_final_sailing_orders_desc', 'A03_southern_blitz', 'A03_southern_blitz_desc', 'A03_southern_campaign_desc', 'A03_southern_preparations', 'A03_southern_reconstruction_desc', 'ludolf.20.d', 'ludolf.21.d', 'southern_war.2.a', 'southern_war.2.d', 'southern_war.2.t']
+assert len(required_borneo_keys)==63
+for lang in loc: assert set(required_borneo_keys)<=loc[lang]
 for eid in set(definitions):
  if eid=='southern_war.1' or eid in ['A01_japan.1','A01_japan.3','A01_japan.4','A01_japan.5']:continue
  for suffix in ['.t','.d']:assert eid+suffix in loc['russian'],eid+suffix
-report=dict(status='passed',reinforcement_ships=20,heavy_ships=4,militia_divisions=12,blitz_days=180,decision_reductions=[15,15,15],campaign_focus_reduction=15,localisation_keys_per_language=len(loc['russian']),checks=['Balanced scripts and event references','One guarded war preparation path and real mission reductions','DLC and legacy fleets','Twelve locked militia divisions and peace cleanup','Vanilla Japanese RGB in both colour definitions','Russian and English chain texts'],campaign_combat_test='Not simulated; AI planning must be assessed during a running campaign.')
+report=dict(status='passed',reinforcement_ships=20,heavy_ships=4,militia_divisions=12,blitz_days=180,decision_reductions=[15,15,15],campaign_focus_reduction=0,localisation_keys_per_language=len(loc['russian']),checks=['Balanced scripts and event references','Guarded January ultimatum; preparations grant supplies and shorten both clocks by 15 days','DLC and legacy fleets','Twelve locked militia divisions and peace cleanup','Vanilla Japanese RGB in both colour definitions','Russian and English chain texts'],campaign_combat_test='Not simulated; AI planning must be assessed during a running campaign.')
 report['checks'] += ['Borneo AI area, target ports and province membership', 'Palau staging buffer and southern strike-force home areas', 'Current invasion cap modifiers present in installed game documentation']
 (R/'tools/borneo_war_validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(report))
 

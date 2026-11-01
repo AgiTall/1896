@@ -1,0 +1,602 @@
+add_namespace = mnr_campaign
+
+country_event = { id = mnr_campaign.101 title = mnr_campaign.101.t desc = mnr_campaign.101.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHW } option = { name = mnr_campaign.101.a trigger = { country_exists = A05 country_exists = PHW A05 = { has_capitulated = no has_country_flag = MNR_pending_PHW NOT = { has_war_with = PHW } NOT = { has_country_flag = MNR_pact_PHW } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A05 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A05 country_exists = PHW A05 = { has_capitulated = no has_country_flag = MNR_pending_PHW NOT = { has_war_with = PHW } NOT = { has_country_flag = MNR_pact_PHW } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A05 } }
+ set_country_flag = { flag = MNR_pact_A05 days = 730 }
+ A05 = { clr_country_flag = MNR_pending_PHW set_country_flag = { flag = MNR_pact_PHW days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PHW } } set_country_flag = MNR_rewarded_PHW add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.101.b ai_chance = { factor = 35 } A05 = { clr_country_flag = MNR_pending_PHW } }
+}
+
+country_event = { id = mnr_campaign.102 title = mnr_campaign.102.t desc = mnr_campaign.102.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCF } option = { name = mnr_campaign.102.a trigger = { country_exists = A05 country_exists = PCF A05 = { has_capitulated = no has_country_flag = MNR_pending_PCF NOT = { has_war_with = PCF } NOT = { has_country_flag = MNR_pact_PCF } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A05 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A05 country_exists = PCF A05 = { has_capitulated = no has_country_flag = MNR_pending_PCF NOT = { has_war_with = PCF } NOT = { has_country_flag = MNR_pact_PCF } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A05 } }
+ set_country_flag = { flag = MNR_pact_A05 days = 730 }
+ A05 = { clr_country_flag = MNR_pending_PCF set_country_flag = { flag = MNR_pact_PCF days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PCF } } set_country_flag = MNR_rewarded_PCF add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.102.b ai_chance = { factor = 35 } A05 = { clr_country_flag = MNR_pending_PCF } }
+}
+
+country_event = { id = mnr_campaign.103 title = mnr_campaign.103.t desc = mnr_campaign.103.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A05 } option = { name = mnr_campaign.103.a trigger = { country_exists = PCF country_exists = A05 PCF = { has_capitulated = no has_country_flag = MNR_pending_A05 NOT = { has_war_with = A05 } NOT = { has_country_flag = MNR_pact_A05 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCF } } ai_chance = { factor = 65 } if = { limit = { country_exists = PCF country_exists = A05 PCF = { has_capitulated = no has_country_flag = MNR_pending_A05 NOT = { has_war_with = A05 } NOT = { has_country_flag = MNR_pact_A05 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCF } }
+ set_country_flag = { flag = MNR_pact_PCF days = 730 }
+ PCF = { clr_country_flag = MNR_pending_A05 set_country_flag = { flag = MNR_pact_A05 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A05 } } set_country_flag = MNR_rewarded_A05 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.103.b ai_chance = { factor = 35 } PCF = { clr_country_flag = MNR_pending_A05 } }
+}
+
+country_event = { id = mnr_campaign.104 title = mnr_campaign.104.t desc = mnr_campaign.104.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PAZ } option = { name = mnr_campaign.104.a trigger = { country_exists = PCF country_exists = PAZ PCF = { has_capitulated = no has_country_flag = MNR_pending_PAZ NOT = { has_war_with = PAZ } NOT = { has_country_flag = MNR_pact_PAZ } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCF } } ai_chance = { factor = 65 } if = { limit = { country_exists = PCF country_exists = PAZ PCF = { has_capitulated = no has_country_flag = MNR_pending_PAZ NOT = { has_war_with = PAZ } NOT = { has_country_flag = MNR_pact_PAZ } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCF } }
+ set_country_flag = { flag = MNR_pact_PCF days = 730 }
+ PCF = { clr_country_flag = MNR_pending_PAZ set_country_flag = { flag = MNR_pact_PAZ days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PAZ } } set_country_flag = MNR_rewarded_PAZ add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.104.b ai_chance = { factor = 35 } PCF = { clr_country_flag = MNR_pending_PAZ } }
+}
+
+country_event = { id = mnr_campaign.105 title = mnr_campaign.105.t desc = mnr_campaign.105.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCF } option = { name = mnr_campaign.105.a trigger = { country_exists = PAZ country_exists = PCF PAZ = { has_capitulated = no has_country_flag = MNR_pending_PCF NOT = { has_war_with = PCF } NOT = { has_country_flag = MNR_pact_PCF } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PAZ } } ai_chance = { factor = 65 } if = { limit = { country_exists = PAZ country_exists = PCF PAZ = { has_capitulated = no has_country_flag = MNR_pending_PCF NOT = { has_war_with = PCF } NOT = { has_country_flag = MNR_pact_PCF } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PAZ } }
+ set_country_flag = { flag = MNR_pact_PAZ days = 730 }
+ PAZ = { clr_country_flag = MNR_pending_PCF set_country_flag = { flag = MNR_pact_PCF days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PCF } } set_country_flag = MNR_rewarded_PCF add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.105.b ai_chance = { factor = 35 } PAZ = { clr_country_flag = MNR_pending_PCF } }
+}
+
+country_event = { id = mnr_campaign.106 title = mnr_campaign.106.t desc = mnr_campaign.106.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHR } option = { name = mnr_campaign.106.a trigger = { country_exists = PAZ country_exists = PHR PAZ = { has_capitulated = no has_country_flag = MNR_pending_PHR NOT = { has_war_with = PHR } NOT = { has_country_flag = MNR_pact_PHR } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PAZ } } ai_chance = { factor = 65 } if = { limit = { country_exists = PAZ country_exists = PHR PAZ = { has_capitulated = no has_country_flag = MNR_pending_PHR NOT = { has_war_with = PHR } NOT = { has_country_flag = MNR_pact_PHR } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PAZ } }
+ set_country_flag = { flag = MNR_pact_PAZ days = 730 }
+ PAZ = { clr_country_flag = MNR_pending_PHR set_country_flag = { flag = MNR_pact_PHR days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PHR } } set_country_flag = MNR_rewarded_PHR add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.106.b ai_chance = { factor = 35 } PAZ = { clr_country_flag = MNR_pending_PHR } }
+}
+
+country_event = { id = mnr_campaign.107 title = mnr_campaign.107.t desc = mnr_campaign.107.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PAZ } option = { name = mnr_campaign.107.a trigger = { country_exists = PHR country_exists = PAZ PHR = { has_capitulated = no has_country_flag = MNR_pending_PAZ NOT = { has_war_with = PAZ } NOT = { has_country_flag = MNR_pact_PAZ } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHR } } ai_chance = { factor = 65 } if = { limit = { country_exists = PHR country_exists = PAZ PHR = { has_capitulated = no has_country_flag = MNR_pending_PAZ NOT = { has_war_with = PAZ } NOT = { has_country_flag = MNR_pact_PAZ } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHR } }
+ set_country_flag = { flag = MNR_pact_PHR days = 730 }
+ PHR = { clr_country_flag = MNR_pending_PAZ set_country_flag = { flag = MNR_pact_PAZ days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PAZ } } set_country_flag = MNR_rewarded_PAZ add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.107.b ai_chance = { factor = 35 } PHR = { clr_country_flag = MNR_pending_PAZ } }
+}
+
+country_event = { id = mnr_campaign.108 title = mnr_campaign.108.t desc = mnr_campaign.108.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSL } option = { name = mnr_campaign.108.a trigger = { country_exists = PHR country_exists = PSL PHR = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHR } } ai_chance = { factor = 65 } if = { limit = { country_exists = PHR country_exists = PSL PHR = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHR } }
+ set_country_flag = { flag = MNR_pact_PHR days = 730 }
+ PHR = { clr_country_flag = MNR_pending_PSL set_country_flag = { flag = MNR_pact_PSL days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PSL } } set_country_flag = MNR_rewarded_PSL add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.108.b ai_chance = { factor = 35 } PHR = { clr_country_flag = MNR_pending_PSL } }
+}
+
+country_event = { id = mnr_campaign.109 title = mnr_campaign.109.t desc = mnr_campaign.109.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A07 } option = { name = mnr_campaign.109.a trigger = { country_exists = PHW country_exists = A07 PHW = { has_capitulated = no has_country_flag = MNR_pending_A07 NOT = { has_war_with = A07 } NOT = { has_country_flag = MNR_pact_A07 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHW } } ai_chance = { factor = 65 } if = { limit = { country_exists = PHW country_exists = A07 PHW = { has_capitulated = no has_country_flag = MNR_pending_A07 NOT = { has_war_with = A07 } NOT = { has_country_flag = MNR_pact_A07 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHW } }
+ set_country_flag = { flag = MNR_pact_PHW days = 730 }
+ PHW = { clr_country_flag = MNR_pending_A07 set_country_flag = { flag = MNR_pact_A07 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A07 } } set_country_flag = MNR_rewarded_A07 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.109.b ai_chance = { factor = 35 } PHW = { clr_country_flag = MNR_pending_A07 } }
+}
+
+country_event = { id = mnr_campaign.110 title = mnr_campaign.110.t desc = mnr_campaign.110.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A02 } option = { name = mnr_campaign.110.a trigger = { country_exists = PHW country_exists = A02 PHW = { has_capitulated = no has_country_flag = MNR_pending_A02 NOT = { has_war_with = A02 } NOT = { has_country_flag = MNR_pact_A02 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHW } } ai_chance = { factor = 65 } if = { limit = { country_exists = PHW country_exists = A02 PHW = { has_capitulated = no has_country_flag = MNR_pending_A02 NOT = { has_war_with = A02 } NOT = { has_country_flag = MNR_pact_A02 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PHW } }
+ set_country_flag = { flag = MNR_pact_PHW days = 730 }
+ PHW = { clr_country_flag = MNR_pending_A02 set_country_flag = { flag = MNR_pact_A02 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A02 } } set_country_flag = MNR_rewarded_A02 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.110.b ai_chance = { factor = 35 } PHW = { clr_country_flag = MNR_pending_A02 } }
+}
+
+country_event = { id = mnr_campaign.111 title = mnr_campaign.111.t desc = mnr_campaign.111.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A02 } option = { name = mnr_campaign.111.a trigger = { country_exists = MLT country_exists = A02 MLT = { has_capitulated = no has_country_flag = MNR_pending_A02 NOT = { has_war_with = A02 } NOT = { has_country_flag = MNR_pact_A02 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_MLT } } ai_chance = { factor = 65 } if = { limit = { country_exists = MLT country_exists = A02 MLT = { has_capitulated = no has_country_flag = MNR_pending_A02 NOT = { has_war_with = A02 } NOT = { has_country_flag = MNR_pact_A02 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_MLT } }
+ set_country_flag = { flag = MNR_pact_MLT days = 730 }
+ MLT = { clr_country_flag = MNR_pending_A02 set_country_flag = { flag = MNR_pact_A02 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A02 } } set_country_flag = MNR_rewarded_A02 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.111.b ai_chance = { factor = 35 } MLT = { clr_country_flag = MNR_pending_A02 } }
+}
+
+country_event = { id = mnr_campaign.112 title = mnr_campaign.112.t desc = mnr_campaign.112.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A06 } option = { name = mnr_campaign.112.a trigger = { country_exists = MLT country_exists = A06 MLT = { has_capitulated = no has_country_flag = MNR_pending_A06 NOT = { has_war_with = A06 } NOT = { has_country_flag = MNR_pact_A06 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_MLT } } ai_chance = { factor = 65 } if = { limit = { country_exists = MLT country_exists = A06 MLT = { has_capitulated = no has_country_flag = MNR_pending_A06 NOT = { has_war_with = A06 } NOT = { has_country_flag = MNR_pact_A06 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_MLT } }
+ set_country_flag = { flag = MNR_pact_MLT days = 730 }
+ MLT = { clr_country_flag = MNR_pending_A06 set_country_flag = { flag = MNR_pact_A06 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A06 } } set_country_flag = MNR_rewarded_A06 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.112.b ai_chance = { factor = 35 } MLT = { clr_country_flag = MNR_pending_A06 } }
+}
+
+country_event = { id = mnr_campaign.113 title = mnr_campaign.113.t desc = mnr_campaign.113.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.113.a trigger = { country_exists = PSL country_exists = A10 PSL = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSL } } ai_chance = { factor = 65 } if = { limit = { country_exists = PSL country_exists = A10 PSL = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSL } }
+ set_country_flag = { flag = MNR_pact_PSL days = 730 }
+ PSL = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.113.b ai_chance = { factor = 35 } PSL = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.114 title = mnr_campaign.114.t desc = mnr_campaign.114.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHR } option = { name = mnr_campaign.114.a trigger = { country_exists = PSL country_exists = PHR PSL = { has_capitulated = no has_country_flag = MNR_pending_PHR NOT = { has_war_with = PHR } NOT = { has_country_flag = MNR_pact_PHR } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSL } } ai_chance = { factor = 65 } if = { limit = { country_exists = PSL country_exists = PHR PSL = { has_capitulated = no has_country_flag = MNR_pending_PHR NOT = { has_war_with = PHR } NOT = { has_country_flag = MNR_pact_PHR } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSL } }
+ set_country_flag = { flag = MNR_pact_PSL days = 730 }
+ PSL = { clr_country_flag = MNR_pending_PHR set_country_flag = { flag = MNR_pact_PHR days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PHR } } set_country_flag = MNR_rewarded_PHR add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.114.b ai_chance = { factor = 35 } PSL = { clr_country_flag = MNR_pending_PHR } }
+}
+
+country_event = { id = mnr_campaign.115 title = mnr_campaign.115.t desc = mnr_campaign.115.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A02 } option = { name = mnr_campaign.115.a trigger = { country_exists = PSY country_exists = A02 PSY = { has_capitulated = no has_country_flag = MNR_pending_A02 NOT = { has_war_with = A02 } NOT = { has_country_flag = MNR_pact_A02 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSY } } ai_chance = { factor = 65 } if = { limit = { country_exists = PSY country_exists = A02 PSY = { has_capitulated = no has_country_flag = MNR_pending_A02 NOT = { has_war_with = A02 } NOT = { has_country_flag = MNR_pact_A02 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSY } }
+ set_country_flag = { flag = MNR_pact_PSY days = 730 }
+ PSY = { clr_country_flag = MNR_pending_A02 set_country_flag = { flag = MNR_pact_A02 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A02 } } set_country_flag = MNR_rewarded_A02 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.115.b ai_chance = { factor = 35 } PSY = { clr_country_flag = MNR_pending_A02 } }
+}
+
+country_event = { id = mnr_campaign.116 title = mnr_campaign.116.t desc = mnr_campaign.116.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = MLT } option = { name = mnr_campaign.116.a trigger = { country_exists = PSY country_exists = MLT PSY = { has_capitulated = no has_country_flag = MNR_pending_MLT NOT = { has_war_with = MLT } NOT = { has_country_flag = MNR_pact_MLT } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSY } } ai_chance = { factor = 65 } if = { limit = { country_exists = PSY country_exists = MLT PSY = { has_capitulated = no has_country_flag = MNR_pending_MLT NOT = { has_war_with = MLT } NOT = { has_country_flag = MNR_pact_MLT } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSY } }
+ set_country_flag = { flag = MNR_pact_PSY days = 730 }
+ PSY = { clr_country_flag = MNR_pending_MLT set_country_flag = { flag = MNR_pact_MLT days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_MLT } } set_country_flag = MNR_rewarded_MLT add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.116.b ai_chance = { factor = 35 } PSY = { clr_country_flag = MNR_pending_MLT } }
+}
+
+country_event = { id = mnr_campaign.117 title = mnr_campaign.117.t desc = mnr_campaign.117.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A03 } option = { name = mnr_campaign.117.a trigger = { country_exists = A08 country_exists = A03 A08 = { has_capitulated = no has_country_flag = MNR_pending_A03 NOT = { has_war_with = A03 } NOT = { has_country_flag = MNR_pact_A03 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A08 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A08 country_exists = A03 A08 = { has_capitulated = no has_country_flag = MNR_pending_A03 NOT = { has_war_with = A03 } NOT = { has_country_flag = MNR_pact_A03 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A08 } }
+ set_country_flag = { flag = MNR_pact_A08 days = 730 }
+ A08 = { clr_country_flag = MNR_pending_A03 set_country_flag = { flag = MNR_pact_A03 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A03 } } set_country_flag = MNR_rewarded_A03 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.117.b ai_chance = { factor = 35 } A08 = { clr_country_flag = MNR_pending_A03 } }
+}
+
+country_event = { id = mnr_campaign.118 title = mnr_campaign.118.t desc = mnr_campaign.118.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A09 } option = { name = mnr_campaign.118.a trigger = { country_exists = A08 country_exists = A09 A08 = { has_capitulated = no has_country_flag = MNR_pending_A09 NOT = { has_war_with = A09 } NOT = { has_country_flag = MNR_pact_A09 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A08 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A08 country_exists = A09 A08 = { has_capitulated = no has_country_flag = MNR_pending_A09 NOT = { has_war_with = A09 } NOT = { has_country_flag = MNR_pact_A09 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A08 } }
+ set_country_flag = { flag = MNR_pact_A08 days = 730 }
+ A08 = { clr_country_flag = MNR_pending_A09 set_country_flag = { flag = MNR_pact_A09 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A09 } } set_country_flag = MNR_rewarded_A09 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.118.b ai_chance = { factor = 35 } A08 = { clr_country_flag = MNR_pending_A09 } }
+}
+
+country_event = { id = mnr_campaign.119 title = mnr_campaign.119.t desc = mnr_campaign.119.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A03 } option = { name = mnr_campaign.119.a trigger = { country_exists = A09 country_exists = A03 A09 = { has_capitulated = no has_country_flag = MNR_pending_A03 NOT = { has_war_with = A03 } NOT = { has_country_flag = MNR_pact_A03 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A09 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A09 country_exists = A03 A09 = { has_capitulated = no has_country_flag = MNR_pending_A03 NOT = { has_war_with = A03 } NOT = { has_country_flag = MNR_pact_A03 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A09 } }
+ set_country_flag = { flag = MNR_pact_A09 days = 730 }
+ A09 = { clr_country_flag = MNR_pending_A03 set_country_flag = { flag = MNR_pact_A03 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A03 } } set_country_flag = MNR_rewarded_A03 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.119.b ai_chance = { factor = 35 } A09 = { clr_country_flag = MNR_pending_A03 } }
+}
+
+country_event = { id = mnr_campaign.120 title = mnr_campaign.120.t desc = mnr_campaign.120.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A04 } option = { name = mnr_campaign.120.a trigger = { country_exists = A09 country_exists = A04 A09 = { has_capitulated = no has_country_flag = MNR_pending_A04 NOT = { has_war_with = A04 } NOT = { has_country_flag = MNR_pact_A04 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A09 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A09 country_exists = A04 A09 = { has_capitulated = no has_country_flag = MNR_pending_A04 NOT = { has_war_with = A04 } NOT = { has_country_flag = MNR_pact_A04 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A09 } }
+ set_country_flag = { flag = MNR_pact_A09 days = 730 }
+ A09 = { clr_country_flag = MNR_pending_A04 set_country_flag = { flag = MNR_pact_A04 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A04 } } set_country_flag = MNR_rewarded_A04 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.120.b ai_chance = { factor = 35 } A09 = { clr_country_flag = MNR_pending_A04 } }
+}
+
+country_event = { id = mnr_campaign.121 title = mnr_campaign.121.t desc = mnr_campaign.121.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A01 } option = { name = mnr_campaign.121.a trigger = { country_exists = A11 country_exists = A01 A11 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A11 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A11 country_exists = A01 A11 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A11 } }
+ set_country_flag = { flag = MNR_pact_A11 days = 730 }
+ A11 = { clr_country_flag = MNR_pending_A01 set_country_flag = { flag = MNR_pact_A01 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A01 } } set_country_flag = MNR_rewarded_A01 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.121.b ai_chance = { factor = 35 } A11 = { clr_country_flag = MNR_pending_A01 } }
+}
+
+country_event = { id = mnr_campaign.122 title = mnr_campaign.122.t desc = mnr_campaign.122.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A04 } option = { name = mnr_campaign.122.a trigger = { country_exists = A11 country_exists = A04 A11 = { has_capitulated = no has_country_flag = MNR_pending_A04 NOT = { has_war_with = A04 } NOT = { has_country_flag = MNR_pact_A04 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A11 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A11 country_exists = A04 A11 = { has_capitulated = no has_country_flag = MNR_pending_A04 NOT = { has_war_with = A04 } NOT = { has_country_flag = MNR_pact_A04 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A11 } }
+ set_country_flag = { flag = MNR_pact_A11 days = 730 }
+ A11 = { clr_country_flag = MNR_pending_A04 set_country_flag = { flag = MNR_pact_A04 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A04 } } set_country_flag = MNR_rewarded_A04 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.122.b ai_chance = { factor = 35 } A11 = { clr_country_flag = MNR_pending_A04 } }
+}
+
+country_event = { id = mnr_campaign.123 title = mnr_campaign.123.t desc = mnr_campaign.123.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A01 } option = { name = mnr_campaign.123.a trigger = { country_exists = A12 country_exists = A01 A12 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A12 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A12 country_exists = A01 A12 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A12 } }
+ set_country_flag = { flag = MNR_pact_A12 days = 730 }
+ A12 = { clr_country_flag = MNR_pending_A01 set_country_flag = { flag = MNR_pact_A01 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A01 } } set_country_flag = MNR_rewarded_A01 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.123.b ai_chance = { factor = 35 } A12 = { clr_country_flag = MNR_pending_A01 } }
+}
+
+country_event = { id = mnr_campaign.124 title = mnr_campaign.124.t desc = mnr_campaign.124.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A04 } option = { name = mnr_campaign.124.a trigger = { country_exists = A12 country_exists = A04 A12 = { has_capitulated = no has_country_flag = MNR_pending_A04 NOT = { has_war_with = A04 } NOT = { has_country_flag = MNR_pact_A04 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A12 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A12 country_exists = A04 A12 = { has_capitulated = no has_country_flag = MNR_pending_A04 NOT = { has_war_with = A04 } NOT = { has_country_flag = MNR_pact_A04 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A12 } }
+ set_country_flag = { flag = MNR_pact_A12 days = 730 }
+ A12 = { clr_country_flag = MNR_pending_A04 set_country_flag = { flag = MNR_pact_A04 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A04 } } set_country_flag = MNR_rewarded_A04 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.124.b ai_chance = { factor = 35 } A12 = { clr_country_flag = MNR_pending_A04 } }
+}
+
+country_event = { id = mnr_campaign.125 title = mnr_campaign.125.t desc = mnr_campaign.125.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A01 } option = { name = mnr_campaign.125.a trigger = { country_exists = A13 country_exists = A01 A13 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A13 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A13 country_exists = A01 A13 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A13 } }
+ set_country_flag = { flag = MNR_pact_A13 days = 730 }
+ A13 = { clr_country_flag = MNR_pending_A01 set_country_flag = { flag = MNR_pact_A01 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A01 } } set_country_flag = MNR_rewarded_A01 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.125.b ai_chance = { factor = 35 } A13 = { clr_country_flag = MNR_pending_A01 } }
+}
+
+country_event = { id = mnr_campaign.126 title = mnr_campaign.126.t desc = mnr_campaign.126.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A11 } option = { name = mnr_campaign.126.a trigger = { country_exists = A13 country_exists = A11 A13 = { has_capitulated = no has_country_flag = MNR_pending_A11 NOT = { has_war_with = A11 } NOT = { has_country_flag = MNR_pact_A11 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A13 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A13 country_exists = A11 A13 = { has_capitulated = no has_country_flag = MNR_pending_A11 NOT = { has_war_with = A11 } NOT = { has_country_flag = MNR_pact_A11 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A13 } }
+ set_country_flag = { flag = MNR_pact_A13 days = 730 }
+ A13 = { clr_country_flag = MNR_pending_A11 set_country_flag = { flag = MNR_pact_A11 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A11 } } set_country_flag = MNR_rewarded_A11 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.126.b ai_chance = { factor = 35 } A13 = { clr_country_flag = MNR_pending_A11 } }
+}
+
+country_event = { id = mnr_campaign.127 title = mnr_campaign.127.t desc = mnr_campaign.127.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A01 } option = { name = mnr_campaign.127.a trigger = { country_exists = A14 country_exists = A01 A14 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A14 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A14 country_exists = A01 A14 = { has_capitulated = no has_country_flag = MNR_pending_A01 NOT = { has_war_with = A01 } NOT = { has_country_flag = MNR_pact_A01 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A14 } }
+ set_country_flag = { flag = MNR_pact_A14 days = 730 }
+ A14 = { clr_country_flag = MNR_pending_A01 set_country_flag = { flag = MNR_pact_A01 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A01 } } set_country_flag = MNR_rewarded_A01 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.127.b ai_chance = { factor = 35 } A14 = { clr_country_flag = MNR_pending_A01 } }
+}
+
+country_event = { id = mnr_campaign.128 title = mnr_campaign.128.t desc = mnr_campaign.128.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSL } option = { name = mnr_campaign.128.a trigger = { country_exists = A14 country_exists = PSL A14 = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A14 } } ai_chance = { factor = 65 } if = { limit = { country_exists = A14 country_exists = PSL A14 = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_A14 } }
+ set_country_flag = { flag = MNR_pact_A14 days = 730 }
+ A14 = { clr_country_flag = MNR_pending_PSL set_country_flag = { flag = MNR_pact_PSL days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PSL } } set_country_flag = MNR_rewarded_PSL add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.128.b ai_chance = { factor = 35 } A14 = { clr_country_flag = MNR_pending_PSL } }
+}
+
+country_event = { id = mnr_campaign.129 title = mnr_campaign.129.t desc = mnr_campaign.129.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.129.a trigger = { country_exists = PCB country_exists = A10 PCB = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCB } } ai_chance = { factor = 65 } if = { limit = { country_exists = PCB country_exists = A10 PCB = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCB } }
+ set_country_flag = { flag = MNR_pact_PCB days = 730 }
+ PCB = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.129.b ai_chance = { factor = 35 } PCB = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.130 title = mnr_campaign.130.t desc = mnr_campaign.130.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSL } option = { name = mnr_campaign.130.a trigger = { country_exists = PCB country_exists = PSL PCB = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCB } } ai_chance = { factor = 65 } if = { limit = { country_exists = PCB country_exists = PSL PCB = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PCB } }
+ set_country_flag = { flag = MNR_pact_PCB days = 730 }
+ PCB = { clr_country_flag = MNR_pending_PSL set_country_flag = { flag = MNR_pact_PSL days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PSL } } set_country_flag = MNR_rewarded_PSL add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.130.b ai_chance = { factor = 35 } PCB = { clr_country_flag = MNR_pending_PSL } }
+}
+
+country_event = { id = mnr_campaign.131 title = mnr_campaign.131.t desc = mnr_campaign.131.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.131.a trigger = { country_exists = PPN country_exists = A10 PPN = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PPN } } ai_chance = { factor = 65 } if = { limit = { country_exists = PPN country_exists = A10 PPN = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PPN } }
+ set_country_flag = { flag = MNR_pact_PPN days = 730 }
+ PPN = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.131.b ai_chance = { factor = 35 } PPN = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.132 title = mnr_campaign.132.t desc = mnr_campaign.132.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCB } option = { name = mnr_campaign.132.a trigger = { country_exists = PPN country_exists = PCB PPN = { has_capitulated = no has_country_flag = MNR_pending_PCB NOT = { has_war_with = PCB } NOT = { has_country_flag = MNR_pact_PCB } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PPN } } ai_chance = { factor = 65 } if = { limit = { country_exists = PPN country_exists = PCB PPN = { has_capitulated = no has_country_flag = MNR_pending_PCB NOT = { has_war_with = PCB } NOT = { has_country_flag = MNR_pact_PCB } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PPN } }
+ set_country_flag = { flag = MNR_pact_PPN days = 730 }
+ PPN = { clr_country_flag = MNR_pending_PCB set_country_flag = { flag = MNR_pact_PCB days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PCB } } set_country_flag = MNR_rewarded_PCB add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.132.b ai_chance = { factor = 35 } PPN = { clr_country_flag = MNR_pending_PCB } }
+}
+
+country_event = { id = mnr_campaign.133 title = mnr_campaign.133.t desc = mnr_campaign.133.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.133.a trigger = { country_exists = PVI country_exists = A10 PVI = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PVI } } ai_chance = { factor = 65 } if = { limit = { country_exists = PVI country_exists = A10 PVI = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PVI } }
+ set_country_flag = { flag = MNR_pact_PVI days = 730 }
+ PVI = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.133.b ai_chance = { factor = 35 } PVI = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.134 title = mnr_campaign.134.t desc = mnr_campaign.134.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCB } option = { name = mnr_campaign.134.a trigger = { country_exists = PVI country_exists = PCB PVI = { has_capitulated = no has_country_flag = MNR_pending_PCB NOT = { has_war_with = PCB } NOT = { has_country_flag = MNR_pact_PCB } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PVI } } ai_chance = { factor = 65 } if = { limit = { country_exists = PVI country_exists = PCB PVI = { has_capitulated = no has_country_flag = MNR_pending_PCB NOT = { has_war_with = PCB } NOT = { has_country_flag = MNR_pact_PCB } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PVI } }
+ set_country_flag = { flag = MNR_pact_PVI days = 730 }
+ PVI = { clr_country_flag = MNR_pending_PCB set_country_flag = { flag = MNR_pact_PCB days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PCB } } set_country_flag = MNR_rewarded_PCB add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.134.b ai_chance = { factor = 35 } PVI = { clr_country_flag = MNR_pending_PCB } }
+}
+
+country_event = { id = mnr_campaign.135 title = mnr_campaign.135.t desc = mnr_campaign.135.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.135.a trigger = { country_exists = PSM country_exists = A10 PSM = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSM } } ai_chance = { factor = 65 } if = { limit = { country_exists = PSM country_exists = A10 PSM = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSM } }
+ set_country_flag = { flag = MNR_pact_PSM days = 730 }
+ PSM = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.135.b ai_chance = { factor = 35 } PSM = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.136 title = mnr_campaign.136.t desc = mnr_campaign.136.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PVI } option = { name = mnr_campaign.136.a trigger = { country_exists = PSM country_exists = PVI PSM = { has_capitulated = no has_country_flag = MNR_pending_PVI NOT = { has_war_with = PVI } NOT = { has_country_flag = MNR_pact_PVI } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSM } } ai_chance = { factor = 65 } if = { limit = { country_exists = PSM country_exists = PVI PSM = { has_capitulated = no has_country_flag = MNR_pending_PVI NOT = { has_war_with = PVI } NOT = { has_country_flag = MNR_pact_PVI } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PSM } }
+ set_country_flag = { flag = MNR_pact_PSM days = 730 }
+ PSM = { clr_country_flag = MNR_pending_PVI set_country_flag = { flag = MNR_pact_PVI days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PVI } } set_country_flag = MNR_rewarded_PVI add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.136.b ai_chance = { factor = 35 } PSM = { clr_country_flag = MNR_pending_PVI } }
+}
+
+country_event = { id = mnr_campaign.137 title = mnr_campaign.137.t desc = mnr_campaign.137.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.137.a trigger = { country_exists = PMD country_exists = A10 PMD = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PMD } } ai_chance = { factor = 65 } if = { limit = { country_exists = PMD country_exists = A10 PMD = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PMD } }
+ set_country_flag = { flag = MNR_pact_PMD days = 730 }
+ PMD = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.137.b ai_chance = { factor = 35 } PMD = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.138 title = mnr_campaign.138.t desc = mnr_campaign.138.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSL } option = { name = mnr_campaign.138.a trigger = { country_exists = PMD country_exists = PSL PMD = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PMD } } ai_chance = { factor = 65 } if = { limit = { country_exists = PMD country_exists = PSL PMD = { has_capitulated = no has_country_flag = MNR_pending_PSL NOT = { has_war_with = PSL } NOT = { has_country_flag = MNR_pact_PSL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PMD } }
+ set_country_flag = { flag = MNR_pact_PMD days = 730 }
+ PMD = { clr_country_flag = MNR_pending_PSL set_country_flag = { flag = MNR_pact_PSL days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PSL } } set_country_flag = MNR_rewarded_PSL add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.138.b ai_chance = { factor = 35 } PMD = { clr_country_flag = MNR_pending_PSL } }
+}
+
+country_event = { id = mnr_campaign.139 title = mnr_campaign.139.t desc = mnr_campaign.139.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.139.a trigger = { country_exists = PNM country_exists = A10 PNM = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNM } } ai_chance = { factor = 65 } if = { limit = { country_exists = PNM country_exists = A10 PNM = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNM } }
+ set_country_flag = { flag = MNR_pact_PNM days = 730 }
+ PNM = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.139.b ai_chance = { factor = 35 } PNM = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.140 title = mnr_campaign.140.t desc = mnr_campaign.140.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PMD } option = { name = mnr_campaign.140.a trigger = { country_exists = PNM country_exists = PMD PNM = { has_capitulated = no has_country_flag = MNR_pending_PMD NOT = { has_war_with = PMD } NOT = { has_country_flag = MNR_pact_PMD } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNM } } ai_chance = { factor = 65 } if = { limit = { country_exists = PNM country_exists = PMD PNM = { has_capitulated = no has_country_flag = MNR_pending_PMD NOT = { has_war_with = PMD } NOT = { has_country_flag = MNR_pact_PMD } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNM } }
+ set_country_flag = { flag = MNR_pact_PNM days = 730 }
+ PNM = { clr_country_flag = MNR_pending_PMD set_country_flag = { flag = MNR_pact_PMD days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PMD } } set_country_flag = MNR_rewarded_PMD add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.140.b ai_chance = { factor = 35 } PNM = { clr_country_flag = MNR_pending_PMD } }
+}
+
+country_event = { id = mnr_campaign.141 title = mnr_campaign.141.t desc = mnr_campaign.141.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.141.a trigger = { country_exists = PNL country_exists = A10 PNL = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNL } } ai_chance = { factor = 65 } if = { limit = { country_exists = PNL country_exists = A10 PNL = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNL } }
+ set_country_flag = { flag = MNR_pact_PNL days = 730 }
+ PNL = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.141.b ai_chance = { factor = 35 } PNL = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.142 title = mnr_campaign.142.t desc = mnr_campaign.142.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PBT } option = { name = mnr_campaign.142.a trigger = { country_exists = PNL country_exists = PBT PNL = { has_capitulated = no has_country_flag = MNR_pending_PBT NOT = { has_war_with = PBT } NOT = { has_country_flag = MNR_pact_PBT } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNL } } ai_chance = { factor = 65 } if = { limit = { country_exists = PNL country_exists = PBT PNL = { has_capitulated = no has_country_flag = MNR_pending_PBT NOT = { has_war_with = PBT } NOT = { has_country_flag = MNR_pact_PBT } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PNL } }
+ set_country_flag = { flag = MNR_pact_PNL days = 730 }
+ PNL = { clr_country_flag = MNR_pending_PBT set_country_flag = { flag = MNR_pact_PBT days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PBT } } set_country_flag = MNR_rewarded_PBT add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.142.b ai_chance = { factor = 35 } PNL = { clr_country_flag = MNR_pending_PBT } }
+}
+
+country_event = { id = mnr_campaign.143 title = mnr_campaign.143.t desc = mnr_campaign.143.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.143.a trigger = { country_exists = PML country_exists = A10 PML = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PML } } ai_chance = { factor = 65 } if = { limit = { country_exists = PML country_exists = A10 PML = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PML } }
+ set_country_flag = { flag = MNR_pact_PML days = 730 }
+ PML = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.143.b ai_chance = { factor = 35 } PML = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.144 title = mnr_campaign.144.t desc = mnr_campaign.144.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCB } option = { name = mnr_campaign.144.a trigger = { country_exists = PML country_exists = PCB PML = { has_capitulated = no has_country_flag = MNR_pending_PCB NOT = { has_war_with = PCB } NOT = { has_country_flag = MNR_pact_PCB } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PML } } ai_chance = { factor = 65 } if = { limit = { country_exists = PML country_exists = PCB PML = { has_capitulated = no has_country_flag = MNR_pending_PCB NOT = { has_war_with = PCB } NOT = { has_country_flag = MNR_pact_PCB } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PML } }
+ set_country_flag = { flag = MNR_pact_PML days = 730 }
+ PML = { clr_country_flag = MNR_pending_PCB set_country_flag = { flag = MNR_pact_PCB days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PCB } } set_country_flag = MNR_rewarded_PCB add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.144.b ai_chance = { factor = 35 } PML = { clr_country_flag = MNR_pending_PCB } }
+}
+
+country_event = { id = mnr_campaign.145 title = mnr_campaign.145.t desc = mnr_campaign.145.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A10 } option = { name = mnr_campaign.145.a trigger = { country_exists = PBT country_exists = A10 PBT = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PBT } } ai_chance = { factor = 65 } if = { limit = { country_exists = PBT country_exists = A10 PBT = { has_capitulated = no has_country_flag = MNR_pending_A10 NOT = { has_war_with = A10 } NOT = { has_country_flag = MNR_pact_A10 } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PBT } }
+ set_country_flag = { flag = MNR_pact_PBT days = 730 }
+ PBT = { clr_country_flag = MNR_pending_A10 set_country_flag = { flag = MNR_pact_A10 days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_A10 } } set_country_flag = MNR_rewarded_A10 add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.145.b ai_chance = { factor = 35 } PBT = { clr_country_flag = MNR_pending_A10 } }
+}
+
+country_event = { id = mnr_campaign.146 title = mnr_campaign.146.t desc = mnr_campaign.146.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PNL } option = { name = mnr_campaign.146.a trigger = { country_exists = PBT country_exists = PNL PBT = { has_capitulated = no has_country_flag = MNR_pending_PNL NOT = { has_war_with = PNL } NOT = { has_country_flag = MNR_pact_PNL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PBT } } ai_chance = { factor = 65 } if = { limit = { country_exists = PBT country_exists = PNL PBT = { has_capitulated = no has_country_flag = MNR_pending_PNL NOT = { has_war_with = PNL } NOT = { has_country_flag = MNR_pact_PNL } } has_capitulated = no NOT = { has_country_flag = MNR_pact_PBT } }
+ set_country_flag = { flag = MNR_pact_PBT days = 730 }
+ PBT = { clr_country_flag = MNR_pending_PNL set_country_flag = { flag = MNR_pact_PNL days = 730 }
+ if = { limit = { NOT = { has_country_flag = MNR_rewarded_PNL } } set_country_flag = MNR_rewarded_PNL add_to_variable = { MNR_mandate = 5 } } MNR_refresh = yes MNR_refresh_network = yes country_event = { id = mnr_campaign.2 } }
+ MNR_refresh_network = yes } }
+option = { name = mnr_campaign.146.b ai_chance = { factor = 35 } PBT = { clr_country_flag = MNR_pending_PNL } }
+}
+
+country_event = { id = mnr_campaign.2 title = mnr_campaign.2.t desc = mnr_campaign.2.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { MNR_is_minor = yes } option = { name = mnr_campaign.2.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.200 title = mnr_campaign.200.t desc = mnr_campaign.200.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A05 MNR_home_secure = yes } option = { name = mnr_campaign.200.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.200.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.300 title = mnr_campaign.300.t desc = mnr_campaign.300.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A05 } option = { name = mnr_campaign.300.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.400 title = mnr_campaign.400.t desc = mnr_campaign.400.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A05 } option = { name = mnr_campaign.400.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.201 title = mnr_campaign.201.t desc = mnr_campaign.201.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCF MNR_home_secure = yes } option = { name = mnr_campaign.201.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.201.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.301 title = mnr_campaign.301.t desc = mnr_campaign.301.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCF } option = { name = mnr_campaign.301.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.401 title = mnr_campaign.401.t desc = mnr_campaign.401.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCF } option = { name = mnr_campaign.401.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.202 title = mnr_campaign.202.t desc = mnr_campaign.202.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PAZ MNR_home_secure = yes } option = { name = mnr_campaign.202.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.202.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.302 title = mnr_campaign.302.t desc = mnr_campaign.302.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PAZ } option = { name = mnr_campaign.302.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.402 title = mnr_campaign.402.t desc = mnr_campaign.402.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PAZ } option = { name = mnr_campaign.402.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.203 title = mnr_campaign.203.t desc = mnr_campaign.203.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHR MNR_home_secure = yes } option = { name = mnr_campaign.203.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.203.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.303 title = mnr_campaign.303.t desc = mnr_campaign.303.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHR } option = { name = mnr_campaign.303.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.403 title = mnr_campaign.403.t desc = mnr_campaign.403.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHR } option = { name = mnr_campaign.403.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.204 title = mnr_campaign.204.t desc = mnr_campaign.204.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHW MNR_home_secure = yes } option = { name = mnr_campaign.204.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.204.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.304 title = mnr_campaign.304.t desc = mnr_campaign.304.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHW } option = { name = mnr_campaign.304.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.404 title = mnr_campaign.404.t desc = mnr_campaign.404.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PHW } option = { name = mnr_campaign.404.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.205 title = mnr_campaign.205.t desc = mnr_campaign.205.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = MLT MNR_home_secure = yes } option = { name = mnr_campaign.205.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.205.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.305 title = mnr_campaign.305.t desc = mnr_campaign.305.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = MLT } option = { name = mnr_campaign.305.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.405 title = mnr_campaign.405.t desc = mnr_campaign.405.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = MLT } option = { name = mnr_campaign.405.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.206 title = mnr_campaign.206.t desc = mnr_campaign.206.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSL MNR_home_secure = yes } option = { name = mnr_campaign.206.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.206.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.306 title = mnr_campaign.306.t desc = mnr_campaign.306.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSL } option = { name = mnr_campaign.306.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.406 title = mnr_campaign.406.t desc = mnr_campaign.406.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSL } option = { name = mnr_campaign.406.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.207 title = mnr_campaign.207.t desc = mnr_campaign.207.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSY MNR_home_secure = yes } option = { name = mnr_campaign.207.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.207.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.307 title = mnr_campaign.307.t desc = mnr_campaign.307.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSY } option = { name = mnr_campaign.307.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.407 title = mnr_campaign.407.t desc = mnr_campaign.407.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSY } option = { name = mnr_campaign.407.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.208 title = mnr_campaign.208.t desc = mnr_campaign.208.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A08 MNR_home_secure = yes } option = { name = mnr_campaign.208.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.208.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.308 title = mnr_campaign.308.t desc = mnr_campaign.308.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A08 } option = { name = mnr_campaign.308.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.408 title = mnr_campaign.408.t desc = mnr_campaign.408.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A08 } option = { name = mnr_campaign.408.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.209 title = mnr_campaign.209.t desc = mnr_campaign.209.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A09 MNR_home_secure = yes } option = { name = mnr_campaign.209.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.209.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.309 title = mnr_campaign.309.t desc = mnr_campaign.309.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A09 } option = { name = mnr_campaign.309.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.409 title = mnr_campaign.409.t desc = mnr_campaign.409.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A09 } option = { name = mnr_campaign.409.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.210 title = mnr_campaign.210.t desc = mnr_campaign.210.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A11 MNR_home_secure = yes } option = { name = mnr_campaign.210.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.210.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.310 title = mnr_campaign.310.t desc = mnr_campaign.310.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A11 } option = { name = mnr_campaign.310.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.410 title = mnr_campaign.410.t desc = mnr_campaign.410.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A11 } option = { name = mnr_campaign.410.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.211 title = mnr_campaign.211.t desc = mnr_campaign.211.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A12 MNR_home_secure = yes } option = { name = mnr_campaign.211.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.211.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.311 title = mnr_campaign.311.t desc = mnr_campaign.311.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A12 } option = { name = mnr_campaign.311.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.411 title = mnr_campaign.411.t desc = mnr_campaign.411.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A12 } option = { name = mnr_campaign.411.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.212 title = mnr_campaign.212.t desc = mnr_campaign.212.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A13 MNR_home_secure = yes } option = { name = mnr_campaign.212.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.212.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.312 title = mnr_campaign.312.t desc = mnr_campaign.312.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A13 } option = { name = mnr_campaign.312.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.412 title = mnr_campaign.412.t desc = mnr_campaign.412.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A13 } option = { name = mnr_campaign.412.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.213 title = mnr_campaign.213.t desc = mnr_campaign.213.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A14 MNR_home_secure = yes } option = { name = mnr_campaign.213.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.213.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.313 title = mnr_campaign.313.t desc = mnr_campaign.313.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A14 } option = { name = mnr_campaign.313.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.413 title = mnr_campaign.413.t desc = mnr_campaign.413.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = A14 } option = { name = mnr_campaign.413.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.214 title = mnr_campaign.214.t desc = mnr_campaign.214.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCB MNR_home_secure = yes } option = { name = mnr_campaign.214.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.214.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.314 title = mnr_campaign.314.t desc = mnr_campaign.314.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCB } option = { name = mnr_campaign.314.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.414 title = mnr_campaign.414.t desc = mnr_campaign.414.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PCB } option = { name = mnr_campaign.414.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.215 title = mnr_campaign.215.t desc = mnr_campaign.215.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PPN MNR_home_secure = yes } option = { name = mnr_campaign.215.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.215.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.315 title = mnr_campaign.315.t desc = mnr_campaign.315.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PPN } option = { name = mnr_campaign.315.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.415 title = mnr_campaign.415.t desc = mnr_campaign.415.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PPN } option = { name = mnr_campaign.415.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.216 title = mnr_campaign.216.t desc = mnr_campaign.216.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PVI MNR_home_secure = yes } option = { name = mnr_campaign.216.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.216.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.316 title = mnr_campaign.316.t desc = mnr_campaign.316.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PVI } option = { name = mnr_campaign.316.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.416 title = mnr_campaign.416.t desc = mnr_campaign.416.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PVI } option = { name = mnr_campaign.416.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.217 title = mnr_campaign.217.t desc = mnr_campaign.217.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSM MNR_home_secure = yes } option = { name = mnr_campaign.217.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.217.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.317 title = mnr_campaign.317.t desc = mnr_campaign.317.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSM } option = { name = mnr_campaign.317.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.417 title = mnr_campaign.417.t desc = mnr_campaign.417.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PSM } option = { name = mnr_campaign.417.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.218 title = mnr_campaign.218.t desc = mnr_campaign.218.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PMD MNR_home_secure = yes } option = { name = mnr_campaign.218.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.218.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.318 title = mnr_campaign.318.t desc = mnr_campaign.318.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PMD } option = { name = mnr_campaign.318.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.418 title = mnr_campaign.418.t desc = mnr_campaign.418.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PMD } option = { name = mnr_campaign.418.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.219 title = mnr_campaign.219.t desc = mnr_campaign.219.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PNM MNR_home_secure = yes } option = { name = mnr_campaign.219.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.219.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.319 title = mnr_campaign.319.t desc = mnr_campaign.319.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PNM } option = { name = mnr_campaign.319.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.419 title = mnr_campaign.419.t desc = mnr_campaign.419.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PNM } option = { name = mnr_campaign.419.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.220 title = mnr_campaign.220.t desc = mnr_campaign.220.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PNL MNR_home_secure = yes } option = { name = mnr_campaign.220.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.220.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.320 title = mnr_campaign.320.t desc = mnr_campaign.320.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PNL } option = { name = mnr_campaign.320.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.420 title = mnr_campaign.420.t desc = mnr_campaign.420.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PNL } option = { name = mnr_campaign.420.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.221 title = mnr_campaign.221.t desc = mnr_campaign.221.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PML MNR_home_secure = yes } option = { name = mnr_campaign.221.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.221.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.321 title = mnr_campaign.321.t desc = mnr_campaign.321.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PML } option = { name = mnr_campaign.321.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.421 title = mnr_campaign.421.t desc = mnr_campaign.421.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PML } option = { name = mnr_campaign.421.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.222 title = mnr_campaign.222.t desc = mnr_campaign.222.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PBT MNR_home_secure = yes } option = { name = mnr_campaign.222.a trigger = { has_political_power > 34 check_variable = { MNR_reserve > 4 } } ai_chance = { factor = 70 } add_political_power = -35 subtract_from_variable = { MNR_reserve = 5 } add_to_variable = { MNR_mandate = 8 } MNR_refresh = yes }
+option = { name = mnr_campaign.222.b ai_chance = { factor = 30 } subtract_from_variable = { MNR_mandate = 6 } add_timed_idea = { idea = MNR_emergency days = 180 } army_experience = 3 MNR_refresh = yes }
+}
+
+country_event = { id = mnr_campaign.322 title = mnr_campaign.322.t desc = mnr_campaign.322.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PBT } option = { name = mnr_campaign.322.a ai_chance = { factor = 100 }  }
+}
+
+country_event = { id = mnr_campaign.422 title = mnr_campaign.422.t desc = mnr_campaign.422.d picture = GFX_1896_event_talks is_triggered_only = yes timeout_days = 20 trigger = { tag = PBT } option = { name = mnr_campaign.422.a ai_chance = { factor = 100 }  }
+}

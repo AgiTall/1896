@@ -1,0 +1,618 @@
+{
+  "a03_focus.txt": {
+    "before": [
+      0,
+      12
+    ],
+    "after": [
+      12,
+      6
+    ],
+    "focuses": 11,
+    "added": [
+      "JSM_workshop_policy_guilds",
+      "JSM_workshop_policy_state",
+      "JSM_diplomatic_policy_markets",
+      "JSM_diplomatic_policy_squadrons"
+    ]
+  },
+  "a10_focus.txt": {
+    "before": [
+      27,
+      16
+    ],
+    "after": [
+      80,
+      17
+    ],
+    "focuses": 117,
+    "added": []
+  },
+  "AUC_campaign_A07.txt": {
+    "before": [
+      32,
+      20
+    ],
+    "after": [
+      32,
+      11
+    ],
+    "focuses": 36,
+    "added": [
+      "AUC_A07_opening_parliament",
+      "AUC_A07_opening_delegates",
+      "AUC_A07_defence_territorial",
+      "AUC_A07_defence_maritime"
+    ]
+  },
+  "AUC_campaign_AQL.txt": {
+    "before": [
+      44,
+      8
+    ],
+    "after": [
+      44,
+      8
+    ],
+    "focuses": 27,
+    "added": [
+      "AUC_AQL_opening_parliament",
+      "AUC_AQL_opening_delegates"
+    ]
+  },
+  "AUC_campaign_ASA.txt": {
+    "before": [
+      44,
+      8
+    ],
+    "after": [
+      44,
+      8
+    ],
+    "focuses": 27,
+    "added": [
+      "AUC_ASA_opening_parliament",
+      "AUC_ASA_opening_delegates"
+    ]
+  },
+  "AUC_campaign_ATA.txt": {
+    "before": [
+      44,
+      8
+    ],
+    "after": [
+      44,
+      8
+    ],
+    "focuses": 27,
+    "added": [
+      "AUC_ATA_opening_parliament",
+      "AUC_ATA_opening_delegates"
+    ]
+  },
+  "AUC_campaign_AVC.txt": {
+    "before": [
+      44,
+      8
+    ],
+    "after": [
+      44,
+      8
+    ],
+    "focuses": 27,
+    "added": [
+      "AUC_AVC_opening_parliament",
+      "AUC_AVC_opening_delegates"
+    ]
+  },
+  "AUC_campaign_AWA.txt": {
+    "before": [
+      44,
+      8
+    ],
+    "after": [
+      44,
+      8
+    ],
+    "focuses": 27,
+    "added": [
+      "AUC_AWA_opening_parliament",
+      "AUC_AWA_opening_delegates"
+    ]
+  },
+  "BLV_campaign.txt": {
+    "before": [
+      82,
+      26
+    ],
+    "after": [
+      78,
+      14
+    ],
+    "focuses": 96,
+    "added": [
+      "BLV_budget_subscriptions",
+      "BLV_budget_advance",
+      "BLV_yards_state",
+      "BLV_yards_contracts",
+      "BLV_rotation_medical",
+      "BLV_rotation_depots",
+      "BLV_letters_open",
+      "BLV_letters_sealed"
+    ]
+  },
+  "MNR_A05.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_A05_common_programme",
+      "MNR_A05_economy_local",
+      "MNR_A05_economy_contracts",
+      "MNR_A05_defence_garrison",
+      "MNR_A05_defence_mobile"
+    ]
+  },
+  "MNR_A08.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_A08_common_programme",
+      "MNR_A08_economy_local",
+      "MNR_A08_economy_contracts",
+      "MNR_A08_defence_garrison",
+      "MNR_A08_defence_mobile"
+    ]
+  },
+  "MNR_A09.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_A09_common_programme",
+      "MNR_A09_economy_local",
+      "MNR_A09_economy_contracts",
+      "MNR_A09_defence_garrison",
+      "MNR_A09_defence_mobile"
+    ]
+  },
+  "MNR_A11.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_A11_common_programme",
+      "MNR_A11_economy_local",
+      "MNR_A11_economy_contracts",
+      "MNR_A11_defence_garrison",
+      "MNR_A11_defence_mobile"
+    ]
+  },
+  "MNR_A12.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_A12_common_programme",
+      "MNR_A12_economy_local",
+      "MNR_A12_economy_contracts",
+      "MNR_A12_defence_garrison",
+      "MNR_A12_defence_mobile"
+    ]
+  },
+  "MNR_A13.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_A13_common_programme",
+      "MNR_A13_economy_local",
+      "MNR_A13_economy_contracts",
+      "MNR_A13_defence_garrison",
+      "MNR_A13_defence_mobile"
+    ]
+  },
+  "MNR_A14.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_A14_common_programme",
+      "MNR_A14_economy_local",
+      "MNR_A14_economy_contracts",
+      "MNR_A14_defence_garrison",
+      "MNR_A14_defence_mobile"
+    ]
+  },
+  "MNR_MLT.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_MLT_common_programme",
+      "MNR_MLT_economy_local",
+      "MNR_MLT_economy_contracts",
+      "MNR_MLT_defence_garrison",
+      "MNR_MLT_defence_mobile"
+    ]
+  },
+  "MNR_PAZ.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PAZ_common_programme",
+      "MNR_PAZ_economy_local",
+      "MNR_PAZ_economy_contracts",
+      "MNR_PAZ_defence_garrison",
+      "MNR_PAZ_defence_mobile"
+    ]
+  },
+  "MNR_PBT.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PBT_common_programme",
+      "MNR_PBT_economy_local",
+      "MNR_PBT_economy_contracts",
+      "MNR_PBT_defence_garrison",
+      "MNR_PBT_defence_mobile"
+    ]
+  },
+  "MNR_PCB.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PCB_common_programme",
+      "MNR_PCB_economy_local",
+      "MNR_PCB_economy_contracts",
+      "MNR_PCB_defence_garrison",
+      "MNR_PCB_defence_mobile"
+    ]
+  },
+  "MNR_PCF.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PCF_common_programme",
+      "MNR_PCF_economy_local",
+      "MNR_PCF_economy_contracts",
+      "MNR_PCF_defence_garrison",
+      "MNR_PCF_defence_mobile"
+    ]
+  },
+  "MNR_PHR.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PHR_common_programme",
+      "MNR_PHR_economy_local",
+      "MNR_PHR_economy_contracts",
+      "MNR_PHR_defence_garrison",
+      "MNR_PHR_defence_mobile"
+    ]
+  },
+  "MNR_PHW.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PHW_common_programme",
+      "MNR_PHW_economy_local",
+      "MNR_PHW_economy_contracts",
+      "MNR_PHW_defence_garrison",
+      "MNR_PHW_defence_mobile"
+    ]
+  },
+  "MNR_PMD.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PMD_common_programme",
+      "MNR_PMD_economy_local",
+      "MNR_PMD_economy_contracts",
+      "MNR_PMD_defence_garrison",
+      "MNR_PMD_defence_mobile"
+    ]
+  },
+  "MNR_PML.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PML_common_programme",
+      "MNR_PML_economy_local",
+      "MNR_PML_economy_contracts",
+      "MNR_PML_defence_garrison",
+      "MNR_PML_defence_mobile"
+    ]
+  },
+  "MNR_PNL.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PNL_common_programme",
+      "MNR_PNL_economy_local",
+      "MNR_PNL_economy_contracts",
+      "MNR_PNL_defence_garrison",
+      "MNR_PNL_defence_mobile"
+    ]
+  },
+  "MNR_PNM.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PNM_common_programme",
+      "MNR_PNM_economy_local",
+      "MNR_PNM_economy_contracts",
+      "MNR_PNM_defence_garrison",
+      "MNR_PNM_defence_mobile"
+    ]
+  },
+  "MNR_PPN.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PPN_common_programme",
+      "MNR_PPN_economy_local",
+      "MNR_PPN_economy_contracts",
+      "MNR_PPN_defence_garrison",
+      "MNR_PPN_defence_mobile"
+    ]
+  },
+  "MNR_PSL.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PSL_common_programme",
+      "MNR_PSL_economy_local",
+      "MNR_PSL_economy_contracts",
+      "MNR_PSL_defence_garrison",
+      "MNR_PSL_defence_mobile"
+    ]
+  },
+  "MNR_PSM.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PSM_common_programme",
+      "MNR_PSM_economy_local",
+      "MNR_PSM_economy_contracts",
+      "MNR_PSM_defence_garrison",
+      "MNR_PSM_defence_mobile"
+    ]
+  },
+  "MNR_PSY.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PSY_common_programme",
+      "MNR_PSY_economy_local",
+      "MNR_PSY_economy_contracts",
+      "MNR_PSY_defence_garrison",
+      "MNR_PSY_defence_mobile"
+    ]
+  },
+  "MNR_PVI.txt": {
+    "before": [
+      22,
+      14
+    ],
+    "after": [
+      20,
+      10
+    ],
+    "focuses": 23,
+    "added": [
+      "MNR_PVI_common_programme",
+      "MNR_PVI_economy_local",
+      "MNR_PVI_economy_contracts",
+      "MNR_PVI_defence_garrison",
+      "MNR_PVI_defence_mobile"
+    ]
+  },
+  "WTN_focus.txt": {
+    "before": [
+      24,
+      16
+    ],
+    "after": [
+      34,
+      9
+    ],
+    "focuses": 32,
+    "added": [
+      "WTN_focus_mandate_public",
+      "WTN_focus_mandate_delegated"
+    ]
+  },
+  "WTN_PHI_focus.txt": {
+    "before": [
+      8,
+      12
+    ],
+    "after": [
+      6,
+      7
+    ],
+    "focuses": 10,
+    "added": [
+      "WTN_PHI_focus_mandate_public",
+      "WTN_PHI_focus_mandate_delegated"
+    ]
+  },
+  "WTN_RUS_focus.txt": {
+    "before": [
+      8,
+      14
+    ],
+    "after": [
+      6,
+      7
+    ],
+    "focuses": 11,
+    "added": [
+      "WTN_RUS_focus_mandate_public",
+      "WTN_RUS_focus_mandate_delegated"
+    ]
+  },
+  "WTN_SEA_focus.txt": {
+    "before": [
+      8,
+      12
+    ],
+    "after": [
+      6,
+      7
+    ],
+    "focuses": 10,
+    "added": [
+      "WTN_SEA_focus_mandate_public",
+      "WTN_SEA_focus_mandate_delegated"
+    ]
+  }
+}

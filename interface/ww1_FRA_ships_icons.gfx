@@ -1,0 +1,6 @@
+spriteTypes = {
+    SpriteType = {
+		name = "GFX_FRA_ship_courbet"
+		texturefile = "gfx/interface/equipmentdesigner/naval/designer/FRA/courbet.png"
+	}
+}

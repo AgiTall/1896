@@ -1,0 +1,5 @@
+ideas = { country = {
+ CH93_blockade = { picture = jpc_credit modifier = { industrial_capacity_factory = -0.05 supply_consumption_factor = 0.10 } }
+ CH93_patrols = { picture = jpc_fleet modifier = { convoy_escort_efficiency = 0.10 } }
+ CH93_embargo = { picture = jpc_credit modifier = { production_factory_efficiency_gain_factor = -0.10 } }
+} }

@@ -1,0 +1,251 @@
+{
+  "A01": {
+    "name": "Голландская Ост-Индия",
+    "specialization": "Колониальная армия, сапёры, тропическая разведка и паровой флот; промышленная модернизация ещё впереди.",
+    "technologies": [
+      "basic_field_gun",
+      "early_artillery",
+      "early_machine_tools",
+      "excavation1",
+      "machine_guns",
+      "marines",
+      "narrow_gauge_railway",
+      "powder_type_b",
+      "tech_engineers",
+      "tech_logistics_company",
+      "tech_recon",
+      "tech_support"
+    ],
+    "naval_mtg": [
+      "basic_battery",
+      "basic_coal_engine",
+      "basic_secondary_battery",
+      "basic_torpedo",
+      "early_ship_hull_cruiser",
+      "early_ship_hull_light",
+      "early_torpedo_tubes",
+      "gunboat_ship_hull_light",
+      "ironclad_artillery",
+      "ironclad_coal_engine",
+      "ironclad_ship_hull_heavy",
+      "mtg_transport",
+      "torpedo_boat_ship_hull_light",
+      "victorian_ship_hull_cruiser"
+    ],
+    "naval_legacy": [
+      "early_destroyer",
+      "early_light_cruiser",
+      "transport"
+    ]
+  },
+  "A02": {
+    "name": "Британский Левиафан",
+    "specialization": "Наиболее полная школа парового флота и развитая промышленная база знаний сохранившейся империи.",
+    "technologies": [
+      "basic_field_gun",
+      "basic_howitzer",
+      "concentrated_industry",
+      "early_artillery",
+      "early_machine_tools",
+      "electrical_engineering",
+      "excavation1",
+      "infantry_weapons1",
+      "machine_guns",
+      "marines",
+      "mechanical_engineering",
+      "powder_type_b",
+      "standard_gauge_railway",
+      "support_weapons",
+      "tech_engineers",
+      "tech_field_hospital",
+      "tech_logistics_company",
+      "tech_maintenance_company",
+      "tech_recon",
+      "tech_support"
+    ],
+    "naval_mtg": [
+      "basic_armored_cruiser_armor_scheme",
+      "basic_battery",
+      "basic_coal_engine",
+      "basic_naval_mines",
+      "basic_secondary_battery",
+      "basic_torpedo",
+      "coastal_defense_ship_armor_scheme",
+      "damage_control_1",
+      "early_ship_hull_cruiser",
+      "early_ship_hull_light",
+      "early_torpedo_tubes",
+      "fire_control_methods_1",
+      "gunboat_ship_hull_light",
+      "improved_secondary_battery",
+      "ironclad_artillery",
+      "ironclad_coal_engine",
+      "ironclad_ship_hull_heavy",
+      "mtg_transport",
+      "pre_dreadnought_ship_hull_heavy",
+      "torpedo_boat_ship_hull_light",
+      "victorian_ship_hull_cruiser"
+    ],
+    "naval_legacy": [
+      "early_battleship",
+      "early_destroyer",
+      "early_heavy_cruiser",
+      "early_light_cruiser",
+      "transport"
+    ]
+  },
+  "A03": {
+    "name": "Японская империя",
+    "specialization": "Модернизированная пехота, полевая и гаубичная артиллерия, кораблестроение; электрификация ещё требует развития.",
+    "technologies": [
+      "basic_field_gun",
+      "basic_howitzer",
+      "concentrated_industry",
+      "early_artillery",
+      "early_machine_tools",
+      "infantry_weapons1",
+      "machine_guns",
+      "marines",
+      "mechanical_engineering",
+      "mountain_gun",
+      "narrow_gauge_railway",
+      "powder_type_b",
+      "support_weapons",
+      "tech_engineers",
+      "tech_field_hospital",
+      "tech_mountaineers",
+      "tech_recon",
+      "tech_support"
+    ],
+    "naval_mtg": [
+      "basic_armored_cruiser_armor_scheme",
+      "basic_battery",
+      "basic_coal_engine",
+      "basic_secondary_battery",
+      "basic_torpedo",
+      "early_ship_hull_cruiser",
+      "early_ship_hull_light",
+      "early_torpedo_tubes",
+      "gunboat_ship_hull_light",
+      "ironclad_artillery",
+      "ironclad_coal_engine",
+      "ironclad_ship_hull_heavy",
+      "mtg_transport",
+      "pre_dreadnought_ship_hull_heavy",
+      "torpedo_boat_ship_hull_light",
+      "victorian_ship_hull_cruiser"
+    ],
+    "naval_legacy": [
+      "early_battleship",
+      "early_destroyer",
+      "early_heavy_cruiser",
+      "early_light_cruiser",
+      "transport"
+    ]
+  },
+  "A04": {
+    "name": "Всемирная торговая палата",
+    "specialization": "Промышленность, электротехника, обслуживание и торговая логистика; ограниченные военные знания.",
+    "technologies": [
+      "dispersed_industry",
+      "early_artillery",
+      "early_machine_tools",
+      "electrical_engineering",
+      "excavation1",
+      "mechanical_engineering",
+      "powder_type_b",
+      "standard_gauge_railway",
+      "tech_engineers",
+      "tech_logistics_company",
+      "tech_maintenance_company",
+      "tech_support"
+    ],
+    "naval_mtg": [
+      "basic_coal_engine",
+      "basic_secondary_battery",
+      "gunboat_ship_hull_light",
+      "ironclad_artillery",
+      "ironclad_coal_engine",
+      "mtg_transport",
+      "victorian_ship_hull_cruiser"
+    ],
+    "naval_legacy": [
+      "early_light_cruiser",
+      "transport"
+    ]
+  },
+  "A06": {
+    "name": "Российская империя в изгнании",
+    "specialization": "Сохранённые армейские школы, гаубицы, госпитали и электротехнические знания при слабой производственной базе изгнания.",
+    "technologies": [
+      "basic_field_gun",
+      "basic_howitzer",
+      "early_artillery",
+      "early_machine_tools",
+      "electrical_engineering",
+      "infantry_weapons1",
+      "machine_guns",
+      "powder_type_b",
+      "standard_gauge_railway",
+      "tech_engineers",
+      "tech_field_hospital",
+      "tech_recon",
+      "tech_support"
+    ],
+    "naval_mtg": [
+      "basic_naval_mines",
+      "basic_secondary_battery",
+      "coastal_defense_ship_armor_scheme",
+      "early_torpedo_tubes",
+      "gunboat_ship_hull_light",
+      "ironclad_artillery",
+      "ironclad_coal_engine",
+      "ironclad_ship_hull_heavy",
+      "mtg_transport",
+      "victorian_ship_hull_cruiser"
+    ],
+    "naval_legacy": [
+      "early_light_cruiser",
+      "transport"
+    ]
+  },
+  "A07": {
+    "name": "Австралийский Доминион",
+    "specialization": "Горная промышленность, рассредоточенное производство, железные дороги, разведка и снабжение удалённых поселений.",
+    "technologies": [
+      "basic_field_gun",
+      "dispersed_industry",
+      "early_artillery",
+      "early_machine_tools",
+      "excavation1",
+      "infantry_weapons1",
+      "machine_guns",
+      "mechanical_engineering",
+      "powder_type_b",
+      "standard_gauge_railway",
+      "tech_engineers",
+      "tech_field_hospital",
+      "tech_logistics_company",
+      "tech_recon",
+      "tech_support"
+    ],
+    "naval_mtg": [
+      "basic_coal_engine",
+      "basic_secondary_battery",
+      "early_ship_hull_cruiser",
+      "early_ship_hull_light",
+      "early_torpedo_tubes",
+      "gunboat_ship_hull_light",
+      "ironclad_artillery",
+      "ironclad_coal_engine",
+      "mtg_transport",
+      "torpedo_boat_ship_hull_light",
+      "victorian_ship_hull_cruiser"
+    ],
+    "naval_legacy": [
+      "early_destroyer",
+      "early_light_cruiser",
+      "transport"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+A10M_state_of_siege = {
+ A10M_provincial_hearings = {
+  icon = generic_political_discourse cost = 40 days_re_enable = 45
+  available = { has_country_flag = A10M_active check_variable = { var = A10M_opposition value = 8 compare = greater_than_or_equals } }
+  complete_effect = {
+   subtract_from_variable = { var = A10M_opposition value = 12 }
+   subtract_from_variable = { var = A10M_repression value = 3 }
+   add_to_variable = { var = A10M_strain value = 3 }
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 3 modifier = { factor = 3 check_variable = { var = A10M_opposition value = 60 compare = greater_than_or_equals } } }
+ }
+ A10M_security_sweep = {
+  icon = generic_army_support cost = 25 days_re_enable = 60
+  available = { has_country_flag = A10M_active check_variable = { var = A10M_opposition value = 15 compare = greater_than_or_equals } }
+  complete_effect = {
+   subtract_from_variable = { var = A10M_opposition value = 18 }
+   add_to_variable = { var = A10M_repression value = 12 }
+   add_to_variable = { var = A10M_strain value = 6 }
+   add_stability = -0.02
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 1 modifier = { factor = 0 check_variable = { var = A10M_repression value = 55 compare = greater_than_or_equals } } }
+ }
+ A10M_release_detainees = {
+  icon = generic_political_discourse cost = 35 days_re_enable = 45
+  available = { has_country_flag = A10M_active check_variable = { var = A10M_repression value = 10 compare = greater_than_or_equals } }
+  complete_effect = {
+   subtract_from_variable = { var = A10M_repression value = 15 }
+   subtract_from_variable = { var = A10M_opposition value = 5 }
+   add_war_support = -0.02
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 2 modifier = { factor = 3 check_variable = { var = A10M_repression value = 60 compare = greater_than_or_equals } } }
+ }
+ A10M_purchase_rice = {
+  icon = generic_political_discourse cost = 40 days_re_enable = 45
+  available = { has_country_flag = A10M_active check_variable = { var = A10M_strain value = 10 compare = greater_than_or_equals } }
+  complete_effect = {
+   subtract_from_variable = { var = A10M_strain value = 18 }
+   subtract_from_variable = { var = A10M_opposition value = 3 }
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 3 modifier = { factor = 4 check_variable = { var = A10M_strain value = 60 compare = greater_than_or_equals } } }
+ }
+ A10M_emergency_requisition = {
+  icon = generic_army_support cost = 20 days_re_enable = 90
+  visible = { has_completed_focus = A10M_requisition }
+  available = { has_country_flag = A10M_active check_variable = { var = A10M_strain value = 75 compare = less_than } }
+  complete_effect = {
+   add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 400 producer = A10 }
+   add_to_variable = { var = A10M_strain value = 12 }
+   add_to_variable = { var = A10M_opposition value = 8 }
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 1 modifier = { factor = 0 NOT = { has_war = yes } } }
+ }
+ A10M_rotate_garrisons = {
+  icon = generic_army_support cost = 35 days_re_enable = 60
+  visible = { has_completed_focus = A10M_quartermasters }
+  available = { has_country_flag = A10M_active }
+  complete_effect = {
+   subtract_from_variable = { var = A10M_opposition value = 8 }
+   subtract_from_variable = { var = A10M_strain value = 8 }
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 2 }
+ }
+ A10M_end_labour_battalions = {
+  icon = generic_political_discourse cost = 75 fire_only_once = yes
+  visible = { has_idea = A10M_compulsory_labour }
+  available = { has_country_flag = A10M_active has_idea = A10M_compulsory_labour }
+  complete_effect = {
+   remove_ideas = A10M_compulsory_labour add_ideas = A10M_compensation_bonds
+   subtract_from_variable = { var = A10M_opposition value = 15 }
+   subtract_from_variable = { var = A10M_strain value = 10 }
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 1 modifier = { factor = 5 check_variable = { var = A10M_strain value = 65 compare = greater_than_or_equals } } }
+ }
+ A10M_recall_officers = {
+  icon = generic_army_support cost = 50 days_re_enable = 120
+  visible = { has_idea = A10M_shattered_officer_corps }
+  available = { has_country_flag = A10M_active has_idea = A10M_shattered_officer_corps }
+  complete_effect = {
+   remove_ideas = A10M_shattered_officer_corps
+   add_to_variable = { var = A10M_opposition value = 5 }
+   subtract_from_variable = { var = A10M_repression value = 5 }
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 3 }
+ }
+ A10M_suspend_requisitions = {
+  icon = generic_political_discourse cost = 50 fire_only_once = yes
+  visible = { has_idea = A10M_requisition_bureaus }
+  available = { has_country_flag = A10M_active has_idea = A10M_requisition_bureaus }
+  complete_effect = {
+   remove_ideas = A10M_requisition_bureaus
+   subtract_from_variable = { var = A10M_strain value = 15 }
+   custom_effect_tooltip = A10M_suspend_requisitions_tt
+   A10M_update = yes
+  }
+  ai_will_do = { factor = 1 modifier = { factor = 5 check_variable = { var = A10M_strain value = 70 compare = greater_than_or_equals } } }
+ }
+}

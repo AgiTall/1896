@@ -1,0 +1,150 @@
+WTN_initialize_effect = {
+ if = { limit = { tag = A04 NOT = { has_country_flag = WTN_treasury_open } }
+  set_country_flag = WTN_treasury_open
+  set_variable = { WTN_liquidity = 60 }
+  set_variable = { WTN_reputation = 50 }
+ }
+}
+WTN_local_workshops_effect = {
+ capital_scope = {
+  if = { limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+   add_extra_state_shared_building_slots = 1
+   add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+  }
+ }
+}
+WTN_armourer_workshops_effect = {
+ capital_scope = {
+  if = { limit = { is_owned_by = ROOT is_controlled_by = ROOT }
+   add_extra_state_shared_building_slots = 1
+   add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+  }
+ }
+}
+# Run only in A04. The borrower remains PREV when entering A04 from the loop.
+WTN_update_ledger_effect = { hidden_effect = {
+ if = { limit = { tag = A04 exists = yes }
+  set_variable = { WTN_principal = 0 }
+  set_variable = { WTN_accounts = 0 }
+  set_variable = { WTN_distressed = 0 }
+  set_variable = { WTN_partners = 0 }
+  every_country = {
+   limit = { NOT = { tag = A04 } NOT = { tag = ZZZ } has_country_flag = WTC_ledger_open }
+   if = { limit = { check_variable = { WTC_debt > 0 } }
+    A04 = { add_to_variable = { WTN_principal = PREV.WTC_debt } add_to_variable = { WTN_accounts = 1 } }
+   }
+   if = { limit = { check_variable = { WTC_debt > 70 } } A04 = { add_to_variable = { WTN_distressed = 1 } } }
+   if = { limit = { has_country_flag = WTN_trade_partner } A04 = { add_to_variable = { WTN_partners = 1 } } }
+  }
+ }
+} }
+WTN_clamp_treasury_effect = { hidden_effect = {
+ clamp_variable = { var = WTN_liquidity min = 0 max = 100 }
+ clamp_variable = { var = WTN_reputation min = 0 max = 100 }
+} }
+WTN_clamp_directorate_effect = { hidden_effect = {
+ clamp_variable = { var = WTC_old_guard min = 0 max = 100 }
+ clamp_variable = { var = WTC_technocrats min = 0 max = 100 }
+ clamp_variable = { var = WTC_secret_department min = 0 max = 100 }
+} }
+WTN_refresh_enforcement_effect = {
+ every_country = {
+  limit = { NOT = { tag = A04 } NOT = { tag = ZZZ } has_country_flag = WTC_ledger_open }
+  WTC_refresh_effect = yes
+ }
+}
+WTN_open_offer_effect = {
+ WTC_initialize_effect = yes
+ if = { limit = { WTN_can_open_offer = yes }
+  A04 = { add_to_variable = { WTN_liquidity = -10 } }
+  set_country_flag = WTN_offer_reserved
+  WTN_mark_reservation_effect = yes
+  set_country_flag = { flag = WTN_offer_pending days = 30 }
+  set_country_flag = { flag = WTN_offer_cooldown days = 180 }
+  country_event = { id = wtn_network.1 days = 2 }
+  country_event = { id = wtn_network.2 days = 31 }
+ }
+}
+WTN_close_offer_effect = {
+ if = { limit = { has_country_flag = WTN_offer_reserved }
+  clr_country_flag = WTN_offer_reserved
+  WTN_release_reservation_effect = yes
+ }
+ clr_country_flag = WTN_offer_pending
+}
+WTN_accept_offer_effect = {
+ if = { limit = { WTN_can_accept_offer = yes }
+  clr_country_flag = WTN_offer_pending
+  clr_country_flag = WTN_offer_reserved
+  WTN_consume_reservation_effect = yes
+  add_to_variable = { WTC_debt = 15 }
+  set_country_flag = { flag = WTC_active_loan days = 180 }
+  add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = A04 }
+  add_equipment_to_stockpile = { type = support_equipment_1 amount = 75 producer = A04 }
+  A04 = { add_to_variable = { WTN_reputation = 2 } WTN_clamp_treasury_effect = yes WTN_update_ledger_effect = yes }
+  WTC_refresh_effect = yes
+ }
+ else = { WTN_close_offer_effect = yes }
+}
+WTN_request_compact_effect = {
+ WTC_initialize_effect = yes
+ if = { limit = { WTN_can_request_compact = yes }
+  set_country_flag = { flag = WTN_compact_pending days = 30 }
+  set_country_flag = WTN_compact_waiting_reply
+  set_country_flag = { flag = WTN_compact_cooldown days = 180 }
+  A04 = { country_event = { id = wtn_network.3 days = 2 } }
+  country_event = { id = wtn_network.6 days = 31 }
+ }
+}
+WTN_sign_compact_effect = {
+ if = { limit = { WTN_can_sign_compact = yes }
+  clr_country_flag = WTN_compact_pending
+  clr_country_flag = WTN_compact_waiting_reply
+  set_country_flag = { flag = WTN_compact_accepted_notice days = 15 }
+  country_event = { id = wtn_network.4 days = 1 }
+  set_country_flag = { flag = WTN_trade_partner days = 360 }
+  add_to_variable = { WTC_debt = 5 }
+  # Regional benefits represent services, not political or territorial control.
+  if = { limit = { tag = A02 }
+   add_to_variable = { WTC_debt = -10 }
+   add_timed_idea = { idea = WTN_pact_british_services days = 360 }
+  }
+  else_if = { limit = { tag = A09 } add_timed_idea = { idea = WTN_pact_osaka_services days = 360 } }
+  else_if = { limit = { tag = A08 } add_timed_idea = { idea = WTN_pact_northern_services days = 360 } }
+  else_if = { limit = { OR = { tag = A06 tag = MLT } } add_timed_idea = { idea = WTN_pact_research_services days = 360 } }
+  else_if = { limit = { tag = A05 } add_timed_idea = { idea = WTN_pact_caribbean_services days = 360 } }
+  else_if = { limit = { OR = { tag = A07 tag = AVC tag = AQL tag = ASA tag = AWA tag = ATA } } add_timed_idea = { idea = WTN_pact_colonial_services days = 360 } }
+  else = { add_timed_idea = { idea = WTN_pact_island_services days = 360 } }
+  A04 = { add_to_variable = { WTN_reputation = 3 } add_to_variable = { WTN_liquidity = 3 } WTN_clamp_treasury_effect = yes }
+  WTC_refresh_effect = yes
+ }
+}
+WTN_cancel_compact_effect = {
+ clr_country_flag = WTN_trade_partner
+ clr_country_flag = WTN_compact_pending
+ remove_ideas = WTN_pact_british_services
+ remove_ideas = WTN_pact_osaka_services
+ remove_ideas = WTN_pact_northern_services
+ remove_ideas = WTN_pact_research_services
+ remove_ideas = WTN_pact_caribbean_services
+ remove_ideas = WTN_pact_colonial_services
+ remove_ideas = WTN_pact_island_services
+}
+WTN_customer_cleanup_effect = {
+ if = { limit = { has_country_flag = WTN_offer_reserved OR = { NOT = { has_country_flag = WTN_offer_pending } NOT = { WTN_has_reservation = yes } NOT = { WTN_is_customer = yes } has_country_flag = JPI_autarky has_country_flag = WTC_receivership } }
+  WTN_close_offer_effect = yes
+ }
+ if = { limit = { has_country_flag = WTN_trade_partner NOT = { WTN_is_customer = yes } } WTN_cancel_compact_effect = yes }
+}
+WTN_monthly_treasury_effect = {
+ WTN_initialize_effect = yes
+ WTN_update_ledger_effect = yes
+ add_to_variable = { WTN_liquidity = 3 }
+ if = { limit = { has_completed_focus = WTN_gold_reserves } add_to_variable = { WTN_liquidity = 1 } }
+ if = { limit = { has_completed_focus = WTN_market_rules } add_to_variable = { WTN_liquidity = 1 } }
+ if = { limit = { check_variable = { WTN_accounts > 0 } } add_to_variable = { WTN_liquidity = 2 } }
+ if = { limit = { check_variable = { WTN_partners > 2 } } add_to_variable = { WTN_liquidity = 1 } }
+ if = { limit = { check_variable = { WTN_distressed > 4 } } add_to_variable = { WTN_liquidity = -3 } add_to_variable = { WTN_reputation = -1 } }
+ if = { limit = { NOT = { has_global_flag = WTC_british_cover } } add_to_variable = { WTN_liquidity = -2 } }
+ WTN_clamp_treasury_effect = yes
+}

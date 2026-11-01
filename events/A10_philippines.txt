@@ -7,9 +7,14 @@ country_event = {
  picture = GFX_report_event_JAP_army_occupation
  is_triggered_only = yes
  trigger = {
+  date > 1894.12.31
   tag = A10
+  is_subject = no
   A03 = { has_war_with = A01 }
   NOT = { has_war_with = A03 }
+  NOT = { has_country_flag = A10_archipelago_peace_signed }
+  NOT = { has_country_flag = A10_manila_peace_signed }
+  NOT = { has_country_flag = A10R_defensive_armistice }
   NOT = { has_capitulated = yes }
  }
  option = {

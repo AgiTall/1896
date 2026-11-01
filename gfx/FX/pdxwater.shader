@@ -268,129 +268,33 @@ PixelShader =
 		
 		float4 main( VS_OUTPUT_WATER Input ) : PDX_COLOR
 		{
-			#define LOW_END_GFX
-			//return float4( 0, 0, 1, 1 );
+			// Chinese chart water: fixed ink on paper, not moving reflective water.
 			float waterHeight = MultiSampleTexX( HeightTexture, Input.uv ) / ( 95.7f / 255.0f );
 			float waterShore = saturate( ( waterHeight - 0.954f ) * 25.0f );
-		
-			float2 B;
-			float3 M;
-			float3 normal;
-			SampleWater( Input.uv, vTime_HalfPixelOffset.x, B, M, normal, LeanTexture1, LeanTexture2 );
-		
-			float vSpecMap = tex2D( SpecularMap, Input.uv ).a;
-			normal.y += ( 1.0f - vSpecMap );
-			normal.xz *= vSpecMap;
-			normal = normalize( normal );
-
-			float vFlatten = vSpecMap;
-			B *= vFlatten;
-			M *= vFlatten * vFlatten;
-		
-		#ifdef LOW_END_GFX
-			float3 SunDirWater = float3( 0, -1, 0 );
-		#else
-			float3 SunDirWater = CalculateSunDirectionWater( Input.pos );
-		#endif
-			float3 H = normalize( normalize(vCamPos - Input.pos).xzy + -SunDirWater.xzy );
-			float2 HWave = H.xy/H.z - B;
-		
-			float3 sigma = M - float3( B*B, B.x*B.y);
-			float det = sigma.x*sigma.y - sigma.z*sigma.z;
-			float e = HWave.x*HWave.x*sigma.y + HWave.y*HWave.y*sigma.x - 2*HWave.x*HWave.y*sigma.z;
-			float spec = (det <= 0) ? 0.0f : exp( -0.5f*e/det ) / sqrt(det);
-			
-			float2 refractiveUV = ( Input.screen_pos.xy / Input.screen_pos.w ) * 0.5f + 0.5f;
-			refractiveUV.y = 1.0f - refractiveUV.y;
-			refractiveUV += vTime_HalfPixelOffset.gb;
-			float vRefractionScale = saturate( 5.0f - ( Input.screen_pos.z / Input.screen_pos.w ) * 5.0f );
-		
-			float2 vRefractionDistortion = normal.xz * vRefractionScale * 1.80f;
-		
-			float3 vEyeDir = normalize( Input.pos - vCamPos.xyz );
-			float3 reflection = reflect( vEyeDir, normal );
-
-			float vSpecularIntensity = 0.010f;
-			float vGlossiness = (spec/9.0f) * (1-vSpecMap); 
-			//float CubeMipmapIndex = GetEnvmapMipLevel(saturate(1.0f-vSpecMap)); 
-			
-			//float3 reflectiveColor = texCUBElod( ReflectionCubeMap, float4(reflection, CubeMipmapIndex) ).rgb;// * CubemapIntensity;
-			float3 reflectiveColor = texCUBE( ReflectionCubeMap, reflection ).rgb;
-		
-		#ifdef NO_REFRACTIONS
-			float3 refractiveColor = float3( 0, 0.1f, 0.2f );
-		#else
-			float3 refractiveColor = tex2D( WaterRefraction, refractiveUV.xy - vRefractionDistortion ).rgb;
-		#endif
-
-			float fresnelBias = 0.5f; // CUBEMAP INTENSITY
-			float fresnel = saturate( dot( -vEyeDir, normal ) ) * 0.5f;
-			fresnel = saturate( fresnelBias + ( 1.0f - fresnelBias ) * pow( 1.0f - fresnel, 10.0) );
-			refractiveColor = refractiveColor * ( 1.0f - fresnel ) + reflectiveColor * fresnel;
-			
-			float vIceFade = 0.0f;
-		#ifndef LOW_END_GFX
-			float4 vMudSnowColor = GetMudSnowColor( Input.pos, SnowMudTexture );
-			refractiveColor = ApplyIce( refractiveColor, Input.pos.xz, normal, vMudSnowColor, Input.uv_ice, vIceFade );
-
-			vRefractionDistortion *= 1.0f - vIceFade;
-			vSpecularIntensity += vIceFade * 0.07f;
-			vGlossiness += vIceFade * 20.0f;
-		#endif
-		
+			float3 normal = float3( 0.0f, 1.0f, 0.0f );
+			// Flat aged-paper ground. Never sample the screen-space seabed:
+			// that texture carries depth shading, dents and a cold colour cast.
+			float3 paperColor = float3( 0.36f, 0.33f, 0.25f );
+			// Existing engine-bound water-only slot 6. RGB retains the old ice normals;
+			// alpha stores our ink. No new engine texture binding is required.
+			float tileSize = MAP_SIZE_X / 8.0f;
+			float2 paperUV = float2( Input.pos.x, -Input.pos.z ) / tileSize;
+			float ink = 1.0f - tex2D( IceDiffuse, paperUV ).a;
+			float distanceFade = lerp( 1.0f, 0.20f, cam_distance( 600.0f, 1900.0f ) );
+			paperColor *= 1.0f - ink * 0.28f * distanceFade;
+			// Preserve visibility and night darkening as brightness only, so fog
+			// cannot turn the parchment blue or purple. Apply overlays afterwards.
+			float paperLuma = max( dot( paperColor, float3( 0.299f, 0.587f, 0.114f ) ), 0.001f );
+			float3 fogColor = ApplyFOW( paperColor, ShadowMap, Input.vScreenCoord );
+			float3 nightColor = DayNightWithBlend( fogColor, CalcGlobeNormal( Input.pos.xz ), 1.0f );
+			float visibility = clamp( dot( nightColor, float3( 0.299f, 0.587f, 0.114f ) ) / paperLuma, 0.62f, 1.0f );
+			float3 vOut = paperColor * visibility;
 			float vBloomAlpha = 0.0f;
-
-			gradient_border_apply( refractiveColor, normal, 
-				Input.uv + vRefractionDistortion * 0.0075f,
-				GradientBorderChannel1, GradientBorderChannel2, 0.0f, 
+			gradient_border_apply( vOut, normal, Input.uv,
+				GradientBorderChannel1, GradientBorderChannel2, 0.0f,
 				vGBCamDistOverride_GBOutlineCutoff.zw * GB_OUTLINE_CUTOFF_SEA,
 				vGBCamDistOverride_GBOutlineCutoff.xy, vBloomAlpha );
-			secondary_color_mask( refractiveColor, normal, 
-				Input.uv - vRefractionDistortion * 0.001, 
-				ProvinceSecondaryColorMap, 
-				vBloomAlpha );
-
-			LightingProperties lightingProperties;
-			lightingProperties._WorldSpacePos = Input.pos;
-			lightingProperties._ToCameraDir = normalize(vCamPos - Input.pos);
-			lightingProperties._Normal = normal;
-			lightingProperties._Diffuse = refractiveColor;
-			lightingProperties._Glossiness = vGlossiness;
-			lightingProperties._SpecularColor = vec3(vSpecularIntensity);
-			lightingProperties._NonLinearGlossiness = GetNonLinearGlossiness(vGlossiness);
-			
-		
-			// Grab the shadow term
-		#ifdef LOW_END_GFX
-			float3 diffuseLight = vec3(1.0f);
-			float3 specularLight = vec3(0.002f);
-		#else
-			float3 diffuseLight = vec3(0.0);
-			float3 specularLight = vec3(0.0);
-
-			float4 vShadowCoord = Input.vScreenCoord;
-			vShadowCoord.xz = vShadowCoord.xz + vRefractionDistortion * 20.0f;
-			float fShadowTerm = GetShadowScaled( SHADOW_WEIGHT_WATER, vShadowCoord, ShadowMap );
-		
-			CalculateSunLight( lightingProperties, fShadowTerm, SunDirWater, diffuseLight, specularLight );
-
-			CalculatePointLights( lightingProperties, LightDataMap, LightIndexMap, diffuseLight, specularLight);
-		#endif
-
-			float3 vOut = ComposeLight(lightingProperties, diffuseLight, specularLight);
-		
-		#ifndef LOW_END_GFX
-			vOut = ApplyFOW( vOut, ShadowMap, Input.vScreenCoord );
-			vOut = ApplyDistanceFog( vOut, Input.pos );
-		#endif
-
-			vOut = DayNightWithBlend( vOut, CalcGlobeNormal( Input.pos.xz ), lerp(BORDER_NIGHT_DESATURATION_MAX, 1.0f, vBloomAlpha) );
-		
-		#ifdef LOW_END_GFX
-			DebugReturn(vOut, lightingProperties, 0.0f);
-		#else
-			DebugReturn(vOut, lightingProperties, fShadowTerm);
-		#endif
+			secondary_color_mask( vOut, normal, Input.uv, ProvinceSecondaryColorMap, vBloomAlpha );
 			return float4( vOut, 1.0f - waterShore );
 		}
 	]]

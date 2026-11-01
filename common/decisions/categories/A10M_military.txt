@@ -1,0 +1,5 @@
+A10M_state_of_siege = {
+ icon = generic_army_support
+ allowed = { tag = A10 }
+ visible = { has_country_flag = A10M_active }
+}

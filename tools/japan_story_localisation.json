@@ -1,0 +1,762 @@
+{
+  "JPF_finance": [
+    "Счета войны",
+    "The War Ledger"
+  ],
+  "JPF_finance_desc": [
+    "Долговое давление Мицубиси: §Y[?JPF_debt_pressure|0]/100§!\\nДоверие к бюджету: §Y[?JPF_budget_confidence|0]/100§!\\nОбслуживание: §R[?JPF_monthly_service|0]§! политической власти в месяц. Война и новые поставки увеличивают долг. Проверенные счета и график платежей сокращают рост. При давлении 75 начинаются сбои; при 95 возможен кассовый кризис. Это внутренние обязательства, долг ВТП показан отдельно.",
+    "Mitsubishi debt pressure: §Y[?JPF_debt_pressure|0]/100§!\\nBudget confidence: §Y[?JPF_budget_confidence|0]/100§!\\nMonthly service: §R[?JPF_monthly_service|0]§! political power. War and supplies raise pressure; audited accounts and payment schedules reduce growth. Distress begins at 75 and a cash crisis becomes likely at 95. Chamber debt has its own ledger."
+  ],
+  "JPN_north_council": [
+    "Протокол северного нейтралитета",
+    "Northern Neutrality Protocol"
+  ],
+  "JPN_north_council_desc": [
+    "Доверие Сайго: §Y[?JPN_north_trust|0]/100§!\\nРаздражение флота: §Y[?JPN_north_fleet_irritation|0]/100§!\\nПокрытие поставок: §Y[?JPN_north_supply_months|0] мес.§!\\nПоставка стоит 250 винтовок и 4 транспорта; обеспечивает 3 месяца. Без покрытия доверие падает на 3 ежемесячно. При доверии ниже 20 или раздражении от 80 протокол срывается. Север остаётся нейтрален: договор не даёт дивизий и не присоединяет Хоккайдо.",
+    "Saigo’s trust: §Y[?JPN_north_trust|0]/100§!\\nNaval resentment: §Y[?JPN_north_fleet_irritation|0]/100§!\\nSupplies covered: §Y[?JPN_north_supply_months|0] months§!\\n250 rifles and 4 transports cover three months. Uncovered months cost 3 trust. Trust below 20 or resentment at 80 breaks the protocol. Northern neutrality grants no divisions or annexation."
+  ],
+  "JPL_luzon_cabinet": [
+    "Манила и непокорённый Лусон",
+    "Manila and Unconquered Luzon"
+  ],
+  "JPL_luzon_cabinet_desc": [
+    "Нагрузка гарнизона: §Y[?JPL_garrison_burden|0]/100§!\\nУсталость: §Y[?JPL_garrison_fatigue|0]/100§!\\nОт 40 — перегрузка, от 70 — чрезвычайное снабжение; усталость от 60 снижает боевой дух. Поставки, эскорты и госпитали оплачиваются новыми обязательствами Мицубиси. Борнейский мир не завершает войну с Конфедерацией.",
+    "Garrison burden: §Y[?JPL_garrison_burden|0]/100§!\\nFatigue: §Y[?JPL_garrison_fatigue|0]/100§!\\nOverload begins at 40, emergency supply at 70; fatigue from 60 reduces morale. Supplies, escorts and hospitals add Mitsubishi liabilities. Borneo peace does not end the Confederation war."
+  ],
+  "JPF_treasury_ledger": [
+    "Чрезвычайная книга казначейства",
+    "Emergency Treasury Ledger"
+  ],
+  "JPF_treasury_ledger_desc": [
+    "Долговое давление и доверие определяют ежемесячное обслуживание и доступность решений.",
+    "Debt pressure and confidence determine monthly service and available measures."
+  ],
+  "JPF_debt_distress": [
+    "Счета без покрытия",
+    "Unfunded Invoices"
+  ],
+  "JPF_debt_distress_desc": [
+    "Давление от 75: поставщики замедляют исполнение заказов.",
+    "Pressure at 75: suppliers slow deliveries."
+  ],
+  "JPF_budget_mistrust": [
+    "Недоверие вкладчиков",
+    "Depositors’ Mistrust"
+  ],
+  "JPF_budget_mistrust_desc": [
+    "Доверие ниже 30: новые обещания кабинета теряют вес.",
+    "Confidence below 30 weakens the cabinet’s promises."
+  ],
+  "JPF_verified_accounts": [
+    "Проверенные счета",
+    "Audited Accounts"
+  ],
+  "JPF_verified_accounts_desc": [
+    "Реформа отчётности и доверие от 65 возвращают предсказуемость заказам.",
+    "Reformed accounts and confidence at 65 restore predictable orders."
+  ],
+  "JPF_excise_collection": [
+    "Чрезвычайный акциз",
+    "Emergency Excise"
+  ],
+  "JPF_excise_collection_desc": [
+    "Кредиторам платят за счёт потребления городов.",
+    "Urban consumers bear the cost of repayments."
+  ],
+  "JPF_yard_retrenchment": [
+    "Отложенные заказы верфям",
+    "Deferred Yard Orders"
+  ],
+  "JPF_yard_retrenchment_desc": [
+    "Экономия сегодня означает меньше готовых кораблей завтра.",
+    "Savings today mean fewer completed ships tomorrow."
+  ],
+  "JPF_delivery_arrears": [
+    "Задолженность рабочим верфей",
+    "Dockworkers’ Arrears"
+  ],
+  "JPF_delivery_arrears_desc": [
+    "Невыплаченное жалованье срывает производственный график.",
+    "Unpaid wages disrupt delivery schedules."
+  ],
+  "JPF_cash_freeze": [
+    "Кассовый разрыв",
+    "Cash Freeze"
+  ],
+  "JPF_cash_freeze_desc": [
+    "Кредитные обещания не заменяют деньги для текущих платежей.",
+    "Credit promises cannot meet immediate invoices."
+  ],
+  "JPF_families_arrears": [
+    "Отложенные выплаты семьям",
+    "Families’ Arrears"
+  ],
+  "JPF_families_arrears_desc": [
+    "Флот получил платёж раньше семей моряков.",
+    "Fleet invoices took precedence over sailors’ families."
+  ],
+  "JPF_coal_contracts": [
+    "Уголь для действующих эскадр",
+    "Coal for Active Squadrons"
+  ],
+  "JPF_coal_contracts_desc": [
+    "Поставки закреплены за военными рейсами.",
+    "Coal deliveries are reserved for active operations."
+  ],
+  "JPF_civilian_retrenchment": [
+    "Сокращённые гражданские заказы",
+    "Civilian Retrenchment"
+  ],
+  "JPF_civilian_retrenchment_desc": [
+    "Казначейство высвобождает средства, откладывая гражданские проекты.",
+    "The treasury postpones civilian projects to release funds."
+  ],
+  "JPN_north_obligation": [
+    "Цена северного нейтралитета",
+    "The Price of Northern Neutrality"
+  ],
+  "JPN_north_obligation_desc": [
+    "Хоккайдо получает довольствие, но не посылает дивизий на Борнео.",
+    "Hokkaido receives supplies without sending divisions to Borneo."
+  ],
+  "JPN_north_fleet_grievance": [
+    "Ропот адмиралтейства",
+    "Admiralty Grievances"
+  ],
+  "JPN_north_fleet_grievance_desc": [
+    "Раздражение от 60: Ито считает, что Север живёт за счёт флота.",
+    "Resentment at 60: Ito believes the fleet is paying for northern privilege."
+  ],
+  "JPN_north_closed_warehouses": [
+    "Закрытые северные склады",
+    "Closed Northern Warehouses"
+  ],
+  "JPN_north_closed_warehouses_desc": [
+    "Доверие ниже 35: Сайго ограничивает доступ столичных чиновников.",
+    "Trust below 35: Saigo restricts Tokyo’s officials."
+  ],
+  "JPN_north_broken_protocol": [
+    "Сорванный протокол",
+    "Broken Protocol"
+  ],
+  "JPN_north_broken_protocol_desc": [
+    "Поставки и арбитраж должны восстановить рабочие отношения.",
+    "Deliveries and arbitration must restore a working relationship."
+  ],
+  "JPN_north_civilian_charters": [
+    "Гражданские северные караваны",
+    "Northern Civilian Charters"
+  ],
+  "JPN_north_civilian_charters_desc": [
+    "Гражданские суда разгружают военные маршруты за дополнительную плату.",
+    "Civilian charters relieve naval routes at extra cost."
+  ],
+  "JPN_north_fleet_appropriation": [
+    "Компенсация адмиралтейству",
+    "Admiralty Appropriation"
+  ],
+  "JPN_north_fleet_appropriation_desc": [
+    "Новые деньги примиряют Ито с расходами на Север.",
+    "New funds reconcile Ito to northern expenditure."
+  ],
+  "JPN_north_unfinished_peace": [
+    "Незавершённый северный мир",
+    "Unfinished Northern Peace"
+  ],
+  "JPN_north_unfinished_peace_desc": [
+    "Борнео больше не оправдывает отсрочки. Север снова требует ответа.",
+    "Borneo no longer excuses postponement. The North demands an answer."
+  ],
+  "JPN_north_limited_compact": [
+    "Ограниченный северный компакт",
+    "Limited Northern Compact"
+  ],
+  "JPN_north_limited_compact_desc": [
+    "Постоянные гражданские обязательства заменяют кризисные переговоры. Военный нейтралитет сохраняется.",
+    "Permanent civilian obligations replace emergency talks. Military neutrality remains."
+  ],
+  "JPL_limited_garrison": [
+    "Ограниченный манильский гарнизон",
+    "Limited Manila Garrison"
+  ],
+  "JPL_limited_garrison_desc": [
+    "Нагрузка ниже 40. Оккупация всё ещё требует снабжения.",
+    "Burden below 40. Occupation still needs supplies."
+  ],
+  "JPL_overloaded_garrison": [
+    "Перегруженный гарнизон",
+    "Overloaded Garrison"
+  ],
+  "JPL_overloaded_garrison_desc": [
+    "Нагрузка от 40: порт не успевает обслуживать войска.",
+    "Burden at 40: the port cannot meet army demand."
+  ],
+  "JPL_garrison_emergency": [
+    "Чрезвычайное снабжение Манилы",
+    "Manila Supply Emergency"
+  ],
+  "JPL_garrison_emergency_desc": [
+    "Нагрузка от 70: гарнизон поглощает ресурсы южной кампании.",
+    "Burden at 70: Manila consumes southern campaign resources."
+  ],
+  "JPL_worn_rotations": [
+    "Изношенные ротации",
+    "Worn Rotations"
+  ],
+  "JPL_worn_rotations_desc": [
+    "Усталость от 60 подрывает восстановление частей.",
+    "Fatigue at 60 slows unit recovery."
+  ],
+  "JPL_exhausted_rotations": [
+    "Гарнизон на пределе",
+    "Exhausted Garrison"
+  ],
+  "JPL_exhausted_rotations_desc": [
+    "Усталость от 85: служба в тропиках стала бессрочной.",
+    "Fatigue at 85: tropical service has become indefinite."
+  ],
+  "JPL_escorts_diverted": [
+    "Эскорты у Манилы",
+    "Escorts off Manila"
+  ],
+  "JPL_escorts_diverted_desc": [
+    "Охранение занято филиппинскими рейсами и теряет готовность для Борнео.",
+    "Philippine escort duties reduce readiness for Borneo."
+  ],
+  "JPL_perimeter_order": [
+    "Сокращённый периметр",
+    "Shortened Perimeter"
+  ],
+  "JPL_perimeter_order_desc": [
+    "Меньше маршрутов снабжения, больше изоляции и усталости.",
+    "Fewer supply routes bring isolation and fatigue."
+  ],
+  "JPL_hospital_service": [
+    "Госпитальная служба",
+    "Hospital Service"
+  ],
+  "JPL_hospital_service_desc": [
+    "Медицинская эвакуация восстанавливает людей ценой гражданских ресурсов.",
+    "Medical evacuation restores men at a civilian cost."
+  ],
+  "JPL_accountable_occupation": [
+    "Подотчётная манильская управа",
+    "Accountable Manila Administration"
+  ],
+  "JPL_accountable_occupation_desc": [
+    "Закупки и довольствие проходят проверку; горы Лусона остаются непокорёнными.",
+    "Purchases and wages face scrutiny; Luzon’s mountains remain unconquered."
+  ],
+  "JPF_service_bonds": [
+    "Обслужить государственные облигации",
+    "Service Public Bonds"
+  ],
+  "JPF_service_bonds_desc": [
+    "Давление −10, доверие +3.",
+    "Pressure −10, confidence +3."
+  ],
+  "JPF_voluntary_subscription": [
+    "Открыть добровольную подписку",
+    "Open Voluntary Subscription"
+  ],
+  "JPF_voluntary_subscription_desc": [
+    "25 транспортов; давление +8, доверие +5. Только один раз.",
+    "25 transports; pressure +8, confidence +5. Once only."
+  ],
+  "JPF_levy_excise": [
+    "Собрать чрезвычайный акциз",
+    "Collect Emergency Excise"
+  ],
+  "JPF_levy_excise_desc": [
+    "Давление −12, доверие −7; штрафы к стабильности и строительству на 180 дней.",
+    "Pressure −12, confidence −7; stability and construction penalties for 180 days."
+  ],
+  "JPF_defer_yard_orders": [
+    "Отложить заказы верфям",
+    "Defer Yard Orders"
+  ],
+  "JPF_defer_yard_orders_desc": [
+    "Давление −10, доверие −4; замедление верфей на 180 дней.",
+    "Pressure −10, confidence −4; slower yards for 180 days."
+  ],
+  "JPF_osaka_advance": [
+    "Взять осакский аванс",
+    "Take the Osaka Advance"
+  ],
+  "JPF_osaka_advance_desc": [
+    "500 винтовок и 15 транспортов; давление +12, доверие −5.",
+    "500 rifles and 15 transports; pressure +12, confidence −5."
+  ],
+  "JPF_publish_accounts": [
+    "Опубликовать проверенные счета",
+    "Publish Audited Accounts"
+  ],
+  "JPF_publish_accounts_desc": [
+    "Давление −4, доверие +8.",
+    "Pressure −4, confidence +8."
+  ],
+  "JPF_bridge_credit": [
+    "Запросить мостовой кредит",
+    "Request Bridge Credit"
+  ],
+  "JPF_bridge_credit_desc": [
+    "Открывает переговоры с ВТП о новых транспортах и обязательствах.",
+    "Opens negotiations with the Chamber over shipping and liabilities."
+  ],
+  "JPF_pay_dockworkers": [
+    "Выплатить жалованье рабочим",
+    "Pay the Dockworkers"
+  ],
+  "JPF_pay_dockworkers_desc": [
+    "Снимает задержки поставок; давление +5, доверие +7.",
+    "Clears delivery arrears; pressure +5, confidence +7."
+  ],
+  "JPF_redeem_small_savers": [
+    "Выкупить мелкие вклады",
+    "Redeem Small Deposits"
+  ],
+  "JPF_redeem_small_savers_desc": [
+    "Давление −12, доверие +8; гражданские заказы сокращаются на 120 дней.",
+    "Pressure −12, confidence +8; civilian retrenchment for 120 days."
+  ],
+  "JPF_close_ledger": [
+    "Закрыть чрезвычайную книгу",
+    "Close the Emergency Ledger"
+  ],
+  "JPF_close_ledger_desc": [
+    "Завершает внутренний финансовый кризис после войн, нефтяного расчёта и выплаты кредита ВТП.",
+    "Ends the domestic financial crisis after the wars, oil settlement and Chamber repayment."
+  ],
+  "JPN_north_scheduled_shipment": [
+    "Отправить северную поставку",
+    "Dispatch Northern Supplies"
+  ],
+  "JPN_north_scheduled_shipment_desc": [
+    "250 винтовок и 4 транспорта: доверие +8, раздражение +6, покрытие +3 месяца, давление Мицубиси +5.",
+    "250 rifles and 4 transports: trust +8, resentment +6, supplies +3 months, Mitsubishi pressure +5."
+  ],
+  "JPN_north_bread_before_rifles": [
+    "Зафрахтовать хлебный караван",
+    "Charter a Grain Convoy"
+  ],
+  "JPN_north_bread_before_rifles_desc": [
+    "2 транспорта: доверие +5, раздражение +2, покрытие +2 месяца. Не более трёх караванов.",
+    "2 transports: trust +5, resentment +2, supplies +2 months. At most three charters."
+  ],
+  "JPN_north_written_postponement": [
+    "Согласовать письменную отсрочку",
+    "Agree a Written Postponement"
+  ],
+  "JPN_north_written_postponement_desc": [
+    "Покрытие +2 месяца, доверие −6, раздражение −5. Только дважды за войну.",
+    "Coverage +2 months, trust −6, resentment −5. Twice during the war."
+  ],
+  "JPN_north_meiji_letter": [
+    "Отправить личное письмо Мэйдзи",
+    "Send Meiji’s Personal Letter"
+  ],
+  "JPN_north_meiji_letter_desc": [
+    "Доверие +12, раздражение +4.",
+    "Trust +12, resentment +4."
+  ],
+  "JPN_north_admiralty_appropriation": [
+    "Компенсировать расходы флота",
+    "Compensate the Fleet"
+  ],
+  "JPN_north_admiralty_appropriation_desc": [
+    "Раздражение −14, доверие −3; давление Мицубиси +5. Не более трёх выплат.",
+    "Resentment −14, trust −3; Mitsubishi pressure +5. At most three grants."
+  ],
+  "JPN_north_send_inspectors": [
+    "Отправить складскую комиссию",
+    "Send a Warehouse Commission"
+  ],
+  "JPN_north_send_inspectors_desc": [
+    "Открывает выбор полномочий инспекторов.",
+    "Opens a choice over the inspectors’ authority."
+  ],
+  "JPN_north_clear_arrears": [
+    "Погасить северную недопоставку",
+    "Clear Northern Supply Arrears"
+  ],
+  "JPN_north_clear_arrears_desc": [
+    "500 винтовок и 6 транспортов: доверие +18, раздражение +12, покрытие 4 месяца; восстанавливает протокол.",
+    "500 rifles and 6 transports: trust +18, resentment +12, four months covered; restores the protocol."
+  ],
+  "JPN_north_negotiate_compact": [
+    "Предложить постоянный компакт",
+    "Propose a Permanent Compact"
+  ],
+  "JPN_north_negotiate_compact_desc": [
+    "Требует доверия от 55, раздражения ниже 60 и новой поставки. Снимает повторяющийся кризис, сохраняя плату за нейтралитет.",
+    "Requires trust at 55, resentment below 60 and fresh supplies. Ends the recurring crisis while retaining the cost of neutrality."
+  ],
+  "JPL_supply_manila": [
+    "Дополнительное довольствие Манилы",
+    "Extra Manila Supplies"
+  ],
+  "JPL_supply_manila_desc": [
+    "200 винтовок: нагрузка −8 и снижение роста на 90 дней; давление Мицубиси +5.",
+    "200 rifles: burden −8 and reduced growth for 90 days; Mitsubishi pressure +5."
+  ],
+  "JPL_escort_manila": [
+    "Выделить манильское охранение",
+    "Assign Manila Escorts"
+  ],
+  "JPL_escort_manila_desc": [
+    "Нагрузка −6, снижение роста на 90 дней; временный штраф организации флота и давление Мицубиси +5.",
+    "Burden −6, slower growth for 90 days; temporary fleet organisation penalty and Mitsubishi pressure +5."
+  ],
+  "JPL_open_field_hospitals": [
+    "Открыть полевые госпитали",
+    "Open Field Hospitals"
+  ],
+  "JPL_open_field_hospitals_desc": [
+    "25 единиц поддержки: усталость −10 и снижение роста на 90 дней; давление Мицубиси +5.",
+    "25 support equipment: fatigue −10 and slower growth for 90 days; Mitsubishi pressure +5."
+  ],
+  "JPL_rotate_garrison": [
+    "Ротировать гарнизон",
+    "Rotate the Garrison"
+  ],
+  "JPL_rotate_garrison_desc": [
+    "1000 резервистов: усталость −8 и снижение роста на 90 дней; давление Мицубиси +5.",
+    "1,000 manpower: fatigue −8 and slower growth for 90 days; Mitsubishi pressure +5."
+  ],
+  "JPL_verify_garrison_books": [
+    "Сверить гарнизонные книги",
+    "Verify Garrison Books"
+  ],
+  "JPL_verify_garrison_books_desc": [
+    "Нагрузка −12, усталость +4: проверка нарушит привычные цепочки поставок.",
+    "Burden −12, fatigue +4: audits disrupt established supply networks."
+  ],
+  "JPL_purchase_locally": [
+    "Закупить продовольствие на месте",
+    "Purchase Food Locally"
+  ],
+  "JPL_purchase_locally_desc": [
+    "Нагрузка −6 и снижение роста на 120 дней; давление Мицубиси +5.",
+    "Burden −6 and slower growth for 120 days; Mitsubishi pressure +5."
+  ],
+  "JPL_hold_port_perimeter": [
+    "Сжать периметр порта",
+    "Shorten the Port Perimeter"
+  ],
+  "JPL_hold_port_perimeter_desc": [
+    "Нагрузка −10, усталость +7; временный штраф боевого духа.",
+    "Burden −10, fatigue +7; temporary morale penalty."
+  ],
+  "JPL_prosecute_false_accounts": [
+    "Судить за ложные ведомости",
+    "Prosecute False Accounts"
+  ],
+  "JPL_prosecute_false_accounts_desc": [
+    "Нагрузка −15, усталость +5; ограниченная экономия для казначейства.",
+    "Burden −15, fatigue +5; limited treasury savings."
+  ],
+  "japan_finance.1.t": [
+    "Кому принадлежат счета?",
+    "Whose Accounts Are These?"
+  ],
+  "japan_finance.1.d": [
+    "В Осаке предлагают записать филиппинские расходы как государственные, а доходы — как частные. Ивасаки напоминает, что без его аванса верфи остановятся. Император может оплатить проверку или согласиться на закрытые книги.",
+    "Osaka wants Philippine costs recorded as public liabilities and revenues as private income. Iwasaki warns that the yards need his advance. The emperor can fund an audit or accept sealed accounts."
+  ],
+  "japan_finance.1.audit": [
+    "Заплатить за проверку.",
+    "Pay for an audit."
+  ],
+  "japan_finance.1.seal": [
+    "Пока примем их расчёты.",
+    "Accept their figures for now."
+  ],
+  "japan_finance.2.t": [
+    "Подпись под будущей нефтью",
+    "A Signature Against Future Oil"
+  ],
+  "japan_finance.2.d": [
+    "Гарантии Мицубиси уже обещаны. Осталось решить, кто увидит условия: парламентский реестр укрепит доверие, а закрытый аванс немедленно даст флоту транспорты. Ни один выбор не отменяет монополию после победы.",
+    "Mitsubishi’s guarantees are promised. Public registration restores confidence; a private advance immediately equips the fleet. Both preserve the promised postwar monopoly."
+  ],
+  "japan_finance.2.public": [
+    "Внести гарантии в открытый реестр.",
+    "Register the guarantees publicly."
+  ],
+  "japan_finance.2.advance": [
+    "Взять аванс без огласки.",
+    "Take a private advance."
+  ],
+  "japan_finance.3.t": [
+    "Адмиралтейство предъявляет счёт",
+    "The Admiralty’s Invoice"
+  ],
+  "japan_finance.3.d": [
+    "Верфи требуют расчёта за военный заказ. Платёж обеспечит новые транспорты, увеличив долг. Отсрочка сбережёт казначейство, но рабочие не выйдут на смену под одни обещания.",
+    "The yards demand payment. Paying produces transports and increases debt. Deferral saves treasury resources but leaves unpaid workers."
+  ],
+  "japan_finance.3.pay": [
+    "Оплатить счёт сейчас.",
+    "Pay the invoice now."
+  ],
+  "japan_finance.3.defer": [
+    "Отложить расчёт.",
+    "Defer payment."
+  ],
+  "japan_finance.4.t": [
+    "Денег не хватает до понедельника",
+    "No Cash Until Monday"
+  ],
+  "japan_finance.4.d": [
+    "Казначейство платёжеспособно на бумаге. Сегодня оно не может покрыть жалованье, уголь и пособия одновременно. Ивасаки предлагает ещё один аванс; адмиралы требуют оставить деньги флоту.",
+    "On paper the treasury remains solvent. Today it cannot cover wages, coal and benefits together. Iwasaki offers another advance; the admirals demand priority."
+  ],
+  "japan_finance.4.advance": [
+    "Принять новый аванс Осаки.",
+    "Accept another Osaka advance."
+  ],
+  "japan_finance.4.freeze": [
+    "Заморозить заказы и признать разрыв.",
+    "Freeze orders and admit the shortfall."
+  ],
+  "japan_finance.4.fleet": [
+    "Флот получит деньги; семьи подождут.",
+    "Pay the fleet; families must wait."
+  ],
+  "japan_finance.5.t": [
+    "Мостовой кредит Мадейры",
+    "Madeira Bridge Credit"
+  ],
+  "japan_finance.5.d": [
+    "Палата готова выдать транспорты под будущие платежи и страховой договор. Это поднимет внутреннее долговое давление на 14 и долг ВТП на 15. Отказ потребует немедленно сократить гражданские заказы.",
+    "The Chamber offers shipping against future payments and insurance. Mitsubishi pressure rises by 14 and Chamber debt by 15. Refusal requires immediate civilian retrenchment."
+  ],
+  "japan_finance.5.credit": [
+    "Подписать кредитный договор.",
+    "Sign the credit agreement."
+  ],
+  "japan_finance.5.domestic": [
+    "Сократить внутренние расходы.",
+    "Cut domestic expenditure."
+  ],
+  "japan_finance.6.t": [
+    "Нефть есть, свободных денег нет",
+    "Oil Without Free Cash"
+  ],
+  "japan_finance.6.d": [
+    "Борнейские роялти наконец поступили в Осаку. Кредиторы требуют первого платежа. Семьи моряков спрашивают, почему победа снова отодвигает их пособия.",
+    "Borneo royalties finally reach Osaka. Creditors demand priority. Sailors’ families ask why victory delays their benefits again."
+  ],
+  "japan_finance.6.creditors": [
+    "Сначала погасить крупные обязательства.",
+    "Service the major creditors first."
+  ],
+  "japan_finance.6.families": [
+    "Вернуть долг семьям.",
+    "Repay the families."
+  ],
+  "japan_north.1.t": [
+    "Телеграмма о следующем рейсе",
+    "The Next Sailing Telegram"
+  ],
+  "japan_north.1.d": [
+    "Сайго не просит места в штабе Ито. Он просит выполнить накладную. Отправить винтовки, согласовать отсрочку или послать комиссию — каждое решение будет прочитано и на Хоккайдо, и в адмиралтействе.",
+    "Saigo wants no seat on Ito’s staff; he wants his delivery. Supply, postponement or inspection will be judged by both Hokkaido and the Admiralty."
+  ],
+  "japan_north.1.a": [
+    "Погрузить положенные ящики.",
+    "Load the promised crates."
+  ],
+  "japan_north.1.b": [
+    "Запросить письменную отсрочку.",
+    "Request a written postponement."
+  ],
+  "japan_north.1.c": [
+    "Сначала отправить комиссию.",
+    "Send a commission first."
+  ],
+  "japan_north.1.e": [
+    "Флоту нужнее. Рейса не будет.",
+    "The fleet needs it more. Cancel the sailing."
+  ],
+  "japan_north.2.t": [
+    "За порогом северных складов",
+    "Beyond the Northern Warehouse Door"
+  ],
+  "japan_north.2.d": [
+    "Комиссия допущена к накладным, но Сайго запрещает перепись частей. Адмиралтейство требует доказательств, что за словом нейтралитет не скрывается подготовка мятежа.",
+    "The commission may inspect waybills, but Saigo forbids unit registers. The Admiralty wants proof that neutrality is not a cover for revolt."
+  ],
+  "japan_north.2.a": [
+    "Проверять грузы, не солдат.",
+    "Inspect cargo, not soldiers."
+  ],
+  "japan_north.2.b": [
+    "Потребовать полный доступ.",
+    "Demand full access."
+  ],
+  "japan_north.2.c": [
+    "Пусть посредник императора снимет спор.",
+    "Fund an imperial mediator."
+  ],
+  "japan_north.3.t": [
+    "Протокол больше не работает",
+    "The Protocol Has Broken Down"
+  ],
+  "japan_north.3.d": [
+    "Север закрывает склады перед чиновниками Токио. Ито заявляет, что уступки лишь поощряют неповиновение. До гражданской войны ещё далеко, но прежняя подпись больше не обеспечивает послушания.",
+    "The North closes its warehouses to Tokyo. Ito says concessions reward defiance. Civil war is not imminent, but signatures no longer ensure cooperation."
+  ],
+  "japan_north.3.a": [
+    "Оплатить новое посредничество.",
+    "Fund renewed mediation."
+  ],
+  "japan_north.3.b": [
+    "Публично признать пределы нашей власти.",
+    "Acknowledge the limits of our authority."
+  ],
+  "japan_north.4.t": [
+    "Ито считает северные транспорты",
+    "Ito Counts the Northern Transports"
+  ],
+  "japan_north.4.d": [
+    "Адмиралы складывают расходы на нейтральный Север и потери борнейской эскадры. Они требуют компенсации, иначе следующая телеграмма станет обвинением всему кабинету.",
+    "The admirals compare neutral northern deliveries with Borneo losses. They demand compensation before their next telegram indicts the cabinet."
+  ],
+  "japan_north.4.a": [
+    "Выделить деньги адмиралтейству.",
+    "Appropriate funds to the Admiralty."
+  ],
+  "japan_north.4.b": [
+    "Договор с Севером останется в силе.",
+    "Uphold the northern agreement."
+  ],
+  "japan_north.5.t": [
+    "После победных сводок",
+    "After the Victory Bulletins"
+  ],
+  "japan_north.5.d": [
+    "Сайго возвращает довоенную переписку с пометкой: ответ не получен. Временный нейтралитет пережил войну. Теперь Север хочет знать, останется ли Токио верен слову без общего врага.",
+    "Saigo returns unanswered prewar letters. Temporary neutrality survived the war. Will Tokyo keep its word without a common enemy?"
+  ],
+  "japan_north.5.a": [
+    "Оплатить личную аудиенцию.",
+    "Arrange a personal audience."
+  ],
+  "japan_north.5.b": [
+    "Сначала закончить демобилизацию.",
+    "Finish demobilisation first."
+  ],
+  "japan_north.6.t": [
+    "Компакт двух берегов",
+    "Compact of Two Shores"
+  ],
+  "japan_north.6.d": [
+    "Сайго согласен на постоянный график снабжения при сохранении своего командования. Флот получит предсказуемые расходы вместо кризисных караванов. Это договор о сосуществовании, не об объединении армий.",
+    "Saigo accepts permanent deliveries under his own command. Predictable costs replace emergency charters. This is coexistence, with separate armies."
+  ],
+  "japan_north.6.a": [
+    "Подписать компакт и отправить поставку.",
+    "Sign and dispatch the supplies."
+  ],
+  "japan_north.6.b": [
+    "Условия ещё требуют обсуждения.",
+    "The terms need further discussion."
+  ],
+  "japan_luzon.1.t": [
+    "Манила просит ещё один рейс",
+    "Manila Requests Another Sailing"
+  ],
+  "japan_luzon.1.d": [
+    "Порт взят, дороги за ним — нет. Гарнизон требует дополнительных грузов. Ито может оплатить рейс через казначейство или приказать держать меньший периметр теми же людьми.",
+    "The port is held, its inland roads are not. Ito can finance extra supplies or order the same men to hold a smaller perimeter."
+  ],
+  "japan_luzon.1.a": [
+    "Оплатить дополнительное довольствие.",
+    "Fund extra supplies."
+  ],
+  "japan_luzon.1.b": [
+    "Сократить периметр.",
+    "Shorten the perimeter."
+  ],
+  "japan_luzon.2.t": [
+    "Страховой случай в проливе",
+    "An Insurance Claim in the Strait"
+  ],
+  "japan_luzon.2.d": [
+    "Не каждый пропавший транспорт потоплен Конфедерацией. В накладных встречаются одинаковые номера, а страховые агенты требуют сопровождения. Отдать Маниле охранение или оставить гарнизон с урезанным пайком?",
+    "Not every missing transport was sunk by the Confederation. Duplicate manifests and insurers’ demands complicate the losses. Assign escorts or cut the garrison’s ration?"
+  ],
+  "japan_luzon.2.a": [
+    "Выделить охранение с Борнео.",
+    "Divert escorts from Borneo."
+  ],
+  "japan_luzon.2.b": [
+    "Пусть Манила обойдётся меньшим.",
+    "Manila must manage with less."
+  ],
+  "japan_luzon.3.t": [
+    "Лазарет переполнен",
+    "The Infirmary Is Full"
+  ],
+  "japan_luzon.3.d": [
+    "В списках больных больше лихорадки, чем ранений. Новый госпиталь потребует денег; приказ терпеть поднимет боевой пыл газет, но не вернёт людей в строй.",
+    "Fever outnumbers wounds on the sick lists. Hospitals cost money; orders to endure excite newspapers without restoring men."
+  ],
+  "japan_luzon.3.a": [
+    "Оплатить госпитальную эвакуацию.",
+    "Fund medical evacuation."
+  ],
+  "japan_luzon.3.b": [
+    "Газеты должны писать о стойкости.",
+    "The newspapers must report endurance."
+  ],
+  "japan_luzon.4.t": [
+    "Батальон, которого не было",
+    "The Battalion That Never Was"
+  ],
+  "japan_luzon.4.d": [
+    "Казначейство оплачивает довольствие части, которой нет ни в порту, ни в горах. След ведёт к уважаемым поставщикам. Следствие уменьшит потери, но разорвёт знакомые цепочки закупок.",
+    "The treasury feeds a unit found neither at port nor in the hills. Respected suppliers are implicated. An inquiry will cut losses and disrupt established purchases."
+  ],
+  "japan_luzon.4.a": [
+    "Открыть дело против поставщиков.",
+    "Investigate the suppliers."
+  ],
+  "japan_luzon.4.b": [
+    "Не трогать договоры во время войны.",
+    "Leave wartime contracts alone."
+  ],
+  "japan_luzon.5.t": [
+    "Борнейский мир, манильская война",
+    "Borneo Peace, Manila War"
+  ],
+  "japan_luzon.5.d": [
+    "Победные салюты в Токио слышны лучше, чем просьбы гарнизона. Освободившиеся эскорты можно вернуть к Лусону. Ивасаки напоминает: ещё один рейс будет занесён в книгу расходов.",
+    "Tokyo hears victory salutes more clearly than garrison requests. Released escorts can return to Luzon, on another treasury invoice."
+  ],
+  "japan_luzon.5.a": [
+    "Вернуть часть охранения к Маниле.",
+    "Return escorts to Manila."
+  ],
+  "japan_luzon.5.b": [
+    "Пусть победа оправдает новые усилия.",
+    "Ask for renewed effort in victory’s name."
+  ],
+  "japan_luzon.6.t": [
+    "Манильская пристань потеряна",
+    "Manila’s Pier Is Lost"
+  ],
+  "japan_luzon.6.d": [
+    "Сообщение гарнизона пришло по обходному маршруту. Потеря пристани сделала прежние планы бессмысленными. Эвакуация больных стоит денег; требование держаться увеличит усталость оставшихся.",
+    "The garrison’s message took a diversion. Losing the pier invalidates old plans. Evacuation costs money; holding on increases fatigue."
+  ],
+  "japan_luzon.6.a": [
+    "Оплатить эвакуацию и перегруппировку.",
+    "Fund evacuation and regrouping."
+  ],
+  "japan_luzon.6.b": [
+    "Приказать удерживать оставшиеся позиции.",
+    "Order the remaining positions held."
+  ]
+}

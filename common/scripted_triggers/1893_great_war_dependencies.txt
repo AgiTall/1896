@@ -1,0 +1,124 @@
+anti_submarine_strategy_required_trigger = {
+	OR = {
+		AND = {
+			tag = ENG
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = USA
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = JAP
+			not = { is_in_faction_with = USA }
+		}
+		AND = {
+			has_war = yes
+			any_enemy_country = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		convoy_threat > 0.3
+	}
+}
+
+has_completed_industrial_warfare_doctrine = {
+	custom_trigger_tooltip = {
+		tooltip = has_completed_industrial_warfare_doctrine_tt
+		AND = {
+			OR = {
+				has_completed_subdoctrine = bite_and_hold
+				has_completed_subdoctrine = defense_in_depth
+			}
+			OR = {
+				has_completed_subdoctrine = methodical_fire
+				has_completed_subdoctrine = integrated_firepower
+				has_completed_subdoctrine = hurricane_bombardment
+			}
+			OR = {
+				has_completed_subdoctrine = bite_and_hold
+				has_completed_subdoctrine = defense_in_depth
+			}
+			OR = {
+				has_completed_subdoctrine = bite_and_hold
+				has_completed_subdoctrine = defense_in_depth
+			}
+		}
+	}
+}
+
+is_china_or_warlord = {
+	custom_trigger_tooltip = {
+		tooltip = is_china_or_warlord_tt
+		is_china_or_warlord_no_tt = yes
+	}
+}
+
+is_china_or_warlord_no_tt = {
+	OR = {
+		is_chinese_warlord_no_tt = yes
+		original_tag = CHI
+		original_tag = QIN
+	}
+}
+
+is_chinese_warlord_no_tt = {
+	OR = {
+		original_tag = PRC
+		original_tag = GXC
+		original_tag = YUN
+		original_tag = SHX
+		original_tag = XSM
+		original_tag = SIK
+		original_tag = HNC
+		original_tag = FNG
+		original_tag = ZHE
+		original_tag = GDC
+		original_tag = GZC
+		original_tag = ANC
+		original_tag = SIC
+		original_tag = JNC
+		original_tag = JXC
+		original_tag = SND
+		original_tag = GMJ
+		original_tag = MAN
+		original_tag = ZHC
+		original_tag = XIC
+		original_tag = YLN
+		original_tag = GSM
+		original_tag = FJN
+		original_tag = JLN
+		original_tag = XKC
+		original_tag = KHM
+		original_tag = QZC
+		original_tag = HBC
+	}
+}
+
+is_naval_power = {
+	OR = {
+		tag = ENG
+		tag = GER
+		tag = FRA
+		tag = ITA
+		tag = JAP
+		tag = USA
+		tag = RUS
+		tag = AUS
+	}
+}

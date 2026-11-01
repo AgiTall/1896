@@ -1,0 +1,46 @@
+# Country scope: invitations may be exchanged while subjects, but sovereignty
+# can only change under a fresh, peaceful convention with an eligible partner.
+A10W_chamber_reachable = {
+ country_exists = A04
+ NOT = { has_war_with = A04 }
+ A04 = { has_capitulated = no }
+}
+A10W_colony_eligible = {
+ tag = A10
+ has_country_flag = A10W_colonial_selected
+ has_country_flag = A10W_oath_accepted
+ is_subject = no
+ has_war = no
+ has_capitulated = no
+ NOT = { any_subject_country = { always = yes } }
+ OR = {
+  is_in_faction = no
+  AND = { is_faction_leader = yes num_faction_members < 2 }
+ }
+ A10W_chamber_reachable = yes
+ A04 = {
+  is_subject = no
+  has_war = no
+  OR = { is_in_faction = no is_faction_leader = yes }
+ }
+}
+A10W_metropole_eligible = {
+ tag = A10
+ has_country_flag = A10W_metropolitan_selected
+ has_country_flag = A10W_oath_accepted
+ is_subject = no
+ has_war = no
+ has_capitulated = no
+ OR = { is_in_faction = no is_faction_leader = yes }
+ A10W_chamber_reachable = yes
+ A04 = {
+  is_subject = no
+  has_war = no
+  NOT = { any_subject_country = { always = yes } }
+  OR = {
+   is_in_faction = no
+   AND = { is_in_faction_with = A10 is_faction_leader = no }
+   AND = { is_faction_leader = yes num_faction_members < 2 }
+  }
+ }
+}

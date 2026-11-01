@@ -50,7 +50,7 @@ for lang in ['russian','english']:
         for key,op,option in event:
             if key=='option':assert v.value(option,'name') in keys
 
-assert (R/'localisation/russian/sabah_war_l_russian.yml').read_bytes().startswith(b'\xef\xbb\xbf')
+assert (R/'localisation/russian/1896_main_l_russian.yml').read_bytes().startswith(b'\xef\xbb\xbf')
 assert not re.search(r'\brecruit_character\s*=',v.read('common/scripted_effects/A01_colonial_constraints.txt'))
 assert not re.search(r'\bstart_resistance\s*=\s*CRO',v.read('history/states/163-Dalmatia.txt'))
 report={'status':'passed','checks':['Registered wartime and peace-request categories','No effects in decision conditions','45/30/20-day extensions keep both clocks synchronised','Peace-request conditions and repeat guard','RU/EN decision and peace-event labels','Sabah localisation BOM','History-only admiral recruitment','Removed invalid Croatian resistance'],'engine_reload':'Not performed; the access violation is not proven fixed.'}

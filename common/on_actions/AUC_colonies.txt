@@ -1,0 +1,8 @@
+on_actions = { on_startup = { effect = { A02 = { if = { limit = { NOT = { has_country_flag = AUC_colonies_initialized } } set_country_flag = AUC_colonies_initialized
+ if = { limit = { country_exists = A07 A07 = { is_subject = no } } set_autonomy = { target = A07 autonomy_state = AUC_self_governing_colony freedom_level = 0.5 } }
+ if = { limit = { country_exists = AVC AVC = { is_subject = no } } set_autonomy = { target = AVC autonomy_state = AUC_self_governing_colony freedom_level = 0.5 } }
+ if = { limit = { country_exists = AQL AQL = { is_subject = no } } set_autonomy = { target = AQL autonomy_state = AUC_self_governing_colony freedom_level = 0.5 } }
+ if = { limit = { country_exists = ASA ASA = { is_subject = no } } set_autonomy = { target = ASA autonomy_state = AUC_self_governing_colony freedom_level = 0.5 } }
+ if = { limit = { country_exists = AWA AWA = { is_subject = no } } set_autonomy = { target = AWA autonomy_state = AUC_self_governing_colony freedom_level = 0.5 } }
+ if = { limit = { country_exists = ATA ATA = { is_subject = no } } set_autonomy = { target = ATA autonomy_state = AUC_self_governing_colony freedom_level = 0.5 } }
+} } } } }

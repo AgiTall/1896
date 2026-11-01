@@ -1,7 +1,7 @@
 state = {
 	id = 529
 	name = "STATE_529" # San'yo, formerly Chugoku
-	manpower = 4431000 # was 5341000
+	manpower = 3061483 # was 5341000
 	state_category = large_city
 
 	history = { 

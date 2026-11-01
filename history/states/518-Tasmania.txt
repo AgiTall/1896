@@ -1,7 +1,7 @@
 state = {
  id = 518
  name = "STATE_518"
- manpower = 230000
+ manpower = 204233
  resources = {
   tungsten = 14
  }
@@ -18,8 +18,8 @@ state = {
     dam = 1
    }
   }
-  owner = A07
-  add_core_of = A07
+  owner = ATA
+  add_core_of = ATA
  }
  provinces = {
   2183

@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "game_version": "1.19.3",
+  "scenario_date_observed": "1893.1.1.12",
+  "targeted_diagnostics": [],
+  "targeted_diagnostic_count": 0,
+  "source_files_verified_unchanged": 687,
+  "tactics_and_doctrines_match_source": true,
+  "static_audit": "passed; 0 errors and 0 warnings in subsystem",
+  "regressions": [
+    "royal story",
+    "Dutch army and industrialisation",
+    "Pacific references"
+  ],
+  "limitations": [
+    "No full campaign or combat balance playthrough",
+    "No separate runtime test without DLC",
+    "Inherited vanilla-content diagnostics outside subsystem remain",
+    "Window layout not visually inspected"
+  ]
+}

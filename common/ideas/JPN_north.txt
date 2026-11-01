@@ -1,0 +1,35 @@
+# Hokkaido remains independent. These are Tokyo's domestic costs, never an annexation.
+ideas = { country = {
+ JPN_north_obligation = {
+  picture = jpc_north removal_cost = -1
+  modifier = { consumer_goods_expected_value = 0.02 political_power_gain = -0.03 }
+ }
+ JPN_north_fleet_grievance = {
+  picture = jpc_north removal_cost = -1
+  modifier = { navy_org_factor = -0.04 political_power_gain = -0.06 }
+ }
+ JPN_north_closed_warehouses = {
+  picture = jpc_north removal_cost = -1
+  modifier = { stability_factor = -0.03 supply_consumption_factor = 0.03 }
+ }
+ JPN_north_broken_protocol = {
+  picture = jpc_north removal_cost = -1
+  modifier = { political_power_gain = -0.10 stability_factor = -0.05 navy_org_factor = -0.04 }
+ }
+ JPN_north_civilian_charters = {
+  picture = jpc_north removal_cost = -1
+  modifier = { consumer_goods_expected_value = 0.02 naval_supply_consumption_factor = -0.03 }
+ }
+ JPN_north_fleet_appropriation = {
+  picture = jpc_north removal_cost = -1
+  modifier = { consumer_goods_expected_value = 0.02 production_speed_dockyard_factor = 0.05 }
+ }
+ JPN_north_unfinished_peace = {
+  picture = jpc_north removal_cost = -1
+  modifier = { stability_factor = -0.03 political_power_gain = -0.05 }
+ }
+ JPN_north_limited_compact = {
+  picture = jpc_north removal_cost = -1
+  modifier = { consumer_goods_expected_value = 0.02 recruitable_population_factor = -0.03 }
+ }
+} }

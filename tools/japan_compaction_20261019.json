@@ -1,0 +1,99 @@
+{
+  "before": 104,
+  "after": 56,
+  "merged": {
+    "JPC_replace_losses": [
+      "JPD_standard_orders",
+      "JPD_engineering_schools"
+    ],
+    "JPD_industrial_power": [
+      "JPD_sustainable_credit"
+    ],
+    "JPF_public_accounts": [
+      "JPC_iwasaki_accounts",
+      "JPF_bond_register"
+    ],
+    "JPF_delivery_calendar": [
+      "JPF_excise_bargain",
+      "JPF_coal_not_glory"
+    ],
+    "JPF_civil_budget": [
+      "JPF_return_small_savings"
+    ],
+    "JPC_honshu_depots": [
+      "JPN_north_civilian_holds",
+      "JPN_north_supply_register"
+    ],
+    "JPN_north_imperial_arbitration": [
+      "JPN_north_inspection_channel",
+      "JPN_north_tokyo_auditors",
+      "JPN_north_admiralty_hearing"
+    ],
+    "JPN_north_postwar_audience": [
+      "JPN_north_permanent_protocol",
+      "JPN_north_keep_distance"
+    ],
+    "JPC_garrison_accounts": [
+      "JPL_convoy_timetable"
+    ],
+    "JPL_supply_board": [
+      "JPL_municipal_buyers",
+      "JPL_payroll_inquiry",
+      "JPL_quartermaster_school"
+    ],
+    "JPL_medical_rotation": [
+      "JPC_casualty_returns",
+      "JPC_hospital_ships"
+    ],
+    "JPD_professional_logistics": [
+      "JPL_port_and_mountains",
+      "JPL_limited_mandate"
+    ],
+    "JPC_hold_until_talks": [
+      "JPC_no_short_war",
+      "JPC_imperial_inspection",
+      "JPC_1895_accounts",
+      "JPC_sulu_escorts"
+    ],
+    "JPD_ocean_fleet": [
+      "JPC_nz_watch"
+    ],
+    "JPD_integrated_staff": [
+      "JPL_borneo_is_not_luzon"
+    ],
+    "JPC_regional_dispatches": [
+      "JPC_honolulu_letters",
+      "JPC_australian_assurances"
+    ],
+    "A03_grand_southern_mandate": [
+      "A03_placate_continental_army",
+      "A03_continental_ambitions",
+      "A03_naval_zaibatsu_compromise",
+      "A03_pacific_resource_lifeline"
+    ],
+    "A03_prime_minister_filter": [
+      "A03_sacred_shield_monarch",
+      "A03_privy_council_arbiters",
+      "A03_cabinet_dissolution"
+    ],
+    "A03_direct_imperial_rule": [
+      "A03_divine_sovereignty"
+    ],
+    "A03_two_faced_colonialism": [
+      "A03_asian_liberation_crusade",
+      "A03_kempeitai_iron_fist"
+    ],
+    "A03_imperial_predator": [
+      "A03_showcase_of_prosperity",
+      "A03_pan_asian_brotherhood",
+      "A03_total_resource_drain",
+      "A03_labor_battalions"
+    ]
+  },
+  "fixed_main_policies": {
+    "JPF_small_subscription": "JPF_public_accounts",
+    "JPN_north_emergency_calendar": "JPC_honshu_depots",
+    "JPL_names_and_units": "JPC_garrison_accounts"
+  },
+  "redirected_files": []
+}

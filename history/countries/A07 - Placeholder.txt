@@ -1,8 +1,10 @@
 # Canon 1893. Generic portrait; historical likeness not supplied.
 capital = 285
+recruit_character = AUC_edmund_barton
 recruit_character = A07_canon_leader
-set_politics = { ruling_party = neutrality elections_allowed = no }
-set_popularities = { neutrality = 100 }
+promote_character = { character = A07_canon_leader ideology = conservatism }
+set_politics = { ruling_party = democratic elections_allowed = yes }
+set_popularities = { democratic = 100 }
 set_research_slots = 2
 set_stability = 0.50
 set_war_support = 0.30
@@ -12,3 +14,66 @@ add_ideas = volunteer_only
 add_ideas = civilian_economy
 add_ideas = limited_exports
 oob = "A07_1893"
+
+# BEGIN 1893 START RESEARCH AND TRAINS
+set_technology = {
+	basic_railways = 1
+	basic_train = 1
+	construction0 = 1
+	infantry_weapons = 1
+}
+add_equipment_to_stockpile = { type = train_equipment_1 amount = 15 producer = A07 }
+# END 1893 START RESEARCH AND TRAINS
+
+# BEGIN MAJOR RESEARCH PROFILE 1893
+# Горная промышленность, рассредоточенное производство, железные дороги, разведка и снабжение удалённых поселений.
+set_technology = {
+	basic_field_gun = 1
+	dispersed_industry = 1
+	early_artillery = 1
+	early_machine_tools = 1
+	excavation1 = 1
+	infantry_weapons1 = 1
+	machine_guns = 1
+	mechanical_engineering = 1
+	powder_type_b = 1
+	standard_gauge_railway = 1
+	tech_engineers = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_recon = 1
+	tech_support = 1
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_coal_engine = 1
+		basic_secondary_battery = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_light = 1
+		early_torpedo_tubes = 1
+		gunboat_ship_hull_light = 1
+		ironclad_artillery = 1
+		ironclad_coal_engine = 1
+		mtg_transport = 1
+		torpedo_boat_ship_hull_light = 1
+		victorian_ship_hull_cruiser = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			transport = 1
+		}
+	}
+}
+# END MAJOR RESEARCH PROFILE 1893
+
+# BEGIN EDITABLE COMMANDER PLACEHOLDERS
+recruit_character = A07_placeholder_marshal_01
+recruit_character = A07_placeholder_general_01
+recruit_character = A07_placeholder_general_02
+recruit_character = A07_placeholder_general_03
+recruit_character = A07_placeholder_general_04
+recruit_character = A07_placeholder_general_05
+# END EDITABLE COMMANDER PLACEHOLDERS

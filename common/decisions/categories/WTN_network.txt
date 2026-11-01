@@ -1,0 +1,2 @@
+WTN_world_accounts = { icon = generic_economy allowed = { original_tag = A04 } visible = { has_country_flag = WTN_treasury_open } }
+WTN_foreign_desks = { icon = generic_trade allowed = { NOT = { original_tag = A04 } NOT = { original_tag = ZZZ } } visible = { WTN_is_customer = yes } }

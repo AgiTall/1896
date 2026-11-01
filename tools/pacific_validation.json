@@ -7,7 +7,7 @@
   ],
   "counts": {
     "A01_focuses": 123,
-    "A03_focuses": 32
+    "A03_focuses": 33
   },
   "errors": [],
   "runtime_test": "Not run; static validation does not replace an in-game campaign."

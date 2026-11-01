@@ -1,0 +1,18 @@
+{
+  "russian": {
+    "files_before": 47,
+    "files_after": 1,
+    "unique_keys": 8193,
+    "duplicate_definitions_removed": 432,
+    "values_preserved": true,
+    "sha256": "65867b81250181b6cb4c16fcf9770f422f9c767ebffd23e61ccd8f82f18647aa"
+  },
+  "english": {
+    "files_before": 35,
+    "files_after": 1,
+    "unique_keys": 2248,
+    "duplicate_definitions_removed": 426,
+    "values_preserved": true,
+    "sha256": "a9d030bac7399cdab542d56e0171fe429e871d7a32016134b15e6a07f09168cb"
+  }
+}

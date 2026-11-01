@@ -1,0 +1,236 @@
+A10R_federal_ratification = {
+ A10R_local_vote_PVI = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 624 controls_state = 624 NOT = { has_country_flag = A10R_consent_PVI } }
+  available = { has_country_flag = A10R_federal_guarantees 624 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 624 controls_state = 624 NOT = { has_country_flag = A10R_consent_PVI } }
+   set_country_flag = A10R_consent_PVI add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PVI = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PVI = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PVI } }
+  available = { PVI = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PVI } NOT = { has_country_flag = A10R_vote_cooldown_PVI } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PVI days = 30 } PVI = { country_event = { id = A10R_congress.20 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PVI = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PVI = { is_subject_of = A10 } has_country_flag = A10R_consent_PVI }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PVI = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PVI } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PVI PVI = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PVI } } } } }
+    annex_country = { target = PVI transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PVI is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PSM = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 625 controls_state = 625 NOT = { has_country_flag = A10R_consent_PSM } }
+  available = { has_country_flag = A10R_federal_guarantees 625 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 625 controls_state = 625 NOT = { has_country_flag = A10R_consent_PSM } }
+   set_country_flag = A10R_consent_PSM add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PSM = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PSM = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PSM } }
+  available = { PSM = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PSM } NOT = { has_country_flag = A10R_vote_cooldown_PSM } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PSM days = 30 } PSM = { country_event = { id = A10R_congress.21 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PSM = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PSM = { is_subject_of = A10 } has_country_flag = A10R_consent_PSM }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PSM = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PSM } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PSM PSM = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PSM } } } } }
+    annex_country = { target = PSM transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PSM is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PCB = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 628 controls_state = 628 NOT = { has_country_flag = A10R_consent_PCB } }
+  available = { has_country_flag = A10R_federal_guarantees 628 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 628 controls_state = 628 NOT = { has_country_flag = A10R_consent_PCB } }
+   set_country_flag = A10R_consent_PCB add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PCB = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PCB = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PCB } }
+  available = { PCB = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PCB } NOT = { has_country_flag = A10R_vote_cooldown_PCB } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PCB days = 30 } PCB = { country_event = { id = A10R_congress.22 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PCB = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PCB = { is_subject_of = A10 } has_country_flag = A10R_consent_PCB }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PCB = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PCB } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PCB PCB = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PCB } } } } }
+    annex_country = { target = PCB transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PCB is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PPN = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 1085 controls_state = 1085 NOT = { has_country_flag = A10R_consent_PPN } }
+  available = { has_country_flag = A10R_federal_guarantees 1085 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 1085 controls_state = 1085 NOT = { has_country_flag = A10R_consent_PPN } }
+   set_country_flag = A10R_consent_PPN add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PPN = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PPN = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PPN } }
+  available = { PPN = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PPN } NOT = { has_country_flag = A10R_vote_cooldown_PPN } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PPN days = 30 } PPN = { country_event = { id = A10R_congress.23 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PPN = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PPN = { is_subject_of = A10 } has_country_flag = A10R_consent_PPN }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PPN = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PPN } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PPN PPN = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PPN } } } } }
+    annex_country = { target = PPN transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PPN is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PMD = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 627 controls_state = 627 NOT = { has_country_flag = A10R_consent_PMD } }
+  available = { has_country_flag = A10R_federal_guarantees 627 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 627 controls_state = 627 NOT = { has_country_flag = A10R_consent_PMD } }
+   set_country_flag = A10R_consent_PMD add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PMD = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PMD = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PMD } }
+  available = { PMD = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PMD } NOT = { has_country_flag = A10R_vote_cooldown_PMD } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PMD days = 30 } PMD = { country_event = { id = A10R_congress.24 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PMD = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PMD = { is_subject_of = A10 } has_country_flag = A10R_consent_PMD }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PMD = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PMD } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PMD PMD = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PMD } } } } }
+    annex_country = { target = PMD transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PMD is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PNM = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 1026 controls_state = 1026 NOT = { has_country_flag = A10R_consent_PNM } }
+  available = { has_country_flag = A10R_federal_guarantees 1026 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 1026 controls_state = 1026 NOT = { has_country_flag = A10R_consent_PNM } }
+   set_country_flag = A10R_consent_PNM add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PNM = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PNM = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PNM } }
+  available = { PNM = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PNM } NOT = { has_country_flag = A10R_vote_cooldown_PNM } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PNM days = 30 } PNM = { country_event = { id = A10R_congress.25 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PNM = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PNM = { is_subject_of = A10 } has_country_flag = A10R_consent_PNM }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PNM = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PNM } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PNM PNM = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PNM } } } } }
+    annex_country = { target = PNM transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PNM is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PNL = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 623 controls_state = 623 NOT = { has_country_flag = A10R_consent_PNL } }
+  available = { has_country_flag = A10R_federal_guarantees 623 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 623 controls_state = 623 NOT = { has_country_flag = A10R_consent_PNL } }
+   set_country_flag = A10R_consent_PNL add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PNL = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PNL = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PNL } }
+  available = { PNL = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PNL } NOT = { has_country_flag = A10R_vote_cooldown_PNL } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PNL days = 30 } PNL = { country_event = { id = A10R_congress.26 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PNL = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PNL = { is_subject_of = A10 } has_country_flag = A10R_consent_PNL }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PNL = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PNL } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PNL PNL = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PNL } } } } }
+    annex_country = { target = PNL transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PNL is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PML = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 327 controls_state = 327 NOT = { has_country_flag = A10R_consent_PML } }
+  available = { has_country_flag = A10R_federal_guarantees 327 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 327 controls_state = 327 NOT = { has_country_flag = A10R_consent_PML } }
+   set_country_flag = A10R_consent_PML add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PML = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PML = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PML } }
+  available = { PML = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PML } NOT = { has_country_flag = A10R_vote_cooldown_PML } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PML days = 30 } PML = { country_event = { id = A10R_congress.27 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PML = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PML = { is_subject_of = A10 } has_country_flag = A10R_consent_PML }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PML = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PML } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PML PML = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PML } } } } }
+    annex_country = { target = PML transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PML is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+ A10R_local_vote_PBT = { icon = generic_political_discourse cost = 35 fire_only_once = yes
+  visible = { owns_state = 1027 controls_state = 1027 NOT = { has_country_flag = A10R_consent_PBT } }
+  available = { has_country_flag = A10R_federal_guarantees 1027 = { NOT = { compliance < 60 } } }
+  complete_effect = { if = { limit = { owns_state = 1027 controls_state = 1027 NOT = { has_country_flag = A10R_consent_PBT } }
+   set_country_flag = A10R_consent_PBT add_to_variable = { A10R_federal_votes = 1 } add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+  } }
+  ai_will_do = { factor = 4 }
+ }
+ A10R_request_PBT = { icon = generic_political_discourse cost = 25 days_re_enable = 90
+  visible = { PBT = { is_subject_of = A10 } NOT = { has_country_flag = A10R_consent_PBT } }
+  available = { PBT = { is_subject_of = A10 has_capitulated = no } has_country_flag = A10R_federal_guarantees NOT = { has_country_flag = A10R_vote_pending_PBT } NOT = { has_country_flag = A10R_vote_cooldown_PBT } }
+  complete_effect = { set_country_flag = { flag = A10R_vote_pending_PBT days = 30 } PBT = { country_event = { id = A10R_congress.28 days = 2 } } }
+  ai_will_do = { factor = 5 }
+ }
+ A10R_accession_PBT = { icon = generic_political_discourse cost = 60 fire_only_once = yes
+  visible = { PBT = { is_subject_of = A10 } has_country_flag = A10R_consent_PBT }
+  available = { has_country_flag = A10_federal_path has_country_flag = A10R_equal_rights has_war = no PBT = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PBT } } } } }
+  complete_effect = {
+   if = { limit = { has_country_flag = A10R_consent_PBT PBT = { is_subject_of = A10 has_war = no NOT = { any_owned_state = { NOT = { is_controlled_by = PBT } } } } }
+    annex_country = { target = PBT transfer_troops = yes }
+    every_owned_state = { limit = { A10R_archipelago_state_trigger = yes is_core_of = PBT is_controlled_by = A10 } add_core_of = A10 }
+    add_to_variable = { A10R_cohesion = 3 } A10R_refresh = yes
+   }
+  }
+  ai_will_do = { factor = 6 }
+ }
+}

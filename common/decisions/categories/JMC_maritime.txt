@@ -1,0 +1,5 @@
+JMC_maritime_programme = {
+ icon = generic_naval
+ allowed = { tag = A03 }
+ visible = { has_completed_focus = JSM_steel }
+}

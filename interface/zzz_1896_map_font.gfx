@@ -1,6 +1,6 @@
 bitmapfonts = {
 	# Loaded after vanilla core.gfx so tahoma_60 already exists.
-	# Country names on the Russian map are forced to the Preciosa atlas.
+	# Country names on the Russian map are forced to the Miranda Script atlas.
 	bitmapfont_override = {
 		name = "tahoma_60"
 		fontfiles = {

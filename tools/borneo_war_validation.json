@@ -9,11 +9,11 @@
     15,
     15
   ],
-  "campaign_focus_reduction": 15,
-  "localisation_keys_per_language": 63,
+  "campaign_focus_reduction": 0,
+  "localisation_keys_per_language": 2565,
   "checks": [
     "Balanced scripts and event references",
-    "One guarded war preparation path and real mission reductions",
+    "Guarded January ultimatum; preparations grant supplies and shorten both clocks by 15 days",
     "DLC and legacy fleets",
     "Twelve locked militia divisions and peace cleanup",
     "Vanilla Japanese RGB in both colour definitions",

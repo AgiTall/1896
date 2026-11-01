@@ -1,0 +1,35 @@
+MNR_hawaii_apply_route = {
+ if = { limit = { tag = PHW has_country_flag = MNR_hawaii_succession }
+  if = { limit = { has_country_flag = MNR_civic NOT = { has_country_flag = MNR_hawaii_civic_installed } }
+   set_country_flag = MNR_hawaii_civic_installed
+   create_country_leader = { name = MNR_hawaii_crown_council ideology = despotism expire = "1965.1.1" traits = {} }
+   set_popularities = { neutrality = 70 democratic = 30 } set_politics = { ruling_party = neutrality elections_allowed = yes } drop_cosmetic_tag = yes
+  }
+  else_if = { limit = { OR = { has_country_flag = MNR_command has_country_flag = MNR_hawaii_naval_policy } NOT = { has_country_flag = MNR_civic } NOT = { has_country_flag = MNR_hawaii_command_installed } }
+   set_country_flag = MNR_hawaii_command_installed
+   create_country_leader = { name = MNR_hawaii_naval_council ideology = despotism expire = "1965.1.1" traits = {} }
+   set_popularities = { neutrality = 70 democratic = 30 } set_politics = { ruling_party = neutrality elections_allowed = no } drop_cosmetic_tag = yes
+  }
+ }
+}
+MNR_hawaii_succession = {
+ if = { limit = { tag = PHW date > 1894.4.29 NOT = { has_country_flag = MNR_hawaii_succession } }
+  set_country_flag = MNR_hawaii_succession
+  if = { limit = { has_character = PHW_canon_leader } retire_character = PHW_canon_leader }
+  if = { limit = { NOT = { MNR_has_route = yes } NOT = { has_country_flag = MNR_hawaii_naval_policy } }
+   create_country_leader = { name = CH94_hawaii_council ideology = liberalism expire = "1965.1.1" traits = {} }
+   set_popularities = { democratic = 70 neutrality = 30 } set_politics = { ruling_party = democratic elections_allowed = yes } set_cosmetic_tag = PHW_REPUBLIC
+  }
+  add_stability = 0.05
+ }
+ MNR_hawaii_apply_route = yes
+}
+MNR_hawaii_naval_succession = {
+ if = { limit = { NOT = { has_country_flag = MNR_civic } NOT = { has_country_flag = MNR_hawaii_succession } } set_country_flag = MNR_hawaii_naval_policy }
+ MNR_hawaii_succession = yes
+}
+MNR_hawaii_constitutional_review = {
+ if = { limit = { tag = PHW date > 1895.2.19 NOT = { has_country_flag = CH95_hawaii_settled } }
+  MNR_hawaii_succession = yes set_country_flag = CH95_hawaii_settled add_stability = 0.03 add_political_power = 20
+ }
+}

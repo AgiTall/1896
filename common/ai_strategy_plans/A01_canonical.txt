@@ -21,15 +21,4 @@ A01_ludolf_canonical_plan = {
   A01_liberal_victory A01_conservative_victory A01_peoples_party_victory A01_recovery_investment A01_review_borneo_convention
  }
 }
-A03_southern_canonical_plan = {
- name = "Japan Southern Strategy"
- desc = "The naval cabinet pursues the Borneo resource settlement."
- allowed = { original_tag = A03 }
- enable = { always = yes }
- ai_national_focuses = {
-  A03_imperial_council A03_naval_government A03_southern_strategy
-  A03_resource_commission A03_naval_programme A03_kure_yards
-  A03_southern_bases A03_southern_campaign
-  A03_osaka_industry A03_kansai_railways A03_hiroshima_arsenal
- }
-}
+A03_mini_plan = { name = "Japan: industrial foundations" allowed = { original_tag = A03 } enable = { always = yes } ai_national_focuses = { JSM_steel JSM_workshops JSM_shipyards JSM_council JSM_north JSM_south JSM_ocean } }

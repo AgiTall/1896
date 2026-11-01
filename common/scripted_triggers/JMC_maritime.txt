@@ -1,0 +1,107 @@
+# All programme work belongs to an independent Japanese government with access to the sea.
+JMC_can_manage_programme = {
+ tag = A03
+ exists = yes
+ is_subject = no
+ has_capitulated = no
+ any_owned_state = { is_controlled_by = ROOT is_coastal = yes }
+}
+
+JMC_register_requirements = {
+ JMC_can_manage_programme = yes
+ has_completed_focus = JSM_steel
+ NOT = { has_country_flag = JMC_register_done }
+}
+JMC_repairs_requirements = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_register_done
+ has_completed_focus = JSM_workshops
+ NOT = { has_country_flag = JMC_repairs_done }
+}
+JMC_coaling_requirements = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_register_done
+ has_completed_focus = JSM_shipyards
+ NOT = { has_country_flag = JMC_coaling_done }
+}
+JMC_drills_requirements = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_repairs_done
+ has_country_flag = JMC_coaling_done
+ NOT = { has_country_flag = JMC_drills_done }
+}
+JMC_conference_requirements = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_register_done
+ has_country_flag = JMC_repairs_done
+ has_country_flag = JMC_coaling_done
+ has_country_flag = JMC_drills_done
+ has_completed_focus = JSM_council
+ NOT = { has_country_flag = JMC_programme_complete }
+}
+
+JMC_can_start_register = {
+ JMC_register_requirements = yes
+ NOT = { has_country_flag = JMC_register_in_progress }
+}
+JMC_can_start_repairs = {
+ JMC_repairs_requirements = yes
+ NOT = { has_country_flag = JMC_repairs_in_progress }
+}
+JMC_can_start_coaling = {
+ JMC_coaling_requirements = yes
+ NOT = { has_country_flag = JMC_coaling_in_progress }
+ NOT = { has_equipment = { support_equipment < 50 } }
+}
+JMC_can_start_drills = {
+ JMC_drills_requirements = yes
+ NOT = { has_country_flag = JMC_drills_in_progress }
+}
+JMC_can_start_conference = {
+ JMC_conference_requirements = yes
+ NOT = { has_country_flag = JMC_conference_in_progress }
+}
+JMC_can_start_reserves = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_programme_complete
+ NOT = { has_country_flag = JMC_reserves_in_progress }
+ NOT = { has_equipment = { support_equipment < 25 } }
+}
+
+# Equipment is committed at the start, so finishing never checks or charges it again.
+JMC_can_finish_register = {
+ JMC_register_requirements = yes
+ has_country_flag = JMC_register_in_progress
+}
+JMC_can_finish_repairs = {
+ JMC_repairs_requirements = yes
+ has_country_flag = JMC_repairs_in_progress
+}
+JMC_can_finish_coaling = {
+ JMC_coaling_requirements = yes
+ has_country_flag = JMC_coaling_in_progress
+}
+JMC_can_finish_drills = {
+ JMC_drills_requirements = yes
+ has_country_flag = JMC_drills_in_progress
+}
+JMC_can_finish_conference = {
+ JMC_conference_requirements = yes
+ has_country_flag = JMC_conference_in_progress
+}
+JMC_can_finish_reserves = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_programme_complete
+ has_country_flag = JMC_reserves_in_progress
+}
+
+JMC_can_answer_register = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_register_done
+ NOT = { has_country_flag = JMC_register_outcome_chosen }
+}
+JMC_can_choose_course = {
+ JMC_can_manage_programme = yes
+ has_country_flag = JMC_programme_complete
+ NOT = { has_country_flag = JMC_course_confirmed }
+}

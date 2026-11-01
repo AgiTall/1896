@@ -1,0 +1,24 @@
+{
+  "focuses": 63,
+  "roots": [
+    "A03_imperial_council"
+  ],
+  "scenarios": [
+    "180-day deadline: guarantees or reform avert collapse; treasury assumption alone does not",
+    "JPC_state_guarantees / JPC_northern_protocol: budget opens only with all three completed columns",
+    "JPC_state_guarantees / JPT_north_rebellion: budget opens only with all three completed columns",
+    "JPT_treasury_debts / JPC_northern_protocol: budget opens only with all three completed columns",
+    "JPT_treasury_debts / JPT_north_rebellion: budget opens only with all three completed columns"
+  ],
+  "checks": [
+    "prerequisites, reciprocal exclusions, no overlaps or backward edges",
+    "RU/EN focus/event localisation and registered icons",
+    "debt deadline and recovery",
+    "four political combinations and three mandatory budget columns",
+    "one-shot 1894 expedition, two outcomes and optional British escalation",
+    "both Borneo entry effects gated"
+  ],
+  "limitations": [
+    "Static checks and bounded predicate evaluation; no engine or combat test"
+  ]
+}

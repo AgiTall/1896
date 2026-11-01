@@ -1,0 +1,20 @@
+ideas = { country = {
+ CH94_escorts = { picture = jpc_credit modifier = { convoy_escort_efficiency = 0.15 } }
+ CH94_northern_faith = { picture = jpc_credit modifier = { war_support_factor = 0.05 recruitable_population_factor = 0.05 } }
+ CH94_royal_campaign = { picture = jpc_credit modifier = { political_power_gain = 0.15 } }
+ CH94_credit = { picture = jpc_credit modifier = { industrial_capacity_factory = 0.05 } }
+ CH94_naval_shortage = { picture = jpc_credit modifier = { navy_org_factor = -0.10 } }
+ CH94_corridors = { picture = jpc_credit modifier = { supply_consumption_factor = -0.05 } }
+ CH94_anathema = { picture = jpc_credit modifier = { research_speed_factor = -0.05 } }
+ CH94_singapore_market = { picture = jpc_credit modifier = { production_speed_industrial_complex_factor = 0.05 } }
+ CH94_legion_raids = { picture = jpc_credit modifier = { supply_consumption_factor = 0.10 } }
+ CH94_siege = { picture = jpc_credit modifier = { max_planning_factor = 0.10 } }
+ CH94_assault = { picture = jpc_credit modifier = { army_attack_factor = 0.05 } }
+ CH94_redeployment = { picture = jpc_credit modifier = { supply_consumption_factor = 0.10 } }
+ CH94_respite = { picture = jpc_credit modifier = { army_org_regain = 0.05 } }
+ CH94_iron_legion = { picture = jpc_credit modifier = { naval_coordination = 0.05 } }
+ CH94_tesla = { picture = jpc_credit modifier = { research_speed_factor = 0.03 } }
+ CH94_blockade = { picture = jpc_credit modifier = { industrial_capacity_factory = -0.05 supply_consumption_factor = 0.10 } }
+ CH94_defence = { picture = jpc_credit modifier = { army_defence_factor = 0.05 } }
+ CH94_exhaustion = { picture = jpc_credit modifier = { war_support_factor = -0.05 industrial_capacity_factory = -0.05 } }
+} }

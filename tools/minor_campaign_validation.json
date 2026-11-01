@@ -1,0 +1,12 @@
+{
+  "countries": 23,
+  "focuses": 529,
+  "events": 116,
+  "decisions": 80,
+  "files": 70,
+  "bilingual_keys": 1875,
+  "lifecycle_cases": 371,
+  "limitations": [
+    "No HOI4 engine launch or balance playthrough."
+  ]
+}

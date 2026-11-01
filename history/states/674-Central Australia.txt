@@ -2,7 +2,7 @@ state = {
  id = 674
  name = "STATE_674"
  state_category = pastoral
- manpower = 10000
+ manpower = 8880
  history = {
   buildings = {
    infrastructure = 1
@@ -11,8 +11,8 @@ state = {
    2223
    1
   }
-  owner = A07
-  add_core_of = A07
+  owner = ASA
+  add_core_of = ASA
  }
  provinces = {
   2223

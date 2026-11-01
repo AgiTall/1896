@@ -1,0 +1,48 @@
+JPT_three_heads = {
+ JPT_mitsubishi_deadline = {
+  icon = generic_economic_policy
+  is_good = no
+  days_mission_timeout = 180
+  activation = { always = no }
+  cancel_trigger = { OR = { has_country_flag = JPT_loans_guaranteed has_country_flag = JPT_loans_reformed } }
+  timeout_effect = {
+   if = { limit = { NOT = { has_country_flag = JPT_loans_guaranteed } NOT = { has_country_flag = JPT_loans_reformed } }
+    set_country_flag = JPT_mitsubishi_crashed
+    add_ideas = JPT_mitsubishi_collapse
+    add_to_variable = { JPF_debt_pressure = 20 }
+    JPF_refresh_effect = yes
+    country_event = { id = japan_dragon.1 days = 1 }
+   }
+  }
+ }
+ JPT_restructure_after_crash = {
+  icon = generic_economic_policy
+  cost = 100
+  days_remove = 60
+  fire_only_once = yes
+  visible = { has_country_flag = JPT_mitsubishi_crashed }
+  available = { has_completed_focus = JPF_public_accounts }
+  remove_effect = {
+   clr_country_flag = JPT_mitsubishi_crashed
+   remove_ideas = JPT_mitsubishi_collapse
+   add_stability = -0.03
+   add_to_variable = { JPF_debt_pressure = -15 }
+   JPF_refresh_effect = yes
+  }
+  ai_will_do = { base = 20 }
+ }
+ JPT_recall_expedition = {
+  icon = generic_political_discourse
+  cost = 75
+  fire_only_once = yes
+  visible = { has_completed_focus = JPC_northern_protocol NOT = { has_country_flag = JPT_expedition_stopped } NOT = { has_country_flag = JPT_expedition_checked } }
+  available = { country_exists = A08 NOT = { has_war_with = A08 } check_variable = { JPN_north_trust > 54 } }
+  complete_effect = {
+   set_country_flag = JPT_expedition_stopped
+   add_to_variable = { JPN_north_trust = -15 }
+   add_to_variable = { JPN_north_fleet_irritation = 10 }
+   JPN_north_refresh_effect = yes
+  }
+  ai_will_do = { base = 5 }
+ }
+}
